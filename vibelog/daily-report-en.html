@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Research Institute — Project Daily Report</title>
+<style>
+  :root { --bg: #0a0e17; --card: #111827; --border: #1e2d3d; --text: #e2e8f0; --muted: #64748b; --blue: #3b82f6; --green: #10b981; --amber: #f59e0b; --red: #ef4444; --purple: #8b5cf6; --cyan: #06b6d4; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 40px 24px; }
+  h1 { font-size: 28px; font-weight: 800; background: linear-gradient(135deg, var(--blue), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  h2 { font-size: 18px; font-weight: 700; color: var(--text); margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+  h3 { font-size: 15px; font-weight: 600; color: var(--blue); margin: 20px 0 10px; }
+  .subtitle { color: var(--muted); font-size: 14px; margin-top: 4px; }
+  .date { color: var(--cyan); font-size: 13px; font-weight: 500; margin-top: 8px; }
+  .grid { display: grid; gap: 16px; }
+  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-2 { grid-template-columns: repeat(2, 1fr); }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+  .stat { text-align: center; }
+  .stat-value { font-size: 32px; font-weight: 800; }
+  .stat-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+  .blue { color: var(--blue); } .green { color: var(--green); } .amber { color: var(--amber); } .purple { color: var(--purple); } .cyan { color: var(--cyan); } .red { color: var(--red); }
+  .badge { display: inline-flex; padding: 2px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; }
+  .badge-blue { background: rgba(59,130,246,0.15); color: var(--blue); }
+  .badge-green { background: rgba(16,185,129,0.15); color: var(--green); }
+  .badge-purple { background: rgba(139,92,246,0.15); color: var(--purple); }
+  .badge-amber { background: rgba(245,158,11,0.15); color: var(--amber); }
+  .badge-cyan { background: rgba(6,182,212,0.15); color: var(--cyan); }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  th { text-align: left; padding: 8px 12px; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid var(--border); }
+  td { padding: 10px 12px; border-bottom: 1px solid var(--border); }
+  .bar-container { height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; margin-top: 6px; }
+  .bar { height: 100%; border-radius: 4px; }
+  .timeline { position: relative; padding-left: 24px; }
+  .timeline::before { content: ''; position: absolute; left: 8px; top: 4px; bottom: 4px; width: 2px; background: var(--border); }
+  .timeline-item { position: relative; margin-bottom: 20px; }
+  .timeline-item::before { content: ''; position: absolute; left: -20px; top: 6px; width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--blue); background: var(--bg); }
+  .timeline-item.done::before { background: var(--green); border-color: var(--green); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-right: 4px; }
+  footer { text-align: center; padding: 40px 0 20px; color: var(--muted); font-size: 12px; }
+  @media (max-width: 768px) { .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>AI Stock Research Institute</h1>
+<p class="subtitle">Multi-Agent Collaborative Research System — MVP Project Report</p>
+<p class="date">April 11, 2026 · Daoming</p>
+
+<!-- Stats -->
+<h2>Project Metrics</h2>
+<div class="grid grid-4">
+  <div class="card stat"><div class="stat-value blue">48</div><div class="stat-label">Source Files</div></div>
+  <div class="card stat"><div class="stat-value green">4,576</div><div class="stat-label">Lines of Code</div></div>
+  <div class="card stat"><div class="stat-value purple">6</div><div class="stat-label">AI Analysts</div></div>
+  <div class="card stat"><div class="stat-value cyan">4</div><div class="stat-label">Workflows</div></div>
+</div>
+
+<!-- Architecture -->
+<h2>System Architecture</h2>
+<div class="card">
+  <div class="grid grid-3">
+    <div>
+      <h3>Frontend</h3>
+      <p style="font-size:13px;color:var(--muted)">Next.js 15 · React 19 · Tailwind v4 · Turbopack</p>
+      <div style="margin-top:8px">
+        <span class="badge badge-blue">8 Pages</span>
+        <span class="badge badge-purple">7 Components</span>
+        <span class="badge badge-cyan">3 Lib Modules</span>
+      </div>
+    </div>
+    <div>
+      <h3>Middleware</h3>
+      <p style="font-size:13px;color:var(--muted)">Institute layer — project scoping, workflow dispatch, input_prompt</p>
+      <div style="margin-top:8px">
+        <span class="badge badge-green">Session Isolation</span>
+        <span class="badge badge-amber">WF Templates</span>
+      </div>
+    </div>
+    <div>
+      <h3>Backend</h3>
+      <p style="font-size:13px;color:var(--muted)">API Bridge · FastAPI · SQLite · 70+ endpoints</p>
+      <div style="margin-top:8px">
+        <span class="badge badge-blue">Brain Engine</span>
+        <span class="badge badge-purple">Workflow Engine</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Workflows -->
+<h2>Registered Workflows</h2>
+<div class="grid grid-2">
+  <div class="card" style="border-top: 3px solid var(--green)">
+    <h3 style="color:var(--green)">🔬 Deep Research — 12 Phase SOP</h3>
+    <table>
+      <tr><td><span class="tag" style="background:rgba(59,130,246,0.15);color:var(--blue)">Phase A</span> Information Gathering</td><td>4 steps</td><td><span class="badge badge-blue">gemini</span></td></tr>
+      <tr><td><span class="tag" style="background:rgba(245,158,11,0.15);color:var(--amber)">Phase B</span> Deep Analysis</td><td>4 steps</td><td><span class="badge badge-blue">gemini</span> <span class="badge badge-purple">claude</span></td></tr>
+      <tr><td><span class="tag" style="background:rgba(16,185,129,0.15);color:var(--green)">Phase C</span> Conclusion & Report</td><td>4 steps</td><td><span class="badge badge-blue">gemini</span> <span class="badge badge-purple">claude</span></td></tr>
+    </table>
+    <div class="bar-container"><div class="bar" style="width:100%;background:linear-gradient(90deg,var(--blue),var(--amber),var(--green))"></div></div>
+  </div>
+
+  <div class="card" style="border-top: 3px solid var(--purple)">
+    <h3 style="color:var(--purple)">🏛️ Investment Committee — 9 Steps</h3>
+    <table>
+      <tr><td>Thesis → Industry → Bull Case</td><td>3 steps</td><td><span class="badge badge-blue">gemini</span></td></tr>
+      <tr><td>Bear Case → Risk → Quant → Sentiment</td><td>4 steps</td><td><span class="badge badge-blue">gemini</span> <span class="badge badge-purple">claude</span></td></tr>
+      <tr><td>Verdict → Meeting Minutes</td><td>2 steps</td><td><span class="badge badge-blue">gemini</span> <span class="badge badge-purple">claude</span></td></tr>
+    </table>
+    <div class="bar-container"><div class="bar" style="width:100%;background:linear-gradient(90deg,var(--blue),var(--red),var(--purple))"></div></div>
+  </div>
+
+  <div class="card" style="border-top: 3px solid var(--blue)">
+    <h3 style="color:var(--blue)">☀️ Morning Briefing — 6 Steps</h3>
+    <p style="font-size:13px;color:var(--muted)">Global Markets → Macro Data → A-Share Sentiment → Industry → Risk Alerts → Synthesis</p>
+    <div class="bar-container"><div class="bar" style="width:100%;background:linear-gradient(90deg,var(--blue),var(--cyan))"></div></div>
+  </div>
+
+  <div class="card" style="border-top: 3px solid var(--cyan)">
+    <h3 style="color:var(--cyan)">📰 Daily Report — 8 Steps</h3>
+    <p style="font-size:13px;color:var(--muted)">Market Review → Fund Flows → Events → Sentiment → Sector Rotation → Risks → Watch → Report</p>
+    <div class="bar-container"><div class="bar" style="width:100%;background:linear-gradient(90deg,var(--cyan),var(--green))"></div></div>
+  </div>
+</div>
+
+<!-- Agent Grid -->
+<h2>Agent Team</h2>
+<div class="grid grid-3">
+  <div class="card"><div style="font-size:24px;margin-bottom:8px">🌐</div><strong>Macro Strategist</strong><br><span style="font-size:12px;color:var(--muted)">Economic cycles, rates, FX, asset allocation</span><br><span class="badge badge-blue" style="margin-top:8px">Gemini</span></div>
+  <div class="card"><div style="font-size:24px;margin-bottom:8px">🏭</div><strong>Industry Analyst</strong><br><span style="font-size:12px;color:var(--muted)">Porter's 5 forces, supply chain, policy</span><br><span class="badge badge-blue" style="margin-top:8px">Gemini</span></div>
+  <div class="card"><div style="font-size:24px;margin-bottom:8px">🔍</div><strong>Stock Researcher</strong><br><span style="font-size:12px;color:var(--muted)">12-phase SOP, DCF, 3-statement model</span><br><span class="badge badge-blue" style="margin-top:8px">Gemini</span></div>
+  <div class="card"><div style="font-size:24px;margin-bottom:8px">⚡</div><strong>Quant Analyst</strong><br><span style="font-size:12px;color:var(--muted)">Alpha factors, technicals, signals</span><br><span class="badge badge-blue" style="margin-top:8px">Gemini</span></div>
+  <div class="card"><div style="font-size:24px;margin-bottom:8px">🛡️</div><strong>Risk Manager</strong><br><span style="font-size:12px;color:var(--muted)">Stress tests, VaR, cross-validation</span><br><span class="badge badge-purple" style="margin-top:8px">Claude</span></div>
+  <div class="card"><div style="font-size:24px;margin-bottom:8px">💬</div><strong>Sentiment Analyst</strong><br><span style="font-size:12px;color:var(--muted)">Fund flows, fear/greed, social NLP</span><br><span class="badge badge-blue" style="margin-top:8px">Gemini</span></div>
+</div>
+
+<!-- Development Timeline -->
+<h2>Development Timeline — April 11, 2026</h2>
+<div class="card">
+  <div class="timeline">
+    <div class="timeline-item done"><strong>Phase 1 — Python Backend SDK</strong><br><span style="font-size:12px;color:var(--muted)">6 analyst agents, config, API Bridge client, orchestrator, CLI</span></div>
+    <div class="timeline-item done"><strong>Phase 2 — Next.js Frontend</strong><br><span style="font-size:12px;color:var(--muted)">8 page routes, dark theme, Sidebar, WorkflowRunner, FilePanel</span></div>
+    <div class="timeline-item done"><strong>Phase 3 — API Integration</strong><br><span style="font-size:12px;color:var(--muted)">Session scoping, Brain endpoint, proxy timeout fix, response normalization</span></div>
+    <div class="timeline-item done"><strong>Phase 4 — Workflow Engine</strong><br><span style="font-size:12px;color:var(--muted)">Generic templates, input_prompt injection, 12-phase SOP, file chaining</span></div>
+    <div class="timeline-item done"><strong>Phase 5 — Task History & UX</strong><br><span style="font-size:12px;color:var(--muted)">TaskHistory, FilePreviewModal, workspace files as results, history mode</span></div>
+    <div class="timeline-item done"><strong>Phase 6 — Enhanced Workflows</strong><br><span style="font-size:12px;color:var(--muted)">Briefing 6 steps, Daily 8 steps, Committee 9 steps, Research 12 steps</span></div>
+  </div>
+</div>
+
+<!-- Key Design -->
+<h2>Key Design Principles</h2>
+<div class="grid grid-2">
+  <div class="card">
+    <h3>Session-per-Task</h3>
+    <p style="font-size:13px;color:var(--muted)">Each task creates one session. All workflow steps share the same workspace and context. Files accumulate across steps.</p>
+  </div>
+  <div class="card">
+    <h3>Generic Workflow Templates</h3>
+    <p style="font-size:13px;color:var(--muted)">Workflows registered once. The ticker/topic injected at runtime via <code style="background:var(--border);padding:1px 4px;border-radius:3px">input_prompt</code>.</p>
+  </div>
+  <div class="card">
+    <h3>File Chain Architecture</h3>
+    <p style="font-size:13px;color:var(--muted)">Each step saves to <code style="background:var(--border);padding:1px 4px;border-radius:3px">NN_name.md</code>. Next steps read prior files. Final step synthesizes all.</p>
+  </div>
+  <div class="card">
+    <h3>Multi-Agent Specialization</h3>
+    <p style="font-size:13px;color:var(--muted)">Gemini for research & web search. Claude for risk assessment & independent review. Right tool for each job.</p>
+  </div>
+</div>
+
+<footer>AI Stock Research Institute · Daoming · April 2026</footer>
+
+</div>
+</body>
+</html>
