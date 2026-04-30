@@ -55,6 +55,9 @@ you might see elsewhere.
 
 ### The menu — your dashboard
 
+![Dashboard](../../screenshots/agent_route_app/home.png)
+
+
 This is what you actually click on. A web page with buttons and forms.
 Sometimes it's a chat box. Sometimes it's a "submit research question"
 form. Sometimes it's a kanban with sticky-note ideas. Whatever it is,
@@ -68,6 +71,9 @@ A third one is on the way: **AI Institute** — the menu for the multi-agent
 investment research team.
 
 ### The waiter — agent-route
+
+![Task Manager](../../screenshots/agent_route_app/tasks.png)
+
 
 The waiter doesn't cook your food. The waiter:
 
@@ -83,6 +89,9 @@ nobody's eating, and it runs in 200+ cities around the world so the closest
 copy serves you.
 
 ### The kitchen — AI workers (we call them "hands")
+
+![Edge Nodes](../../screenshots/agent_route_app/nodes.png)
+
 
 This is where the actual work happens. There are different kinds of cooks:
 
@@ -115,6 +124,9 @@ away. They go into a shared pantry that all the cooks can access:
 
 ### The kitchen brain — recipes and workflows
 
+![Workflows](../../screenshots/agent_route_app/workflows.png)
+
+
 Some orders are one-off ("get me a glass of water"). Others are multi-step
 recipes ("make a three-course tasting menu, with wine pairings, and have
 the chef explain each course as they bring it out").
@@ -128,6 +140,9 @@ If you set it on a schedule (every morning at 8 AM), it runs by itself.
 
 ### The reservation book — sessions
 
+![Client Management](../../screenshots/agent_route_app/clients.png)
+
+
 When you visit the same restaurant repeatedly, the staff might keep a
 record of your tastes, your past orders, what you're allergic to. That's
 a customer profile. In our system it's called a **session**.
@@ -139,6 +154,9 @@ happened yesterday, and the kitchen knows what you're talking about.
 ---
 
 ## A worked example
+
+![Automated Routines](../../screenshots/agent_route_app/routines.png)
+
 
 Let me walk through one specific order to make it concrete.
 
