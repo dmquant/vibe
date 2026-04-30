@@ -1,6 +1,6 @@
-# CyberResearch · 公开文章系列
+# ResearchOS · 公开文章系列
 
-一套六篇文章,介绍 **CyberResearch** —— 一个个人搭建的 AI 协同平台 ——
+一套六篇文章,介绍 **ResearchOS** —— 一个个人搭建的 AI 协同平台 ——
 面向对 AI 充满好奇,但不靠写代码谋生的读者。
 
 文章分享了我做了什么、为什么有意义,以及与 AI 结伴写软件是种怎样的体验。
@@ -28,7 +28,7 @@
 本目录下所有文章以 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 开放。
 你可以自由分享与改编,只需署名。
 
-CyberResearch / agent-route 平台软件本身 **不** 在此次开放范围内 ——
+ResearchOS / agent-route 平台软件本身 **不** 在此次开放范围内 ——
 公开的只有这些文章。其中边缘节点组件单独开源在
 [github.com/dmquant/agent-route-node](https://github.com/dmquant/agent-route-node)。
 

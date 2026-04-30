@@ -97,7 +97,7 @@ Stack those three and a small team — or one person, with an AI partner —
 can now build infrastructure that would have required a Series A round
 two years ago.
 
-CyberResearch is what I built when I noticed all three of those shifts and
+ResearchOS is what I built when I noticed all three of those shifts and
 asked: *what's the smallest useful thing that demonstrates this?*
 
 ---

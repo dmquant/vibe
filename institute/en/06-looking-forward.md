@@ -9,7 +9,7 @@ the build story. The last question is the most interesting one: where
 does this go?
 
 Not in the science-fiction sense. In the very concrete next-12-months
-sense. What's plausibly in the cards for CyberResearch, for AI
+sense. What's plausibly in the cards for ResearchOS, for AI
 Institute, and for the broader pattern of orchestrated AI agents
 running on cheap infrastructure?
 
@@ -17,7 +17,7 @@ Three concentric circles, smallest first.
 
 ---
 
-## Circle 1 — What CyberResearch becomes next
+## Circle 1 — What ResearchOS becomes next
 
 Near-term, the platform itself has a clear set of next steps:
 
@@ -66,7 +66,7 @@ they'd make the workbench something I'd want to live in.
 
 ## Circle 2 — What AI Institute becomes next
 
-If CyberResearch is the platform, AI Institute is the showcase
+If ResearchOS is the platform, AI Institute is the showcase
 application. Three plausible directions for it:
 
 ### Memory across days
@@ -158,7 +158,7 @@ to take.
 
 The way email and spreadsheets are layers everyone uses without
 thinking, AI agents will become. Most people will never build their
-own platform like CyberResearch. Most people will use platforms that
+own platform like ResearchOS. Most people will use platforms that
 *someone else* built — for marketing, for finance, for HR, for sales.
 The pattern in this series is the *generic shape* of those tools.
 

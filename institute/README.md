@@ -1,6 +1,6 @@
-# CyberResearch · An Open Series
+# ResearchOS · An Open Series
 
-A six-part series introducing **CyberResearch** — a personal AI orchestration
+A six-part series introducing **ResearchOS** — a personal AI orchestration
 platform — written for readers who are curious about AI but don't write code
 for a living.
 
@@ -30,7 +30,7 @@ series is what's open.
 All articles in this folder are released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 You're free to share and adapt them, with attribution.
 
-The underlying CyberResearch / agent-route software is **not** part of this
+The underlying ResearchOS / agent-route software is **not** part of this
 release — only these articles are open. The edge-node component is separately
 open-sourced at [github.com/dmquant/agent-route-node](https://github.com/dmquant/agent-route-node).
 
