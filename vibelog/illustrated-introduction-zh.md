@@ -550,11 +550,11 @@ Agent Route 实时跟踪所有可用边缘节点（如 Mac Studio、云服务器
 
 ### 客户端与 API 管理
 专为需要接入 AI Institute 的第三方系统设计。您可以在这里签发、吊销和管理带有权限范围（Scope）控制的 API 密钥（例如：授权某个新闻聚合器自动触发白板辩论）。
-![客户端管理](../screenshots/agent_route_app/clients.png)
+
 
 ### 系统设置与交互式终端
 开发者的主控室。提供全局环境变量访问、安全的密钥管理，以及一个实时的 Web 终端，供您在需要深度调试时直接与底层基础设施进行交互。
-![系统设置](../screenshots/agent_route_app/settings.png)
+
 
 ---
 

@@ -640,11 +640,11 @@ A visual pipeline builder for multi-stage research. This is where the 12-stage S
 
 ### Client Access & API
 For third-party systems that need to interface with the AI Institute. Here, you mint, revoke, and manage scope-gated API keys (e.g., granting a news aggregator the ability to trigger a whiteboard debate).
-![Client Management](../screenshots/agent_route_app/clients.png)
+
 
 ### System Settings & Interactive Terminal
 The developer's control room. It provides access to global environment variables, secure secret management, and a live web-based terminal to directly interface with the underlying infrastructure when deep debugging is required.
-![Settings](../screenshots/agent_route_app/settings.png)
+
 
 ---
 
