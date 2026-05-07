@@ -1,0 +1,172 @@
+/* ResearchOS — Dark Terminal Aesthetic */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+	--bg-primary: #0d1117;
+	--bg-surface: #161b22;
+	--bg-elevated: #1c2128;
+	--border: #30363d;
+	--border-light: #21262d;
+	--text-primary: #e6edf3;
+	--text-secondary: #8b949e;
+	--text-muted: #484f58;
+	--accent-cyan: #58a6ff;
+	--accent-green: #3fb950;
+	--accent-gold: #d29922;
+	--accent-red: #f85149;
+	--accent-purple: #bc8cff;
+	--font-ui: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+	--font-serif: 'Source Serif 4', Georgia, serif;
+	--font-mono: 'JetBrains Mono', monospace;
+	--max-width: 1200px;
+	--content-width: 780px;
+	--glow-cyan: 0 0 20px rgba(88, 166, 255, 0.15);
+}
+
+* { box-sizing: border-box; }
+
+body {
+	font-family: var(--font-ui);
+	margin: 0;
+	padding: 0;
+	background: var(--bg-primary);
+	color: var(--text-primary);
+	font-size: 16px;
+	line-height: 1.7;
+	-webkit-font-smoothing: antialiased;
+}
+
+main {
+	width: 100%;
+	max-width: var(--max-width);
+	margin: 0 auto;
+	padding: 2rem 1.5rem;
+}
+
+/* ── Typography ─────────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 0 0.5rem 0;
+	color: var(--text-primary);
+	line-height: 1.25;
+	font-weight: 700;
+}
+h1 { font-size: 2.5rem; }
+h2 { font-size: 1.8rem; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; margin-top: 2.5rem; }
+h3 { font-size: 1.4rem; color: var(--accent-cyan); }
+h4 { font-size: 1.15rem; }
+
+a { color: var(--accent-cyan); text-decoration: none; transition: color 0.2s; }
+a:hover { color: var(--accent-purple); }
+
+p { margin-bottom: 1em; color: var(--text-primary); }
+
+strong { color: var(--text-primary); font-weight: 600; }
+
+/* ── Prose (article body) ───────────────────────────────────── */
+.prose {
+	max-width: var(--content-width);
+	margin: 0 auto;
+	padding: 1.5rem 0;
+	font-family: var(--font-serif);
+	font-size: 1.05rem;
+	line-height: 1.85;
+	color: var(--text-primary);
+}
+.prose h1, .prose h2, .prose h3 { font-family: var(--font-ui); }
+.prose p { margin-bottom: 1.5em; }
+.prose img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 8px;
+	border: 1px solid var(--border);
+	margin: 1.5rem 0;
+}
+
+/* ── Blockquotes ────────────────────────────────────────────── */
+blockquote {
+	border-left: 3px solid var(--accent-cyan);
+	padding: 0.8rem 1.2rem;
+	margin: 1.5rem 0;
+	background: var(--bg-surface);
+	border-radius: 0 6px 6px 0;
+	font-style: italic;
+	color: var(--text-secondary);
+}
+
+/* ── Code ───────────────────────────────────────────────────── */
+code {
+	font-family: var(--font-mono);
+	padding: 2px 6px;
+	background: var(--bg-surface);
+	border: 1px solid var(--border);
+	border-radius: 4px;
+	font-size: 0.88em;
+	color: var(--accent-cyan);
+}
+pre {
+	padding: 1.2rem;
+	border-radius: 8px;
+	background: var(--bg-surface) !important;
+	border: 1px solid var(--border);
+	overflow-x: auto;
+}
+pre > code { all: unset; font-family: var(--font-mono); font-size: 0.88em; }
+
+/* ── Tables ─────────────────────────────────────────────────── */
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 1.5rem 0;
+	font-size: 0.92rem;
+}
+th {
+	background: var(--bg-surface);
+	border: 1px solid var(--border);
+	padding: 0.6rem 0.8rem;
+	text-align: left;
+	font-weight: 600;
+	color: var(--accent-cyan);
+}
+td {
+	border: 1px solid var(--border);
+	padding: 0.5rem 0.8rem;
+}
+tr:nth-child(even) td { background: var(--bg-surface); }
+
+/* ── HR ─────────────────────────────────────────────────────── */
+hr {
+	border: none;
+	border-top: 1px solid var(--border);
+	margin: 2rem 0;
+}
+
+/* ── Images ─────────────────────────────────────────────────── */
+img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 8px;
+}
+
+/* ── Lists ──────────────────────────────────────────────────── */
+ul, ol { padding-left: 1.5rem; }
+li { margin-bottom: 0.4rem; }
+li::marker { color: var(--accent-cyan); }
+
+/* ── SR only ────────────────────────────────────────────────── */
+.sr-only {
+	position: absolute !important;
+	height: 1px; width: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	white-space: nowrap;
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+	h1 { font-size: 1.8rem; }
+	h2 { font-size: 1.4rem; }
+	main { padding: 1rem; }
+	.prose { font-size: 1rem; }
+}

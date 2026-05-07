@@ -1,0 +1,167 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+import Header from '../../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+
+const categories = ['research', 'institute', 'vibelog'] as const;
+const categoryLabels: Record<string, { en: string; zh: string; icon: string }> = {
+	research:  { en: 'Deep Research', zh: '深度研究', icon: '📊' },
+	institute: { en: 'Institute Series', zh: '智研所系列', icon: '🏛️' },
+	vibelog:   { en: 'Vibelog & Guides', zh: '指南与文档', icon: '📝' },
+};
+---
+
+<!doctype html>
+<html lang="en" data-lang="en">
+	<head>
+		<BaseHead title={`Articles — ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="page-header">
+				<h1 data-en="All Articles" data-zh="所有文章">All Articles</h1>
+				<p class="page-desc" data-en={`${posts.length} articles across research, documentation, and guides.`} data-zh={`横跨研究、文档和指南共 ${posts.length} 篇文章。`}>
+					{posts.length} articles across research, documentation, and guides.
+				</p>
+			</div>
+
+			{categories.map(cat => {
+				const catPostsEn = posts.filter(p => p.data.category === cat && p.data.lang === 'en');
+				const catPostsZh = posts.filter(p => p.data.category === cat && p.data.lang === 'zh');
+				const label = categoryLabels[cat];
+				return (
+					<section class="cat-section">
+						<h2 class="cat-title">
+							<span class="cat-icon">{label.icon}</span>
+							<span data-en={label.en} data-zh={label.zh}>{label.en}</span>
+							<span class="cat-count lang-content" data-show-lang="en">{catPostsEn.length}</span>
+							<span class="cat-count lang-content" data-show-lang="zh">{catPostsZh.length}</span>
+						</h2>
+						{/* EN posts */}
+						<div class="post-list lang-content" data-show-lang="en">
+							{catPostsEn.map(post => (
+								<a href={`/blog/${post.id}/`} class="post-row">
+									<div class="post-info">
+										<span class="lang-badge en">EN</span>
+										<span class="post-title">{post.data.title}</span>
+									</div>
+									<span class="post-date"><FormattedDate date={post.data.pubDate} /></span>
+								</a>
+							))}
+						</div>
+						{/* ZH posts */}
+						<div class="post-list lang-content" data-show-lang="zh">
+							{catPostsZh.map(post => (
+								<a href={`/blog/${post.id}/`} class="post-row">
+									<div class="post-info">
+										<span class="lang-badge zh">中文</span>
+										<span class="post-title">{post.data.title}</span>
+									</div>
+									<span class="post-date"><FormattedDate date={post.data.pubDate} /></span>
+								</a>
+							))}
+						</div>
+					</section>
+				);
+			})}
+		</main>
+		<Footer />
+
+		<script>
+			function applyLang(lang: string) {
+				document.querySelectorAll('.lang-content').forEach(el => {
+					const showLang = (el as HTMLElement).dataset.showLang;
+					(el as HTMLElement).style.display = showLang === lang ? '' : 'none';
+				});
+				document.querySelectorAll('[data-en][data-zh]').forEach(el => {
+					const htmlEl = el as HTMLElement;
+					const text = lang === 'zh' ? htmlEl.dataset.zh : htmlEl.dataset.en;
+					if (text) htmlEl.textContent = text;
+				});
+			}
+			const initialLang = localStorage.getItem('researchos-lang') || 'en';
+			applyLang(initialLang);
+			window.addEventListener('lang-change', (e: Event) => {
+				applyLang((e as CustomEvent).detail.lang);
+			});
+		</script>
+	</body>
+</html>
+
+<style>
+	.page-header {
+		margin-bottom: 2.5rem;
+		padding-bottom: 1.5rem;
+		border-bottom: 1px solid var(--border);
+	}
+	.page-header h1 { font-size: 2rem; margin-bottom: 0.4rem; }
+	.page-desc { color: var(--text-secondary); font-size: 0.95rem; margin: 0; }
+
+	.cat-section { margin-bottom: 2.5rem; }
+	.cat-title {
+		display: flex;
+		align-items: center;
+		gap: 0.6rem;
+		font-size: 1.2rem;
+		margin-bottom: 1rem;
+		padding-bottom: 0.5rem;
+		border-bottom: 1px solid var(--border);
+	}
+	.cat-icon { font-size: 1.3rem; }
+	.cat-count {
+		font-size: 0.7rem;
+		padding: 0.15rem 0.5rem;
+		background: var(--bg-surface);
+		border: 1px solid var(--border);
+		border-radius: 10px;
+		color: var(--text-muted);
+		font-weight: 500;
+	}
+
+	.post-list { display: flex; flex-direction: column; gap: 0.4rem; }
+	.post-row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0.7rem 1rem;
+		border-radius: 8px;
+		text-decoration: none;
+		transition: all 0.2s;
+		border: 1px solid transparent;
+	}
+	.post-row:hover {
+		background: var(--bg-surface);
+		border-color: var(--border);
+	}
+	.post-info { display: flex; align-items: center; gap: 0.6rem; flex: 1; min-width: 0; }
+	.post-title {
+		color: var(--text-primary);
+		font-size: 0.92rem;
+		font-weight: 500;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.post-date {
+		color: var(--text-muted);
+		font-size: 0.78rem;
+		white-space: nowrap;
+		margin-left: 1rem;
+	}
+	.lang-badge { padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 600; font-size: 0.6rem; flex-shrink: 0; }
+	.lang-badge.en { background: rgba(88,166,255,0.15); color: var(--accent-cyan); }
+	.lang-badge.zh { background: rgba(248,81,73,0.15); color: var(--accent-red); }
+
+	@media (max-width: 720px) {
+		.post-row { flex-direction: column; align-items: flex-start; gap: 0.3rem; }
+		.post-date { margin-left: 0; }
+	}
+</style>

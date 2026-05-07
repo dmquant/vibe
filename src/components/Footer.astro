@@ -1,0 +1,51 @@
+---
+const today = new Date();
+---
+
+<footer>
+	<div class="footer-inner">
+		<div class="footer-left">
+			<span class="logo-icon">◆</span> ResearchOS
+			<span class="separator">·</span>
+			<span class="muted">AI-Powered Multi-Agent Research</span>
+		</div>
+		<div class="footer-right">
+			<span class="muted">Built with Astro</span>
+			<span class="separator">·</span>
+			<span class="muted">&copy; {today.getFullYear()}</span>
+		</div>
+	</div>
+</footer>
+<style>
+	footer {
+		padding: 2rem 1.5rem;
+		border-top: 1px solid var(--border, #30363d);
+		margin-top: 4rem;
+	}
+	.footer-inner {
+		max-width: 1200px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 0.85rem;
+	}
+	.footer-left {
+		display: flex;
+		align-items: center;
+		gap: 0.4rem;
+		color: var(--text-secondary, #8b949e);
+		font-weight: 500;
+	}
+	.footer-right {
+		display: flex;
+		align-items: center;
+		gap: 0.4rem;
+	}
+	.logo-icon { color: var(--accent-cyan, #58a6ff); }
+	.muted { color: var(--text-muted, #484f58); }
+	.separator { color: var(--text-muted, #484f58); }
+	@media (max-width: 720px) {
+		.footer-inner { flex-direction: column; gap: 0.5rem; text-align: center; }
+	}
+</style>

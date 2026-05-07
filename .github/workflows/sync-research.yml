@@ -1,0 +1,47 @@
+# ResearchOS Auto-Sync Workflow
+# Runs daily to fetch latest AI Institute research and update the website.
+
+name: Sync Research & Deploy
+
+on:
+  schedule:
+    - cron: '0 8 * * *'  # Daily at 08:00 UTC
+  workflow_dispatch:       # Manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: website
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Sync latest research
+        env:
+          INSTITUTE_API_KEY: ${{ secrets.INSTITUTE_API_KEY }}
+        run: python sync_research.py --max-items 15
+
+      - name: Install & Build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Commit new content
+        run: |
+          git config user.name "ResearchOS Bot"
+          git config user.email "bot@researchos.dev"
+          git add src/content/blog/auto-*.md src/content/blog/_sync_manifest.json
+          git diff --cached --quiet || git commit -m "chore: auto-sync research $(date -u +%Y-%m-%d)"
+          git push

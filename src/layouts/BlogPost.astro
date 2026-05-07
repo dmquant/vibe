@@ -1,0 +1,187 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import Header from '../components/Header.astro';
+
+type Props = CollectionEntry<'blog'>['data'] & {
+	counterpartUrl?: string | null;
+};
+
+const { title, description, pubDate, updatedDate, heroImage, lang, category, counterpartUrl } = Astro.props;
+
+const categoryLabels: Record<string, { en: string; zh: string }> = {
+	research: { en: 'Deep Research', zh: '深度研究' },
+	institute: { en: 'Institute Series', zh: '智研所系列' },
+	vibelog: { en: 'Vibelog & Guides', zh: '指南与文档' },
+};
+const catLabel = categoryLabels[category || 'vibelog'] || categoryLabels.vibelog;
+---
+
+<html lang={lang || 'en'} data-lang={lang || 'en'}>
+	<head>
+		<BaseHead title={title} description={description} />
+		<style>
+			main {
+				width: calc(100% - 2em);
+				max-width: 100%;
+				margin: 0;
+			}
+			.article-header {
+				max-width: 780px;
+				margin: 2rem auto 0;
+				padding: 0 1rem;
+			}
+			.breadcrumb {
+				display: flex;
+				align-items: center;
+				gap: 0.4rem;
+				font-size: 0.8rem;
+				color: var(--text-muted, #484f58);
+				margin-bottom: 1.5rem;
+			}
+			.breadcrumb a {
+				color: var(--text-secondary, #8b949e);
+				text-decoration: none;
+			}
+			.breadcrumb a:hover { color: var(--accent-cyan, #58a6ff); }
+			.breadcrumb .sep { color: var(--text-muted, #484f58); }
+
+			.article-meta {
+				display: flex;
+				align-items: center;
+				gap: 0.8rem;
+				margin-bottom: 1rem;
+				flex-wrap: wrap;
+			}
+			.cat-badge {
+				padding: 0.2rem 0.6rem;
+				border-radius: 6px;
+				font-size: 0.7rem;
+				font-weight: 600;
+				background: rgba(88,166,255,0.1);
+				color: var(--accent-cyan, #58a6ff);
+			}
+			.lang-indicator {
+				padding: 0.15rem 0.4rem;
+				border-radius: 4px;
+				font-weight: 600;
+				font-size: 0.65rem;
+			}
+			.lang-indicator.en { background: rgba(88,166,255,0.15); color: var(--accent-cyan, #58a6ff); }
+			.lang-indicator.zh { background: rgba(248,81,73,0.15); color: var(--accent-red, #f85149); }
+			.date-text {
+				color: var(--text-muted, #484f58);
+				font-size: 0.82rem;
+			}
+			.counterpart-link {
+				margin-left: auto;
+				font-size: 0.78rem;
+				padding: 0.25rem 0.6rem;
+				border: 1px solid var(--border, #30363d);
+				border-radius: 6px;
+				color: var(--text-secondary, #8b949e);
+				text-decoration: none;
+				transition: all 0.2s;
+			}
+			.counterpart-link:hover {
+				border-color: var(--accent-cyan, #58a6ff);
+				color: var(--accent-cyan, #58a6ff);
+			}
+
+			.article-title {
+				font-size: 2.2rem;
+				font-weight: 800;
+				line-height: 1.2;
+				margin: 0 0 1.5rem;
+				color: var(--text-primary, #e6edf3);
+			}
+			.title-divider {
+				border: none;
+				border-top: 1px solid var(--border, #30363d);
+				margin: 0 0 2rem;
+			}
+
+			.prose {
+				max-width: 780px;
+				margin: 0 auto;
+				padding: 0 1rem 3rem;
+				font-family: var(--font-serif, 'Source Serif 4', Georgia, serif);
+				font-size: 1.05rem;
+				line-height: 1.85;
+				color: var(--text-primary, #e6edf3);
+			}
+			.prose :global(h1),
+			.prose :global(h2),
+			.prose :global(h3) {
+				font-family: var(--font-ui, 'Inter', sans-serif);
+			}
+			.prose :global(p) { margin-bottom: 1.5em; }
+			.prose :global(img) {
+				max-width: 100%;
+				height: auto;
+				border-radius: 8px;
+				border: 1px solid var(--border, #30363d);
+				margin: 1.5rem 0;
+			}
+			.last-updated {
+				font-style: italic;
+				color: var(--text-muted, #484f58);
+				font-size: 0.82rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		<Header />
+		<main>
+			<article>
+				<div class="article-header">
+					<nav class="breadcrumb">
+						<a href="/" data-en="Home" data-zh="首页">Home</a>
+						<span class="sep">›</span>
+						<a href="/blog" data-en="Articles" data-zh="文章">Articles</a>
+						<span class="sep">›</span>
+						<span data-en={catLabel.en} data-zh={catLabel.zh}>{lang === 'zh' ? catLabel.zh : catLabel.en}</span>
+					</nav>
+					<div class="article-meta">
+						<span class={`lang-indicator ${lang || 'en'}`}>{lang === 'zh' ? '中文' : 'EN'}</span>
+						<span class="cat-badge">{lang === 'zh' ? catLabel.zh : catLabel.en}</span>
+						<span class="date-text"><FormattedDate date={pubDate} /></span>
+						{updatedDate && (
+							<span class="last-updated">
+								Updated <FormattedDate date={updatedDate} />
+							</span>
+						)}
+						{counterpartUrl && (
+							<a href={counterpartUrl} class="counterpart-link" id="counterpart-link" data-url={counterpartUrl}>
+								{lang === 'zh' ? '🇺🇸 Read in English' : '🇨🇳 阅读中文版'}
+							</a>
+						)}
+					</div>
+					<h1 class="article-title">{title}</h1>
+					<hr class="title-divider" />
+				</div>
+				<div class="prose">
+					<slot />
+				</div>
+			</article>
+		</main>
+		<Footer />
+
+		{counterpartUrl && (
+			<script define:vars={{ counterpartUrl, lang }}>
+				// When the header language toggle is clicked on an article page,
+				// navigate to the counterpart article instead of just toggling text
+				window.addEventListener('lang-change', (e) => {
+					const newLang = e.detail.lang;
+					const currentLang = lang || 'en';
+					if (newLang !== currentLang && counterpartUrl) {
+						window.location.href = counterpartUrl;
+					}
+				});
+			</script>
+		)}
+	</body>
+</html>

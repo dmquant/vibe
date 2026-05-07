@@ -1,0 +1,65 @@
+---
+import { type CollectionEntry, getCollection, render } from 'astro:content';
+import BlogPost from '../../layouts/BlogPost.astro';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('blog');
+
+	// Build a map of counterpart URLs
+	const counterpartMap = new Map<string, string>();
+	for (const post of posts) {
+		const lang = post.data.lang || 'en';
+		const other = lang === 'en' ? 'zh' : 'en';
+		const id = post.id;
+		let cpId = '';
+
+		if (id.startsWith('institute-')) {
+			cpId = id.replace(`institute-${lang}-`, `institute-${other}-`);
+		} else if (id.startsWith('vibelog-')) {
+			if (id.endsWith(`-${lang}`)) {
+				cpId = id.slice(0, -lang.length) + other;
+			}
+		} else if (id.startsWith('research-')) {
+			if (id.endsWith(`_${lang}`)) {
+				cpId = id.slice(0, -lang.length) + other;
+			}
+		}
+
+		if (cpId && posts.find(p => p.id === cpId)) {
+			counterpartMap.set(id, `/blog/${cpId}/`);
+		}
+	}
+
+	return posts.map((post) => ({
+		params: { slug: post.id },
+		props: post,
+	}));
+}
+
+type Props = CollectionEntry<'blog'>;
+
+const post = Astro.props;
+const { Content } = await render(post);
+
+// Compute counterpart URL from the post ID
+const lang = post.data.lang || 'en';
+const other = lang === 'en' ? 'zh' : 'en';
+const id = post.id;
+let cpId = '';
+
+if (id.startsWith('institute-')) {
+	cpId = id.replace(`institute-${lang}-`, `institute-${other}-`);
+} else if (id.startsWith('vibelog-') && id.endsWith(`-${lang}`)) {
+	cpId = id.slice(0, -lang.length) + other;
+} else if (id.startsWith('research-') && id.endsWith(`_${lang}`)) {
+	cpId = id.slice(0, -lang.length) + other;
+}
+
+const allPosts = await getCollection('blog');
+const hasCounterpart = cpId && allPosts.some(p => p.id === cpId);
+const counterpartUrl = hasCounterpart ? `/blog/${cpId}/` : null;
+---
+
+<BlogPost {...post.data} counterpartUrl={counterpartUrl}>
+	<Content />
+</BlogPost>

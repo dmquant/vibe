@@ -1,0 +1,334 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+
+// Group by category and language
+const instituteEn = posts.filter(p => p.data.category === 'institute' && p.data.lang === 'en');
+const instituteZh = posts.filter(p => p.data.category === 'institute' && p.data.lang === 'zh');
+const researchEn = posts.filter(p => p.data.category === 'research' && p.data.lang === 'en');
+const researchZh = posts.filter(p => p.data.category === 'research' && p.data.lang === 'zh');
+const vibelogEn = posts.filter(p => p.data.category === 'vibelog' && p.data.lang === 'en');
+const vibelogZh = posts.filter(p => p.data.category === 'vibelog' && p.data.lang === 'zh');
+---
+
+<!doctype html>
+<html lang="en" data-lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<!-- Hero -->
+			<section class="hero">
+				<div class="hero-bg"></div>
+				<div class="hero-content">
+					<div class="hero-badge" data-i18n="badge">AI-Powered Research Platform</div>
+					<h1>Research<span class="accent">OS</span></h1>
+					<p class="hero-sub" data-en="A multi-agent autonomous research ecosystem — featuring 42 specialized AI analysts, adversarial whiteboard sessions, and deep data-driven analysis." data-zh="多智能体自主研究生态系统 — 拥有42位专业AI分析师、对抗性白板研讨和深度数据驱动分析。">
+						A multi-agent autonomous research ecosystem — featuring 42 specialized AI analysts, adversarial whiteboard sessions, and deep data-driven analysis.
+					</p>
+					<div class="hero-actions">
+						<a href="/blog" class="btn btn-primary" data-en="Read Documentation" data-zh="阅读文档">Read Documentation</a>
+						<a href="https://github.com/dmquant/vibe" class="btn btn-outline" target="_blank">GitHub →</a>
+					</div>
+					<div class="hero-stats">
+						<div class="stat"><span class="stat-num">42</span><span class="stat-label" data-en="AI Analysts" data-zh="AI 分析师">AI Analysts</span></div>
+						<div class="stat"><span class="stat-num">1,062</span><span class="stat-label" data-en="Reports Generated" data-zh="已生成报告">Reports Generated</span></div>
+						<div class="stat"><span class="stat-num">50+</span><span class="stat-label" data-en="Whiteboard Sessions" data-zh="白板研讨">Whiteboard Sessions</span></div>
+						<div class="stat"><span class="stat-num">2</span><span class="stat-label" data-en="Languages" data-zh="语言">Languages</span></div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Feature Cards -->
+			<section class="features">
+				<div class="feature-card">
+					<div class="feature-icon">🛤️</div>
+					<h3>Agent Route</h3>
+					<p data-en="Control plane for AI orchestration — manage workflows, schedules, and multi-agent pipelines from a single dashboard." data-zh="AI编排控制面板 — 从单一仪表盘管理工作流、计划和多智能体流水线。">Control plane for AI orchestration — manage workflows, schedules, and multi-agent pipelines from a single dashboard.</p>
+				</div>
+				<div class="feature-card">
+					<div class="feature-icon">🏛️</div>
+					<h3 data-en="AI Institute" data-zh="AI 研究院">AI Institute</h3>
+					<p data-en="Autonomous stock research with 42 specialized analysts powered by Gemini and Claude, collaborating via whiteboard sessions." data-zh="由Gemini和Claude驱动的42位专业分析师进行自主股票研究，通过白板会话进行协作。">Autonomous stock research with 42 specialized analysts powered by Gemini and Claude, collaborating via whiteboard sessions.</p>
+				</div>
+				<div class="feature-card">
+					<div class="feature-icon">📊</div>
+					<h3 data-en="Deep Research" data-zh="深度研究">Deep Research</h3>
+					<p data-en="Data-driven research papers with real charts generated from institutional data — covering AI, inflation, and macro trends." data-zh="基于机构数据生成真实图表的数据驱动研究论文 — 涵盖AI、通胀和宏观趋势。">Data-driven research papers with real charts generated from institutional data — covering AI, inflation, and macro trends.</p>
+				</div>
+			</section>
+
+			<!-- Deep Research Papers -->
+			<section class="section">
+				<div class="section-header">
+					<h2 data-en="Deep Research Papers" data-zh="深度研究论文">Deep Research Papers</h2>
+					<span class="section-badge" data-en="Latest" data-zh="最新">Latest</span>
+				</div>
+				<!-- EN articles -->
+				<div class="article-grid lang-content" data-show-lang="en">
+					{researchEn.map((post) => (
+						<a href={`/blog/${post.id}/`} class="article-card research-card">
+							<div class="card-meta">
+								<span class="lang-badge en">EN</span>
+								<FormattedDate date={post.data.pubDate} />
+							</div>
+							<h3>{post.data.title}</h3>
+							<p>{post.data.description}</p>
+						</a>
+					))}
+				</div>
+				<!-- ZH articles -->
+				<div class="article-grid lang-content" data-show-lang="zh">
+					{researchZh.map((post) => (
+						<a href={`/blog/${post.id}/`} class="article-card research-card">
+							<div class="card-meta">
+								<span class="lang-badge zh">中文</span>
+								<FormattedDate date={post.data.pubDate} />
+							</div>
+							<h3>{post.data.title}</h3>
+							<p>{post.data.description}</p>
+						</a>
+					))}
+				</div>
+			</section>
+
+			<!-- Institute Series -->
+			<section class="section">
+				<div class="section-header">
+					<h2 data-en="The Institute Series" data-zh="智研所系列">The Institute Series</h2>
+					<span class="section-badge" data-en="6-Part Deep Dive" data-zh="6篇深度解析">6-Part Deep Dive</span>
+				</div>
+				<!-- EN series -->
+				<div class="series-list lang-content" data-show-lang="en">
+					{instituteEn.map((post, i) => (
+						<a href={`/blog/${post.id}/`} class="series-item">
+							<span class="series-num">{String(i + 1).padStart(2, '0')}</span>
+							<div class="series-content">
+								<h4>{post.data.title}</h4>
+								<p>{post.data.description}</p>
+							</div>
+							<span class="series-arrow">→</span>
+						</a>
+					))}
+				</div>
+				<!-- ZH series -->
+				<div class="series-list lang-content" data-show-lang="zh">
+					{instituteZh.map((post, i) => (
+						<a href={`/blog/${post.id}/`} class="series-item">
+							<span class="series-num">{String(i + 1).padStart(2, '0')}</span>
+							<div class="series-content">
+								<h4>{post.data.title}</h4>
+								<p>{post.data.description}</p>
+							</div>
+							<span class="series-arrow">→</span>
+						</a>
+					))}
+				</div>
+			</section>
+
+			<!-- Vibelog & Guides -->
+			<section class="section">
+				<div class="section-header">
+					<h2 data-en="Vibelog & Guides" data-zh="指南与文档">Vibelog & Guides</h2>
+				</div>
+				<!-- EN vibelog -->
+				<div class="article-grid lang-content" data-show-lang="en">
+					{vibelogEn.map((post) => (
+						<a href={`/blog/${post.id}/`} class="article-card">
+							<div class="card-meta">
+								<span class="lang-badge en">EN</span>
+								<FormattedDate date={post.data.pubDate} />
+							</div>
+							<h3>{post.data.title}</h3>
+							<p>{post.data.description}</p>
+						</a>
+					))}
+				</div>
+				<!-- ZH vibelog -->
+				<div class="article-grid lang-content" data-show-lang="zh">
+					{vibelogZh.map((post) => (
+						<a href={`/blog/${post.id}/`} class="article-card">
+							<div class="card-meta">
+								<span class="lang-badge zh">中文</span>
+								<FormattedDate date={post.data.pubDate} />
+							</div>
+							<h3>{post.data.title}</h3>
+							<p>{post.data.description}</p>
+						</a>
+					))}
+				</div>
+			</section>
+		</main>
+		<Footer />
+
+		<script>
+			function applyLang(lang: string) {
+				// Toggle lang-content blocks
+				document.querySelectorAll('.lang-content').forEach(el => {
+					const showLang = (el as HTMLElement).dataset.showLang;
+					(el as HTMLElement).style.display = showLang === lang ? '' : 'none';
+				});
+
+				// Swap bilingual text
+				document.querySelectorAll('[data-en][data-zh]').forEach(el => {
+					const htmlEl = el as HTMLElement;
+					const text = lang === 'zh' ? htmlEl.dataset.zh : htmlEl.dataset.en;
+					if (text) htmlEl.textContent = text;
+				});
+			}
+
+			// Apply on load
+			const initialLang = localStorage.getItem('researchos-lang') || 'en';
+			applyLang(initialLang);
+
+			// Listen for toggle events from Header
+			window.addEventListener('lang-change', (e: Event) => {
+				const detail = (e as CustomEvent).detail;
+				applyLang(detail.lang);
+			});
+		</script>
+	</body>
+</html>
+
+<style>
+	/* Hero */
+	.hero {
+		position: relative;
+		text-align: center;
+		padding: 5rem 1rem 4rem;
+		overflow: hidden;
+	}
+	.hero-bg {
+		position: absolute;
+		inset: 0;
+		background: radial-gradient(ellipse at 50% 0%, rgba(88,166,255,0.08) 0%, transparent 60%);
+		pointer-events: none;
+	}
+	.hero-content { position: relative; z-index: 1; }
+	.hero-badge {
+		display: inline-block;
+		padding: 0.3rem 0.8rem;
+		font-size: 0.75rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		color: var(--accent-cyan);
+		border: 1px solid var(--border);
+		border-radius: 20px;
+		background: var(--bg-surface);
+		margin-bottom: 1.5rem;
+	}
+	.hero h1 {
+		font-size: 4rem;
+		font-weight: 800;
+		margin-bottom: 1rem;
+		letter-spacing: -0.02em;
+	}
+	.accent { color: var(--accent-cyan); }
+	.hero-sub {
+		max-width: 600px;
+		margin: 0 auto 2rem;
+		color: var(--text-secondary);
+		font-size: 1.1rem;
+		line-height: 1.6;
+	}
+	.hero-actions {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		margin-bottom: 3rem;
+	}
+	.btn {
+		padding: 0.65rem 1.5rem;
+		border-radius: 8px;
+		font-weight: 600;
+		font-size: 0.9rem;
+		text-decoration: none;
+		transition: all 0.2s;
+	}
+	.btn-primary { background: var(--accent-cyan); color: #0d1117; }
+	.btn-primary:hover { background: #79c0ff; color: #0d1117; }
+	.btn-outline { border: 1px solid var(--border); color: var(--text-secondary); background: transparent; }
+	.btn-outline:hover { border-color: var(--accent-cyan); color: var(--text-primary); }
+	.hero-stats { display: flex; justify-content: center; gap: 3rem; }
+	.stat { text-align: center; }
+	.stat-num { display: block; font-size: 1.8rem; font-weight: 700; color: var(--accent-cyan); }
+	.stat-label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+
+	/* Features */
+	.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin: 3rem 0; }
+	.feature-card {
+		background: var(--bg-surface);
+		border: 1px solid var(--border);
+		border-radius: 12px;
+		padding: 1.5rem;
+		transition: all 0.25s;
+	}
+	.feature-card:hover { border-color: var(--accent-cyan); box-shadow: var(--glow-cyan); transform: translateY(-2px); }
+	.feature-icon { font-size: 1.8rem; margin-bottom: 0.8rem; }
+	.feature-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--text-primary); }
+	.feature-card p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin: 0; }
+
+	/* Sections */
+	.section { margin: 3.5rem 0; }
+	.section-header { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1.5rem; }
+	.section-header h2 { font-size: 1.5rem; margin: 0; border: none; padding: 0; }
+	.section-badge {
+		font-size: 0.7rem; padding: 0.2rem 0.6rem;
+		background: rgba(88,166,255,0.1); color: var(--accent-cyan);
+		border-radius: 12px; font-weight: 600;
+	}
+
+	/* Article Grid */
+	.article-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.25rem; }
+	.article-card {
+		display: block;
+		background: var(--bg-surface);
+		border: 1px solid var(--border);
+		border-radius: 10px;
+		padding: 1.25rem;
+		text-decoration: none;
+		transition: all 0.25s;
+	}
+	.article-card:hover { border-color: var(--accent-cyan); box-shadow: var(--glow-cyan); transform: translateY(-2px); }
+	.research-card { border-left: 3px solid var(--accent-gold); }
+	.card-meta { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.6rem; font-size: 0.78rem; color: var(--text-muted); }
+	.lang-badge { padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 600; font-size: 0.65rem; }
+	.lang-badge.en { background: rgba(88,166,255,0.15); color: var(--accent-cyan); }
+	.lang-badge.zh { background: rgba(248,81,73,0.15); color: var(--accent-red); }
+	.article-card h3 { font-size: 1rem; margin-bottom: 0.4rem; color: var(--text-primary); line-height: 1.35; }
+	.article-card p { font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.5; }
+
+	/* Series */
+	.series-list { display: flex; flex-direction: column; gap: 0.5rem; }
+	.series-item {
+		display: flex; align-items: center; gap: 1.25rem;
+		padding: 1rem 1.25rem;
+		background: var(--bg-surface); border: 1px solid var(--border);
+		border-radius: 10px; text-decoration: none; transition: all 0.25s;
+	}
+	.series-item:hover { border-color: var(--accent-green); background: var(--bg-elevated); }
+	.series-num { font-size: 1.5rem; font-weight: 800; color: var(--accent-green); min-width: 2.5rem; font-family: var(--font-mono); }
+	.series-content { flex: 1; }
+	.series-content h4 { font-size: 0.95rem; margin: 0 0 0.2rem; color: var(--text-primary); }
+	.series-content p { font-size: 0.82rem; color: var(--text-secondary); margin: 0; }
+	.series-arrow { color: var(--text-muted); font-size: 1.2rem; transition: transform 0.2s; }
+	.series-item:hover .series-arrow { transform: translateX(4px); color: var(--accent-green); }
+
+	@media (max-width: 768px) {
+		.hero h1 { font-size: 2.5rem; }
+		.hero-stats { gap: 1.5rem; flex-wrap: wrap; }
+		.features { grid-template-columns: 1fr; }
+		.article-grid { grid-template-columns: 1fr; }
+	}
+</style>
