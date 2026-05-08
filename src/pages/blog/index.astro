@@ -10,8 +10,9 @@ const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 
-const categories = ['research', 'institute', 'vibelog'] as const;
+const categories = ['brief', 'research', 'institute', 'vibelog'] as const;
 const categoryLabels: Record<string, { en: string; zh: string; icon: string }> = {
+	brief:     { en: 'Daily Brief', zh: '每日简报', icon: '📋' },
 	research:  { en: 'Deep Research', zh: '深度研究', icon: '📊' },
 	institute: { en: 'Institute Series', zh: '智研所系列', icon: '🏛️' },
 	vibelog:   { en: 'Vibelog & Guides', zh: '指南与文档', icon: '📝' },

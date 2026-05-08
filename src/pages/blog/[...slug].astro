@@ -53,6 +53,8 @@ if (id.startsWith('institute-')) {
 	cpId = id.slice(0, -lang.length) + other;
 } else if (id.startsWith('research-') && id.endsWith(`_${lang}`)) {
 	cpId = id.slice(0, -lang.length) + other;
+} else if (id.startsWith('brief-') && id.endsWith(`-${lang}`)) {
+	cpId = id.slice(0, -lang.length) + other;
 }
 
 const allPosts = await getCollection('blog');

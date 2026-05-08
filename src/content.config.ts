@@ -11,7 +11,7 @@ const blog = defineCollection({
 			pubDate: z.coerce.date(),
 			updatedDate: z.coerce.date().optional(),
 			heroImage: z.optional(image()),
-			category: z.enum(['institute', 'vibelog', 'research']).default('vibelog'),
+			category: z.enum(['institute', 'vibelog', 'research', 'brief']).default('vibelog'),
 			lang: z.enum(['en', 'zh']).default('en'),
 		}),
 });
