@@ -10,13 +10,54 @@ const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 
-// Group by category and language
+// Brief posts (Morning Brief, Editor, Mailbox)
+const briefEn = posts.filter(p => p.data.category === 'brief' && p.data.lang === 'en');
+const briefZh = posts.filter(p => p.data.category === 'brief' && p.data.lang === 'zh');
+
+// Classify brief types by slug prefix
+const classifyBrief = (id: string) => {
+	if (id.includes('editor-daily')) return 'editor';
+	if (id.includes('mailbox-digest')) return 'mailbox';
+	return 'morning';
+};
+
+const briefTypes = [
+	{ key: 'morning', icon: '📋', en: 'Morning Brief', zh: '晨间简报', desc_en: '7-stage analyst pipeline', desc_zh: '7阶段分析师管线' },
+	{ key: 'editor', icon: '⚖️', en: 'Editor Report', zh: '总编报告', desc_en: '4-phase contradiction sweep', desc_zh: '4阶段矛盾梳理' },
+	{ key: 'mailbox', icon: '📬', en: 'Mailbox Digest', zh: '邮箱摘要', desc_en: 'Cross-desk exchanges', desc_zh: '跨部门交流' },
+];
+
+// Get latest brief of each type
+const latestBriefsEn = briefTypes.map(t => ({
+	...t,
+	post: briefEn.find(p => classifyBrief(p.id) === t.key) || null,
+}));
+const latestBriefsZh = briefTypes.map(t => ({
+	...t,
+	post: briefZh.find(p => classifyBrief(p.id) === t.key) || null,
+}));
+
+// Group remaining content
 const instituteEn = posts.filter(p => p.data.category === 'institute' && p.data.lang === 'en');
 const instituteZh = posts.filter(p => p.data.category === 'institute' && p.data.lang === 'zh');
 const researchEn = posts.filter(p => p.data.category === 'research' && p.data.lang === 'en');
 const researchZh = posts.filter(p => p.data.category === 'research' && p.data.lang === 'zh');
 const vibelogEn = posts.filter(p => p.data.category === 'vibelog' && p.data.lang === 'en');
 const vibelogZh = posts.filter(p => p.data.category === 'vibelog' && p.data.lang === 'zh');
+
+// Brief archive (all briefs, grouped by date)
+const briefDatesEn = new Map<string, typeof briefEn>();
+briefEn.forEach(p => {
+	const date = p.data.pubDate.toISOString().split('T')[0];
+	if (!briefDatesEn.has(date)) briefDatesEn.set(date, []);
+	briefDatesEn.get(date)!.push(p);
+});
+const briefDatesZh = new Map<string, typeof briefZh>();
+briefZh.forEach(p => {
+	const date = p.data.pubDate.toISOString().split('T')[0];
+	if (!briefDatesZh.has(date)) briefDatesZh.set(date, []);
+	briefDatesZh.get(date)!.push(p);
+});
 ---
 
 <!doctype html>
@@ -27,54 +68,142 @@ const vibelogZh = posts.filter(p => p.data.category === 'vibelog' && p.data.lang
 	<body>
 		<Header />
 		<main>
-			<!-- Hero -->
-			<section class="hero">
-				<div class="hero-bg"></div>
-				<div class="hero-content">
-					<div class="hero-badge" data-i18n="badge">AI-Powered Research Platform</div>
-					<h1>Research<span class="accent">OS</span></h1>
-					<p class="hero-sub" data-en="A multi-agent autonomous research ecosystem — featuring 42 specialized AI analysts, adversarial whiteboard sessions, and deep data-driven analysis." data-zh="多智能体自主研究生态系统 — 拥有42位专业AI分析师、对抗性白板研讨和深度数据驱动分析。">
-						A multi-agent autonomous research ecosystem — featuring 42 specialized AI analysts, adversarial whiteboard sessions, and deep data-driven analysis.
-					</p>
-					<div class="hero-actions">
-						<a href="/blog" class="btn btn-primary" data-en="Read Documentation" data-zh="阅读文档">Read Documentation</a>
-						<a href="https://github.com/dmquant/vibe" class="btn btn-outline" target="_blank">GitHub →</a>
+			<!-- Compact Hero Banner -->
+			<section class="hero-banner">
+				<div class="hero-inner">
+					<div class="hero-left">
+						<h1>Research<span class="accent">OS</span></h1>
+						<p class="hero-tagline" data-en="Multi-agent autonomous research · 42 AI analysts · Daily briefs" data-zh="多智能体自主研究 · 42位AI分析师 · 每日简报">
+							Multi-agent autonomous research · 42 AI analysts · Daily briefs
+						</p>
 					</div>
-					<div class="hero-stats">
-						<div class="stat"><span class="stat-num">42</span><span class="stat-label" data-en="AI Analysts" data-zh="AI 分析师">AI Analysts</span></div>
-						<div class="stat"><span class="stat-num">1,062</span><span class="stat-label" data-en="Reports Generated" data-zh="已生成报告">Reports Generated</span></div>
-						<div class="stat"><span class="stat-num">50+</span><span class="stat-label" data-en="Whiteboard Sessions" data-zh="白板研讨">Whiteboard Sessions</span></div>
-						<div class="stat"><span class="stat-num">2</span><span class="stat-label" data-en="Languages" data-zh="语言">Languages</span></div>
+					<div class="hero-right">
+						<div class="hero-stats-inline">
+							<span class="stat-pill"><strong>42</strong> <em data-en="analysts" data-zh="分析师">analysts</em></span>
+							<span class="stat-pill"><strong>1,062+</strong> <em data-en="reports" data-zh="报告">reports</em></span>
+							<span class="stat-pill"><strong>50+</strong> <em data-en="sessions" data-zh="研讨">sessions</em></span>
+						</div>
+						<div class="hero-links">
+							<a href="/blog" class="btn btn-sm btn-primary" data-en="All Articles" data-zh="全部文章">All Articles</a>
+							<a href="https://github.com/dmquant/vibe" class="btn btn-sm btn-ghost" target="_blank">GitHub →</a>
+						</div>
 					</div>
 				</div>
 			</section>
 
-			<!-- Feature Cards -->
-			<section class="features">
-				<div class="feature-card">
-					<div class="feature-icon">🛤️</div>
-					<h3>Agent Route</h3>
-					<p data-en="Control plane for AI orchestration — manage workflows, schedules, and multi-agent pipelines from a single dashboard." data-zh="AI编排控制面板 — 从单一仪表盘管理工作流、计划和多智能体流水线。">Control plane for AI orchestration — manage workflows, schedules, and multi-agent pipelines from a single dashboard.</p>
+			<!-- ═══════════════════════════════════════════════════════════ -->
+			<!-- Latest Daily Briefs — the primary content                 -->
+			<!-- ═══════════════════════════════════════════════════════════ -->
+			<section class="section briefs-section">
+				<div class="section-header">
+					<h2 data-en="📰 Latest Daily Briefs" data-zh="📰 最新每日简报">📰 Latest Daily Briefs</h2>
+					<span class="section-badge live-badge" data-en="Auto-generated" data-zh="自动生成">Auto-generated</span>
 				</div>
-				<div class="feature-card">
-					<div class="feature-icon">🏛️</div>
-					<h3 data-en="AI Institute" data-zh="AI 研究院">AI Institute</h3>
-					<p data-en="Autonomous stock research with 42 specialized analysts powered by Gemini and Claude, collaborating via whiteboard sessions." data-zh="由Gemini和Claude驱动的42位专业分析师进行自主股票研究，通过白板会话进行协作。">Autonomous stock research with 42 specialized analysts powered by Gemini and Claude, collaborating via whiteboard sessions.</p>
+
+				<!-- EN Briefs -->
+				<div class="brief-grid lang-content" data-show-lang="en">
+					{latestBriefsEn.map(({ icon, en, desc_en, post }) => (
+						post ? (
+							<a href={`/blog/${post.id}/`} class="brief-card">
+								<div class="brief-card-header">
+									<span class="brief-icon">{icon}</span>
+									<span class="brief-type">{en}</span>
+									<span class="brief-date"><FormattedDate date={post.data.pubDate} /></span>
+								</div>
+								<h3>{post.data.title}</h3>
+								<p class="brief-desc">{post.data.description}</p>
+								<span class="brief-cta">Read full report →</span>
+							</a>
+						) : (
+							<div class="brief-card brief-card-empty">
+								<div class="brief-card-header">
+									<span class="brief-icon">{icon}</span>
+									<span class="brief-type">{en}</span>
+								</div>
+								<p class="brief-desc">{desc_en} — coming soon</p>
+							</div>
+						)
+					))}
 				</div>
-				<div class="feature-card">
-					<div class="feature-icon">📊</div>
-					<h3 data-en="Deep Research" data-zh="深度研究">Deep Research</h3>
-					<p data-en="Data-driven research papers with real charts generated from institutional data — covering AI, inflation, and macro trends." data-zh="基于机构数据生成真实图表的数据驱动研究论文 — 涵盖AI、通胀和宏观趋势。">Data-driven research papers with real charts generated from institutional data — covering AI, inflation, and macro trends.</p>
+
+				<!-- ZH Briefs -->
+				<div class="brief-grid lang-content" data-show-lang="zh">
+					{latestBriefsZh.map(({ icon, zh, desc_zh, post }) => (
+						post ? (
+							<a href={`/blog/${post.id}/`} class="brief-card">
+								<div class="brief-card-header">
+									<span class="brief-icon">{icon}</span>
+									<span class="brief-type">{zh}</span>
+									<span class="brief-date"><FormattedDate date={post.data.pubDate} /></span>
+								</div>
+								<h3>{post.data.title}</h3>
+								<p class="brief-desc">{post.data.description}</p>
+								<span class="brief-cta">阅读完整报告 →</span>
+							</a>
+						) : (
+							<div class="brief-card brief-card-empty">
+								<div class="brief-card-header">
+									<span class="brief-icon">{icon}</span>
+									<span class="brief-type">{zh}</span>
+								</div>
+								<p class="brief-desc">{desc_zh} — 即将推出</p>
+							</div>
+						)
+					))}
+				</div>
+			</section>
+
+			<!-- Brief Archive -->
+			<section class="section">
+				<div class="section-header">
+					<h2 data-en="📅 Brief Archive" data-zh="📅 简报存档">📅 Brief Archive</h2>
+				</div>
+
+				<div class="archive-list lang-content" data-show-lang="en">
+					{[...briefDatesEn.entries()].slice(0, 7).map(([date, datePosts]) => (
+						<div class="archive-row">
+							<span class="archive-date">{date}</span>
+							<div class="archive-links">
+								{datePosts.map(p => {
+									const type = classifyBrief(p.id);
+									const typeInfo = briefTypes.find(t => t.key === type);
+									return (
+										<a href={`/blog/${p.id}/`} class={`archive-tag tag-${type}`}>
+											{typeInfo?.icon} {typeInfo?.en}
+										</a>
+									);
+								})}
+							</div>
+						</div>
+					))}
+				</div>
+
+				<div class="archive-list lang-content" data-show-lang="zh">
+					{[...briefDatesZh.entries()].slice(0, 7).map(([date, datePosts]) => (
+						<div class="archive-row">
+							<span class="archive-date">{date}</span>
+							<div class="archive-links">
+								{datePosts.map(p => {
+									const type = classifyBrief(p.id);
+									const typeInfo = briefTypes.find(t => t.key === type);
+									return (
+										<a href={`/blog/${p.id}/`} class={`archive-tag tag-${type}`}>
+											{typeInfo?.icon} {typeInfo?.zh}
+										</a>
+									);
+								})}
+							</div>
+						</div>
+					))}
 				</div>
 			</section>
 
 			<!-- Deep Research Papers -->
 			<section class="section">
 				<div class="section-header">
-					<h2 data-en="Deep Research Papers" data-zh="深度研究论文">Deep Research Papers</h2>
+					<h2 data-en="📊 Deep Research Papers" data-zh="📊 深度研究论文">📊 Deep Research Papers</h2>
 					<span class="section-badge" data-en="Latest" data-zh="最新">Latest</span>
 				</div>
-				<!-- EN articles -->
 				<div class="article-grid lang-content" data-show-lang="en">
 					{researchEn.map((post) => (
 						<a href={`/blog/${post.id}/`} class="article-card research-card">
@@ -87,7 +216,6 @@ const vibelogZh = posts.filter(p => p.data.category === 'vibelog' && p.data.lang
 						</a>
 					))}
 				</div>
-				<!-- ZH articles -->
 				<div class="article-grid lang-content" data-show-lang="zh">
 					{researchZh.map((post) => (
 						<a href={`/blog/${post.id}/`} class="article-card research-card">
@@ -105,10 +233,9 @@ const vibelogZh = posts.filter(p => p.data.category === 'vibelog' && p.data.lang
 			<!-- Institute Series -->
 			<section class="section">
 				<div class="section-header">
-					<h2 data-en="The Institute Series" data-zh="智研所系列">The Institute Series</h2>
+					<h2 data-en="🏛️ The Institute Series" data-zh="🏛️ 智研所系列">🏛️ The Institute Series</h2>
 					<span class="section-badge" data-en="6-Part Deep Dive" data-zh="6篇深度解析">6-Part Deep Dive</span>
 				</div>
-				<!-- EN series -->
 				<div class="series-list lang-content" data-show-lang="en">
 					{instituteEn.map((post, i) => (
 						<a href={`/blog/${post.id}/`} class="series-item">
@@ -121,7 +248,6 @@ const vibelogZh = posts.filter(p => p.data.category === 'vibelog' && p.data.lang
 						</a>
 					))}
 				</div>
-				<!-- ZH series -->
 				<div class="series-list lang-content" data-show-lang="zh">
 					{instituteZh.map((post, i) => (
 						<a href={`/blog/${post.id}/`} class="series-item">
@@ -139,9 +265,8 @@ const vibelogZh = posts.filter(p => p.data.category === 'vibelog' && p.data.lang
 			<!-- Vibelog & Guides -->
 			<section class="section">
 				<div class="section-header">
-					<h2 data-en="Vibelog & Guides" data-zh="指南与文档">Vibelog & Guides</h2>
+					<h2 data-en="📝 Vibelog & Guides" data-zh="📝 指南与文档">📝 Vibelog & Guides</h2>
 				</div>
-				<!-- EN vibelog -->
 				<div class="article-grid lang-content" data-show-lang="en">
 					{vibelogEn.map((post) => (
 						<a href={`/blog/${post.id}/`} class="article-card">
@@ -154,7 +279,6 @@ const vibelogZh = posts.filter(p => p.data.category === 'vibelog' && p.data.lang
 						</a>
 					))}
 				</div>
-				<!-- ZH vibelog -->
 				<div class="article-grid lang-content" data-show-lang="zh">
 					{vibelogZh.map((post) => (
 						<a href={`/blog/${post.id}/`} class="article-card">
@@ -173,25 +297,18 @@ const vibelogZh = posts.filter(p => p.data.category === 'vibelog' && p.data.lang
 
 		<script>
 			function applyLang(lang: string) {
-				// Toggle lang-content blocks
 				document.querySelectorAll('.lang-content').forEach(el => {
 					const showLang = (el as HTMLElement).dataset.showLang;
 					(el as HTMLElement).style.display = showLang === lang ? '' : 'none';
 				});
-
-				// Swap bilingual text
 				document.querySelectorAll('[data-en][data-zh]').forEach(el => {
 					const htmlEl = el as HTMLElement;
 					const text = lang === 'zh' ? htmlEl.dataset.zh : htmlEl.dataset.en;
 					if (text) htmlEl.textContent = text;
 				});
 			}
-
-			// Apply on load
 			const initialLang = localStorage.getItem('researchos-lang') || 'en';
 			applyLang(initialLang);
-
-			// Listen for toggle events from Header
 			window.addEventListener('lang-change', (e: Event) => {
 				const detail = (e as CustomEvent).detail;
 				applyLang(detail.lang);
@@ -201,134 +318,265 @@ const vibelogZh = posts.filter(p => p.data.category === 'vibelog' && p.data.lang
 </html>
 
 <style>
-	/* Hero */
-	.hero {
-		position: relative;
-		text-align: center;
-		padding: 5rem 1rem 4rem;
-		overflow: hidden;
+	/* ═══ Compact Hero Banner ═══ */
+	.hero-banner {
+		border-bottom: 1px solid var(--border, #30363d);
+		background: linear-gradient(180deg, rgba(88,166,255,0.04) 0%, transparent 100%);
+		padding: 1.5rem 1rem;
 	}
-	.hero-bg {
-		position: absolute;
-		inset: 0;
-		background: radial-gradient(ellipse at 50% 0%, rgba(88,166,255,0.08) 0%, transparent 60%);
-		pointer-events: none;
+	.hero-inner {
+		max-width: 1100px;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2rem;
 	}
-	.hero-content { position: relative; z-index: 1; }
-	.hero-badge {
-		display: inline-block;
-		padding: 0.3rem 0.8rem;
-		font-size: 0.75rem;
-		font-weight: 600;
-		text-transform: uppercase;
-		letter-spacing: 0.08em;
-		color: var(--accent-cyan);
-		border: 1px solid var(--border);
-		border-radius: 20px;
-		background: var(--bg-surface);
-		margin-bottom: 1.5rem;
-	}
-	.hero h1 {
-		font-size: 4rem;
+	.hero-left h1 {
+		font-size: 2.2rem;
 		font-weight: 800;
-		margin-bottom: 1rem;
+		margin: 0 0 0.25rem;
 		letter-spacing: -0.02em;
 	}
-	.accent { color: var(--accent-cyan); }
-	.hero-sub {
-		max-width: 600px;
-		margin: 0 auto 2rem;
-		color: var(--text-secondary);
-		font-size: 1.1rem;
-		line-height: 1.6;
+	.accent { color: var(--accent-cyan, #58a6ff); }
+	.hero-tagline {
+		color: var(--text-secondary, #8b949e);
+		font-size: 0.88rem;
+		margin: 0;
 	}
-	.hero-actions {
+	.hero-right {
 		display: flex;
-		gap: 1rem;
-		justify-content: center;
-		margin-bottom: 3rem;
+		flex-direction: column;
+		align-items: flex-end;
+		gap: 0.75rem;
 	}
-	.btn {
-		padding: 0.65rem 1.5rem;
-		border-radius: 8px;
+	.hero-stats-inline {
+		display: flex;
+		gap: 0.6rem;
+	}
+	.stat-pill {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.3rem;
+		padding: 0.2rem 0.6rem;
+		background: var(--bg-surface, #161b22);
+		border: 1px solid var(--border, #30363d);
+		border-radius: 16px;
+		font-size: 0.72rem;
+	}
+	.stat-pill strong {
+		color: var(--accent-cyan, #58a6ff);
+		font-weight: 700;
+	}
+	.stat-pill em {
+		font-style: normal;
+		color: var(--text-muted, #484f58);
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+	}
+	.hero-links {
+		display: flex;
+		gap: 0.5rem;
+	}
+	.btn { text-decoration: none; transition: all 0.2s; font-weight: 600; border-radius: 6px; }
+	.btn-sm { font-size: 0.78rem; padding: 0.35rem 0.8rem; }
+	.btn-primary { background: var(--accent-cyan, #58a6ff); color: #0d1117; }
+	.btn-primary:hover { background: #79c0ff; }
+	.btn-ghost {
+		color: var(--text-secondary, #8b949e);
+		border: 1px solid var(--border, #30363d);
+		background: transparent;
+	}
+	.btn-ghost:hover { border-color: var(--accent-cyan, #58a6ff); color: var(--text-primary, #e6edf3); }
+
+	/* ═══ Sections ═══ */
+	.section { margin: 2.5rem 0; }
+	.section-header { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1.25rem; }
+	.section-header h2 { font-size: 1.35rem; margin: 0; border: none; padding: 0; }
+	.section-badge {
+		font-size: 0.68rem; padding: 0.2rem 0.55rem;
+		background: rgba(88,166,255,0.1); color: var(--accent-cyan, #58a6ff);
+		border-radius: 10px; font-weight: 600;
+	}
+	.live-badge {
+		background: rgba(63,185,80,0.12);
+		color: var(--accent-green, #3fb950);
+		animation: pulse-badge 2s ease-in-out infinite;
+	}
+	@keyframes pulse-badge {
+		0%, 100% { opacity: 1; }
+		50% { opacity: 0.65; }
+	}
+
+	/* ═══ Brief Cards — primary content ═══ */
+	.brief-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+	.brief-card {
+		display: flex;
+		flex-direction: column;
+		background: var(--bg-surface, #161b22);
+		border: 1px solid var(--border, #30363d);
+		border-radius: 10px;
+		padding: 1.1rem 1.2rem;
+		text-decoration: none;
+		transition: all 0.25s;
+		position: relative;
+		overflow: hidden;
+	}
+	.brief-card::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 2px;
+		background: linear-gradient(90deg, var(--accent-cyan, #58a6ff), var(--accent-green, #3fb950));
+		opacity: 0;
+		transition: opacity 0.25s;
+	}
+	.brief-card:hover::before { opacity: 1; }
+	.brief-card:hover {
+		border-color: var(--accent-cyan, #58a6ff);
+		box-shadow: 0 0 20px rgba(88,166,255,0.08);
+		transform: translateY(-2px);
+	}
+	.brief-card-empty {
+		opacity: 0.4;
+		pointer-events: none;
+	}
+	.brief-card-header {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		margin-bottom: 0.6rem;
+	}
+	.brief-icon { font-size: 1.1rem; }
+	.brief-type {
+		font-size: 0.72rem;
 		font-weight: 600;
-		font-size: 0.9rem;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		color: var(--accent-cyan, #58a6ff);
+	}
+	.brief-date {
+		margin-left: auto;
+		font-size: 0.72rem;
+		color: var(--text-muted, #484f58);
+	}
+	.brief-card h3 {
+		font-size: 0.95rem;
+		margin: 0 0 0.4rem;
+		color: var(--text-primary, #e6edf3);
+		line-height: 1.3;
+	}
+	.brief-desc {
+		font-size: 0.82rem;
+		color: var(--text-secondary, #8b949e);
+		margin: 0;
+		line-height: 1.5;
+		flex: 1;
+	}
+	.brief-cta {
+		display: inline-block;
+		margin-top: 0.8rem;
+		font-size: 0.78rem;
+		font-weight: 600;
+		color: var(--accent-cyan, #58a6ff);
+		transition: transform 0.2s;
+	}
+	.brief-card:hover .brief-cta { transform: translateX(3px); }
+
+	/* ═══ Brief Archive ═══ */
+	.archive-list { display: flex; flex-direction: column; gap: 0.4rem; }
+	.archive-row {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 0.5rem 0.75rem;
+		border-radius: 8px;
+		transition: background 0.2s;
+	}
+	.archive-row:hover { background: var(--bg-surface, #161b22); }
+	.archive-date {
+		font-family: var(--font-mono, 'JetBrains Mono', monospace);
+		font-size: 0.82rem;
+		color: var(--text-muted, #484f58);
+		min-width: 100px;
+	}
+	.archive-links { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+	.archive-tag {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.25rem;
+		padding: 0.2rem 0.55rem;
+		border-radius: 6px;
+		font-size: 0.72rem;
+		font-weight: 500;
 		text-decoration: none;
 		transition: all 0.2s;
+		border: 1px solid transparent;
 	}
-	.btn-primary { background: var(--accent-cyan); color: #0d1117; }
-	.btn-primary:hover { background: #79c0ff; color: #0d1117; }
-	.btn-outline { border: 1px solid var(--border); color: var(--text-secondary); background: transparent; }
-	.btn-outline:hover { border-color: var(--accent-cyan); color: var(--text-primary); }
-	.hero-stats { display: flex; justify-content: center; gap: 3rem; }
-	.stat { text-align: center; }
-	.stat-num { display: block; font-size: 1.8rem; font-weight: 700; color: var(--accent-cyan); }
-	.stat-label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
-
-	/* Features */
-	.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin: 3rem 0; }
-	.feature-card {
-		background: var(--bg-surface);
-		border: 1px solid var(--border);
-		border-radius: 12px;
-		padding: 1.5rem;
-		transition: all 0.25s;
+	.tag-morning {
+		background: rgba(88,166,255,0.1);
+		color: var(--accent-cyan, #58a6ff);
 	}
-	.feature-card:hover { border-color: var(--accent-cyan); box-shadow: var(--glow-cyan); transform: translateY(-2px); }
-	.feature-icon { font-size: 1.8rem; margin-bottom: 0.8rem; }
-	.feature-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--text-primary); }
-	.feature-card p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin: 0; }
-
-	/* Sections */
-	.section { margin: 3.5rem 0; }
-	.section-header { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1.5rem; }
-	.section-header h2 { font-size: 1.5rem; margin: 0; border: none; padding: 0; }
-	.section-badge {
-		font-size: 0.7rem; padding: 0.2rem 0.6rem;
-		background: rgba(88,166,255,0.1); color: var(--accent-cyan);
-		border-radius: 12px; font-weight: 600;
+	.tag-morning:hover { border-color: var(--accent-cyan, #58a6ff); }
+	.tag-editor {
+		background: rgba(210,153,34,0.1);
+		color: var(--accent-gold, #d29922);
 	}
+	.tag-editor:hover { border-color: var(--accent-gold, #d29922); }
+	.tag-mailbox {
+		background: rgba(63,185,80,0.1);
+		color: var(--accent-green, #3fb950);
+	}
+	.tag-mailbox:hover { border-color: var(--accent-green, #3fb950); }
 
-	/* Article Grid */
-	.article-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.25rem; }
+	/* ═══ Article Grid ═══ */
+	.article-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; }
 	.article-card {
 		display: block;
-		background: var(--bg-surface);
-		border: 1px solid var(--border);
+		background: var(--bg-surface, #161b22);
+		border: 1px solid var(--border, #30363d);
 		border-radius: 10px;
-		padding: 1.25rem;
+		padding: 1.1rem;
 		text-decoration: none;
 		transition: all 0.25s;
 	}
-	.article-card:hover { border-color: var(--accent-cyan); box-shadow: var(--glow-cyan); transform: translateY(-2px); }
-	.research-card { border-left: 3px solid var(--accent-gold); }
-	.card-meta { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.6rem; font-size: 0.78rem; color: var(--text-muted); }
-	.lang-badge { padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 600; font-size: 0.65rem; }
-	.lang-badge.en { background: rgba(88,166,255,0.15); color: var(--accent-cyan); }
-	.lang-badge.zh { background: rgba(248,81,73,0.15); color: var(--accent-red); }
-	.article-card h3 { font-size: 1rem; margin-bottom: 0.4rem; color: var(--text-primary); line-height: 1.35; }
-	.article-card p { font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.5; }
+	.article-card:hover { border-color: var(--accent-cyan, #58a6ff); box-shadow: 0 0 15px rgba(88,166,255,0.06); transform: translateY(-2px); }
+	.research-card { border-left: 3px solid var(--accent-gold, #d29922); }
+	.card-meta { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; font-size: 0.75rem; color: var(--text-muted, #484f58); }
+	.lang-badge { padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 600; font-size: 0.62rem; }
+	.lang-badge.en { background: rgba(88,166,255,0.15); color: var(--accent-cyan, #58a6ff); }
+	.lang-badge.zh { background: rgba(248,81,73,0.15); color: var(--accent-red, #f85149); }
+	.article-card h3 { font-size: 0.95rem; margin: 0 0 0.35rem; color: var(--text-primary, #e6edf3); line-height: 1.35; }
+	.article-card p { font-size: 0.82rem; color: var(--text-secondary, #8b949e); margin: 0; line-height: 1.5; }
 
-	/* Series */
-	.series-list { display: flex; flex-direction: column; gap: 0.5rem; }
+	/* ═══ Series ═══ */
+	.series-list { display: flex; flex-direction: column; gap: 0.4rem; }
 	.series-item {
-		display: flex; align-items: center; gap: 1.25rem;
-		padding: 1rem 1.25rem;
-		background: var(--bg-surface); border: 1px solid var(--border);
-		border-radius: 10px; text-decoration: none; transition: all 0.25s;
+		display: flex; align-items: center; gap: 1rem;
+		padding: 0.8rem 1rem;
+		background: var(--bg-surface, #161b22); border: 1px solid var(--border, #30363d);
+		border-radius: 8px; text-decoration: none; transition: all 0.25s;
 	}
-	.series-item:hover { border-color: var(--accent-green); background: var(--bg-elevated); }
-	.series-num { font-size: 1.5rem; font-weight: 800; color: var(--accent-green); min-width: 2.5rem; font-family: var(--font-mono); }
+	.series-item:hover { border-color: var(--accent-green, #3fb950); background: var(--bg-elevated, #1c2128); }
+	.series-num { font-size: 1.3rem; font-weight: 800; color: var(--accent-green, #3fb950); min-width: 2rem; font-family: var(--font-mono); }
 	.series-content { flex: 1; }
-	.series-content h4 { font-size: 0.95rem; margin: 0 0 0.2rem; color: var(--text-primary); }
-	.series-content p { font-size: 0.82rem; color: var(--text-secondary); margin: 0; }
-	.series-arrow { color: var(--text-muted); font-size: 1.2rem; transition: transform 0.2s; }
-	.series-item:hover .series-arrow { transform: translateX(4px); color: var(--accent-green); }
+	.series-content h4 { font-size: 0.9rem; margin: 0 0 0.15rem; color: var(--text-primary, #e6edf3); }
+	.series-content p { font-size: 0.78rem; color: var(--text-secondary, #8b949e); margin: 0; }
+	.series-arrow { color: var(--text-muted, #484f58); font-size: 1.1rem; transition: transform 0.2s; }
+	.series-item:hover .series-arrow { transform: translateX(4px); color: var(--accent-green, #3fb950); }
 
+	/* ═══ Responsive ═══ */
+	@media (max-width: 900px) {
+		.brief-grid { grid-template-columns: 1fr; }
+	}
 	@media (max-width: 768px) {
-		.hero h1 { font-size: 2.5rem; }
-		.hero-stats { gap: 1.5rem; flex-wrap: wrap; }
-		.features { grid-template-columns: 1fr; }
+		.hero-inner { flex-direction: column; text-align: center; gap: 1rem; }
+		.hero-left h1 { font-size: 1.8rem; }
+		.hero-right { align-items: center; }
+		.hero-stats-inline { flex-wrap: wrap; justify-content: center; }
 		.article-grid { grid-template-columns: 1fr; }
+		.archive-row { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
 	}
 </style>
