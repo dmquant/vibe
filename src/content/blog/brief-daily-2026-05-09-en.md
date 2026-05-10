@@ -1,13 +1,67 @@
 ---
 title: "Daily Research Brief — 2026-05-09"
-description: "AI Institute morning brief: 5 analyst sections, 20 deep research threads, 29 handoffs."
+description: "AI Institute morning brief: 5 analyst sections, 18 deep research threads, 30 handoffs."
 pubDate: "2026-05-09"
 category: "brief"
 lang: "en"
 ---
 
 *Generated 2026-05-09 by the AI Institute's 26-analyst multi-agent research pipeline.*
-*Morning Brief: 5 sections · 20 deep research threads · 29 cross-desk handoffs*
+*Morning Brief: 5 sections · 18 deep research threads · 30 cross-desk handoffs*
+
+
+## 📑 Table of Contents
+
+- [📰 Morning Brief](#morning-brief)
+  - [Overnight Macro](#overnight-macro)
+  - [China Macro](#china-macro)
+  - [A-Share Strategy](#a-share-strategy)
+  - [Sentiment & Flows](#sentiment-flows)
+  - [Risk Watch](#risk-watch)
+- [🎯 Analyst Spotlights](#analyst-spotlights)
+  - [Global Markets Overview](#global-markets-overview)
+- [Core Sentence](#core-sentence)
+- [1. Major Indices Close](#1-major-indices-close)
+- [2. Commodities & FX](#2-commodities-fx)
+- [3. US Yield Curve](#3-us-yield-curve)
+- [4. Key Event Analysis](#4-key-event-analysis)
+  - [FX Majors](#fx-majors)
+- [Executive Summary](#executive-summary)
+- [1. Major Exchange Rate Table](#1-major-exchange-rate-table)
+- [2. USD & Carry Perspective](#2-usd-carry-perspective)
+  - [Morning Macro Brief](#morning-macro-brief)
+- [Executive Summary](#executive-summary-1)
+- [Key Macro Indicators Tracker](#key-macro-indicators-tracker)
+- [Deep Dive](#deep-dive)
+  - [Global Macro Cycle Analysis](#global-macro-cycle-analysis)
+  - [Sector Rotation](#sector-rotation)
+- [Executive Summary](#executive-summary-2)
+- [1. Sector ETF Close Table](#1-sector-etf-close-table)
+- [2. Style & Rotation Analysis](#2-style-rotation-analysis)
+- [3. Daily Narrative](#3-daily-narrative)
+- [🔬 Deep Research Highlights](#deep-research-highlights)
+  - [1. AI 硬件'明斯基时刻'叙事 vs 结构性需求：立场何时收敛？](#1-ai-硬件明斯基时刻叙事-vs-结构性需求立场何时收敛)
+  - [2. AI超级周期：是新常态还是又一次半导体顶峰？](#2-ai超级周期是新常态还是又一次半导体顶峰)
+  - [3. 黄金/风险资产双强背离：通胀对冲还是末路狂欢？](#3-黄金风险资产双强背离通胀对冲还是末路狂欢)
+  - [4. 期权比例创五年新低：是‘范式转移’还是‘明斯基时刻’？](#4-期权比例创五年新低是范式转移还是明斯基时刻)
+  - [5. AI 算力与区域电网的‘生存空间’争夺](#5-ai-算力与区域电网的生存空间争夺)
+  - [6. AI 能源主权 vs. 国家主权：数据中心作为微型主权实体](#6-ai-能源主权-vs-国家主权数据中心作为微型主权实体)
+  - [7. Powell→Warsh 5 月 15 日交接：跨资产持仓预案（T-8）](#7-powellwarsh-5-月-15-日交接跨资产持仓预案t-8)
+  - [8. 情绪悖论：机构贪婪与量化恐惧的割裂](#8-情绪悖论机构贪婪与量化恐惧的割裂)
+  - [9. 中国“517”地产政策的预期差辩论](#9-中国517地产政策的预期差辩论)
+  - [10. 半导体占标普500权重达22%：基建红利还是泡沫终局？](#10-半导体占标普500权重达22基建红利还是泡沫终局)
+  - [11. 美伊和平导致油价-12%：ECB、EUR/USD与欧洲滞胀叙事需要全面重写](#11-美伊和平导致油价-12ecbeurusd与欧洲滞胀叙事需要全面重写)
+  - [12. AI推理效率拐点会否系统性削减$2750亿主权算力承诺的实际交付需求](#12-ai推理效率拐点会否系统性削减2750亿主权算力承诺的实际交付需求)
+  - [13. AI+物流：零售情绪领跑还是逻辑陷阱？](#13-ai物流零售情绪领跑还是逻辑陷阱)
+  - [14. Synthesizing hard-tech ETF arbitrage risk with utility policy-value into one allocation](#14-synthesizing-hard-tech-etf-arbitrage-risk-with-utility-policy-value-into-one-allocation)
+  - [15. A股‘零售维权’元年的叙事重构](#15-a股零售维权元年的叙事重构)
+  - [16. 量子计算是否已到 AI 算力墙的临界拐点？](#16-量子计算是否已到-ai-算力墙的临界拐点)
+  - [17. ‘AI尽头是织布机’：硬核逻辑还是末端狂欢？](#17-ai尽头是织布机硬核逻辑还是末端狂欢)
+  - [18. 极度贪婪下的指数广度背离博弈](#18-极度贪婪下的指数广度背离博弈)
+- [🔄 Active Research](#active-research)
+- [📬 Cross-Desk Intelligence](#cross-desk-intelligence)
+
+---
 
 ## 📰 Morning Brief
 
@@ -482,30 +536,24 @@ Wrote whiteboard/1b6035c8 20b5 4598 ba29 3455ff73fc2e/card 08/report.en.md (4119
 
 
 
-### 19. ‘鑫多多’违约事件：A股‘大V持仓’模式的转折点？
+## 🔄 Active Research
 
-**Lead:** A-Share Strategist · **Depth:** 8 cards
-
-> 鑫多多违约引发的‘概念股闪崩’是否会触发小盘股流动性危机？散户对网红持仓的抛弃是否预示着资金将回流硬核科技或大蓝筹？
-
-Under the scenario where hard-tech ETFs trigger the 1.2% premium circuit-breaker, market makers withdraw, and slippage exceeds 100 bps, stressed 1-day 99% VaR rises to 3.6–4.1% and 99% CVaR to 5.0–5.8%; conditional on the trigger, breach probability of a 1.5% limit is ~28–34%.
-
-
-
-### 20. TMT拥挤度97分位：结构性过热还是立即减仓？
-
-**Lead:** A-Share Strategist · **Depth:** 8 cards
-
-> tmt-analyst认为当前拥挤度属于'结构性过热'不宜全面减仓，chief-risk基于历史97分位规律建议5日内将TMT/AI敞口从NAV 18%降至11%。团队应采用哪个框架？Hang Seng Tech 6月8日被动资金流入（12.5-17.5亿美元）是否足以推翻历史回撤规律？
-
-As of 2026-05-09, the QA verdict is Needs Revision: the core logic and math of cutting TMT from 18% to 11% and rotating 7% into dividend/value are broadly consistent, but the live archive lacks Cards 01/05/06 plus the brief/catalog, and Card 07 identifies a 2.3% NAV redemption-liquidity gap and insufficient buffer coverage.
-
+| # | Topic | Analyst | Progress |
+|---|-------|---------|----------|
+| 1 | AI 硬件 5 月：高 Beta 减仓 vs HBM 基本面持有的统一口径 | Chief Strategist | 0/8 |
+| 2 | 极端贪婪区间下的 AI 赛道拥挤度回撤风险 | Chief Strategist | 2/8 |
 
 
 ## 📬 Cross-Desk Intelligence
 
 | Subject | Route | Priority |
 |---------|-------|----------|
+| Hong Kong sustainable bond market analysis | ESG Analyst → Financials Analyst | normal |
+| Clean energy subsector performance analysis | ESG Analyst → Energy Analyst | normal |
+| ESG disclosure regulatory landscape update | ESG Analyst → Compliance Officer | normal |
+| Panuwat appeal status at Ninth Circuit and shadow-trading re | Compliance Officer → Thematic Researcher | normal |
+| ESMA naming rules: replace public-summary AUM flow estimates | Compliance Officer → ESG Analyst | normal |
+| 2026-05-08 Margin & Industry Inflow Data | A-Share Strategist → Data Scientist | normal |
 | USD/CNH 6.80 Level Sustainability | A-Share Strategist → FX Strategist | normal |
 | May PPI Forecasts & Oil Price Impact | A-Share Strategist → Chief Economist | normal |
 | 4月新出口订单50.3信号强度验证 | A-Share Strategist → China Macro Analyst | normal |
@@ -515,12 +563,6 @@ As of 2026-05-09, the QA verdict is Needs Revision: the core logic and math of c
 | XLY 放量滞涨信号：是否反映基本面消费景气分歧？ | Technical Analyst → Consumer Analyst | normal |
 | TNX 收益率路径：4.38% 是否将延伸至 4.5%+？ | Technical Analyst → Global Macro Analyst | normal |
 | 专项债收储规模可行性 | Real Estate Analyst → China Macro Analyst | normal |
-| Wind/FactSet/Choice consensus estimates | Factor Analyst → Data Scientist | normal |
-| Stock Connect net-flow data decomposition | Factor Analyst → Data Scientist | normal |
-| A股300成长成交额94%分位拥挤度对五一后行业轮动的影响 | Factor Analyst → A-Share Strategist | normal |
-| A股非制造业PMI跌入收缩（49.4）的下行传导路径 | Factor Analyst → China Macro Analyst | normal |
-| Industrials AI Premium Audit | Industrials Analyst → Chief Strategist | normal |
-| Defense Budget & Fiscal Pressure | Industrials Analyst → Global Macro Analyst | normal |
 
 
 ---

@@ -9,6 +9,51 @@ lang: "en"
 *Daily Editor Report for 2026-05-08 — compiled from the AI Institute's 4-phase editorial pipeline.*
 *4 phases captured: overnight headlines → cross-analyst morning → afternoon alignment → post-close contradiction sweep*
 
+
+## 📑 Table of Contents
+
+- [🌙 Overnight Headlines](#overnight-headlines)
+- [1. Editor's one-line take](#1-editors-one-line-take)
+- [2. Split screen: three incompatible market narratives in one day](#2-split-screen-three-incompatible-market-narratives-in-one-day)
+- [3. Four overnight headlines that genuinely warrant a multi-desk take](#3-four-overnight-headlines-that-genuinely-warrant-a-multi-desk-take)
+- [4. Top three priorities (capped)](#4-top-three-priorities-capped)
+  - [Priority 1 ★★★★★ — the only hard-block this morning](#priority-1-the-only-hard-block-this-morning)
+  - [Priority 2 ★★★★ — tonight's NFP playbook](#priority-2-tonights-nfp-playbook)
+  - [Priority 3 ★★★ — Johor + HBM dual policy window](#priority-3-johor-hbm-dual-policy-window)
+- [5. Suggested daily report structure (for the lead writer)](#5-suggested-daily-report-structure-for-the-lead-writer)
+- [6. Follow-ups & whiteboard pitches](#6-follow-ups-whiteboard-pitches)
+- [☀️ Cross-Analyst Morning](#cross-analyst-morning)
+- [Editor's Scorecard](#editors-scorecard)
+- [Step 1: Cross-Analyst Contradictions](#step-1-cross-analyst-contradictions)
+  - [Contradiction A — AI Pricing Deflation Formula Has Not Been Applied to Card 06's A-Share Basket](#contradiction-a-ai-pricing-deflation-formula-has-not-been-applied-to-card-06s-a-share-basket)
+  - [Contradiction B — County Consumption: Macro Narrative vs. Financial Credit Transmission Speed](#contradiction-b-county-consumption-macro-narrative-vs-financial-credit-transmission-speed)
+- [Step 2: High-Conviction Alignments Not Yet Pressure-Tested](#step-2-high-conviction-alignments-not-yet-pressure-tested)
+  - [Alignment A — Full Team "Application > Hardware" Consensus (Four Analysts Aligned, No Stock-Level Validation)](#alignment-a-full-team-application-hardware-consensus-four-analysts-aligned-no-stock-level-validation)
+  - [Alignment B — JPY Carry Unwind at Red Risk (Three Analysts Warning, A-Share/HK Contagion Path Has No Owner)](#alignment-b-jpy-carry-unwind-at-red-risk-three-analysts-warning-a-sharehk-contagion-path-has-no-owner)
+- [Step 3: Topics Circled by Multiple Analysts, No Primary Owner](#step-3-topics-circled-by-multiple-analysts-no-primary-owner)
+  - [Topic A — Tonight's NFP: Live Carry-Unwind Stress Test (21:30 Beijing Time — Highest Urgency)](#topic-a-tonights-nfp-live-carry-unwind-stress-test-2130-beijing-time-highest-urgency)
+  - [Topic B — CCER Price Appreciation: Who Owns the A-Share Equity Upside?](#topic-b-ccer-price-appreciation-who-owns-the-a-share-equity-upside)
+- [Step 4: Editor's Action Recommendations](#step-4-editors-action-recommendations)
+- [Whiteboard Pitches](#whiteboard-pitches)
+- [🔄 Afternoon Alignment](#afternoon-alignment)
+- [1. One-line takeaway](#1-one-line-takeaway)
+- [2. Status of the morning's thematic theses](#2-status-of-the-mornings-thematic-theses)
+- [3. Genuine intraday cross-analyst convergences (recommend same-day integration)](#3-genuine-intraday-cross-analyst-convergences-recommend-same-day-integration)
+  - [3.1 The "June liquidity wall" — four analysts independently land on the same date](#31-the-june-liquidity-wall-four-analysts-independently-land-on-the-same-date)
+  - [3.2 The "physical bottleneck" — materials, grid, depreciation are the same story](#32-the-physical-bottleneck-materials-grid-depreciation-are-the-same-story)
+- [4. Coverage gaps to close before EOD](#4-coverage-gaps-to-close-before-eod)
+- [5. Already-closed loops, no need to re-ping (editorial notes)](#5-already-closed-loops-no-need-to-re-ping-editorial-notes)
+- [6. Same-day follow-up requests (editor-initiated, max 3)](#6-same-day-follow-up-requests-editor-initiated-max-3)
+- [7. Whiteboard pitches (max 3, only same-day cross-cutting topics)](#7-whiteboard-pitches-max-3-only-same-day-cross-cutting-topics)
+- [⚖️ Post-Close Contradiction Sweep](#post-close-contradiction-sweep)
+- [Step 1: Priority Conclusions](#step-1-priority-conclusions)
+- [Step 2: Unreconciled Cross-Analyst Contradictions](#step-2-unreconciled-cross-analyst-contradictions)
+- [Step 3: Thesis Upgrades and Downgrades to Register](#step-3-thesis-upgrades-and-downgrades-to-register)
+- [Step 4: Whiteboard and Follow-Up List](#step-4-whiteboard-and-follow-up-list)
+- [References](#references)
+
+---
+
 ## 🌙 Overnight Headlines
 
 # Morning Headline Scan — Daily Editor View (2026-05-08)
