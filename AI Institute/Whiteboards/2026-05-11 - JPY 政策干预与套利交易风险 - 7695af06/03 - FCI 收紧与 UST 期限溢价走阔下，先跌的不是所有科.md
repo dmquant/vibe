@@ -1,0 +1,114 @@
+---
+source: ai-institute
+resource_type: whiteboard-card
+card_index: 3
+status: completed
+analyst_level: "权益策略"
+---
+
+# FCI 收紧与 UST 期限溢价走阔下，先跌的不是所有科技，而是“长久期 + 弱现金流 + 融资敏感”资产；优先减宽基高 beta，优先加现金回报与质量。
+
+Analyst: **HK/US Strategist**
+Status: **completed**
+Stance: **support**
+Completed: **11/05/2026, 01:56:19**
+
+## Links
+
+- Whiteboard topic: [[JPY 政策干预与套利交易风险]]
+- Card topic: [[FCI 收紧与 UST 期限溢价走阔下，先跌的不是所有科技，而是“长久期 弱现金流 融资敏感”资产；优先减宽基高 beta，优先加现金回报与质量。]]
+- Analyst: [[HK US Strategist]]
+- Analyst level: [[权益策略]]
+
+## Topic
+
+FCI 收紧与 UST 期限溢价走阔下，先跌的不是所有科技，而是“长久期 + 弱现金流 + 融资敏感”资产；优先减宽基高 beta，优先加现金回报与质量。
+
+## Question
+
+Investigate the topic "FCI 收紧与 UST 期限溢价走阔下，先跌的不是所有科技，而是“长久期 + 弱现金流 + 融资敏感”资产；优先减宽基高 beta，优先加现金回报与质量。" and make the strongest evidence-based judgment you can.
+
+## Summary
+
+支持前序判断：2026-05-11 下，日元套利去杠杆对离岸权益的首要影响是贴现率与流动性重估，而非立即盈利衰退。应优先减仓长久期、低现金转化、再融资敏感资产：无盈利美国软件、概念 AI、宽基 Russell 2000、仅 ADR 的中概与补贴/价格战消费互联网及 EV。加仓应转向净现金大型科技、盈利型小盘质量股、港股现金回报互联网龙头、南向可买的电信/能源/高股息防御股。组合建议未来 4-8 周减高估值科技 3-5 pp、减宽基小盘 2-3 pp、减 ADR-only 1-2 pp，加港股现金回报/防御 4-6 pp。
+
+## Report
+
+# FCI 收紧下美股科技、罗素2000与中概 ADR/港股通再定价 — 2026-05-11
+
+- **卡片:** 03 / 08 — 港美股策略师 — 立场: **支持**
+- **工作日期:** 2026-05-11（Asia/Singapore）
+- **承接:** Card 02 — 日元套利去杠杆将收紧全球金融条件、可能推动 UST 期限溢价走阔 15-25 bp，并对全球增长形成显著但非系统性拖累。
+- **工作区说明:** 本次加载时磁盘上未见 `session-brief.md`、`analyst-catalog.json` 与 `card-01/`；相关内容采用对话中提供的 session snapshot，Card 02 则使用磁盘上的实时文件。
+
+截至 2026-05-11，我支持前序判断：日元融资套利平仓首先通过贴现率与流动性通道重估离岸权益资产，未必立刻演化为盈利衰退。最新公开锚点仍显示美国广义金融条件偏宽松，NFCI 在 2026-05-01 为 -0.51；但 2026-05-08 美债 10y/20y/30y 分别收于 4.38%/4.93%/4.95%，2026-05-07 美国 HY OAS 为 2.79%。这意味着当前应做选择性降风险，而不是简单全面 risk-off。
+
+## 核心判断
+
+最先受损的是 **长久期 + 弱现金转化 + 再融资压力** 组合。投资者应优先减仓无盈利软件、概念型 AI 硬件、宽基 Russell 2000 beta、以及仅依赖美国流动性的中概 ADR；加仓方向应转向净现金大型平台、盈利型小盘质量股、港股现金回报龙头，以及有南向流动性支撑、受美国利率久期影响较低的中国高股息/电信/能源标的。
+
+未来 4-8 周离岸权益组合建议调整：
+
+| 操作 | 篮子 | 执行偏好 |
+|---|---|---|
+| 减仓 3-5 pp | 高估值美国科技，尤其 FCF yield 低于 2% 或估值依赖 2027-28 年 AI 变现 | 尚未扩张利润率的软件、AI 基建概念股、已充分计价 capex 加速的半导体设备周期股 |
+| 减仓 2-3 pp | 宽基 Russell 2000 beta | 避免 IWM 式暴露，因为无盈利和再融资敏感股票会稀释小盘价值信号 |
+| 减仓 1-2 pp | 仅 ADR / 依赖美国流动性的中概 beta | 缺少港股主要流动性、回购纪律弱、现金转化不清晰的单一 ADR |
+| 加仓 2-3 pp | 美国优质科技与通信服务 | 净现金、经常性现金流、回购、AI 收入已可见；逢回撤加，不追指数高位 |
+| 加仓 2-3 pp | 盈利型小盘质量股 | 用 S&P 600 / 主动质量筛选替代 Russell 2000；关注再工业化、能源服务、盈利型医疗工具 |
+| 加仓 4-6 pp | 港股上市的中国现金回报复利股与防御股 | 0700、9999、9988/BABA（前提是云/AI capex 由 FCF 覆盖）、0941、0883、公用事业；低配补贴竞争重的互联网与 EV 价格战标的 |
+
+## 为什么不是“科技跌、小盘涨”的简单切换
+
+**1. 美国大型科技是长久期资产，但脆弱度并不一致。** 15-25 bp 的期限溢价冲击会压缩长久期估值，尤其是 2026 年盈利尚未验证 AI capex 的公司。但最大回撤风险集中在低 FCF yield、高股权激励、或靠 AI 采购提前拉动收入的公司。现金充足、持续回购、AI 变现路径清晰的平台，比中型软件和低毛利硬件供应商更能吸收更高贴现率。
+
+**2. Russell 2000 便宜有原因。** 小盘股长期相对估值有吸引力，但这轮宏观冲击来自融资成本。Royce 指出，2026Q1 Russell 2000 内部低杠杆、高盈利股票跑赢高杠杆、低盈利股票；小盘股在 Russell 3000 市值中约占 4.6%，低于 7.6% 的长期均值。这支持选择性增配，而不是买入宽基 beta。更优工具是质量/盈利筛选后的小盘，而非宽基 Russell 2000。
+
+**3. 中概 ADR 承受美国流动性折价，但港股龙头有本地流动性缓冲。** ADR 被纳入同一套美国风险资产去杠杆账本，因此仅 ADR 暴露的流动性 beta 更高。相反，Stock Connect 让内地投资者通过南向交易配置港股，沪港通南向与深港通南向每日额度各为 RMB 42 billion。这不能让港股免疫外部冲击，但意味着港股主要/双重主要上市、且有回购能力的龙头，边际买盘会比美国单一 ADR 更稳定。
+
+**4. Hang Seng TECH 高 beta 且集中度高，选股比买指数更重要。** 2026 年 3 月 Hang Seng TECH factsheet 显示，HSTECH PE 为 29.29x，1 年年化波动率为 32.58%，截至 2026-03-31 YTD 为 -15.70%。前十大权重包括 BYD 9.22%、Meituan 9.19%、Xiaomi 8.43%、Tencent 7.95%、NetEase 7.42%、Alibaba 7.40%、SMIC 6.51%、JD 5.51%、Kuaishou 4.17%、Baidu 4.00%。在 FCI 收紧情形下，我更偏好现金回报型互联网龙头与电信/石油防御股，而不是完整 HSTECH beta。
+
+## 优先减仓
+
+1. **美国无盈利软件与概念 AI:** 估值依赖实际利率下行与 2027-28 年 TAM 叙事，对期限溢价最敏感。
+2. **线性 AI capex 已被充分计价的半导体设备周期股:** 只保留订单、毛利率与客户集中度可验证的公司。
+3. **宽基 Russell 2000 beta:** 指数含有复苏弹性，但此阶段再融资压力和无盈利暴露过高。
+4. **仅 ADR 的中概流动性 beta:** 尤其是无港股主要流动性、缺少持续回购、或美国 long-only 持仓过重的公司。
+5. **补贴/价格战型中国消费互联网与 EV:** Meituan、JD、PDD、NIO、XPeng 式暴露，在高贴现率叠加利润率竞争时更脆弱。
+
+## 优先加仓
+
+1. **美国大型现金复利股:** 若回撤 5-8%，且 FCF yield 可防守、回购能降低久期风险，则持有或加仓。
+2. **用质量小盘替代宽基 IWM:** 偏盈利型 S&P 600 风格、工业自动化、再工业化受益、能源服务、细分医疗工具。
+3. **港股上市且有现金回报的中国平台:** Tencent 0700、NetEase 9999、Alibaba 9988/BABA，前提是 AI/cloud capex 仍由 FCF 覆盖。
+4. **南向/港股可配置的中国防御股:** China Mobile 0941、CNOOC 0883、高股息公用事业，以及交易所/基础设施式现金流标的。
+5. **外部现金流更强的旅游服务:** Trip.com 9961/TCOM 优于补贴压力重的本地生活电商，尤其在 RMB 与国内消费仍不均衡时。
+
+## 风险触发器
+
+- **提高降风险力度:** 若美国 10y 收盘上破 4.60%、HY OAS 上破 3.25%、或 NFCI 两周内上行超过 0.30。
+- **更快加回成长:** 若美国 10y 下破 4.15%，同时 HY OAS 维持低于 3.00%，且 USD/JPY 稳定在 145 以上、没有新的干预压力。
+- **从港股防御切向港股科技 beta:** 只有在南向成交扩张，且 HSTECH 广度不再只靠 Tencent/Alibaba/NetEase 时才成立。
+
+## 交接建议
+
+下一位建议交给 **asset-allocator**，立场为 `synthesize`。未解问题不是再做一个行业判断，而是把本卡的离岸权益排序转化为跨资产组合：现金、美债久期、JPY 对冲比例、权益仓位与再平衡阈值应如何在同一个套利平仓情形下组合。
+
+## 资料来源
+
+- U.S. Treasury Daily Treasury Rates 2026 表：2026-05-08 的 10y 为 4.38%、20y 为 4.93%、30y 为 4.95%: https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve
+- FRED 上的 Chicago Fed NFCI：2026-05-01 为 -0.51；正值代表金融条件较均值更紧: https://fred.stlouisfed.org/series/NFCI
+- FRED 上的 ICE BofA US High Yield OAS：2026-05-07 为 2.79%: https://fred.stlouisfed.org/series/BAMLH0A0HYM2
+- U.S. Treasury TBAC 2026 年 5-7 月再融资建议表: https://home.treasury.gov/system/files/221/TBACRecommendedFinancingTableByRefundingQuarter-05062026.pdf
+- HKEX Stock Connect 说明与南向每日额度: https://www.hkex.com.hk/Mutual-Market/Connect-Hub/Stock-Connect?sc_lang=en
+- Hang Seng TECH Index factsheet，2026 年 3 月: https://www.hsi.com.hk/static/uploads/contents/en/dl_centre/factsheets/hsteche.pdf
+- Royce 2026Q1 U.S. Small-Cap Market Overview: https://www.royceinvest.com/insights/chartbook/us-small-cap-mrkt-overview/
+
+---
+*港美股策略师 — 2026-05-11.*
+
+## Follow-up
+
+- Analyst: asset-allocator
+- Topic: 日元套利平仓情形下的跨资产组合再平衡
+- Question: 在本卡给出的离岸权益排序基础上，现金、美债久期、JPY 对冲比例、美国/港股权益仓位应如何配置，才能在 FCI 收紧但非系统性危机的基准情形下控制回撤并保留反弹弹性？

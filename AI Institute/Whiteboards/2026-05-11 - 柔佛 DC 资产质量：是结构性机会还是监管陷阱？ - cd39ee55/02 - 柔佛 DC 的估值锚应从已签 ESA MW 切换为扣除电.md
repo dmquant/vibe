@@ -1,0 +1,123 @@
+---
+source: ai-institute
+resource_type: whiteboard-card
+card_index: 2
+status: completed
+analyst_level: "行业研究"
+---
+
+# 柔佛 DC 的估值锚应从已签 ESA MW 切换为扣除电网、备用容量和水资源全成本后的可液冷变现 MW。
+
+Analyst: **Utilities Analyst**
+Status: **completed**
+Stance: **stress-test**
+Completed: **11/05/2026, 02:51:19**
+
+## Links
+
+- Whiteboard topic: [[柔佛 DC 资产质量：是结构性机会还是监管陷阱？]]
+- Card topic: [[柔佛 DC 的估值锚应从已签 ESA MW 切换为扣除电网、备用容量和水资源全成本后的可液冷变现 MW。]]
+- Analyst: [[Utilities Analyst]]
+- Analyst level: [[行业研究]]
+
+## Topic
+
+柔佛 DC 的估值锚应从已签 ESA MW 切换为扣除电网、备用容量和水资源全成本后的可液冷变现 MW。
+
+## Question
+
+Investigate the topic "柔佛 DC 的估值锚应从已签 ESA MW 切换为扣除电网、备用容量和水资源全成本后的可液冷变现 MW。" and make the strongest evidence-based judgment you can.
+
+## Summary
+
+截至2026-05-11，本卡压力测试 card 01：柔佛 DC 风险不只是技术灰盒子，而是水电公用事业全成本再定价。TNB 披露2025年12月实际 DC 负载850 MW，而35个已并网项目约4.5 GW，利用率仅18.9%。在 RP4 电价、接驳费、RCC、CLC、PMMC、AFA 与柔佛 WUE 审批共同作用下，低负载、依赖处理后自来水、不能液冷改造的 ESA 壳资源会从期权变成负 carry。AI-ready、132 kV+、低 WUE、再生水和锚定租户项目仍可投资。
+
+## Report
+
+# 2026-05-11｜柔佛 DC 公用事业压力测试：电网成本、ESA 全成本定价与水资源监管
+
+截至2026-05-11，本卡对 card 01 的结论做压力测试而非否定：柔佛已并网的数据中心壳资源并非全部会搁浅，但估值单位必须从“已签 ESA/已连接 MW”切换为“已经落实全成本公用事业付费、可液冷、可取水、可真实上架变现的 MW”。本次运行中，引用的上游工作区文件缺失，因此 prior-card 上下文根据会话快照重建：card 01 判断实际 DC 负载显著低于已连接容量，老旧灰盒子应被视为转换期权，而不是现成 AI 数据中心资产。
+
+## 核心判断
+
+TNB 和柔佛州政府应把数据中心公用事业接入定价为稀缺的“保留容量产品”，而不是普通工业用户接电。当前利用率缺口过大，不能把网络增强和水资源治理成本摊给普通电力和用水用户。TNB 披露，2025年12月数据中心实际负载为850 MW，35个已接入项目合计约4.5 GW，隐含利用率仅18.9%。2025年9月已有相似缺口：实际负载710 MW，已完工项目29个、合计3.8 GW。问题不是单月并网滞后，而是持续的爬坡和兑现风险。
+
+最容易从“可改造期权”变成“搁浅资产”的，是同时具备三类弱点的项目：实际负载远低于申报最大需量、依赖处理后自来水或高耗水冷却、且不具备高密度 AI 机柜改造经济性。拥有132 kV/275 kV 接入、锚定租户、D2C 或浸没式液冷、再生水合约以及可执行绿电/备用安排的园区仍可投资；只有土地、ESA 和低密度楼壳的项目，应被视为投机性的电力和水资源预约。
+
+## 证据链
+
+| 证据 | 对柔佛 DC 资产质量的含义 |
+|---|---|
+| TNB 2025年报：2025年12月 DC 实际负载850 MW，35个已并网项目约4.5 GW；56个项目、7.5 GW 处于完工、建设和 ESA 阶段。 | 已连接 MW 不等于可变现 MW。按已连接容量计算，利用率仅18.9%，电网资产可能先建设，而合同需求尚未形成真实收入。 |
+| TNB 3QFY2025 简报：2025年9月实际负载710 MW，已完工29个项目、3.8 GW，ESA 累计49个、7.1 GW。 | 已完工容量扩张后，利用率仍约19%；压力测试逻辑成立。 |
+| ST/Bernama RP4 电价改革：2025-07-01 至 2027-12-31 生效，平均基础电价45.40 sen/kWh，账单拆分为 energy、capacity、network、retail，并引入月度 AFA。 | 电价架构已经支持成本反映。DC 应分别支付电量、容量、网络、燃料调整和服务成本，而不应把电网增强隐藏在一般电价基数里。 |
+| TNB 2025 接驳费框架：一阶原则计算接驳费、25% 可退还接驳费、六年内达到75%申报最大需量、Connected Load Charge、高压项目最低月费和未按期取电损害赔偿。 | TNB 已有约束投机性 ESA 囤积的工具。政策风险不是缺少工具，而是豁免、延迟执行或政治性低估成本。 |
+| MIDA 可持续 DC 指南：21.25 MW 以上、132 kV+ 超大规模 DC 目标 PUE <=1.4；托管类目标 <=1.6 至 <=1.7；推荐 WUE 2.2 m3/MWh 或更低，10年内改善至2.0；半岛电网排放因子0.758 GgCO2/GWh。 | 低密度或低效率老楼壳面临运营成本和激励资格双重折价。RE 证书能改善 CUE 叙事，但不能消除容量和网络成本。 |
+| 柔佛2026年用水筛查：州技术委员会要求开发商披露 WUE 和总用水量；柔佛采用低于1.8的 WUE 前置门槛，而 D2C/浸没式液冷可达到0.05-0.2。 | 水资源已从 ESG 注脚变成审批闸门。传统高耗水设计在考虑电价前已处于劣势。 |
+| 柔佛/JSW/IWK 再生水数据：截至2025-06-30，JSW 已收到 DC 替代水源需求136 MLD；IWK/JSW 可通过6.5公里管线向柔佛两个 DC 供应12 MLD 再生水。 | 替代水源真实存在，但仍稀缺。没有再生水或原水路径合约的项目，不能按已锁定水资源园区估值。 |
+| SPAN/Sinar 与 The Star：2025年104个马来西亚 DC 申请对应876 MLD 用水需求；超过100个申请对应808 MLD，等于柔佛2024年处理后自来水消费1,511 MLD 的53.5%。 | 州政府不可能把所有纸面需求都建立在可饮用水供应上；排队清算机制不可避免。 |
+
+## ESA 全成本定价框架
+
+**1. 定价保留 MW，而不只是已消费 MWh。** 数据中心实际用电可以很低，但一旦 TNB 承诺供电，仍需保留变压器、变电站、输电余量、故障电流水平和备用发电能力。因此合理 ESA 应包括：电量费加 AFA、容量费、网络费、零售/管理费、专用资产接驳费、适用的 fast-track 溢价，以及未按申报需量取电的担保。
+
+**2. 严格执行 TNB 既有接驳费纪律。** TNB 接驳费框架规定，如果15年供电期内按监管 WACC 计算的未来现金流现值不足以覆盖项目成本，用户需补足缺口；RCC 等于项目成本25%；新供电项目需在六年内达到75%申报最大需量；短缺可触发 Connected Load Charge。这正好对应柔佛当前低利用率问题。
+
+**3. 对 Green Lane 速度单独定价。** Green Lane 把常规36-48个月供电周期压缩到约12个月。速度本身就是期权价值，应通过不可退还排队保证金、里程碑抵押和开发商延迟取电违约金定价。否则 fast-track 会变成免费占用稀缺电网容量的看涨期权。
+
+**4. 把备用容量视为 firm insurance。** 100 MW 场址即使只加载20 MW，只要 TNB 承诺 firm supply，就必须做电网和备用容量规划。TNB 公开非住宅电价计算器数据中，高压一般用户 capacity 加 network 为 RM31.21/kW-month，高压 ToU 用户为 RM44.82/kW-month，未计电量和 AFA。对100 MW 保留容量而言，分别约等于 RM37.5 million/年和 RM53.8 million/年。方向是正确的，但柔佛投机项目还需要针对未使用申报最大需量的抵押安排。
+
+**5. 把可饮用水定位为昂贵后备。** 柔佛应设立 DC 专用水价类别，分三档：再生水/处理后污水按项目全成本定价；原水、河水或海水淡化按水源开发成本加抗旱储备定价；SAJ 可饮用水仅作为紧急后备，并按稀缺价格计费。WUE 应独立计量并披露。州政府还应要求替代水和处理后自来水管线物理隔离，这与 SPAN 关于误用可处罚的警示一致。
+
+## 资产搁浅地图
+
+| 资产类型 | 公用事业压力 | 估值处理 |
+|---|---|---|
+| **AI-ready 园区**：132 kV/275 kV 供电，靠近 PMU/输电线路，有锚定租户，D2C/浸没式或干冷，若用水则 WUE 低于0.2，有再生水/原水合约和 firm 绿电路径。 | 较高电价可被高密度 AI 负载消化，租户有能力爬坡申报最大需量。 | 维持核心基础设施估值，仅对 AFA/燃料和执行风险折价。 |
+| **可改造灰盒子**：purpose-built 托管，11/33 kV 或部分高压接入，PUE 有路径降至 <=1.6-1.7，可改造液冷并签署 JSW/IWK 式水源合约，但尚无完整锚定负载。 | 改造期会承受 capacity/network、CLC/PMMC 等负担，而收入尚未同步。 | 作为真实期权估值，负载、冷却和水源里程碑兑现前折价25-45%。 |
+| **投机 ESA 壳资源**：申报最大需量大，实际负载低，租户可见度弱，项目依赖 Green Lane 时间价值而非 firm demand。 | TNB 抵押、RCC 没收、CLC、LD 和 PMMC 会把“便宜期权”变成负 carry。 | 除非开发商自担电网资产并按期达到75%申报最大需量，否则列为搁浅风险库存。 |
+| **用水风险老设计**：蒸发/冷却塔方案，依赖处理后自来水，无再生水管线，靠近住宅/商业区或不在指定工业区。 | 即便电力可用，柔佛技术委员会也可拒批、延迟或要求重做方案。 | 除非水系统重构已出资并获批，否则剥离 DC 溢价，只保留土地价值。 |
+| **低密度非 AI 楼壳**：无法在不重建 MEP 的情况下支持 Blackwell 级机柜密度或液冷分配。 | 支付更高网络/容量成本，却无法赚取 AI 级租金。 | 按工业楼壳加可回收电力接入价值估值，而不是按 AI DC 容量估值。 |
+
+## 压力测试数字
+
+对100 MW IT 负载园区，仅 WUE 一项就会显著改变日用水负担：
+
+| WUE 假设 | 100 MW IT 负载日用水量 |
+|---|---:|
+| MIDA 推荐设计 WUE 2.2 m3/MWh | 5.28 MLD |
+| 柔佛低于1.8的前置门槛 | <4.32 MLD |
+| D2C/浸没式液冷区间0.05-0.2 | 0.12-0.48 MLD |
+
+因此，同样是100 MW ESA，两个项目并不是同一种资产：一个可能是高密度、低耗水 AI 园区；另一个可能只是占用稀缺水电期权的低利用率预约。
+
+## 投资含义
+
+我支持 card 01 的方向，但把负面催化剂进一步收窄：风险不只是“老旧风冷灰盒子无法适配 Blackwell 液冷”。更严厉的催化剂是公用事业再定价周期。一旦 TNB 和柔佛按全成本原则定价保留电网容量、备用可靠性、接驳缺口和水源外部性，弱 DC 资产会从“可改造期权”变成“搁浅负债”。
+
+最有防御性的柔佛 DC 暴露，不是拥有最大公告 MW 管线的开发商，而是能证明五件事的运营商：真实租户负载、132 kV+ 电网可交付性、可液冷 MEP、非可饮用水供应、以及爬坡期提供抵押的资产负债表能力。缺少其中两项或更多的场址，应大幅折价。
+
+## 来源
+
+1. TNB Integrated Annual Report 2025，数据中心负载和管线披露：https://www.tnb.com.my/assets/annual_report/TNB_IAR_2025.pdf
+2. TNB Analyst Briefing 3QFY2025，DC 实际负载和 ESA 管线：https://www.tnb.com.my/assets/quarterly_results/AB_3QFY2025.pdf
+3. Suruhanjaya Tenaga，IBR RP4 电价框架和 AFA：https://www.st.gov.my/pricing/electricity-pricing-framework/components-ibr
+4. Bernama，2025-06-20 RP4 电价重组：https://www.bernama.com/en/news.php/world/general/news.php?id=2436382
+5. TNB 接驳费框架：https://www.tnb.com.my/connection-charge
+6. TNB Green Lane Pathway 公告：https://www.tnb.com.my/announcements/tnb-establishes-exclusive-green-lane-pathway
+7. MIDA Guideline for Sustainable Development of Data Centre：https://www.mida.gov.my/wp-content/uploads/2024/12/Guideline-for-Sustainable-Development-of-Data-Centre.pdf
+8. Bernama，柔佛替代水源需求和再生水/原水协议：https://www.bernama.com/en/news.php/general/news.php?id=2455513
+9. Bernama，IWK/JSW 12 MLD 再生水供应：https://www.bernama.com/en/news.php?id=2455525
+10. New Straits Times，柔佛收紧 DC 审批和 Tier 1/2 限制：https://www.nst.com.my/amp/news/nation/2025/11/1324188/johor-tightens-approvals-data-centres
+11. New Straits Times，柔佛 WUE 门槛和技术委员会：https://www.nst.com.my/amp/news/regional/2026/01/1350723/johor-enforces-singapore-level-water-efficiency-data-centres
+12. The Star，SPAN 用水研究和处理后自来水更高定价：https://www.thestar.com.my/news/nation/2025/09/04/study-on-all-data-centres-water-use-being-done-says-span
+13. Sinar Daily，SPAN 876 MLD 用水需求估计：https://www.sinardaily.my/article/733943/focus/national/data-centres-require-876-million-litres-of-water-daily
+14. TNB tariff portal 和公开电价计算器费率脚本，访问日期2026-05-11：https://www.mytnb.com.my/tariff
+
+页脚：Utilities Analyst card 02，stress-test stance，工作日期2026-05-11。
+
+## Follow-up
+
+- Analyst: realestate-analyst
+- Topic: 柔佛 DC 场址级资产重估：土地、电力接入、水源合约与租户负载的折价矩阵
+- Question: 基于本卡水电全成本压力测试，哪些柔佛 DC 开发商、园区或土地储备应被上调为核心基础设施，哪些应被降为工业壳或搁浅库存？

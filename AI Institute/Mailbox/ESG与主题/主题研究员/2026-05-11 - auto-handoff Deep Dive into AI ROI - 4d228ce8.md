@@ -1,0 +1,208 @@
+---
+source: ai-institute
+resource_type: mailbox-thread
+status: completed
+analyst_level: "ESG与主题"
+---
+
+# [auto-handoff] Deep Dive into AI ROI
+
+Status: **completed**
+Dispatch status: **completed**
+Sender: **HK/US Strategist**
+Recipient: **Thematic Researcher**
+Messages: **2**
+Dispatches: **1**
+
+## Links
+
+- Mailbox topic: [[[auto-handoff] Deep Dive into AI ROI]]
+- Sender: [[HK US Strategist]]
+- Recipient: [[Thematic Researcher]]
+- Analyst level: [[ESG与主题]]
+
+## Latest body
+
+致 港美股策略师：
+
+协同任务已完成。执行方为 主题研究员。
+模式: adhoc
+会话: ef0594e0-b530-44db-bf39-b2f738ed2793
+
+结果摘要:
+# Step −1 — Anchor today's date BEFORE you start
+Run this in your shell and record the result:
+```bash
+date +%Y-%m-%d
+```
+All "today / yesterday / this week / 上周 / 上一交易日" references in your output MUST resolve against this date. Do NOT simulate or roleplay a historic date, even if a salient training-data event (e.g. a famous policy week, earnings cycle, or shock) seems closer to the prompt. The shell clock is authoritative; if your training instinct says one date and the shell says another, the shell wins. All web-search queries, citations, and data references must target the window ending on the shell date, not training-cutoff windows.
+# Role
+Thematic Researcher (主题研究员).
+# Expertise
+AI, quantum, biotech, space economy, Web3.
+# MANDATORY DELIVERABLE — READ FIRST
+- This step has TWO mandatory deliverables; both MUST be written to your workspace:
+  1. `handoff_response.md` — the canonical 简体中文 (Simplified Chinese) version.
+  2. `handoff_response.en.md` — the English version of the same c
+
+归档文件:
+- handoff_response.en.md (handoff_response.en.md)
+- handoff_response.md (handoff_response.md)
+
+如需继续追问，请在当前线程直接回复。
+
+## Messages
+
+### 1. message / replied
+
+From: HK/US Strategist
+To: Thematic Researcher
+Created: 11/05/2026, 09:18:21
+
+Auto-handoff emitted by HK/US Strategist after the run of 港美股策略师 · 美股科技周报 finished.
+Source workflow: analyst:offshore-strategist:us_tech_weekly
+Source run: 758f0982-2270-4de6-ae16-14a8870862dd
+Source session: ef32deec-8f6f-4ab0-b440-5f2437355c8b
+Priority: high
+
+--- Requested follow-up ---
+Given that only 5.5% of firms currently report significant AI-driven earnings, which non-tech sectors have shown the most concrete 'cost-reduction' logic thus far?
+
+### 2. result / sent
+
+From: Thematic Researcher
+To: HK/US Strategist
+Created: 11/05/2026, 09:25:28
+
+致 港美股策略师：
+
+协同任务已完成。执行方为 主题研究员。
+模式: adhoc
+会话: ef0594e0-b530-44db-bf39-b2f738ed2793
+
+结果摘要:
+# Step −1 — Anchor today's date BEFORE you start
+Run this in your shell and record the result:
+```bash
+date +%Y-%m-%d
+```
+All "today / yesterday / this week / 上周 / 上一交易日" references in your output MUST resolve against this date. Do NOT simulate or roleplay a historic date, even if a salient training-data event (e.g. a famous policy week, earnings cycle, or shock) seems closer to the prompt. The shell clock is authoritative; if your training instinct says one date and the shell says another, the shell wins. All web-search queries, citations, and data references must target the window ending on the shell date, not training-cutoff windows.
+# Role
+Thematic Researcher (主题研究员).
+# Expertise
+AI, quantum, biotech, space economy, Web3.
+# MANDATORY DELIVERABLE — READ FIRST
+- This step has TWO mandatory deliverables; both MUST be written to your workspace:
+  1. `handoff_response.md` — the canonical 简体中文 (Simplified Chinese) version.
+  2. `handoff_response.en.md` — the English version of the same c
+
+归档文件:
+- handoff_response.en.md (handoff_response.en.md)
+- handoff_response.md (handoff_response.md)
+
+如需继续追问，请在当前线程直接回复。
+
+
+## Dispatches
+
+### 1. Mailbox · 主题研究员 · [auto-handoff] Deep Dive into AI ROI
+
+Status: **completed**
+Mode: **adhoc**
+Workflow: ``
+Task: `mailbox_coordination`
+
+#### Result
+
+# Step −1 — Anchor today's date BEFORE you start
+Run this in your shell and record the result:
+```bash
+date +%Y-%m-%d
+```
+All "today / yesterday / this week / 上周 / 上一交易日" references in your output MUST resolve against this date. Do NOT simulate or roleplay a historic date, even if a salient training-data event (e.g. a famous policy week, earnings cycle, or shock) seems closer to the prompt. The shell clock is authoritative; if your training instinct says one date and the shell says another, the shell wins. All web-search queries, citations, and data references must target the window ending on the shell date, not training-cutoff windows.
+# Role
+Thematic Researcher (主题研究员).
+# Expertise
+AI, quantum, biotech, space economy, Web3.
+# MANDATORY DELIVERABLE — READ FIRST
+- This step has TWO mandatory deliverables; both MUST be written to your workspace:
+  1. `handoff_response.md` — the canonical 简体中文 (Simplified Chinese) version.
+  2. `handoff_response.en.md` — the English version of the same c
+
+
+## Attached Markdown
+
+### 1. Mailbox · 主题研究员 · [auto-handoff] Deep Dive into AI ROI
+
+# AI Cost-Reduction Logic in Non-Tech Sectors: Prioritized Conclusions
+
+Date anchor: `2026-05-11` from shell `date +%Y-%m-%d`. All references to “today / this week / prior trading day” are resolved against this date.
+
+## Ranked Conclusions
+
+1. **Financial services / payments / banking** has the strongest non-tech cost-reduction evidence so far. The point is not that AI is already creating a new revenue line; it is that customer service, IT tickets, compliance/risk, fraud detection, sales support, and developer workflows are large pools of repetitive knowledge work. Klarna disclosed that its AI assistant handled **31 million** conversations and **80%** of customer service chats in 2025, after delivering about **$39 million** of cost savings in 2024. Bank of America’s Erica has surpassed **3 billion** client interactions, and Erica for Employees reduced calls into the IT service desk by **50%**. JPMorgan had already raised the business-value target from its **300+** AI use cases to **$1.5 billion** at its 2023 Investor Day.
+
+2. **Insurance, especially P&C claims**, is the second most concrete area. The cost pools map directly to LAE, claims labor, fraud/leakage, and underwriting data entry. Lemonade disclosed that, as of year-end 2025, AI Jim handled first notice of loss without human intervention **96%** of the time and that about **55%** of claims were automated or near-automated end to end. Bain estimates full GenAI deployment could reduce P&C claims loss-adjusting expenses by **20%-25%**. EY-Parthenon’s survey of **100** insurers found realized GenAI cost savings over the past 1-2 years mostly in the **5%-10%** range; in claims, **36%** of respondents reported **5%-10%** savings and **31%** reported **11%-15%** savings.
+
+3. **Healthcare services** has strong evidence for labor-hour savings, but most public companies have not yet translated that into EPS attribution. The clearest use cases are clinical documentation, referral letters, coding support, and revenue-cycle management. The Permanente Medical Group’s ambient AI scribe covered **2.5 million+** patient encounters over one year and saved **15,791** documentation hours, equivalent to **1,794** eight-hour workdays. A Microsoft DAX Copilot survey of **879** clinician users found an average saving of **5 minutes** per encounter. This can convert into physician capacity, outsourced-scribe savings, or retention, but hospitals generally have not yet broken it out as a profit line.
+
+4. **Retail / logistics / consumer supply chain** has concrete operating logic, but it is more about cycle-time compression and operating efficiency than disclosed profit. Walmart’s Trend-to-Product shortens apparel concept-to-shelf time to **6-8 weeks**, about **18 weeks** faster than the traditional process. UPS’s ORION route-optimization case shows expected annual reductions of **100 million miles** driven and **10 million gallons** of fuel once fully deployed. These examples support lower inventory, fuel, planning-labor, stockout, and markdown costs, but AI-specific earnings disclosure remains limited.
+
+## Evidence Table
+
+| Priority | Sector | Verifiable Cost Mechanism | Key Evidence | Investment Read-Through |
+|---|---|---|---|---|
+| 1 | Financial services / payments / banking | Customer-service automation, IT ticket deflection, risk/fraud, sales support, developer productivity | Klarna AI assistant: **31 million** conversations and **80%** of customer service chats in 2025; about **$39 million** of cost savings in 2024 ([Klarna 2025 20-F](https://s205.q4cdn.com/644747736/files/doc_financials/2025/q4/Klarna-Group-plc-20-F-2025.pdf); [SEC F-1/A](https://www.sec.gov/Archives/edgar/data/2003292/000162828025026990/klarnagroupplcf-1a.htm)). Bank of America: Erica surpassed **3 billion** client interactions, reached nearly **50 million** users, and averages **58 million+** monthly interactions; Erica for Employees reduced IT service desk calls by **50%** ([BofA](https://newsroom.bankofamerica.com/content/newsroom/press-releases/2025/08/a-decade-of-ai-innovation--bofa-s-virtual-assistant-erica-surpas.html)). JPMorgan: **300+** AI use cases and a raised business-value target of **$1.5 billion** ([JPM 2023 Investor Day transcript](https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/events/2023/jpmc-investor-day-2023/JPM-Investor-Day-2023-Final-Full-Transcript.pdf)). | Best sector for finding AI already bending the cost curve, especially banks and payment firms with large transaction volumes, customer-service loads, branch/back-office costs, and digital-channel usage. |
+| 2 | Insurance | FNOL, claims routing, coverage validation, fraud detection, data entry | Lemonade: AI Jim handled FNOL without human intervention **96%** of the time and about **55%** of claims were automated or near-automated ([Lemonade 2025 10-K](https://www.sec.gov/Archives/edgar/data/1691421/000169142126000016/lmnd-20251231.htm)). Bain: full GenAI potential could reduce P&C claims LAE by **20%-25%**, with early task productivity up to **50%** and potential coverage-related leakage reduction of **40%** ([Bain](https://www.bain.com/insights/100-billion-dollar-opportunity-for-generative-ai-in-p-and-c-claims-handling/)). EY: insurers’ realized savings over the past 1-2 years are mostly **5%-10%**; in claims, **36%** report **5%-10%** and **31%** report **11%-15%** ([EY](https://www.ey.com/en_us/insights/insurance/gen-ai-in-insurance-key-survey-findings); [EY PDF](https://www.ey.com/content/dam/ey-unified-site/ey-com/en-us/insights/insurance/documents/ey-genai-in-insurance-spring-2025-survey-summary-and-findings.pdf)). | More vertical than banking, but the cost pool is cleaner. Prefer P&C over life-insurance marketing narratives. |
+| 3 | Healthcare services | Clinical documentation, referral letters, coding support, revenue-cycle management | TPMG: after **2.5 million+** encounters, AI scribes saved **15,791** hours, equal to **1,794** eight-hour workdays ([AMA](https://www.ama-assn.org/practice-management/digital-health/ai-scribes-save-15000-hours-and-restore-human-side-medicine)). Microsoft DAX Copilot: survey of **879** clinician users found an average saving of **5 minutes** per encounter ([Microsoft](https://www.microsoft.com/en-us/microsoft-cloud/blog/healthcare/2024/08/08/dax-copilot-new-customization-options-and-ai-capabilities-for-even-greater-productivity/)). | Evidence is credible but mostly a productivity proxy. Track conversion into physician panel size, outsourced-scribe spend, denial rates, or SG&A improvement. |
+| 4 | Retail / logistics / consumer supply chain | Product design cycle time, replenishment forecasting, route optimization, warehouse and fulfillment automation | Walmart Trend-to-Product: apparel launch cycle shortened to **6-8 weeks**, about **18 weeks** faster than the traditional process ([Walmart](https://corporate.walmart.com/news/2025/04/09/in-an-ever-changing-environment-walmart-uses-genai-to-create-cool-for-customers)). UPS ORION: expected annual reduction of **100 million miles** driven and **10 million gallons** of fuel once fully deployed ([BSR/UPS case study](https://www.bsr.org/en/case-studies/center-for-technology-and-sustainability-orion-technology-ups); [UPS](https://about.ups.com/ca/en/newsroom/press-releases/innovation-driven/ups-deploys-purpose-built-navigation-for-ups-service-personnel.html)). | Operating inputs are real, but AI benefits are usually bundled with automation, procurement, network capacity, and inventory management. Use as margin-resilience support rather than a pure AI earnings claim. |
+
+## Why Not Other Popular Non-Tech Sectors
+
+- **Pharma / biotech**: AI drug discovery has credible early-stage discovery and experimental-cost benefits, but commercialization cycles are long and clinical attrition remains the main economic bottleneck. A 2026 systematic review of **100** studies from 2018-2025 found stronger evidence in early discovery, while clinical adoption is still emerging and there is not yet robust evidence that computational acceleration reduces attrition or speeds regulatory progress ([ScienceDirect / Intelligent Pharmacy](https://www.sciencedirect.com/science/article/pii/S2949866X25000784)).
+- **Industrials / energy / utilities**: predictive maintenance and scheduling optimization are directionally right, but public disclosure is often vendor-led case-study material, with limited comparable or auditable AI-specific cost breakouts from listed companies.
+- **Web3 / space economy**: current AI narratives are more about product and infrastructure than proven operating-cost reduction. The evidence base is too scattered to anchor an “AI-driven earnings” argument.
+
+## Suggested Use for the HK/US Strategist
+
+- Weekly conclusion: **Non-tech AI cost reduction is showing up first in service industries with high-frequency knowledge tickets and closed-loop transaction data, not in heavy manufacturing or long-cycle R&D. Prioritize financial services and insurance, then healthcare services, with retail/logistics as supporting evidence for operating efficiency.**
+- Stock screen: large customer-service/claims/IT-ticket volumes, high digital-channel mix, rich closed-loop process data, and management teams disclosing specific savings dollars or hours rather than only counts of “AI initiatives.”
+- Next financial metrics to track: `customer service cost per interaction`, `claims LAE ratio / cycle time`, and `documentation or revenue-cycle labor cost per encounter`. If a company reports only “employee time saved” without cost-pool size, adoption rate, and quality metrics, discount the claim.
+
+### 2. Mailbox · 主题研究员 · [auto-handoff] Deep Dive into AI ROI
+
+# 非科技行业 AI 降本逻辑：优先结论
+
+日期锚点：`2026-05-11`（来自 shell `date +%Y-%m-%d`）。本回答把“today / this week / 上一交易日”等相对时间均按该日期解析。
+
+## 结论排序
+
+1. **金融服务 / 支付 / 银行**是目前最硬的非科技降本样本。原因不是“AI 直接创造新收入”，而是客服、IT 工单、合规/风控、欺诈识别、销售支持这些重复知识劳动有大规模存量成本，且已有企业披露接近 P&L 的数字。Klarna 披露 AI assistant 在 2025 年处理了 **31 million** 次对话、覆盖 **80%** 客服聊天，并在 2024 年带来约 **$39 million** 成本节约；Bank of America 的 Erica 超过 **3 billion** 次客户交互，内部 Erica for Employees 将 IT service desk 来电减少 **50%**；JPMorgan 早在 2023 Investor Day 就把 **300+** 个 AI 用例对应的业务价值目标上调至 **$1.5 billion**。
+
+2. **保险，尤其 P&C 理赔**是第二个最具体方向。它的降本点直接落在 LAE、理赔人力、欺诈/漏损和承保资料录入。Lemonade 披露，截至 2025 年底，AI Jim 在 **96%** 的第一报案中无需人工介入，约 **55%** 的理赔实现端到端自动或近自动处理；Bain 估算 GenAI 充分应用可使 P&C claims loss-adjusting expenses 下降 **20%-25%**；EY-Parthenon 对 **100** 家保险公司调查显示，过去 1-2 年 GenAI 已实现的成本节约主要集中在 **5%-10%**，其中 claims 受访者里 **36%** 报告 **5%-10%** 节约，**31%** 报告 **11%-15%** 节约。
+
+3. **医疗服务**已有很扎实的“工时节约”证据，但离上市公司 EPS 归因仍差一步。最明确场景是临床文书、转诊信、编码支持和收入周期管理。The Permanente Medical Group 的 ambient AI scribe 一年覆盖 **2.5 million+** 次就诊，节省 **15,791** 小时文书时间，等于 **1,794** 个 8 小时工作日；Microsoft DAX Copilot 对 **879** 名临床用户的调查显示，平均每次就诊节省 **5 minutes**。这会转化为医生容量、外包 scribe 成本或留任率，但多数医院尚未把它单独拆成利润行项目。
+
+4. **零售 / 物流 / 消费供应链**的逻辑具体，但更像“周期压缩和运营效率”，而非已披露利润。Walmart 的 Trend-to-Product 把服装从概念到上架缩短到 **6-8 weeks**，较传统流程缩短约 **18 weeks**；UPS 的 ORION 路径优化案例显示，全面部署后预计每年减少 **100 million miles** 行驶、节省 **10 million gallons** 燃油。它们证明 AI 能压低库存、燃油、人工计划和缺货/滞销成本，但上市公司层面的 AI 单项收益披露仍少。
+
+## 证据表
+
+| 优先级 | 行业 | 可验证降本机制 | 关键证据 | 投研判断 |
+|---|---|---|---|---|
+| 1 | 金融服务 / 支付 / 银行 | 客服自动化、IT 工单分流、风控/欺诈、销售支持、开发者效率 | Klarna AI assistant：2025 年 **31 million** 次对话、**80%** 客服聊天，2024 年约 **$39 million** 成本节约（[Klarna 2025 20-F](https://s205.q4cdn.com/644747736/files/doc_financials/2025/q4/Klarna-Group-plc-20-F-2025.pdf)；[SEC F-1/A](https://www.sec.gov/Archives/edgar/data/2003292/000162828025026990/klarnagroupplcf-1a.htm)）。Bank of America：Erica 超过 **3 billion** 次客户交互、近 **50 million** 用户、每月 **58 million+** 次交互；Erica for Employees 将 IT service desk 来电减少 **50%**（[BofA](https://newsroom.bankofamerica.com/content/newsroom/press-releases/2025/08/a-decade-of-ai-innovation--bofa-s-virtual-assistant-erica-surpas.html)）。JPMorgan：**300+** AI 用例，目标业务价值上调至 **$1.5 billion**（[JPM 2023 Investor Day transcript](https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/events/2023/jpmc-investor-day-2023/JPM-Investor-Day-2023-Final-Full-Transcript.pdf)）。 | 最适合寻找“AI 已经进成本曲线”的行业，尤其交易处理量大、客服量大、分支/后台成本高的银行与支付公司。 |
+| 2 | 保险 | FNOL、理赔分流、coverage validation、欺诈识别、资料录入 | Lemonade：AI Jim 在 **96%** 第一报案中无需人工介入，约 **55%** 理赔自动或近自动处理（[Lemonade 2025 10-K](https://www.sec.gov/Archives/edgar/data/1691421/000169142126000016/lmnd-20251231.htm)）。Bain：GenAI 充分应用可使 P&C claims LAE 下降 **20%-25%**，早期任务生产率提升最高 **50%**、coverage-related leakage 潜在下降 **40%**（[Bain](https://www.bain.com/insights/100-billion-dollar-opportunity-for-generative-ai-in-p-and-c-claims-handling/)）。EY：保险公司过去 1-2 年已实现成本节约主要为 **5%-10%**，claims 中 **36%** 报告 **5%-10%**、**31%** 报告 **11%-15%**（[EY](https://www.ey.com/en_us/insights/insurance/gen-ai-in-insurance-key-survey-findings)；[EY PDF](https://www.ey.com/content/dam/ey-unified-site/ey-com/en-us/insights/insurance/documents/ey-genai-in-insurance-spring-2025-survey-summary-and-findings.pdf)）。 | 逻辑比银行更垂直，但成本池更清晰；优先看 P&C，而非寿险营销型 AI 叙事。 |
+| 3 | 医疗服务 | 临床文书、转诊信、编码支持、收入周期管理 | TPMG：**2.5 million+** 次就诊后，AI scribe 节省 **15,791** 小时，相当于 **1,794** 个 8 小时工作日（[AMA](https://www.ama-assn.org/practice-management/digital-health/ai-scribes-save-15000-hours-and-restore-human-side-medicine)）。Microsoft DAX Copilot：**879** 名临床用户调查，平均每次就诊节省 **5 minutes**（[Microsoft](https://www.microsoft.com/en-us/microsoft-cloud/blog/healthcare/2024/08/08/dax-copilot-new-customization-options-and-ai-capabilities-for-even-greater-productivity/)）。 | 证据可信但多是生产率代理变量；要追踪是否转化为医生 panel size、外包 scribe 支出、denial rate 或 SG&A 改善。 |
+| 4 | 零售 / 物流 / 消费供应链 | 商品设计周期、补货预测、路径优化、仓配自动化 | Walmart Trend-to-Product：把服装上新周期缩短到 **6-8 weeks**，较传统流程缩短约 **18 weeks**（[Walmart](https://corporate.walmart.com/news/2025/04/09/in-an-ever-changing-environment-walmart-uses-genai-to-create-cool-for-customers)）。UPS ORION：全面部署后预计每年减少 **100 million miles**、节省 **10 million gallons** 燃油（[BSR/UPS case study](https://www.bsr.org/en/case-studies/center-for-technology-and-sustainability-orion-technology-ups)；[UPS](https://about.ups.com/ca/en/newsroom/press-releases/innovation-driven/ups-deploys-purpose-built-navigation-for-ups-service-personnel.html)）。 | 运营输入很实，但 AI 单项收益通常混在自动化、采购、运力和库存管理里；适合做利润率韧性辅助论据。 |
+
+## 为什么不是其他热门非科技行业
+
+- **制药 / biotech**：AI drug discovery 的早期发现阶段确有时间和实验成本节省，但商业化周期长、临床失败率高，尚难证明对上市药企当期 earnings 有显著贡献。一篇 2026 年系统综述覆盖 **100** 篇 2018-2025 年研究，结论是早期发现证据较强，但临床采用仍在早期，尚无强证据表明计算加速能转化为更低 attrition 或更快监管进展（[ScienceDirect / Intelligent Pharmacy](https://www.sciencedirect.com/science/article/pii/S2949866X25000784)）。
+- **工业 / 能源 / 公用事业**：预测性维护和调度优化方向正确，但公开披露常是案例研究或供应商口径，少有可比、可审计的上市公司 AI 成本拆分。
+- **Web3 / space economy**：目前更偏产品/基础设施叙事，降本样本零散，尚不适合作为“AI-driven earnings”证据链主线。
+
+## 给 HK/US Strategist 的使用方式
+
+- 周报主结论可写成：**非科技 AI 降本最先落在“高频知识工单 + 可闭环交易数据”的服务行业，而不是重资产制造或长周期 R&D。金融服务和保险优先，医疗服务其次，零售/物流作为运营效率辅助。**
+- 选股筛选项：客服/理赔/IT 工单量大、数字渠道占比高、流程闭环数据多、管理层开始披露具体节省金额或工时，而不是只披露“AI initiatives”数量。
+- 下一步建议重点追踪三个财报口径：`customer service cost per interaction`、`claims LAE ratio / cycle time`、`documentation or revenue-cycle labor cost per encounter`。如果公司只给“员工节省时间”但不给成本池、采用率和质量指标，应降权处理。
+
