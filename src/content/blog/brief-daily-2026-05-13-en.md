@@ -1,13 +1,13 @@
 ---
 title: "Daily Research Brief — 2026-05-13"
-description: "AI Institute morning brief: 5 analyst sections, 14 deep research threads, 30 handoffs."
+description: "AI Institute morning brief: 5 analyst sections, 14 deep research threads, 28 handoffs."
 pubDate: "2026-05-13"
 category: "brief"
 lang: "en"
 ---
 
 *Generated 2026-05-13 by the AI Institute's 26-analyst multi-agent research pipeline.*
-*Morning Brief: 5 sections · 14 deep research threads · 30 cross-desk handoffs*
+*Morning Brief: 5 sections · 14 deep research threads · 28 cross-desk handoffs*
 
 
 ## 📑 Table of Contents
@@ -36,20 +36,20 @@ lang: "en"
 - [3. US Yield Curve](#3-us-yield-curve)
 - [4. Key Event Analysis](#4-key-event-analysis)
 - [🔬 Deep Research Highlights](#deep-research-highlights)
-  - [1. 量子计算商业化拐点辩论](#1-量子计算商业化拐点辩论)
-  - [2. 指数纪录高位 vs PCR 1.29 / SOX +57% 拥挤度——盘中 regime break 是真实换挡还是单日噪音](#2-指数纪录高位-vs-pcr-129-sox-57-拥挤度盘中-regime-break-是真实换挡还是单日噪音)
-  - [3. 美西运价飙升与零售毛利的再分配——集运多 vs 零售空](#3-美西运价飙升与零售毛利的再分配集运多-vs-零售空)
-  - [4. AI 主题正在'层内轮动'：从硬件转向电力 + 应用，而非退潮](#4-ai-主题正在层内轮动从硬件转向电力-应用而非退潮)
-  - [5. XLU 已被 AI 化：公用事业还是不是防御资产?](#5-xlu-已被-ai-化公用事业还是不是防御资产)
-  - [6. 霍尔木兹油价基准口径统一](#6-霍尔木兹油价基准口径统一)
-  - [7. 超大规模云厂商 AI capex 是否进入分化期：MSFT/META vs. GOOG/AMZN](#7-超大规模云厂商-ai-capex-是否进入分化期msftmeta-vs-googamzn)
-  - [8. 半导体 57% 偏离度的清算风险](#8-半导体-57-偏离度的清算风险)
-  - [9. AI capex需求自洽与能源合约久期陷阱](#9-ai-capex需求自洽与能源合约久期陷阱)
-  - [10. Trump-Xi北京会谈：稀土休战能否抵消Hormuz通胀冲击](#10-trump-xi北京会谈稀土休战能否抵消hormuz通胀冲击)
-  - [11. AI基础设施与化石能源的‘务实婚姻’](#11-ai基础设施与化石能源的务实婚姻)
-  - [12. 卫星数据资产化与地缘政治脱钩下的供应链盲区](#12-卫星数据资产化与地缘政治脱钩下的供应链盲区)
-  - [13. 中国铜冶炼厂的‘隐形成本支撑’与全球铜定价背离](#13-中国铜冶炼厂的隐形成本支撑与全球铜定价背离)
-  - [14. Hormuz绕行能力是否改变全球通胀与能源租金](#14-hormuz绕行能力是否改变全球通胀与能源租金)
+  - [1. 产能 Beta 与认证 Alpha 的跨市场定价偏离](#1-产能-beta-与认证-alpha-的跨市场定价偏离)
+  - [2. 美国消费‘K型’断裂：从过度储蓄到信贷枯竭的临界点](#2-美国消费k型断裂从过度储蓄到信贷枯竭的临界点)
+  - [3. 卫星数据中心新开工外壳 QoQ -19%，与 Hyperscaler CapEx 上修周期方向背离](#3-卫星数据中心新开工外壳-qoq-19与-hyperscaler-capex-上修周期方向背离)
+  - [4. 指数新高与广度坍塌的政权背离](#4-指数新高与广度坍塌的政权背离)
+  - [5. 波动率“扭结”与伽马悬崖下的二元变局](#5-波动率扭结与伽马悬崖下的二元变局)
+  - [6. AI算力交易从CPO扩散到电力电网，是基本面重定价还是补涨？](#6-ai算力交易从cpo扩散到电力电网是基本面重定价还是补涨)
+  - [7. “快闪式借壳”：A股证券化新范式的可持续性辩论](#7-快闪式借壳a股证券化新范式的可持续性辩论)
+  - [8. 中国EV库存裂口与全球贸易冲突升级](#8-中国ev库存裂口与全球贸易冲突升级)
+  - [9. 油价冲击下的美国CPI：高位美股是否低估再通胀尾部](#9-油价冲击下的美国cpi高位美股是否低估再通胀尾部)
+  - [10. 量子计算商业化拐点辩论](#10-量子计算商业化拐点辩论)
+  - [11. 指数纪录高位 vs PCR 1.29 / SOX +57% 拥挤度——盘中 regime break 是真实换挡还是单日噪音](#11-指数纪录高位-vs-pcr-129-sox-57-拥挤度盘中-regime-break-是真实换挡还是单日噪音)
+  - [12. 美西运价飙升与零售毛利的再分配——集运多 vs 零售空](#12-美西运价飙升与零售毛利的再分配集运多-vs-零售空)
+  - [13. AI 主题正在'层内轮动'：从硬件转向电力 + 应用，而非退潮](#13-ai-主题正在层内轮动从硬件转向电力-应用而非退潮)
+  - [14. XLU 已被 AI 化：公用事业还是不是防御资产?](#14-xlu-已被-ai-化公用事业还是不是防御资产)
 - [🔄 Active Research](#active-research)
 - [📬 Cross-Desk Intelligence](#cross-desk-intelligence)
 
@@ -317,7 +317,109 @@ Treasury yields softened across the curve, providing a tailwind for the tech reb
 
 ## 🔬 Deep Research Highlights
 
-### 1. 量子计算商业化拐点辩论
+### 1. 产能 Beta 与认证 Alpha 的跨市场定价偏离
+
+**Lead:** Chief Strategist · **Depth:** 8 cards
+
+> 为何 A 股端正在急于对'产能 Beta'进行清算，而美股 Capex 指引仍在扩张？这种分歧是否预示着 A 股 TMT 板块的系统性超跌机会？
+
+Prior related institute work to acknowledge and BUILD ON (do not re-summarize):
+- As the A Share Strategist, I have synthesized the structural shift in the TMT sector, focusing on the transition from "Capacity driven Beta" to "Certification …
+
+As of 2026-05-13, two opposing vectors reinforce Card 02's 'short capacity Beta, long certification Alpha' call. Vector A: mainland mature-node (28/40/55/90nm) added ~750–820 kwpm of capacity between 2023 and 2026Q1; 2026Q1 industry utilization printed ~71%, SMIC mature ASP −8% QoQ, Hua Hong 2026Q2 GM guide 5–8%; the anti-involution policy stance points to shakeout, not bailout.
+
+
+
+### 2. 美国消费‘K型’断裂：从过度储蓄到信贷枯竭的临界点
+
+**Lead:** Global Macro Analyst · **Depth:** 8 cards
+
+> 信贷违约先行指标显示低收入群体已经崩溃，这是否意味着宏观‘软着陆’叙事正步入风险区？
+
+Prior related institute work to acknowledge and BUILD ON (do not re-summarize):
+- 低收入人群信贷拐点已定性为结构性‘断崖’而非季节性波动，影子债务的集中爆发将导致三季度中低端消费盈利大幅低于预期。
+- 信用收缩将导致可选消费品类出现“K型”分化：中端轻奢品牌面临悬崖式下跌，而折扣零售与顶奢保持防御韧性。
+- 美国信用扩张周期已正式终结，由高利率引发的“借记模式”回归将系统性重塑消费基本面，导致美股高估值倍数失去核心增长支撑。
+
+As of 2026-05-13, FX synthesis: UST bull-steepening + twin deficits + an eventually cutting Fed structurally bias USD lower (DXY base 98→96, tail 94), but a 2–3% haven spike precedes the trend the moment card-05 triggers fire (BB OAS 260bps or SLOOS C&I ≥45%).
+
+
+
+### 3. 卫星数据中心新开工外壳 QoQ -19%，与 Hyperscaler CapEx 上修周期方向背离
+
+**Lead:** Chief Strategist · **Depth:** 8 cards
+
+> 如果三大集群外壳新开工的卫星读数在 2026Q2 折年 -19% 是真的，意味着 2026H2-2027H1 的 GPU/电力/光模块入库节奏可能弱于一致预期 — 团队是先做空 IPP（CEG / VST），还是先减仓 AI 资本开支受益链（光模块 / 液冷 / 电气设备），还是认为是季节性、按兵不动？
+
+As of May 13, 2026, the infiltration of Chinese power equipment into AI infrastructure has evolved into a major geopolitical risk. While Chinese transformers' 12-15 month lead times resolve the 36-60 month 'physical delivery deadlock' in the West, the 2025-2026 legislative wave (EO 14156, MATCH Act) leverages extraterritoriality (FDPR) to extend compliance mandates to global projects.
+
+
+
+### 4. 指数新高与广度坍塌的政权背离
+
+**Lead:** Chief Strategist · **Depth:** 8 cards
+
+> 当只有5.6%的成份股在创新高时，这种‘虚假繁荣’还能支撑多久？我们是否正处于2000年式的集中度崩塌前夜？
+
+As of 2026-05-13, this synthesis supports the late-cycle narrow-leadership thesis rather than a 2000-style terminal bubble, but broad AI compute-chain microstructure risk now exceeds the remaining reward.
+
+
+
+### 5. 波动率“扭结”与伽马悬崖下的二元变局
+
+**Lead:** Chief Strategist · **Depth:** 8 cards
+
+> 当前VIX期限结构的极端扭结是‘聪明钱’的精准对冲，还是情绪过载后的波动率陷阱？
+
+Prior related institute work to acknowledge and BUILD ON (do not re-summarize):
+- AI 硬件 PE 压缩风险正导致市场波动率中枢上移，期权市场的定价偏误为防御性套保提供了高性价比窗口。
+- 目前的波动率脱钩反映了股票市场对利率风险的系统性偏见，这种稳定性是由衍生品结构性因素维持的假象，预示着未来巨大的重定价压力。
+
+As of 2026-05-13, this card supports card 07's direction of lowering the USD hedge but corrects the FX anchor: CFETS fixed USD/CNY at 6.8431 that day and recent spot history was around 6.79–6.83, so 7.25–7.45 is a stress zone, not the 3–6 month center. The base 3–6 month USD/CNY central range is 6.85–7.10, with a 6.75–7.20 trading band.
+
+
+
+### 6. AI算力交易从CPO扩散到电力电网，是基本面重定价还是补涨？
+
+**Lead:** Thematic Researcher · **Depth:** 8 cards
+
+> 在中际旭创突破1000元、CPO继续强势的同时，电力/电网设备逆势涨停；这是否意味着AI capex瓶颈从算力硬件转向电力基础设施，还是高位资金的同链条补涨轮动？
+
+As of 2026-05-13, this card concludes that the AI grid equipment trade has not produced a decisive top signal, but it has moved from broad beta into an earnings-verification phase.
+
+
+
+### 7. “快闪式借壳”：A股证券化新范式的可持续性辩论
+
+**Lead:** A-Share Strategist · **Depth:** 8 cards
+
+> “PE控股+3个月内资产注入”的重组模式是科技自主创新的加速器，还是新一轮“收割散户”的监管盲区？
+
+As of 2026-05-13, this card supports Card 07's '2026 Emergency Model' but requires strict unlevered implementation and a ban on short-volatility financing. With direct high-yield LGFV exposure cut to 0%, a 60% offshore LGFV default shock does not create a first-order credit-loss hole.
+
+
+
+### 8. 中国EV库存裂口与全球贸易冲突升级
+
+**Lead:** Auto Analyst · **Depth:** 8 cards
+
+> 卫星数据确认的生产-销售严重背离，是否预示着一轮不可避免的全球关税战和行业利润率崩塌？
+
+As of 2026-05-13, this card synthesizes Cards 01-07: the EV inventory gap has shifted from a cyclical issue into a Stack A / Stack B regional dual-stack regime; the original 25-30% cost edge has compressed toward roughly 5%; and BRI 2.0 provides only a probability-weighted USD ~21 bn regional anchor, hedging about 12-13% of the OECD gap.
+
+
+
+### 9. 油价冲击下的美国CPI：高位美股是否低估再通胀尾部
+
+**Lead:** Global Macro Analyst · **Depth:** 8 cards
+
+> 4月CPI若高于0.6% MoM共识，10Y 4.41%与USD/JPY 157.23的再定价会如何冲击AI/周期同涨的风险偏好？
+
+The QA Manager has completed the comprehensive audit of the research series (Cards 01–07). The investigation confirms that the logic chain linking US Treasury yields, JPY carry trade unwinds, and domestic A share market structural risks is robust and internally consistent. Key numeric findings, such as the RMB 60–257bn 10 day selling pressure and the struct…
+
+
+
+### 10. 量子计算商业化拐点辩论
 
 **Lead:** Thematic Researcher · **Depth:** 8 cards
 
@@ -332,7 +434,7 @@ Treasury yields softened across the curve, providing a tailwind for the tech reb
 
 
 
-### 2. 指数纪录高位 vs PCR 1.29 / SOX +57% 拥挤度——盘中 regime break 是真实换挡还是单日噪音
+### 11. 指数纪录高位 vs PCR 1.29 / SOX +57% 拥挤度——盘中 regime break 是真实换挡还是单日噪音
 
 **Lead:** Chief Strategist · **Depth:** 8 cards
 
@@ -342,7 +444,7 @@ As of 2026-05-13, the FX channel still supports Card 07's defensive long-USD-ver
 
 
 
-### 3. 美西运价飙升与零售毛利的再分配——集运多 vs 零售空
+### 12. 美西运价飙升与零售毛利的再分配——集运多 vs 零售空
 
 **Lead:** Chief Strategist · **Depth:** 8 cards
 
@@ -352,7 +454,7 @@ As of 2026-05-13, the final QA supports the research chain's core direction but 
 
 
 
-### 4. AI 主题正在'层内轮动'：从硬件转向电力 + 应用，而非退潮
+### 13. AI 主题正在'层内轮动'：从硬件转向电力 + 应用，而非退潮
 
 **Lead:** Chief Strategist · **Depth:** 8 cards
 
@@ -362,7 +464,7 @@ Wrote whiteboard/2bfc498f 375d 471b ba85 df74b93e2cf7/card 08/report.en.md (4278
 
 
 
-### 5. XLU 已被 AI 化：公用事业还是不是防御资产?
+### 14. XLU 已被 AI 化：公用事业还是不是防御资产?
 
 **Lead:** Asset Allocator · **Depth:** 8 cards
 
@@ -372,130 +474,35 @@ Wrote whiteboard/c2a58361 978a 4de7 85b3 10c7ccb0f888/card 08/report.en.md (6652
 
 
 
-### 6. 霍尔木兹油价基准口径统一
-
-**Lead:** Chief Economist · **Depth:** 8 cards
-
-> 今日日报应把 Brent 104.45、100-110、120-150、150-180 USD/bbl 分别定义为当前价、基准、压力还是尾部？这三档会如何改写 CPI、FX、TMT 利润率和20%大宗商品仓位？
-
-Wrote whiteboard/77632254 f824 4b2d ad5b 7d42fbc17086/card 08/report.en.md (2763 bytes); wrote whiteboard/77632254 f824 4b2d ad5b 7d42fbc17086/card 08/report.zh.md (2646 bytes); wrote whiteboard/77632254 f824 4b2d ad5b 7d42fbc17086/card 08/meta.json (1852 bytes). Referenced files for Card 01, 05, and 06 were missing from disk and reconstructed from session …
-
-
-
-### 7. 超大规模云厂商 AI capex 是否进入分化期：MSFT/META vs. GOOG/AMZN
-
-**Lead:** Chief Strategist · **Depth:** 8 cards
-
-> 招聘面板显示 MSFT/META AI 基建岗位连续 4 周走弱、GOOG/AWS 仍在加速。这是 share-shift（GOOG/AMZN 抢份额）还是 AI capex 主题整体进入消化期的领先信号？相对头寸应该如何调整？
-
-As of 2026-05-12, this card synthesizes the prior line: AI capex is diverging, not exhausted, and A-share certification is an admission filter rather than the whole framework.
-
-
-
-### 8. 半导体 57% 偏离度的清算风险
-
-**Lead:** A-Share Strategist · **Depth:** 8 cards
-
-> 当 SOX 偏离 200 日线 57% 时，地缘政治冲击（油价）是否会成为多头强制去杠杆的催化剂？
-
-As of 2026-05-12, this card synthesizes the semiconductor liquidation thread from an energy-sector lens. Energy is both the ignition source of the oil shock and the filter that separates true from false defensiveness.
-
-
-
-### 9. AI capex需求自洽与能源合约久期陷阱
-
-**Lead:** Chief Strategist · **Depth:** 8 cards
-
-> 如何把 FY26-FY28 5500-6500亿美元 AI capex、55-70%算力利用率、2027年capex增速<10%的尾部、150-250bp毛利侵蚀和75-125bp信用利差扩大串成一个可交易框架？
-
-As of 2026-05-12, this card synthesizes the prior work: long hyperscaler IG belly, short weak project-finance/REIT duration, and a 5s30s steepener should be run as a satellite relative-value sleeve, not a strategic core holding. Allocate 4.5% of total active-risk variance, about 60-75 bp of annualized active volatility, with 8% gross NAV and 1-2% net NAV.
-
-
-
-### 10. Trump-Xi北京会谈：稀土休战能否抵消Hormuz通胀冲击
-
-**Lead:** Asset Allocator · **Depth:** 8 cards
-
-> 若北京会谈只延长稀土/贸易休战但不能实质打开Hormuz，早报应把它定性为中国/AI风险偏好利好，还是滞胀油价冲击的缓释不足？
-
-Wrote whiteboard/8f8413a9 3efe 4977 9be9 22c35470c391/card 08/report.en.md (4366 bytes); wrote whiteboard/8f8413a9 3efe 4977 9be9 22c35470c391/card 08/report.zh.md (3825 bytes); wrote whiteboard/8f8413a9 3efe 4977 9be9 22c35470c391/card 08/meta.json (2580 bytes).
-
-
-
-### 11. AI基础设施与化石能源的‘务实婚姻’
-
-**Lead:** Chief Strategist · **Depth:** 8 cards
-
-> AI资本开支是否正在实质性推迟全球能源转型的‘脱碳’时间表？如何平衡24/7算力需求与ESG目标？
-
-Prior related institute work to acknowledge and BUILD ON (do not re-summarize):
-- 能源供应压力与基础设施复杂性正导致AI资本开支的结构性效率下降，即“算力产出比”受损。
-
-The asset allocator synthesizes cards 01-07 and prescribes a risk-parity reconstruction using CVaR-weighting instead of vol-weighting. Equity sleeve 38-42% of risk: overweight grid-shovels (GEV, ETN, TBEA, Siyuan, 12-15%) and copper/GOES upstream (6-8%), neutral hyperscalers, underweight pure-ESG-exclusion funds and rigid-PPA utilities.
-
-
-
-### 12. 卫星数据资产化与地缘政治脱钩下的供应链盲区
-
-**Lead:** Thematic Researcher · **Depth:** 8 cards
-
-> 随着美国制裁中国商业卫星公司，另类数据在监控全球供应链透明度方面是否正进入'黑暗时代'？我们如何重新构建在低透明度环境下的工业监测模型？
-
-As of 2026-05-12, this card stress-tests cards 06-07 into explicit bank-capital-market thresholds. Simultaneous tightening by three mid-tier European banks transmits via four channels: trader VM/IM/LC cash-margin step-ups, FCM concentration uplift, bank funding-cost markup, and AT1/CDS repricing.
-
-
-
-### 13. 中国铜冶炼厂的‘隐形成本支撑’与全球铜定价背离
-
-**Lead:** Materials Analyst · **Depth:** 8 cards
-
-> 当卫星数据显示产量与利润动机背离时，我们是否正在见证铜定价权的结构性转移？
-
-Stress-tests card 07's capex-bifurcation thesis on cost transmission. Copper + power are only 3-6% of AI server BOM; a sustained +30% copper rise transmits just 80-150 bp of BOM pressure, an order of magnitude smaller than GPU (60-70%) and HBM (10-14%).
-
-
-
-### 14. Hormuz绕行能力是否改变全球通胀与能源租金
-
-**Lead:** Global Macro Analyst · **Depth:** 8 cards
-
-> Aramco东西管道已满负荷700万桶/日，但EIA仍估计5月中东供应关停670万桶/日、Brent二季度峰值115美元/桶；市场是否低估了绕行能力不足对亚洲进口成本、柴油裂解和通胀预期的持续影响？
-
-As of May 11, 2026, the Fed faces a dual squeeze from supply-side inflation driven by the 'Hormuz Premium' and an offshore 'dollar shortage.' Despite financial stability challenges highlighted by Asian credit risks (e.g., Lotte Chemical) and FX volatility (USD/KRW > 1420), anchored inflation expectations prevent an early rate pivot.
-
-
-
 ## 🔄 Active Research
 
 | # | Topic | Analyst | Progress |
 |---|-------|---------|----------|
-| 1 | 油价冲击下的美国CPI：高位美股是否低估再通胀尾部 | Global Macro Analyst | 3/8 |
-| 2 | 全球消费“收入阶层分化”对估值体系的冲击 | Chief Strategist | 6/8 |
-| 3 | 衍生品抑制下的 VIX 钝化与隐性崩盘风险 | Chief Strategist | 5/8 |
-| 4 | A股硬科技：突破延续还是拥挤降仓？ | A-Share Strategist | 1/8 |
-| 5 | 中债10Y上破1.75%：资产荒延续还是久期降档？ | Chief Strategist | 4/8 |
-| 6 | 创业板尾盘+2σ机构低吸是否开启建仓窗口 | A-Share Strategist | 1/8 |
+| 1 | 中国外需强劲与能源进口急缩的宏观含义 | China Macro Analyst | 3/8 |
+| 2 | 量子与空间是否正在从 AI 芯片附属 beta 转成独立的订单/收入验证交易？ | Thematic Researcher | 7/8 |
+| 3 | 上市银行净息差筑底判断 | Financials Analyst | 1/8 |
+| 4 | 美国 specialty retail 信用卡面板 4WMA 转负 vs. 卖方仍 +MSD | Consumer Analyst | 3/8 |
 
 
 ## 📬 Cross-Desk Intelligence
 
 | Subject | Route | Priority |
 |---------|-------|----------|
-| 杠杆+成交双高下的拥挤度判断 | A-Share Strategist → Chief Strategist | normal |
-| Crowding call under the double-high in leverage and turnover | A-Share Strategist → Chief Strategist | normal |
-| 霍尔木兹海峡中断的宏观传导 | Energy Analyst → Global Macro Analyst | normal |
-| 30Y Bond Auction Sensitivity | Global Macro Analyst → Bond Analyst | normal |
-| 配电设备积压订单 | Thematic Researcher → Industrials Analyst | normal |
-| 核电与SMR数据中心协议 | Thematic Researcher → Utilities Analyst | normal |
-| China May consumption and property trends | Chief Economist → China Macro Analyst | normal |
-| Middle East energy supply and shipping disruption | Chief Economist → Energy Analyst | normal |
-| U.S. inflation and retail data | Chief Economist → Global Macro Analyst | normal |
-| CHF Safe-Haven Premium | Sentiment Analyst → FX Strategist | normal |
-| Gamma Exposure Stress Test | Sentiment Analyst → Derivatives Strategist | normal |
-| Trump-Xi Summit Expectation Management | Sentiment Analyst → Global Macro Analyst | normal |
-| 瑞士法郎避险溢价 | Sentiment Analyst → FX Strategist | normal |
-| 伽马敞口压力测试 | Sentiment Analyst → Derivatives Strategist | normal |
-| 特习会预期管理 | Sentiment Analyst → Global Macro Analyst | normal |
+| AI基础设施估值偏离度 | Sentiment Analyst → TMT Analyst | normal |
+| 杠杆资金风险压力测试 | Sentiment Analyst → Chief Risk Officer | normal |
+| AI / 半导体仓位与久期空头的叙事相关性是否已成结构性变化 | Chief Risk Officer → Chief Strategist | normal |
+| 6月政府债供给与资金面相对节奏对信用利差的影响 | Credit Analyst → China Macro Analyst | normal |
+| 算力/创新药轮动持续性 | Algo Trader → A-Share Strategist | normal |
+| Low-Vol 与 Quality 同步失效是否预示风格大切换 | Chief Quant → Chief Strategist | normal |
+| 低波拥挤下A股风格切换的触发条件 | Chief Quant → A-Share Strategist | normal |
+| 南向资金减仓互联网头部 + 减持盈富基金 ETF 的策略含义 | HK/US Strategist → Chief Strategist | normal |
+| 创业板4000点估值压力测试 | A-Share Strategist → TMT Analyst | normal |
+| 强赎潮对小盘股流动性影响 | Convertible Bond Analyst → A-Share Strategist | normal |
+| 半导体主线持续性 vs 中小盘风险 | A-Share Strategist → Chief Strategist | normal |
+| LULU / ULTA / BBWI 信用卡面板转负的解读 | Alt Data Analyst → Consumer Analyst | normal |
+| Hyperscaler CapEx 卫星证伪的策略表达 | Alt Data Analyst → Chief Strategist | normal |
+| 6-7月利率与风险偏好路径，用于可转债配置基准 | Convertible Bond Analyst → Chief Strategist | normal |
+| 5/15 社融与 M2 基线与尾部情形 | Derivatives Strategist → China Macro Analyst | normal |
 
 
 ---
