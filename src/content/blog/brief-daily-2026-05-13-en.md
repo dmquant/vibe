@@ -36,20 +36,20 @@ lang: "en"
 - [3. US Yield Curve](#3-us-yield-curve)
 - [4. Key Event Analysis](#4-key-event-analysis)
 - [🔬 Deep Research Highlights](#deep-research-highlights)
-  - [1. 指数纪录高位 vs PCR 1.29 / SOX +57% 拥挤度——盘中 regime break 是真实换挡还是单日噪音](#1-指数纪录高位-vs-pcr-129-sox-57-拥挤度盘中-regime-break-是真实换挡还是单日噪音)
-  - [2. 美西运价飙升与零售毛利的再分配——集运多 vs 零售空](#2-美西运价飙升与零售毛利的再分配集运多-vs-零售空)
-  - [3. AI 主题正在'层内轮动'：从硬件转向电力 + 应用，而非退潮](#3-ai-主题正在层内轮动从硬件转向电力-应用而非退潮)
-  - [4. XLU 已被 AI 化：公用事业还是不是防御资产?](#4-xlu-已被-ai-化公用事业还是不是防御资产)
-  - [5. 霍尔木兹油价基准口径统一](#5-霍尔木兹油价基准口径统一)
-  - [6. 超大规模云厂商 AI capex 是否进入分化期：MSFT/META vs. GOOG/AMZN](#6-超大规模云厂商-ai-capex-是否进入分化期msftmeta-vs-googamzn)
-  - [7. 半导体 57% 偏离度的清算风险](#7-半导体-57-偏离度的清算风险)
-  - [8. AI capex需求自洽与能源合约久期陷阱](#8-ai-capex需求自洽与能源合约久期陷阱)
-  - [9. Trump-Xi北京会谈：稀土休战能否抵消Hormuz通胀冲击](#9-trump-xi北京会谈稀土休战能否抵消hormuz通胀冲击)
-  - [10. AI基础设施与化石能源的‘务实婚姻’](#10-ai基础设施与化石能源的务实婚姻)
-  - [11. 卫星数据资产化与地缘政治脱钩下的供应链盲区](#11-卫星数据资产化与地缘政治脱钩下的供应链盲区)
-  - [12. 中国铜冶炼厂的‘隐形成本支撑’与全球铜定价背离](#12-中国铜冶炼厂的隐形成本支撑与全球铜定价背离)
-  - [13. Hormuz绕行能力是否改变全球通胀与能源租金](#13-hormuz绕行能力是否改变全球通胀与能源租金)
-  - [14. AI/美股拥挤交易是在扩散，还是开始去杠杆？](#14-ai美股拥挤交易是在扩散还是开始去杠杆)
+  - [1. 量子计算商业化拐点辩论](#1-量子计算商业化拐点辩论)
+  - [2. 指数纪录高位 vs PCR 1.29 / SOX +57% 拥挤度——盘中 regime break 是真实换挡还是单日噪音](#2-指数纪录高位-vs-pcr-129-sox-57-拥挤度盘中-regime-break-是真实换挡还是单日噪音)
+  - [3. 美西运价飙升与零售毛利的再分配——集运多 vs 零售空](#3-美西运价飙升与零售毛利的再分配集运多-vs-零售空)
+  - [4. AI 主题正在'层内轮动'：从硬件转向电力 + 应用，而非退潮](#4-ai-主题正在层内轮动从硬件转向电力-应用而非退潮)
+  - [5. XLU 已被 AI 化：公用事业还是不是防御资产?](#5-xlu-已被-ai-化公用事业还是不是防御资产)
+  - [6. 霍尔木兹油价基准口径统一](#6-霍尔木兹油价基准口径统一)
+  - [7. 超大规模云厂商 AI capex 是否进入分化期：MSFT/META vs. GOOG/AMZN](#7-超大规模云厂商-ai-capex-是否进入分化期msftmeta-vs-googamzn)
+  - [8. 半导体 57% 偏离度的清算风险](#8-半导体-57-偏离度的清算风险)
+  - [9. AI capex需求自洽与能源合约久期陷阱](#9-ai-capex需求自洽与能源合约久期陷阱)
+  - [10. Trump-Xi北京会谈：稀土休战能否抵消Hormuz通胀冲击](#10-trump-xi北京会谈稀土休战能否抵消hormuz通胀冲击)
+  - [11. AI基础设施与化石能源的‘务实婚姻’](#11-ai基础设施与化石能源的务实婚姻)
+  - [12. 卫星数据资产化与地缘政治脱钩下的供应链盲区](#12-卫星数据资产化与地缘政治脱钩下的供应链盲区)
+  - [13. 中国铜冶炼厂的‘隐形成本支撑’与全球铜定价背离](#13-中国铜冶炼厂的隐形成本支撑与全球铜定价背离)
+  - [14. Hormuz绕行能力是否改变全球通胀与能源租金](#14-hormuz绕行能力是否改变全球通胀与能源租金)
 - [🔄 Active Research](#active-research)
 - [📬 Cross-Desk Intelligence](#cross-desk-intelligence)
 
@@ -59,106 +59,138 @@ lang: "en"
 
 ### Overnight Macro
 
-| Region | Contract | Latest | Change | Read-through |
-| --- | --- | ---: | ---: | --- |
-| U.S. | S&P 500 futures (ES=F) | 7,403.25 | -0.21% | A modest Monday morning giveback, but not enough to erase Friday’s stronger risk tone. |
-| U.S. | Nasdaq 100 futures (NQ=F) | 29,309.00 | -0.08% | Technology remains the strongest global risk signal. |
-| U.S. | Dow futures (YM=F) | 49,564.00 | -0.26% | Value/cyclical exposure is lagging. |
-| Europe | DAX futures | 24,388.30 | +0.12% | Early European pricing is stable, but the energy shock still weighs on import-heavy markets. |
-| Asia-Pacific | Nikkei 225 futures | 63,650.00 | -0.21% | Nikkei futures are easing from high levels; USD/JPY and energy prices are the key drivers. |
+| Asset | Last | Overnight Δ | Notes |
+|---|---|---|---|
+| S&P 500 cash close | `[source unknown]` | `[source unknown]` | Watch AI-capex duration leaders (NVDA / hyperscalers) contribution |
+| Nasdaq 100 cash close | `[source unknown]` | `[source unknown]` | S&P spread = market split between AI Beta vs. certified Alpha |
+| Dow cash close | `[source unknown]` | `[source unknown]` | Industrials / utilities weighting — HVPT / transformer narrative |
+| Russell 2000 | `[source unknown]` | `[source unknown]` | Small-caps sensitive to real yields — cross-checks curve |
+| SX5E (Euro Stoxx 50) close | `[source unknown]` | `[source unknown]` | Eurozone PMI / ECB path sensitive |
+| FTSE 100 close | `[source unknown]` | `[source unknown]` | Commodity / energy weighting — Hormuz tail hedge |
+| DAX close | `[source unknown]` | `[source unknown]` | Exporters + industrials, direct exposure to quantum-sovereignty WFE export-control chain |
+| ES (S&P 500 futures) now | `[source unknown]` | `[source unknown]` | T-30min Asia read |
+| NQ (Nasdaq 100 futures) now | `[source unknown]` | `[source unknown]` | Same |
+| Nikkei 225 futures (OSE/SGX) | `[source unknown]` | `[source unknown]` | Cross-check with USDJPY |
+| HSI futures (HKEX overnight) | `[source unknown]` | `[source unknown]` | A/H scissor thermometer (thread `1e00905f`) |
+| A50 futures (SGX) | `[source unknown]` | `[source unknown]` | Only fair price for the China open |
 
-| Region | Index | Close | Daily change | Meeting read-through |
-| --- | --- | ---: | ---: | --- |
-| U.S. | S&P 500 | 7,398.93 | +0.84% | Firm jobs data outweighed oil concerns; risk appetite remains elevated. |
-| U.S. | Dow Jones | 49,609.16 | +0.02% | The rally was led by growth and technology rather than blue-chip breadth. |
-| U.S. | Nasdaq Composite | 26,247.08 | +1.71% | Positive read-through for Asian semiconductors and AI supply-chain names. |
-| U.S. | Russell 2000 | 2,861.21 | +0.76% | Domestic and rate-sensitive shares participated but did not lead. |
-| Europe | STOXX Europe 600 | 612.14 | -0.69% | Europe is more directly exposed to imported energy inflation. |
-| Europe | Euro Stoxx 50 | 5,911.53 | -1.02% | Hawkish ECB expectations are capping valuation expansion. |
-| Europe | DAX | 24,338.63 | -1.32% | Industrials and external-demand exposure are sensitive to energy and euro volatility. |
-| Europe | FTSE 100 | 10,233.10 | -0.43% | Energy weightings provided some cushion. |
-| Europe | CAC 40 | 8,112.57 | -1.09% | Luxury and industrial beta are discounting both global growth and oil risks. |
-| Asia-Pacific | Nikkei 225 | 62,713.65 | -0.19% | Japanese equities still have weak-yen support, but the energy import bill is rising. |
-| Asia-Pacific | Hang Seng | 26,393.71 | -0.87% | Hong Kong needs confirmation from China inflation data and U.S. rates. |
-| Asia-Pacific | Shanghai Composite | 4,179.95 | -0.00% | A-share direction is more dependent on domestic data catalysts. |
-| Asia-Pacific | S&P/ASX 200 | 8,744.40 | -1.51% | Resource support and pressure on rate-sensitive sectors are coexisting. |
-| Asia-Pacific | KOSPI | 7,498.00 | +0.11% | Semiconductor beta remains strong; chasing strength depends on yields and Nasdaq futures. |
+| Rate / FX | Last | Overnight Δ (bp / %) | Notes |
+|---|---|---|---|
+| 2Y UST | `[source unknown]` | `[source unknown]` | Front-end anchor for Fed-path pricing |
+| 5Y UST | `[source unknown]` | `[source unknown]` | Real-yield duration pivot |
+| 10Y UST | `[source unknown]` | `[source unknown]` | Discount rate for AI-capex duration assets |
+| 30Y UST | `[source unknown]` | `[source unknown]` | **Focus on last night's 30Y auction tail / bid-to-cover** (thread `d158da99` fail thresholds: tail >3.0 bp or b/c <2.20x) |
+| 2s10s | `[source unknown]` | `[source unknown]` | Curve-shape cross-check |
+| 10Y TIPS real yield | `[source unknown]` | `[source unknown]` | TIPS is a core leg of the Hormuz-tail hedge book (§1-C) |
+| 10Y BEI | `[source unknown]` | `[source unknown]` | Inflation-expectations channel for the stagflation tail |
+| DXY spot | `[source unknown]` | `[source unknown]` | Hormuz-tail scenario: DXY 108–116 (thread `254c56e4`) |
+| EUR/USD | `[source unknown]` | `[source unknown]` | ECB vs. Fed differential |
+| USD/JPY | `[source unknown]` | `[source unknown]` | BoJ path × oil two-factor |
+| USD/CNH | `[source unknown]` | `[source unknown]` | Key variable into the China open |
+| GBP/USD | `[source unknown]` | `[source unknown]` | — |
+| AUD/USD | `[source unknown]` | `[source unknown]` | Copper / iron-ore proxy |
 
 
 
 ### China Macro
 
-| Time | Event | What to Watch | Market Read-through |
+| Time (Beijing / SGT) | Event / Data | Expected or framework view | Importance | Note (linked to the three themes) |
+|---|---|---|---|---|
+| 09:15 | PBoC USD/CNY fixing | `[source unconfirmed]`; compare vs. prior fixing — has it crossed 7.20 / 7.25? | ★★★ | Read with overnight USDCNH (01_macro_overnight §2); first variable into the A-share open |
+| 09:30 | A-share open | Watch: first 30 min northbound flow, A50 fut–spot convergence, SSE vs. ChiNext divergence | ★★★ | A/H tech scissors → AI-capex duration thermometer (01_macro_overnight §5-2) |
+| 09:30+ | PBoC OMO announcement (7D reverse repo) | Net injection / drainage `[source unconfirmed]` | ★★ | DR007 minus OMO spread is the liquidity thermometer |
+| 09:30–10:00 | Shibor tenor fixes | `[source unconfirmed]` | ★★ | Read O/N, 1W, 3M together |
+| `[date unconfirmed]` this week | April TSF / M2 / new loans | `[source unconfirmed]`; if released after today's 16:00, defer to PM commentary | ★★★ | Credit impulse decides cyclical vs. dividend weight |
+| `[date unconfirmed]` this week | April IP / retail / FAI / property investment | `[source unconfirmed]` | ★★★ | Property FAI + retail are the real catalysts for this week's style rotation |
+| `[date unconfirmed]` this week | May MLF roll (size + rate) | `[source unconfirmed]`; watch for joint volume-and-price easing | ★★★ | An MLF rate cut → LPR step-down later this month → tactical bid for property/banks |
+| `[date unconfirmed]` late May | May LPR fixing | `[source unconfirmed]` | ★★ | 20th window (convention; deferred for holiday) |
+| All day | State Council / ministry press conferences (NDRC / MIIT) | `[source unconfirmed]` | ★★ | Focus: consumer-goods trade-in phase 2, equipment upgrade, low-altitude economy, domestic AI compute |
+| 15:00 | A-share close + SSE/SZSE Dragon-Tiger List (northbound / institutional / hot money seats) | `[source unconfirmed]` | ★★ | Cross-check against AM northbound — identify bull/bear traps |
+| 16:30+ | Offshore CNH, A50 night session | `[source unconfirmed]` | ★★ | Read with tonight's U.S. data / Fed-speak |
+| All day | U.S. PPI (April) / Fed-speak (if any) | `[date unconfirmed]`, see `01_macro_overnight.md` §4-4 | ★★★ | Transmits to China via 30Y UST and DXY → USDCNH and northbound flow |
+
+| Priority | Sector / theme | Lean | Trigger & basis |
 |---|---|---|---|
-| 2026-05-11 09:30 | NBS releases April CPI | Food, services, and core inflation momentum | Benign inflation supports consumption and earnings repair; a weak print would weigh on cyclical expectations |
-| 2026-05-11 09:30 | NBS releases April PPI | Upstream prices, manufacturing margin elasticity, and PPI-to-CPI pass-through | A firmer PPI supports resources, chemicals, machinery, and export manufacturing; a weaker print favors rates and defensive styles |
-| 2026-05-11 morning | PBOC open-market operation pending [Source unknown] | Maturity rollover, short-tenor reverse repo volume/rate, and tax-period liquidity | Continued small operations would indicate ample banking-system liquidity; larger injections would point to lower funding pressure |
-| 2026-05-11 morning | RMB fixing pending [Source unknown] | The latest verified USD/CNY central parity was 6.8502 on 2026-05-08 | A stronger RMB helps foreign risk appetite, while export chains need monitoring for FX sensitivity |
+| 1 | Domestic AI compute (GPU / HBM / optical modules / liquid cooling / IDC / power) | **Overweight** | Source: `00_研究院产出.md` §1-B; today's thermometer: continued compression of A/H tech scissors (`01_macro_overnight.md` §5-2) |
+| 1 | Grid / UHV / transformers / GOES / utilities | **Overweight** | Physical delivery side of the "AI-capex grid bottleneck"; co-moves with copper / aluminium / steel |
+| 1 | Dividend (banks / expressways / power / telcos) | **Neutral-plus** | Regime lock BASELINE-NEUTRAL; raise weight if 10Y CGB breaks the range floor |
+| 2 | Resources (copper / gold / oil & gas / coal) | **Neutral; tilt long gold & energy** | Gold = real-rate + stagflation hedge; energy = Hormuz-tail hedge |
+| 2 | Quantum tech / cybersecurity / domestic chip substitution | **Tactical overweight** | Source: `00_研究院产出.md` §1-A quantum-sovereignty theme |
+| 3 | Property chain (building materials / appliances / property mgmt / leading developers) | **Neutral, wait for data** | Trigger: April property-investment YoY and retail-sales prints |
+| 3 | Mass consumer (baijiu / F&B / pharma) | **Neutral** | Value-recovery profile; co-rotates with dividend; wait for TSF and retail prints |
+| 4 | Export chain (white goods / light industry / cross-border e-com) | **Neutral-minus** | Risks: stronger DXY + tariff noise; if Hormuz tail triggers, cut decisively |
+| 4 | Lithium battery / solar full-line / consumer-electronics ODM | **Underweight** | "Broad-capacity Beta" tag — look at certification, not revenue growth |
+| 5 | Theme plays (low-altitude / humanoid robotics / commercial space / solid-state battery) | **Rotational, capped sizing** | Policy-catalyst driven; mind board-height and consecutive-board exhaustion |
 
 
 
 ### A-Share Strategy
 
-| Item | Data | Trading Read |
-| --- | --- | --- |
-| Indices | Shanghai Composite 4179.95, flat ; Shenzhen Component 15563.80, -0.50% ; ChiNext 3796.13, -0.96% | The broad market has not broken down, but ChiNext and STAR-related growth trades are already seeing profit taking; today’s read should not rely only on index color. |
-| Turnover and breadth | Total A-share turnover 30757亿元, down 926亿元, with more than 3600 stocks up | Lower turnover was not a clear risk-off signal; liquidity remains high enough for theme rotation. If the open loses more volume, chasing strength becomes lower quality. |
-| Limit-up/limit-down data | Public data vendors differ: 10jqka reported 112 limit-up stocks , while Sohu reported 125 limit-up names and 34 limit-down names | Do not use the exact count as the signal; watch whether consecutive limit-up names and high-position leaders produce negative feedback. |
-| Leading sectors | Military equipment +3.31%, military electronics +2.38%, trade +2.38%, motors +2.36%, ports and shipping +2.27%, auto parts +2.25% | Capital rotated from crowded AI hardware into defense, auto chain, shipping, and lower-position manufacturing; continue to watch laggard catch-up today. |
-| Fund flows | Defense industry net inflow 59.36亿元, auto parts net inflow 45.27亿元, autos net inflow 40.82亿元, communications equipment net inflow 21.12亿元 | Funds prefer manufacturing trades with clearer orders, policy support, and export logic over pure tech beta. |
-| Pressure points | Electronics saw 180.26亿元 of main-fund net outflow ; energy metals fell 1.72% and batteries fell 1.21% | Semiconductors, AI hardware, and new energy still face profit-taking pressure; only trade pullback absorption, not open-driven emotion. |
+| Index | Close | % chg | Turnover | Note |
+|---|---|---|---|---|
+| SSE Composite | `[source unknown]` | `[source unknown]` | `[source unknown]` | Cross-check with CSI 300 spread for large-cap style |
+| CSI 300 | `[source unknown]` | `[source unknown]` | `[source unknown]` | IF front-month basis `[source unknown]` |
+| CSI 500 | `[source unknown]` | `[source unknown]` | `[source unknown]` | IC front-month basis `[source unknown]` |
+| CSI 1000 | `[source unknown]` | `[source unknown]` | `[source unknown]` | IM front-month basis `[source unknown]` — small-cap risk-appetite thermometer |
+| ChiNext | `[source unknown]` | `[source unknown]` | `[source unknown]` | Read alongside STAR 50 to see internal growth dispersion |
+| STAR 50 (SSE Sci-Tech Innovation Board) | `[source unknown]` | `[source unknown]` | `[source unknown]` | Main battlefield for AI-capex Duration theme |
+| BSE 50 (Beijing Stock Exchange) | `[source unknown]` | `[source unknown]` | `[source unknown]` | Marginal pricing for micro-caps / theme height |
+| Hang Seng TECH (cross-read) | `[source unknown]` | `[source unknown]` | — | A/H tech-cap scissor thermometer (`01_macro_overnight.md` §5-2) |
 
-| Priority | Direction | Trigger | Watch List |
-| --- | --- | --- | --- |
-| High | Defense, commercial aerospace, large aircraft | Defense industry drew 59.36亿元 of net inflow in the previous session , while the large-aircraft concept rose 2.18% with 18.06亿元 of main-fund net inflow | 航天发展, 航天动力, 航发动力, 中航沈飞; only chase early names with real turnover, and avoid no-liquidity gap limit-ups after acceleration. |
-| High | Robotics, auto parts, reducers | Auto parts attracted 45.27亿元 of net inflow , and the reducer index rose 3.06% | 五洲新春, 恒锋工具, 精锻科技, 北特科技; look for fund return after opening divergence. |
-| Medium-high | Communications equipment, optical fiber, CPO, compute infrastructure | Communications equipment attracted 21.12亿元 of net inflow ; limit-up reason tags covered 16 data-center names, 8 CPO names, and 10 Eastern Data Western Computing names | 烽火通信, 中天科技, 新易盛, 中际旭创; participate only on low-volume pullbacks in strong trends or high-volume reversal candles. |
-| Medium | Ports and shipping, oil shipping, trade | Ports and shipping rose 2.27% , transportation attracted 16.83亿元 of net inflow , and April trade totaled 4.38万亿元 with 14.2% YoY growth | 北部湾港, 招商轮船, 海通发展, 天顺股份; if CNY stays stable and export-chain activity continues, buy rotation pullbacks. |
-| Defensive | High dividend, banks, utilities | On 2026-04-20, the 1-year LPR was 3.0% and the 5-year-plus LPR was 3.5% , and short-end liquidity remains loose; if growth names sell off at the open, defensive styles may receive flows | Banks, power, expressways, telecom operators; use as portfolio volatility hedges, not intraday momentum chases. |
+| Rank | Sector (SW-I) | % chg | Note / theme mapping |
+|---|---|---|---|
+| Top 1 | `[source unknown]` | `[source unknown]` | `[source unknown]` |
+| Top 2 | `[source unknown]` | `[source unknown]` | `[source unknown]` |
+| Top 3 | `[source unknown]` | `[source unknown]` | `[source unknown]` |
+| Top 4 | `[source unknown]` | `[source unknown]` | `[source unknown]` |
+| Top 5 | `[source unknown]` | `[source unknown]` | `[source unknown]` |
+| Bottom 1 | `[source unknown]` | `[source unknown]` | `[source unknown]` |
+| Bottom 2 | `[source unknown]` | `[source unknown]` | `[source unknown]` |
+| Bottom 3 | `[source unknown]` | `[source unknown]` | `[source unknown]` |
+| Bottom 4 | `[source unknown]` | `[source unknown]` | `[source unknown]` |
+| Bottom 5 | `[source unknown]` | `[source unknown]` | `[source unknown]` |
 
 
 
 ### Sentiment & Flows
 
-| Channel | Latest Data | Read-through |
-|---|---:|---|
-| Northbound Stock Connect | Total turnover RMB 357.042bn; Shanghai Connect turnover RMB 163.363bn and Shenzhen Connect turnover RMB 193.679bn; disclosed trading date 2026-05-08 | Net buying is no longer directly disclosed; use turnover, active names and later holding changes instead of the old net-flow series. |
-| Southbound Stock Connect | Net buying HKD 13.168bn; Shanghai southbound net buying HKD 10.126bn and Shenzhen southbound net buying HKD 3.043bn; disclosed trading date 2026-05-08 | Mainland money bought into Hong Kong weakness, treating the pullback as an allocation window. |
-| ETF creation/redemption proxy | Broad-based index ETFs had RMB 22.617bn of outflows, with RMB 113.796bn of cumulative outflows over five sessions; cross-border ETFs had RMB 0.349bn of outflows; sector/theme ETFs had RMB 0.018bn of outflows | Passive money is still reducing broad exposure near index highs, pointing to profit-taking and rebalancing pressure. |
-| ETF secondary-market main-flow lens | There were 1,406 equity ETFs with RMB 3,864.49bn total market value and RMB 223.169bn turnover; main money outflow was RMB 2.052bn; CSI 300 ETFs had RMB 2.195bn of inflows, Shanghai 50 ETFs had RMB 0.811bn of outflows, and ChiNext ETFs had RMB 0.429bn of outflows | ETF money is rotating internally from high-beta growth toward core broad-market exposure, with a mildly more defensive tilt. |
-| Margin financing and short selling | Margin balance was RMB 27,864.36bn, up RMB 297.24bn; margin trading turnover was RMB 3,353.96bn, or 10.58% of A-share turnover; electronics saw RMB 73.81bn of net margin buying | Leveraged money is still chasing strong-cycle growth sectors, the clearest sign of rising risk appetite. |
+| Metric | 2026-05-12 (T-1) | MTD (May) | YTD | Read |
+|---|---|---|---|---|
+| Northbound net buy (CNY bn) | `[source unavailable]` | `[source unavailable]` | `[source unavailable]` | tbd |
+| Shanghai Connect net buy | `[source unavailable]` | `[source unavailable]` | `[source unavailable]` | tbd |
+| Shenzhen Connect net buy | `[source unavailable]` | `[source unavailable]` | `[source unavailable]` | tbd |
+| NB turnover share of A-share total | `[source unavailable]` | — | — | red-flag 12% |
+| Top-3 sectors by NB AUM | `[source unavailable]` | — | — | historic Top-3: power-equipment / staples / banks |
+| Top-3 sectors added (T-1) | `[source unavailable]` | — | — | watch for power / AI compute / quantum inclusion |
+| Top-3 sectors trimmed (T-1) | `[source unavailable]` | — | — | watch for staples / pharma trims |
 
-| Indicator | Latest Reading | Sentiment Meaning |
-|---|---:|---|
-| Indices and turnover | Shanghai Composite 4,179.95, down 0.14 points; Shenzhen Component 15,563.8, down 0.5%; ChiNext 3,796.13, down 0.96%; Shanghai-Shenzhen turnover RMB 30,486bn | Indices were under mild pressure but turnover stayed extremely high, pointing to high-level rotation rather than a liquidity exit. |
-| Advancers/decliners | Across the two mainland exchanges and Beijing Stock Exchange, 3,634 stocks rose, 1,725 fell and 148 were flat | Breadth remained positive; single-stock performance was stronger than index performance. |
-| Limit-up/limit-down counts | International Finance News counted 126 limit-up stocks and 33 limit-down stocks; Peakstone Labs' post-close board showed 110 up-limit / 2 down-limit, with up-limits at the 78% 20-day percentile, 92% 60-day percentile and 91% 90-day percentile, and down-limits at the 2% 20-day percentile, 4% 60-day percentile and 6% 90-day percentile | The definitions differ, but both point to active upside limits and no systemic downside limit pressure. |
-| Large winners/losers | 142 stocks rose more than 9%, while 8 stocks fell more than 9% | Risk appetite is still offensive, with losses concentrated in a few high-position themes. |
-| Composite sentiment index | China Securities' monthly model was at 77-79, above the 75 high-sentiment zone; turnover rate was near 1.9%, still below the 2% overheating warning line | Sentiment is hot but not extreme; control chase risk while keeping core exposure. |
+| Metric | 2026-05-12 | Last week daily avg | MTD | Read |
+|---|---|---|---|---|
+| Southbound net buy (HKD bn) | `[source unavailable]` | `[source unavailable]` | `[source unavailable]` | tbd |
+| SB turnover share of HK total | `[source unavailable]` | — | — | red-flag 30% |
+| Top-3 names added | `[source unavailable]` | — | — | watch: Tencent / Meituan / China Mobile / CNOOC / SMIC |
+| AH premium index | `[source unavailable]` | — | — | historic mid-band 130–135; > 145 = A expensive |
 
 
 
 ### Risk Watch
 
-| Dimension | Light | Trigger | Current reading |
-| --- | --- | --- | --- |
-| Systemic liquidity | 🟢 Green | Funding rates, CNY, cross-border flows all stable | 7-day reverse repo 1.40% ; O/N Shibor 1.2240% ; USD/CNH 6.7944 |
-| Offshore rates / USD | 🟡 Yellow | US 10Y rising and DXY firming compress growth multiples | 10Y 4.38% ; 2Y 3.90% [same]; DXY 97.99 |
-| Oil / imported inflation | 🔴 Red | Brent > 100 and 1-day move ≥ +3% | Brent 104.56 +3.23% ; WTI 98.52 +3.25% [same] |
-| Leverage crowding | 🟡 Yellow | Margin trades > 10% of turnover and single-sector margin buy > CNY 5bn | Margin balance CNY 2,786.436bn, 2.58% of free-float, 10.58% of A-share turnover; electronics margin buy CNY 7.381bn |
-| Lock-up unlocks | 🟡 Yellow | Single name > 50% of float or > CNY 10bn | SiEn-U 1.44bn shares, 17.18% of total, CNY 10.022bn; Xinling Electric 68.19%; Wanfeng 62.45% |
-| Data / policy events | 🟡 Yellow | Key data within 24h | China April CPI/PPI 2026-05-11 09:30 ; US April CPI 2026-05-12 |
-| Sentiment / breadth | 🟡 Yellow | CITIC-CS sentiment ≥ 75 but < 90; turnover < 2% | Sentiment index 77-79, turnover ~1.9% |
-| HK / external transmission | 🟢 Green | Southbound buys on HK weakness | Southbound net buy HKD 13.168bn while HSI -0.87% ; Nasdaq +1.71% |
+| Risk factor | Light | Trigger gate | Risk-control read |
+|---|---|---|---|
+| Long-end rates and real-rate shock | Yellow | 30Y Treasury auction tail > 3.0 bp or bid-to-cover < 2.20x = failed threshold | If triggered, cut small caps, generic growth, copper-chain exposure, and cash-flow-light duration assets first. Transmission markers are USDCNH 7.30+, A-share growth/ChiNext below −1.5%, and copper below −1.0% . |
+| Hormuz stagflation tail | Yellow | Brent 100–110 = base case; 130–155 = sustained SoH disruption tail; 150+ = FX/A-share commodity-rotation gate | Do not chase Brent. If triggered, rotate toward upstream energy, coal, tanker shipping, gold equities, and staples; cut airlines, appliance exporters, and cost-sensitive chemicals . |
+| Dollar repatriation and RMB pressure | Yellow | DXY enters 108–116, or USDCNH breaks 7.30 while Brent also breaks 130 | Reduce Northbound/core-assets pressure and lower export/high-external-demand exposure. If DXY < 105 or Brent < 100, the tail portfolio is not activated . |
+| AI capex duration and grid bottlenecks | Yellow | The A/H tech scissor is the first-30-minute thermometer ; data-center REIT dividend coverage is 1.05–1.15x | Hold certified Alpha, but do not add generic capacity Beta. If long rates rise or ETF/margin/limit-up signals all crowd together, cut Beta first and keep Alpha. |
+| Quantum sovereignty and WFE restrictions | Yellow | WFE gaps leave China 3–5 years behind the West in FTQC commercialization | Directionally supports cybersecurity and import substitution, but key numbers are disputed and cannot justify a position jump. |
+| Micro sentiment and leverage | Yellow | Limit-ups > 80 = warm, > 120 = overheated; ≥3-board count > 15 = theme acceleration, > 25 = late-stage; financing-buy share > 9.5% = warm, > 11% = overheated | If theme exposure, margin, ETFs, and limit-ups crowd at the same time, rotate from Beta into Alpha plus dividend defense. |
 
-| Dimension | Status | Risk path |
-| --- | --- | --- |
-| Policy stance | 04-28 Politburo: "more proactive fiscal + appropriately accommodative monetary" | Backstop bias; if April CPI/PPI is soft, rate-cut wait could revive a bonds-up/equities-down phase |
-| Money market | 7d reverse repo CNY 0.5bn at 1.40% ; April 7d net withdrawal CNY 331.6bn | Short-end easy but PBoC won't passively add liquidity; any funding-rate spike amplifies theme-stock drawdowns |
-| LPR / long end | LPR 1Y 3.0%, 5Y+ 3.5% | High-dividend relative carry intact, absolute returns rely on 10Y CGB |
-| CNY | USD/CNY mid-rate 6.8502 (2026-05-08) ; USD/CNH 6.7944 | CNY stable, but DXY > 100 or USD/JPY > 158 would tighten foreign risk appetite |
-| Overseas linkage | Nasdaq +1.71%, S&P +0.84% ; APAC futures ES -0.21%, NQ -0.08% [same] | Trend positive, but Monday give-back + oil rally raises odds of an Asia "gap-up then fade" |
-| Stock connect | Northbound turnover CNY 357.042bn (net flow no longer disclosed) ; southbound net buy HKD 13.168bn | Cross-border tilt positive; passive outflow risk if US rates rise |
+| Dimension | Current read | Required data backfill | Risk-control action |
+|---|---|---|---|
+| Overseas rates | The 30Y auction/PPI linkage is the largest cross-asset exogenous variable; whether PPI is released today is `[date unavailable]` | 30Y tail, bid-to-cover, 10Y/30Y UST, 10Y TIPS, DXY [source unavailable] | Do not cut total exposure before an auction failure; after failure, cut duration and high-leverage themes immediately. |
+| Domestic monetary policy | Easing bias remains, timing is neutral; do not bet on a May rate cut and do not bet on no move either | OMO, DR007, Shibor, MLF, LPR calendar and pricing [source unavailable] / [date unavailable] | If DR007 - OMO 7D widens, do not add tech or small caps; if net injections clearly expand, reassess growth exposure. |
+| Domestic growth data | April social financing / M2 / industrial output / retail sales / FAI release timing is `[date unavailable]` | Actual April financial and activity data [source unavailable] | Do not make a large cyclical-versus-dividend rotation before the data lands. |
+| A-share flows | Northbound, margin, ETFs, limit-ups/downs, board streaks, and top-list data all need backfill [source unavailable] | Northbound T-1, ETF flows, financing balance, institutional top-list buys/sells [source unavailable] | If Northbound is net-out for 3 consecutive days and USDCNH weakens, tactically reduce foreign-priced core assets . |
+| Mid-month funding | 2026-05-13 is just before the mid-month tax-payment window; the next 3–5 trading days are vulnerable to tighter funding | Pledged repo turnover, overnight share, OMO net injection [source unavailable] | Small caps, themes, and high-turnover trades require confirmation, not anticipatory chasing. |
 
 
 
@@ -285,7 +317,22 @@ Treasury yields softened across the curve, providing a tailwind for the tech reb
 
 ## 🔬 Deep Research Highlights
 
-### 1. 指数纪录高位 vs PCR 1.29 / SOX +57% 拥挤度——盘中 regime break 是真实换挡还是单日噪音
+### 1. 量子计算商业化拐点辩论
+
+**Lead:** Thematic Researcher · **Depth:** 8 cards
+
+> QBTS 的订单激增是否具备行业普适性？还是仅为量子退火技术的特定孤例？
+
+卡片 08 — 量子主权分化下的全球多资产风险平价权重重构
+
+    板块  ：e8dd0524 5279 4b49 9b01 33df290de946 ｜   卡片  ：8/8 ｜   工作日  ：2026 05 13（亚洲/新加坡）
+    分析师  ：大类资产配置师（ asset allocator ）
+    立场  ：support（从跨资产配置视角延展全球宏观 Card 07 的结论）
+    核心判断  ：NIST 与中国主权格双标准并立所导致的"安全估值断层"，不是装饰性的主题叠加，而是  永久性地重定价了任何跨境风险平价模型的协方差矩阵和流动性溢价输入  ——它强制风险平价组合在管辖权维度上向 (a) 司法绑定的主权久期、(b) PQC 原生股票因子小仓位、(c) 不依赖密码学结算轨道的实物…
+
+
+
+### 2. 指数纪录高位 vs PCR 1.29 / SOX +57% 拥挤度——盘中 regime break 是真实换挡还是单日噪音
 
 **Lead:** Chief Strategist · **Depth:** 8 cards
 
@@ -295,7 +342,7 @@ As of 2026-05-13, the FX channel still supports Card 07's defensive long-USD-ver
 
 
 
-### 2. 美西运价飙升与零售毛利的再分配——集运多 vs 零售空
+### 3. 美西运价飙升与零售毛利的再分配——集运多 vs 零售空
 
 **Lead:** Chief Strategist · **Depth:** 8 cards
 
@@ -305,7 +352,7 @@ As of 2026-05-13, the final QA supports the research chain's core direction but 
 
 
 
-### 3. AI 主题正在'层内轮动'：从硬件转向电力 + 应用，而非退潮
+### 4. AI 主题正在'层内轮动'：从硬件转向电力 + 应用，而非退潮
 
 **Lead:** Chief Strategist · **Depth:** 8 cards
 
@@ -315,7 +362,7 @@ Wrote whiteboard/2bfc498f 375d 471b ba85 df74b93e2cf7/card 08/report.en.md (4278
 
 
 
-### 4. XLU 已被 AI 化：公用事业还是不是防御资产?
+### 5. XLU 已被 AI 化：公用事业还是不是防御资产?
 
 **Lead:** Asset Allocator · **Depth:** 8 cards
 
@@ -325,7 +372,7 @@ Wrote whiteboard/c2a58361 978a 4de7 85b3 10c7ccb0f888/card 08/report.en.md (6652
 
 
 
-### 5. 霍尔木兹油价基准口径统一
+### 6. 霍尔木兹油价基准口径统一
 
 **Lead:** Chief Economist · **Depth:** 8 cards
 
@@ -335,7 +382,7 @@ Wrote whiteboard/77632254 f824 4b2d ad5b 7d42fbc17086/card 08/report.en.md (2763
 
 
 
-### 6. 超大规模云厂商 AI capex 是否进入分化期：MSFT/META vs. GOOG/AMZN
+### 7. 超大规模云厂商 AI capex 是否进入分化期：MSFT/META vs. GOOG/AMZN
 
 **Lead:** Chief Strategist · **Depth:** 8 cards
 
@@ -345,7 +392,7 @@ As of 2026-05-12, this card synthesizes the prior line: AI capex is diverging, n
 
 
 
-### 7. 半导体 57% 偏离度的清算风险
+### 8. 半导体 57% 偏离度的清算风险
 
 **Lead:** A-Share Strategist · **Depth:** 8 cards
 
@@ -355,7 +402,7 @@ As of 2026-05-12, this card synthesizes the semiconductor liquidation thread fro
 
 
 
-### 8. AI capex需求自洽与能源合约久期陷阱
+### 9. AI capex需求自洽与能源合约久期陷阱
 
 **Lead:** Chief Strategist · **Depth:** 8 cards
 
@@ -365,7 +412,7 @@ As of 2026-05-12, this card synthesizes the prior work: long hyperscaler IG bell
 
 
 
-### 9. Trump-Xi北京会谈：稀土休战能否抵消Hormuz通胀冲击
+### 10. Trump-Xi北京会谈：稀土休战能否抵消Hormuz通胀冲击
 
 **Lead:** Asset Allocator · **Depth:** 8 cards
 
@@ -375,7 +422,7 @@ Wrote whiteboard/8f8413a9 3efe 4977 9be9 22c35470c391/card 08/report.en.md (4366
 
 
 
-### 10. AI基础设施与化石能源的‘务实婚姻’
+### 11. AI基础设施与化石能源的‘务实婚姻’
 
 **Lead:** Chief Strategist · **Depth:** 8 cards
 
@@ -388,7 +435,7 @@ The asset allocator synthesizes cards 01-07 and prescribes a risk-parity reconst
 
 
 
-### 11. 卫星数据资产化与地缘政治脱钩下的供应链盲区
+### 12. 卫星数据资产化与地缘政治脱钩下的供应链盲区
 
 **Lead:** Thematic Researcher · **Depth:** 8 cards
 
@@ -398,7 +445,7 @@ As of 2026-05-12, this card stress-tests cards 06-07 into explicit bank-capital-
 
 
 
-### 12. 中国铜冶炼厂的‘隐形成本支撑’与全球铜定价背离
+### 13. 中国铜冶炼厂的‘隐形成本支撑’与全球铜定价背离
 
 **Lead:** Materials Analyst · **Depth:** 8 cards
 
@@ -408,7 +455,7 @@ Stress-tests card 07's capex-bifurcation thesis on cost transmission. Copper + p
 
 
 
-### 13. Hormuz绕行能力是否改变全球通胀与能源租金
+### 14. Hormuz绕行能力是否改变全球通胀与能源租金
 
 **Lead:** Global Macro Analyst · **Depth:** 8 cards
 
@@ -418,21 +465,11 @@ As of May 11, 2026, the Fed faces a dual squeeze from supply-side inflation driv
 
 
 
-### 14. AI/美股拥挤交易是在扩散，还是开始去杠杆？
-
-**Lead:** Asset Allocator · **Depth:** 8 cards
-
-> Fear & Greed处于Greed、ETF年内流入破纪录，但QQQ/杠杆产品和crypto ETF转弱，这更像健康轮动还是风险偏好见顶？
-
-As of 2026-05-11, the terminal synthesis of the seven-card thread: the regime is 'crowded with insurance' — AI semis are not structurally deleveraged but ETF-level protection has been aggressively bought; offshore China tech is selectively de-risking; A-shares are mildly rebalancing growth→dividend; China liquidity is ample but the credit→industrial-demand multiplier has structurally weakened, so .
-
-
-
 ## 🔄 Active Research
 
 | # | Topic | Analyst | Progress |
 |---|-------|---------|----------|
-| 1 | 量子计算商业化拐点辩论 | Thematic Researcher | 6/8 |
+| 1 | 油价冲击下的美国CPI：高位美股是否低估再通胀尾部 | Global Macro Analyst | 3/8 |
 | 2 | 全球消费“收入阶层分化”对估值体系的冲击 | Chief Strategist | 6/8 |
 | 3 | 衍生品抑制下的 VIX 钝化与隐性崩盘风险 | Chief Strategist | 5/8 |
 | 4 | A股硬科技：突破延续还是拥挤降仓？ | A-Share Strategist | 1/8 |
@@ -444,6 +481,10 @@ As of 2026-05-11, the terminal synthesis of the seven-card thread: the regime is
 
 | Subject | Route | Priority |
 |---------|-------|----------|
+| 杠杆+成交双高下的拥挤度判断 | A-Share Strategist → Chief Strategist | normal |
+| Crowding call under the double-high in leverage and turnover | A-Share Strategist → Chief Strategist | normal |
+| 霍尔木兹海峡中断的宏观传导 | Energy Analyst → Global Macro Analyst | normal |
+| 30Y Bond Auction Sensitivity | Global Macro Analyst → Bond Analyst | normal |
 | 配电设备积压订单 | Thematic Researcher → Industrials Analyst | normal |
 | 核电与SMR数据中心协议 | Thematic Researcher → Utilities Analyst | normal |
 | China May consumption and property trends | Chief Economist → China Macro Analyst | normal |
@@ -455,10 +496,6 @@ As of 2026-05-11, the terminal synthesis of the seven-card thread: the regime is
 | 瑞士法郎避险溢价 | Sentiment Analyst → FX Strategist | normal |
 | 伽马敞口压力测试 | Sentiment Analyst → Derivatives Strategist | normal |
 | 特习会预期管理 | Sentiment Analyst → Global Macro Analyst | normal |
-| AI 基础设施作为新久期资产的宏观耦合 | Thematic Researcher → Chief Strategist | normal |
-| A 股 AI 电力 / 主网设备相对强弱 | Thematic Researcher → A-Share Strategist | normal |
-| 融资盘踩踏压力测试 | Daily Report Editor → A-Share Strategist | normal |
-| 海外供应链财报指引核实 | Daily Report Editor → TMT Analyst | normal |
 
 
 ---
