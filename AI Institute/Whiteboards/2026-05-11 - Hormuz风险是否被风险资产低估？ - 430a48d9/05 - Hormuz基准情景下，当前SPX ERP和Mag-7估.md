@@ -1,0 +1,139 @@
+---
+source: ai-institute
+resource_type: whiteboard-card
+card_index: 5
+status: completed
+analyst_level: "权益策略"
+---
+
+# Hormuz基准情景下，当前SPX ERP和Mag-7估值没有充分反映实际利率与前端breakeven同步上行，组合应从广义高久期tech转向能源现金流和精选防御质量资产。
+
+Analyst: **HK/US Strategist**
+Status: **completed**
+Stance: **stress-test**
+Completed: **11/05/2026, 14:01:29**
+
+## Links
+
+- Whiteboard topic: [[Hormuz风险是否被风险资产低估？]]
+- Card topic: [[Hormuz基准情景下，当前SPX ERP和Mag-7估值没有充分反映实际利率与前端breakeven同步上行，组合应从广义高久期tech转向能源现金流和精选防御质量资产。]]
+- Analyst: [[HK US Strategist]]
+- Analyst level: [[权益策略]]
+
+## Topic
+
+Hormuz基准情景下，当前SPX ERP和Mag-7估值没有充分反映实际利率与前端breakeven同步上行，组合应从广义高久期tech转向能源现金流和精选防御质量资产。
+
+## Question
+
+Investigate the topic "Hormuz基准情景下，当前SPX ERP和Mag-7估值没有充分反映实际利率与前端breakeven同步上行，组合应从广义高久期tech转向能源现金流和精选防御质量资产。" and make the strongest evidence-based judgment you can.
+
+## Summary
+
+截至2026-05-11，本卡支持Card 04的利率压力方向并映射到U.S.股票：SPX ERP约2.73%，显著低于5.14%历史中位数；S&P 500 forward P/E约21.5x、Mag-7约28.1x，尚未充分反映5y real再上行25-40 bp与2y BE再上行30-40 bp的组合冲击。若EPS不变，SPX仅维持当前ERP就需约5%-8%价格调整；若ERP扩至3.0%，下行约10%-13%。配置上应削减U.S. tech/Mag-7主动权重4-6 pp，增配能源现金流3-4 pp和防御质量2-3 pp。
+
+## Report
+
+# Card 05 — 2026-05-11 Hormuz利率冲击下的U.S.股票久期压力测试
+
+- **工作日期（Asia/Singapore）：** 2026-05-11
+- **分析师：** offshore-strategist
+- **立场：** stress-test
+- **白板：** 430a48d9-c3f6-4699-87e7-fbb5a64b20a9，Card 5/8
+- **任务：** 若5y real上行25-40 bp、2y breakevens再上调30-40 bp，SPX当前ERP与Mag-7估值是否已反映这种利率环境？Hormuz基准情景下，U.S. tech久期股相对能源和防御板块应如何配置？
+
+## 核心结论
+
+截至 **2026-05-11**，我支持Card 04的利率压力方向，并将其映射到U.S.股票：**SPX和Mag-7估值没有充分反映实际利率上行与前端通胀补偿上行的共同冲击**。当前市场定价依赖盈利韧性和AI驱动的利润率延续，而不是油价冲击导致Fed宽松受限、实际贴现率继续上行的环境。
+
+这不是全面做空U.S. technology的判断。更强的结论是相对配置调整：**削减广义高久期tech和未盈利成长暴露，只保留现金流复利能力强、估值有纪律的AI/platform龙头，把主动风险转向能源现金流股票和部分防御型高质量资产**。对U.S.股票组合而言，我会从tech超配降至接近中性或低配：**下调U.S. tech/Mag-7主动权重4-6 pp**，增加 **3-4 pp能源/基础设施**，并增加 **2-3 pp医疗、必需消费和受监管防御质量资产**。Utilities只能精选，因为其有防御属性，但也有利率久期压力。
+
+## 起点估值图谱
+
+工作日前最新估值包已经显示补偿偏薄。WisdomTree/FactSet/S&P数据显示，截至2026-05-06，**S&P 500 forward P/E为21.5x**，相比之下 **S&P 480为17.9x**，**Mag-7为28.1x**；剔除Tesla后的Mag-7为 **26.8x**。同一估值包显示，截至2026-05-05，SPX ERP为 **2.73%**，显著低于 **5.14%历史中位数**；该ERP定义为forward earnings yield减10y TIPS yield。
+
+| 指标 | 工作日前最新水平 | 压力测试含义 |
+|---|---:|---|
+| S&P 500 forward P/E | 21.5x | Forward earnings yield约4.65%；估值已经假设盈利平稳兑现。 |
+| S&P 500 ERP | 2.73% | 相对5.14%中位数偏薄；若实际利率再上行25-40 bp，除非股价下跌或EPS上修，否则ERP会进一步压缩。 |
+| Mag-7 forward P/E | 28.1x | Earnings yield约3.56%；实际利率缓冲很窄。 |
+| Mag-7 ex Tesla forward P/E | 26.8x | 质量更好，但仍依赖AI/cloud盈利上修持续。 |
+| S&P 480 forward P/E | 17.9x | 倍数更低，但若利润率受油价挤压，并不自动安全。 |
+| 公开Treasury par real curve | 2026-05-08的5y为1.40%、10y为1.93% | 由名义利率减实际利率推算，公开曲线隐含5y BE约2.61%。Card 04采用的约2.10%市场隐含5y real锚使股票压力测试更严格。 |
+
+关键不是曲线定义的精确差异，而是方向：**实际利率上行与breakevens上行同时出现时，除非名义盈利预期足够上修，否则久期型股票会被贴现率压制**。
+
+## 25-40 bp实际利率冲击对SPX意味着什么
+
+以较保守的 **21.5x** forward P/E为起点，SPX forward earnings yield约 **4.65%**。如果实际利率上行25-40 bp且forward EPS不变：
+
+| 测试 | 隐含股票调整 |
+|---|---|
+| ERP维持2.73%不变 | Forward earnings yield需升至约4.90-5.05%，P/E降至约 **20.4x-19.8x**，对应价格约 **-5%至-8%**，且尚未计入EPS下修。 |
+| 要求ERP小幅扩张至3.0% | P/E降至约 **19.4x-18.8x**，对应约 **-10%至-13%** 下行。 |
+| 要求回到历史中位数ERP | 这不是基准情景目标，但说明缓冲不足：若ERP回到5.14%历史中位数，除非实际利率大幅回落，否则需要低得多的估值倍数。 |
+
+2y breakeven冲击之所以重要，是因为它削弱了典型的股票友好反应。若2y BE再上行 **30-40 bp**，市场无法简单假设Fed降息和实际利率回落会拯救估值。这正是Card 04的传导：前端通胀补偿上行，同时5y real也重新定价。
+
+## Mag-7：质量不等于免疫
+
+Mag-7并非同质资产。估值表说明为何应该削减，而不是无差别清仓：
+
+| 名称 | Forward P/E | 长期盈利增长估计 | 压力测试判断 |
+|---|---:|---:|---|
+| NVDA | 24.2x | 25.1% | 组内PEG最好；可以保留，但需按波动率和供应链/地缘风险控制仓位。 |
+| MSFT | 22.3x | 16.8% | 现金流复利能力强；保留核心权重，但不应仅因质量继续加倍数。 |
+| META | 19.7x | 10.4% | 大平台中最便宜；回购支撑有帮助，但广告周期性仍受油价压制增长的影响。 |
+| AMZN | 32.3x | 20.1% | Cloud/AI有上行，但零售利润率面临能源和工资传导压力。 |
+| AAPL | 31.5x | 10.0% | 估值相对增长不占优，是大型防御型mega-cap中较脆弱的一只。 |
+| GOOGL | 31.2x | 8.8% | 相对给定长期增长估计，倍数偏贵。 |
+| TSLA | 186.8x | 22.6% | 久期最高，最容易受到实际利率重定价和消费融资压力冲击。 |
+
+Mag-7整体 **28.1x** 对应 **3.56%** forward earnings yield。相对约 **1.93%** 的10y TIPS yield，增长前实际收益利差只有约 **1.6 pp**。若实际利率上行25-40 bp，该利差会压缩至约 **1.2-1.4 pp**。只有在盈利上修持续时这才可接受；它不是安全边际。
+
+## Hormuz基准情景下的板块配置
+
+在Hormuz基准情景中，更好的U.S.股票表达是：**做多能源现金流和防御型质量资产，资金来自高久期tech beta**。
+
+| 组合袖口 | 配置动作 | 理由 |
+|---|---|---|
+| U.S. tech / Mag-7 | 主动超配下调 **4-6 pp**；保留NVDA/MSFT/META式质量，削减TSLA、高倍数软件和长久期消费科技。 | 当5y real和2y BE同步上行时，久期数学不利。优质tech仍可复利，但广义tech beta不再是风险调整后最干净的表达。 |
+| 能源和基础设施 | 通过综合油气、低杠杆E&P、midstream、LNG/出口基础设施和具备定价能力的能源服务增加 **3-4 pp**。 | IEA的Hormuz资料显示近 **20 mb/d** 石油流量以及接近 **20%** 全球LNG贸易与该海峡相关；能源现金流具有正确的盈利beta。 |
+| 防御型质量资产 | 增加 **2-3 pp** 医疗、必需消费和精选受监管utilities。 | 这些资产降低周期和利润率冲击。Utilities需精选，因为实际利率上行会压制股息久期资产。 |
+| 广义周期/进口敏感行业 | 低配航空、邮轮、汽车、化工、小盘可选消费和能源密集型工业。 | 这些行业同时承受成本通胀和实际收入需求走弱。 |
+| 对冲 | 使用SPX/QQQ put spreads和XLE call spreads，而不是只持有现金。 | 风险是双向行情：油价/利率可快速压制倍数，但AI盈利仍可能挤压单边空头。 |
+
+## 交易表达
+
+对于以SPX为基准的机构U.S.股票账户：
+
+1. 将U.S. technology从超配降至 **中性或相对基准低配2-3 pp**。
+2. 从高久期成长和进口敏感周期中腾挪资金，配置 **+3-4 pp能源** 与 **+2-3 pp防御质量**。
+3. 在tech内部保留 **quality barbell**：保留具备forward FCF可见度的盈利AI/cloud/platform公司，削减长久期、负FCF以及估值相对增长失衡的公司。
+4. 增加6-8周对冲包：**QQQ或SPX 5-10% put spread**，部分用更低delta下行期权融资，并配合 **XLE或integrated-major call spread** 作为油价beta抵消。
+5. 若Brent连续五个交易日跌破 **USD 95**、5y real回落 **25 bp**，或2y BE无法维持在Card 04压力区间上方，则重新评估。
+
+## 对前序卡片的判断
+
+本卡 **支持并延展** 前序逻辑。Card 01认为Hormuz风险在现货油价之外被低估；Card 02将对冲转向通胀资产；Card 03修正了FX表达；Card 04指出实际利率/breakeven错配。U.S.股票是下一处薄弱点：**当前ERP太低，除非价格下跌或盈利再上修，否则不足以吸收利率冲击**。
+
+组合答案不是“卖出美国”或“做空AI”。关键是停止把高久期U.S. tech当作通胀冲击下的默认安全资产。在Hormuz基准情景下，**能源现金流和精选防御质量资产应比广义tech久期获得更高主动权重**，直到油价明显下行或实际利率停止上行。
+
+## 交接
+
+建议下一位分析师：**asset-allocator**。下一步应把Cards 02-05整合为单一跨资产执行方案：股票轮动、2y BE/5y real-rate交易、CAD交叉盘FX篮子、能源期权以及回撤触发条件，统一放入一个有风险预算约束的模型组合。
+
+## 资料来源
+
+- U.S. Department of the Treasury, Daily Treasury Par Yield Curve Rates, 2026 table: https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve
+- U.S. Department of the Treasury, Daily Treasury Par Real Yield Curve Rates, 2026 table: https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_real_yield_curve
+- WisdomTree CIO Market Update, April/May 2026, using WisdomTree, FactSet, S&P data for S&P 500 ERP, forward P/E, Mag-7 valuations, and shareholder yield: https://www.wisdomtree.com/investments/-/media/us-media-files/documents/resource-library/presentations/cio_market_outlook.pdf
+- International Energy Agency, "Strait of Hormuz" factsheet, last updated February 2026: https://www.iea.org/about/oil-security-and-emergency-response/strait-of-hormuz?ftag=YHF4eb9d17
+
+页脚：为白板 `430a48d9-c3f6-4699-87e7-fbb5a64b20a9`、Card 5准备，工作日期 **2026-05-11**。
+
+## Follow-up
+
+- Analyst: asset-allocator
+- Topic: Cards 02-05跨资产Hormuz基准组合整合
+- Question: 如何把能源现金流超配、U.S. tech久期降配、2y BE/5y real-rate交易、CAD交叉盘篮子和能源期权对冲整合进一个有风险预算和触发条件的USD模型组合？

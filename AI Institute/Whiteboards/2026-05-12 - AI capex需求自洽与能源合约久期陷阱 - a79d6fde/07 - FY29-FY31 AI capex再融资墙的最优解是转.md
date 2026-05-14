@@ -1,0 +1,148 @@
+---
+source: ai-institute
+resource_type: whiteboard-card
+card_index: 7
+status: completed
+analyst_level: "固收与衍生品"
+---
+
+# FY29-FY31 AI capex再融资墙的最优解是转移久期承担方：多hyperscaler IG腹部、空弱项目融资/REIT久期、付长端并把项目债提前置换为有电力与租户双重支持的结构。
+
+Analyst: **Bond Analyst**
+Status: **completed**
+Stance: **synthesize**
+Completed: **12/05/2026, 13:22:24**
+
+## Links
+
+- Whiteboard topic: [[AI capex需求自洽与能源合约久期陷阱]]
+- Card topic: [[FY29-FY31 AI capex再融资墙的最优解是转移久期承担方：多hyperscaler IG腹部、空弱项目融资 REIT久期、付长端并把项目债提前置换为有电力与租户双重支持的结构。]]
+- Analyst: [[Bond Analyst]]
+- Analyst level: [[固收与衍生品]]
+
+## Topic
+
+FY29-FY31 AI capex再融资墙的最优解是转移久期承担方：多hyperscaler IG腹部、空弱项目融资/REIT久期、付长端并把项目债提前置换为有电力与租户双重支持的结构。
+
+## Question
+
+Investigate the topic "FY29-FY31 AI capex再融资墙的最优解是转移久期承担方：多hyperscaler IG腹部、空弱项目融资/REIT久期、付长端并把项目债提前置换为有电力与租户双重支持的结构。" and make the strongest evidence-based judgment you can.
+
+## Summary
+
+截至2026-05-12，本卡综合前序AI capex、电力、信用与REIT估值结论：FY29-FY31再融资墙应采用三腿结构，而不是简单降久期。核心方案是5y收息/30y付息的5s30s陡峭化、做多2029-2034年hyperscaler IG腹部并用covered-call式覆盖融资保护腿、以及在FY29前将单站点项目融资置换为租户担保、公用事业支持或资产包层面债务。目标是在Cap Rate扩张75-125 bp、项目融资利差上行和私募资产包重新定价中，锁定175-250 bp总再融资基差。
+
+## Report
+
+# 第07卡 — 2026-05-12 FY29-FY31 AI Capex再融资墙：久期与基差再设计
+
+- 日期（Asia/Singapore工作日）：**2026-05-12**
+- 分析师：Bond Analyst（债券分析师，利率/信用/收益率曲线/久期）
+- 立场：对第01-06卡进行**综合**
+- 白板：a79d6fde-2059-4e42-a438-1693623b09e0 · 第7/8卡
+- 工作区说明：实时工作区缺失 `session-brief.md`、`card-02` 和 `card-06` 文件，本文根据提示中的快照重建这些内容；`card-03`、`card-04` 和 `card-05` 的可用文件已直接读取。
+
+## 1. 核心判断
+
+截至**2026-05-12**，我支持前六张卡的推理链，并将其综合为一个交易与融资结构：FY29-FY31 AI capex再融资墙不应通过简单缩短全部久期来对冲。更合适的是**三腿组合**：**5y收息/30y付息的5s30s陡峭化**、**持有2029-2034年到期的hyperscaler IG腹部信用并叠加covered-call式carry覆盖**、以及**在mini-perm到期墙前，把项目融资置换为租户担保、公用事业支持或资产包层面的债务**。
+
+原因仍是前序卡片揭示的久期错配。Hyperscaler资产负债表仍拥有短久期现金流和capex弹性；单站点项目融资、数据中心CMBS和REIT权益则是对物理资产的长久期索取权，而电力、租约和再融资时钟并不同步。Cap Rate扩张**75-125 bp**以及私募hyperscale资产包定价确认，说明市场不再为泛化的数据中心增长付费，而是在重新定价：**谁持有电力延迟选择权，谁吸收FY29-FY31再融资基差**。
+
+## 2. 2026-05-12市场锚
+
+在Asia工作日收盘前可获得的最新美国官方利率数据显示，长端期限溢价仍高：美国财政部**2026-05-11**曲线中，5y为**4.07%**，10y为**4.42%**，30y为**4.98%**，因此5s30s约为**+91 bp**。美联储**2026-04-29**FOMC声明维持联邦基金目标区间在**3.50%-3.75%**，实施说明将准备金余额利率自**2026-04-30**起维持在**3.65%**。广义IG信用仍偏紧：ALFRED/FRED显示ICE BofA美国公司债指数OAS在**2026-05-08**为**0.79%**，更新时间为**2026-05-11**。
+
+这些锚点很关键。广义IG OAS仅79 bp，意味着市场尚未给广义公司信用事故定价。但数据中心资产层债务已经暴露结构性压力：Morningstar DBRS对**BX Commercial Mortgage Trust 2026-VLT9**的预售报告显示，抵押贷款规模为**USD 2.053bn**，DBRS LTV为**90.8%**；前序卡片也指出其DSCR与电力准备金脆弱性。Digital Realty的2026年一季度信息则显示同一问题在权益资本端的映射：当季development capex为**USD 910mn**，交付**63 MW**且**84%**已预租，新开工**464 MW**且接近**50%**已预租，在建约**1.2 GW**，债务/调整后EBITDA为**4.7x**，AFFO派息率为**64%**。
+
+## 3. 建议的期限结构组合
+
+| 组合腿 | 工具 | 入场区间 | 目标 | 止损/证伪 | 目的 |
+|---|---|---:|---:|---:|---|
+| 利率对冲 | DV01中性的**5y UST或SOFR swap收息 / 30y付息** | 5s30s约**+85至+95 bp** | **+120至+135 bp** | 跌破**+65 bp**且项目融资利差未走阔 | 对冲Cap Rate与终值久期，同时保留IG腹部信用 |
+| 信用carry | 做多2029-2034年hyperscaler IG腹部，回避30y | Hyperscaler OAS **+55至+85 bp** | 除非OAS超过**+110 bp**且项目融资未走阔，否则持有 | IG单边走阔超过**75 bp**而CMBS/项目基差不动 | 保留对现金流强、受益于capex递延借款人的敞口 |
+| Covered-call覆盖 | 对防御型REIT/IG信用代理卖出3-6个月、10-15%虚值call，或对部分5y receiver卖出虚值receiver swaption | 权利金用于下行put或项目融资保护 | 获取**50-90 bp年化**期权carry，但只覆盖三分之一到二分之一上行 | 隐含波动低于实现波动，或REIT beta成为主对冲 | 为项目融资空头的负carry提供资金，不放弃主要凸性 |
+| 项目融资置换 | 将单站点mini-perm转入租户担保租约债、utility tariff-backed debt或资产包ABS/CMBS | 置换SOFR + **425-650 bp**私募债 | 若满足电力与take-or-pay测试，新债目标SOFR + **225-350 bp** | 缺少15年take-or-pay、缺少PPA/BTM燃料转嫁，或DSCR < **1.25x** | 在FY29-FY31前锁定**175-250 bp**总再融资基差 |
+
+这不是纯粹的“避险”交易，而是**久期转移**交易。组合应持有现金流韧性最强的曲线段，同时做空融资久期相对于物理久期与租约久期过短的资产。
+
+## 4. 为什么5s30s陡峭化优于泛化降久期
+
+FY29-FY31再融资墙在信用上是腹部问题，在权益估值上是长端问题。2024-2026年发行的项目贷款将在从今天起约3-5年后再融资，但REIT NAV与私募资产Cap Rate折现的是15-25年资产寿命。简单削减全部久期也会放弃AI链条中最可能受益于capex递延的部分：hyperscaler FCF。
+
+更干净的对冲方式是：
+
+- **收5y**：如果AI capex只是延后而非取消，美联储路径与capex递延应支撑腹部。
+- **付30y**：Cap Rate扩张、财政期限溢价和电力基础设施久期都集中在长端。
+- 保持陡峭化交易的**DV01中性**。实际执行可用名义金额配比，而不是等面值；起点可理解为**1.0单位5y DV01收息，对应1.0单位30y DV01付息**。
+
+在核心压力情景下，该交易应有效：项目利差走阔、REIT NAV下修、长端保留期限溢价，而hyperscaler腹部信用不出现偿付型利差冲击。它的失败情景是广义通缩型牛平：30y利率大幅下行，而项目融资利差仍受控。
+
+## 5. Covered Call：只能用于carry融资，不能成为主论点
+
+Covered-call腿应保持克制。它是carry工具，不是alpha来源。
+
+合适的执行方式，是只覆盖流动性较好、较防御的敞口：例如EQIX式防御型REIT多头的三分之一到二分之一、流动性IG信用ETF袖珍仓，或用虚值receiver swaption覆盖部分5y receiver。权利金应为高beta数据中心REIT权益put spread、可获得的CMBS BBB-B保护，或私募信用mark-to-market准备金提供资金。
+
+不要覆盖项目融资空头。该腿的价值来自尾部不对称：当DSCR跌破**1.25x**、BBnB准备金耗尽，或take-or-pay租约转化延迟时，利差跳扩速度可能远高于已收取的期权权利金。
+
+## 6. FY29-FY31项目融资置换路径
+
+对发起人与贷款人而言，再融资墙应在FY29前重构。等到mini-perm到期日再谈判，意味着借款人已经在市场完成电力延迟风险重定价之后才被动融资。
+
+1. **2026年下半年至2027年：修约、增储备、分层。** 按电力交付、租户状态和DSCR，将项目分为绿、黄、红三档。绿色代表已通电MW与合同转嫁完整；黄色代表电力延迟但租户承诺仍可执行；红色代表PPA弱、租户爬坡不确定且DSCR低于**1.25x**。黄色项目需要24-36个月的债务服务与电力延迟准备金。
+2. **2027-2028年：转换优质抵押品。** 将绿色和较强黄色站点从单站点私募信用转入资产包层面债务，配合交叉抵押、现金扫尾和电力step-up covenant。目标利差应是SOFR + **225-350 bp**，而不是SOFR + **425-650 bp**。
+3. **2028-2029年：把久期转给拥有选择权的一方。** 如果hyperscaler需要专属容量，应通过租户担保租约、预付容量协议或表内build-to-suit义务再融资。如果公用事业掌控通电节奏，则在辖区允许时采用tariff-backed或近似regulated-asset-base的回收结构。
+4. **2029-2031年：只为稳定现金流再融资。** 仍依赖BTM燃机、临时租金准备金或乐观出租率的站点，不应按面值续作。它们需要权益减记、优先股救助资本，或按新的**5.75%-6.75%** Cap Rate区间出售给私募资产包。
+
+## 7. 交易规则与信号面板
+
+| 信号 | 确认读数 | 组合动作 |
+|---|---:|---|
+| 数据中心REIT Cap Rate扩张 | 从此前**5.0%-5.5%**基准扩至**5.75%-6.75%**，即**+75至+125 bp** | 维持REIT权益空头与30y付息腿 |
+| 广义IG OAS | ALFRED/FRED最新读数约**0.79%** | 广义IG不是首选空头；继续持有hyperscaler腹部 |
+| Hyperscaler 5-10y OAS | **+55至+85 bp** | 若项目融资基差更快走阔，则加仓多头 |
+| IG与项目融资基差 | 20个交易日扩大**>=60 bp** | 确认AI特定压力；提高基差组合权重 |
+| 项目融资置换节省 | 债务成本降低**175-250 bp** | 在FY29-FY31到期墙前锁定经济性 |
+| DSCR | 低于**1.25x**或准备金覆盖不足12个月 | 从对冲框架转入减值/违约框架 |
+
+## 8. 什么会改变判断
+
+若三件事同时出现，应削减或反转该结构：hyperscaler接受15-20年take-or-pay租约的明确表内处理，公用事业给出有约束力的通电与成本回收时间表，且项目融资利差收窄而IG利差走阔。这意味着久期风险已回到IG资产负债表上，从而推翻“多IG/空项目融资”的基差交易。
+
+若私募hyperscale资产包在**6.5%**以上Cap Rate成交，数据中心CMBS BBB-B在20个交易日内走阔超过**175 bp**，或任何大型2024-2026年AI园区贷款在达到稳定出租前就需要amend-and-extend，则应提高该结构权重。
+
+## 9. 投资结论
+
+FY29-FY31再融资墙的处理核心是**重构谁承担久期**，而不是预测一个唯一的AI capex终局数字。做多hyperscaler 5-10y IG腹部，因为capex递延支持现金流。用5s30s陡峭化对冲估值尾部，因为Cap Rate扩张发生在长端。Covered call只用于为保护腿融资。项目债必须在FY29前转为租户担保或公用事业支持结构，并要求**175-250 bp**总基差节省，才值得置换。
+
+净观点是：**做多hyperscaler IG腹部，做空弱项目融资/REIT久期，支付长端久期，只按面值再融资稳定且有电力支持的抵押品**。
+
+## 10. 资料来源
+
+- Federal Reserve，2026-04-29 FOMC声明，目标区间**3.50%-3.75%**：https://www.federalreserve.gov/newsevents/pressreleases/monetary20260429a.htm
+- Federal Reserve，2026-04-29实施说明，准备金余额利率自2026-04-30起为**3.65%**：https://www.federalreserve.gov/newsevents/pressreleases/monetary20260429a1.htm
+- U.S. Department of the Treasury，Daily Treasury Rates，采用**2026-05-11**曲线作为5y/10y/30y锚：https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve
+- ALFRED / St. Louis Fed，ICE BofA美国公司债指数OAS，**2026-05-08**为**0.79%**，2026-05-11更新：https://alfred.stlouisfed.org/series?seid=BAMLC0A0CM
+- Morningstar DBRS，BX Commercial Mortgage Trust 2026-VLT9预售报告，**USD 2.053bn**抵押贷款与**90.8%** DBRS LTV：https://f.tlcollect.com/fr2/726/81988/2026_CMBS_for_QTS.pdf
+- Digital Realty 2026年一季度业绩附件与SEC文件背景：https://www.sec.gov/Archives/edgar/data/1297996/000110465926047702/dlr-20260423xex99d1.htm
+- Digital Realty 2026年一季度业绩电话会纪要，development capex、MW交付/开工、杠杆、派息率和私募资本平台：https://www.fool.com/earnings/call-transcripts/2026/04/23/digital-realty-dlr-q1-2026-earnings-transcript/
+
+## 11. 交接
+
+推荐下一位分析师：**asset-allocator**。
+
+后续主题：AI capex久期-基差组合的组合 sizing。
+
+后续问题：对于“做多hyperscaler IG腹部 / 做空项目融资与REIT久期 / 5s30s陡峭化”的组合，应在多资产组合中配置多少风险预算、回撤容忍度和跨资产权重？
+
+交接理由：**asset-allocator [primary, horizon]** 是最合适的下一位分析师，因为本卡已经把信用与利率观点转化为可执行组合；剩余问题是组合 sizing、相关性和风险预算分配，而不是另一个行业筛选或触发reviewer的压力测试。
+
+## 页脚
+
+报告日期：**2026-05-12**（Asia/Singapore）。作者：bond-analyst。立场：synthesize。置信度：0.70。
+
+## Follow-up
+
+- Analyst: asset-allocator
+- Topic: AI capex久期-基差组合的组合 sizing
+- Question: 对于“做多hyperscaler IG腹部 / 做空项目融资与REIT久期 / 5s30s陡峭化”的组合，应在多资产组合中配置多少风险预算、回撤容忍度和跨资产权重？

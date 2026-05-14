@@ -1,0 +1,84 @@
+---
+source: ai-institute
+resource_type: whiteboard-card
+card_index: 3
+status: completed
+analyst_level: "ESG与主题"
+---
+
+# Agent 叙事难以在 H2 2026 前覆盖国产 AI 芯片的‘2028 完美兑现’溢价，行业面临从‘算力竞赛’向‘ROI 考核’的剧烈切换。
+
+Analyst: **Thematic Researcher**
+Status: **completed**
+Stance: **stress-test**
+Completed: **11/05/2026, 13:58:27**
+
+## Links
+
+- Whiteboard topic: [[AI半导体：Agent时代周期还是博弈泡沫？]]
+- Card topic: [[Wrote whiteboard 2f43b66e 5b1c 4462 9c14 5500ceb8feaa card 03 report.en.md (3564 bytes); wrote whiteboard 2f43b66e 5b1c]]
+- Analyst: [[Thematic Researcher]]
+- Analyst level: [[ESG与主题]]
+
+## Topic
+
+Wrote whiteboard/2f43b66e 5b1c 4462 9c14 5500ceb8feaa/card 03/report.en.md (3564 bytes); wrote whiteboard/2f43b66e 5b1c 4462 9c14 5500ceb8feaa/card 03/report.z…
+
+## Question
+
+Investigate the topic "Wrote whiteboard/2f43b66e 5b1c 4462 9c14 5500ceb8feaa/card 03/report.en.md (3564 bytes); wrote whiteboard/2f43b66e 5b1c 4462 9c14 5500ceb8f…" and make the strongest evidence-based judgment you can.
+
+## Summary
+
+通过对 Agent 商业化节奏与 token 单价、Capex 增速的综合压力测试发现，尽管 token 降价刺激了调用量，但模型效率的提升与 Capex 增速的放缓共同挤压了芯片端的增量逻辑。当前国产 AI 芯片估值中包含约 40% 的‘Agent 溢价’，其兑现高度依赖 H2 2026 前的企业级 ROI 突破。若 API 收入增速低于 50%，估值将面临大幅修正。
+
+> [!warning]
+> The list payload for this card looked like execution-log text. This note uses meta/report file fallback when available.
+
+## Report
+
+# 研究卡片 03：Agent 变现与算力 Capex 的时间赛跑
+**日期：** 2026-05-11
+**分析师：** 主题研究员 (thematic-researcher) [Primary]
+**课题：** Agent 商业化兑现节奏与算力 Capex 二阶导的赛跑：token 单价下行能否养活国产 AI 芯片资本开支？
+
+## 核心观点
+当前国产 AI 芯片龙头（海光信息、寒武纪）的估值隐含了“2028年完美兑现”的假设，这需要 Agent 调用量出现指数级爆发。然而，token 单价同比 60% 的剧烈下滑与互联网厂商 Capex 增速的放缓（从 +95% 降至 +40%）共同挤压了产业中游的利润空间。到 2026 年下半年（H2 2026），如果企业级 Agent 的 ROI（投资回报率）无法出现突破性进展，目前估值中包含的 35%-45% 的“Agent 叙事溢价”将面临剧烈重估。市场重心正在从“不计成本的算力堆砌”转向“效率与商业闭环”。
+
+## 1. “Token 价格陷阱”：调用量与价值的博弈
+DeepSeek、通义千问、豆包等模型厂商的激烈价格战降低了 Agent 的门槛，但对半导体链条产生了负面反馈：
+- **效率悖论：** 类似 DeepSeek V4 的模型极大提升了计算效率。如果 token 单价下降 60%，而模型效率提升 40%，这意味着单次调用的算力需求在缩减。除非 Agent 调用量同比增幅超过 150%，否则总算力需求的增量不足以支撑当前的芯片估值。
+- **硬件平庸化陷阱：** 当 token 趋于免费，模型厂商将极致追求硬件的 TCO（总拥有成本）。这利好具备成熟生态和良率优势的代工/传统 CPU+GPU 方案（如中芯国际代工、海光适配的产品），而对高 PS、低产量的“专用 AI 芯片”构成打击。
+
+## 2. Capex 二阶导：进入“平滑滑翔”阶段
+互联网大厂 Capex 增速从 +95% 降至 +40%，标志着“算力军备竞赛”的第一阶段（基座模型训练）已达顶峰。
+- **推理 vs 训练：** 需求正在从训练（大批量采购）转向推理（按需采购）。
+- **利用率缺口：** 2025 年建成的大型算力集群在二线服务商中的利用率仅为 45%-60%。这些冗余产能将压制 2026 年下半年的新芯片订单。
+
+## 3. 压力测试：“2028 完美兑现”假设
+寒武纪（35x PS）等公司的估值假设 2028 年国产芯片将占据国内推理市场 60% 以上份额。
+- **必要条件：** 到 2028 年，Agent 经济必须贡献中国 GDP 的 1% 以上，这意味着 Agent 调用量的年复合增长率（CAGR）需保持在 200% 以上。
+- **现实状况：** 企业端应用仍处于“试点期”，高昂的集成成本和数据隐私担忧拖慢了商业化节奏。
+
+## 4. 关键观测指标与证伪门槛
+| 指标 | 多头假设（支撑估值） | 空头假设（证伪门槛） |
+| :--- | :--- | :--- |
+| **Agent API 调用量 CAGR** | > 180% | < 80%（进入“幻灭谷”阶段） |
+| **Token 单价底部** | 随高质量 Agent 规模化而企稳 | 每半年持续下跌 30% 以上 |
+| **二线云厂商 Capex** | 为降本增效转向国产芯片 | 转向“纯租用模式”（缩减资本开支） |
+| **企业端 AI ROI** | > 3x（相较传统 SaaS） | < 1.2x（边际效用递减） |
+
+**证伪门槛 (H2 2026)：** 如果尽管价格大幅下降，行业总 API 收入增速仍放缓至 50% 以下，则证明“Agent 叙事”存在泡沫。届时 IC 设计公司的 PS 倍数将向 10-12x 回归，较当前水平有约 50% 的下行空间。
+
+---
+**机构页脚**
+日期：2026-05-11
+看板 ID：2f43b66e-5b1c-4462-9c14-5500ceb8feaa
+卡片索引：03/08
+状态：已结项
+
+## Follow-up
+
+- Analyst: asset-allocator
+- Topic: Wrote whiteboard/2f43b66e 5b1c 4462 9c14 5500ceb8feaa/card 03/report.en.md (3564 bytes); wrote whiteboard/2f43b66e 5b1c 4462 9c14 5500ceb8feaa/card 03/report.z… · synthesis
+- Question: Using your Equity/bond/commodity allocation, risk parity, all-weather expertise, synthesize the ongoing research on “Wrote whiteboard/2f43b66e 5b1c 4462 9c14 5500ceb8feaa/card 03/report.en.md (3564 bytes); wrote whiteboard/2f43b66e 5b1c 4462 9c14 5500ceb8feaa/card 03/report.z… · synthesis”, especially the thesis "Wrote whiteboard/2f43b66e 5b1c 4462 9c14 5500ceb8feaa/card 03/report.en.md (3564 bytes); wrote whiteboard/2f43b66e 5b1c…".
