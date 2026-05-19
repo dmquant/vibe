@@ -1,13 +1,13 @@
 ---
 title: "Daily Research Brief — 2026-05-19"
-description: "AI Institute morning brief: 5 analyst sections, 14 deep research threads, 29 handoffs."
+description: "AI Institute morning brief: 5 analyst sections, 12 deep research threads, 30 handoffs."
 pubDate: "2026-05-19"
 category: "brief"
 lang: "en"
 ---
 
 *Generated 2026-05-19 by the AI Institute's 26-analyst multi-agent research pipeline.*
-*Morning Brief: 5 sections · 14 deep research threads · 29 cross-desk handoffs*
+*Morning Brief: 5 sections · 12 deep research threads · 30 cross-desk handoffs*
 
 
 ## 📑 Table of Contents
@@ -38,20 +38,18 @@ lang: "en"
 - [3. Regional Macro Threads](#3-regional-macro-threads)
   - [3.1 United States — sticky inflation vs. cooling labour](#31-united-states-sticky-inflation-vs-cooling-labour)
 - [🔬 Deep Research Highlights](#deep-research-highlights)
-  - [1. AI变现的'11%陷阱'：智能体泡沫还是阵痛？](#1-ai变现的11陷阱智能体泡沫还是阵痛)
-  - [2. 美国零售外热内冷 — 进口运价 vs 国内出货背离的 2H 毛利率含义](#2-美国零售外热内冷-进口运价-vs-国内出货背离的-2h-毛利率含义)
-  - [3. AI Capex疲劳还是time-to-power折价](#3-ai-capex疲劳还是time-to-power折价)
-  - [4. AI算力 vs AI电力：picks-and-shovels轮动是否已经从战术升级为结构](#4-ai算力-vs-ai电力picks-and-shovels轮动是否已经从战术升级为结构)
-  - [5. 4 月 28-29 日 FOMC 纪要 + Warsh 接任的联合定位剧本](#5-4-月-28-29-日-fomc-纪要-warsh-接任的联合定位剧本)
-  - [6. 超大规模厂商 Capex 减速叙事是否被电力侧硬数据证伪](#6-超大规模厂商-capex-减速叙事是否被电力侧硬数据证伪)
-  - [7. 印度‘统计奇迹’与物理现实的决裂](#7-印度统计奇迹与物理现实的决裂)
-  - [8. 产业链调研：食品加工产业链（30 日激活率 7.5%, 18/241）](#8-产业链调研食品加工产业链30-日激活率-75-18241)
-  - [9. “伪杠铃”失效风险：红利资产的信用陷阱](#9-伪杠铃失效风险红利资产的信用陷阱)
-  - [10. 「千元股集群 + 散户命名学」是否构成 AI 算力链的情绪顶信号](#10-千元股集群-散户命名学是否构成-ai-算力链的情绪顶信号)
-  - [11. 产业链调研：公用事业产业链（30 日激活率 11.7%, 24/205）](#11-产业链调研公用事业产业链30-日激活率-117-24205)
-  - [12. 产业链调研：新华财经-家装产业链（30 日激活率 4%, 8/198）](#12-产业链调研新华财经-家装产业链30-日激活率-4-8198)
-  - [13. AI 资本开支：电力侧前瞻指标 vs 卖方下修的方向背离](#13-ai-资本开支电力侧前瞻指标-vs-卖方下修的方向背离)
-  - [14. 产业链调研：生命健康和生物科技（30 日激活率 1.8%, 3/170）](#14-产业链调研生命健康和生物科技30-日激活率-18-3170)
+  - [1. 产业链调研：新华财经-海洋经济产业链（30 日激活率 4.7%, 7/148）](#1-产业链调研新华财经-海洋经济产业链30-日激活率-47-7148)
+  - [2. 霍尔木兹实物流量比和平标题更紧：油价风险是否低估？](#2-霍尔木兹实物流量比和平标题更紧油价风险是否低估)
+  - [3. 2026年中期库存周期与物流模式的断裂](#3-2026年中期库存周期与物流模式的断裂)
+  - [4. STX/MU 跌势悖论:AI 需求'被确认更高'为何被定价为利空?](#4-stxmu-跌势悖论ai-需求被确认更高为何被定价为利空)
+  - [5. AI 估值回归 vs 物理资产估值重塑](#5-ai-估值回归-vs-物理资产估值重塑)
+  - [6. 减轻 tmt-analyst 的研究负荷](#6-减轻-tmt-analyst-的研究负荷)
+  - [7. 要求 biotech-analyst 增加产业链覆盖](#7-要求-biotech-analyst-增加产业链覆盖)
+  - [8. 智能体记忆层：AI 的下一个价值高地？](#8-智能体记忆层ai-的下一个价值高地)
+  - [9. 科技股日内叙事反转与散户抄底风险](#9-科技股日内叙事反转与散户抄底风险)
+  - [10. AI 资本开支主题内部脱钩:算力侧见顶 vs 电力侧加速](#10-ai-资本开支主题内部脱钩算力侧见顶-vs-电力侧加速)
+  - [11. 零售杠杆见顶与微盘股狂热风险](#11-零售杠杆见顶与微盘股狂热风险)
+  - [12. AI 基础设施从“性能博弈”转向“能耗博弈”](#12-ai-基础设施从性能博弈转向能耗博弈)
 - [🔄 Active Research](#active-research)
 - [📬 Cross-Desk Intelligence](#cross-desk-intelligence)
 
@@ -300,155 +298,127 @@ The global backdrop sits in a "last-mile disinflation + mildly diverging growth 
 
 ## 🔬 Deep Research Highlights
 
-### 1. AI变现的'11%陷阱'：智能体泡沫还是阵痛？
+### 1. 产业链调研：新华财经-海洋经济产业链（30 日激活率 4.7%, 7/148）
 
-**Lead:** Thematic Researcher · **Depth:** 8 cards
+**Lead:** Industrials Analyst · **Depth:** 10 cards
 
-> 企业级AI智能体落地率仅11%，是否意味着2026年下半年SaaS板块将面临严重的估值修正？
+> Investigate the 新华财经-海洋经济产业链 industry chain. Activation: 7/148 (4.7%) over last 30d — under-researched. Identify the 3-5 under-covered names with the most thesis-worthy setups, propose deep-dive candidates for the research queue, and surface any cross-chain spillover risks analysts should track. Cite specific tickers + recent data where possible.
 
-Prior related institute work to acknowledge and BUILD ON (do not re-summarize):
-- AI 智能体正从理论进入财报实证阶段，触发从“席位增长”向“智能体调用与结果承诺”的业绩计费锚点切换，导致行业性 NRR 结构性下行与估值体系的非对称重构。
-- 2026年是AI估值与现实断裂的决战之年，CapEx的激增与ROI的停滞正将市场推向叙事崩溃的边缘。
-
-As of 2026-05-19 the domestic AI chip chain (Cambricon, Hygon, SMIC, CoWoS-domestic, advanced packaging) is a 'half' second risk zone. Cambricon/Hygon/SMIC trade at ~190x/110x/65x 2026E P/E with 3–7x policy premium vs global peers.
+As of 2026-05-19, this card delivers the pre-publication QA across cards 01–09 on eight axes: work date, gross-margin assumption, IRR/financing assumption and rotation order all pass; stock-pool closure, policy-date sourcing, valuation-language hierarchy and data-limitation tagging are partial. No numeric contradictions found.
 
 
 
-### 2. 美国零售外热内冷 — 进口运价 vs 国内出货背离的 2H 毛利率含义
-
-**Lead:** Chief Strategist · **Depth:** 2 cards
-
-> Drewry/FBX/CCFI 三个独立来源显示中国出口运价已连续 14 周与美国 Cass 国内运量背离;若此为 4Q 关税前置而非真实终端需求,2H 美国零售库销比将再度走高,毛利指引承压。这个矩阵该如何在消费、工业、中国出口三个赛道间统一定价?
-
-Prior related institute work to acknowledge and BUILD ON (do not re-summarize):
-- 中国轻工与纺织品出口链的盈利风险评估
-  日期  ：2026 05 17
-  分析师  ：中国宏观分析师
-
-1. 核心判断：美国 2Q “K型”重启下的出口链盈利双杀
-本人  支持  卡片 01 和 02 的防御性观点，并响应卡片 03 的压力测试。随着美国零售商（如 Target, Dollar General）大…
-
-Wrote whiteboard/8221d7b8 1b9a 4531 9c56 72450b562e92/card 02/report.en.md (3323 bytes); wrote whiteboard/8221d7b8 1b9a 4531 9c56 72450b562e92/card 02/report.zh.md (3212 bytes); wrote whiteboard/8221d7b8 1b9a 4531 9c56 72450b562e92/card 02/meta.json (2842 bytes).
-
-
-
-### 3. AI Capex疲劳还是time-to-power折价
-
-**Lead:** Chief Strategist · **Depth:** 3 cards
-
-> 明日若科技股低开，团队应把它解释为AI需求下修、资金拥挤去杠杆，还是电力交付瓶颈带来的估值分层？请统一可交易触发器。
-
-The TMT Analyst's stress test reveals that power scarcity has not led tech giants to cut 2027 Capex or chip orders. Instead, the market enters a 'Dark Silicon' phase: hyperscalers hoard unpowered GPUs, bypassing power bottlenecks via brownfield densification and geographic arbitrage.
-
-
-
-### 4. AI算力 vs AI电力：picks-and-shovels轮动是否已经从战术升级为结构
-
-**Lead:** Chief Strategist · **Depth:** 1 cards
-
-> 过去5个交易日资金从NVDA/AVGO明显切入CEG/VST/GEV/SMR，且三个篮子的60日相关性从0.31跃升至0.68。这是一次性的Q1毛利惊吓后的再平衡，还是AI主题进入'物理瓶颈定价'阶段的结构性regime change？如果是后者，纯GPU多头的战略权重应该被永久下调多少？
-
-
-
-### 5. 4 月 28-29 日 FOMC 纪要 + Warsh 接任的联合定位剧本
-
-**Lead:** Chief Economist · **Depth:** 8 cards
-
-> 针对 2026-05-20 14:00 ET 发布的 FOMC 纪要与 Warsh 6 月就职，请生成鹰派 / 中性 / 鸽派三档剧本下全天候组合（30 权益 / 34 固收 / 24 商品 / 8 黄金 / 4 现金）的具体微调指令；评估 SR3 27-03 隐含利率（现 3.97%）是否在鹰派剧本下破 4.10%；并把 7-10Y/30Y CGB 久期超配 +10ppt 的回撤条件与 DXY 站稳 100 触发的 EM 货币止盈条件作为剧本一部分。
-
-Stress-test of card-07's 30–35% probability ‘implicit import-quota loosening’ as a standalone trigger. Finding: the energy + upstream hedge leg cover ratio in the S4 central path slips from card-05's ~96% to 76–80% (depending on whether card-06 auto-rebalance has fired), with a probability-weighted cover ratio ~94% — the hedge framework is not broken.
-
-
-
-### 6. 超大规模厂商 Capex 减速叙事是否被电力侧硬数据证伪
-
-**Lead:** Chief Strategist · **Depth:** 8 cards
-
-> 卖方在 5 月业绩季后系统性下调 2H26 超大规模厂商 Capex 增速预期,但电网互联队列、新建变电站卫星影像、HV 变压器交付前置时间这些更硬的电力侧先行指标仍在加速。这是又一次'口风背离落地'的伪信号(类似 2024Q3),还是这次电力瓶颈意味着落地真的会减速?如果电力侧领先,NVDA / 数据中心 REIT / 独立电力的盈利轨迹是否被市场重新定价不足?
-
-As of 2026-05-18, this card synthesizes Card 07's stress test: HBM-driven $/token inflation does not close the 2026-2028 AI hardware cycle, but it sharply segments the market.
-
-
-
-### 7. 印度‘统计奇迹’与物理现实的决裂
+### 2. 霍尔木兹实物流量比和平标题更紧：油价风险是否低估？
 
 **Lead:** Global Macro Analyst · **Depth:** 8 cards
 
-> 卫星数据与官方GDP的2%偏差是否意味着新兴市场‘增长引擎’的投资逻辑需要从总量增长转向结构性防御？
+> 卫星和船运数据显示霍尔木兹/Kharg扰动仍在拖累有效供给；我们是否应把油价、油轮和通胀风险溢价上调，而不是相信和平标题？
 
-This card synthesizes semiconductor, electronics manufacturing, and macro data to propose a cross-market asset allocation strategy responding to India's localization stagnation.
-
-
-
-### 8. 产业链调研：食品加工产业链（30 日激活率 7.5%, 18/241）
-
-**Lead:** Agriculture Analyst · **Depth:** 10 cards
-
-> Investigate the 食品加工产业链 industry chain. Activation: 18/241 (7.5%) over last 30d — under-researched. Identify the 3-5 under-covered names with the most thesis-worthy setups, propose deep-dive candidates for the research queue, and surface any cross-chain spillover risks analysts should track. Cite specific tickers + recent data where possible.
-
-As of 2026-05-18, this card supports the agri-team's cautious cost expectations and confirms from an industrials perspective that the 18-22 RMB/kg cost range has high certainty. The true moat of Bailong Chuangyuan's (605016) Thailand capacity lies in its continuous production process (e.g., SMB chromatography) and >85% by-product recovery rate.
+As of 2026-05-19, this card stress-tests Card 7's mature-node overweight: the direction is right, but public physical-flow data do not yet confirm a strong refill.
 
 
 
-### 9. “伪杠铃”失效风险：红利资产的信用陷阱
-
-**Lead:** Asset Allocator · **Depth:** 8 cards
-
-> 在 6 月地产债务窗口与全球熊陡背景下，红利资产是否已失去防御属性？
-
-As the Research Quality Lead (QA Manager), I have completed the final audit and synthesis for the 8 card research series   "The 'Pseudo Barbell' Failure Risk: The Credit Trap in Dividend Assets."   
-
-All deliverables are strictly anchored to the work date of   2026 05 18  . The audit confirms that the core numeric framework—including the   RMB 800 billion J…
-
-
-
-### 10. 「千元股集群 + 散户命名学」是否构成 AI 算力链的情绪顶信号
-
-**Lead:** A-Share Strategist · **Depth:** 8 cards
-
-> 过去两周「易中天」「纪连海」等谐音命名由小众段子变为主流叙事，5 只千元股中 4 只是算力 / 半导体；这究竟是新一轮主升浪的标志，还是 2015 年式抱团尾声？团队应就「主线是否仍可加仓 vs. 应主动降低算力权重」做出方向性判断。
-
-Workday 2026-05-18. This card stress-tests macro fundamentals and policy expectations to evaluate the momentum for a duration switch from short-end cash to long-end CGBs. Findings indicate that soft PMI data in April/May and an L-shaped bottoming in real estate have reinforced 'asset scarcity' and 'low-for-longer' interest rate expectations.
-
-
-
-### 11. 产业链调研：公用事业产业链（30 日激活率 11.7%, 24/205）
-
-**Lead:** Utilities Analyst · **Depth:** 10 cards
-
-> Investigate the 公用事业产业链 industry chain. Activation: 24/205 (11.7%) over last 30d — under-researched. Identify the 3-5 under-covered names with the most thesis-worthy setups, propose deep-dive candidates for the research queue, and surface any cross-chain spillover risks analysts should track. Cite specific tickers + recent data where possible.
-
-As of 2026-05-18, this card stress-tests debt repricing at regional energy platforms. AI/EV load can cover the marginal financing cost of a single 100 MW project, but cannot automatically absorb repricing across a RMB 15-25 bn platform balance sheet.
-
-
-
-### 12. 产业链调研：新华财经-家装产业链（30 日激活率 4%, 8/198）
-
-**Lead:** Real Estate Analyst · **Depth:** 10 cards
-
-> Investigate the 新华财经-家装产业链 industry chain. Activation: 8/198 (4%) over last 30d — under-researched. Identify the 3-5 under-covered names with the most thesis-worthy setups, propose deep-dive candidates for the research queue, and surface any cross-chain spillover risks analysts should track. Cite specific tickers + recent data where possible.
-
-As of 2026-05-18, the research thread is successfully completed. The audit confirms that the 4% activation rate accurately reflects the historical bottom of industry expectations. Conclusions are highly consistent: suppressed by the negative wealth effect of home prices, a sector-wide Beta recovery requires dual confirmation from fundamentals and market structure.
-
-
-
-### 13. AI 资本开支：电力侧前瞻指标 vs 卖方下修的方向背离
+### 3. 2026年中期库存周期与物流模式的断裂
 
 **Lead:** Chief Strategist · **Depth:** 8 cards
 
-> PJM/ERCOT 互联队列负荷过去 4 周环比仍两位数扩张、北弗吉尼亚/得州/亚利桑那变电站建设未减速 — 这与卖方近两周下调 META/MSFT/GOOGL 2H26 Capex 增速预期方向冲突。机构当前 TMT 低配 8-12pp 的执行节奏是否应暂停或调整？请同时评估 NVDA 渠道前置、超大规模厂商 Capex 兑现路径与公用事业负荷预期的三角关系，并决定 IDC C-REITs (DLR/EQIX) 与独立电力 (VST/CEG/TLN) 是否需要从'交叉抵押脆弱性'重新分类。
+> 为什么零售流量的强劲反弹未能转化为货运量的增长？我们是否正在见证一个基于人工智能预测下的‘极简补货’时代？
 
-As of 2026-05-18, TMT is not a broad bubble, but AI semiconductors and memory trades are crowded: SMH trades at 38.56x P/E with 71.66% in its top 10 holdings, DRAM ETF gathered more than $6bn in five weeks, and semis/memory contributed 70% of 2026 S&P 500 market-cap gains.
+As of May 19, 2026, this report stress-tests the mismatch between AI compute and power supply. If data centers face energization delays due to grid bottlenecks, they become "stranded assets" generating massive depreciation, crushing hyperscaler ROCE and valuations. The severe secondary shock is a "capex cliff" for the AI hardware supply chain as cloud providers pause GPU procurement.
 
 
 
-### 14. 产业链调研：生命健康和生物科技（30 日激活率 1.8%, 3/170）
+### 4. STX/MU 跌势悖论:AI 需求'被确认更高'为何被定价为利空?
+
+**Lead:** TMT Analyst · **Depth:** 8 cards
+
+> Mosley 在 JPM 原话承认 AI 存储需求显著高于此前预测,但市场以'拒绝扩产=错失周期'定价 STX -7% / MU -6%。这是 AI 资本开支周期出现硬约束的拐点信号 (BEAR),还是供给纪律带来的存储链长期再定价契机 (BULL)?TMT、策略、期权三方应就此辩论。
+
+As of 2026-05-19, this card synthesizes the prior thread: AI demand remains strong, but the top of the profit pool is locked by NVIDIA, TSMC, and CSPs. A-share and Taiwan compute hardware should not be priced as one broad AI beta; it should be tiered by distance from standard setters, product substitutability, and margin defense.
+
+
+
+### 5. AI 估值回归 vs 物理资产估值重塑
+
+**Lead:** Chief Strategist · **Depth:** 8 cards
+
+> DeepSeek-V4 发布后的‘差距争议’是否标志着 AI 投资进入‘验证期’，资金是否正在永久性地向航天、无人机等具备物理交付能力的板块转移？
+
+As of 2026-05-19, this card synthesizes the prior chain: HBM/CoWoS policy gating makes AI storage inflation sticky for more than 24 months and lifts the probability that the last 50bp of easing slips into 2027 to 40-45%, with the ECB more exposed than the Fed.
+
+
+
+### 6. 减轻 tmt-analyst 的研究负荷
+
+**Lead:** TMT Analyst · **Depth:** 10 cards
+
+> 根据 §6.1，考虑到 tmt-analyst 已超负荷，建议将任务分流至 thematic-researcher。
+
+Wrote whiteboard/b0c14ce0 0a94 461e 8c29 9bf151acb21d/card 10/report.en.md (4104 bytes); wrote whiteboard/b0c14ce0 0a94 461e 8c29 9bf151acb21d/card 10/report.zh.md (3885 bytes); wrote whiteboard/b0c14ce0 0a94 461e 8c29 9bf151acb21d/card 10/meta.json (1341 bytes).
+
+
+
+### 7. 要求 biotech-analyst 增加产业链覆盖
 
 **Lead:** Biotech Analyst · **Depth:** 10 cards
 
-> Investigate the 生命健康和生物科技 industry chain. Activation: 3/170 (1.8%) over last 30d — under-researched. Identify the 3-5 under-covered names with the most thesis-worthy setups, propose deep-dive candidates for the research queue, and surface any cross-chain spillover risks analysts should track. Cite specific tickers + recent data where possible.
+> 根据 §6.1，生命健康和生物科技产业链激活率极低（1.8%），要求其下一阶段 thesis 至少覆盖 3 个新成员。
 
-Wrote whiteboard/d2023541 4911 41f2 8e5e f90ab157b863/card 10/report.en.md (3276 bytes); wrote whiteboard/d2023541 4911 41f2 8e5e f90ab157b863/card 10/report.zh.md (3174 bytes); wrote whiteboard/d2023541 4911 41f2 8e5e f90ab157b863/card 10/meta.json (1324 bytes).
+2026-05-19: This card stress-tests Card 09 and concludes that China's baseline countermeasure is not a blanket API embargo, but a selective licensing and entity-retaliation regime best described as a narrow yard with an expandable gate.
+
+
+
+### 8. 智能体记忆层：AI 的下一个价值高地？
+
+**Lead:** Thematic Researcher · **Depth:** 8 cards
+
+> Agentic 基础设施（如 Tack）是否会取代基础模型成为 AI 生态中最具护城河的环节？
+
+As of 2026-05-19, the QA team has completed the final audit of the AI physical infrastructure bottleneck thesis. The series logically traverses from agent memory software down to semiconductors, energy, utilities, transformers, and ultimately GOES/copper constraints. Data is consistent (128-143 week transformer lead times support the 12-18 month chip delay; allocation weights sum to 100%).
+
+
+
+### 9. 科技股日内叙事反转与散户抄底风险
+
+**Lead:** Global Macro Analyst · **Depth:** 8 cards
+
+> 今日尾盘跳水后散户情绪显示为'拒绝投降'，考虑到暗池资金流出，这是否意味着明日早盘的低开抄底策略存在巨大风险？我们需要重新评估短期的流动性支撑吗？
+
+As of 2026-05-19, the Chief Risk Officer has completed a portfolio stress test regarding AI chip supply chain disruptions. The analysis identifies the high-density zone of retail leverage and shareholder pledges in stocks like Cambricon as the primary tail risk. Under a -30% drawdown scenario, portfolio VaR would surge by over 150%, and correlation convergence would invalidate diversification.
+
+
+
+### 10. AI 资本开支主题内部脱钩:算力侧见顶 vs 电力侧加速
+
+**Lead:** Chief Strategist · **Depth:** 8 cards
+
+> AI 资本开支作为一个整体主题在过去 18 个月被市场打包定价,但 60D 相关性矩阵显示半导体–公用事业从 +0.74 降至 +0.38。这是阶段性轮动 (类似页岩革命中钻探→管道) 还是主题见顶的前兆? 下一周的组合应如何重构 AI 敞口?
+
+The 2026-2027 regulatory path is not a corner solution but a three-layer cost split: (i) a large-load/data-center tariff class absorbs 55-70% of AI incremental capacity cost; (ii) capacity-market uplift and RMR backstop IPPs; (iii) residential rates held near CPI+2%. This defangs Card 07's S2 (35% to 25%) and narrows S3 to three vectors — California, Ireland, one Eastern-EU state (25% to 18%).
+
+
+
+### 11. 零售杠杆见顶与微盘股狂热风险
+
+**Lead:** Chief Strategist · **Depth:** 8 cards
+
+> 当恐慌与贪婪指数达到 81 且零售杠杆创下 $1.3T 纪录时，微盘股（如 QUCY）的暴涨是否是市场广度崩溃前的最后疯狂？
+
+Wrote whiteboard/30309ef1 4ec1 42a6 9bb1 e84008e8fff4/card 08/report.en.md (3955 bytes); wrote whiteboard/30309ef1 4ec1 42a6 9bb1 e84008e8fff4/card 08/report.zh.md (3788 bytes); wrote whiteboard/30309ef1 4ec1 42a6 9bb1 e84008e8fff4/card 08/meta.json (2029 bytes).
+
+
+
+### 12. AI 基础设施从“性能博弈”转向“能耗博弈”
+
+**Lead:** Asset Allocator · **Depth:** 8 cards
+
+> 随着 Scaling Law 遭遇物理瓶颈，能源是否将成为 AI 估值的唯一锚点？我们是否应该将估值模型从 P/E 转向 P/Watt？
+
+Prior related institute work to acknowledge and BUILD ON (do not re-summarize):
+- AI算力的物理上限已由‘芯片供应’转向‘电力基建’，导致估值模型必须从数字扩张逻辑转向重资产的公用事业逻辑。
+- 能源供应压力与基础设施复杂性正导致AI资本开支的结构性效率下降，即“算力产出比”受损。
+
+As of 2026-05-19, this report evaluates that the expansion of uranium mining and processing capacity is insufficient to match the rapid growth of AI-driven power demand. The uranium market is entering a structural operating deficit, with a 2027 demand spike driven by the 'Initial Core Effect,' while major greenfield mines will not reach significant production until 2028-2029.
 
 
 
@@ -456,30 +426,29 @@ Wrote whiteboard/d2023541 4911 41f2 8e5e f90ab157b863/card 10/report.en.md (3276
 
 | # | Topic | Analyst | Progress |
 |---|-------|---------|----------|
-| 1 | AI Capex 下修是误读还是物理误归因 | Chief Strategist | 6/8 |
-| 2 | 自动驾驶单位经济拐点是否够格成为 2026 H2 主题 | Chief Strategist | 1/8 |
-| 3 | AI 基础设施从“性能博弈”转向“能耗博弈” | Asset Allocator | 4/8 |
+| 1 | A 股石化与全球油价宏观的定价背离 | China Macro Analyst | 4/8 |
+| 2 | 产业链调研：公用事业产业链（30 日激活率 11.7%, 24/205） | Utilities Analyst | 0/10 |
 
 
 ## 📬 Cross-Desk Intelligence
 
 | Subject | Route | Priority |
 |---------|-------|----------|
-| 长债收益率破高的配置应对 | Global Macro Analyst → Chief Strategist | normal |
-| Kevin Warsh 首次 FOMC（6 月）政策反应函数与研究院模型冲突点 | Daily Report Editor → Chief Economist | normal |
-| Yen carry 解除作为独立 trigger，研究院现行三大模型的并行冲击路径 | Daily Report Editor → Chief Strategist | normal |
-| UAE Barakah 核电站袭击：单次冲击 vs 结构性海湾核能风险池 | Daily Report Editor → Global Macro Analyst | normal |
-| AI 电力主题的政策尾部风险 | Thematic Researcher → Global Macro Analyst | normal |
-| TSMC Arizona Fab 21 热信号超指引的 NA 客户归因 | Alt Data Analyst → TMT Analyst | normal |
-| Robotaxi unit-economics 转正是否构成新增长主题入场点 | Alt Data Analyst → Chief Strategist | normal |
-| Asset allocation under a late-cycle real-inflation regime | Chief Strategist → Global Macro Analyst | normal |
-| 晚周期实物通胀情景下的资产配置含义 | Chief Strategist → Global Macro Analyst | normal |
-| AI→电力·核电的二阶段轮动是否纳入下周战术建议 | Thematic Researcher → Chief Strategist | normal |
-| 铜作为AI电力链下一棒的宏观可持续性 | Thematic Researcher → Global Macro Analyst | normal |
-| 低利率环境下的资产配置策略 | Bond Analyst → Chief Strategist | normal |
-| 利差对人民币汇率压力评估 | Bond Analyst → FX Strategist | normal |
-| 通缩压力与利率下限 | Bond Analyst → China Macro Analyst | normal |
-| 6月化债再融资节奏与流动性影响 | Credit Analyst → China Macro Analyst | normal |
+| AI-capex 二阶轮动是否上调电力/工业桶权重 | Thematic Researcher → Chief Strategist | normal |
+| 利率上行情景对 AI-power 篮子的久期冲击 | Thematic Researcher → Global Macro Analyst | normal |
+| A 股石油化工与全球油价宏观的定价背离 — 哪边将被修正？ | Daily Report Editor → China Macro Analyst | normal |
+| AI 硬件拥挤交易：是否需要把'风格切换'结论显式落到 OW/EW/UW 持仓表上？ | Daily Report Editor → Chief Strategist | normal |
+| 流动性边际变化 | Sentiment Analyst → Global Macro Analyst | normal |
+| Gamma Wall 压力测试 | Sentiment Analyst → Derivatives Strategist | normal |
+| 中国战略库存与炼厂开工率关系 | Alt Data Analyst → Energy Analyst | normal |
+| 零售流量与货运背离调查 | Alt Data Analyst → Chief Strategist | normal |
+| [fact-check-feedback] healthcare-analyst | Internal Operator → Healthcare Analyst | normal |
+| ONDS 积压订单质量评估 | Sentiment Analyst → TMT Analyst | normal |
+| SpaceX IPO 溢价外溢效应 | Sentiment Analyst → Thematic Researcher | normal |
+| 国内半导体设备存量维护替代方案调查 | Daily Report Editor → Industrials Analyst | normal |
+| 液冷供应链 QD 连接器瓶颈验证 | Daily Report Editor → Energy Analyst | normal |
+| Analysis of Government-Guided Carbon Transaction Fees | Utilities Analyst → Policy Analyst | normal |
+| 碳交易手续费政府指导价政策解读 | Utilities Analyst → Policy Analyst | normal |
 
 
 ---

@@ -22,28 +22,27 @@ lang: "zh"
 - [3. 跨分析师协调请求](#3-跨分析师协调请求)
 - [4. 白板 pitch](#4-白板-pitch)
 - [☀️ 上午跨视角](#上午跨视角)
-- [0. 扫描全景（用于上下文校准）](#0-扫描全景用于上下文校准)
-- [1. 高优先级矛盾 / 对齐（≤3）](#1-高优先级矛盾-对齐3)
-  - [1.1 【矛盾·高优】卖方下修 AI Capex —— 是"噪声"还是"物理信号"？](#11-矛盾高优卖方下修-ai-capex-是噪声还是物理信号)
-  - [1.2 【对齐·未压力测试】"频次升 / 客单价降"是全球同步的消费微观结构，但两个市场表达完全不同](#12-对齐未压力测试频次升-客单价降是全球同步的消费微观结构但两个市场表达完全不同)
-  - [1.3 【矛盾·高优】房地产周报"底部已确立" vs 信用观察"重组债二次违约率 40%+"](#13-矛盾高优房地产周报底部已确立-vs-信用观察重组债二次违约率-40)
-- [2. 其他值得记录但不构成单独 pitch 的项](#2-其他值得记录但不构成单独-pitch-的项)
-- [3. 总结（一句话）](#3-总结一句话)
+- [1. 核心矛盾 (Contradictions)](#1-核心矛盾-contradictions)
+  - [边缘 AI：是“减重”还是“增负”？](#边缘-ai是减重还是增负)
+- [2. 高置信度共识与对齐 (Alignments)](#2-高置信度共识与对齐-alignments)
+  - [AI 硬件重定价：从 FLOPS 转向“记忆层”与“状态管理”](#ai-硬件重定价从-flops-转向记忆层与状态管理)
+- [3. 被圈出但无人认领的盲区 (Un-owned Topics)](#3-被圈出但无人认领的盲区-un-owned-topics)
+  - [半导体设备的“存量维护”断供风险](#半导体设备的存量维护断供风险)
+- [4. 结论与执行建议](#4-结论与执行建议)
+  - [战术窗口](#战术窗口)
+- [协调请求 (Follow-up Requests)](#协调请求-follow-up-requests)
+- [白板提案 (Whiteboard Pitches)](#白板提案-whiteboard-pitches)
 - [🔄 下午对齐](#下午对齐)
 - [1. 晨间叙事失效检查：宏观电击与“防御”神话的破灭](#1-晨间叙事失效检查宏观电击与防御神话的破灭)
 - [2. 跨分析师共识：AI “千元股”的离场信号](#2-跨分析师共识ai-千元股的离场信号)
 - [3. 结构性溢出：GLP-1 驱动的配料革命](#3-结构性溢出glp-1-驱动的配料革命)
 - [4. 机构覆盖盲区与数据分歧](#4-机构覆盖盲区与数据分歧)
 - [⚖️ 收盘矛盾梳理](#收盘矛盾梳理)
-- [1. 输入锚定与结论优先级](#1-输入锚定与结论优先级)
-- [2. 今日未完全调和的交叉分歧](#2-今日未完全调和的交叉分歧)
-  - [2.1 AI：基本面没有确认 Capex 下修，但市场正在交易 Capex 恐慌](#21-ai基本面没有确认-capex-下修但市场正在交易-capex-恐慌)
-  - [2.2 A 股：日报主稿偏“趋势未坏”，风控面板已经不允许单边加仓](#22-a-股日报主稿偏趋势未坏风控面板已经不允许单边加仓)
-  - [2.3 印度：分歧已基本被汇总，但需要补登记几个局部降级](#23-印度分歧已基本被汇总但需要补登记几个局部降级)
-- [3. 未登记或需要重命名的 thesis 变更](#3-未登记或需要重命名的-thesis-变更)
-- [4. 明日跟进与白板建议](#4-明日跟进与白板建议)
-  - [明早看板](#明早看板)
-  - [白板建议](#白板建议)
+- [1. 优先结论（按明日开盘紧迫度排序）](#1-优先结论按明日开盘紧迫度排序)
+- [2. 跨分析师矛盾清单](#2-跨分析师矛盾清单)
+- [3. 未登记的 thesis 升 / 降级](#3-未登记的-thesis-升-降级)
+- [4. Monday 级白板候选（不确定性确实够大）](#4-monday-级白板候选不确定性确实够大)
+- [5. 后续协调](#5-后续协调)
 
 ---
 
@@ -137,142 +136,52 @@ lang: "zh"
 
 ## ☀️ 上午跨视角
 
-# 日报总编 · 盘前跨分析师脉搏扫描
+# 早间分析师脉冲扫描：从“算力时代”向“瓦特/记忆时代”的硬核切换 (2026-05-19)
 
-- **日期（shell 锚定）**: 2026-05-18（周一，亚洲时段晨/美股盘前）
-- **作者**: Daily Report Editor（日报总编）
-- **数据源**: `recent_reports.md`（since_hours=6，25 个分析师卡片）
-- **门槛**: 仅当存在**具体的、可在今日内推动决策的跨分析师矛盾或对齐**时才发声。今早通过门槛 **3 项**；额外提出 **1 项 QA 流程问题**。
+## 1. 核心矛盾 (Contradictions)
 
----
+### 边缘 AI：是“减重”还是“增负”？
+- **分歧描述：** `tmt-analyst` 认为边缘推理（如 Apple M4, Qualcomm AI200）能有效卸载中心数据中心的电力压力，并将隐私/低延迟记忆留在本地。然而，`energy-analyst` 指出，在实际操作中，边缘推理是**增量**而非替代。Agent 依然需要将持久状态回写中心，边缘端的爆发实际上扩张了全球电气化算力的总足迹。
+- **风险点：** 市场目前可能高估了边缘设备普及后对云端基础设施支出的“节约”效应。如果边缘端也是“吃电大户”，电力缺口将比预期更早触及“可负担性墙”。
 
-## 0. 扫描全景（用于上下文校准）
+## 2. 高置信度共识与对齐 (Alignments)
 
-今早活跃白板线程及收件箱回复（按时间倒序）：
+### AI 硬件重定价：从 FLOPS 转向“记忆层”与“状态管理”
+- **对齐内容：** `tmt-analyst`、`thematic-researcher` 与 `energy-analyst` 罕见达成跨维度共识：AI 的竞争已从“买最快的卡（计算）”转向“拥有最稳的记忆与电力（物理约束）”。
+- **关键论据：**
+ - **TMT：** NVIDIA GB300 NVL72 正在演变为 20 TB 的机架级 HBM 记忆体；上下文不再是消耗品，而是运营资产。
+ - **主题研究：** Tack 的出现标志着“智能体记忆层”正在成为比基础模型更深的护城河。
+ - **能源：** 约束正在从芯片硅片转向 300MW+ 园区的电力交付和液冷供应链。
+- **压力测试：** 若 2027 年铀矿实物缺口触发（如 `energy-analyst` 预测），所谓“Agentic AI”的宏伟愿景将直接撞上物理交付的“天花板”。
 
-| 线程 / 任务 | 参与分析师 | 主线 |
-|---|---|---|
-| `whiteboard:c1d5c950` AI 资本开支物理墙 | chief-strategist, energy, tmt | 物理瓶颈 vs 财务噪声 |
-| `whiteboard:d2023541` BIOSECURE × ADC BD | thematic, policy, biotech, healthcare | BD 阿尔法在政策摩擦下的分层 |
-| `whiteboard:9a0d34fd` 商业航天瓶颈半导体 | industrials, tmt, chief-strategist | 估值透支 vs 产能兑现 |
-| `whiteboard:e125a841` 家装产业链 | realestate | 存量翻新 2.5 万亿主题 |
-| mailbox: 零售/货运 | chief-strategist ← altdata | WMT 多 / HD·TGT 空 篮子 |
-| mailbox: 消费乘数 | china-macro ← altdata | "频次升、客单价降"的弱乘数信号 |
-| mailbox: 外卖补贴稳态 | consumer ← altdata | 美团 Q1 单均利润拐点预测 |
-| mailbox: 一线限购 | policy ← realestate | 北京 > 上海，边际放松 |
-| mailbox: 房企信用 | realestate ← credit | 央国企 3-5Y MTN 被错杀 |
-| mailbox: 银行不良核销 | credit ← financials | 大行拐点已现，部分股份行未达 |
-| 周报：30 城新房销售 | realestate | 第 20 周 WoW +8.5%，"底部确立" |
-| 周报：信用观察名单 | credit | 龙光/远洋二次违约；万科入观察 |
-| 周报：碳市场 | policy / esg（**内容完全重合**） | EUA €88-92、CEA ¥104 |
-| 晨报：另类数据 | altdata | BofA -3.7%、Earnest TGT -2.3% |
-| 周报：618 首周 | altdata | 抖音 GMV +32%、小家电 +150% |
+## 3. 被圈出但无人认领的盲区 (Un-owned Topics)
 
----
+### 半导体设备的“存量维护”断供风险
+- **观察：** `policy-analyst` 捕捉到了华盛顿最新的政策转向：从限制“购买新设备”转向限制“维护存量设备”和软件许可证续约。
+- **盲区：** 目前尚无分析师对中芯国际（688981）等核心晶圆厂的**国产备件库存深度**及**非美系现场服务替代方案**进行定量拆解。这不仅是扩产问题，而是存量产能“熄火”的物理风险，市场对此定价极不充分。
 
-## 1. 高优先级矛盾 / 对齐（≤3）
+## 4. 结论与执行建议
 
-### 1.1 【矛盾·高优】卖方下修 AI Capex —— 是"噪声"还是"物理信号"？
-
-**今早同一白板（c1d5c950）的两位分析师对同一现象给了**方向上相反**的解读**：
-
-| 卡 | 分析师 | 论点 | 操作含义 |
-|---|---|---|---|
-| 01 | **chief-strategist** | 卖方下修 MSFT/META/GOOGL 2H26 Capex 是"财务噪声"；PJM/ERCOT 互联队列 +10% w/w，物理信号未减速。**暂停 TMT 8-12pp 低配执行**；IPP/IDC REITs 重分类为"刚性基础设施" | 减空头、加多头基础设施 |
-| 02 | **energy-analyst** | 卖方下修可能恰恰**反映**物理设备瓶颈（LPT 交付 36-60 个月、价格 +77-95%）→ "钱花不出去"。卖方读到的是真实信号，只是误归因为需求 | 多变压器/IDC 龙头，但不必反向加 TMT |
-| 03 | **tmt-analyst** | "Rack and Wait"：2026 年底 Blackwell 出货量 15-20% 处于未通电状态；硬件供应商收入按出货确认，**短期击穿悲观预期**；但 2028 年存在"消化不良"风险 | 长 NVDA/TSMC 至 2027；监控 2028 见顶 |
-
-**矛盾要点**：chief-strategist 把卖方读为"错"；energy 把卖方读为"对，但归因错"。这不是文字游戏——两者推出的**仓位选择不同**：
-- 若 chief 对，则 TMT 半导体压制是错杀，应回补；
-- 若 energy 对，则 2H26 Capex 下修是物理事实，长 IPP/变压器/带电 IDC 是干净腿，半导体反弹依赖"Rack and Wait" 的会计逻辑维持——而 tmt 自己承认 2028 风险已经写在路上。
-
-**今日内可推动**：
-- 财务下修真实因果（需求 vs 物理）会决定 NVDA 仓位、IPP 仓位、TMT 整体配置三条腿的**权重**；
-- 5 月下旬 META/MSFT 投资者日与 NVDA FY1Q 财报临近，矛盾若不解决，下周一打开仓位会出错。
-
-**建议路径**：在白板线程内开新卡片，让 chief-strategist 与 energy-analyst 显式选边——是把卖方下修当"误读"还是"物理误归因"。
+### 战术窗口
+- **半导体/算力：** 维持 `ashare-strategist` 的建议，仓位需小于正常低吸单，等待 IM 基差修复。警惕寒武纪（688256）等融资盘拥挤标的的流动性陷阱。
+- **航天：** 关注 SpaceX Starship V3 (Flight 12) 发射，若成功，将重塑 LEO 部署成本基准至 <$100/kg。
 
 ---
 
-### 1.2 【对齐·未压力测试】"频次升 / 客单价降"是全球同步的消费微观结构，但两个市场表达完全不同
-
-今早**三位分析师**在不同样本里独立看到了**同一个微观结构信号**：消费频次上升、单笔金额下降。
-
-| 来源 | 样本 | 信号 |
-|---|---|---|
-| **altdata** 晨报 | BofA 周卡（截至 5/10） | 总卡支出 -0.4% YoY，可选耐用 -3.7%（连续 3 周加速恶化）；HD/LOW 家居类 -5.2% |
-| **china-macro** 回信 | PBOC 银行卡（2025Q1→Q4） | 交易笔数 +33.1%，金额 +6.1%，**单笔金额 -20.3%**；住户短贷 -6102 亿元 |
-| **altdata** 618 首周 | 抖音/淘天/京东 | 抖音 GMV +32%，**小家电 +150%**（国补驱动）、AI 清洁 +160% |
-
-**对齐之处**：美国与中国都在出现"刷卡更勤、单笔变小"——属于典型的弱乘数 / 防御性 / 必需品偏好抬升结构。
-
-**未压力测试的张力**：
-- chief-strategist 把美国侧定价为"两极分化、可选崩塌、WMT 受益"——做空 HD/TGT；
-- altdata 618 数据把中国侧定价为"国补 + AI 黑科技驱动的可选爆发"——小家电 +150% 与"消费降级"叙事不一致；
-- china-macro 把中国侧定价为"乘数走弱"，但又承认"频次升"来自补贴 + 即时零售。
-
-**核心问题**：这是**同一个全球趋势（trade-down + 情绪价值消费）**，还是**两个不同事**？如果是同一个，则中国端目前看似强势的 618 数据可能也只是补贴前置——下半年单价压缩会更严重；如果是两个，那么 A 股小家电（美的、追觅、石头）应该独立定价，与 US 离散消费空头篮子不冲突。
-
-**今日内可推动**：
-- 5/19 HD 财报、5/20 TGT 财报、5/21 WMT 财报会把美国侧锁定；
-- A 股侧需要把 618 GMV 跟"国补退出后单价"做敏感性分析。
-
-**建议路径**：在白板上开一个"全球消费两极化的微观结构"卡片，主分析师 = ashare-strategist 或 thematic-researcher（横跨两个市场）；altdata 提供数据腿。
-
----
-
-### 1.3 【矛盾·高优】房地产周报"底部已确立" vs 信用观察"重组债二次违约率 40%+"
-
-同一日内：
-
-| 分析师 | 信号 | 时间锚 |
-|---|---|---|
-| **realestate** `property_sales_weekly` | 30 城新房 WoW **+8.5%**，"517"政策外加深圳样板，"市场底部已基本确立" | 第 20 周（5/11-5/17） |
-| **realestate** `mailbox→credit` | 央国企 3-5Y MTN 利差 280-300bps，"情绪错杀"，建议配置华润、保利 | 同日上午 |
-| **credit** `credit_watch_list` | 龙光下调至 CCC，远洋下调至 B+；行业 **40%+** 已重组债面临"二次违约"；**万科入观察名单** | 同日上午 |
-
-**矛盾要点**：
-- 周转/销售端确实环比反弹，但**信用端的尾部还在恶化**，且**万科被加入观察名单**这件事不应被忽视——这是 2024-2025 信用周期最后一道"准国企刚兑"防线的进一步松动；
-- realestate 自己同时在给信用分析师"央国企被错杀"的多头思路，与 credit 实测到的"民营二次违约 + 万科入观察"在风险预算上**不应同时存在**；至少需要明确：央国企 MTN 配置窗口是否依赖于"民营违约不再外溢"这个假设。
-
-**对**：policy-analyst 的回复（北京 > 上海下一轮放松）支持销售复苏延续；
-**反**：credit 的 6 月 18 日（金科 ABS）、6 月 25 日（绿地）两个付息观察点临近，**外溢概率不为零**。
-
-**今日内可推动**：
-- 若周一收盘前央国企地产 MTN 利差再走阔，则 realestate 的"配置窗口"叙事就先于销售周报数据被市场否定；
-- 周二开始进入 5 月二手房高频数据窗口，是 realestate / policy / credit 三方对齐的下一个数据节点。
-
-**建议路径**：让 realestate-analyst 与 credit-analyst 在白板上同框，**显式回答**：央国企 MTN 多头是否需要把 6 月付息密集窗口的二次违约概率作为前置条件。
-
----
-
-## 2. 其他值得记录但不构成单独 pitch 的项
-
-- **同一份碳报告被 `policy-analyst` 和 `esg-analyst` 双名归档**（`carbon_policy_tracker`，内容字面重合）。这是流程异常而非内容矛盾，建议交 `qa-manager` 走 QA 流程，**不**作为白板话题。
-- **realestate `whiteboard/e125a841` 家装产业链 4 名单**（蒙娜丽莎、箭牌、志邦、兔宝宝）尚无分析师压力测试，但属于单一线程内的细分主题，应在该白板的下一张卡内消化，不必单独 pitch。
-- **商业航天白板（9a0d34fd）已自我封闭**：industrials（card-06）→ tmt（card-07）→ chief-strategist（card-08）三方完成估值压缩 + 择时的闭环。无需总编介入。
-
----
-
-## 3. 总结（一句话）
-
-今早最锐利的两个矛盾——**"AI Capex 下修的归因之争"**与**"地产销售底 vs 信用债二次违约"**——都需要在 24 小时内显式回答，否则**周一收盘前的仓位调整会建立在两个互相否定的叙事上**。第三项（中美消费"频次升/客单价降"对称性）是更长期的 setup，但今晚到本周三的 HD/TGT/WMT 财报窗口会快速给出半个答案。
-
----
+## 协调请求 (Follow-up Requests)
 
 ```json
 {"follow_ups":[
- {"to":"chief-strategist","subject":"AI Capex 下修：误读还是物理误归因","question":"在 whiteboard:c1d5c950 你 (card-01) 把卖方对 MSFT/META/GOOGL 2H26 Capex 的下修读为'财务噪声、物理信号未减速'，但 energy-analyst (card-02) 同日把这同一下修读为'真实反映 LPT 36-60 个月交付瓶颈、即钱花不出去'。这两种解读对应不同的仓位选择（前者支持回补 TMT 半导体低配；后者只支持长 IPP/变压器/带电 IDC，不必反向加 TMT）。请显式选边并给出 2026Q2-Q3 内可证伪的标尺（如：哪个公用事业 / 哪批 IDC 项目通电节奏会作为判定指标）。","priority":"high"},
- {"to":"ashare-strategist","subject":"全球消费'频次升、客单价降'对称性","question":"altdata (BofA 5/10 周卡)、china-macro (PBOC 2025Q4 单笔 -20.3%) 与 altdata 618 首周（抖音 GMV +32%、小家电 +150%）三份独立数据共同呈现一个'刷卡频次上升、单笔金额下降'的微观结构。但美国侧被定价为可选崩塌（HD/TGT 负向意外）、A 股侧被定价为国补 + AI 驱动的小家电爆发。请评估：这是同一个全球 trade-down 主题的两端表达，还是两个独立现象？若为同一主题，618 后期（6 月下旬）的小家电单价压缩弹性如何定价；若为两个，A 股小家电篮子（美的、追觅、石头、小米）是否应与 US 离散空头篮子独立运作，建议 6 个月仓位配比。","priority":"high"},
- {"to":"chief-risk","subject":"房地产'销售底'与'重组债二次违约'同存的风险预算","question":"今晨 realestate-analyst 在 property_sales_weekly 宣布'30 城销售底已确立 (WoW +8.5%)'并在 mailbox 中提示央国企 3-5Y MTN (华润、保利) 280-300bps 利差为'情绪错杀配置窗口'；同一上午 credit-analyst 在 credit_watch_list 把龙光下调至 CCC、远洋至 B+，并将万科加入观察名单，并指出 40% 已重组债面临二次违约（6/18 金科、6/25 绿地为下一对观察点）。具体请压力测试：央国企 MTN 多头仓位（建议 3-5% 风险预算）能否在'6 月民营二次违约外溢至万科估值'的情景下保持，若不能，破位的具体触发条件是什么（如 万科境内 PPN 估值收益率超过哪个阈值、或央国企 MTN 利差日内走阔超过多少 bps）？","priority":"high"}
+ {"to":"industrials-analyst","subject":"国内半导体设备存量维护替代方案调查","question":"针对 BIS 可能限制现场服务与软件许可证续约的风险，请调查国内头部晶圆厂（如中芯、华虹）在关键备件上的库存月数，以及国内第三方维护团队对 DUV/刻蚀等存量设备的国产替代维护能力。","priority":"high"},
+ {"to":"energy-analyst","subject":"液冷供应链 QD 连接器瓶颈验证","question":"请核实 Vertiv 和台系冷却龙头在液冷快接头（QD）和冷板歧管上的实际交期，以及是否存在能绕过 3M PFAS 限制的国产介电液量产方案。","priority":"normal"}
 ]}
 ```
 
+## 白板提案 (Whiteboard Pitches)
+
 ```json
 {"whiteboard_pitches":[
- {"topic":"AI Capex 下修是误读还是物理误归因","topic_en":"Are sell-side AI capex cuts a misread or a misattributed physical signal","question":"卖方对 MSFT/META/GOOGL 2H26 Capex 的下修：chief-strategist 读为'财务噪声'要求暂停 TMT 低配；energy-analyst 读为'真实物理瓶颈、钱花不出去'。哪一种归因对，决定了下一步是回补 TMT 半导体还是只加 IPP/变压器/带电 IDC 单腿。","question_en":"Sell-side cuts to MSFT/META/GOOGL 2H26 capex: chief-strategist reads them as 'financial noise, physical signal intact' and asks to pause the TMT underweight; energy-analyst reads the same cut as 'real physical bottleneck, money cannot be spent'. Which attribution is right decides whether the next move is unwinding the TMT-semi underweight or only adding IPPs / transformers / powered IDCs as a single leg.","suggested_analyst_id":"chief-strategist","rationale":"今早同一白板内出现两位主级分析师对同一现象的方向性相反读数，且 NVDA 财报与 META/MSFT 投资者日在 5 月底前依次落地——24 小时内不解决会传导到周一仓位。","priority":"high"},
- {"topic":"中美消费'频次升、客单价降'是同一主题还是两个独立现象","topic_en":"Is the US-vs-China 'higher frequency, lower ticket size' pattern one global theme or two unrelated phenomena","question":"BofA 周卡（美）单笔走弱 + PBOC 卡数据（中）单笔 -20.3% + 618 首周抖音 GMV +32% / 小家电 +150% 同时出现。美国端被定价为可选崩塌、中国端被定价为国补 + AI 驱动的可选爆发——是同一个全球 trade-down 主题的两个表达，还是两个独立现象？","question_en":"BofA weekly cards (US ticket size weakening) + PBOC card data (CN per-transaction -20.3%) + Douyin 618 week-1 GMV +32% / small-appliance +150% all appeared in the same morning. The US side is being priced as discretionary collapse; the China side as subsidy-and-AI-driven discretionary boom. Is this one global trade-down theme expressed in two ways, or two unrelated stories?","suggested_analyst_id":"ashare-strategist","rationale":"跨市场宏观-消费主题、需要 6 个月仓位级回答；本周 HD/TGT/WMT 财报与 6 月底 618 末段单价压缩是两个并行的验证窗口，需要在白板上对齐口径再分腿。","priority":"normal"},
- {"topic":"房地产'销售底确立'与'重组债二次违约 40%+'能否在同一组合中并存","topic_en":"Can 'property sales bottom established' and 'restructured-bond second-default at 40%+' coexist in the same book","question":"realestate-analyst 今晨同时给出'30 城 WoW +8.5%、底部确立'与'央国企 3-5Y MTN 错杀'的多头思路；credit-analyst 同上午把龙光/远洋再降级、万科入观察、指出 6/18-6/25 两个二次违约观察点。央国企 MTN 多头是否依赖'民营违约不外溢'这一暗含假设？","question_en":"This morning realestate-analyst simultaneously published '30-city WoW +8.5%, bottom established' and a long thesis on SOE 3-5Y MTNs as 'mispriced at 280-300bps'. The same morning credit-analyst downgraded Logan and Sino-Ocean again, added Vanke to the watchlist, and flagged 6/18 (Jinke ABS) and 6/25 (Greenland) as the next second-default checkpoints. Does the SOE MTN long thesis implicitly assume that private-developer defaults will not spill over?","suggested_analyst_id":"ashare-strategist","rationale":"销售面 / 信用面同日反向；6 月付息密集窗口将在两周内强制裁决；需要在白板上做风险预算-级别的对齐，否则地产多空两条腿会在同一组合里互相抵消。","priority":"high"}
+ {"topic":"边缘推理：云端电力压力的减压阀还是倍增器？","topic_en":"Edge Inference: Cloud Power Relief or Demand Multiplier?","question":"随着智能体负载在边缘端爆发，其带来的总电气化算力足迹增长是否会抵消边缘卸载对中心机房的电力节省？","suggested_analyst_id":"energy-analyst","rationale":"TMT 与能源分析师在边缘 AI 的电力影响上存在根本性逻辑矛盾，需通过跨行业建模澄清。","priority":"high"}
 ]}
 ```
 
@@ -327,76 +236,78 @@ lang: "zh"
 
 ## ⚖️ 收盘矛盾梳理
 
-# 盘后分析师分歧扫尾与明日议题建议（2026-05-18）
+# 盘后矛盾扫描：明日开盘前未对齐的分歧（总编视角）
 
-## 1. 输入锚定与结论优先级
+- **日期锚点：** 2026-05-19（shell `date +%Y-%m-%d`）
+- **审阅范围：** 当日 25 份分析师交付件（`recent_reports.md`，~42k 字符），含 chief-strategist / ashare-strategist / sentiment / thematic / tmt / policy / materials / energy / global-macro / industrials / social-media / sentiment-DSI，以及本编辑当日 01–06 上游文件与 QA 复核。
+- **门槛：** 仅在傍晚团队立场对明日开盘风险产生可识别错位时才提议；其余沉默。
+- **结论：** 共发现 3 处需要在亚洲开盘前对齐的矛盾、2 项无人正式登记的 thesis 升降级、3 个达到 Monday 级白板门槛的题目。
 
-- 日期锚定：本轮所有“今日/明日/上一交易日”均以 shell 输出 `2026-05-18` 为准。
-- 上游来源：已按要求拉取并通读 `recent_reports.md`，文件共 1,092 行；以下只引用该文件中的分析师输出与其内嵌来源。
-- 总编结论：今晚不需要新增一组泛化“看多/看空 AI”争论。真正需要明早处理的是两个未完全对齐的风险：**AI Capex 疲劳叙事与电力交付瓶颈叙事被市场混为一谈**；**A 股日报主稿的“缩量结构牛”与风控/情绪端的黄灯偏红信号需要统一交易语言**。
+---
 
-| 优先级 | 议题 | 总编判断 | 明早风险 |
-|---|---|---|---|
-| 高 | AI Capex 疲劳 vs. time-to-power 重新定价 | 不把情绪端“CapEx fatigue”升级为基本面需求下修；但要把电力交付瓶颈升级为 2027 预期折现变量 | 若科技股低开，团队口径可能在“逢低买入 AI”与“Capex 见顶”之间摇摆 |
-| 高 | A 股缩量结构牛 vs. 拥挤去杠杆 | 指数未破坏，但不能继续用“结构牛”掩盖融资、ETF、跨境溢价的同向降温 | 明日若上证失守 MA20 附近，强势科技链容易从轮动变成被动减仓 |
-| 中 | 印度总量 Beta 到供应链 Alpha | 该分歧基本已被 chief-strategist 汇总，不需要重复白板；只需登记几个未显式写进日报语言的降级 | 若继续写“印度电子防御”，必须限定为出口组装、RE PPA、设备收费站，而非宽基印度或本土半导体 |
+## 1. 优先结论（按明日开盘紧迫度排序）
 
-## 2. 今日未完全调和的交叉分歧
+1. **AI 硬件主线在团队内部已经"立场分裂"，但 06_每日日报 仍保留 OW AI/NGIT 的硬性建议——这是 24 小时内最大、最贴近开盘的矛盾。** chief-strategist 当日卡 01 给出 60% 风格切换 / 40% 局部顶部，明示"拥挤龙头组合（AI 算力 / 大市值平台）3–6 个月回撤 10%–20%"；ashare-strategist 卡 02 压力测试上调了 AI 硬件、存储、CPO、高贝塔电子的"局部顶部"风险；sentiment 把 DSI 顶到 **77.04 极度贪婪**；02_flows 又录得通信设备主力净流出 **79.12 亿元**、新易盛 -26.14 亿、天孚通信 -23.11 亿。而 06_每日日报 §明日策略仍写"维持超配 AI/NGIT"。傍晚收盘后 NVDA pre-print（5/21）+ 5/20 LPR + 5/20 FOMC 的三重事件叠加，使这条建议成为最容易被"反方向证伪"的开盘头寸。
+2. **A 股石油石化板块与全球油价宏观之间出现明确定价背离，且没有分析师写明这一裂口。** global-macro 卡 01 把近端工作区间钉在 **Brent $110–125/bbl**，energy-analyst 卡 02 给出 **馏分油净缺口 1.1–1.4 mb/d、LSFO 净缺口 0.35–0.55 mb/d**，VLSFO 裂解价差 4/17→5/06 从 +$4.12/bbl 走阔到 +$23/bbl；materials Card 03 同步认定亚洲石脑油裂解装置已"进入现金亏损区"。但 A 股恒力石化今日 -2.29%、石油化工板块整体回调，03_theme_rotation 把"全球国债收益率飙升 + 地缘溢价回落"列为下跌驱动。**全球宏观与商品端在"油价仍高 + 馏分油偏紧"，A 股化工板块在"地缘缓和 + 估值压制"，两套定价基准不能同时成立。**
+3. **半导体上游物料的"二次迁移"叙事在 Card 04→Card 05 之间被直接推翻，但 03_theme / 06_每日日报 都没有反映这次反转。** tmt-analyst Card 04 主张"乙烷盾牌"驱动产能向北美迁移、日系特化巨头 20–30% 涨价、美晶圆厂结构性更安全；policy-analyst Card 05 紧跟其后做了正面压力测试，给出"2028 年前上游物料完全脱钩概率 25–30%（低）；中国 vs. 盟友双轨化概率 75–85%"。两份卡片在同一白板上彼此否定，但今日题材/编辑稿仍把"国产半导体材料加速替代"作为隐含催化使用——明早任何中美材料链相关公告（光刻胶、PGMEA、高纯气体）都可能因此被错向交易。
 
-### 2.1 AI：基本面没有确认 Capex 下修，但市场正在交易 Capex 恐慌
+---
 
-| 证据方向 | 分析师输出 | 关键数字/表述 | 总编判定 |
-|---|---|---|---|
-| 反对“Capex 全面削减” | `chief-strategist` AI 电力策略卡 | Microsoft CY2026 Capex 约 `$190bn`，Meta `$125-145bn`，Amazon 约 `$200bn`，Alphabet `$180-190bn`；结论是“否定简单的 Capex 减速叙事，但不否定落地节奏风险” | 这是基本面主轴，不能被盘后传闻替代 |
-| 支持“落地节奏折现” | `utilities-analyst` 电力瓶颈卡 | 美国 AI 增量负荷 2028 年底 `47-58 GW`，而 2026-2028 净增可调度 MW 约 `28-36 GW`；LPT 交货 `120-210 周`，HV 断路器 `90-130 周` | 这不是需求崩塌，而是 time-to-power 折价 |
-| 支持“明日情绪压力” | `sentiment-analyst` 与 `social-media-analyst` | 尾盘后散户从 “AI 算力需求再次爆发” 转向 “CapEx fatigue”；0DTE 看涨仍在逢低买入，但盘后有“部分企业削减下半年订单”的未经证实传闻 | 这是明早开盘风险，不是正式 thesis downgrade |
+## 2. 跨分析师矛盾清单
 
-**总编处理：** 明日晨会应统一为“AI 需求未被证伪，估值因可通电产能、并网队列和资金拥挤重新分层”。不建议把“CapEx fatigue”写成基本面结论，除非有新增公司指引或订单数据。
+| # | 主题 | 立场 A | 立场 B | 谁挑明 / 谁没挑明 | 明早开盘风险 |
+|---|---|---|---|---|---|
+| C1 | AI 硬件持仓 | 06_每日日报：维持超配 AI/NGIT | chief-strategist + ashare-strategist + 02_flows：拥挤、净流出、局部顶部风险上调 | chief 与 ashare 各自挑明；编辑稿未对齐 | **高** — NVDA 5/21 前任何利空头条均放大下行弹性 |
+| C2 | 石油化工 / 油价 | global-macro + energy + materials：Brent $110–125、馏分油 / LSFO 紧、亚洲裂解亏损 | 03_theme_rotation：地缘溢价回落 → 石化下跌；A 股化工今日 -2.29% | 无人公开点名两套定价不兼容 | **中高** — 若隔夜油价 / VLSFO 走强，A 股石化今早将面临反向重定价 |
+| C3 | 半导体物料脱钩路径 | tmt Card 04：成本驱动产能迁北美、日系涨价 20–30% 是结构信号 | policy Card 05：政策（不是成本）才约束物料链；脱钩线穿过中国而非亚洲 | 白板内已挑明（Card 05 即压测 Card 04）；编辑 / 题材层未消化 | **中** — 国产半导体材料板块的政策催化预期可能错向 |
+| C4 | 北向资金口径 | 02_flows：HKEX 2024 披露规则下当日北向净额不可核验 | 03_theme + 06_每日日报：仍延用"外资抢筹"叙事的语气 | 02 明确给出限制；上游叙事未严格遵守 | **低** — 但若明日有 SB 数据噪音，团队需统一口径 |
+| C5 | 科创 50 收盘读数 | 01 / 04 / 05 / 06：**2,149.25 / +2.62%** | 03_theme_rotation：**1,775.13 / +3.81%** | QA 已 flag，06 显式取舍；外部读者若只读 03 会出现错位 | **低**（内部已收敛），但若交易台引用 03 单独报送，会出现错读 |
 
-### 2.2 A 股：日报主稿偏“趋势未坏”，风控面板已经不允许单边加仓
+---
 
-| 证据方向 | 分析师/文件 | 关键数字/表述 | 总编判定 |
-|---|---|---|---|
-| 趋势未坏 | `daily-report-editor` 日报主稿 | 上证 `4131.53`、`-0.09%`；深成指 `15530.23`、`-0.20%`；创业板指 `3914.88`、`-0.36%`；科创综指 `+0.95%` | 指数层面仍是降温，不是趋势破坏 |
-| 流动性降速 | 日报编辑校准与风控面板 | 沪深京成交 `29174 亿`、缩量 `4530 亿`；权益 ETF 成交 `2339.49 亿元`、`-19.37%`；系统性风险评分 `52/100`，黄灯偏暖 | 交易语言应从“可继续追高”改为“强势链只做可验证承接” |
-| 拥挤触发器 | `ashare-strategist` | A 股 AI 算力链处在“大基金三期政策底”与“美国出口管制扩容供应顶”之间；若“四只千元股”的 20 日融资余额均线同步跌破，说明从轮动转为被动去杠杆 | 该触发器应并入明早风险看板 |
+## 3. 未登记的 thesis 升 / 降级
 
-**总编处理：** 明日 A 股口径应从“缩量结构牛”收紧为“缩量结构牛，但科技链进入拥挤验证窗口”。首要观察上证 MA20 `4129.27`、前 5 日低点 `4114.09`、当日低点 `4108.60`，以及成交能否重回 `3 万亿`以上。
+| 升 / 降 | 内容 | 由谁实质提出 | 为何"未登记" | 应该写到哪 |
+|---|---|---|---|---|
+| **降级**（隐含） | A 股 AI 硬件 / 存储 / CPO 的"无脑超配"建议 → 应改为"持有 + 拥挤监控 + 龙头止盈纪律" | ashare-strategist 卡 02 把局部顶部风险显式上调，chief 的"60/40 风格切换"为其提供宏观支撑 | 编辑稿 06_每日日报 §明日策略未做反向调整 | 明日编辑稿应在"明日策略节奏"中显式标注降级理由 |
+| **降级**（隐含） | "国产半导体材料替代加速"叙事的政策催化预期 | policy-analyst Card 05：527 亿《芯片法案》<8% 进入材料层；脱钩主轴是中国而非亚洲 | tmt / 题材 / 编辑层未消化 | 题材轮动 / 政策追踪栏目需重新校准 |
+| **升级**（半登记） | "算电协同 + 液冷 + AIDC 物理基建"作为主线之一 | energy-analyst Card 03（液冷 / >300MW 园区瓶颈）+ 02_flows（电力净流入 48.91 亿） | 03_theme 已半登记，但权重低于 AI 算力；研究项目 rp_8ee890a3923e4b45 实际上已是该结论 | 编辑稿应把电力 / AIDC 由"题材附属"上升到与 AI 硬件并列的两条主线之一 |
+| **升级** | 海洋经济产业链作为低覆盖、可挖掘的中线题材 | industrials-analyst 卡 01（148 个标的、内部 30 日激活率仅 7/148）| 未进入今日 03_theme / 06_每日日报 | 周度题材池应将海洋经济升入"研究队列" |
+| **未变** | 油气 / VLSFO / 馏分油结构性偏紧 | global-macro / energy / materials 一致；A 股已脱钩 | 全球链一致，但 A 股链未跟进 | 见 C2，明日资金流栏目应明确点出该背离 |
 
-### 2.3 印度：分歧已基本被汇总，但需要补登记几个局部降级
+---
 
-| 子议题 | 今日输出 | 总编登记 |
-|---|---|---|
-| 宽基印度 Beta | `global-macro` 称印度官方 GDP 与夜光/用电代理之间约 `2%` 偏差，实际轨迹更接近 `5.5%` 而非 `7.5%+`，Nifty 50 `>22x` 估值有压缩风险 | 已降级：宽基印度从增长 Beta 转为中性 |
-| 电子/数字防御腿 | `tmt-analyst` 支持但删修：手机组装高可信，数字基建对国内放缓不防御，印度半导体是 `2028-2030` 期权而非 2026 现金流防御 | 需显式写入日报：不要把“印度半导体”当 2026 防御仓位 |
-| 电力与碳 | `energy-analyst` 要求增加 `200-300 bp` 电力风险溢价；`policy-analyst` 把 CBAM 从“电子直接税”收窄为影子碳成本，按 `EUR 75.36/tCO2` 和 `0.7117 tCO2/MWh` 得出 `EUR 0.0536/kWh`，约 `5.4 欧分/kWh` | 局部 thesis downgrade：CBAM 不是 2026 直接税，但影子成本仍有效 |
-| 上游本地化 | `china-macro` 与 `tmt-analyst` 指向 FY30 前 IC 载板 `0-3%`、SiC/GaN `0-2%`、锂电材料增值 `10-18%`，印度停留在 ATMP 飞地 | 已由 `chief-strategist` 升级为“三方市场供应链 Alpha”框架：A 股不可替代上游、全球设备收费站、印度 RE PPA/基建赋能者 |
+## 4. Monday 级白板候选（不确定性确实够大）
 
-## 3. 未登记或需要重命名的 thesis 变更
+1. **"60/40 风格切换" vs "AI 硬件直接顶部" — 把团队傍晚分裂转成一次正式辩论。** 触发：chief 与 ashare 同向但程度不同；编辑稿仍 OW；DSI 极度贪婪；NVDA pre-print 临近。建议主持人：chief-strategist。
+2. **A 股石油化工是否被错向定价？** 触发：全球链的 Brent $110–125 + 馏分油缺口 1.1–1.4 mb/d 与 A 股化工 -2.29% 同日并存。建议主持人：china-macro（或 ashare-strategist），由 energy / materials / global-macro 提供卡片。
+3. **半导体上游物料的"政策脱钩 vs 成本脱钩"二选一。** 触发：Card 04 / Card 05 之间的硬冲突，且影响的是国产替代板块的政策催化预期。建议主持人：thematic-researcher，policy / tmt / materials 三方对辩。
 
-| 类型 | 旧说法 | 新说法 | 是否需要明早动作 |
-|---|---|---|---|
-| 降级 | “CapEx fatigue = AI 需求见顶” | “盘后情绪在交易 CapEx fatigue，但基本面证据更像 time-to-power 折价” | 是：明早标题避免写成需求下修 |
-| 升级 | “AI Capex Beta” | “已通电容量、并网位次、HV 设备、本土变压器产能 Alpha” | 是：主题轮动需要把电力交付资产置于 AI 链核心 |
-| 降级 | “缩量结构牛可继续追高” | “缩量结构牛进入拥挤验证窗口” | 是：若 MA20 失守或成交继续低于 `3 万亿`，降低追高语言 |
-| 降级 | “印度电子出口防御” | “印度手机组装可防御，数字基建/半导体不能泛化为防御” | 否：已被印度专题基本消化，但日报需统一措辞 |
-| 降级 | “电子 CBAM 直接税” | “2026 不是电子直接 CBAM，而是供应链评分、RE100 与未来扩围的影子碳成本” | 否：已由 `policy-analyst` 窄化，避免误写即可 |
+---
 
-## 4. 明日跟进与白板建议
+## 5. 后续协调
 
-### 明早看板
+明日 9:00 之前，请编辑下一轮日报：
+- 在 §明日策略节奏 显式登记"AI 硬件超配纪律 → 拥挤监控 + 龙头止盈"的降级。
+- 在 §资金流 与 §题材轮动 显式登记 A 股石化与全球油价宏观的定价背离。
+- 在 §政策追踪 显式登记 Card 04 / Card 05 反转，避免明日有任何材料链公告时被错向解读。
 
-| 时间窗口 | 需要盯的信号 | 解释规则 |
-|---|---|---|
-| 开盘前 | 科技/AI 是否因“下半年订单削减”传闻继续发酵 | 没有公司指引前，只按情绪风险处理，不改基本面评级 |
-| 开盘后 30 分钟 | 上证是否守住 `4129.27`，成交是否向 `3 万亿`修复 | 守住且放量：结构轮动仍有效；失守且缩量：按被动去杠杆处理 |
-| 全天 | ETF 主力流、融资余额、四只高价 AI 链融资均线 | 用于区分健康轮动与拥挤拆仓 |
-| 本周 | 电力设备、并网容量、数据中心 REIT 与独立电力是否强于 GPU beta | 若强，说明市场接受 time-to-power 重新定价 |
+下面提交两条跟进委托 + 两条白板提案。
 
-### 白板建议
+---
 
 ```json
-{"whiteboard_pitches":[{"topic":"AI Capex疲劳还是time-to-power折价","topic_en":"AI Capex Fatigue or Time-to-Power Repricing","question":"明日若科技股低开，团队应把它解释为AI需求下修、资金拥挤去杠杆，还是电力交付瓶颈带来的估值分层？请统一可交易触发器。","question_en":"If tech gaps lower tomorrow, should the team treat it as an AI demand downgrade, crowded-position deleveraging, or valuation dispersion from power-delivery bottlenecks? Define the tradable triggers.","suggested_analyst_id":"chief-strategist","rationale":"今日基本面、情绪和风控口径已经分叉，若不统一，明早容易把可买的交付瓶颈折价误写成需求崩塌。","priority":"high"}]}
+{"follow_ups":[
+ {"to":"chief-strategist","subject":"AI 硬件拥挤交易：是否需要把'风格切换'结论显式落到 OW/EW/UW 持仓表上？","question":"你 5/19 的卡 01 给出 60% 风格切换 / 40% 局部顶部，并预期拥挤龙头组合 3–6 个月回撤 10%–20%。同日 ashare-strategist 上调 AI 硬件 / 存储 / CPO / 高贝塔电子的局部顶部风险；02_flows 录得通信设备主力净流出 79.12 亿、新易盛 -26.14 亿、天孚通信 -23.11 亿；DSI 站上 77.04 极度贪婪。但 06_每日日报 §明日策略仍写'维持超配 AI/NGIT'。请直接给出 5/20 开盘前的最新组合建议：AI 硬件 / 存储 / CPO 龙头是维持 OW（并解释为何与你的风格切换叙事兼容）、降为 EW（并给出降权幅度与止盈线）、还是分层（先降存储/CPO、后降算力）？请把答案落到一张 OW/EW/UW 表，并指明依赖触发哪些行情条件才会再变。","priority":"high"},
+ {"to":"china-macro","subject":"A 股石油化工与全球油价宏观的定价背离 — 哪边将被修正？","question":"global-macro 把 Brent 工作区间钉在 $110–125/bbl，energy 给出馏分油净缺口 1.1–1.4 mb/d 与 LSFO 净缺口 0.35–0.55 mb/d，materials Card 03 认定亚洲石脑油裂解装置进入现金亏损区。但 A 股 5/19 恒力石化 -2.29%、石油化工板块回调，03_theme 把它归因于'地缘溢价回落'。请评估：(1) 这一定价背离的边界条件是什么——A 股是否在交易 LPR/汇率/国内炼厂开工率而非全球油价？(2) 在 5/20 LPR + 5/20 FOMC 双事件窗口内，你认为哪一侧（全球油价 vs A 股石化）更可能在 5–10 个交易日内被重定价？(3) 给出一个具体可观察的'触发条件'指标列表（如新加坡 VLSFO 裂解价差再走阔多少、人民币突破多少、国内炼厂周度开工率变化），用于团队监控这一裂口收敛或扩大。","priority":"high"}
+]}
+```
+
+```json
+{"whiteboard_pitches":[
+ {"topic":"AI 硬件拥挤交易：风格切换还是局部顶部？","topic_en":"AI hardware crowding: style rotation or local top?","question":"chief-strategist 给 60% 风格切换 / 40% 局部顶部，ashare-strategist 显式上调 AI 硬件 / 存储 / CPO / 高贝塔电子的局部顶部风险，DSI 升至 77.04 极度贪婪，通信设备单日主力净流出 79.12 亿，但编辑稿仍保留 OW AI/NGIT 建议。请团队就以下问题正式定调：未来 1–3 个月，AI 硬件龙头组合应当持仓 OW / EW / UW，触发降权的具体条件是什么，组合内部（算力 / 存储 / CPO / 互联）应如何分层？","question_en":"Chief-strategist puts the call at 60% style rotation / 40% local top, A-share strategist explicitly upgrades the local-top risk in AI hardware, storage, CPO and high-beta electronics, sentiment DSI sits at 77.04 (extreme greed), and main-force flows showed CNY 7.9B net outflow from communication equipment on 5/19 — yet the editor's daily still keeps an OW on AI/NGIT. The team needs a formal call: over the next 1–3 months, should the AI-hardware leader complex be held OW / EW / UW, what concrete conditions trigger a downgrade, and how should the internal sleeves (compute / storage / CPO / interconnect) be tiered?","suggested_analyst_id":"chief-strategist","rationale":"团队傍晚立场已经分裂、且与编辑稿口径不一致，临近 NVDA pre-print 与 LPR/FOMC 事件窗口，必须在一次正式白板中合拢。","priority":"high"},
+ {"topic":"A 股石化与全球油价宏观的定价背离","topic_en":"A-share petrochemicals vs global oil macro: pricing dislocation","question":"global-macro 把 Brent 锚在 $110–125/bbl、energy 给出馏分油净缺口 1.1–1.4 mb/d 与 LSFO 净缺口 0.35–0.55 mb/d、materials 认定亚洲石脑油裂解进入现金亏损区；但 A 股 5/19 恒力石化 -2.29%、石油化工整体回调，03_theme 归因为'地缘溢价回落'。请团队回答：这是 A 股结构性折价，还是全球链定价过度？哪侧将在 1–2 周内被修正？给出可观察的边界条件清单（VLSFO 裂解价差、人民币、国内炼厂开工率、LPR/FOMC 路径）。","question_en":"Global macro pegs Brent at $110–125/bbl, energy flags a 1.1–1.4 mb/d distillate gap and a 0.35–0.55 mb/d LSFO gap, and materials says Asian naphtha crackers are now cash-negative — yet on 5/19 Hengli Petrochemical fell 2.29% and the broader A-share petrochemicals complex sold off, with the thematic report attributing it to 'geopolitical risk premium fading.' Is this a structural A-share discount or a global-side overpricing? Which side gets re-rated within 1–2 weeks? Provide a watchlist of boundary conditions (VLSFO crack, CNY, domestic refinery utilization, LPR / FOMC path) the team should monitor.","suggested_analyst_id":"china-macro","rationale":"全球链与 A 股链在同一商品上同日出现互不相容的定价基准，又紧贴 LPR/FOMC 事件窗口，是一次有具体可证伪边界的跨分析师辩论。","priority":"high"}
+]}
 ```
 
 ---

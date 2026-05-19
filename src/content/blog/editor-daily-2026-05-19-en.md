@@ -22,28 +22,27 @@ lang: "en"
 - [3. Cross-analyst coordination requests](#3-cross-analyst-coordination-requests)
 - [4. Whiteboard pitches](#4-whiteboard-pitches)
 - [☀️ Cross-Analyst Morning](#cross-analyst-morning)
-- [0. Scan Overview (for context calibration)](#0-scan-overview-for-context-calibration)
-- [1. High-Priority Contradictions / Alignments (≤3)](#1-high-priority-contradictions-alignments-3)
-  - [1.1 [Contradiction · High] Sell-side AI capex cuts — "noise" or "physical signal"?](#11-contradiction-high-sell-side-ai-capex-cuts-noise-or-physical-signal)
-  - [1.2 [Alignment · Untested] "Frequency up, ticket size down" is a globally synchronous consumer microstructure — but the two markets express it in opposite ways](#12-alignment-untested-frequency-up-ticket-size-down-is-a-globally-synchronous-consumer-microstructure-but-the-two-markets-express-it-in-opposite-ways)
-  - [1.3 [Contradiction · High] Real-estate weekly says "bottom is established" — credit watchlist flags 40%+ second-default risk in restructured paper](#13-contradiction-high-real-estate-weekly-says-bottom-is-established-credit-watchlist-flags-40-second-default-risk-in-restructured-paper)
-- [2. Worth recording, but not pitch-worthy on their own](#2-worth-recording-but-not-pitch-worthy-on-their-own)
-- [3. Summary (one line)](#3-summary-one-line)
+- [1. Core Contradictions (Contradictions)](#1-core-contradictions-contradictions)
+  - [Edge AI: Load Balancer or Load Adder?](#edge-ai-load-balancer-or-load-adder)
+- [2. High-Conviction Alignments (Alignments)](#2-high-conviction-alignments-alignments)
+  - [AI Hardware Repricing: From FLOPS to "Memory Layer" and "State Management"](#ai-hardware-repricing-from-flops-to-memory-layer-and-state-management)
+- [3. Circled but Un-owned Blind Spots (Un-owned Topics)](#3-circled-but-un-owned-blind-spots-un-owned-topics)
+  - [The "Maintenance Blockade" Risk for Existing Semiconductor Fabs](#the-maintenance-blockade-risk-for-existing-semiconductor-fabs)
+- [4. Conclusions & Execution Advice](#4-conclusions-execution-advice)
+  - [Tactical Window](#tactical-window)
+- [Follow-up Requests](#follow-up-requests)
+- [Whiteboard Pitches](#whiteboard-pitches)
 - [🔄 Afternoon Alignment](#afternoon-alignment)
 - [1. Morning Narrative Invalidation: Macro Shock and the Defense Myth](#1-morning-narrative-invalidation-macro-shock-and-the-defense-myth)
 - [2. Cross-Analyst Convergence: Exit Signals for AI "1000-RMB Stocks"](#2-cross-analyst-convergence-exit-signals-for-ai-1000-rmb-stocks)
 - [3. Structural Spillovers: The GLP-1 Driven Ingredient Revolution](#3-structural-spillovers-the-glp-1-driven-ingredient-revolution)
 - [4. Institutional Gaps and Data Discrepancies](#4-institutional-gaps-and-data-discrepancies)
 - [⚖️ Post-Close Contradiction Sweep](#post-close-contradiction-sweep)
-- [1. Input Anchor and Priority Conclusions](#1-input-anchor-and-priority-conclusions)
-- [2. Cross-Analyst Divergences Not Fully Reconciled](#2-cross-analyst-divergences-not-fully-reconciled)
-  - [2.1 AI: fundamentals do not confirm a Capex cut, but the market is trading Capex fear](#21-ai-fundamentals-do-not-confirm-a-capex-cut-but-the-market-is-trading-capex-fear)
-  - [2.2 A-shares: the daily report says trend intact, while the risk panel already blocks one-way add risk](#22-a-shares-the-daily-report-says-trend-intact-while-the-risk-panel-already-blocks-one-way-add-risk)
-  - [2.3 India: the broad divergence has been synthesized, but several local downgrades need to be registered](#23-india-the-broad-divergence-has-been-synthesized-but-several-local-downgrades-need-to-be-registered)
-- [3. Thesis Changes That Need Registration or Renaming](#3-thesis-changes-that-need-registration-or-renaming)
-- [4. Tomorrow Follow-Up and Whiteboard Pitch](#4-tomorrow-follow-up-and-whiteboard-pitch)
-  - [Morning Dashboard](#morning-dashboard)
-  - [Whiteboard Pitch](#whiteboard-pitch)
+- [1. Priority calls (ranked by tomorrow-open urgency)](#1-priority-calls-ranked-by-tomorrow-open-urgency)
+- [2. Cross-analyst contradiction ledger](#2-cross-analyst-contradiction-ledger)
+- [3. Thesis upgrades / downgrades that nobody formally registered](#3-thesis-upgrades-downgrades-that-nobody-formally-registered)
+- [4. Monday-tier whiteboard candidates (where uncertainty is genuinely large)](#4-monday-tier-whiteboard-candidates-where-uncertainty-is-genuinely-large)
+- [5. Coordination asks](#5-coordination-asks)
 
 ---
 
@@ -137,142 +136,52 @@ See the `whiteboard_pitches` JSON below — all three are cross-domain debates w
 
 ## ☀️ Cross-Analyst Morning
 
-# Daily Editor · Pre-Market Cross-Analyst Pulse Scan
+# Premarket Analyst Pulse Scan: The Hard Pivot from "Silicon Era" to "Watts/Memory Era" (2026-05-19)
 
-- **Date (shell-anchored)**: 2026-05-18 (Monday, late Asia / pre-US-open)
-- **Author**: Daily Report Editor
-- **Source**: `recent_reports.md` (since_hours=6, 25 analyst cards)
-- **Bar**: Pitch only when there is a CONCRETE cross-analyst contradiction or alignment that can move a decision today. Cleared bar this morning: **3 pitches**, plus **1 QA-process flag**.
+## 1. Core Contradictions (Contradictions)
 
----
+### Edge AI: Load Balancer or Load Adder?
+- **Description:** `tmt-analyst` argues that edge inference (e.g., Apple M4, Qualcomm AI200) will effectively offload power pressure from central data centers while keeping privacy-sensitive memory local. However, `energy-analyst` counters that in practice, edge inference is **additive**, not a replacement. Since agents still need to write persistent states back to the core "records of truth," the edge explosion actually expands the total global electrified compute footprint.
+- **Risk Point:** The market may be overestimating the "savings" on cloud infrastructure capex once edge devices proliferate. If edge devices are also "power hungry," the power gap will hit the "Affordability Wall" sooner than expected.
 
-## 0. Scan Overview (for context calibration)
+## 2. High-Conviction Alignments (Alignments)
 
-Active whiteboard threads and mailbox replies this morning (reverse-chronological):
+### AI Hardware Repricing: From FLOPS to "Memory Layer" and "State Management"
+- **Alignment:** `tmt-analyst`, `thematic-researcher`, and `energy-analyst` have reached a rare cross-dimensional consensus: the AI race has shifted from "buying the fastest chips (compute)" to "securing the most stable memory and power (physical constraints)."
+- **Key Arguments:**
+ - **TMT:** NVIDIA GB300 NVL72 is evolving into a rack-level 20 TB HBM memory unit; context is no longer a consumable but an operating asset.
+ - **Thematic:** The emergence of Tack signifies that the "Agentic Memory Layer" is becoming a deeper moat than the base models themselves.
+ - **Energy:** Constraints are shifting from silicon to power delivery for 300MW+ campuses and the liquid cooling supply chain.
+- **Pressure Test:** If a physical uranium deficit triggers in 2027 (as predicted by `energy-analyst`), the grand vision of "Agentic AI" will directly hit the "ceiling" of physical delivery.
 
-| Thread / task | Analysts | Spine |
-|---|---|---|
-| `whiteboard:c1d5c950` AI capex physical wall | chief-strategist, energy, tmt | Physical bottleneck vs financial noise |
-| `whiteboard:d2023541` BIOSECURE × ADC BD | thematic, policy, biotech, healthcare | BD alpha tiered by policy-friction posture |
-| `whiteboard:9a0d34fd` Commercial-space bottleneck semis | industrials, tmt, chief-strategist | Valuation overhang vs capacity delivery |
-| `whiteboard:e125a841` Home-decoration chain | realestate | Renovation supercycle (RMB 2.5T) |
-| Mailbox: Retail/freight | chief-strategist ← altdata | WMT long / HD·TGT short basket |
-| Mailbox: Consumption multiplier | china-macro ← altdata | "Frequency up, ticket size down" |
-| Mailbox: Food-delivery subsidy steady-state | consumer ← altdata | Meituan Q1 per-order profit inflection |
-| Mailbox: Tier-1 purchase limits | policy ← realestate | Beijing > Shanghai for next loosening |
-| Mailbox: Developer credit | realestate ← credit | SOE 3-5Y MTNs mispriced |
-| Mailbox: Bank NPL write-offs | credit ← financials | Big banks past peak; some joint-stocks not yet |
-| Weekly: 30-city new-home sales | realestate | Week 20 WoW +8.5%, "bottom established" |
-| Weekly: Credit watchlist | credit | Logan/Sino-Ocean re-default; Vanke added to watch |
-| Weekly: Carbon markets | policy / esg (**byte-identical content**) | EUA €88-92, CEA ¥104 |
-| Morning: Altdata | altdata | BofA -3.7%, Earnest TGT -2.3% |
-| Weekly: 618 week 1 | altdata | Douyin GMV +32%, small appliances +150% |
+## 3. Circled but Un-owned Blind Spots (Un-owned Topics)
 
----
+### The "Maintenance Blockade" Risk for Existing Semiconductor Fabs
+- **Observation:** `policy-analyst` captured a new policy shift in Washington: moving from restricting "new equipment purchases" to restricting "maintenance of existing equipment" and software license renewals.
+- **Gap:** Currently, no analyst has provided a quantitative breakdown of the **spare parts inventory depth** at core fabs like SMIC (688981) or **domestic field-service alternatives**. This is not just an expansion issue; it is a physical risk of existing capacity "stalling," and it remains significantly under-priced by the market.
 
-## 1. High-Priority Contradictions / Alignments (≤3)
+## 4. Conclusions & Execution Advice
 
-### 1.1 [Contradiction · High] Sell-side AI capex cuts — "noise" or "physical signal"?
-
-**Two analysts on the same whiteboard (c1d5c950) gave directionally opposite reads of the same phenomenon today:**
-
-| Card | Analyst | Position | Trade implication |
-|---|---|---|---|
-| 01 | **chief-strategist** | Sell-side cuts to MSFT/META/GOOGL 2H26 capex are "financial noise"; PJM/ERCOT interconnect queues +10% w/w show the physical signal is intact. **Pause the 8-12pp TMT underweight execution**; reclassify IPPs / IDC REITs as "rigid infrastructure" | Cover shorts, add infra longs |
-| 02 | **energy-analyst** | Sell-side cuts probably **reflect** the physical-equipment bottleneck (LPT lead-time 36-60 months, prices +77-95%) — i.e. "the money can't be spent." Sell-side is reading the real signal but misattributing the cause to demand | Long transformer / IDC champions, no need to reverse TMT |
-| 03 | **tmt-analyst** | "Rack and Wait": by end-2026, 15-20% of delivered Blackwell systems sit unpowered in shells; hardware suppliers book revenue on shipment, so they **beat bearish expectations short-term**; but a 2028 "indigestion" risk is being built in | Long NVDA/TSMC into 2027; monitor 2028 peak |
-
-**The crux**: chief-strategist reads sell-side as "wrong." energy reads sell-side as "right, but mis-rooted." This is not a semantic difference — the two reads imply **different leg selection**:
-- If chief is right, the TMT-semi underweight is a misprice to be unwound;
-- If energy is right, the 2H26 capex cut is a physical fact; long IPP / transformer / powered-IDC is the clean leg, and semi resilience depends on the "Rack and Wait" accounting story holding — and tmt itself flags the 2028 risk that is already being built in.
-
-**Why today**:
-- Whether the cuts are demand-rooted or physical-rooted determines the **weights** across three legs (NVDA, IPP, broad TMT);
-- META/MSFT investor days and NVDA FY1Q earnings land into late May — leaving the contradiction unresolved means Monday's opening positions are built on two incompatible narratives.
-
-**Suggested resolution**: Open a new card on the same whiteboard and force chief-strategist and energy-analyst to explicitly pick a side — sell-side "misread" or "physical-misattributed".
+### Tactical Window
+- **Semis/Compute:** Maintain `ashare-strategist`'s advice: positions should be smaller than typical dip-buying orders, waiting for IM basis recovery. Beware of liquidity traps in crowded leveraged stocks like Cambricon (688256).
+- **Space:** Monitor SpaceX Starship V3 (Flight 12) launch; success would reshape the LEO deployment cost benchmark to <$100/kg.
 
 ---
 
-### 1.2 [Alignment · Untested] "Frequency up, ticket size down" is a globally synchronous consumer microstructure — but the two markets express it in opposite ways
-
-This morning, **three analysts** independently saw the **same microstructure signal** in different datasets: transaction frequency up, average ticket size down.
-
-| Source | Sample | Signal |
-|---|---|---|
-| **altdata** morning brief | BofA weekly cards (through 5/10) | Total card spend -0.4% YoY, discretionary durables -3.7% (3rd consecutive weekly acceleration); HD/LOW home-improvement category -5.2% |
-| **china-macro** reply | PBOC bank-card data (2025Q1→Q4) | Tx count +33.1%, tx value +6.1%, **per-transaction value -20.3%**; household short-term loans -RMB 610.2bn |
-| **altdata** 618 week-1 | Douyin / Taotian / JD | Douyin GMV +32%, **small appliances +150%** (subsidy-driven), AI cleaning +160% |
-
-**Alignment**: Both US and China are showing "swipe more often, smaller per swipe" — a textbook weak-multiplier / defensive / staples-tilt pattern.
-
-**Untested tension**:
-- chief-strategist prices the US side as "bifurcation, discretionary collapse, WMT beneficiary" — short HD/TGT;
-- altdata's 618 data prices the China side as "subsidy + AI gadget-driven discretionary boom" — small appliances +150% does NOT fit a "trade-down" narrative;
-- china-macro prices the China side as "multiplier weakening," but concedes the "frequency rise" is driven by subsidies + on-demand retail.
-
-**The core question**: Is this **one global theme (trade-down + emotion-value consumption)** or **two unrelated stories**? If one theme, China's seemingly strong 618 print may be subsidy-front-loaded — H2 ticket compression will be more severe. If two themes, A-share small-appliance names (Midea, Dreame, Roborock) should be priced independently and need not conflict with the US discretionary short basket.
-
-**Why today**:
-- 5/19 HD, 5/20 TGT, 5/21 WMT earnings will lock down the US side;
-- The A-share leg needs a sensitivity analysis of "post-subsidy unit-price compression" against the 618 GMV print.
-
-**Suggested resolution**: Open a whiteboard card on "the microstructure of global consumer bifurcation," primary = ashare-strategist or thematic-researcher (cross-market); altdata supplies the data leg.
-
----
-
-### 1.3 [Contradiction · High] Real-estate weekly says "bottom is established" — credit watchlist flags 40%+ second-default risk in restructured paper
-
-Same day:
-
-| Analyst | Signal | Time anchor |
-|---|---|---|
-| **realestate** `property_sales_weekly` | 30-city new-home sales WoW **+8.5%**; "517" policy plus the Shenzhen template — "market bottom is essentially established" | Week 20 (5/11-5/17) |
-| **realestate** `mailbox→credit` | SOE 3-5Y MTNs at 280-300bps spread are "sentiment mispricing"; suggest allocating CR Land and Poly | Same morning |
-| **credit** `credit_watch_list` | Logan downgraded to CCC, Sino-Ocean to B+; **40%+** of restructured paper faces "second default"; **Vanke added to watchlist** | Same morning |
-
-**The crux**:
-- Turnover/sales is genuinely rebounding sequentially, but the **credit tail is still deteriorating**, and **Vanke being added to the watchlist** is non-trivial — it is the next breach of the 2024-2025 "quasi-SOE implicit guarantee" line;
-- realestate is simultaneously pitching a credit analyst on "SOE MTN mispriced long" while credit is observing "private re-default + Vanke under watch" — these two **should not coexist in the same risk budget**. At minimum, the SOE MTN allocation window must explicitly depend on the assumption that "private defaults do not spill over."
-
-**For**: policy-analyst's reply (Beijing > Shanghai for next loosening) supports continued sales recovery;
-**Against**: credit's two checkpoints — 6/18 (Jinke ABS) and 6/25 (Greenland) — are within two weeks; **spillover probability is non-zero**.
-
-**Why today**:
-- If SOE-developer MTN spreads widen further by Monday's close, realestate's "allocation window" thesis is rejected by the market BEFORE the sales weekly even gets time to play out;
-- Tuesday begins the May secondary-home high-frequency window — the next datapoint that forces realestate / policy / credit alignment.
-
-**Suggested resolution**: Put realestate-analyst and credit-analyst in the same whiteboard frame and ask them to **explicitly answer**: does the SOE MTN long require "no private re-default spillover through June" as a precondition?
-
----
-
-## 2. Worth recording, but not pitch-worthy on their own
-
-- **The same carbon-policy report is archived under BOTH `policy-analyst` and `esg-analyst`** (`carbon_policy_tracker`, byte-identical content). This is a workflow anomaly, not a content contradiction — route to `qa-manager` via the QA process, NOT a whiteboard topic.
-- **The 4-name home-decoration basket in realestate `whiteboard/e125a841`** (Monalisa, Arrow, Zbom, Tubaobao) has not yet been pressure-tested, but it's a sub-topic within a single thread and should be absorbed in the next card of that whiteboard — no need for a stand-alone pitch.
-- **The commercial-space whiteboard (9a0d34fd) is already self-closed**: industrials (card-06) → tmt (card-07) → chief-strategist (card-08) completed a valuation-compression + timing loop. No editor intervention needed.
-
----
-
-## 3. Summary (one line)
-
-The two sharpest contradictions this morning — **the attribution fight over AI-capex cuts** and **the property "sales bottom" vs the credit "second-default" call** — both demand an explicit answer within 24 hours, otherwise **Monday's position adjustments would be built on two mutually-contradicting narratives**. The third item (US/China consumer "frequency up, ticket down" symmetry) is a longer setup, but the HD/TGT/WMT earnings window between tonight and Wednesday will deliver half the answer.
-
----
+## Follow-up Requests
 
 ```json
 {"follow_ups":[
- {"to":"chief-strategist","subject":"AI Capex 下修：误读还是物理误归因","question":"在 whiteboard:c1d5c950 你 (card-01) 把卖方对 MSFT/META/GOOGL 2H26 Capex 的下修读为'财务噪声、物理信号未减速'，但 energy-analyst (card-02) 同日把这同一下修读为'真实反映 LPT 36-60 个月交付瓶颈、即钱花不出去'。这两种解读对应不同的仓位选择（前者支持回补 TMT 半导体低配；后者只支持长 IPP/变压器/带电 IDC，不必反向加 TMT）。请显式选边并给出 2026Q2-Q3 内可证伪的标尺（如：哪个公用事业 / 哪批 IDC 项目通电节奏会作为判定指标）。","priority":"high"},
- {"to":"ashare-strategist","subject":"全球消费'频次升、客单价降'对称性","question":"altdata (BofA 5/10 周卡)、china-macro (PBOC 2025Q4 单笔 -20.3%) 与 altdata 618 首周（抖音 GMV +32%、小家电 +150%）三份独立数据共同呈现一个'刷卡频次上升、单笔金额下降'的微观结构。但美国侧被定价为可选崩塌（HD/TGT 负向意外）、A 股侧被定价为国补 + AI 驱动的小家电爆发。请评估：这是同一个全球 trade-down 主题的两端表达，还是两个独立现象？若为同一主题，618 后期（6 月下旬）的小家电单价压缩弹性如何定价；若为两个，A 股小家电篮子（美的、追觅、石头、小米）是否应与 US 离散空头篮子独立运作，建议 6 个月仓位配比。","priority":"high"},
- {"to":"chief-risk","subject":"房地产'销售底'与'重组债二次违约'同存的风险预算","question":"今晨 realestate-analyst 在 property_sales_weekly 宣布'30 城销售底已确立 (WoW +8.5%)'并在 mailbox 中提示央国企 3-5Y MTN (华润、保利) 280-300bps 利差为'情绪错杀配置窗口'；同一上午 credit-analyst 在 credit_watch_list 把龙光下调至 CCC、远洋至 B+，并将万科加入观察名单，并指出 40% 已重组债面临二次违约（6/18 金科、6/25 绿地为下一对观察点）。具体请压力测试：央国企 MTN 多头仓位（建议 3-5% 风险预算）能否在'6 月民营二次违约外溢至万科估值'的情景下保持，若不能，破位的具体触发条件是什么（如 万科境内 PPN 估值收益率超过哪个阈值、或央国企 MTN 利差日内走阔超过多少 bps）？","priority":"high"}
+ {"to":"industrials-analyst","subject":"Investigation into Domestic Alternatives for Semiconductor Equipment Maintenance","question":"Regarding the risk of BIS restricting field services and software license renewals, please investigate the inventory months for critical spare parts at top domestic fabs (e.g., SMIC, Hua Hong), and the capability of domestic third-party maintenance teams to service existing DUV/Etching equipment.","priority":"high"},
+ {"to":"energy-analyst","subject":"Validation of QD Connector Bottlenecks in Liquid Cooling Supply Chain","question":"Please verify the actual lead times for Quick Disconnect (QD) connectors and cold plate manifolds from Vertiv and Taiwanese cooling leaders, and whether there are mass-produced domestic dielectric fluid solutions that bypass 3M PFAS restrictions.","priority":"normal"}
 ]}
 ```
 
+## Whiteboard Pitches
+
 ```json
 {"whiteboard_pitches":[
- {"topic":"AI Capex 下修是误读还是物理误归因","topic_en":"Are sell-side AI capex cuts a misread or a misattributed physical signal","question":"卖方对 MSFT/META/GOOGL 2H26 Capex 的下修：chief-strategist 读为'财务噪声'要求暂停 TMT 低配；energy-analyst 读为'真实物理瓶颈、钱花不出去'。哪一种归因对，决定了下一步是回补 TMT 半导体还是只加 IPP/变压器/带电 IDC 单腿。","question_en":"Sell-side cuts to MSFT/META/GOOGL 2H26 capex: chief-strategist reads them as 'financial noise, physical signal intact' and asks to pause the TMT underweight; energy-analyst reads the same cut as 'real physical bottleneck, money cannot be spent'. Which attribution is right decides whether the next move is unwinding the TMT-semi underweight or only adding IPPs / transformers / powered IDCs as a single leg.","suggested_analyst_id":"chief-strategist","rationale":"今早同一白板内出现两位主级分析师对同一现象的方向性相反读数，且 NVDA 财报与 META/MSFT 投资者日在 5 月底前依次落地——24 小时内不解决会传导到周一仓位。","priority":"high"},
- {"topic":"中美消费'频次升、客单价降'是同一主题还是两个独立现象","topic_en":"Is the US-vs-China 'higher frequency, lower ticket size' pattern one global theme or two unrelated phenomena","question":"BofA 周卡（美）单笔走弱 + PBOC 卡数据（中）单笔 -20.3% + 618 首周抖音 GMV +32% / 小家电 +150% 同时出现。美国端被定价为可选崩塌、中国端被定价为国补 + AI 驱动的可选爆发——是同一个全球 trade-down 主题的两个表达，还是两个独立现象？","question_en":"BofA weekly cards (US ticket size weakening) + PBOC card data (CN per-transaction -20.3%) + Douyin 618 week-1 GMV +32% / small-appliance +150% all appeared in the same morning. The US side is being priced as discretionary collapse; the China side as subsidy-and-AI-driven discretionary boom. Is this one global trade-down theme expressed in two ways, or two unrelated stories?","suggested_analyst_id":"ashare-strategist","rationale":"跨市场宏观-消费主题、需要 6 个月仓位级回答；本周 HD/TGT/WMT 财报与 6 月底 618 末段单价压缩是两个并行的验证窗口，需要在白板上对齐口径再分腿。","priority":"normal"},
- {"topic":"房地产'销售底确立'与'重组债二次违约 40%+'能否在同一组合中并存","topic_en":"Can 'property sales bottom established' and 'restructured-bond second-default at 40%+' coexist in the same book","question":"realestate-analyst 今晨同时给出'30 城 WoW +8.5%、底部确立'与'央国企 3-5Y MTN 错杀'的多头思路；credit-analyst 同上午把龙光/远洋再降级、万科入观察、指出 6/18-6/25 两个二次违约观察点。央国企 MTN 多头是否依赖'民营违约不外溢'这一暗含假设？","question_en":"This morning realestate-analyst simultaneously published '30-city WoW +8.5%, bottom established' and a long thesis on SOE 3-5Y MTNs as 'mispriced at 280-300bps'. The same morning credit-analyst downgraded Logan and Sino-Ocean again, added Vanke to the watchlist, and flagged 6/18 (Jinke ABS) and 6/25 (Greenland) as the next second-default checkpoints. Does the SOE MTN long thesis implicitly assume that private-developer defaults will not spill over?","suggested_analyst_id":"ashare-strategist","rationale":"销售面 / 信用面同日反向；6 月付息密集窗口将在两周内强制裁决；需要在白板上做风险预算-级别的对齐，否则地产多空两条腿会在同一组合里互相抵消。","priority":"high"}
+ {"topic":"边缘推理：云端电力压力的减压阀还是倍增器？","topic_en":"Edge Inference: Cloud Power Relief or Demand Multiplier?","question":"随着智能体负载在边缘端爆发，其带来的总电气化算力足迹增长是否会抵消边缘卸载对中心机房的电力节省？","suggested_analyst_id":"energy-analyst","rationale":"TMT 与能源分析师在边缘 AI 的电力影响上存在根本性逻辑矛盾，需通过跨行业建模澄清。","priority":"high"}
 ]}
 ```
 
@@ -327,76 +236,78 @@ The two sharpest contradictions this morning — **the attribution fight over AI
 
 ## ⚖️ Post-Close Contradiction Sweep
 
-# Post-Close Analyst Contradiction Sweep and Tomorrow Pitch Set (2026-05-18)
+# Post-Close Contradiction Sweep: Unreconciled Positions Before Tomorrow's Open (Editor's Lens)
 
-## 1. Input Anchor and Priority Conclusions
+- **Date anchor:** 2026-05-19 (shell `date +%Y-%m-%d`)
+- **Scope:** all 25 analyst deliverables archived today (`recent_reports.md`, ~42k chars), including chief-strategist, A-share strategist, sentiment, thematic, TMT, policy, materials, energy, global-macro, industrials and social-media; plus this editor's own 01–06 upstream files and the QA review.
+- **Bar:** pitch only where the team's evening stance diverges in a way that primes tomorrow-morning risk. Silence is fine.
+- **Bottom line:** three contradictions worth reconciling before the Asia open, two thesis upgrades/downgrades nobody formally registered, and three topics that clear the Monday-tier whiteboard bar.
 
-- Date anchor: every reference to “today,” “tomorrow,” or “previous trading day” in this report resolves to the shell date `2026-05-18`.
-- Upstream source: I fetched and read `recent_reports.md`, a 1,092-line bundle; the analysis below cites only analyst outputs and embedded sources from that file.
-- Editor’s conclusion: we do not need another generic “bullish or bearish AI” debate tonight. The two live risks for tomorrow are narrower: **the market is conflating AI Capex fatigue with power-delivery bottlenecks**; **the A-share daily report’s “low-volume structural bull market” language needs to be reconciled with yellow-to-red risk and sentiment signals**.
+---
 
-| Priority | Topic | Editor’s Call | Tomorrow Risk |
-|---|---|---|---|
-| High | AI Capex fatigue vs. time-to-power repricing | Do not upgrade “CapEx fatigue” chatter into a fundamental demand downgrade; do upgrade power deliverability into a 2027 expectations discount variable | If tech gaps lower, the team may split between “buy the AI dip” and “Capex has peaked” |
-| High | A-share low-volume structural bull vs. crowded deleveraging | The index trend is not broken, but “structural bull” should not hide simultaneous cooling in margin, ETFs, and cross-border premium signals | If the Shanghai Composite loses its MA20 area tomorrow, strong tech chains can shift from rotation to forced reduction |
-| Medium | India total beta to supply-chain alpha | This divergence has largely been synthesized by `chief-strategist`; only a few unregistered local downgrades need editorial capture | Any “India electronics defense” language must be limited to export assembly, RE PPAs, and equipment toll booths, not broad India or local semis |
+## 1. Priority calls (ranked by tomorrow-open urgency)
 
-## 2. Cross-Analyst Divergences Not Fully Reconciled
+1. **AI-hardware is the most fractured stance inside the team right now, yet the editor's daily still carries a hard "OW AI/NGIT" recommendation — this is the single biggest, closest-to-the-open contradiction.** Chief-strategist's card 01 today calls it 60% style rotation / 40% local top, and explicitly forecasts "the crowded leader complex (AI compute / mega-cap platforms) drawing down 10–20% over 3–6 months." A-share strategist's card 02 stress-tests upward the local-top risk in AI hardware, storage, CPO and high-beta electronics. Sentiment's DSI prints **77.04 — Extreme Greed**. And 02_flows recorded **CNY 7.91 B net outflow from communication equipment**, with New Easun -CNY 2.61 B and T&S Communications -CNY 2.31 B individually. Despite all of this, 06_daily report's "next-day playbook" still says "maintain OW AI/NGIT." With NVDA pre-print (5/21) + 5/20 LPR + 5/20 FOMC stacked on top, that recommendation is the most easily-falsified opening position in the book.
+2. **A-share petrochemicals and the global oil-macro complex are now pricing in incompatible scenarios, and no analyst has explicitly flagged the gap.** Global-macro's card 01 pegs the near-term working range at **Brent $110–125/bbl**; energy's card 02 gives a **net distillate gap of 1.1–1.4 mb/d and an LSFO gap of 0.35–0.55 mb/d**, with the Singapore VLSFO crack widening from +$4.12/bbl on 4/17 to +$23/bbl on 5/06; materials' card 03 calls Asian naphtha crackers "cash-loss-making" today. But on the A-share side, Hengli Petrochemical printed -2.29% and the petrochemical complex sold off, with 03_theme_rotation attributing the move to "fading geopolitical risk premium." **Globally we're pricing in tight oil + tight middle distillates; A-shares are pricing in geopolitical relief — both can't be right.**
+3. **The "second migration" narrative for semiconductor upstream materials was directly overturned card-to-card today, but neither the thematic report nor the editor's daily reflects the reversal.** TMT's card 04 argues "ethane-shield" economics is driving advanced fab capacity to North America, Japanese specialty-chemical incumbents are pushing 20–30% price hikes, and US-based fabs are "structurally safer." Policy's card 05, immediately on top of it, stress-tested that head-on: probability of *full* upstream-materials decoupling by 2028 = **25–30% (low)**; probability of a China-vs-allies dual-track by 2028 = **75–85% (high, already in motion)**. The two cards on the same whiteboard contradict each other, but downstream the thematic / editorial layer is still treating "domestic semi-materials substitution accelerates" as an implicit catalyst — any cross-strait or cross-Pacific materials headline tomorrow risks being mis-traded.
 
-### 2.1 AI: fundamentals do not confirm a Capex cut, but the market is trading Capex fear
+---
 
-| Evidence Direction | Analyst Output | Key Numbers / Wording | Editor’s Ruling |
-|---|---|---|---|
-| Against a broad Capex cut | `chief-strategist` AI power strategy card | Microsoft CY2026 Capex around `$190bn`, Meta `$125-145bn`, Amazon around `$200bn`, Alphabet `$180-190bn`; the conclusion was to “reject a simple Capex slowdown narrative without rejecting execution-timing risk” | This is the fundamental anchor and should not be displaced by after-hours rumor |
-| Supports execution-timing discount | `utilities-analyst` power bottleneck card | U.S. AI incremental load by end-2028 at `47-58 GW` versus only `28-36 GW` of 2026-2028 net new dispatchable MW; LPT lead times of `120-210 weeks`, HV breaker lead times of `90-130 weeks` | This is not demand collapse; it is a time-to-power discount |
-| Supports tomorrow sentiment pressure | `sentiment-analyst` and `social-media-analyst` | After the late selloff, retail narratives swung from “AI compute demand re-accelerating” to “CapEx fatigue”; 0DTE call buying persisted, while unconfirmed posts claimed some companies were cutting second-half orders | This is an opening-risk issue, not a formal thesis downgrade |
+## 2. Cross-analyst contradiction ledger
 
-**Editor handling:** Tomorrow morning’s common language should be: “AI demand has not been falsified; valuation is being segmented by energized capacity, interconnection queues, and crowded positioning.” Do not write “CapEx fatigue” as a fundamental conclusion unless new company guidance or order data appears.
+| # | Topic | Stance A | Stance B | Who flagged it / who didn't | Tomorrow-open risk |
+|---|---|---|---|---|---|
+| C1 | AI-hardware positioning | 06_daily: maintain OW AI/NGIT | chief + A-share strategist + 02_flows: crowded, leaking, local-top risk upgraded | Chief and A-share each flagged it independently; the editor's daily did not reconcile | **High** — any bad NVDA headline before 5/21 amplifies downside elasticity |
+| C2 | Petrochemicals / oil | global-macro + energy + materials: Brent $110–125, tight distillate / LSFO, Asian crackers cash-negative | 03_theme: geopolitical premium fading → petchem down; A-share chemicals -2.29% today | Nobody publicly called the dislocation | **Medium-high** — if overnight oil / VLSFO firms, A-share petchem opens into a reverse re-rating |
+| C3 | Semi materials decoupling path | TMT card 04: cost-driven migration to NA; Japanese specialty +20–30% is structural | Policy card 05: *policy* is the constraint, not cost; the decoupling line cuts through China, not Asia broadly | On-whiteboard the conflict was flagged (Card 05 = stress test of Card 04); thematic + editorial layer didn't digest it | **Medium** — domestic semi-materials policy-catalyst expectations may be mispriced |
+| C4 | Northbound flows | 02_flows: under HKEX's 2024 disclosure regime, intraday net-northbound is not verifiable | 03_theme + 06_daily: still use "foreign buying" rhetoric | 02 flagged the constraint; upstream narratives haven't strictly observed it | **Low**, but the team needs a single voice if SB headlines arrive tomorrow |
+| C5 | STAR 50 closing print | 01 / 04 / 05 / 06: **2,149.25 / +2.62%** | 03_theme: **1,775.13 / +3.81%** | QA flagged it, 06 reconciled internally; outside readers seeing only 03 will mis-read | **Low** internally, but if a trading desk cites 03 in isolation tomorrow, expect confusion |
 
-### 2.2 A-shares: the daily report says trend intact, while the risk panel already blocks one-way add risk
+---
 
-| Evidence Direction | Analyst / File | Key Numbers / Wording | Editor’s Ruling |
-|---|---|---|---|
-| Trend intact | `daily-report-editor` daily report | Shanghai Composite `4131.53`, `-0.09%`; Shenzhen Component `15530.23`, `-0.20%`; ChiNext `3914.88`, `-0.36%`; STAR Composite `+0.95%` | At the index level, this was cooling rather than trend break |
-| Liquidity slowing | Daily editorial calibration and risk panel | Shanghai/Shenzhen/Beijing turnover `RMB 2.9174tn`, down `RMB 453.0bn`; equity ETF turnover `RMB 233.949bn`, `-19.37%`; systemic risk score `52/100`, warm yellow light | Trading language should shift from “keep chasing” to “only buy tech chains with verified absorption” |
-| Crowding trigger | `ashare-strategist` | The A-share AI compute chain sits between a Big Fund III “policy floor” and an expanded U.S. export-control “supply ceiling”; if the 20-day margin-balance averages of the “four thousand-yuan stocks” break together, rotation has become forced deleveraging | This trigger belongs in tomorrow’s risk dashboard |
+## 3. Thesis upgrades / downgrades that nobody formally registered
 
-**Editor handling:** Tomorrow’s A-share language should tighten from “low-volume structural bull market” to “low-volume structural bull market entering a crowding-verification window.” Watch Shanghai MA20 at `4129.27`, the five-day low at `4114.09`, the session low at `4108.60`, and whether turnover returns above `RMB 3tn`.
+| Direction | Content | Whose work implies it | Why "unregistered" | Where to put it |
+|---|---|---|---|---|
+| **Downgrade** (implicit) | The unqualified "OW AI hardware / storage / CPO" call → should be reframed as "hold + crowding watch + leader-level take-profit discipline" | A-share strategist (explicitly raises local-top risk), with chief's 60/40 style-switch call as macro support | The editor's daily 06 didn't adjust the next-day playbook | Tomorrow's daily must mark the downgrade in the "next-day playbook" section and state the reason |
+| **Downgrade** (implicit) | The policy-catalyst expectation in the "domestic semi-materials substitution accelerates" narrative | Policy card 05: <8% of the CHIPS Act's $52.7 B goes into materials/substrate; the real decoupling line cuts through China, not Asia broadly | TMT / thematic / editorial layer have not internalized it | Thematic rotation and policy tracker need to recalibrate |
+| **Upgrade** (half-registered) | "Compute-power coupling + liquid cooling + AIDC physical infrastructure" promoted to a leadership theme | Energy card 03 (liquid cooling / >300 MW campus bottleneck) + 02_flows (power inflows CNY 4.89 B) | 03_theme half-registered it but kept the weight below AI compute; research project rp_8ee890a3923e4b45 already reaches this conclusion | The editor's daily should elevate power / AIDC from "satellite theme" to a co-equal main line with AI hardware |
+| **Upgrade** | Marine economy industrial chain as a low-coverage, exploitable mid-horizon theme | Industrials' card 01 (148 covered tickers, only 7/148 activated in past 30 days) | Did not enter today's 03_theme or 06_daily | Weekly thematic pool should add marine economy to the "research queue" |
+| **Unchanged** | Structural tightness in oil / VLSFO / distillates | Global-macro / energy / materials in agreement; A-shares already decoupled | The global chain is internally consistent; the A-share chain hasn't followed | See C2 — tomorrow's flow-and-sentiment section must call out the dislocation |
 
-### 2.3 India: the broad divergence has been synthesized, but several local downgrades need to be registered
+---
 
-| Subtopic | Today’s Output | Editor Registration |
-|---|---|---|
-| Broad India beta | `global-macro` reported a roughly `2%` gap between official GDP and night-light / electricity proxies, with the real trajectory closer to `5.5%` rather than `7.5%+`; Nifty 50 valuation above `22x` faces compression risk | Registered downgrade: broad India moves from growth beta to neutral |
-| Electronics / digital defense legs | `tmt-analyst` supported but revised the thesis: smartphone assembly has high confidence, digital infrastructure is not defensive against domestic slowdown, and India semis are a `2028-2030` option rather than a 2026 cash-flow defense | Must be explicit in daily language: do not treat “India semis” as a 2026 defensive position |
-| Power and carbon | `energy-analyst` required a `200-300 bp` power-risk premium; `policy-analyst` narrowed CBAM from a direct electronics tax to a shadow carbon cost, calculating `EUR 0.0536/kWh`, or about `5.4 euro cents/kWh`, from `EUR 75.36/tCO2` and `0.7117 tCO2/MWh` | Local thesis downgrade: CBAM is not a 2026 direct tax on electronics, but the shadow cost remains real |
-| Upstream localization | `china-macro` and `tmt-analyst` point to FY30 IC substrate localization of `0-3%`, SiC/GaN of `0-2%`, and battery-material value added of `10-18%`, leaving India as an ATMP enclave | Already upgraded by `chief-strategist` into a “three-market supply-chain alpha” frame: irreplaceable A-share upstreams, global equipment toll booths, and India RE PPA / infrastructure enablers |
+## 4. Monday-tier whiteboard candidates (where uncertainty is genuinely large)
 
-## 3. Thesis Changes That Need Registration or Renaming
+1. **"60/40 style rotation" vs. "AI hardware tops out outright" — turn the evening's split into a formal debate.** Triggers: chief and A-share point the same direction at different magnitudes; the editor's daily still OW; DSI in extreme greed; NVDA pre-print incoming. Suggested host: chief-strategist.
+2. **Is A-share petrochemicals mis-priced relative to global oil?** Triggers: same day, global chain pricing Brent $110–125 + 1.1–1.4 mb/d distillate gap, A-share petchem -2.29%. Suggested host: china-macro (or A-share strategist), with energy / materials / global-macro feeding cards.
+3. **Semi upstream-materials decoupling: "policy track" vs "cost track" — pick one.** Triggers: the head-on Card 04 vs Card 05 conflict, with direct implications for the domestic-substitution complex. Suggested host: thematic-researcher, with policy / TMT / materials as the three debaters.
 
-| Type | Old Wording | New Wording | Tomorrow Action Needed |
-|---|---|---|---|
-| Downgrade | “CapEx fatigue = AI demand peak” | “After-hours sentiment is trading CapEx fatigue, but the evidence points more to a time-to-power discount” | Yes: avoid demand-downgrade headlines tomorrow morning |
-| Upgrade | “AI Capex beta” | “Alpha in energized capacity, interconnection position, HV equipment, and domestic transformer capacity” | Yes: the theme-rotation framework should place power-delivery assets inside the AI core |
-| Downgrade | “Low-volume structural bull can still be chased” | “Low-volume structural bull is entering a crowding-verification window” | Yes: reduce chase language if MA20 breaks or turnover remains below `RMB 3tn` |
-| Downgrade | “India electronics export defense” | “India smartphone assembly is defensive; digital infrastructure and semis cannot be generalized as defensive” | No: largely absorbed by the India workstream, but daily wording must be consistent |
-| Downgrade | “Direct electronics CBAM tax” | “In 2026 this is not direct electronics CBAM; it is a shadow cost from supplier scoring, RE100, and future expansion risk” | No: `policy-analyst` has narrowed the claim; just avoid restating the old version |
+---
 
-## 4. Tomorrow Follow-Up and Whiteboard Pitch
+## 5. Coordination asks
 
-### Morning Dashboard
+Before 09:00 tomorrow, the next editor cycle should:
+- explicitly register the "OW AI hardware → hold + crowding watch + take-profit discipline" downgrade in the next-day playbook;
+- explicitly register the A-share-petchem vs global-oil pricing dislocation in the flows and thematic sections;
+- explicitly register the Card 04 / Card 05 reversal in the policy tracker, so any cross-pacific materials headline tomorrow is not mis-interpreted.
 
-| Window | Signal to Watch | Interpretation Rule |
-|---|---|---|
-| Pre-open | Whether the “second-half order cuts” rumor keeps spreading across tech / AI | Without company guidance, treat it as sentiment risk only, not a fundamental rating change |
-| First 30 minutes | Whether Shanghai holds `4129.27` and turnover trends back toward `RMB 3tn` | Hold plus volume repair: rotation still works; break plus low volume: treat as forced deleveraging |
-| Full day | ETF main flow, margin balances, and the financing averages of high-priced AI-chain names | Use these to separate healthy rotation from crowding unwind |
-| This week | Whether power equipment, energized-capacity owners, data-center REITs, and independent power outperform GPU beta | Outperformance would confirm that the market is accepting time-to-power repricing |
+Two follow-up requests + two whiteboard pitches below.
 
-### Whiteboard Pitch
+---
 
 ```json
-{"whiteboard_pitches":[{"topic":"AI Capex疲劳还是time-to-power折价","topic_en":"AI Capex Fatigue or Time-to-Power Repricing","question":"明日若科技股低开，团队应把它解释为AI需求下修、资金拥挤去杠杆，还是电力交付瓶颈带来的估值分层？请统一可交易触发器。","question_en":"If tech gaps lower tomorrow, should the team treat it as an AI demand downgrade, crowded-position deleveraging, or valuation dispersion from power-delivery bottlenecks? Define the tradable triggers.","suggested_analyst_id":"chief-strategist","rationale":"今日基本面、情绪和风控口径已经分叉，若不统一，明早容易把可买的交付瓶颈折价误写成需求崩塌。","priority":"high"}]}
+{"follow_ups":[
+ {"to":"chief-strategist","subject":"AI 硬件拥挤交易：是否需要把'风格切换'结论显式落到 OW/EW/UW 持仓表上？","question":"你 5/19 的卡 01 给出 60% 风格切换 / 40% 局部顶部，并预期拥挤龙头组合 3–6 个月回撤 10%–20%。同日 ashare-strategist 上调 AI 硬件 / 存储 / CPO / 高贝塔电子的局部顶部风险；02_flows 录得通信设备主力净流出 79.12 亿、新易盛 -26.14 亿、天孚通信 -23.11 亿;DSI 站上 77.04 极度贪婪。但 06_每日日报 §明日策略仍写'维持超配 AI/NGIT'。请直接给出 5/20 开盘前的最新组合建议：AI 硬件 / 存储 / CPO 龙头是维持 OW（并解释为何与你的风格切换叙事兼容）、降为 EW（并给出降权幅度与止盈线）、还是分层（先降存储/CPO、后降算力）？请把答案落到一张 OW/EW/UW 表，并指明依赖触发哪些行情条件才会再变。","priority":"high"},
+ {"to":"china-macro","subject":"A 股石油化工与全球油价宏观的定价背离 — 哪边将被修正？","question":"global-macro 把 Brent 工作区间钉在 $110–125/bbl，energy 给出馏分油净缺口 1.1–1.4 mb/d 与 LSFO 净缺口 0.35–0.55 mb/d，materials Card 03 认定亚洲石脑油裂解装置进入现金亏损区。但 A 股 5/19 恒力石化 -2.29%、石油化工板块回调，03_theme 把它归因于'地缘溢价回落'。请评估：(1) 这一定价背离的边界条件是什么——A 股是否在交易 LPR/汇率/国内炼厂开工率而非全球油价？(2) 在 5/20 LPR + 5/20 FOMC 双事件窗口内，你认为哪一侧（全球油价 vs A 股石化）更可能在 5–10 个交易日内被重定价？(3) 给出一个具体可观察的'触发条件'指标列表（如新加坡 VLSFO 裂解价差再走阔多少、人民币突破多少、国内炼厂周度开工率变化），用于团队监控这一裂口收敛或扩大。","priority":"high"}
+]}
+```
+
+```json
+{"whiteboard_pitches":[
+ {"topic":"AI 硬件拥挤交易：风格切换还是局部顶部？","topic_en":"AI hardware crowding: style rotation or local top?","question":"chief-strategist 给 60% 风格切换 / 40% 局部顶部，ashare-strategist 显式上调 AI 硬件 / 存储 / CPO / 高贝塔电子的局部顶部风险，DSI 升至 77.04 极度贪婪，通信设备单日主力净流出 79.12 亿，但编辑稿仍保留 OW AI/NGIT 建议。请团队就以下问题正式定调：未来 1–3 个月，AI 硬件龙头组合应当持仓 OW / EW / UW，触发降权的具体条件是什么，组合内部（算力 / 存储 / CPO / 互联）应如何分层？","question_en":"Chief-strategist puts the call at 60% style rotation / 40% local top, A-share strategist explicitly upgrades the local-top risk in AI hardware, storage, CPO and high-beta electronics, sentiment DSI sits at 77.04 (extreme greed), and main-force flows showed CNY 7.9B net outflow from communication equipment on 5/19 — yet the editor's daily still keeps an OW on AI/NGIT. The team needs a formal call: over the next 1–3 months, should the AI-hardware leader complex be held OW / EW / UW, what concrete conditions trigger a downgrade, and how should the internal sleeves (compute / storage / CPO / interconnect) be tiered?","suggested_analyst_id":"chief-strategist","rationale":"团队傍晚立场已经分裂、且与编辑稿口径不一致，临近 NVDA pre-print 与 LPR/FOMC 事件窗口，必须在一次正式白板中合拢。","priority":"high"},
+ {"topic":"A 股石化与全球油价宏观的定价背离","topic_en":"A-share petrochemicals vs global oil macro: pricing dislocation","question":"global-macro 把 Brent 锚在 $110–125/bbl、energy 给出馏分油净缺口 1.1–1.4 mb/d 与 LSFO 净缺口 0.35–0.55 mb/d、materials 认定亚洲石脑油裂解进入现金亏损区；但 A 股 5/19 恒力石化 -2.29%、石油化工整体回调，03_theme 归因为'地缘溢价回落'。请团队回答：这是 A 股结构性折价，还是全球链定价过度？哪侧将在 1–2 周内被修正？给出可观察的边界条件清单（VLSFO 裂解价差、人民币、国内炼厂开工率、LPR/FOMC 路径）。","question_en":"Global macro pegs Brent at $110–125/bbl, energy flags a 1.1–1.4 mb/d distillate gap and a 0.35–0.55 mb/d LSFO gap, and materials says Asian naphtha crackers are now cash-negative — yet on 5/19 Hengli Petrochemical fell 2.29% and the broader A-share petrochemicals complex sold off, with the thematic report attributing it to 'geopolitical risk premium fading.' Is this a structural A-share discount or a global-side overpricing? Which side gets re-rated within 1–2 weeks? Provide a watchlist of boundary conditions (VLSFO crack, CNY, domestic refinery utilization, LPR / FOMC path) the team should monitor.","suggested_analyst_id":"china-macro","rationale":"全球链与 A 股链在同一商品上同日出现互不相容的定价基准，又紧贴 LPR/FOMC 事件窗口，是一次有具体可证伪边界的跨分析师辩论。","priority":"high"}
+]}
 ```
 
 ---
