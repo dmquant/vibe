@@ -1,13 +1,13 @@
 ---
 title: "Daily Research Brief — 2026-05-19"
-description: "AI Institute morning brief: 5 analyst sections, 14 deep research threads, 26 handoffs."
+description: "AI Institute morning brief: 5 analyst sections, 14 deep research threads, 29 handoffs."
 pubDate: "2026-05-19"
 category: "brief"
 lang: "en"
 ---
 
 *Generated 2026-05-19 by the AI Institute's 26-analyst multi-agent research pipeline.*
-*Morning Brief: 5 sections · 14 deep research threads · 26 cross-desk handoffs*
+*Morning Brief: 5 sections · 14 deep research threads · 29 cross-desk handoffs*
 
 
 ## 📑 Table of Contents
@@ -19,6 +19,11 @@ lang: "en"
   - [Sentiment & Flows](#sentiment-flows)
   - [Risk Watch](#risk-watch)
 - [🎯 Analyst Spotlights](#analyst-spotlights)
+  - [Global Markets Overview](#global-markets-overview)
+- [One-line takeaway](#one-line-takeaway)
+- [1. Major Index Closes](#1-major-index-closes)
+- [2. Commodities & FX](#2-commodities-fx)
+  - [Commodities (## Data Downgrade: `oil_prices` topic returned 404 — falling back to web_search)](#commodities-data-downgrade-oil_prices-topic-returned-404-falling-back-to-web_search)
   - [FX Majors](#fx-majors)
 - [Executive Summary](#executive-summary)
 - [1. Major FX Table](#1-major-fx-table)
@@ -27,12 +32,6 @@ lang: "en"
 - [Executive Summary](#executive-summary-1)
 - [1. Sector ETF Closing Table](#1-sector-etf-closing-table)
 - [2. Style and Rotation Read](#2-style-and-rotation-read)
-  - [Global Markets Overview](#global-markets-overview)
-- [Executive Summary](#executive-summary-2)
-- [1. Major Index Closes](#1-major-index-closes)
-- [2. Commodities & FX](#2-commodities-fx)
-- [3. US Treasury Yield Curve](#3-us-treasury-yield-curve)
-- [4. Key Event Interpretation](#4-key-event-interpretation)
   - [Morning Macro Brief](#morning-macro-brief)
 - [1. House View in One Line](#1-house-view-in-one-line)
 - [2. Prioritised Calls](#2-prioritised-calls)
@@ -170,6 +169,34 @@ lang: "en"
 
 ## 🎯 Analyst Spotlights
 
+### Global Markets Overview
+
+# Overnight Overseas Markets Brief (Morning Meeting — 2026-05-19)
+
+## One-line takeaway
+**Risk-off overnight.** US 10Y yield hit a 15-month high of 4.61%, S&P 500 and Nasdaq closed lower with tech leading the decline (S&P Tech sector −1.1%), while the Dow eked out +0.32% on a defensive/energy rotation. WTI swung from an intraday $108 down to ~$105 on an Iran sanctions-waiver headline; VIX rose to 17.82. **Drivers = inflation + long-end yields + geopolitical oil**, all hitting simultaneously. Global long bonds sold off in sympathy (Japan 30Y JGB at an all-time high), equity valuations under pressure; dollar firmer (DXY 98.95).
+
+## 1. Major Index Closes
+
+| Index | Close | Note | Source |
+|---|---|---|---|
+| S&P 500 | **7,403.10** | −0.07%, tech weak intraday but stabilised into the close | [Internal API markets_overnight_us / FMP] |
+| Nasdaq-100 (NDX) | **28,994.37** | Nasdaq Composite at 26,090.73 (−0.51%) on tech selling | [Internal API markets_overnight_us / FMP] |
+| Dow Jones | **49,686.11** | +0.32%, defensive/energy rotation | [Internal API markets_overnight_us / FMP] |
+| Nikkei 225 | **60,815.95** | Pressured by record-high 30Y JGB yields | [Internal API markets_overnight_us / FMP] |
+| Hang Seng | **25,675.18** | Late-session drop of 1.22% on US tech read-across + geopolitics | [Internal API markets_overnight_us / FMP] [CNBC](https://www.cnbc.com/2026/05/18/asia-pacific-markets-today-live-updates-nikkei-225-hang-seng-index-kospi-nifty-50.html) |
+| VIX | **17.82** | Slightly higher, but not yet in panic territory | [Internal API markets_overnight_us / FMP] |
+
+## 2. Commodities & FX
+
+### Commodities (## Data Downgrade: `oil_prices` topic returned 404 — falling back to web_search)
+
+| Asset | Level | Note | Source |
+|---|---|---|---|
+
+*(see full report)*
+
+
 ### FX Majors
 
 # Major FX Daily
@@ -230,44 +257,6 @@ Source: internal API `sector_etf_closes_us` (FMP, confidence=high, is_stale=fals
 
 **Offense vs defense.** The offensive trio XLK (174.36) / XLY (116.32) / XLC (116.98) is soft, while on the defensive side XLP (85.90) is relatively firm and XLV (145.72) remains in the "weakening" quadrant. Capital is **bypassing classic defensives and going straight to real assets** — a hallmark **late-cycle / mild-stagflation** signal rather than a recession dress rehearsal.
 
-
-*(see full report)*
-
-
-### Global Markets Overview
-
-# Overnight Global Macro Snapshot (2026-05-18)
-
-## Executive Summary
-The transition of Federal Reserve leadership (Kevin Warsh succeeding Jerome Powell) combined with escalating Middle East geopolitical tensions has reinforced "higher-for-longer" rate expectations. US Treasury yields remain elevated, leading to a modest pull-back in equities from recent record highs.
-
-## 1. Major Index Closes
-| Index | Close | Status / Move | Source |
-| :--- | :--- | :--- | :--- |
-| S&P 500 (SPX) | 7,408.50 | Sustained Highs | |
-| Nasdaq 100 (NDX) | 29,125.20 | Tech Volatility | |
-| Dow Jones (DOW) | 49,526.17 | Industrials Resilient | |
-| Nikkei 225 (N225) | 61,409.29 | Early Asia Proxy | |
-| Hang Seng (HSI) | 25,962.73 | Sentiment Stable | |
-| VIX Index | 18.43 | Volatility Edging Up | |
-
-## 2. Commodities & FX
-- **Oil**: Brent at **$109.26**, WTI at **$105.42**. Tensions in Iran and the US naval blockade continue to support high price floors. 
-- **Gold**: Trading at **$4,547.77**. Caught between safe-haven demand and the weight of high real rates. 
-- **Forex**: US Dollar Index (DXY) at **99.278**; EURUSD at **1.16226**; USDJPY at **158.767**. 
-
-## 3. US Treasury Yield Curve
-| Tenor | Yield (%) | Note |
-| :--- | :--- | :--- |
-| 2Y | 4.09% | Reflecting near-term rate outlook |
-| 5Y | 4.26% | |
-| 10Y | 4.59% | The Global Anchor |
-| 30Y | 5.12% | |
-| **2s10s Spread** | **50 bps** | Curve continues its bear-steepening bias |
-
-## 4. Key Event Interpretation
-- **Fed Chair Transition**: Kevin Warsh officially assumed the role of Fed Chair on May 15. Markets are hyper-focused on whether his maiden policy statement will pivot or double-down on Powell’s "higher-for-longer" mantra.
-- **China Economic Data**: April Industrial Production grew 6.0% YoY (beating estimates), but Retail Sales grew only 1.9%, highlighting a "K-shaped" recovery where manufacturing outpaces domestic consumption.
 
 *(see full report)*
 
@@ -467,8 +456,8 @@ Wrote whiteboard/d2023541 4911 41f2 8e5e f90ab157b863/card 10/report.en.md (3276
 
 | # | Topic | Analyst | Progress |
 |---|-------|---------|----------|
-| 1 | 自动驾驶单位经济拐点是否够格成为 2026 H2 主题 | Chief Strategist | 1/8 |
-| 2 | AI Capex 下修是误读还是物理误归因 | Chief Strategist | 4/8 |
+| 1 | AI Capex 下修是误读还是物理误归因 | Chief Strategist | 6/8 |
+| 2 | 自动驾驶单位经济拐点是否够格成为 2026 H2 主题 | Chief Strategist | 1/8 |
 | 3 | AI 基础设施从“性能博弈”转向“能耗博弈” | Asset Allocator | 4/8 |
 
 
@@ -476,6 +465,10 @@ Wrote whiteboard/d2023541 4911 41f2 8e5e f90ab157b863/card 10/report.en.md (3276
 
 | Subject | Route | Priority |
 |---------|-------|----------|
+| 长债收益率破高的配置应对 | Global Macro Analyst → Chief Strategist | normal |
+| Kevin Warsh 首次 FOMC（6 月）政策反应函数与研究院模型冲突点 | Daily Report Editor → Chief Economist | normal |
+| Yen carry 解除作为独立 trigger，研究院现行三大模型的并行冲击路径 | Daily Report Editor → Chief Strategist | normal |
+| UAE Barakah 核电站袭击：单次冲击 vs 结构性海湾核能风险池 | Daily Report Editor → Global Macro Analyst | normal |
 | AI 电力主题的政策尾部风险 | Thematic Researcher → Global Macro Analyst | normal |
 | TSMC Arizona Fab 21 热信号超指引的 NA 客户归因 | Alt Data Analyst → TMT Analyst | normal |
 | Robotaxi unit-economics 转正是否构成新增长主题入场点 | Alt Data Analyst → Chief Strategist | normal |
@@ -487,10 +480,6 @@ Wrote whiteboard/d2023541 4911 41f2 8e5e f90ab157b863/card 10/report.en.md (3276
 | 利差对人民币汇率压力评估 | Bond Analyst → FX Strategist | normal |
 | 通缩压力与利率下限 | Bond Analyst → China Macro Analyst | normal |
 | 6月化债再融资节奏与流动性影响 | Credit Analyst → China Macro Analyst | normal |
-| Directional call on the AI-capex theme | Chief Risk Officer → Chief Strategist | normal |
-| Oil → core inflation → Fed reaction function half-elasticity | Chief Risk Officer → Global Macro Analyst | normal |
-| AI 资本开支主线的方向性判断 | Chief Risk Officer → Chief Strategist | normal |
-| 油价→核心通胀→Fed 反应函数的传导半弹性 | Chief Risk Officer → Global Macro Analyst | normal |
 
 
 ---

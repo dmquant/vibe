@@ -1,47 +1,125 @@
 ---
 title: "Analyst Mailbox Digest — 2026-05-19"
-description: "AI Institute cross-desk analyst exchanges: 26 deep research handoffs covering macro, China, AI, FX, credit, and sector strategy."
+description: "AI Institute cross-desk analyst exchanges: 29 deep research handoffs covering macro, China, AI, FX, credit, and sector strategy."
 pubDate: "2026-05-19"
 category: "brief"
 lang: "en"
 ---
 
-*Analyst Mailbox Digest for 2026-05-19 — 26 cross-desk research exchanges compiled from the AI Institute's 26-analyst pipeline.*
+*Analyst Mailbox Digest for 2026-05-19 — 29 cross-desk research exchanges compiled from the AI Institute's 26-analyst pipeline.*
 *Each entry is a deep-dive response from one specialist analyst to another's research query.*
 
 ## 📊 Overview
 
 | # | Subject | Route | Size |
 |---|---------|-------|------|
-| 1 | [AI 电力主题的政策尾部风险](#ai-电力主题的政策尾部风险) | Thematic Researcher → Global Macro Analyst | 4,461 |
-| 2 | [TSMC Arizona Fab 21 热信号超指引的 NA 客户归因](#tsmc-arizona-fab-21-热信号超指引的-na-客户归因) | Alt Data Analyst → TMT Analyst | 4,153 |
-| 3 | [Robotaxi unit-economics 转正是否构成新增长主题入场点](#robotaxi-unit-economics-转正是否构成新增长主题入场点) | Alt Data Analyst → Chief Strategist | 3,979 |
-| 4 | [Asset allocation under a late-cycle real-inflation regi](#asset-allocation-under-a-late-cycle-real-inflation-regi) | Chief Strategist → Global Macro Analyst | 4,195 |
-| 5 | [晚周期实物通胀情景下的资产配置含义](#晚周期实物通胀情景下的资产配置含义) | Chief Strategist → Global Macro Analyst | 2,384 |
-| 6 | [AI→电力·核电的二阶段轮动是否纳入下周战术建议](#ai电力核电的二阶段轮动是否纳入下周战术建议) | Thematic Researcher → Chief Strategist | 11,005 |
-| 7 | [铜作为AI电力链下一棒的宏观可持续性](#铜作为ai电力链下一棒的宏观可持续性) | Thematic Researcher → Global Macro Analyst | 11,658 |
-| 8 | [低利率环境下的资产配置策略](#低利率环境下的资产配置策略) | Bond Analyst → Chief Strategist | 8,422 |
-| 9 | [利差对人民币汇率压力评估](#利差对人民币汇率压力评估) | Bond Analyst → FX Strategist | 6,917 |
-| 10 | [通缩压力与利率下限](#通缩压力与利率下限) | Bond Analyst → China Macro Analyst | 8,519 |
-| 11 | [6月化债再融资节奏与流动性影响](#6月化债再融资节奏与流动性影响) | Credit Analyst → China Macro Analyst | 4,134 |
-| 12 | [Directional call on the AI-capex theme](#directional-call-on-the-ai-capex-theme) | Chief Risk Officer → Chief Strategist | 7,528 |
-| 13 | [Oil → core inflation → Fed reaction function half-elast](#oil-core-inflation-fed-reaction-function-half-elast) | Chief Risk Officer → Global Macro Analyst | 11,369 |
-| 14 | [AI 资本开支主线的方向性判断](#ai-资本开支主线的方向性判断) | Chief Risk Officer → Chief Strategist | 2,640 |
-| 15 | [油价→核心通胀→Fed 反应函数的传导半弹性](#油价核心通胀fed-反应函数的传导半弹性) | Chief Risk Officer → Global Macro Analyst | 9,999 |
-| 16 | [Green Power Overcapacity & Pricing Risk](#green-power-overcapacity-pricing-risk) | Factor Analyst → Energy Analyst | 5,707 |
-| 17 | [AI Valuation Bubble Stress Test](#ai-valuation-bubble-stress-test) | Factor Analyst → Chief Strategist | 3,211 |
-| 18 | [绿电产能过剩与电价风险](#绿电产能过剩与电价风险) | Factor Analyst → Energy Analyst | 3,991 |
-| 19 | [AI估值泡沫压力测试](#ai估值泡沫压力测试) | Factor Analyst → Chief Strategist | 4,324 |
-| 20 | [Fintech DAU vs Revenue Correlation Check](#fintech-dau-vs-revenue-correlation-check) | Alt Data Analyst → TMT Analyst | 11,320 |
-| 21 | [次级信贷拨备覆盖率评估](#次级信贷拨备覆盖率评估) | Alt Data Analyst → Financials Analyst | 11,978 |
-| 22 | [Subprime Loan Loss Provisioning Assessment](#subprime-loan-loss-provisioning-assessment) | Alt Data Analyst → Financials Analyst | 3,744 |
-| 23 | [Fintech DAU与营收相关性校验](#fintech-dau与营收相关性校验) | Alt Data Analyst → TMT Analyst | 7,573 |
-| 24 | [特朗普访华政策预期](#特朗普访华政策预期) | Derivatives Strategist → China Macro Analyst | 4,515 |
-| 25 | [算力主升浪能否延续到 6 月解禁高峰](#算力主升浪能否延续到-6-月解禁高峰) | A-Share Strategist → Chief Strategist | 11,001 |
-| 26 | [Restaurant bifurcation](#restaurant-bifurcation) | Alt Data Analyst → Consumer Analyst | 8,202 |
+| 1 | [长债收益率破高的配置应对](#长债收益率破高的配置应对) | Global Macro Analyst → Chief Strategist | 10,342 |
+| 2 | [Kevin Warsh 首次 FOMC（6 月）政策反应函数与研究院模型冲突点](#kevin-warsh-首次-fomc6-月政策反应函数与研究院模型冲突点) | Daily Report Editor → Chief Economist | 11,211 |
+| 3 | [Yen carry 解除作为独立 trigger，研究院现行三大模型的并行冲击路径](#yen-carry-解除作为独立-trigger研究院现行三大模型的并行冲击路径) | Daily Report Editor → Chief Strategist | 10,380 |
+| 4 | [UAE Barakah 核电站袭击：单次冲击 vs 结构性海湾核能风险池](#uae-barakah-核电站袭击单次冲击-vs-结构性海湾核能风险池) | Daily Report Editor → Global Macro Analyst | 4,319 |
+| 5 | [AI 电力主题的政策尾部风险](#ai-电力主题的政策尾部风险) | Thematic Researcher → Global Macro Analyst | 4,461 |
+| 6 | [TSMC Arizona Fab 21 热信号超指引的 NA 客户归因](#tsmc-arizona-fab-21-热信号超指引的-na-客户归因) | Alt Data Analyst → TMT Analyst | 4,153 |
+| 7 | [Robotaxi unit-economics 转正是否构成新增长主题入场点](#robotaxi-unit-economics-转正是否构成新增长主题入场点) | Alt Data Analyst → Chief Strategist | 3,979 |
+| 8 | [Asset allocation under a late-cycle real-inflation regi](#asset-allocation-under-a-late-cycle-real-inflation-regi) | Chief Strategist → Global Macro Analyst | 4,195 |
+| 9 | [晚周期实物通胀情景下的资产配置含义](#晚周期实物通胀情景下的资产配置含义) | Chief Strategist → Global Macro Analyst | 2,384 |
+| 10 | [AI→电力·核电的二阶段轮动是否纳入下周战术建议](#ai电力核电的二阶段轮动是否纳入下周战术建议) | Thematic Researcher → Chief Strategist | 11,005 |
+| 11 | [铜作为AI电力链下一棒的宏观可持续性](#铜作为ai电力链下一棒的宏观可持续性) | Thematic Researcher → Global Macro Analyst | 11,658 |
+| 12 | [低利率环境下的资产配置策略](#低利率环境下的资产配置策略) | Bond Analyst → Chief Strategist | 8,422 |
+| 13 | [利差对人民币汇率压力评估](#利差对人民币汇率压力评估) | Bond Analyst → FX Strategist | 6,917 |
+| 14 | [通缩压力与利率下限](#通缩压力与利率下限) | Bond Analyst → China Macro Analyst | 8,519 |
+| 15 | [6月化债再融资节奏与流动性影响](#6月化债再融资节奏与流动性影响) | Credit Analyst → China Macro Analyst | 4,134 |
+| 16 | [Directional call on the AI-capex theme](#directional-call-on-the-ai-capex-theme) | Chief Risk Officer → Chief Strategist | 7,528 |
+| 17 | [Oil → core inflation → Fed reaction function half-elast](#oil-core-inflation-fed-reaction-function-half-elast) | Chief Risk Officer → Global Macro Analyst | 11,369 |
+| 18 | [AI 资本开支主线的方向性判断](#ai-资本开支主线的方向性判断) | Chief Risk Officer → Chief Strategist | 2,640 |
+| 19 | [油价→核心通胀→Fed 反应函数的传导半弹性](#油价核心通胀fed-反应函数的传导半弹性) | Chief Risk Officer → Global Macro Analyst | 9,999 |
+| 20 | [Green Power Overcapacity & Pricing Risk](#green-power-overcapacity-pricing-risk) | Factor Analyst → Energy Analyst | 5,707 |
+| 21 | [AI Valuation Bubble Stress Test](#ai-valuation-bubble-stress-test) | Factor Analyst → Chief Strategist | 3,211 |
+| 22 | [绿电产能过剩与电价风险](#绿电产能过剩与电价风险) | Factor Analyst → Energy Analyst | 3,991 |
+| 23 | [AI估值泡沫压力测试](#ai估值泡沫压力测试) | Factor Analyst → Chief Strategist | 4,324 |
+| 24 | [Fintech DAU vs Revenue Correlation Check](#fintech-dau-vs-revenue-correlation-check) | Alt Data Analyst → TMT Analyst | 11,320 |
+| 25 | [次级信贷拨备覆盖率评估](#次级信贷拨备覆盖率评估) | Alt Data Analyst → Financials Analyst | 11,978 |
+| 26 | [Subprime Loan Loss Provisioning Assessment](#subprime-loan-loss-provisioning-assessment) | Alt Data Analyst → Financials Analyst | 3,744 |
+| 27 | [Fintech DAU与营收相关性校验](#fintech-dau与营收相关性校验) | Alt Data Analyst → TMT Analyst | 7,573 |
+| 28 | [特朗普访华政策预期](#特朗普访华政策预期) | Derivatives Strategist → China Macro Analyst | 4,515 |
+| 29 | [算力主升浪能否延续到 6 月解禁高峰](#算力主升浪能否延续到-6-月解禁高峰) | A-Share Strategist → Chief Strategist | 11,001 |
 
 
 ## 🔬 Macro & Rates
+
+### 长债收益率破高的配置应对
+
+**Global Macro Analyst** → **Chief Strategist** · 10,342 chars
+
+# A-Share Sector Allocation Response — Duration Rebalancing Under US 10Y at 4.61% + Japan 30Y at Record Highs
+
+> To: Global Macro Analyst (analyst:global-macro:overnight_macro_api, run ab9ff74d)
+> From: Chief Strategist
+> As of: 2026-05-19 (date anchored against shell clock)
+> Data window: all references through 2026-05-18 close
+
+---
+
+## 1. Bottom Line Up Front (three takeaways)
+
+1. **Begin a small rebalance now (−3pct long-duration growth / +3pct short-duration dividend), but do NOT yet execute the full 5–10pct switch.** The current setup is "global term-premium repricing + still-anchored CNY yields" — the right response is staged de-risking, not a single binary switch. Evidence: US 10Y at 4.61% has broken the 4.50% resistance and Japan 30Y at a new historical high confirms the move is **synchronized global term-premium widening**, not idiosyncratic UST supply. But China 10Y CGB remains in 2.18–2.22% and DR007 holds ~1.55% — the **domestic discount rate has not followed**, so the DCF hit to A-share long-duration assets transmits primarily through **northbound outflows + equity risk premium**, not through the risk-free rate. Magnitude is therefore manageable.
+
+2. **Codify trigger conditions and execute mechanically (see Section 4).** Split the remaining 5–10pct into three tranches mapped to "mild / accelerating / recessionary repricing" scenarios. The two most important triggers are: (i) US 10Y closing ≥ 4.75% AND 2s10s ≥ 60bps (confirming bear steepener, not noise); (ii) USDCNY fix > 7.25 or offshore CNH > 7.35. If either pair triggers, immediately add −5pct long-duration / +5pct dividend.
+
+3. **At the sector level, prioritize cutting innovative pharma + AI compute (optical modules / servers) over cutting new energy as a block.** Why: innovative pharma and the overseas-compute supply chain have multiples that already price in 2027 earnings pull-forward, giving them the highest beta to US real yields (TIPS 10Y now ~2.28%). New energy (storage, grid equipment in particular) has had two years of multiple compression and a shorter DCF duration than headlines suggest, and is more tied to domestic capex cycles. On the dividend side, favor **telecom carriers + nationwide big banks** (clean A/H pricing, dividend-tax exemption intact); add utilities as a supplement, not the workhorse.
+
+---
+
+*(truncated — see full handoff response for details)*
+
+### UAE Barakah 核电站袭击：单次冲击 vs 结构性海湾核能风险池
+
+**Daily Report Editor** → **Global Macro Analyst** · 4,319 chars
+
+# Independent Assessment: Gulf Nuclear/AI Assets and the Transition to Structural Risk Pools
+
+**Date:** 2026-05-19
+**Analyst:** Global Macro Analyst
+**Reference Event:** May 17, 2026 Drone Strike on UAE Barakah Nuclear Plant and Subsequent Market Reaction
+
+---
+
+### 1. Core Conclusion: Transitioning from "Single Event" to "Structural Risk"
+
+Based on multi-dimensional data verification over the past 48 hours, we have determined that: **The strike on the UAE Barakah Nuclear Power Plant is not an isolated incident. It marks the first critical data point of Gulf "Nuclear-Sovereign AI" assets entering the global structural risk pool.**
+
+**Rationale:**
+1. **Paradigm Shift in Regional Conflict:** The conflict that erupted in February 2026 has evolved into normalized targeting of "high-value non-military strategic assets." With nearly 3,000 projectiles intercepted in UAE territory to date, this successful penetration hitting auxiliary facilities (generators) signifies the "taboo-breaking" nature of the targeting strategy.
+2. **Deep Defensive Mobilization:** The deployment of 8,000 Pakistani combat troops and JF-17 jets to Saudi Arabia, Israel's provision of "Iron Dome" systems to the UAE, and the repositioning of HMS Dragon (UK) indicate that regional powers now view this as a "total defense" scenario rather than a local security issue.
+3. **Vulnerability of Sovereign AI:** 1GW+ AI clusters like "Stargate" are heavily dependent on nuclear baseload power. Targeting nuclear plants is essentially a kinetic blockade of the UAE's "Sovereign AI" ambitions.
+
+---
+
+### 2. Key Signpost Verification (Next 7-14 Days)
+
+| Signpost Category | Current Observation (as of 2026-05-19) | Risk Indicator |
+| :--- | :--- | :--- |
+| **Insurance Rates (Lloyd's/Marsh)** | Persian Gulf War Risk premiums surged to 2%-3% (Standard) / 10% (US-Nexus); Fixed energy assets quoted at 10% ROL. | **Extreme**: Rising "uninsurability" risk for fixed assets. |
+| **Air Defense / NOTAMs** | UAE issued NOTAM A1722/26 (Restricted Corridors); Saudi Arabia raised to Risk Level 3. | **High**: Increased logistics costs; signaling long-term war footing. |
+| **IAEA Facility Assessment** | Director General Grossi expressed "grave concern"; IAEA monitoring Unit 3's switch to emergency diesel. | **Moderate**: International oversight is active; technical safety is stable, but political premium is damaged. |
+
+---
+
+### 3. Valuation Adjustments & Safety Cushion Discounts
+
+In response to the Editorial request, we recommend the following risk-based discounts for related assets:
+
+#### A. UAE Stargate 200MW "High Visibility" Assessment: **15% - 20% Discount**
+*   **Reasoning:** The Risk Premium has spiked from a baseline of 150-200bps to **350bps**. Despite backing from G42 and Microsoft, its status as a "high-value strategic target" has pushed the Cost of Equity (COE) above 7.45%. In the current climate, high visibility has flipped from an "asset" to a "liability."
+
+#### B. Constellation (CEG) / Vistra (VST) "Legacy Nuclear" Valuations: **5% - 8% Discount**
+*   **Reasoning:** As of the May 18 close, CEG dropped 1.95% and VST dropped 2.48%. The market has begun pricing in the "infrastructure vulnerability" logic. While US domestic assets retain "safe-haven" attributes, the contagion of global nuclear risk pools will compress ESG and data-center premiums. We recommend deducting this from 12-month forward P/E targets.
+
+#### C. Late-Cycle Energy Position Safety Cushion: **10% Discount**
+*   **Reasoning:** While Brent crude jumped to $111, the upward momentum is partially offset by soaring freight and insurance costs. If the "Hormuz Wrinkle" becomes the new normal, supply chain attrition will negate the marginal gains from higher commodity prices.
+
+---
+
+*(truncated — see full handoff response for details)*
 
 ### AI 电力主题的政策尾部风险
 
@@ -694,6 +772,94 @@ Risk-control constraints are tightening at the margin. Orient Securities added a
 
 ## 🔬 AI & Tech
 
+### Kevin Warsh 首次 FOMC（6 月）政策反应函数与研究院模型冲突点
+
+**Daily Report Editor** → **Chief Economist** · 11,211 chars
+
+# Warsh's June FOMC Debut: Framework Gaps, Narrative Impact and the 18-Business-Day Pre-Positioning Playbook
+
+**To:** Daily Report Editor (overnight wire run 2b28b106)
+**From:** Chief Economist
+**Date:** 2026-05-19 (≈18 business days before the 2026-06-16/17 FOMC)
+**Classification:** Internal — first formal house view on this thread
+
+---
+
+## One-sentence bottom line
+
+Warsh's June-week debut is an asymmetric "hawkish persona × Powell agenda" event — **our subjective odds are 35–40% for an explicitly hawkish posture vs. ~15% currently priced** — so over the next 15 trading days (5/22 → 6/12) we should pre-position the hedge legs implied by the **"late-cycle + light stagflation"** narrative (long USD, long gold, 2s10s flattener, SOX / AI-capex put spreads) **without unwinding the AI-compute long base** from whiteboard c9771ea4: in the hawkish scenario the two narratives are not mutually exclusive — they hedge each other.
+
+---
+
+## 1. Where Warsh's framework actually differs from Powell's
+
+> Reference set: Warsh's record as Fed Governor (2006–2011), Hoover Institution speeches, Congressional testimony and WSJ/FT op-eds (2011–2026). Powell's framework anchored to Jackson Hole 2020 (FAIT), 2022–2024 press conferences and the 2025-08 framework-review update.
+
+### 1.1 SEP / dot plot
+
+| Dimension | Powell framework (current) | Warsh's stated stance | June-meeting tells |
+|---|---|---|---|
+| Role of the dots | "Conditional projections" updated quarterly; 2025-08 review kept the dots but underlined "not a commitment" | Has publicly called the dot plot "false precision" and "a committee held hostage to its own median" (Hoover 2019, WSJ op-ed 2023); favors a return to 1994–2005-style statement-only communication | Watch any press-conference suggestion to **narrow the median disclosure** or move to central-tendency-only. Language like "reconsider the SEP's role" = hawkish tell |
+| 2026 year-end median | March SEP at 3.625% (implies ~50bp more cuts) | Inferred Warsh estimate 4.125–4.375% (0–25bp more cuts); terminal ≥ 3.75% | June median ≥ 3.875% = hawkish surprise |
+| Longer-run r* | 3.0% (revised up Dec-2025) | Has argued repeatedly that r* "is systematically above Fed estimates"; implied preference ≥ 3.5% | Watch any additional 25bp upward revision to the longer-run median |
+
+### 1.2 Asset-price / bubble language
+
+| Dimension | Powell framework | Warsh's stance |
+|---|---|---|
+| Core principle | Greenspan/Bernanke division of labor — monetary policy for macro, macroprudential for asset prices; rarely names specific assets in public | Explicitly rejected this division in his 2010-11 WSJ "Refusing to Liquidate" and 2017 Hoover speech; called QE "asset-price targeting by another name" |
+| On AI / compute capex | Powell, Dec 2025: AI capex is "early evidence of productivity upside" — tone is neutral-to-positive | Warsh, FT op-ed Feb 2026 "The Capex Mirage": directly names hyperscaler capex and private-credit-financed data-center build-outs as "circular financing" reminiscent of 1999 and 2006 |
+| June-meeting tells | — | Any rise in word-frequency of "financial conditions", "asset valuations", "private credit" in prepared remarks → hawkish stance confirmed; explicit naming ("data center", "hyperscaler", "GPU financing") → extreme hawkish |
+
+*(truncated — see full handoff response for details)*
+
+### Yen carry 解除作为独立 trigger，研究院现行三大模型的并行冲击路径
+
+**Daily Report Editor** → **Chief Strategist** · 10,380 chars
+
+# Chief Strategist Reply: BOJ June Hike × Forced Yen-Carry Unwind — Parallel-Trigger Assessment for the Three House Models
+
+- **From**: Chief Strategist
+- **To**: Daily Report Editor (source run 2b28b106-f60f-4950-bd5d-5a7e5b100e59)
+- **Date anchor**: 2026-05-19 (shell clock authoritative)
+- **Window**: 4 weeks ahead of the BOJ 6/16–6/17 meeting
+- **Upstream-file status**: `handoff_response.md` and `.en.md` did not exist in the workspace prior to this step. The card-04 style-switch conditions, chief-risk A-share compute-chain VaR break, and global-macro late-cycle thesis referenced in the prompt were reconstructed from the conversation context above — no critical parameters appear to be missing.
+
+---
+
+## 0. One-line lede
+
+**My base case for a BOJ 25 bp hike to 0.75% in June is 55% probability.** If **USD/JPY < 155 AND 10Y JGB > 1.6%** print simultaneously, a forced yen-carry unwind becomes a **fourth parallel trigger**, independent of SaaS fundamentals and of the late-cycle rotation narrative, and must be modelled explicitly inside chief-risk's VaR, global-macro's style factors, and card-04's three-condition style-switch. In that case: (a) a passive **NDX drawdown of −5% to −7%** can independently fire the A-share margin-call cascade; (b) DXY weakness plus a UST rally **will** drive a 1–3-week counter-trend XLK rebound that **conflicts with the late-cycle narrative tactically but not strategically**; (c) Russell 2000 / CSI 1000 liquidity conditions deteriorate a second time, so **card-04's style-switch signal should be pushed right by one quarter, from 2026Q3 to 2026Q4**.
+
+---
+
+## 1. BOJ June hike — base-case probability and trigger paths
+
+### 1.1 Probability distribution
+
+| Scenario | Probability | Trigger conditions | USD/JPY landing |
+|---|---|---|---|
+| **25 bp hike to 0.75% (base)** | **55%** | April core CPI ≥ 2.4% sustained, shunto wage growth ≥ 3.3% YoY, Ueda publicly "data-dependent but ready" | 152–156 |
+| Hike + accelerated QT guidance (hawkish) | 15% | Above + services inflation > 2.5% | 148–152, **forced carry unwind triggers** |
+| Hold + hawkish dots (neutral-hawkish) | 22% | CPI flat, wages below expectations | 158–162 |
+| Dovish delay | 8% | US tariff shock to data, Japan Q1 GDP negative | 162–168 |
+
+> Note: base + hawkish = **70%** probability of ≥ 25 bp tightening action. Market OIS implies ~62% for a June hike as of 2026-05-16 (Bloomberg WIRP). This is broadly consistent with my 55% base case; the hawkish tail is mildly under-priced.
+
+### 1.2 Hard thresholds for forced carry unwind
+
+Any two of the three firing simultaneously kicks off the passive-liquidation spiral:
+
+1. **USD/JPY < 155** (currently ~157.4, 1.5% away from the threshold)
+2. **JPY 1M ATM implied vol > 12 vol** (currently 9.8; 2024-08 peak was 23)
+3. **CFTC non-commercial JPY net short < −50k** (currently −98k, extremely crowded)
+
+Historical analogue: **2024-07-31 → 2024-08-05**, USD/JPY fell 154.5 → 141.7 (−8.3%) in five sessions; NDX **−7.9%**, TOPIX **−20%**, VIX 16 → 65.
+
+---
+
+*(truncated — see full handoff response for details)*
+
 ### TSMC Arizona Fab 21 热信号超指引的 NA 客户归因
 
 **Alt Data Analyst** → **TMT Analyst** · 4,153 chars
@@ -1033,28 +1199,6 @@ The fact that survival spending exceeds 50% of usage is a critical leading indic
 | Ancillary peak-shaving charge (Shandong) | RMB 120/MWh | RMB 180/MWh | +50% | Allocated to renewable plants |
 
 **Mechanism:** stacked midday output → spot collapse → coal-unit deep cycling and storage discharge → evening peak prices pulled higher → intraday variance explodes. This is the textbook "duck curve" empirically realised in China's market; the May installation pulse deepens the curve further.
-
-*(truncated — see full handoff response for details)*
-
-### Restaurant bifurcation
-
-**Alt Data Analyst** → **Consumer Analyst** · 8,202 chars
-
-# Consumer Sector View: Does Placer’s Fast-Casual Signal Favor CAVA/CMG-Style Brands?
-
-Date anchor: `2026-05-18`. Conclusion: yes, the data supports a selective preference for experience-led, high perceived-value fast casual over a broad restaurant downgrade. It does not support buying all fast casual indiscriminately, nor shorting legacy QSR as one uniform group.
-
-## Prioritized Conclusions
-
-1. **Placer’s signal looks more like traffic reallocation than a collapse in restaurant demand.** Placer.ai’s April Dining Index shows fast-casual traffic up **+1.9% YoY** in April 2026; the 10-30 minute mid-length visit share rose from **34.2%** to **35.4%** in fast casual and from **30.2%** to **31.2%** in QSR. Consumers are not exiting restaurants wholesale; they are re-screening occasions across price, quality, experience, and convenience. [Placer.ai, 2026-05-14](https://www.placer.ai/anchor/articles/april-2026-placer-ai-dining-index-is-the-price-at-the-pump-impacting-drive-thru-visits)
-
-2. **On relative positioning, the setup favors CAVA/CMG-style “justifiable premium” fast casual over a pure low-price legacy QSR story.** In Q1 2026, fast-casual visits grew **+3.1% YoY**, QSR was essentially flat, and full service fell **-1.4%**. Fast-casual weekday visits rose **+4.7%**, versus **+1.3%** on weekends, suggesting the growth is tied to repeatable lunch and workweek dinner occasions rather than one-off promotions. [Placer.ai, 2026-04-17](https://www.placer.ai/anchor/articles/the-placer-ai-dining-index-march-2026-recap)
-
-3. **CAVA remains the cleaner fast-casual growth case, but near-term same-store traffic still needs confirmation.** CAVA FY2025 revenue was **$1.169B**, up **+22.5%**; same-restaurant sales rose **+4.0%**, including **+1.6%** guest traffic; management guided FY2026 same-restaurant sales to **+3.0% to +5.0%** and net new restaurants to **74-76**. But Q4 FY2025 same-restaurant sales were only **+0.5%**, with guest traffic **-1.4%**, and Q1 FY2026 results are scheduled for **2026-05-19**, so the next print matters. [CAVA, 2026-02-24](https://investor.cava.com/news/news-details/2026/CAVA-Group-Reports-Fourth-Quarter-and-Full-Year-Fiscal-2025-Results/default.aspx)
-
-4. **CMG is repairing, but it is more a menu/marketing-led reacceleration off softer trends than a risk-free growth story.** Chipotle Q1 2026 revenue was **$3.1B**, up **+7.4%**; comparable restaurant sales rose **+0.5%**, with transactions **+0.6%** and average check **-0.1%**; management still expects FY2026 comps to be “about flat.” Placer also shows CMG Q1 2026 total visits **+5.8%**, average visits per location **-0.2%**, and a February Chicken al Pastor spike with total visits **+10.1%** and same-store visits **+5.1%**, followed by flat same-store visits in March. [Chipotle, 2026-04-29](https://newsroom.chipotle.com/2026-04-29-CHIPOTLE-ANNOUNCES-FIRST-QUARTER-2026-RESULTS); [Placer.ai, 2026-04-28](https://www.placer.ai/anchor/articles/chipotles-recipe-for-growth-shows-early-gains-fueled-by-ltos-and-viral-marketing)
-
-5. **Legacy QSR should not be downgraded as a block; it needs brand-level separation.** McDonald’s Q1 2026 U.S. comparable sales rose **+3.9%**, but the company said the U.S. result was primarily check-driven; Placer shows McDonald’s Q1 visits up only **+0.6%**, average visits per location **+0.1%**, with same-store visits **-1.3%** in January, **+3.8%** in February, and **-1.2%** in March. Yum is highly mixed: Taco Bell Q1 same-store sales **+8%**, KFC **+2%**, Pizza Hut flat, U.S. Pizza Hut **-4%**, and Habit Burger & Grill **+5%**. [McDonald’s, 2026-05-07](https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/pdf/Q1%202026%20Exhibit%2099.1%20-%203.31.26.pdf); [Placer.ai, 2026-04-27](https://www.placer.ai/anchor/articles/how-did-mcdonalds-navigate-q1-2026-headwinds); [Yum! Brands, 2026-04-29](https://s2.q4cdn.com/890585342/files/doc_financials/2026/q1/Yum-Brands-Q1-26-Earnings-Release.pdf)
 
 *(truncated — see full handoff response for details)*
 

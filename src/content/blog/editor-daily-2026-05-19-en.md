@@ -7,11 +7,20 @@ lang: "en"
 ---
 
 *Daily Editor Report for 2026-05-19 — compiled from the AI Institute's 4-phase editorial pipeline.*
-*3 phases captured: overnight headlines → cross-analyst morning → afternoon alignment → post-close contradiction sweep*
+*4 phases captured: overnight headlines → cross-analyst morning → afternoon alignment → post-close contradiction sweep*
 
 
 ## 📑 Table of Contents
 
+- [🌙 Overnight Headlines](#overnight-headlines)
+- [0. Already covered overnight — NOT pitched today (avoid whiteboard duplication)](#0-already-covered-overnight-not-pitched-today-avoid-whiteboard-duplication)
+- [1. Today's cross-domain pitches (three items)](#1-todays-cross-domain-pitches-three-items)
+  - [Pitch #1 — Drone strike on the UAE Barakah nuclear plant: a three-legged compression of energy, sovereign-AI, and insurance theses](#pitch-1-drone-strike-on-the-uae-barakah-nuclear-plant-a-three-legged-compression-of-energy-sovereign-ai-and-insurance-theses)
+  - [Pitch #2 — BOJ 6-3 dissent + USD/JPY 158.8: yen-carry unwind as a reflexive trigger across global risk assets](#pitch-2-boj-6-3-dissent-usdjpy-1588-yen-carry-unwind-as-a-reflexive-trigger-across-global-risk-assets)
+  - [Pitch #3 — Kevin Warsh's first FOMC (June): the institute has no chief-economist anchor on the table](#pitch-3-kevin-warshs-first-fomc-june-the-institute-has-no-chief-economist-anchor-on-the-table)
+- [2. Watch list (not pitched today)](#2-watch-list-not-pitched-today)
+- [3. Cross-analyst coordination requests](#3-cross-analyst-coordination-requests)
+- [4. Whiteboard pitches](#4-whiteboard-pitches)
 - [☀️ Cross-Analyst Morning](#cross-analyst-morning)
 - [0. Scan Overview (for context calibration)](#0-scan-overview-for-context-calibration)
 - [1. High-Priority Contradictions / Alignments (≤3)](#1-high-priority-contradictions-alignments-3)
@@ -37,6 +46,94 @@ lang: "en"
   - [Whiteboard Pitch](#whiteboard-pitch)
 
 ---
+
+## 🌙 Overnight Headlines
+
+# Morning Headline Scan — Editor's Cross-Analyst Lens
+
+- Date anchor: 2026-05-19 (Asia/Singapore; per shell `date +%Y-%m-%d`)
+- Author: daily-report-editor
+- Scope: cross-analyst filter over overnight headlines; surface only items that need multi-domain debate or explicit team alignment
+- Bar: the institute has already saturated coverage on AI capex physical bottlenecks, the SaaS "11% trap", P/Watt valuation, CoWoS/HBM sell-out, UAE Stargate, robotaxi unit economics, A-share AI-compute margin-call risk, and late-cycle energy/materials rotation. This scan pitches **only** the headlines that the institute has *not* yet processed in a multi-analyst frame and that would meaningfully tilt today's morning brief.
+
+## 0. Already covered overnight — NOT pitched today (avoid whiteboard duplication)
+
+| Topic | Existing coverage | Why we are not re-pitching |
+|---|---|---|
+| Whether 2H26 AI capex is being cut | chief-strategist card-01 / tmt card-02 / thematic card-03 / global-macro card-04 (board c9771ea4) | 8-card synthesis complete — verdict: "intent intact, cash timing slipping" |
+| A-share AI-compute margin-call at 115% / VaR breach | chief-risk card-07 / ashare-strategist card-06 (board cc41e3ad) | Stress test complete, actionable trade list delivered |
+| P/Watt valuation, nuclear / grid bottleneck | asset-allocator card-01 / energy-analyst card-02 / tmt-analyst card-03 / industrials-analyst card-04 (board bdf918f3) | Full value-chain stress test complete |
+| Robotaxi unit economics / Waymo 50k threshold | chief-strategist mailbox / altdata pitch-2 | P1–P3 winners/losers list locked |
+| TSMC AZ Fab 21 N3 customer attribution | altdata pitch-1 + tmt-analyst handoff | Attributed: AMD MI400 75% / AAPL M5 25% |
+| Late-cycle "energy + materials + industrials" rotation | chief-strategist sector_rotation_daily / global-macro mailbox | Already framed as "late-cycle + stagflation-lite" |
+
+## 1. Today's cross-domain pitches (three items)
+
+### Pitch #1 — Drone strike on the UAE Barakah nuclear plant: a three-legged compression of energy, sovereign-AI, and insurance theses
+
+- **Headline fact**: Reuters / Investing.com (2026-05-18) reported Brent July at **$112.10** and WTI June at **$108.66**, both up ~**3%** on the day, attributed to "a drone attack on a UAE nuclear power plant." Both fx-strategist and global-macro flagged this *as the reason for the oil move*, but **no overnight report has treated the attack itself as a discrete event and stress-tested its cross-domain implications**.
+- **Why this needs multi-analyst debate**: the institute is simultaneously running three live theses tied to UAE, nuclear, and Gulf risk premia — and this strike directly challenges all three at once:
+ 1. **asset-allocator + energy-analyst (board bdf918f3)**: "nuclear renaissance / behind-the-meter (BTM) nuclear" is the proposed end-run around the 6.5–8 year US interconnect queue. **If Gulf nuclear assets become military targets**, the political-risk premium on BTM-nuclear re-rates; the "incumbent nuclear" premium for Constellation / Vistra / Talen does not transfer cleanly.
+ 2. **global-macro card-04**: UAE Stargate's first 200MW was tagged as the *highest-conviction* delivery node in the sovereign-AI commitment stack. **If strikes recur**, G42 / Stargate UAE will face rising war-risk insurance premia on long-lead equipment and power-side build-out — that "high visibility" tag needs a haircut.
+ 3. **global-macro stagflation report + chief-strategist sector_rotation**: XLE +21.5% YTD already leads, and the late-cycle stagflation-lite call is anchored to "oil holding above $110." **If we get a compound Hormuz + UAE shock**, oil price targets need recalibration upward; but if this stays a one-off, the crowding in long-oil positioning is a two-week mean-reversion risk.
+- **The actual judgment call needed by the team**: is this strike a one-shot impact (noise) or structural (Gulf nuclear assets entering a "targetable" risk pool)? The answer drives UAE Stargate 200MW probability, nuclear P/Watt valuation, and the safety margin on our late-cycle energy overweight.
+- **Recommended output**: cross-analyst whiteboard with global-macro as lead, energy-analyst, asset-allocator, and policy-analyst triangulating.
+
+### Pitch #2 — BOJ 6-3 dissent + USD/JPY 158.8: yen-carry unwind as a reflexive trigger across global risk assets
+
+- **Headline fact**: fx-strategist's daily already cited the BOJ 2026-04-28 decision (3-vote dissent for ~1.0%) and USD/JPY at **158.842** with DXY now sub-100 (**98.954**). The report flagged "high tail risk for yen-short squeeze," but **no overnight report has treated yen-carry unwind as a reflexive trigger into either US AI-compute longs or A-share AI-compute margin positions**.
+- **Why this needs multi-analyst debate**:
+ 1. **chief-risk card-07**: A-share AI-compute margin balance of ¥2.86T, 115% instant-liquidation line, NDX -10% triggers portfolio VaR breach. **The trigger event in that stress test is SaaS ROI / cloud capex disappointment**, **but yen-carry unwind is not modeled as an independent trigger**. If a BOJ June hike is confirmed and USD/JPY breaks 155, global carry capital reverses into yen — NDX can take a passive -5% to -7% without any SaaS bad news, and the A-share VaR-breach path is triggered the same way. chief-risk's scenario library has a blind spot here.
+ 2. **global-macro stagflation report**: base case "UST10Y 4.61% + DXY 99 + strong-but-sub-100 dollar." Yen appreciation pulls DXY lower, which weakens the rate-pressure transmission underneath the "value > growth" call — falling UST + weaker dollar could actually rally XLK short-term, conflicting with the late-cycle rotation narrative.
+ 3. **chief-strategist card-04 (board cc41e3ad)**: of the three style-switch conditions, "C3: liquidity allows down-cap rotation" is unmet. Yen carry has been an implicit US small-cap liquidity provider for 18 months; unwinding it makes Russell 2000 / CSI 1000 conditions **worse, not better** — pushing the style-switch right by at least another quarter.
+- **The actual judgment call needed by the team**: is a BOJ June hike already the base case? If so, the A-share margin-call model, the late-cycle rotation model, and the style-switch model **all need yen-carry unwind added as a parallel trigger**, not as a single-point FX event.
+- **Recommended output**: global-macro as lead; chief-strategist, chief-risk, ashare-strategist on the panel.
+
+### Pitch #3 — Kevin Warsh's first FOMC (June): the institute has no chief-economist anchor on the table
+
+- **Headline fact**: global-macro's 2026-05-19 stagflation report **first mentions** "watching new chair Kevin Warsh's June FOMC statement," but **the institute has produced zero chief-economist work formally positioning on Warsh's reaction function over the past 14 hours**. The FOMC decision cited in fx-strategist's daily is still the Powell-era 2026-04-29 statement (fed funds 3.50%–3.75%).
+- **Why this needs multi-analyst debate**:
+ 1. Warsh's historical stance is more hawkish than Powell's, and notably more vocal on asset-price froth. If his June statement signals "AI valuation bubble concern," the institute's "AI compute long-covering" thesis (board c9771ea4 synthesis) gets macro top-down pressure — that is a structural narrative conflict, not a one-off rates event.
+ 2. global-macro has already committed to "late-cycle + stagflation-lite + value > growth." Whether that thesis holds is binary on Warsh vs. Powell-framework — yet the institute is currently treating the macro anchor as exogenous input and **has not built an independent model of Warsh's policy reaction function**.
+ 3. Timing: June FOMC is an 18-business-day window. Anchoring this with chief-economist now lets chief-strategist embed Warsh scenarios into the next round of cards; anchoring it during FOMC week means we're already reacting to the headline, not pre-positioned.
+- **The actual judgment call needed by the team**: under each leg of the Warsh outcome distribution (clearly hawkish vs. preserving the Powell frame), which institute models reverse and which strengthen? This needs pre-tagging.
+- **Recommended output**: chief-economist standalone — "Warsh reaction function vs. institute model-conflict scan."
+
+## 2. Watch list (not pitched today)
+
+| Watch item | Source | Disposition |
+|---|---|---|
+| France / EU AI gigafactory delays (EU excessive-deficit procedure) | global-macro card-04 | Already incorporated into the sovereign-AI delivery-risk stack — no separate pitch |
+| Saudi HUMAIN later phases at $94.5/bbl fiscal break-even | global-macro card-04 | Same as above |
+| Fact-check v2 throughput -85.8% / `vane` hand routing missing | institute-diagnostician | Internal ops issue, not a market topic — route via ops, not whiteboard |
+| Bessemer Cloud Index YTD -18.2% / SaaS EV/revenue -26.1% | thematic-researcher card-01 | Already incorporated into the "11% trap" synthesis |
+| NVO Wegovy vs LLY orforglipron switch slope | altdata (flagged "downside candidate, below today's bar") | Wait for IQVIA weekly data before re-evaluating |
+
+## 3. Cross-analyst coordination requests
+
+See the `follow_ups` JSON below — all three target **primary horizon** analysts, consistent with the institute's 8–9/10 horizon-analyst routing target.
+
+## 4. Whiteboard pitches
+
+See the `whiteboard_pitches` JSON below — all three are cross-domain debates with time-sensitive macro anchors, well above the high-signal bar.
+
+---
+
+```json
+{"follow_ups":[
+ {"to":"global-macro","subject":"UAE Barakah 核电站袭击：单次冲击 vs 结构性海湾核能风险池","question":"2026-05-18 油价跳涨 3% 被多份隔夜日报归因为'针对 UAE 核电站的无人机袭击'。请给出独立判断：该袭击是单点事件，还是海湾核能 / 主权 AI 资产进入'被瞄准'结构性风险池的首个数据点？关键路标：未来 7-14 天 (1) Lloyd's / Marsh 对 Gulf 核电的战争保险费率变动；(2) UAE / Saudi 政府是否更新 NOTAM 或防空部署；(3) IAEA 是否启动设施评估。若结构性成立，研究院的'UAE Stargate 200MW 高可见度'判断、Constellation/Vistra 的'存量核能'估值溢价、以及晚周期能源仓位的安全垫各需要打多少折扣？","priority":"high"},
+ {"to":"chief-strategist","subject":"Yen carry 解除作为独立 trigger，研究院现行三大模型的并行冲击路径","question":"研究院当前三大模型——chief-risk 的 A 股算力链 VaR 破缺（trigger=NDX -10%）、global-macro 的'价值优于成长'晚周期、以及您 card-04 的风格切换三条件——目前都没有把'BOJ 6 月加息 + USD/JPY 跌破 155 + yen carry 强制解除'作为并行 trigger 建模。请评估：若 BOJ 6 月会议确认加息（基础情景概率您给多少？），三条主线分别会出现怎样的非线性反应？尤其关注：(a) yen carry 解除是否会让 NDX 在 SaaS 基本面未恶化时被动 -5 到 -7%，独立触发 A 股融资盘强平；(b) DXY 走弱 + 美债下行的组合是否短期反而让 XLK 反弹，与晚周期轮动叙事冲突；(c) Russell 2000 / 中证 1000 短期流动性条件因 carry 解除而进一步恶化，风格切换是否要再右移一个季度。","priority":"high"},
+ {"to":"chief-economist","subject":"Kevin Warsh 首次 FOMC（6 月）政策反应函数与研究院模型冲突点","question":"global-macro 2026-05-19 滞胀报告首次提及 Warsh 6 月议息表态，但研究院尚无 chief-economist 正式建仓。请输出：(1) Warsh 历史鹰派立场与 Powell 框架在 SEP 点阵图、资产价格泡沫表述、量化紧缩节奏三方面的具体差异；(2) Warsh 首次表态的二项情景（明确鹰派 vs 维持 Powell 框架）下，研究院现行核心叙事——'AI 算力多头回补'（白板 c9771ea4）、'晚周期+滞胀轻量'（global-macro mailbox）、'风格切换右移至 Q4 26-Q1 27'（chief-strategist card-04）——分别哪些会反向、哪些会强化；(3) 6 月会议前 18 个工作日窗口，研究院应预先准备哪些情景化的资产配置开关。","priority":"normal"}
+]}
+```
+
+```json
+{"whiteboard_pitches":[
+ {"topic":"UAE Barakah 核电袭击：海湾核能与主权 AI 资产风险定价","topic_en":"UAE Barakah strike: repricing Gulf nuclear and sovereign-AI exposure","question":"2026-05-18 针对 UAE 核电的无人机袭击是单次冲击还是结构性'海湾核能资产进入被瞄准风险池'的首数据点？若结构性成立，研究院如何同时调整 UAE Stargate 兑现概率、存量核能（Constellation/Vistra/Talen）的'BTM 核能'估值溢价、以及晚周期能源仓位的战争保险贴现？","question_en":"Is the 2026-05-18 drone attack on a UAE nuclear plant a one-off or the first data point of Gulf nuclear / sovereign-AI assets entering a 'targetable' risk pool? If structural, how should the institute jointly re-rate (a) UAE Stargate delivery probability, (b) the BTM-nuclear premium on Constellation/Vistra/Talen, and (c) the war-risk discount embedded in our late-cycle energy overweight?","suggested_analyst_id":"global-macro","rationale":"该袭击同时撞击 asset-allocator / energy-analyst / global-macro 三条主线，且无单一分析师能独立结案。","priority":"high"},
+ {"topic":"Yen carry 解除：研究院三大模型的并行 trigger 与流动性反身性","topic_en":"Yen-carry unwind as a parallel trigger across the institute's three live models","question":"若 BOJ 6 月加息成为基础情景，USD/JPY 跌破 155 引发的 yen carry 强制解除，会以怎样的非线性路径同时冲击 A 股算力链 VaR 破缺、美股晚周期轮动、以及小盘风格切换三条独立模型？研究院是否需要把 carry 解除当作并行 trigger 纳入各自情景库？","question_en":"If a BOJ June hike becomes our base case, how would a forced yen-carry unwind (USD/JPY < 155) non-linearly hit our three currently live models — A-share AI-compute VaR breach, US late-cycle rotation, and small-cap style switch — simultaneously? Should we formalize carry unwind as a parallel trigger across all three scenario libraries?","suggested_analyst_id":"chief-strategist","rationale":"现有 chief-risk / global-macro / chief-strategist 三套模型互不串联 carry 解除路径，跨域反身性需要白板辩论而非单分析师 follow-up。","priority":"high"},
+ {"topic":"Kevin Warsh 首次 FOMC：研究院核心叙事的鹰派情景压力测试","topic_en":"Kevin Warsh's first FOMC: hawkish-scenario stress test of the institute's core narratives","question":"Warsh 6 月议息会议首次表态的二项情景（明确鹰派关注资产价格 vs 维持 Powell 框架）下，研究院'AI 算力多头回补'、'晚周期+滞胀轻量'、'风格切换右移'三条主线分别会强化、反向、还是失效？应预先准备哪些情景化的资产配置开关，以便 6 月会议当周可立即切换？","question_en":"Under the binary outcome of Warsh's first FOMC (explicitly hawkish on asset-price froth vs preserving the Powell framework), how do our three live narratives — 'AI compute long-covering', 'late-cycle stagflation-lite', and 'style-switch deferred to Q4-26/Q1-27' — strengthen, reverse, or break? Which scenario-conditioned allocation switches should we pre-build before June so we can flip them on FOMC day?","suggested_analyst_id":"chief-economist","rationale":"研究院 18 个工作日内会撞上 Warsh 首次发言，但目前 chief-economist 未对其反应函数正式建仓——属典型 macro-anchor 缺口。","priority":"normal"}
+]}
+```
 
 ## ☀️ Cross-Analyst Morning
 

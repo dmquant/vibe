@@ -7,11 +7,20 @@ lang: "zh"
 ---
 
 *2026-05-19日报总编报告 — 由AI研究院4阶段编辑管道编译。*
-*已收录3个阶段：隔夜要闻 → 上午跨视角 → 下午对齐 → 收盘矛盾梳理*
+*已收录4个阶段：隔夜要闻 → 上午跨视角 → 下午对齐 → 收盘矛盾梳理*
 
 
 ## 📑 目录
 
+- [🌙 隔夜要闻](#隔夜要闻)
+- [0. 已被研究院覆盖、本轮不再推送（避免重复白板）](#0-已被研究院覆盖本轮不再推送避免重复白板)
+- [1. 本日跨域推送（共 3 项）](#1-本日跨域推送共-3-项)
+  - [推送 #1 — UAE Barakah 核电站无人机袭击：能源、主权 AI、保险三腿合压](#推送-1-uae-barakah-核电站无人机袭击能源主权-ai保险三腿合压)
+  - [推送 #2 — BOJ 6-3 投票分歧 + USD/JPY 158.8：日元 carry 解除对全球风险资产的潜在反身性](#推送-2-boj-6-3-投票分歧-usdjpy-1588日元-carry-解除对全球风险资产的潜在反身性)
+  - [推送 #3 — Kevin Warsh 首次 FOMC（6 月）：研究院尚无锚定 chief-economist 出场](#推送-3-kevin-warsh-首次-fomc6-月研究院尚无锚定-chief-economist-出场)
+- [2. 跟踪事项（不构成本日推送）](#2-跟踪事项不构成本日推送)
+- [3. 跨分析师协调请求](#3-跨分析师协调请求)
+- [4. 白板 pitch](#4-白板-pitch)
 - [☀️ 上午跨视角](#上午跨视角)
 - [0. 扫描全景（用于上下文校准）](#0-扫描全景用于上下文校准)
 - [1. 高优先级矛盾 / 对齐（≤3）](#1-高优先级矛盾-对齐3)
@@ -37,6 +46,94 @@ lang: "zh"
   - [白板建议](#白板建议)
 
 ---
+
+## 🌙 隔夜要闻
+
+# 早盘头条扫描 — 总编视角
+
+- 日期锚：2026-05-19（Asia/Singapore；以 shell `date +%Y-%m-%d` 为准）
+- 作者：daily-report-editor（日报总编）
+- 工作范围：跨分析师视角，过滤隔夜重大头条，仅推送需要跨域辩论 / 团队对齐的题目
+- 推送门槛：研究院在过去 14 小时已就 AI Capex 物理瓶颈、SaaS "11% 陷阱"、P/Watt 估值、CoWoS/HBM 售罄、UAE Stargate、Robotaxi 单市盈利、A 股算力链融资爆破、晚周期能源/材料轮动等议题进行了广泛覆盖。本次扫描**仅推送**真正未被多分析师同框处理、且会改变今日早盘 brief 倾向的头条。
+
+## 0. 已被研究院覆盖、本轮不再推送（避免重复白板）
+
+| 议题 | 已覆盖出处 | 不再推送原因 |
+|---|---|---|
+| 2026 H2 AI Capex 是否被砍 | chief-strategist card-01 / tmt card-02 / thematic card-03 / global-macro card-04（白板 c9771ea4） | 已完成 8 卡综合，结论"承诺未改、现金时点滑动" |
+| A 股算力链融资盘 115% 强平 / VaR 破缺 | chief-risk card-07 / ashare-strategist card-06（白板 cc41e3ad） | 已完成压力测试，操作建议清晰 |
+| P/Watt 估值 + 核能 / 电网瓶颈 | asset-allocator card-01 / energy-analyst card-02 / tmt-analyst card-03 / industrials-analyst card-04（白板 bdf918f3） | 已完成产业链同框测试 |
+| Robotaxi 单市盈利 / Waymo 50k 阈值 | chief-strategist mailbox / altdata pitch-2 | 已锁定 P1-P3 受益与受损名单 |
+| TSMC AZ Fab 21 N3 客户归因 | altdata pitch-1 + tmt-analyst handoff | 已归因 AMD MI400 75% / AAPL M5 25% |
+| 晚周期"能源 + 材料 + 工业"轮动 | chief-strategist sector_rotation_daily / global-macro mailbox | 已定调"晚周期+滞胀轻量" |
+
+## 1. 本日跨域推送（共 3 项）
+
+### 推送 #1 — UAE Barakah 核电站无人机袭击：能源、主权 AI、保险三腿合压
+
+- **头条事实**：Reuters / Investing.com 2026-05-18 称 Brent 7 月合约收 **$112.10**、WTI 6 月合约收 **$108.66**，单日均涨约 **3%**，归因为"针对 UAE 核电站的无人机袭击"。该头条已被 fx-strategist 与 global-macro 的日报**作为油价上涨的归因**引用，但**没有任何一份隔夜报告把"袭击对象是 UAE 核电"本身作为独立事件做跨域影响测试**。
+- **为什么需要跨分析师辩论**：研究院在过去 24 小时同时押注三条与 UAE / 核能 / Gulf 风险溢价相关的主线，而这次袭击恰好同时质疑全部三条：
+ 1. **asset-allocator + energy-analyst（白板 bdf918f3）**："核能复兴 / 表后 BTM 核电"作为绕过 6.5–8 年并网队列的解。**若海湾核电资产成为军事目标**，BTM 核电的政治保险溢价会重估，Constellation / Vistra / Talen 的"存量核能"溢价不一定能直接平移。
+ 2. **global-macro card-04**：UAE Stargate UAE 首期 200MW "高可见度兑现"是主权 AI 兑现栈中最不容易被砍的腿。**若袭击常态化**，G42 / Stargate UAE 长交期设备与电力侧的战争保险费率会同步上升，"高可见度"标签需要打折。
+ 3. **global-macro 滞胀报告 + chief-strategist sector_rotation**：能源 +XLE +21.5% YTD 已经领涨，且滞胀晚周期判断需要"油价站稳 $110+"作为锚。**若霍尔木兹 + UAE 复合冲击成立**，油价目标位需要重新校准；但若仅是单点事件，做多油价的拥挤度风险会在两周内回吐。
+- **真正需要团队对齐的判断**：袭击是单次冲击（噪声）还是结构性（海湾核能资产进入"被瞄准"风险池）？这影响"UAE Stargate 200MW"判断、"核能 P/Watt"估值、以及晚周期能源仓位的安全垫。
+- **建议输出**：白板跨分析师辩论卡，主刀 global-macro，召集 energy-analyst、asset-allocator、policy-analyst 三角验证。
+
+### 推送 #2 — BOJ 6-3 投票分歧 + USD/JPY 158.8：日元 carry 解除对全球风险资产的潜在反身性
+
+- **头条事实**：fx-strategist 日报已引用 BOJ 2026-04-28 决议 6-3 投票（3 名委员主张升至 ~1.0%），USD/JPY 收 **158.842**，DXY 已经低于 100（98.954）。该报告**已经标注"日元空头挤压风险偏高"**，但没有任何一份隔夜报告把"yen carry 解除"作为对**美股 AI 算力多头**与**A 股算力链融资盘**的反身性传导事件。
+- **为什么需要跨分析师辩论**：
+ 1. **chief-risk card-07**：A 股算力链融资盘 2.86 万亿、115% 即时平仓线、NDX -10% 即触发 VaR 破缺。**该压力测试的触发事件是 SaaS ROI / 云厂 capex 下修**，但**未纳入 yen carry 解除这一独立 trigger**。若 BOJ 6 月加息确认 + USD/JPY 跌破 155，全球套利资金回流日本，NDX 可以在没有任何 SaaS 利空的情况下被动 -5 到 -7%，A 股 VaR 破缺路径同样会被触发——chief-risk 当前情景库存在盲点。
+ 2. **global-macro 滞胀报告**：基准情景"美债 4.61% + DXY 99 + 美元强势但未破百"。日元升值会拉低 DXY，间接削弱"价值优于成长"判断的利率压制传导——美债下行 + 美元走弱可能反而让 XLK 短期反弹，与晚周期轮动叙事冲突。
+ 3. **chief-strategist card-04（白板 cc41e3ad）**：风格切换三条件中"C3：流动性允许下沉"未满足。Yen carry 是过去 18 个月美股小盘流动性的隐性供给方之一，若解除，Russell 2000 / 中证 1000 的承接条件**短期更差**而非更好——切换被推迟到 Q4 26 - Q1 27 的判断可能进一步右移。
+- **真正需要团队对齐的判断**：BOJ 6 月加息是否已是基准情景？若是，研究院的 A 股算力链强平模型、晚周期轮动模型、风格切换模型**都需要把 yen carry 解除当作并行 trigger 而非单点 FX 事件**。
+- **建议输出**：global-macro 主刀，召集 chief-strategist、chief-risk、ashare-strategist 三方做一次专门白板。
+
+### 推送 #3 — Kevin Warsh 首次 FOMC（6 月）：研究院尚无锚定 chief-economist 出场
+
+- **头条事实**：global-macro 2026-05-19 滞胀报告**首次提及**"关注新任主席 Kevin Warsh 在 6 月议息会议上的首次表态"，**但研究院近 14 小时无任何 chief-economist 报告对此正式建仓**。fx-strategist 日报引用的 FOMC 决议仍是 Powell 任期的 2026-04-29 声明（联邦基金 3.50%-3.75%）。
+- **为什么需要跨分析师辩论**：
+ 1. Warsh 历史立场比 Powell 更鹰、对资产价格泡沫更敏感。若他在 6 月会议直接释放"AI 估值泡沫担忧"信号，研究院的"AI 算力多头回补"（白板 c9771ea4 综合结论）会被宏观面顶上压力——这是结构性叙事冲突，而非单点利率事件。
+ 2. global-macro 已经判定"晚周期+滞胀轻量+价值优于成长"。Warsh 更鹰 vs. 鸽派的二项分布**直接决定**这个判断是否成立——研究院目前把宏观锚作为输入，但**没有对 Warsh 政策反应函数本身做独立建模**。
+ 3. 时间窗：6 月 FOMC 是 18 个工作日窗口。早做 chief-economist 锚定，能让 chief-strategist 把 Warsh 情景嵌入下一轮 cards；晚做则 6 月会议当周才补，已经在头条之后。
+- **真正需要团队对齐的判断**：Warsh 首次表态的二项结果（鹰派 / 维持 Powell 框架）下，研究院各核心模型需要预先标注哪些会反向。
+- **建议输出**：chief-economist 单独建仓，输出"Warsh 政策反应函数与研究院模型冲突点扫描"。
+
+## 2. 跟踪事项（不构成本日推送）
+
+| 跟踪项 | 来源 | 处理建议 |
+|---|---|---|
+| 法国 / 欧盟 AI gigafactory 延迟（受 EU 过度赤字程序约束） | global-macro card-04 | 已被纳入主权 AI 兑现风险栈，无需单独推送 |
+| 沙特 HUMAIN 后续阶段油价敏感性（财政平衡油价 $94.5/bbl） | global-macro card-04 | 同上 |
+| 事实核查 v2 吞吐降 85.8% / hand `vane` 路由缺失 | institute-diagnostician | 内部运营议题，非市场议题，应走 ops 通道而非白板 |
+| Bessemer Cloud Index 2026 YTD -18.2% / SaaS EV/revenue -26.1% | thematic-researcher card-01 | 已被纳入"11% 陷阱"主线综合 |
+| NVO Wegovy vs LLY orforglipron 切换斜率 | altdata（标记"下行候选，未达本轮门槛"） | 等待 IQVIA 周度数据补全后再评估 |
+
+## 3. 跨分析师协调请求
+
+下方 `follow_ups` JSON 见本文件末尾——三条均针对"primary 横向"分析师，符合研究院 8-9/10 follow-ups 路由偏好。
+
+## 4. 白板 pitch
+
+下方 `whiteboard_pitches` JSON 见本文件末尾——三条均为跨域辩论 / 时间敏感型，符合白板高信号门槛。
+
+---
+
+```json
+{"follow_ups":[
+ {"to":"global-macro","subject":"UAE Barakah 核电站袭击：单次冲击 vs 结构性海湾核能风险池","question":"2026-05-18 油价跳涨 3% 被多份隔夜日报归因为'针对 UAE 核电站的无人机袭击'。请给出独立判断：该袭击是单点事件，还是海湾核能 / 主权 AI 资产进入'被瞄准'结构性风险池的首个数据点？关键路标：未来 7-14 天 (1) Lloyd's / Marsh 对 Gulf 核电的战争保险费率变动；(2) UAE / Saudi 政府是否更新 NOTAM 或防空部署；(3) IAEA 是否启动设施评估。若结构性成立，研究院的'UAE Stargate 200MW 高可见度'判断、Constellation/Vistra 的'存量核能'估值溢价、以及晚周期能源仓位的安全垫各需要打多少折扣？","priority":"high"},
+ {"to":"chief-strategist","subject":"Yen carry 解除作为独立 trigger，研究院现行三大模型的并行冲击路径","question":"研究院当前三大模型——chief-risk 的 A 股算力链 VaR 破缺（trigger=NDX -10%）、global-macro 的'价值优于成长'晚周期、以及您 card-04 的风格切换三条件——目前都没有把'BOJ 6 月加息 + USD/JPY 跌破 155 + yen carry 强制解除'作为并行 trigger 建模。请评估：若 BOJ 6 月会议确认加息（基础情景概率您给多少？），三条主线分别会出现怎样的非线性反应？尤其关注：(a) yen carry 解除是否会让 NDX 在 SaaS 基本面未恶化时被动 -5 到 -7%，独立触发 A 股融资盘强平；(b) DXY 走弱 + 美债下行的组合是否短期反而让 XLK 反弹，与晚周期轮动叙事冲突；(c) Russell 2000 / 中证 1000 短期流动性条件因 carry 解除而进一步恶化，风格切换是否要再右移一个季度。","priority":"high"},
+ {"to":"chief-economist","subject":"Kevin Warsh 首次 FOMC（6 月）政策反应函数与研究院模型冲突点","question":"global-macro 2026-05-19 滞胀报告首次提及 Warsh 6 月议息表态，但研究院尚无 chief-economist 正式建仓。请输出：(1) Warsh 历史鹰派立场与 Powell 框架在 SEP 点阵图、资产价格泡沫表述、量化紧缩节奏三方面的具体差异；(2) Warsh 首次表态的二项情景（明确鹰派 vs 维持 Powell 框架）下，研究院现行核心叙事——'AI 算力多头回补'（白板 c9771ea4）、'晚周期+滞胀轻量'（global-macro mailbox）、'风格切换右移至 Q4 26-Q1 27'（chief-strategist card-04）——分别哪些会反向、哪些会强化；(3) 6 月会议前 18 个工作日窗口，研究院应预先准备哪些情景化的资产配置开关。","priority":"normal"}
+]}
+```
+
+```json
+{"whiteboard_pitches":[
+ {"topic":"UAE Barakah 核电袭击：海湾核能与主权 AI 资产风险定价","topic_en":"UAE Barakah strike: repricing Gulf nuclear and sovereign-AI exposure","question":"2026-05-18 针对 UAE 核电的无人机袭击是单次冲击还是结构性'海湾核能资产进入被瞄准风险池'的首数据点？若结构性成立，研究院如何同时调整 UAE Stargate 兑现概率、存量核能（Constellation/Vistra/Talen）的'BTM 核能'估值溢价、以及晚周期能源仓位的战争保险贴现？","question_en":"Is the 2026-05-18 drone attack on a UAE nuclear plant a one-off or the first data point of Gulf nuclear / sovereign-AI assets entering a 'targetable' risk pool? If structural, how should the institute jointly re-rate (a) UAE Stargate delivery probability, (b) the BTM-nuclear premium on Constellation/Vistra/Talen, and (c) the war-risk discount embedded in our late-cycle energy overweight?","suggested_analyst_id":"global-macro","rationale":"该袭击同时撞击 asset-allocator / energy-analyst / global-macro 三条主线，且无单一分析师能独立结案。","priority":"high"},
+ {"topic":"Yen carry 解除：研究院三大模型的并行 trigger 与流动性反身性","topic_en":"Yen-carry unwind as a parallel trigger across the institute's three live models","question":"若 BOJ 6 月加息成为基础情景，USD/JPY 跌破 155 引发的 yen carry 强制解除，会以怎样的非线性路径同时冲击 A 股算力链 VaR 破缺、美股晚周期轮动、以及小盘风格切换三条独立模型？研究院是否需要把 carry 解除当作并行 trigger 纳入各自情景库？","question_en":"If a BOJ June hike becomes our base case, how would a forced yen-carry unwind (USD/JPY < 155) non-linearly hit our three currently live models — A-share AI-compute VaR breach, US late-cycle rotation, and small-cap style switch — simultaneously? Should we formalize carry unwind as a parallel trigger across all three scenario libraries?","suggested_analyst_id":"chief-strategist","rationale":"现有 chief-risk / global-macro / chief-strategist 三套模型互不串联 carry 解除路径，跨域反身性需要白板辩论而非单分析师 follow-up。","priority":"high"},
+ {"topic":"Kevin Warsh 首次 FOMC：研究院核心叙事的鹰派情景压力测试","topic_en":"Kevin Warsh's first FOMC: hawkish-scenario stress test of the institute's core narratives","question":"Warsh 6 月议息会议首次表态的二项情景（明确鹰派关注资产价格 vs 维持 Powell 框架）下，研究院'AI 算力多头回补'、'晚周期+滞胀轻量'、'风格切换右移'三条主线分别会强化、反向、还是失效？应预先准备哪些情景化的资产配置开关，以便 6 月会议当周可立即切换？","question_en":"Under the binary outcome of Warsh's first FOMC (explicitly hawkish on asset-price froth vs preserving the Powell framework), how do our three live narratives — 'AI compute long-covering', 'late-cycle stagflation-lite', and 'style-switch deferred to Q4-26/Q1-27' — strengthen, reverse, or break? Which scenario-conditioned allocation switches should we pre-build before June so we can flip them on FOMC day?","suggested_analyst_id":"chief-economist","rationale":"研究院 18 个工作日内会撞上 Warsh 首次发言，但目前 chief-economist 未对其反应函数正式建仓——属典型 macro-anchor 缺口。","priority":"normal"}
+]}
+```
 
 ## ☀️ 上午跨视角
 
