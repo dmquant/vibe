@@ -1,0 +1,20 @@
+{
+  "slug": "archive-bd23d8a4c686",
+  "href": "/investor/reports/archive-bd23d8a4c686/",
+  "meta": {
+    "title": "衍生品策略报告：港股 AI 算力国产替代组合的 CNH 对冲执行",
+    "date": "2026-05-04",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "宏观",
+      "A股",
+      "港美股",
+      "风险"
+    ],
+    "source": "archive-bd23d8a4c686",
+    "source_label": "archive-bd23d8a4c686"
+  },
+  "bodyHtml": "<h1>衍生品策略报告：港股 AI 算力国产替代组合的 CNH 对冲执行</h1>\n<p><strong>分析师：</strong> derivatives-strategist | 衍生品策略师\n<strong>日期：</strong> 2026-05-04\n<strong>立场：</strong> 综合 (执行层)</p>\n<h2>1. 概述：汇率折算的必然性</h2>\n<p>由 <strong>0981.HK (中芯国际)</strong>、<strong>1347.HK (华虹半导体)</strong>、<strong>9988.HK (阿里巴巴)</strong> 和 <strong>0700.HK (腾讯控股)</strong> 组成的组合，其本质是对中国 AI 主权的押注。尽管这些资产以港元 (HKD) 交易，但其底层现金流、估值以及所支撑的“昇腾-DeepSeek”生态系统均以人民币 (CNY/CNH) 计价。截至 2026 年 5 月，随着 USD/CNH 在 6.95-7.05 附近波动，管理汇率折算风险已不再是可选项，而是总收益的关键组成部分。</p>\n<p>本报告在汇率策略师（FX Strategist）建议的 35-50% 机会性覆盖基础上，定义了 3-6 个月“洁净对冲”（Clean Hedge）的执行框架。</p>\n<h2>2. 工具选择：“最干净的执行方案”</h2>\n<h3>A. 核心工具：港交所 (HKEX) USD/CNH 期货 (CUS)</h3>\n<p>对于 3-6 个月的窗口期，<strong>港交所 USD/CNH 期货</strong>是首选工具，原因包括\n*   <strong>保证金效率：</strong> 与恒生中国企业指数 (HSCEI) 期货具有 20-30% 的保证金抵销 (Margin Offset)。\n*   <strong>流动性：</strong> 集中在前三个季度合约（2026 年 6 月、9 月、12 月）。\n*   <strong>基差管理：</strong> 能够捕捉或规避 CNH-CNY 的基差波动。</p>\n<h3>B. 尾部保护：USD/CNH 期权 (场外 &amp; 场内)</h3>\n<p>为了管理非线性风险（如关税突然升级或地缘政治冲击），我们采用 <strong>风险反转 (Risk Reversals)</strong> 和 <strong>海鸥式 (Seagulls)</strong> 策略\n*   <strong>风险反转 (RR)：</strong> 买入 USD 看涨期权 / 卖出 USD 看跌期权。当 CNH 偏度 (Skew) 处于“平坦”或“便宜”时非常有效。\n*   <strong>牛市看涨价差 (针对 USD/CNH)：</strong> (买入低行权价 USD Call / 卖出高行权价 USD Call)。在波动率较高的环境下限制对冲成本。</p>\n<h2>3. 基于制度 (Regime) 的对冲规则手册 (2026Q2-Q3)</h2>\n<table>\n<thead>\n<tr>\n<th>市场制度</th>\n<th>指标</th>\n<th>目标对冲比例</th>\n<th>执行策略</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>A: 战略性走强</strong></td>\n<td>USD/CNH &lt; 6.85</td>\n<td><strong>15-25%</strong></td>\n<td><strong>低度对冲。</strong> 使用价外 (OTM) USD Call 防范突发反转。享受人民币资产增值红利。</td>\n</tr>\n<tr>\n<td><strong>B: 区间波动套利</strong></td>\n<td>USD/CNH 6.90-7.10</td>\n<td><strong>35-50%</strong></td>\n<td><strong>线性对冲。</strong> 使用港交所期货锁定汇率。逐月滚动以捕捉基差。</td>\n</tr>\n<tr>\n<td><strong>C: 贬值压力测试</strong></td>\n<td>USD/CNH &gt; 7.15 / 高偏度</td>\n<td><strong>65-80%</strong></td>\n<td><strong>过度对冲 / 长 Gamma。</strong> 激进买入 USD/CNH Call。增加期货头寸以抵消折算损失。</td>\n</tr>\n</tbody>\n</table>\n<h3>CNH 偏度与波动率校准</h3>\n<ul>\n<li><strong>低波动率 (&lt; 5.0%)：</strong> 优先选择 <strong>线性期货</strong>。直接且低廉。</li>\n<li><strong>高波动率 (&gt; 8.5%)：</strong> 转向 <strong>期权 (垂直价外价差)</strong>。防止因双向波动被止损出局。</li>\n<li><strong>偏度过高 (25d RR &gt; 1.5)：</strong> 避免直接买入 USD Call。使用 <strong>领口策略 (Collar)</strong>（卖出 CNH 看跌期权 / 买入 CNH 看涨期权）来降低对冲成本。</li>\n</ul>\n<h2>4. 执行工作流：3-6 个月“洁净滚动”</h2>\n<ol>\n<li><strong>初始设置：</strong> 使用 <strong>CUS 2026 年 9 月</strong> 合约执行 40% 的对冲比例。</li>\n<li><strong>Delta 调整：</strong> 每周根据组合对 USD/CNH 的 Beta 值进行重新校准。（0700.HK/9988.HK 对 CNH 的历史 Beta 通常在 0.6-0.8 之间）。</li>\n<li><strong>“溢价”对冲：</strong> 对于 <strong>9988.HK/BABA</strong>，密切监测 ADR/港股溢价。若因退市担忧导致美股流动性枯竭，将 USD/CNH 对冲比例提高至 70%，将其作为地缘风险的代理变量。</li>\n<li><strong>流动性缓冲：</strong> 保持组合价值 5% 的 HKD/USD 现金，用于覆盖期货的变动保证金，确保股票头寸永不被强制平仓。</li>\n</ol>\n<h2>5. 核心结论</h2>\n<p>对冲 AI 国产替代组合并非为了“抄人民币的底”，而是为了 <strong>将 AI 技术的 Alpha 从宏观汇率的 Beta 中解耦。</strong> 通过港交所期货和精选期权维持 35-80% 的动态对冲比例，我们确保了“昇腾 × DeepSeek V4”拐点带来的结构性收益不会被外汇波动侵蚀。</p>\n<p><strong>下接分析师：</strong> chief-risk [reviewer]\n<strong>推荐理由：</strong> 该执行计划涉及通过期货和期权产生的大量杠杆。首席风控官现在应针对“AI 组合 + CNH 对冲”复合体，在 10% 汇率贬值结合 20% 科创板回调的极端情境下进行压力测试。</p>"
+}

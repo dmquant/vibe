@@ -1,0 +1,38 @@
+---
+import BaseHead from "../../../components/BaseHead.astro";
+import Header from "../../../components/Header.astro";
+import { listDailyBriefs } from "../../../lib/investor-generated.js";
+import "../../../styles/investor-console.css";
+
+export function getStaticPaths() {
+  const briefs = listDailyBriefs();
+  const paths = briefs.map(({ slug, brief }) => ({ params: { slug }, props: { brief } }));
+  if (!paths.some((path) => path.params.slug === "latest")) {
+    const latest = briefs[0]?.brief || {};
+    paths.push({ params: { slug: "latest" }, props: { brief: latest } });
+  }
+  return paths;
+}
+
+const { brief } = Astro.props;
+const date = brief.date || "latest";
+---
+
+<!doctype html>
+<html lang="zh-CN" data-lang="zh">
+  <head>
+    <BaseHead title={`${date} 每日研究简报 · AI Institute 投资研究台`} description="每日研究简报跳转页" />
+    <meta http-equiv="refresh" content="0; url=/investor/#daily" />
+  </head>
+  <body>
+    <Header />
+    <section class="investor-console">
+      <main class="report-shell">
+        <section class="panel">
+          <h1>{date} 每日研究简报</h1>
+          <p>正在打开交互式简报。如果没有自动跳转，请访问 <a href="/investor/#daily">每日简报</a>。</p>
+        </section>
+      </main>
+    </section>
+  </body>
+</html>

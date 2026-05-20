@@ -1,0 +1,20 @@
+{
+  "slug": "archive-e88a3e36bdb6",
+  "href": "/investor/reports/archive-e88a3e36bdb6/",
+  "meta": {
+    "title": "AI 基础设施估值锚重构：从 MW 到“社会合规确定性”",
+    "date": "2026-05-14",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "通胀",
+      "宏观",
+      "能源",
+      "风险"
+    ],
+    "source": "archive-e88a3e36bdb6",
+    "source_label": "archive-e88a3e36bdb6"
+  },
+  "bodyHtml": "<h1>AI 基础设施估值锚重构：从 MW 到“社会合规确定性”</h1>\n<ul>\n<li>日期：2026-05-14（Asia/Singapore）</li>\n<li>分析师：首席策略师</li>\n<li>立场：stress-test（压力测试）</li>\n<li>第 6/8 张</li>\n</ul>\n<h2>1. 核心判断</h2>\n<p>以已公告 MW 为锚的 AI 基础设施估值体系（DC REITs、超大规模商电力合资、表后自备电厂）已结构性失效。前序研究量化出 640 亿美元受阻管线，前序研究显示 VaR 从 185bps 飙升至 525bps、极端情景回撤 15–22%。但市场仍以“公告 MW × $/kW”资本化。正确的新锚是 <strong>社会合规确定性（Social-Compliance Certainty, SCC）</strong>：自筹水/电网、社区许可耐久度、追溯性立法免疫力的复合指标。MW 应退化为 <strong>产能上限</strong>，不再是价值驱动因子。</p>\n<h2>2. 旧模型为何失效</h2>\n<p>公告-MW 锚的三大缺陷</p>\n<ol>\n<li><strong>期权幻觉</strong>：公告 MW 默认“通电”是二元事件，但实际分布已是三模态——通电 / 延迟 24–48 个月 / 取消并形成滞留土地。前序研究的 Loudoun 中位地价约 $4.1m/英亩，其溢价建立在审批链上；而前序研究显示该审批链是 <strong>社会可撤销</strong> 的。</li>\n<li><strong>成本转嫁反噬</strong>：前序研究（AEP Ohio、Dominion VA、Georgia PSC）显示居民交叉补贴是政治引爆点。曾享受社会化升级的站点存在“幻影 NPV”，会被前序研究所述的追溯性附加费回收。</li>\n<li><strong>水资源即二元杀手开关</strong>：与电力（可排队）不同，AZ/TX/IE/VA 的水权与农业是零和（前序研究）。一个项目可能完成全部电力审批，却死于水权——而水资源没有“限电”式的妥协机制。</li>\n</ol>\n<h2>3. 提议的新锚：社会合规确定性（SCC）</h2>\n<p>每个站点定义 <code>SCC = f(W, G, P, L, R)</code>，按产能加权汇总至组合</p>\n<table>\n<thead>\n<tr>\n<th>因子</th>\n<th>权重</th>\n<th>衡量内容</th>\n<th>核验来源</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>W — 自筹水</strong></td>\n<td>25%</td>\n<td>闭环冷却 / 再生水 / 自建处理在冷却负荷中占比 vs. 市政饮用水取水</td>\n<td>取水许可、水权契据、ZLD 资本开支披露</td>\n</tr>\n<tr>\n<td><strong>G — 自筹电网</strong></td>\n<td>20%</td>\n<td>CIAC + BYOG 在升级 capex 中占比；take-or-pay 与退出费覆盖</td>\n<td>电价表、PJM/ERCOT/MISO ISA 备案</td>\n</tr>\n<tr>\n<td><strong>P — 社区溢价</strong></td>\n<td>20%</td>\n<td>东道社区福利协议（CBA）、地方税分成、农地地役权补偿</td>\n<td>县议会会议纪要、CBA 文本</td>\n</tr>\n<tr>\n<td><strong>L — 立法免疫力</strong></td>\n<td>20%</td>\n<td>先占条款、稳定协议、各州既得权理论强度</td>\n<td>州法、总检察长意见</td>\n</tr>\n<tr>\n<td><strong>R — 追溯风险缓冲</strong></td>\n<td>15%</td>\n<td>针对附加费/许可撤销的保险/保证金/母公司担保</td>\n<td>10-K 风险因子披露、保证金备案</td>\n</tr>\n</tbody>\n</table>\n<p>SCC ≥ 0.75 的站点维持或超越当前 $/MW 倍数；0.45–0.75 应折价 15–25%；&lt; 0.45 应按 <strong>土地残值减去复原成本</strong> 估值——即公告 MW 价值归零。</p>\n<h2>4. 行业层面的因子换锚</h2>\n<p>将传统倍数 <code>EV / 公告-MW</code> 替换为两阶段构造</p>\n<pre><code>EV / 通电等效-MW  =  (公告 MW) × SCC × 投产概率\n</code></pre>\n<p>组合构建中的三组具体因子置换</p>\n<ul>\n<li><strong>剔除</strong>：公告 MW 储备、土地储备英亩数、已签 LOI。</li>\n<li><strong>加入</strong>：完全所有的水权 $/AF、ZLD 能力 MW 占比、CIAC 覆盖率、CBA $/MW、各州立法免疫指数。</li>\n<li><strong>倾斜</strong>：超配 SCC ≥ 0.75 的标的（垂直整合水权 + 表后燃气/核电 + 高 CBA 密度）；低配/做空缺乏水权的纯土储开发商和 AZ/VA/IE 农村绿地 REITs。</li>\n</ul>\n<h2>5. 与既有研究记录的交叉验证</h2>\n<ul>\n<li>支持前序研究：自筹电网（CIAC、take-or-pay）已是正确的电价设计，SCC 将其制度化为估值因子。</li>\n<li>支持前序研究：“农业盲区”被 W 与 P 权重（合计 45%）所捕捉；Right-to-Farm 先占规则直接馈入 L。</li>\n<li>支持前序研究：15–22% 回撤情景几乎精确对应 SCC &lt; 0.45 群组。本框架是风控压力测试的 <strong>前瞻版本</strong>。</li>\n<li>压力测试前序研究：“已获批/可通电”溢价确实存在但被错误规范化。许可 ≠ 社会许可。SCC 用连续可审计评分替代二元判定。</li>\n</ul>\n<h2>6. 落地与战术配置（截至 2026-05-14）</h2>\n<ul>\n<li><strong>低配</strong>：AZ/VA 无自有水权的农村绿地 DC REITs；依赖社会化输电升级的 PJM 区标的。</li>\n<li><strong>超配</strong>：具备（a）自建水处理 / 再生水承购合同，（b）表后自备发电（燃气调峰、SMR 期权、超大规模商自有光储），（c）与具名东道县签订多十年期 CBA 的运营商。</li>\n<li><strong>配对交易</strong>：做多 SCC 前四分位 DC 运营商 / 做空 SCC 末四分位土储开发商；披露规范化后 12 个月预期价差 18–25%。</li>\n<li><strong>上修触发条件</strong>：联邦层面对数据中心水/地的先占立法（2026 年底前低概率）；SEC 对 SCC 等效因子的标准化披露要求（2027 年中等概率）。</li>\n</ul>\n<h2>7. 框架自身的关键风险</h2>\n<ol>\n<li><strong>披露滞后</strong>：SCC 因子尚未 GAAP 化，早期使用代理变量，存在错误评分风险。</li>\n<li><strong>W 与 P 的漂绿风险</strong>：闭环水和 CBA 主张需第三方审计；ESG 分析师是自然的下一站。</li>\n<li><strong>MW 稀缺可能临时压过 SCC</strong>：在真实算力短缺冲击下（如前沿模型需求脉冲），市场可能短期回归 MW 定价。应视为战术性而非结构性体制。</li>\n</ol>\n<h2>8. 交接</h2>\n<p>框架已建。下一个瓶颈是 W 与 P 的 <strong>可审计性</strong>——尤其是闭环水和 CBA 质量的漂绿问题。这正是 ESG 分析师的专业范畴，属于专家触发器（具名因子需要专业深度，而非泛泛视角请求）。</p>\n<ul>\n<li>· AI 基础设施估值锚重构 · 2026-05-14*</li>\n</ul>"
+}

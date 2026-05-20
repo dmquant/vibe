@@ -1,0 +1,707 @@
+{
+  "schema_version": "deep-research.report.v1",
+  "id": "ai-power-inflation-transmission-0c9ba15c",
+  "slug": "ai-power-inflation-transmission-0c9ba15c",
+  "topic_id": "ai-power-inflation-transmission",
+  "generated_at": "2026-05-18T00:52:54.563618+00:00",
+  "metadata_generated_at": "2026-05-20T01:48:34.751332+00:00",
+  "date": "2026-05-18",
+  "source_fetch": "2026-05-19T12:49:36.748Z",
+  "daily_date": "2026-05-19",
+  "title": {
+    "zh": "AI 算力资本开支、电力瓶颈与通胀再定价",
+    "en": "AI Compute Capex, Power Bottlenecks, and Inflation Repricing"
+  },
+  "thesis": {
+    "zh": "AI 基础设施需求正在先通过电力、电网、变压器与材料供给形成成本脉冲，再通过生产率与架构效率形成中期缓释；投资结论取决于这两个方向谁先兑现。",
+    "en": "AI infrastructure demand first creates a cost impulse through power, grid, transformer, and materials constraints, while productivity and architecture efficiency arrive later as a possible offset; the investable conclusion depends on which channel clears first."
+  },
+  "questions": {
+    "zh": [
+      "AI 电力需求是否足以改变局部电价、PPA 和电网投资节奏？",
+      "通胀压力来自能源价格、设备交期，还是资本成本重估？",
+      "生产率收益何时能抵消前端成本脉冲？"
+    ],
+    "en": [
+      "Is AI power demand large enough to change local electricity prices, PPAs, and grid investment timing?",
+      "Does the inflation impulse come from energy prices, equipment lead times, or repriced capital costs?",
+      "When can productivity gains offset the front-loaded cost impulse?"
+    ]
+  },
+  "keywords": [
+    "AI",
+    "算力",
+    "数据中心",
+    "AIDC",
+    "电力",
+    "电网",
+    "通胀",
+    "资本开支",
+    "capex",
+    "inflation",
+    "power",
+    "grid"
+  ],
+  "chains": [
+    {
+      "label_zh": "AI 基础设施",
+      "label_en": "AI infrastructure"
+    },
+    {
+      "label_zh": "电力与电网",
+      "label_en": "power and grid"
+    },
+    {
+      "label_zh": "宏观通胀传导",
+      "label_en": "macro inflation transmission"
+    }
+  ],
+  "counts": {
+    "evidence": 8,
+    "risks": 12,
+    "analysts": 5,
+    "source_sentences": 414
+  },
+  "analysts": [
+    {
+      "name_zh": "未标注分析师",
+      "name_en": "unlabeled analyst",
+      "evidence_count": 3
+    },
+    {
+      "name_zh": "公用事业分析师",
+      "name_en": "utilities analyst",
+      "evidence_count": 2
+    },
+    {
+      "name_zh": "工业制造分析师",
+      "name_en": "industrials analyst",
+      "evidence_count": 1
+    },
+    {
+      "name_zh": "TMT行业分析师",
+      "name_en": "TMT analyst",
+      "evidence_count": 1
+    },
+    {
+      "name_zh": "首席策略师",
+      "name_en": "首席策略师",
+      "evidence_count": 1
+    }
+  ],
+  "evidence": [
+    {
+      "rank": 1,
+      "title_zh": "AI数据中心电力侧供应瓶颈与电网并网进度评估",
+      "title_en": "AI数据中心电力侧供应瓶颈与电网并网进度评估",
+      "analyst_zh": "未标注分析师",
+      "analyst_en": "unlabeled analyst",
+      "date": "2026-05-18",
+      "href": "reports/archive-ab20b4305a16",
+      "source": "archive-ab20b4305a16",
+      "source_path": "frontend/generated/reports/archive-ab20b4305a16.json",
+      "source_sentence_count": 46,
+      "tags": [
+        "AI",
+        "通胀",
+        "宏观",
+        "港美股",
+        "能源"
+      ],
+      "score": 32.6,
+      "summary_zh": "通过电网并网队列与大型变压器（LPT）、高压开关、GSU 等关键设备的硬数据，验证电力系统能否在 2026–2028 年超大规模厂商资本开支隐含的时间表内交付所承诺的 MW。 谨慎： 没有签约电力的纯 AI 半导体；2027 年前无队列位次的商业开发商；将 DC Capex 计入费率基础但 ROE 缺乏保护的电力公司（按州差异审视）。 因此 支持 前序研究：Alpha 应从\"AI Capex Beta\"轮动到那些已经拥有并网容量、队列…",
+      "summary_en": "通过电网并网队列与大型变压器（LPT）、高压开关、GSU 等关键设备的硬数据，验证电力系统能否在 2026–2028 年超大规模厂商资本开支隐含的时间表内交付所承诺的 MW。 谨慎： 没有签约电力的纯 AI 半导体；2027 年前无队列位次的商业开发商；将 DC Capex 计入费率基础但 ROE 缺乏保护的电力公司（按州差异审视）。 因此 支持 前序研究：Alpha 应从\"AI Capex Beta\"轮动到那些已经拥有并网容量、队列…",
+      "implication_zh": "说明 AI 基础设施的约束首先体现在电力、电网和设备交付，而不是只体现在芯片供给。",
+      "implication_en": "Shows that the first binding constraint is power, grid access, and equipment delivery, not only chip supply."
+    },
+    {
+      "rank": 2,
+      "title_zh": "电网基础设施扩容节奏 vs AI 算力资本开支切换",
+      "title_en": "电网基础设施扩容节奏 vs AI 算力资本开支切换",
+      "analyst_zh": "公用事业分析师",
+      "analyst_en": "utilities analyst",
+      "date": "2026-05-19",
+      "href": "reports/archive-674f035a6c53",
+      "source": "archive-674f035a6c53",
+      "source_path": "frontend/generated/reports/archive-674f035a6c53.json",
+      "source_sentence_count": 34,
+      "tags": [
+        "AI",
+        "通胀",
+        "宏观",
+        "能源",
+        "风险"
+      ],
+      "score": 29.4,
+      "summary_zh": "\"AI 资本开支见顶\"之争的盲点在于: 即便 2027 算力订单走平,电网订单要消化已签 backlog 仍可一路走高到 2029。 证伪条件:(a) 国家电网 2026 资本开支下修至 6400 亿元以下;(b) 日立/西门子订单簿出现 &gt;5% 取消;(c) 某超大规模云厂商明确削减 2027–2028 购电承诺;(d) FERC 大幅改革接入排队大幅缩短美国工期 (2026 内低概率)。 优选 IPP/电力 (美国 PJM…",
+      "summary_en": "\"AI 资本开支见顶\"之争的盲点在于: 即便 2027 算力订单走平,电网订单要消化已签 backlog 仍可一路走高到 2029。 证伪条件:(a) 国家电网 2026 资本开支下修至 6400 亿元以下;(b) 日立/西门子订单簿出现 &gt;5% 取消;(c) 某超大规模云厂商明确削减 2027–2028 购电承诺;(d) FERC 大幅改革接入排队大幅缩短美国工期 (2026 内低概率)。 优选 IPP/电力 (美国 PJM…",
+      "implication_zh": "说明 AI 基础设施的约束首先体现在电力、电网和设备交付，而不是只体现在芯片供给。",
+      "implication_en": "Shows that the first binding constraint is power, grid access, and equipment delivery, not only chip supply."
+    },
+    {
+      "rank": 3,
+      "title_zh": "AI算力扩张的电力设备与电网瓶颈压力测试",
+      "title_en": "Power-equipment and grid bottleneck stress test for AI compute expansion",
+      "analyst_zh": "未标注分析师",
+      "analyst_en": "unlabeled analyst",
+      "date": "2026-05-16",
+      "href": "reports/archive-855f740251cd",
+      "source": "archive-855f740251cd",
+      "source_path": "frontend/generated/reports/archive-855f740251cd.json",
+      "source_sentence_count": 39,
+      "tags": [
+        "AI",
+        "通胀",
+        "宏观",
+        "A股",
+        "港美股"
+      ],
+      "score": 29.4,
+      "summary_zh": "瓶颈真实存在、跨越数年、且具有非对称性： 并网排队 + 大型电力变压器（LPT）交付周期 是真正的硬约束，而不是GPU硅片本身；但能把这一瓶颈转化为订单的A股 / 全球设备名单，远比市场习惯的\"AI电力篮子\"更窄、更分化。 在通常被归入AI电力篮子的标的中，仅有顶层的高压变压器、开关柜、GIS、HVDC 龙头能拿出近12个月内由超大规模云厂商 / 电网公开披露的订单或框架协议作为支撑。 缺少披露的AI园区PO、无≥220 kV认证资质…",
+      "summary_en": "The research stress-tests whether AI compute growth is constrained by grid expansion, transformers, and distribution infrastructure rather than only by semiconductor availability.",
+      "implication_zh": "说明 AI 基础设施的约束首先体现在电力、电网和设备交付，而不是只体现在芯片供给。",
+      "implication_en": "Shows that the first binding constraint is power, grid access, and equipment delivery, not only chip supply."
+    },
+    {
+      "rank": 4,
+      "title_zh": "AI 数据中心电力瓶颈：utilities、电网设备与 firm power 受益链条",
+      "title_en": "AI data-center power bottlenecks across utilities, grid equipment, and firm power",
+      "analyst_zh": "未标注分析师",
+      "analyst_en": "unlabeled analyst",
+      "date": "2026-05-02",
+      "href": "reports/archive-2b48eeed3745",
+      "source": "archive-2b48eeed3745",
+      "source_path": "frontend/generated/reports/archive-2b48eeed3745.json",
+      "source_sentence_count": 162,
+      "tags": [
+        "AI",
+        "通胀",
+        "港美股",
+        "能源",
+        "风险"
+      ],
+      "score": 28.9,
+      "summary_zh": "AI 数据中心电力瓶颈：utilities、电网设备与 firm power 受益链条。 下一步应由风险视角压力测试 power-beneficiary basket 是否过度暴露于监管反弹、AI 基础设施拥挤估值、utility 信用压力和被高估的负荷申请管线。 16 对 AI 电力链来说，重点不只是新燃机交付，而是燃机、电网解决方案、服务、控制系统和长周期 backlog 可见性的组合。",
+      "summary_en": "The evidence frames firm power, utility capacity, and grid equipment as direct constraints and beneficiaries of AI data-center growth.",
+      "implication_zh": "说明 AI 基础设施的约束首先体现在电力、电网和设备交付，而不是只体现在芯片供给。",
+      "implication_en": "Shows that the first binding constraint is power, grid access, and equipment delivery, not only chip supply."
+    },
+    {
+      "rank": 5,
+      "title_zh": "AIDC 交付悖论：国产变压器速度 vs 局部电网消纳",
+      "title_en": "AIDC delivery paradox: transformer speed versus local grid absorption",
+      "analyst_zh": "工业制造分析师",
+      "analyst_en": "industrials analyst",
+      "date": "2026-05-18",
+      "href": "reports/archive-c3e9417f3658",
+      "source": "archive-c3e9417f3658",
+      "source_path": "frontend/generated/reports/archive-c3e9417f3658.json",
+      "source_sentence_count": 55,
+      "tags": [
+        "AI",
+        "通胀",
+        "能源",
+        "风险",
+        "行业研究"
+      ],
+      "score": 26.5,
+      "summary_zh": "跟进问题：中国哪些 AIDC 枢纽省份能在 2026-2027 年新增容量中真实授予确定性电力，而不是主要把数据中心变成削峰填谷和新能源消纳的柔性负荷？ 监管要求包括电网规划适度超前、对大数据中心供电核心设备开展负荷测试与健康动态评估、治理电压暂降和短时中断、并通过协同调度把部分可调节算力负荷用于削峰填谷。 更优质的订单应具备客户预付款、工程锁定，以及明确 AIDC 或公用事业并网项目名称，而不是笼统的“AI 电力”叙事。",
+      "summary_en": "The analysis argues that faster transformer delivery does not automatically translate into compute output because interconnection and local grid absorption can remain bottlenecks.",
+      "implication_zh": "说明 AI 基础设施的约束首先体现在电力、电网和设备交付，而不是只体现在芯片供给。",
+      "implication_en": "Shows that the first binding constraint is power, grid access, and equipment delivery, not only chip supply."
+    },
+    {
+      "rank": 6,
+      "title_zh": "AIDC 硬件交付的滞后与锚定：从电力节点看算力资本开支节奏",
+      "title_en": "AIDC hardware delivery lag and compute capex timing anchored by power nodes",
+      "analyst_zh": "TMT行业分析师",
+      "analyst_en": "TMT analyst",
+      "date": "2026-05-18",
+      "href": "reports/archive-562482f767db",
+      "source": "archive-562482f767db",
+      "source_path": "frontend/generated/reports/archive-562482f767db.json",
+      "source_sentence_count": 22,
+      "tags": [
+        "AI",
+        "宏观",
+        "能源",
+        "行业研究"
+      ],
+      "score": 25.3,
+      "summary_zh": "AIDC 硬件交付的滞后与锚定：从电力节点看算力资本开支节奏。 AI 硬件的交付节奏已不再是一个独立的变量，而是电网自动化和电力基础设施建设节点的衍生函数。 截至 2026-05-18，甘肃、宁夏等国家级算力枢纽电力供应确定性的提升，已经实质性改变了核心 AI 硬件的部署节奏。",
+      "summary_en": "The note links hardware delivery delays to power-node readiness, implying that capex recognition and compute monetization can diverge.",
+      "implication_zh": "说明 AI 基础设施的约束首先体现在电力、电网和设备交付，而不是只体现在芯片供给。",
+      "implication_en": "Shows that the first binding constraint is power, grid access, and equipment delivery, not only chip supply."
+    },
+    {
+      "rank": 7,
+      "title_zh": "研究记录 01 · AI 资本开支主题内部脱钩:算力侧见顶 vs 电力侧加速",
+      "title_en": "研究记录 01 · AI 资本开支主题内部脱钩:算力侧见顶 vs 电力侧加速",
+      "analyst_zh": "首席策略师",
+      "analyst_en": "首席策略师",
+      "date": "2026-05-19",
+      "href": "reports/archive-c1c1d0d424aa",
+      "source": "archive-c1c1d0d424aa",
+      "source_path": "frontend/generated/reports/archive-c1c1d0d424aa.json",
+      "source_sentence_count": 28,
+      "tags": [
+        "AI",
+        "通胀",
+        "宏观",
+        "能源",
+        "风险"
+      ],
+      "score": 24.4,
+      "summary_zh": "下一张卡建议交给 utilities-analyst(公用事业分析师) ,焦点收敛在 \"电力侧 AI 承接能力的容量与定价\" :数据中心 PPA 报价 30%+ 上行的可持续性、变电/输配 capex 的兑现节奏、以及 IPP 与受监管公用事业的相对受益结构。 这是一次\"主题内部的阶段性轮动\",而非 AI 主题整体见顶 ;但与页岩革命的\"钻探→管道\"类比并不完全成立——本轮脱钩更接近 \"AI 资本开支的瓶颈从硅片切换到瓦特\" ,算力侧…",
+      "summary_en": "The evidence frames firm power, utility capacity, and grid equipment as direct constraints and beneficiaries of AI data-center growth.",
+      "implication_zh": "说明 AI 基础设施的约束首先体现在电力、电网和设备交付，而不是只体现在芯片供给。",
+      "implication_en": "Shows that the first binding constraint is power, grid access, and equipment delivery, not only chip supply."
+    },
+    {
+      "rank": 8,
+      "title_zh": "AI 算力需求下的电力基础设施：电网韧性与储能资产的配置逻辑",
+      "title_en": "AI 算力需求下的电力基础设施：电网韧性与储能资产的配置逻辑",
+      "analyst_zh": "公用事业分析师",
+      "analyst_en": "utilities analyst",
+      "date": "2026-05-19",
+      "href": "reports/archive-dc34f9034202",
+      "source": "archive-dc34f9034202",
+      "source_path": "frontend/generated/reports/archive-dc34f9034202.json",
+      "source_sentence_count": 28,
+      "tags": [
+        "AI",
+        "通胀",
+        "宏观",
+        "能源",
+        "风险"
+      ],
+      "score": 24.4,
+      "summary_zh": "AI 算力需求下的电力基础设施：电网韧性与储能资产的配置逻辑。 截至2026年5月19日，人工智能发展的核心瓶颈已正式从HBM内存和GPU供应转向电网规模电力的物理可用性。 核心标的： 国电南瑞 (300034) （电网控制软件/AI调度）、 中国三峡 (600905) （绿电直连标杆）。",
+      "summary_en": "AI 算力需求下的电力基础设施：电网韧性与储能资产的配置逻辑。 截至2026年5月19日，人工智能发展的核心瓶颈已正式从HBM内存和GPU供应转向电网规模电力的物理可用性。 核心标的： 国电南瑞 (300034) （电网控制软件/AI调度）、 中国三峡 (600905) （绿电直连标杆）。",
+      "implication_zh": "说明 AI 基础设施的约束首先体现在电力、电网和设备交付，而不是只体现在芯片供给。",
+      "implication_en": "Shows that the first binding constraint is power, grid access, and equipment delivery, not only chip supply."
+    }
+  ],
+  "risk_matrix": [
+    {
+      "rank": 1,
+      "title_zh": "工业制造分析师报告 - 2026-05-19",
+      "title_en": "industrial supply bottlenecks risk signal",
+      "chain": "工业供给瓶颈",
+      "chain_en": "industrial supply bottlenecks",
+      "impact": 5,
+      "probability": 4,
+      "severity": 20,
+      "summary_zh": "日期（Asia/Singapore）： 2026-05-19 - 分析师： 工业制造分析师 - 立场： stress-test - 主题： 电网设备、大型变压器、开关设备与液冷系统的工业产能瓶颈 - 问题： 2026-2028 年窗口期内，变...",
+      "summary_en": "Flags industrial supply bottlenecks execution risk that can delay capacity, pressure margins, or raise discount rates.",
+      "href": "reports/archive-095f02714610"
+    },
+    {
+      "rank": 2,
+      "title_zh": "研究报告：2026-05-17 - 变压器供应瓶颈与GOES利润捕获",
+      "title_en": "industrial supply bottlenecks risk signal",
+      "chain": "工业供给瓶颈",
+      "chain_en": "industrial supply bottlenecks",
+      "impact": 5,
+      "probability": 2,
+      "severity": 10,
+      "summary_zh": "截至研究所工作日2026-05-17（Asia/Singapore），我支持研究记录1的主线：AI电力交易应从泛买公用事业久期资产，转向电力设备瓶颈和上游关键材料。最新证据更强：变压器交付仍受限于稀缺产能窗...",
+      "summary_en": "Flags industrial supply bottlenecks execution risk that can delay capacity, pressure margins, or raise discount rates.",
+      "href": "reports/archive-8e56e5109bff"
+    },
+    {
+      "rank": 3,
+      "title_zh": "关键电力设备供应链瓶颈：变压器与开关设备交付周期调研",
+      "title_en": "industrial supply bottlenecks risk signal",
+      "chain": "工业供给瓶颈",
+      "chain_en": "industrial supply bottlenecks",
+      "impact": 5,
+      "probability": 3,
+      "severity": 15,
+      "summary_zh": "研究记录 ｜ 立场：stress-test（压力测试） - 分析师：工业制造分析师 - 工作日期：2026-05-18（亚洲/新加坡） - 议题：变压器与开关设备等核心电力基础设施的交付延迟，是否足以构成 2H26 之...",
+      "summary_en": "Flags industrial supply bottlenecks execution risk that can delay capacity, pressure margins, or raise discount rates.",
+      "href": "reports/archive-90262cad3c96"
+    },
+    {
+      "rank": 4,
+      "title_zh": "电网基础设施扩容节奏 vs AI 算力资本开支切换",
+      "title_en": "industrial supply bottlenecks risk signal",
+      "chain": "工业供给瓶颈",
+      "chain_en": "industrial supply bottlenecks",
+      "impact": 5,
+      "probability": 4,
+      "severity": 20,
+      "summary_zh": "研究记录 立场: 支持 (support) - 分析师:公用事业分析师 工作日期: 2026-05-19 (亚洲/新加坡) - 主题:AI 驱动的电网扩容——变压器、特高压、开关设备瓶颈评估 - 问题:配电侧设备(变压器、开关...",
+      "summary_en": "The research stress-tests whether AI compute growth is constrained by grid expansion, transformers, and distribution infrastructure rather than only by semiconductor availability.",
+      "href": "reports/archive-674f035a6c53"
+    },
+    {
+      "rank": 5,
+      "title_zh": "AIDC 交付悖论：国产变压器速度 vs 局部电网消纳",
+      "title_en": "AIDC delivery paradox: transformer speed versus local grid absorption",
+      "chain": "电力与电网",
+      "chain_en": "power and grid",
+      "impact": 5,
+      "probability": 5,
+      "severity": 25,
+      "summary_zh": "说明国产变压器交付速度不能自动转化为可用算力，关键仍是并网、电力质量、调度规则和本地电网消纳。",
+      "summary_en": "Shows that faster transformer delivery does not automatically become usable compute; interconnection, power quality, dispatch rules, and local grid absorption remain binding constraints.",
+      "href": "reports/archive-c3e9417f3658"
+    },
+    {
+      "rank": 6,
+      "title_zh": "AI电力设备供应链瓶颈与产能验证",
+      "title_en": "AI power-equipment supply-chain capacity validation",
+      "chain": "工业供给瓶颈",
+      "chain_en": "industrial supply bottlenecks",
+      "impact": 5,
+      "probability": 5,
+      "severity": 25,
+      "summary_zh": "检验变压器、开关设备与电网设备产能能否承接 AI 基础设施需求，核心风险是交付延期和利润率承压。",
+      "summary_en": "Tests whether transformer, switchgear, and grid-equipment capacity can absorb AI infrastructure demand without delivery slippage or margin pressure.",
+      "href": "reports/archive-30e0562dfaf6"
+    },
+    {
+      "rank": 7,
+      "title_zh": "电力设备厂商订单结构、海外交付能力与利润率分化",
+      "title_en": "Power-equipment order quality, overseas delivery, and margin dispersion",
+      "chain": "工业供给瓶颈",
+      "chain_en": "industrial supply bottlenecks",
+      "impact": 5,
+      "probability": 3,
+      "severity": 15,
+      "summary_zh": "把高质量海外及电网订单与概念性订单区分开，风险在于收入质量和利润率分化。",
+      "summary_en": "Separates high-quality overseas and grid orders from weaker concept exposure; order quality and margin dispersion are the core risks.",
+      "href": "reports/archive-84af6c68738a"
+    },
+    {
+      "rank": 8,
+      "title_zh": "2026-05-14 政策研究：贸易壁垒压力测试中国电力设备出海逻辑",
+      "title_en": "Trade-barrier stress test for Chinese power-equipment exports",
+      "chain": "电力与电网",
+      "chain_en": "power and grid",
+      "impact": 5,
+      "probability": 2,
+      "severity": 10,
+      "summary_zh": "压力测试美国和欧盟贸易壁垒是否削弱中国电力设备出口增长逻辑。",
+      "summary_en": "Tests whether US and EU trade barriers can weaken the overseas growth thesis for Chinese power-equipment exporters.",
+      "href": "reports/archive-4a23ad4c08c6"
+    },
+    {
+      "rank": 9,
+      "title_zh": "AI算力扩张的电力设备与电网瓶颈压力测试",
+      "title_en": "Power-equipment and grid bottleneck stress test for AI compute expansion",
+      "chain": "电力与电网",
+      "chain_en": "power and grid",
+      "impact": 5,
+      "probability": 3,
+      "severity": 15,
+      "summary_zh": "检验 AI 算力增长是否受电网扩容、变压器供应和配电基础设施约束，而不只是受半导体供给约束。",
+      "summary_en": "Tests whether AI compute growth is constrained by grid expansion, transformer supply, and distribution infrastructure rather than only semiconductor availability.",
+      "href": "reports/archive-855f740251cd"
+    },
+    {
+      "rank": 10,
+      "title_zh": "边缘AI与定制硅（ASIC）的投资映射：基建约束下的算力新形态",
+      "title_en": "Edge AI and custom silicon under power-infrastructure constraints",
+      "chain": "AI 基础设施",
+      "chain_en": "AI infrastructure",
+      "impact": 5,
+      "probability": 4,
+      "severity": 20,
+      "summary_zh": "把电力瓶颈解释为边缘 AI、ASIC 和架构替代的催化因素，而不是 AI 资本开支坍塌。",
+      "summary_en": "Frames power bottlenecks as a catalyst for edge AI, ASICs, and architecture substitution rather than a collapse in AI capex.",
+      "href": "reports/archive-76de3be8fba0"
+    },
+    {
+      "rank": 11,
+      "title_zh": "电力设备供应链与电网扩容产能验证",
+      "title_en": "Power-equipment supply chain and grid-expansion capacity validation",
+      "chain": "工业供给瓶颈",
+      "chain_en": "industrial supply bottlenecks",
+      "impact": 5,
+      "probability": 3,
+      "severity": 15,
+      "summary_zh": "验证电力设备供应链和电网扩容能力是否足以支撑 AI 算力建设节奏。",
+      "summary_en": "Validates whether power-equipment supply and grid-expansion capacity can support the AI compute buildout pace.",
+      "href": "reports/archive-ecd6b3120a20"
+    },
+    {
+      "rank": 12,
+      "title_zh": "AI数据中心电力侧供应瓶颈与电网并网进度评估",
+      "title_en": "AI infrastructure risk signal",
+      "chain": "AI 基础设施",
+      "chain_en": "AI infrastructure",
+      "impact": 5,
+      "probability": 3,
+      "severity": 15,
+      "summary_zh": "分析师： 公用事业分析师 - 立场： 支持（验证前序研究\"time-to-power 而非 capex 美元是约束\"的核心判断） - 工作日期（亚洲/新加坡）： 2026-05-18",
+      "summary_en": "Flags AI infrastructure execution risk that can delay capacity, pressure margins, or raise discount rates.",
+      "href": "reports/archive-ab20b4305a16"
+    }
+  ],
+  "chain_evidence": [
+    {
+      "chain": "AI 基础设施",
+      "chain_en": "AI infrastructure",
+      "latest": 274,
+      "recent": 1119,
+      "risk": 846,
+      "heat": 2600.3
+    },
+    {
+      "chain": "电力与电网",
+      "chain_en": "power and grid",
+      "latest": 58,
+      "recent": 226,
+      "risk": 183,
+      "heat": 548.7
+    },
+    {
+      "chain": "宏观通胀传导",
+      "chain_en": "macro inflation transmission",
+      "latest": 274,
+      "recent": 1171,
+      "risk": 885,
+      "heat": 2695.2
+    }
+  ],
+  "tables": {
+    "by_kind": {
+      "transmission_framework": {
+        "zh": {
+          "headers": [],
+          "rows": []
+        },
+        "en": {
+          "headers": [],
+          "rows": []
+        }
+      },
+      "scenario_analysis": {
+        "zh": {
+          "headers": [
+            "情景",
+            "触发条件",
+            "宏观/资产含义",
+            "投资动作"
+          ],
+          "rows": [
+            {
+              "情景": "供给缓解",
+              "触发条件": "设备交期缩短、电价稳定、模型效率提升",
+              "宏观/资产含义": "AI 基础设施利润率扩张，通胀担忧回落",
+              "投资动作": "做多高质量设备与效率受益者，降低纯故事久期暴露"
+            },
+            {
+              "情景": "瓶颈延续",
+              "触发条件": "变压器/GOES/并网约束持续，PPA 与资本成本上行",
+              "宏观/资产含义": "资本开支兑现慢于估值，通胀黏性上升",
+              "投资动作": "偏向现金流确定的设备链，控制数据中心拥挤交易"
+            },
+            {
+              "情景": "需求外溢",
+              "触发条件": "云端受限推动边缘 AI、ASIC 和自动化替代",
+              "宏观/资产含义": "硬件需求迁移，软件效率成为通胀缓冲",
+              "投资动作": "配置架构替代和效率工具，谨慎追逐长久期主题"
+            }
+          ],
+          "kind": "scenario_analysis"
+        },
+        "en": {
+          "headers": [
+            "Scenario",
+            "Trigger",
+            "Macro/asset implication",
+            "Investor action"
+          ],
+          "rows": [
+            {
+              "Scenario": "Supply relief",
+              "Trigger": "Shorter equipment lead times, stable power prices, higher model efficiency",
+              "Macro/asset implication": "AI infrastructure margins expand and inflation concern fades",
+              "Investor action": "Favor quality equipment and efficiency beneficiaries; reduce pure-duration narrative exposure"
+            },
+            {
+              "Scenario": "Bottleneck persistence",
+              "Trigger": "Transformer/GOES/interconnection constraints persist; PPAs and capital costs rise",
+              "Macro/asset implication": "Capex monetization lags valuation; inflation stickiness rises",
+              "Investor action": "Prefer cash-flow-backed equipment exposure; control crowded data-center trades"
+            },
+            {
+              "Scenario": "Demand migration",
+              "Trigger": "Cloud constraints push edge AI, ASICs, and automation substitutes",
+              "Macro/asset implication": "Hardware demand migrates while software efficiency buffers inflation",
+              "Investor action": "Allocate to architecture substitution and efficiency tools; stay selective on long-duration themes"
+            }
+          ],
+          "kind": "scenario_analysis"
+        }
+      },
+      "portfolio_buckets": {
+        "zh": {
+          "headers": [],
+          "rows": []
+        },
+        "en": {
+          "headers": [],
+          "rows": []
+        }
+      },
+      "monitoring_dashboard": {
+        "zh": {
+          "headers": [],
+          "rows": []
+        },
+        "en": {
+          "headers": [],
+          "rows": []
+        }
+      }
+    },
+    "all": {
+      "zh": [
+        {
+          "headers": [
+            "情景",
+            "触发条件",
+            "宏观/资产含义",
+            "投资动作"
+          ],
+          "rows": [
+            {
+              "情景": "供给缓解",
+              "触发条件": "设备交期缩短、电价稳定、模型效率提升",
+              "宏观/资产含义": "AI 基础设施利润率扩张，通胀担忧回落",
+              "投资动作": "做多高质量设备与效率受益者，降低纯故事久期暴露"
+            },
+            {
+              "情景": "瓶颈延续",
+              "触发条件": "变压器/GOES/并网约束持续，PPA 与资本成本上行",
+              "宏观/资产含义": "资本开支兑现慢于估值，通胀黏性上升",
+              "投资动作": "偏向现金流确定的设备链，控制数据中心拥挤交易"
+            },
+            {
+              "情景": "需求外溢",
+              "触发条件": "云端受限推动边缘 AI、ASIC 和自动化替代",
+              "宏观/资产含义": "硬件需求迁移，软件效率成为通胀缓冲",
+              "投资动作": "配置架构替代和效率工具，谨慎追逐长久期主题"
+            }
+          ],
+          "kind": "scenario_analysis"
+        }
+      ],
+      "en": [
+        {
+          "headers": [
+            "Scenario",
+            "Trigger",
+            "Macro/asset implication",
+            "Investor action"
+          ],
+          "rows": [
+            {
+              "Scenario": "Supply relief",
+              "Trigger": "Shorter equipment lead times, stable power prices, higher model efficiency",
+              "Macro/asset implication": "AI infrastructure margins expand and inflation concern fades",
+              "Investor action": "Favor quality equipment and efficiency beneficiaries; reduce pure-duration narrative exposure"
+            },
+            {
+              "Scenario": "Bottleneck persistence",
+              "Trigger": "Transformer/GOES/interconnection constraints persist; PPAs and capital costs rise",
+              "Macro/asset implication": "Capex monetization lags valuation; inflation stickiness rises",
+              "Investor action": "Prefer cash-flow-backed equipment exposure; control crowded data-center trades"
+            },
+            {
+              "Scenario": "Demand migration",
+              "Trigger": "Cloud constraints push edge AI, ASICs, and automation substitutes",
+              "Macro/asset implication": "Hardware demand migrates while software efficiency buffers inflation",
+              "Investor action": "Allocate to architecture substitution and efficiency tools; stay selective on long-duration themes"
+            }
+          ],
+          "kind": "scenario_analysis"
+        }
+      ]
+    }
+  },
+  "assets": [
+    {
+      "id": "chain-evidence",
+      "label_zh": "产业链证据密度",
+      "label_en": "Industry-chain evidence density",
+      "path": "outputs/deep-research/reports/ai-power-inflation-transmission-0c9ba15c/assets/chain-evidence.png",
+      "href": "/deep-research/ai-power-inflation-transmission-0c9ba15c/assets/chain-evidence.png"
+    },
+    {
+      "id": "transmission-map",
+      "label_zh": "传导机制图",
+      "label_en": "Transmission map",
+      "path": "outputs/deep-research/reports/ai-power-inflation-transmission-0c9ba15c/assets/transmission-map.png",
+      "href": "/deep-research/ai-power-inflation-transmission-0c9ba15c/assets/transmission-map.png"
+    },
+    {
+      "id": "risk-matrix",
+      "label_zh": "风险矩阵",
+      "label_en": "Risk matrix",
+      "path": "outputs/deep-research/reports/ai-power-inflation-transmission-0c9ba15c/assets/risk-matrix.png",
+      "href": "/deep-research/ai-power-inflation-transmission-0c9ba15c/assets/risk-matrix.png"
+    }
+  ],
+  "documents": {
+    "markdown_en": "outputs/deep-research/reports/ai-power-inflation-transmission-0c9ba15c/report_en.md",
+    "markdown_zh": "outputs/deep-research/reports/ai-power-inflation-transmission-0c9ba15c/report_zh.md",
+    "docx_en": "outputs/deep-research/reports/ai-power-inflation-transmission-0c9ba15c/report_en.docx",
+    "docx_zh": "outputs/deep-research/reports/ai-power-inflation-transmission-0c9ba15c/report_zh.docx",
+    "pdf_en": "outputs/deep-research/reports/ai-power-inflation-transmission-0c9ba15c/report_en.pdf",
+    "pdf_zh": "outputs/deep-research/reports/ai-power-inflation-transmission-0c9ba15c/report_zh.pdf",
+    "json": "outputs/deep-research/reports/ai-power-inflation-transmission-0c9ba15c/report.json"
+  },
+  "web": {
+    "site_href": "deep-research/ai-power-inflation-transmission-0c9ba15c/index.html",
+    "frontend_href": "/deep-research/ai-power-inflation-transmission-0c9ba15c",
+    "downloads": [
+      {
+        "label": "Markdown EN",
+        "file": "report_en.md",
+        "path": "outputs/deep-research/reports/ai-power-inflation-transmission-0c9ba15c/report_en.md",
+        "href": "/deep-research/downloads/ai-power-inflation-transmission-0c9ba15c/report_en.md"
+      },
+      {
+        "label": "Markdown ZH",
+        "file": "report_zh.md",
+        "path": "outputs/deep-research/reports/ai-power-inflation-transmission-0c9ba15c/report_zh.md",
+        "href": "/deep-research/downloads/ai-power-inflation-transmission-0c9ba15c/report_zh.md"
+      },
+      {
+        "label": "DOCX EN",
+        "file": "report_en.docx",
+        "path": "outputs/deep-research/reports/ai-power-inflation-transmission-0c9ba15c/report_en.docx",
+        "href": "/deep-research/downloads/ai-power-inflation-transmission-0c9ba15c/report_en.docx"
+      },
+      {
+        "label": "DOCX ZH",
+        "file": "report_zh.docx",
+        "path": "outputs/deep-research/reports/ai-power-inflation-transmission-0c9ba15c/report_zh.docx",
+        "href": "/deep-research/downloads/ai-power-inflation-transmission-0c9ba15c/report_zh.docx"
+      },
+      {
+        "label": "PDF EN",
+        "file": "report_en.pdf",
+        "path": "outputs/deep-research/reports/ai-power-inflation-transmission-0c9ba15c/report_en.pdf",
+        "href": "/deep-research/downloads/ai-power-inflation-transmission-0c9ba15c/report_en.pdf"
+      },
+      {
+        "label": "PDF ZH",
+        "file": "report_zh.pdf",
+        "path": "outputs/deep-research/reports/ai-power-inflation-transmission-0c9ba15c/report_zh.pdf",
+        "href": "/deep-research/downloads/ai-power-inflation-transmission-0c9ba15c/report_zh.pdf"
+      },
+      {
+        "label": "Structured JSON",
+        "file": "report.json",
+        "path": "outputs/deep-research/reports/ai-power-inflation-transmission-0c9ba15c/report.json",
+        "href": "/deep-research/downloads/ai-power-inflation-transmission-0c9ba15c/report.json"
+      }
+    ]
+  }
+}

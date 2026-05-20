@@ -1,0 +1,20 @@
+{
+  "slug": "archive-3959778e18be",
+  "href": "/investor/reports/archive-3959778e18be/",
+  "meta": {
+    "title": "组合压力测试报告：AI芯片供应链断裂下的尾部风险校核",
+    "date": "2026-05-19",
+    "analyst_id": "chief-risk",
+    "analyst_name": "首席风控官",
+    "tags": [
+      "AI",
+      "通胀",
+      "宏观",
+      "A股",
+      "风险"
+    ],
+    "source": "archive-3959778e18be",
+    "source_label": "archive-3959778e18be"
+  },
+  "bodyHtml": "<h1>组合压力测试报告：AI芯片供应链断裂下的尾部风险校核</h1>\n<p><strong>日期：</strong> 2026-05-19\n<strong>分析师：</strong> 首席风控官 (Chief Risk Officer)\n<strong>立场：</strong> 压力测试 (Stress-Test)</p>\n<h2>1. 执行摘要：“寒武纪陷阱”</h2>\n<p>当前组合在AI/半导体行业的集中度面临非线性的“尾部风险”。虽然TMT行业分析师基于订单流认为存在“估值底”，但风控部门识别出一个<strong>流动性-杠杆陷阱</strong>。具体而言，若寒武纪（Cambricon）等高杠杆、高质押标的因HBM供应链断裂在30日内回撤超过30%，由此引发的融资盘踩踏与质押平仓连锁反应将导致组合层面的VaR（风险价值）飙升<strong>150-200%</strong>，并可能穿透组合整体风控限额。</p>\n<h2>2. 压力情景参数设定</h2>\n<ul>\n<li><strong>触发点：</strong> 华盛顿正式出台针对HBM及存量设备维护的出口管制禁令。</li>\n<li><strong>资产冲击：</strong> AI芯片板块（以寒武纪为代表）在30个交易日内回撤30%至45%。</li>\n<li><strong>相关性漂移：</strong> 跨资产相关性（半导体 vs 广义TMT vs 小盘股）从0.45收敛至<strong>0.85以上</strong>。</li>\n<li><strong>流动性环境：</strong> 核心标的买卖价差扩大3-5倍；IM（中证1000）期指贴水扩大至-2.5%或更低。</li>\n</ul>\n<h2>3. 组合层面定量影响评估</h2>\n<table>\n<thead>\n<tr>\n<th>指标</th>\n<th>压力测试前 (2026-05-18)</th>\n<th>压力情景估计值</th>\n<th>变化幅度</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>99% 单日 VaR</strong></td>\n<td>1.85%</td>\n<td>4.20% - 5.10%</td>\n<td>+127% 至 +175%</td>\n</tr>\n<tr>\n<td><strong>最大回撤 (MDD)</strong></td>\n<td>6.5% (年内)</td>\n<td>18.0% 至 -24.0%</td>\n<td>穿透 -15% 的止损阈值</td>\n</tr>\n<tr>\n<td><strong>融资担保比例</strong></td>\n<td>2.4x</td>\n<td>1.1x - 0.9x</td>\n<td>触发布追加保证金/强平风险</td>\n</tr>\n<tr>\n<td><strong>系统相关性</strong></td>\n<td>0.52</td>\n<td>0.88</td>\n<td>多元化配置失效</td>\n</tr>\n</tbody>\n</table>\n<h2>4. 风险传导机制与传染路径</h2>\n<ol>\n<li><strong>阶段一：叙事崩塌。</strong> HBM供应链断裂直接证伪寒武纪等标的的“订单交付”逻辑，基本面支撑失效。</li>\n<li><strong>阶段二：杠杆解杠杆。</strong> 散户融资盘（占自由流通8-13%）触发止损线，波动率向小盘股扩散。</li>\n<li><strong>阶段三：质押传染。</strong> 大股东质押（25-40%）触及“警戒线”与“平仓线”，引发二级市场减持压力。</li>\n<li><strong>阶段四：跨板块流动性挤压。</strong> 为了补足AI标的的保证金，投资者被迫抛售流动性较好的“白马股”（如中芯国际、银行、消费），导致全市场去杠杆。</li>\n</ol>\n<h2>5. 风险对冲与自动减仓规则</h2>\n<p>为保护组合安全，即刻预设以下<strong>自动化风险缓释协议</strong></p>\n<h3>A. 自动减仓触发规则</h3>\n<ul>\n<li><strong>规则 1 (价格触发)：</strong> 若寒武纪 (688256.SH) 收盘跌破 [价格X - 15%] 且成交量放大至1.5倍均值，强制削减半导体总敞口25%。</li>\n<li><strong>规则 2 (基差触发)：</strong> 若IM2606期指贴水超过-2.0%持续3小时，对冲50%的多头偏离度（使用IM空单或看跌期权）。</li>\n<li><strong>规则 3 (质押预警)：</strong> 若板块平均回撤超过20%，平仓所有大股东质押率超过30%的持仓，防止陷入“质押陷阱”锁死流动性。</li>\n</ul>\n<h3>B. 对冲工具覆盖</h3>\n<ul>\n<li><strong>做多波动率：</strong> 逐步建立VIX（或境内波动率替代品）看涨期权，作为尾部对冲。</li>\n<li><strong>IM期指套保：</strong> 鉴于中证1000对散户杠杆资金的高敏感度，将其作为主要宏观对冲工具。</li>\n<li><strong>风格切换：</strong> 将头寸从高beta的“叙事类芯片”（寒武纪）切换至“产能类芯片”（中芯国际）或公用事业，降低beta调整后的VaR。</li>\n</ul>\n<h2>6. 最终结论</h2>\n<p>散户投资者的“拒绝投降”情绪在AI板块形成了高密度的杠杆筹码区。供应链冲击已不再仅仅是“估值调整”，而是杠杆参与者的<strong>偿付能力事件</strong>。建议在政策窗口落地前，对AI芯片集群进行20%的防御性减仓。</p>\n<p><strong>Wrote research discussion/ec95959c-0d36-49f5-82fb-72136e8e5a9c/research note/report.zh.md</strong></p>"
+}

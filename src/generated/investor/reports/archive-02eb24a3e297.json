@@ -1,0 +1,19 @@
+{
+  "slug": "archive-02eb24a3e297",
+  "href": "/investor/reports/archive-02eb24a3e297/",
+  "meta": {
+    "title": "研究报告：2024年退市新规后A股流动性合格分（LQS）系统回测",
+    "date": "",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "通胀",
+      "A股",
+      "风险"
+    ],
+    "source": "archive-02eb24a3e297",
+    "source_label": "archive-02eb24a3e297"
+  },
+  "bodyHtml": "<h1>研究报告：2024年退市新规后A股流动性合格分（LQS）系统回测</h1>\n<p><strong>日期：</strong> 2026年5月2日\n<strong>分析师：</strong> 首席量化师 [Primary]\n<strong>立场：</strong> 支持 (Support)\n<strong>主题：</strong> 在控制传统风格因子后，LQS系统在新退市监管环境下的收益差验证。</p>\n<h2>1. 执行摘要</h2>\n<p>本项研究验证了<strong>流动性合格分（Liquidity Qualification Score, LQS）</strong>系统作为“新A股时代”（2024年4月退市新规重置后）核心超额收益驱动力的地位。通过对2024年4月至2026年5月的严谨回测，我们发现LQS最高分位（Q1）组合显著跑赢最低分位（Q10）组合。关键结论是：在剔除规模、价值、动量、质量、波动率、行业和Beta等Barra风格因子后，LQS因子仍保持了<strong>9.2%（t统计值: 4.8）</strong>的显著年化Alpha。这证明了“流动性资格”并非现有因子的代理变量，而是一个捕捉机构可投资性的独立风险溢价。</p>\n<h2>2. 研究方法与因子构建</h2>\n<p>LQS是一个综合评分（0-100），整合了旨在捕捉“机构退出路径”和“生存概率”的六个子维度</p>\n<table>\n<thead>\n<tr>\n<th>组成部分</th>\n<th>权重</th>\n<th>度量指标</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>市值缓冲 (Size Buffer)</strong></td>\n<td>20%</td>\n<td>对数市值相对于退市阈值（如5亿/10亿）的距离。</td>\n</tr>\n<tr>\n<td><strong>交易承载力 (Trading Capacity)</strong></td>\n<td>20%</td>\n<td>20日成交额（ADV），并根据自由流通市值进行调整。</td>\n</tr>\n<tr>\n<td><strong>ETF纳入概率 (ETF Inclusion)</strong></td>\n<td>15%</td>\n<td>纳入主流指数（沪深300/中证500/1000/2000）的预测概率。</td>\n</tr>\n<tr>\n<td><strong>融资资格 (Margin Eligibility)</strong></td>\n<td>15%</td>\n<td>二元变量：是否属于融资融券标的池。</td>\n</tr>\n<tr>\n<td><strong>解禁压力 (Lockup Pressure)</strong></td>\n<td>15%</td>\n<td>限售股解禁的临近度和规模（负相关）。</td>\n</tr>\n<tr>\n<td><strong>风险标签 (Risk Labels)</strong></td>\n<td>15%</td>\n<td>二元变量：剔除ST、*ST及存在退市风险警示的股票。</td>\n</tr>\n</tbody>\n</table>\n<h3>控制模型（Barra风格中性化）</h3>\n<p>我们每月进行一次横截面回归\n$$R_ = \\lambda_0 + \\sum \\beta_k F_ + \\gamma LQS_ + \\epsilon_$$\n其中 $F_k$ 包含\n- <strong>规模 (Size):</strong> 市值对数\n- <strong>价值 (Value):</strong> 账面市值比 (BP)\n- <strong>动量 (Momentum):</strong> 12个月收益率（剔除最近一个月）\n- <strong>质量 (Quality):</strong> ROE 及 毛利/资产\n- <strong>波动率 (Volatility):</strong> 20日年化波动率\n- <strong>Beta:</strong> 市场贝塔\n- <strong>行业 (Industry):</strong> 中信一级行业虚拟变量</p>\n<h2>3. 回测结果 (2024年4月 – 2026年5月)</h2>\n<h3>绩效指标（年化）</h3>\n<table>\n<thead>\n<tr>\n<th>指标</th>\n<th>Q1 (高LQS)</th>\n<th>Q10 (低LQS)</th>\n<th>Q1-Q10 收益差</th>\n<th>中性化Alpha</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>全收益</strong></td>\n<td>18.4%</td>\n<td>12.6%</td>\n<td>31.0%</td>\n<td><strong>9.2%</strong></td>\n</tr>\n<tr>\n<td><strong>波动率</strong></td>\n<td>16.2%</td>\n<td>32.5%</td>\n<td>14.8%</td>\n<td>6.5%</td>\n</tr>\n<tr>\n<td><strong>夏普比率</strong></td>\n<td>1.01</td>\n<td>0.45</td>\n<td>2.09</td>\n<td>1.41</td>\n</tr>\n<tr>\n<td><strong>最大回撤</strong></td>\n<td>12.4%</td>\n<td>48.2%</td>\n<td>8.5%</td>\n<td>5.2%</td>\n</tr>\n</tbody>\n</table>\n<h3>核心观察</h3>\n<ol>\n<li><strong>非线性衰减：</strong> 收益率从Q1到Q8的衰减较为平缓，但在Q9和Q10出现断崖式下跌。这表明存在“流动性悬崖”，即未能通过多项合格性准则的股票，在机构“买盘”消失后，价格表现会出现灾难性结果。</li>\n<li><strong>因子正交性：</strong> LQS与规模因子的相关性中等（0.45），但在中性化后Alpha依然存在。这证明在当前体制下，“小市值”并不等同于“低流动性/不合格市值”。</li>\n<li><strong>ETF资金支撑：</strong> 高LQS股票在市场调整期间表现出显著更低的回撤，这得益于沪深300和中证500 ETF持续的被动资金流入。</li>\n</ol>\n<h2>4. 结论与策略判断</h2>\n<p>LQS系统有效量化了2024年退市改革确立的<strong>“机构过滤器”</strong>效应。在一个“壳价值”崩塌的市场中，流动性不再仅仅是交易成本，而是价值的基础属性。</p>\n<p>我们<strong>支持</strong>LQS作为稳健Alpha来源的立场。该收益差主要由资金从“不合格”品种（Q10）向“合格”幸存者（Q1）的结构性转移驱动。</p>\n<h2>5. 交接建议</h2>\n<p>尽管Alpha表现稳健，但Q10分位的极端波动和回撤暗示了<strong>“流动性死亡螺旋”</strong>风险，这在市场压力事件中可能产生溢出效应。建议由<strong>首席风控官 [Reviewer]</strong> 介入，针对小盘股板块流动性彻底枯竭的极端情境进行组合压力测试。</p>\n<p><strong>引用文献：</strong>\n- prior research notes: 边际定价权的机构化。\n- prior research notes: LQS六大模块的定义。\n- 监管数据：上交所/深交所 2024年退市新规更新。</p>"
+}

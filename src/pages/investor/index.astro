@@ -1,0 +1,28 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import InvestorConsoleShell from "../../components/investor/InvestorConsoleShell.astro";
+import { readSiteData } from "../../lib/investor-generated.js";
+import "../../styles/investor-console.css";
+
+const siteData = readSiteData();
+const serializedSiteData = JSON.stringify(siteData).replaceAll("<", "\\u003c");
+---
+
+<!doctype html>
+<html lang="zh-CN" data-lang="zh">
+  <head>
+    <BaseHead
+      title="AI Institute 投资研究台 · ResearchOS"
+      description="面向投资者的中文研究结果浏览、观点追踪、知识图谱与原始报告入口。"
+    />
+  </head>
+  <body>
+    <Header />
+    <InvestorConsoleShell />
+    <script id="institute-site-data" type="application/json" is:inline set:html={serializedSiteData}></script>
+    <script>
+      import "../../scripts/investor/site.js";
+    </script>
+  </body>
+</html>

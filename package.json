@@ -9,7 +9,11 @@
     "dev": "astro dev",
     "build": "node ../scripts/decrypt_briefs.mjs && astro build",
     "preview": "astro preview",
-    "sync": "python sync_research.py",
+    "sync": "python3 ../scripts/sync_research.py",
+    "daily:update": "python3 ../scripts/run_daily_pipeline.py",
+    "investor:sync": "node ../scripts/sync_vibe_investor.mjs",
+    "investor:update": "bash ../scripts/update_vibe_investor.sh --skip-source",
+    "maintain": "bash ../scripts/vibe_maintenance.sh",
     "astro": "astro"
   },
   "dependencies": {

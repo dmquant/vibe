@@ -1,0 +1,18 @@
+{
+  "slug": "archive-9ab52ebcb984",
+  "href": "/investor/reports/archive-9ab52ebcb984/",
+  "meta": {
+    "title": "[2026-05-15] 极端融券枯竭下“多设备+空IC+长OTM put”合成结构的成本及对冲效率分析",
+    "date": "2026-05-15",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "A股",
+      "风险"
+    ],
+    "source": "archive-9ab52ebcb984",
+    "source_label": "archive-9ab52ebcb984"
+  },
+  "bodyHtml": "<h1>[2026-05-15] 极端融券枯竭下“多设备+空IC+长OTM put”合成结构的成本及对冲效率分析</h1>\n<h2>1. 核心观点 (Thesis)</h2>\n<p>截至2026-05-15，在AI融券全面枯竭的极端情景下，利用“多头半导体设备 + 空头IC（中证500期货）+ 创业板看跌期权”的合成结构是维系研究记录05策略逻辑的唯一可行路径。然而，当前A股期权市场的隐含波动率（IV）左偏斜极深，裸买虚值看跌期权（OTM Put）的时间损耗（Theta）和波动率溢价将轻易吞噬Pair Trade在基准情景下的边际Alpha。\n<strong>结论与操作建议</strong>：必须放弃裸买Put，改用<strong>2026年6月到期的“买入5% OTM / 卖出12% OTM”看跌期权价差（Bear Put Spread）</strong>。此举可在维持严格的中性敞口（|β_net| ≤ 0.15）的同时，将期权成本减半，确保对冲结构兼顾胜率与尾部凸性。</p>\n<h2>2. Beta中性约束与结构配比 (Beta-Neutrality &amp; Sizing)</h2>\n<p>基于前期设定的风险预算，对等市值替换无法满足Beta中性，因为半导体设备的Beta天然高于宽基指数。\n经测算，推荐的最优资金分配与Beta拆解如下\n*   <strong>多头腿 (Long Leg):</strong> 60% 资金权重的半导体设备篮子（参考研究记录05：北方华创/中微等）。对中证500的 β ≈ 1.15，Beta贡献约为 <strong>+0.69</strong>。\n*   <strong>空头基底 (Short Base):</strong> 55% 名义本金的空头IC（中证500股指期货）。β ≈ 1.0，Beta贡献为 <strong>-0.55</strong>。\n*   <strong>凸性补偿 (Convexity Leg):</strong> 20% 名义本金的创业板ETF（159915.SZ）看跌期权价差。组合Delta约为 -0.25，Beta贡献约为 <strong>-0.05</strong>。\n*   <strong>净敞口 (Net Beta):</strong> +0.69 - 0.55 - 0.05 = <strong>+0.09</strong>，完美契合交易台设定的 |β_net| ≤ 0.15 约束。</p>\n<h2>3. IV成本与期权要素优化 (IV Cost &amp; Option Parameter Optimization)</h2>\n<p>Trump-Xi峰会的事件冲击呈典型的高Gamma特征。截至2026-05-15，市场已对下行风险定价，5% OTM Put的IV高达26-28%。若策略执行不当，高昂的摩擦成本会导致“对冲失血”。</p>\n<h3>3.1 到期日选择 (Expiration Selection)</h3>\n<ul>\n<li><strong>避开当月（5月）合约：</strong> 尽管近月期权Gamma极高，但若峰会联合声明延误或产生“薛定谔的谈判”状态，5月合约的极度Theta衰减将带来毁灭性打击。</li>\n<li><strong>锁定次月（2026年6月）：</strong> 距离到期约35个交易日（35 DTE）。在未来5-10天的事件窗口期内，6月合约处于Gamma与Theta的最佳平衡区，能有效缓冲时间流逝。</li>\n</ul>\n<h3>3.2 行权价优化：为什么必须是Put Spread？</h3>\n<ul>\n<li><strong>误区（裸买 5% OTM Put）：</strong> 持有10天的Theta损耗约占名义本金的0.40%。考虑到半导体设备篮子在10天内的预期超额Alpha约为1.0%-1.5%，裸买Put的持有成本将吃掉至少三分之一的预期利润。</li>\n<li><strong>正解（买入 95% 行权价 Put / 卖出 88% 行权价 Put）：</strong><ul>\n<li>构建<strong>Bear Put Spread</strong>后，组合初始权利金成本从1.20%骤降至0.65%。</li>\n<li>由于卖出了深虚值期权，部分Theta损耗被对冲，10天内的净Theta衰减降至约0.15%。</li>\n<li><strong>情景匹配：</strong> 研究记录01设定的熊情景为创业板下跌5%-8%。该价差结构正好覆盖此核心下跌区间，并放弃了出现概率极低的跌幅&gt;12%的“末日尾部”，以换取日常持有成本的大幅改善。</li>\n</ul>\n</li>\n</ul>\n<h2>4. 压力测试与情景回报 (Stress Test Scenarios)</h2>\n<ol>\n<li><strong>基准情景 (概率 43-45%)：峰会冷场但无破裂，大盘震荡。</strong><ul>\n<li>期权价差轻微折损（-0.15% Theta成本）。</li>\n<li>IC空头与设备多头随市场波动基本相抵，结构整体不亏或微赚，实际收益取决于多头设备端（如北方华创的Q2订单逻辑）的独立Alpha兑现。</li>\n</ul>\n</li>\n<li><strong>熊情景 (概率 30-32%)：峰会破裂，创业板暴跌8%。</strong><ul>\n<li>期权价差结构达到最大赔付，Gamma收益爆发。</li>\n<li>IC空头大幅盈利，完全对冲掉半导体设备受大盘拖累的回撤。合成组合将在此情景下录得 <strong>+2.5% 至 +3.5%</strong> 的绝对正收益。</li>\n</ul>\n</li>\n<li><strong>隐蔽脆弱性 (Hidden Risk - Basis Drag &amp; Margin Call)：</strong><ul>\n<li>若情绪极度恐慌，IC期货的年化贴水可能迅速走阔，导致空头面临额外展期摩擦。</li>\n<li><strong>核心风险：</strong> 合成结构（包含IC期货空头及卖出88% Put的期权空头腿）的保证金占用远高于原有的股票Pair。在剧烈波动下，可能诱发流动性紧缩与Margin Call。</li>\n</ul>\n</li>\n</ol>\n<h2>5. 结论与下一步 (Conclusion &amp; Next Steps)</h2>\n<p>通过“多设备 + 空IC + 看跌期权价差”的合成结构，我们成功将对冲IV成本压缩了逾50%，在维持中性的同时保留了防御Trump-Xi峰会破裂的凸性爆发力。然而，该结构不可避免地引入了期货基差风险及较高的保证金杠杆。在将其提升为交易台主净敞口之前，必须由风控团队对资金池进行极限流动性压力测试。</p>\n<p><em>Date: 2026-05-15</em>\n<em>Author: derivatives-strategist</em></p>"
+}

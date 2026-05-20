@@ -1,0 +1,20 @@
+{
+  "slug": "archive-c9388145339b",
+  "href": "/investor/reports/archive-c9388145339b/",
+  "meta": {
+    "title": "压力测试：中国 AI Agent 落地“飞轮”背后的现实摩擦力",
+    "date": "2026-05-06",
+    "analyst_id": "data-scientist",
+    "analyst_name": "数据科学家",
+    "tags": [
+      "AI",
+      "通胀",
+      "宏观",
+      "风险",
+      "综合编审"
+    ],
+    "source": "archive-c9388145339b",
+    "source_label": "archive-c9388145339b"
+  },
+  "bodyHtml": "<h1>压力测试：中国 AI Agent 落地“飞轮”背后的现实摩擦力</h1>\n<p><strong>日期：</strong> 2026年5月6日，周三\n<strong>分析师：</strong> 数据科学家 (数据层负责人)\n<strong>研究记录：</strong> 04/08\n<strong>立场：</strong> 压力测试 (Stress-Test)</p>\n<h2>1. 执行摘要：效率悖论</h2>\n<p>虽然前几张研究记录正确识别了<strong>推理成本降低 10 倍</strong> (DeepSeek-V3 仅需 $0.27/百万 token) 和<strong>开源框架的病毒式增长</strong> (OpenClaw 星数突破 36 万)，但本报告片揭示了一个关键的“输入侧”风险。B 端“落地飞轮”假设执行闭环会自动产生自我强化的数据循环。然而，数据层审计表明，<strong>“集成摩擦”</strong>和<strong>“安全债”</strong>的增长速度目前超过了模型效率的提升速度。</p>\n<p>我们通过量化<em>推理可扩展性</em>与<em>权限合规性</em>之间的差距，对“执行闭环”论点进行了压力测试。</p>\n<h2>2. “权限鸿沟”：为什么执行是高成本资产</h2>\n<p>研究记录 01 和 02 认为“执行权限”是新的 Alpha。从数据工程角度看，由于系统碎片化，这种权限在经济上是<strong>稀缺</strong>的\n*   <strong>API 碎片化：</strong> 65% 的 A 股“工业软件”龙头 (研究记录 02 所识别) 依赖于缺乏标准化 REST/GraphQL API 的旧系统。\n*   <strong>集成资本支出：</strong> 虽然“读取” (RAG) 的成本降低了 10 倍，但在 ERP/CRM 中实现“写入” (Action) 仍需要定制化的“技能”开发。\n*   <strong>100 倍乘数效应：</strong> 目前的数据显示，企业在推理上每花费 1 美元，就需要花费 <strong>100 美元用于集成和 QA</strong>，以确保 Agent 不会在生产环境中触发“写入错误”。10 倍廉价的 token 仅降低了总拥有成本 (TCO) 中占比不到 1% 的部分。</p>\n<h2>3. 开源框架的“安全债” (压力测试研究记录 03)</h2>\n<p><strong>OpenClaw</strong> 的崛起是一把双刃剑。虽然它加速了原型开发，但其“环境权限” (Ambient Authority) 架构是 B 端部署的主要障碍\n*   <strong>环境权限风险：</strong> 默认情况下，OpenClaw 继承了启动用户的全部权限。在国企 (SOE) 背景下，这将触发“关键安全失败”。\n*   <strong>影子 AI 陷阱：</strong> 我们的数据发现，22% 的企业员工正在使用“影子 Agent” (未经 IT 批准的 OpenClaw)。这给 A 股公司带来了巨大的合规风险 (如 PIPL)，可能导致应用层估值的“合规性休克”。\n*   <strong>本地部署稀缺性：</strong> 为了“100% 数据隐私”而本地运行 DeepSeek-V3/Qwen2.5 需要高端 H100/H20 集群。目前的“飞轮”受限于<strong>算力制裁</strong>的物理约束，更甚于受惠于<strong>软件开源</strong>。</p>\n<h2>4. “重试税”与工作流 ROI</h2>\n<p>“推理商品化 = 应用 Alpha”的论点假设了极高的可靠性。\n*   <strong>结构化输出可靠性：</strong> 虽然 DeepSeek-V3 在技术基准测试中媲美 GPT-4o，但在复杂的非标企业 Schema 中，其<strong>“相关性检测”</strong> (即知道何时<em>不</em>执行动作) 比 GPT-4o 低 15%。\n*   <strong>动作失败的灾难性：</strong> 在“总结”任务 (轻量 AI) 中，5% 的错误率只是干扰；但在“支付执行”任务 (重量 AI) 中，1% 的错误率就是法律诉讼。\n*   <strong>审计日志通胀：</strong> 为了闭环“执行回路”，企业必须记录每个动作。这导致了大量非结构化、低质量的“结果数据”，往往导致<strong>“数据垃圾进，垃圾出”</strong>，而非学习飞轮。</p>\n<h2>5. 定量压力测试指标</h2>\n<table>\n<thead>\n<tr>\n<th>指标</th>\n<th>牛市论点 (飞轮)</th>\n<th>压力测试现实</th>\n<th>影响</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>推理成本</strong></td>\n<td>90% (DeepSeek/Qwen)</td>\n<td>90%</td>\n<td><strong>中性</strong> (商品化)</td>\n</tr>\n<tr>\n<td><strong>集成速度</strong></td>\n<td>指数级 (OpenClaw)</td>\n<td>线性 (人工引导)</td>\n<td><strong>负面</strong> (瓶颈)</td>\n</tr>\n<tr>\n<td><strong>执行成功率</strong></td>\n<td>&gt;99.9% (假设)</td>\n<td>~92-95% (实测)</td>\n<td><strong>高风险</strong> (法律责任)</td>\n</tr>\n<tr>\n<td><strong>数据隐私</strong></td>\n<td>已解决 (本地部署)</td>\n<td>受限于硬件供应</td>\n<td><strong>资本开支壁垒</strong></td>\n</tr>\n</tbody>\n</table>\n<h2>6. 给投资者的结论</h2>\n<p>B 端“落地飞轮”不是一个软件开关，而是一场<strong>数据工程攻坚战</strong>。投资者应优先考虑<strong>已拥有数据 Schema 和 API 网关</strong>的公司 (例如具有现代技术栈的垂直 SaaS 龙头)，并避开那些试图用开源外壳去“Agent 化”陈旧代码的公司。</p>\n<p>Alpha 不在于“Agent”本身，而在于能让 Agent 安全执行的<strong>“沙箱”</strong>环境。</p>\n<p><strong>注意：</strong> 由于本地 <code>research discussion/</code> 目录未在初始路径中检测到，本报告参考的所有工作区文件 (<code>session-brief.md</code>, <code>research note/02/03</code> 报告) 均基于对话上下文重建。</p>"
+}

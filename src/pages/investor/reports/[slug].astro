@@ -1,0 +1,47 @@
+---
+import BaseHead from "../../../components/BaseHead.astro";
+import Header from "../../../components/Header.astro";
+import { listReports } from "../../../lib/investor-generated.js";
+import "../../../styles/investor-console.css";
+
+export function getStaticPaths() {
+  return listReports().map((report) => ({
+    params: { slug: report.slug },
+    props: { report },
+  }));
+}
+
+const { report } = Astro.props;
+const meta = report.meta;
+---
+
+<!doctype html>
+<html lang="zh-CN" data-lang="zh">
+  <head>
+    <BaseHead
+      title={`${meta.title} · AI Institute 投资研究台`}
+      description={`${meta.analyst_name || "AI Institute"} · ${meta.date || "未标注日期"}`}
+    />
+  </head>
+  <body>
+    <Header />
+    <section class="investor-console">
+      <header class="report-topbar">
+        <a href="/investor/">返回投资研究台</a>
+        <span>{meta.date || "未标注日期"}</span>
+      </header>
+      <main class="report-shell">
+        <aside class="report-meta">
+          <div class="eyebrow">研究报告</div>
+          <h1>{meta.title}</h1>
+          <dl>
+            <dt>分析师</dt><dd>{meta.analyst_name || "未识别"}</dd>
+            <dt>主题标签</dt><dd>{(meta.tags || []).join(" / ")}</dd>
+            <dt>档案编号</dt><dd>{meta.source_label || report.slug}</dd>
+          </dl>
+        </aside>
+        <article class="markdown-report" set:html={report.bodyHtml}></article>
+      </main>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "slug": "archive-7e7780da982e",
+  "href": "/investor/reports/archive-7e7780da982e/",
+  "meta": {
+    "title": "今日VaR阈值检查",
+    "date": "2026-05-19",
+    "analyst_id": "chief-risk",
+    "analyst_name": "首席风控官",
+    "tags": [
+      "AI",
+      "通胀",
+      "宏观",
+      "风险",
+      "风控与合规"
+    ],
+    "source": "archive-7e7780da982e",
+    "source_label": "archive-7e7780da982e"
+  },
+  "bodyHtml": "<h1>今日VaR阈值检查</h1>\n<h2>优先结论</h2>\n<ul>\n<li><strong>估值日</strong>：2026-05-19，以本地 shell 命令 <code>date +%Y-%m-%d</code> 的输出为准。[1]</li>\n<li><strong>VaR突破结论</strong>：<strong>无法判定</strong>。当前工作区未发现可用于计算或核验组合VaR的持仓、价格、风险因子、VaR结果或阈值文件；因此不能判断今日VaR是否突破阈值。[2]</li>\n<li><strong>主要风险贡献者</strong>：<strong>无法可靠排序</strong>。在缺少持仓权重、风险因子暴露、协方差或情景损益分解的情况下，任何贡献者排名都会是推测。</li>\n<li><strong>风控处理意见</strong>：将本次状态标记为<strong>数据缺口 / VaR未完成核验</strong>，不得将其表述为“未突破”。交易、仓位扩张或限额释放应等待正式VaR输入恢复后再执行。</li>\n</ul>\n<h2>阈值检查表</h2>\n<table>\n<thead>\n<tr>\n<th>项目</th>\n<th>今日结果</th>\n<th>风控判断</th>\n<th>依据</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>工作区已发现上游输入文件数</td>\n<td>0</td>\n<td>阻断VaR核验</td>\n<td>工作区文件搜索未返回 <code>.md</code>、<code>.csv</code>、<code>.json</code>、<code>.parquet</code>、<code>.xlsx</code>、<code>.txt</code>、<code>.yaml</code>、<code>.yml</code> 输入文件。[2]</td>\n</tr>\n<tr>\n<td>组合今日VaR</td>\n<td>N/A</td>\n<td>无法计算</td>\n<td>缺少持仓、价格和风险模型输入。[2]</td>\n</tr>\n<tr>\n<td>VaR限额 / 阈值</td>\n<td>N/A</td>\n<td>无法比对</td>\n<td>缺少阈值文件或限额参数。[2]</td>\n</tr>\n<tr>\n<td>是否突破阈值</td>\n<td>N/A</td>\n<td><strong>无法判定</strong></td>\n<td>分子与分母均缺失，不能给出突破或未突破结论。</td>\n</tr>\n<tr>\n<td>主要风险贡献者</td>\n<td>N/A</td>\n<td>无法排序</td>\n<td>缺少成分VaR、边际VaR、情景损益或因子暴露分解。</td>\n</tr>\n</tbody>\n</table>\n<h2>风险贡献者识别状态</h2>\n<table>\n<thead>\n<tr>\n<th>风险维度</th>\n<th>当前可得性</th>\n<th>可执行判断</th>\n<th>缺失输入</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>持仓集中度</td>\n<td>不可得</td>\n<td>不能识别单名或板块集中风险</td>\n<td>标的、数量、市值、净/总敞口</td>\n</tr>\n<tr>\n<td>市场Beta / 指数暴露</td>\n<td>不可得</td>\n<td>不能判断权益市场方向性贡献</td>\n<td>基准映射、回归Beta、指数期货或ETF持仓</td>\n</tr>\n<tr>\n<td>利率与久期</td>\n<td>不可得</td>\n<td>不能判断曲线平移或陡峭化贡献</td>\n<td>债券久期、DV01、期限桶</td>\n</tr>\n<tr>\n<td>汇率风险</td>\n<td>不可得</td>\n<td>不能判断非本币敞口贡献</td>\n<td>币种净敞口、套保比例、FX VaR</td>\n</tr>\n<tr>\n<td>波动率 / 期权Gamma</td>\n<td>不可得</td>\n<td>不能判断非线性尾部风险</td>\n<td>期权Greeks、隐含波动率、到期结构</td>\n</tr>\n<tr>\n<td>流动性与跳空风险</td>\n<td>不可得</td>\n<td>不能判断清算折扣或拥挤交易</td>\n<td>ADV、持仓天数、买卖价差、成交量冲击参数</td>\n</tr>\n</tbody>\n</table>\n<h2>后续处理项</h2>\n<table>\n<thead>\n<tr>\n<th>优先级</th>\n<th>负责人</th>\n<th>动作</th>\n<th>完成标准</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>高</td>\n<td>风控数据流程</td>\n<td>恢复或补交2026-05-19组合持仓、市场价格、风险因子和VaR阈值输入</td>\n<td>文件可读取，字段完整，估值日一致</td>\n</tr>\n<tr>\n<td>高</td>\n<td>VaR计算流程</td>\n<td>重跑今日VaR并输出组合VaR、限额、突破标记、成分VaR和边际VaR</td>\n<td>可明确给出“突破 / 未突破”结论</td>\n</tr>\n<tr>\n<td>高</td>\n<td>投资组合管理</td>\n<td>在VaR核验完成前冻结新增风险预算释放</td>\n<td>无未经核验的仓位扩张</td>\n</tr>\n<tr>\n<td>中</td>\n<td>风控复核</td>\n<td>对恢复后的结果做压力测试：权益指数-5%、利率+50bp、主要货币+/-2%、波动率+10 vol点</td>\n<td>形成尾部损失与贡献者排序</td>\n</tr>\n</tbody>\n</table>\n<h2>数据与引用</h2>\n<p>[1] 本地命令：<code>date +%Y-%m-%d</code>，执行结果：<code>2026-05-19</code>。\n[2] 工作区文件发现命令：<code>rg --files -g '*.md' -g '*.csv' -g '*.json' -g '*.parquet' -g '*.xlsx' -g '*.txt' -g '*.yaml' -g '*.yml'</code>，执行结果：未返回上游输入文件。</p>"
+}

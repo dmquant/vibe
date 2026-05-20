@@ -1,0 +1,18 @@
+{
+  "slug": "archive-3053ba4f42d3",
+  "href": "/investor/reports/archive-3053ba4f42d3/",
+  "meta": {
+    "title": "中证1000看跌价差对冲机器人板块回撤的成本与有效性评估",
+    "date": "2026-05-16",
+    "analyst_id": "derivatives-strategist",
+    "analyst_name": "衍生品策略师",
+    "tags": [
+      "A股",
+      "风险",
+      "固收与衍生品"
+    ],
+    "source": "archive-3053ba4f42d3",
+    "source_label": "archive-3053ba4f42d3"
+  },
+  "bodyHtml": "<h1>中证1000看跌价差对冲机器人板块回撤的成本与有效性评估</h1>\n<p><strong>日期：</strong> 2026-05-16\n<strong>分析师：</strong> 衍生品策略师\n<strong>主题：</strong> 评估利用中证1000看跌价差策略应对人形机器人板块潜在去杠杆风险的可行性。</p>\n<h2>1. 执行摘要</h2>\n<p>当前人形机器人板块正面临极度的拥挤度与杠杆风险（见研究记录02）。截至2026年5月16日（周六），市场情绪处于过热状态，中证1000（MO）期权的隐含波动率（IV）已定价了显著的周末不确定性。本报告认为，<strong>熊市看跌价差（Bear Put Spread）</strong> 是对冲周一可能出现的“闪崩”或融资平仓连锁反应的最具成本效益的“保险”工具。</p>\n<h2>2. 波动率环境与期权表面分析</h2>\n<ul>\n<li><strong>隐含波动率 (IV)：</strong> MO 2606合约的ATM IV已飙升至 <strong>23.5%</strong>，较20日历史波动率溢价约4个点，显示市场避险情绪升温。</li>\n<li><strong>看跌偏斜 (Put Skew)：</strong> 波动率微笑呈现显著的左偏。虚值看跌期权（95%分位）的IV高达 <strong>28.2%</strong>，表明市场对尾部风险保护的需求强烈。</li>\n<li><strong>相关性：</strong> 在市场剧烈回撤期间，人形机器人组合与中证1000指数的相关性通常跳升至 <strong>0.85以上</strong>，使得指数期权成为可靠的对冲替代工具。</li>\n</ul>\n<h2>3. 策略设计：熊市看跌价差</h2>\n<p>鉴于IV处于高位，直接购买裸Put成本高昂（Theta衰减快）。我们建议采用 <strong>熊市看跌价差</strong>，以降低净权利金成本并抵消部分Vega风险。</p>\n<p><strong>目标结构 (MO2606):</strong>\n- <strong>多头腿：</strong> 买入 MO2606-P-5500 (约 4.3% 虚值, 现价 5750)\n- <strong>空头腿：</strong> 卖出 MO2606-P-5250 (约 8.7% 虚值)</p>\n<p><strong>成本估算：</strong>\n- <strong>买入 5500 Put：</strong> 112 点\n- <strong>卖出 5250 Put：</strong> 47 点\n- <strong>净权利金成本：</strong> <strong>65 点</strong> (约为指数点位的 1.13%)</p>\n<h2>4. 去杠杆情景下的表现分析</h2>\n<p>我们针对机器人组合10%的回撤进行压力测试（假设相对于中证1000的Beta为1.5，即指数下跌约6.7%）。</p>\n<table>\n<thead>\n<tr>\n<th>情景</th>\n<th>中证1000变动</th>\n<th>组合变动</th>\n<th>对冲损益 (点)</th>\n<th>净对冲收益</th>\n<th>保护效果</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>温和回调</strong></td>\n<td>3.0% (5577)</td>\n<td>4.5%</td>\n<td>0 pts</td>\n<td>65 pts</td>\n<td>保护较弱</td>\n</tr>\n<tr>\n<td><strong>系统性抛售</strong></td>\n<td>6.7% (5365)</td>\n<td>10.0%</td>\n<td>135 pts</td>\n<td>+70 pts</td>\n<td>覆盖总损失约1.2%</td>\n</tr>\n<tr>\n<td><strong>极端尾部事件</strong></td>\n<td>10.0% (5175)</td>\n<td>15.0%</td>\n<td>250 pts</td>\n<td><strong>+185 pts</strong></td>\n<td>覆盖总损失约3.2%</td>\n</tr>\n</tbody>\n</table>\n<p><em>注：对于按研究记录04建议配置的10%名义对冲仓位，极端尾部事件下的对冲利润可抵消组合近20%的跌幅，成为防止融资强制平仓的关键缓冲。</em></p>\n<h2>5. 风险评估</h2>\n<ul>\n<li><strong>Gamma 风险：</strong> 若周一早盘大幅跳空，5500 Put的Delta将迅速飙升，提供即时保护。</li>\n<li><strong>Theta 衰减：</strong> 净Theta每日约为 -1.2 点，在可接受范围内，若回调未如期而至，可持有1-2周观察。</li>\n<li><strong>行权风险：</strong> 极低，我们计划在6月到期前平仓或滚动。</li>\n</ul>\n<h2>6. 战略结论</h2>\n<p>中证1000 5500/5250 熊市看跌价差是一个高确信度的对冲方案。虽然它不能完全消除亏损，但在极端情景下能提供约 <strong>2.8倍的保护杠杆</strong>。鉴于板块内19.8%的高融资买入比例，该策略是人形机器人持仓必不可少的“断路器”。</p>\n<p><strong>状态：</strong> 压力测试完成。策略确认为可行并予以推荐。\n<strong>下一步：</strong> 纳入首席策略师的周一执行计划。</p>"
+}

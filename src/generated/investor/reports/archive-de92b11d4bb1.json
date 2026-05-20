@@ -1,0 +1,20 @@
+{
+  "slug": "archive-de92b11d4bb1",
+  "href": "/investor/reports/archive-de92b11d4bb1/",
+  "meta": {
+    "title": "AI算力再配置篮子因子压测报告 (62/33/5)",
+    "date": "",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "宏观",
+      "A股",
+      "能源",
+      "风险"
+    ],
+    "source": "archive-de92b11d4bb1",
+    "source_label": "archive-de92b11d4bb1"
+  },
+  "bodyHtml": "<h1>AI算力再配置篮子因子压测报告 (62/33/5)</h1>\n<h2>1. 执行摘要： “成长-扛单” 混合体</h2>\n<p>所提议的篮子（62% 科技基础设施，33% 电力公用事业，5% 现金）是一个典型的 <strong>“成长-扛单” (Growth-Carry)</strong> 混合策略。虽然该组合成功捕捉了华为昇腾 (Ascend) 950PR 本土化带来的超额收益 (Alpha)，但目前暴露出 <strong>+1.8 标准差 (SD) 的动量暴露</strong> 和 <strong>-0.8 SD 的小盘偏好</strong>。电力腿（西部绿电 IPP/VPP）作为关键的波动率缓冲器，但在2026年8月日内瓦窗口可能出现的系统性“避险”事件中，尚不足以提供完全免疫。</p>\n<h2>2. 因子暴露分解 (Barra 风格)</h2>\n<table>\n<thead>\n<tr>\n<th>因子</th>\n<th>暴露 (相对沪深300)</th>\n<th>定量分析</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>动量 (MOM)</strong></td>\n<td>+1.82</td>\n<td>集中在液冷和光模块；存在剧烈均值回归风险。</td>\n</tr>\n<tr>\n<td><strong>成长 (GRO)</strong></td>\n<td>+1.55</td>\n<td>受 prior research notes提到的 1.6–2.0 万亿政策包驱动。</td>\n</tr>\n<tr>\n<td><strong>价值 (BTOP)</strong></td>\n<td>+0.18</td>\n<td>已中性化：科技的高 P/E 被 IPP 的低 P/B 和高分红抵消。</td>\n</tr>\n<tr>\n<td><strong>市值 (SIZC)</strong></td>\n<td>0.78</td>\n<td>聚焦“中盘 Alpha”；VPP/电网数字化板块存在流动性风险。</td>\n</tr>\n<tr>\n<td><strong>波动率 (VOL)</strong></td>\n<td>+1.35</td>\n<td>高于市场平均水平，需进行主动回撤管理。</td>\n</tr>\n<tr>\n<td><strong>流动性 (LIQ)</strong></td>\n<td>+0.65</td>\n<td>科技板块流动性极佳；电力板块在波动期可能出现“流动性陷阱”。</td>\n</tr>\n</tbody>\n</table>\n<h2>3. 拥挤度与相关性映射</h2>\n<ul>\n<li><strong>板块拥挤度:</strong><ul>\n<li><strong>液冷 (22%):</strong> <strong>极度拥挤。</strong> 换手率/市值比处于前 5% 分位。散户与行业基金高度集中。</li>\n<li><strong>光模块 (16%):</strong> <strong>高拥挤。</strong> 与 Nvidia 及纳斯达克 100 情绪高度相关。</li>\n<li><strong>西部绿电 IPP (12%):</strong> <strong>低拥挤。</strong> 机构配置不足；正处于从防御转向成长的拐点。</li>\n</ul>\n</li>\n<li><strong>内部相关性:</strong> 科技腿与电力腿的相关性仅为 <strong>0.15–0.25</strong>，提供了实质性的多样化。但在“流动性冲击”（如日内瓦休战结束）中，相关性通常会收敛至 1.0。</li>\n</ul>\n<h2>4. 量化压测：回撤情景分析</h2>\n<h3>情景 A：日内瓦“悬崖” (2026年8月)</h3>\n<ul>\n<li><strong>触发点:</strong> 90天休战到期；美方关税恢复至 145%；中方对半导体设备反制 125%。</li>\n<li><strong>预计回撤:</strong> 科技板块 <strong>-18.5%</strong>；电力板块 <strong>-4.2%</strong>。</li>\n<li><strong>组合净影响:</strong> <strong>-12.8%</strong>。</li>\n<li><strong>风险源:</strong> 动量去杠杆（A股科技龙头的融资盘强平风险）。</li>\n</ul>\n<h3>情景 B：2027年预算“现实检验” (2027年3月)</h3>\n<ul>\n<li><strong>触发点:</strong> 财政拨付重心从“硬件基建”转向“软件/大模型应用”。</li>\n<li><strong>预计回撤:</strong> <strong>-9.0%</strong>。</li>\n<li><strong>风险源:</strong> AI主题内部的“由实入虚”成长向价值切换。</li>\n</ul>\n<h2>5. 再平衡纪律与回撤规则</h2>\n<p>为将回撤控制在 <strong>12% 的硬限额</strong> 内，建议执行以下 <strong>量化叠加策略</strong></p>\n<ol>\n<li><strong>动量止盈 (MTP):</strong><ul>\n<li>触发条件：若“科技 62”部分的 20 日滚动收益率超过 <strong>+22%</strong>。</li>\n<li>行动：减持 10% 的液冷和光模块；转入战术储备（现金/债）。</li>\n</ul>\n</li>\n<li><strong>“日内瓦防火墙” (2026年6月生效):</strong><ul>\n<li>逐步将 7% 的权重从科技转向 <strong>西部绿电 IPP</strong> 和 <strong>灵活性资源</strong>。</li>\n<li>将现金/战术储备比例从 5% 提高至 12%。</li>\n</ul>\n</li>\n<li><strong>波动率目标管理:</strong><ul>\n<li>若篮子 5 日年化波动率超过 <strong>30%</strong>，程序化降低液冷和先进封装的暴露。</li>\n<li>增加 <strong>CANN/云迁移锚点 (7%)</strong>：这部分 ISV 具有更高的经常性收入和更低的硬件关税贝塔，作为“质量”因子对冲。</li>\n</ul>\n</li>\n</ol>\n<h2>6. 结论</h2>\n<p>该篮子结构稳健，但<strong>战术上“过热”</strong>。建议从 2026 年 5 月开始“滴灌式”建仓，并在 8 月日内瓦窗口前 45 天启动强制再平衡。Alpha 收益是真实存在的，但动量拥挤是目前最大的掠夺者。</p>"
+}

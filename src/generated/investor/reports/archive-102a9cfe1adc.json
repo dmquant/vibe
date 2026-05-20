@@ -1,0 +1,17 @@
+{
+  "slug": "archive-102a9cfe1adc",
+  "href": "/investor/reports/archive-102a9cfe1adc/",
+  "meta": {
+    "title": "风险评估报告：合成对冲结构压力测试",
+    "date": "2026-05-15",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "A股",
+      "风险"
+    ],
+    "source": "archive-102a9cfe1adc",
+    "source_label": "archive-102a9cfe1adc"
+  },
+  "bodyHtml": "<h1>风险评估报告：合成对冲结构压力测试</h1>\n<p><strong>日期：</strong> 2026-05-15\n<strong>分析师：</strong> 首席风控官 (chief-risk)\n<strong>主题：</strong> “多设备+空IC+期权价差”组合的流动性与VaR压力测试</p>\n<h2>1. 执行摘要</h2>\n<p>截至2026年5月15日，首席风控官（CRO）已完成对研究记录05和06建议的合成对冲结构的尾部风险压力测试。该结构（60%多头半导体设备 / 55%空头IC期指 / 20%名义看跌期权价差）在应对大盘系统性下跌时具有较强的Delta保护能力，但对<strong>个股异质性回撤（Idiosyncratic Alpha Drawdown）</strong>以及<strong>交易所监管调高保证金比例</strong>高度敏感。</p>\n<p>在“Trump-Xi峰会破裂”的极端熊市情景下，由于半导体设备板块的高波动性，组合极易触及<strong>VaR穿仓</strong>。此外，尽管空头IC在下跌中产生现金流，但若交易所同步上调保证金比例，组合的<strong>流动性缓冲可能面临枯竭</strong>。</p>\n<h2>2. 压力情景：“峰会破裂与制裁升级”</h2>\n<p>我们模拟了峰会无果后5个交易日的“黑天鹅”事件\n- <strong>中证500指数 (IC现货):</strong> -15% (系统性抛售)。\n- <strong>IC基差 (贴水):</strong> 极端走阔，年化贴水从-1%扩大至-6%（折合现货点位 panic 水平）。\n- <strong>半导体设备腿:</strong> -25% (核心持仓如北方华创、中微公司遭遇针对性制裁)。\n- <strong>隐含波动率 (IV):</strong> 从22%飙升至48%。</p>\n<h3>2.1 损益分析 (P&amp;L Analysis)</h3>\n<table>\n<thead>\n<tr>\n<th>组成部分</th>\n<th>权重</th>\n<th>情景变动</th>\n<th>损益贡献</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>多头：半导体设备</td>\n<td>60%</td>\n<td>25%</td>\n<td>15.00%</td>\n</tr>\n<tr>\n<td>空头：IC期指</td>\n<td>55%</td>\n<td>+20% (现货+基差收益)</td>\n<td>+11.00%</td>\n</tr>\n<tr>\n<td>看跌期权价差 (95/88)</td>\n<td>20%</td>\n<td>+7% (最大赔付)</td>\n<td>+1.40%</td>\n</tr>\n<tr>\n<td><strong>组合单元总计损益</strong></td>\n<td><strong>100%</strong></td>\n<td></td>\n<td><strong>-2.60%</strong></td>\n</tr>\n</tbody>\n</table>\n<p><strong>观察：</strong> 单日-2.60%的损失虽然显著但尚在可控范围。然而，若相关性发生断裂（例如设备股因制裁暴跌35%，而IC仅随大盘下跌10%），净亏损将扩大至-15.5%，这是<strong>5日95% VaR限额 (6.82%) 的2.2倍穿仓</strong>。</p>\n<h2>2.2 流动性与保证金压力测试</h2>\n<p>核心风险不仅在于盈亏，更在于波动率激增时的<strong>现金流错配</strong>。</p>\n<ul>\n<li><strong>期权追加保证金 (Margin Call):</strong> 当指数跌至85%位时，卖出的88% Put进入价内。A股市场期权卖方保证金在进入价内后将从约7%跃升至12%+权利金。对于20%名义头寸，这代表<strong>1.5%至2.0%的额外现金占用</strong>。</li>\n<li><strong>期货保证金上调:</strong> 历史经验表明，中金所（CFFEX）在极端波动期常上调保证金比例（如从12%调至20%）。55%的IC空头头寸将产生约<strong>4.4%的额外现金需求</strong>。</li>\n<li><strong>总流动性压力:</strong> 约占名义本金的6.4%。</li>\n<li><strong>结论:</strong> 若维持常规5%的现金缓冲，即使净损益为正，组合仍面临<strong>流动性穿仓（追加保证金失败）</strong>的风险。</li>\n</ul>\n<h2>3. 风险缓解建议</h2>\n<ol>\n<li><strong>提高流动性备付:</strong> 该单元的强制最低现金留存比例必须提高至<strong>8%</strong>，以应对潜在的保证金比例上调。</li>\n<li><strong>限制个股风险暴露:</strong> 限制半导体设备腿中单一股票权重不超过15%，以对冲“制裁型Alpha”尾部风险。</li>\n<li><strong>基差动态管理:</strong> 若IC贴水超过-10%（现货等值），应考虑将部分期货对冲转为深度虚值Put，避免在潜在反弹中被基差收敛“双杀”。</li>\n</ol>\n<h2>4. 结论</h2>\n<p>当前合成结构通过了盈亏冲击测试，但在<strong>流动性测试中未能通过</strong>。在全面部署前，必须重新分配现金储备。</p>\n<p><em>Wrote research discussion/75e197fe-35b8-4a3e-a55f-7dac4666dea1/research note/report.zh.md</em></p>"
+}

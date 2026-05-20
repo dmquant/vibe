@@ -1,0 +1,207 @@
+---
+import BaseHead from "../../../components/BaseHead.astro";
+import Header from "../../../components/Header.astro";
+import { listDeepPages } from "../../../lib/investor-generated.js";
+import "../../../styles/investor-console.css";
+
+export function getStaticPaths() {
+  return listDeepPages().map((page) => ({
+    params: { slug: page.slug },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
+const item = page.item || {};
+const slug = page.slug || item.slug || "";
+const bodyHtml = String(page.bodyHtml || "");
+
+function escapeRegExp(value) {
+  return String(value || "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function stripTags(value) {
+  return String(value || "")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function headingId(prefix, title, index, seen) {
+  const normalized = String(title || "")
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9\u4e00-\u9fff]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 58);
+  const base = `${prefix}-${normalized || `section-${index}`}`;
+  const count = seen.get(base) || 0;
+  seen.set(base, count + 1);
+  return count ? `${base}-${count + 1}` : base;
+}
+
+function normalizeArticle(value) {
+  const slugPattern = escapeRegExp(slug);
+  let html = String(value || "").trim();
+  html = html.replace(new RegExp(`src=(["'])(?:${slugPattern}/)?assets/`, "g"), `src=$1/investor-assets/deep-research/${slug}/assets/`);
+  html = html.replace(/src=(["'])assets\//g, `src=$1/investor-assets/deep-research/${slug}/assets/`);
+  html = html.replace(new RegExp(`href=(["'])downloads/${slugPattern}/`, "g"), `href=$1/investor-downloads/deep-research/${slug}/`);
+  html = html.replace(/href=(["'])\.\.\/downloads\//g, `href=$1/investor-downloads/deep-research/`);
+  html = html.replace(/^\s*<h1>[\s\S]*?<\/h1>\s*/i, "");
+  return html;
+}
+
+function decorateArticle(value, prefix) {
+  const toc = [];
+  const seen = new Map();
+  let index = 0;
+  const html = normalizeArticle(value).replace(/<h([23])>([\s\S]*?)<\/h\1>/g, (match, level, inner) => {
+    const title = stripTags(inner);
+    if (!title) return match;
+    index += 1;
+    const id = headingId(prefix, title, index, seen);
+    toc.push({ id, level: Number(level), title });
+    return `<h${level} id="${id}">${inner}</h${level}>`;
+  });
+  return { html, toc };
+}
+
+const articleMatches = [...bodyHtml.matchAll(/<article class="deep-article">([\s\S]*?)<\/article>/g)].map((match) => match[1]);
+const zhArticle = decorateArticle(articleMatches[0] || bodyHtml, "zh");
+const enArticle = decorateArticle(articleMatches[1] || "", "en");
+const chains = Array.isArray(item.chains) ? item.chains : [];
+const downloads = [
+  ["中文 PDF", "report_zh.pdf"],
+  ["中文 DOCX", "report_zh.docx"],
+  ["English PDF", "report_en.pdf"],
+  ["English DOCX", "report_en.docx"],
+  ["JSON", "report.json"],
+  ["Markdown ZH", "report_zh.md"],
+  ["Markdown EN", "report_en.md"],
+].map(([label, file]) => ({ label, href: `/investor-downloads/deep-research/${slug}/${file}` }));
+---
+
+<!doctype html>
+<html lang="zh-CN" data-lang="zh">
+  <head>
+    <BaseHead
+      title={`${item.title_zh || item.title_en || "深度研究"} · AI Institute 深度研究`}
+      description={item.summary_zh || item.summary_en || "AI Institute 深度研究"}
+    />
+  </head>
+  <body>
+    <Header />
+    <section class="investor-console">
+      <main class="deep-page">
+    <header class="deep-topbar">
+      <a href="/investor/#deep">返回深度研究库</a>
+      <a href="/investor/">投资研究台</a>
+    </header>
+
+    <section class="deep-reading-hero">
+      <div class="deep-hero-copy">
+        <div class="eyebrow">AI Institute · Deep Research</div>
+        <h1>{item.title_zh || item.title_en || "深度研究"}</h1>
+        {item.title_en ? <p class="deep-hero-subtitle">{item.title_en}</p> : null}
+        <p class="deep-hero-summary">{item.summary_zh || item.summary_en}</p>
+        {item.summary_en ? <p class="deep-hero-summary en">{item.summary_en}</p> : null}
+        <div class="tags">
+          {chains.map((chain) => <span class="tag">{chain}</span>)}
+        </div>
+      </div>
+      <aside class="deep-facts">
+        <div>
+          <span>发布日期</span>
+          <strong>{item.date || "未标注"}</strong>
+        </div>
+        <div>
+          <span>证据数量</span>
+          <strong>{item.evidence_count ?? 0}</strong>
+        </div>
+        <div>
+          <span>风险信号</span>
+          <strong>{item.risk_count ?? 0}</strong>
+        </div>
+        <div>
+          <span>主题编号</span>
+          <strong class="compact">{item.topic_id || slug}</strong>
+        </div>
+      </aside>
+    </section>
+
+    <section class="deep-download-panel" aria-label="报告下载">
+      <div>
+        <h2>下载报告</h2>
+        <p>提供网页阅读、PDF、DOCX 和 Markdown 版本；网页版会保留图表、表格和目录导航。</p>
+      </div>
+      <div class="deep-download-grid">
+        {downloads.map((download) => <a class="deep-download-link" href={download.href}>{download.label}</a>)}
+      </div>
+    </section>
+
+    <section class="deep-logic-strip" aria-label="阅读框架">
+      <div><strong>支付能力</strong><span>养老金、医保、长护险、自费现金流</span></div>
+      <div><strong>真实动销</strong><span>复购、库存周转、客单价、折扣率</span></div>
+      <div><strong>政策兑现</strong><span>集采、招标、回款、合规与出海审查</span></div>
+      <div><strong>组合表达</strong><span>底仓、结构成长、战术弹性与对冲</span></div>
+    </section>
+
+    <section class="deep-report-layout">
+      <aside class="deep-reader-rail">
+        <div class="deep-lang-tabs" role="tablist" aria-label="报告语言">
+          <button class="active" type="button" data-deep-lang="zh">中文</button>
+          <button type="button" data-deep-lang="en">English</button>
+        </div>
+        <div class="deep-toc">
+          <h2>目录</h2>
+          {zhArticle.toc.length ? (
+            <nav data-deep-toc="zh">
+              {zhArticle.toc.slice(0, 26).map((entry) => (
+                <a class:list={[`level-${entry.level}`]} href={`#${entry.id}`}>{entry.title}</a>
+              ))}
+            </nav>
+          ) : <p>目录将在报告标题解析后显示。</p>}
+          {enArticle.toc.length ? (
+            <nav data-deep-toc="en" hidden>
+              {enArticle.toc.slice(0, 26).map((entry) => (
+                <a class:list={[`level-${entry.level}`]} href={`#${entry.id}`}>{entry.title}</a>
+              ))}
+            </nav>
+          ) : null}
+        </div>
+      </aside>
+
+      <div class="deep-report-stack">
+        <article class="deep-language-pane deep-prose" data-deep-panel="zh" set:html={zhArticle.html}></article>
+        <article class="deep-language-pane deep-prose" data-deep-panel="en" hidden set:html={enArticle.html}></article>
+      </div>
+    </section>
+      </main>
+
+      <script is:inline>
+    const tabs = Array.from(document.querySelectorAll("[data-deep-lang]"));
+    const panels = Array.from(document.querySelectorAll("[data-deep-panel]"));
+    const tocs = Array.from(document.querySelectorAll("[data-deep-toc]"));
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const lang = tab.getAttribute("data-deep-lang");
+        tabs.forEach((item) => item.classList.toggle("active", item === tab));
+        panels.forEach((panel) => {
+          panel.hidden = panel.getAttribute("data-deep-panel") !== lang;
+        });
+        tocs.forEach((toc) => {
+          toc.hidden = toc.getAttribute("data-deep-toc") !== lang;
+        });
+      });
+    });
+      </script>
+    </section>
+  </body>
+</html>
