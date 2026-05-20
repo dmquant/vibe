@@ -13,6 +13,7 @@ const blog = defineCollection({
 			heroImage: z.optional(image()),
 			category: z.enum(['institute', 'vibelog', 'research', 'brief']).default('vibelog'),
 			lang: z.enum(['en', 'zh']).default('en'),
+			private: z.boolean().optional().default(false),
 		}),
 });
 

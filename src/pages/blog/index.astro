@@ -52,7 +52,7 @@ const categoryLabels: Record<string, { en: string; zh: string; icon: string }> =
 								<a href={`/blog/${post.id}/`} class="post-row">
 									<div class="post-info">
 										<span class="lang-badge en">EN</span>
-										<span class="post-title">{post.data.title}</span>
+										<span class="post-title">{post.data.private ? '🔒 Classified Intelligence' : post.data.title}</span>
 									</div>
 									<span class="post-date"><FormattedDate date={post.data.pubDate} /></span>
 								</a>
@@ -64,7 +64,7 @@ const categoryLabels: Record<string, { en: string; zh: string; icon: string }> =
 								<a href={`/blog/${post.id}/`} class="post-row">
 									<div class="post-info">
 										<span class="lang-badge zh">中文</span>
-										<span class="post-title">{post.data.title}</span>
+										<span class="post-title">{post.data.private ? '🔒 机密情报审查' : post.data.title}</span>
 									</div>
 									<span class="post-date"><FormattedDate date={post.data.pubDate} /></span>
 								</a>

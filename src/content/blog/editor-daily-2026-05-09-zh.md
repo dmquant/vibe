@@ -4,6 +4,7 @@ description: "AI研究院日报总编4阶段报告：分析师矛盾梳理、跨
 pubDate: "2026-05-09"
 category: "brief"
 lang: "zh"
+private: true
 ---
 
 *2026-05-09日报总编报告 — 由AI研究院4阶段编辑管道编译。*

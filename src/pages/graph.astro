@@ -1,0 +1,1484 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en" data-lang="en">
+	<head>
+		<BaseHead title={`Interactive Knowledge Graph — ${SITE_TITLE}`} description="Explore the multi-agent connection matrix of the AI Institute." />
+		<script src="https://d3js.org/d3.v7.min.js" is:inline></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" is:inline></script>
+	</head>
+	<body>
+		<Header />
+		<main class="graph-main">
+			<div class="graph-container">
+				<!-- Sidebar Glassmorphism Controls Drawer -->
+				<aside class="graph-sidebar" id="sidebar">
+					<div class="sidebar-header">
+						<h2>🧭 Network Dashboard</h2>
+						<p class="sidebar-subtitle">Multi-agent connection matrix</p>
+					</div>
+
+					<!-- Premium cyber security status badge and credential lock drawer -->
+					<div class="cyber-security-badge" id="cyber-lock-status" style="margin: 12px 16px 4px; padding: 10px 14px; border-radius: 6px; border: 1px solid rgba(0, 230, 118, 0.2); background: rgba(0, 230, 118, 0.04); font-family: monospace; font-size: 11px; display: flex; align-items: center; justify-content: space-between; box-shadow: inset 0 0 10px rgba(0, 230, 118, 0.05); transition: all 0.3s ease;">
+						<span id="lock-perimeter-label" style="color: #00e676; font-weight: bold; text-shadow: 0 0 4px rgba(0, 230, 118, 0.2);">🔒 [PERIMETER]: GATED</span>
+						<button id="btn-show-decrypt" style="background: transparent; border: 1px solid #00e676; color: #00e676; border-radius: 4px; padding: 3px 8px; font-size: 10px; cursor: pointer; font-family: monospace; font-weight: bold; transition: all 0.2s ease;">DECRYPT</button>
+					</div>
+
+					<div id="cyber-decrypt-drawer" style="display: none; margin: 0 16px 12px; padding: 12px 14px; border: 1px solid #00e676; border-radius: 6px; background: rgba(3, 7, 18, 0.96); font-family: monospace; box-shadow: 0 0 20px rgba(0, 230, 118, 0.1), inset 0 0 10px rgba(0, 230, 118, 0.02); transition: all 0.3s ease;">
+						<div style="font-size: 10px; color: #8b949e; margin-bottom: 6px; font-weight: bold;">[SYS_GATE]: INPUT ACCESS KEY</div>
+						<div style="display: flex; gap: 6px; align-items: center;">
+							<span style="color: #00e676; font-weight: bold;">&gt;</span>
+							<input type="password" id="graph-passcode" placeholder="PASSCODE" style="flex: 1; background: #000; border: 1px solid rgba(0, 230, 118, 0.25); border-radius: 4px; padding: 6px 10px; color: #00e676; font-size: 11px; outline: none; font-family: monospace; letter-spacing: 2px;" />
+							<button id="btn-graph-decrypt" style="background: transparent; border: 1px solid #00e676; color: #00e676; border-radius: 4px; padding: 6px 12px; font-size: 11px; cursor: pointer; font-family: monospace; font-weight: bold; transition: all 0.2s ease;">VERIFY</button>
+						</div>
+						<div id="graph-decrypt-error" style="color: #f85149; font-size: 10px; margin-top: 6px; font-weight: bold; display: none;"></div>
+					</div>
+
+					<div class="stats-bar" id="statsBar">
+						<div class="stat"><b>...</b>nodes</div>
+						<div class="stat"><b>...</b>edges</div>
+						<div class="stat"><b>...</b>chains</div>
+					</div>
+
+					<div class="tabs-header">
+						<button class="tab-btn active" id="tab-controls">⚙️ Controls</button>
+						<button class="tab-btn" id="tab-insights">📊 Insights</button>
+					</div>
+
+					<!-- TAB 1: CONTROLS & SETTINGS -->
+					<div class="tab-content active" id="content-controls">
+						<div class="section-title">Search Sector Nodes</div>
+						<div class="input-group">
+							<input type="text" id="search" placeholder="Type sector name..." list="node-list" />
+							<datalist id="node-list"></datalist>
+						</div>
+
+						<div class="section-title">Handoff Route Tracer</div>
+						<div class="route-finder-box">
+							<div class="route-inputs">
+								<input type="text" id="routeStart" placeholder="Start Node" list="node-list" />
+								<input type="text" id="routeEnd" placeholder="End Node" list="node-list" />
+							</div>
+							<div class="btn-row">
+								<button class="btn btn-accent" id="btnTraceRoute">Trace Route</button>
+								<button class="btn" id="btnResetRoute">Clear Route</button>
+							</div>
+							<div id="pathDisplay" style="display:none;" class="path-info"></div>
+						</div>
+
+						<div class="section-title">Filter Network Tiers</div>
+						<div class="checkbox-list">
+							<label>
+								<input type="checkbox" id="showConnected" checked />
+								<span style="color:#00e676">●</span> Connected Industry
+							</label>
+							<label>
+								<input type="checkbox" id="showCandidate" checked />
+								<span style="color:#ffb300">●</span> Candidates
+							</label>
+							<label>
+								<input type="checkbox" id="showArtifact" checked />
+								<span style="color:#00b0ff">●</span> Research Artifacts
+							</label>
+							<label>
+								<input type="checkbox" id="showAnalyst" checked />
+								<span style="color:#ff007f">●</span> Research Analysts
+							</label>
+						</div>
+
+						<div class="section-title">Focus Industry Chain</div>
+						<select id="chainFilter">
+							<option value="">All chains</option>
+						</select>
+
+						<div class="section-title">Force Simulation Physics</div>
+						<div class="slider-container">
+							<div class="slider-group">
+								<div class="slider-label">Gravity Repulsion <span id="valCharge">-40</span></div>
+								<input type="range" id="sliderCharge" min="-150" max="-10" value="-40" step="5" />
+							</div>
+							<div class="slider-group">
+								<div class="slider-label">Node Separation <span id="valCollide">8px</span></div>
+								<input type="range" id="sliderCollide" min="0" max="30" value="8" step="1" />
+							</div>
+							<div class="slider-group">
+								<div class="slider-label">Link Span Distance <span id="valLink">60px</span></div>
+								<input type="range" id="sliderLink" min="20" max="200" value="60" step="5" />
+							</div>
+						</div>
+
+						<div style="margin-top: 16px; display: flex; gap: 8px;">
+							<button class="btn" style="flex:1" id="btnFit">📐 Fit View</button>
+							<button class="btn" style="flex:1" id="btnReset">🔄 Center</button>
+						</div>
+					</div>
+
+					<!-- TAB 2: INSIGHTS & STATS -->
+					<div class="tab-content" id="content-insights">
+						<div class="section-title">Most Connected Industries</div>
+						<div class="insights-list" id="insightsConnected"></div>
+
+						<div class="section-title">High Frequency Candidates</div>
+						<div class="insights-list" id="insightsCandidates" style="margin-top:8px;"></div>
+					</div>
+
+					<!-- Info Drawer -->
+					<div id="detail">
+						<p style="color:var(--text-muted)">Click a node or edge to inspect details</p>
+					</div>
+				</aside>
+
+				<!-- Canvas Drawing Area -->
+				<div class="canvas-wrap" id="canvas-wrap">
+					<canvas id="canvas"></canvas>
+					<div id="tooltip"></div>
+					<div id="legend">
+						<div class="legend-item"><div class="legend-dot" style="background:#00e676"></div> Connected Industry</div>
+						<div class="legend-item"><div class="legend-dot" style="background:#ffb300"></div> Candidate</div>
+						<div class="legend-item"><div class="legend-dot" style="background:#00b0ff"></div> Research Artifact</div>
+						<div class="legend-item"><div class="legend-dot" style="background:#ff007f"></div> Research Analyst</div>
+					</div>
+					
+					<div id="loading">
+						<div class="spinner"></div>
+						<div>Compiling Neural Knowledge Graph...</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<Footer />
+
+		<script>
+			// Constants
+			const COLOR = {
+				connected: '#00e676',
+				candidate: '#ffb300',
+				artifact: '#00b0ff',
+				always: '#ff007f'
+			};
+
+			const EDGE_COLOR = {
+				industry_chain: 'rgba(100, 116, 139, 0.15)',
+				mentioned_in: 'rgba(0, 176, 255, 0.35)',
+				authored_by: 'rgba(255, 0, 127, 0.55)',
+				candidate_seen_in: 'rgba(255, 179, 0, 0.25)'
+			};
+
+			let allNodes = [], allEdges = [], visNodes = [], visEdges = [];
+			let simulation, transform = { x: 0, y: 0, k: 1 };
+			let hoveredNode = null, selectedNode = null, dragNode = null;
+			let hoveredEdge = null, selectedEdge = null;
+			let canvas, ctx, W, H;
+			let activePath = null; // Holds { nodes: Set, edges: Set }
+
+			async function init() {
+				canvas = document.getElementById('canvas');
+				ctx = canvas.getContext('2d');
+				resize();
+				window.addEventListener('resize', resize);
+
+				try {
+					const resp = await fetch('/public_graph_viz.json');
+					if (!resp.ok) throw new Error("Status: " + resp.status);
+					const data = await resp.json();
+					document.getElementById('loading').style.display = 'none';
+
+					allNodes = data.nodes.map(n => ({
+						...n,
+						x: 0,
+						y: 0,
+						vx: 0,
+						vy: 0,
+						size: n.size || (n.tier === 'always' ? 12 : n.tier === 'connected' ? 8 : 5)
+					}));
+					allEdges = data.edges;
+
+					// Build Search Datalist
+					const datalist = document.getElementById('node-list');
+					allNodes.forEach(n => {
+						const opt = document.createElement('option');
+						opt.value = n.name;
+						datalist.appendChild(opt);
+					});
+
+					// Populate chain selector dropdown
+					const sel = document.getElementById('chainFilter');
+					data.chains.forEach(c => {
+						const o = document.createElement('option');
+						o.value = c;
+						o.textContent = c;
+						sel.appendChild(o);
+					});
+
+					// Stats bar setup
+					const sb = document.getElementById('statsBar');
+					sb.innerHTML = `
+						<div class="stat"><b>${data.stats.total_nodes.toLocaleString()}</b>nodes</div>
+						<div class="stat"><b>${data.stats.total_edges.toLocaleString()}</b>edges</div>
+						<div class="stat"><b>${data.chains.length}</b>chains</div>
+					`;
+
+					renderInsights();
+
+					// Bind checklist options
+					['showConnected', 'showCandidate', 'showArtifact', 'showAnalyst'].forEach(id => {
+						document.getElementById(id).addEventListener('change', rebuildGraph);
+					});
+					document.getElementById('chainFilter').addEventListener('change', rebuildGraph);
+					document.getElementById('search').addEventListener('input', handleSearch);
+					document.getElementById('btnFit').addEventListener('click', fitView);
+					document.getElementById('btnReset').addEventListener('click', () => { transform = { x: 0, y: 0, k: 1 }; draw(); });
+					
+					// Force sliders
+					['sliderCharge', 'sliderCollide', 'sliderLink'].forEach(id => {
+						document.getElementById(id).addEventListener('input', updateForces);
+					});
+
+					// Handoff Path Finder listeners
+					document.getElementById('btnTraceRoute').addEventListener('click', calculateRoute);
+					document.getElementById('btnResetRoute').addEventListener('click', resetRoute);
+
+					// Tab Switch listeners
+					document.getElementById('tab-controls').addEventListener('click', () => switchTab('controls'));
+					document.getElementById('tab-insights').addEventListener('click', () => switchTab('insights'));
+
+					setupInteraction();
+					setupGraphDecryption();
+					rebuildGraph();
+				} catch (err) {
+					console.error("Failed to load knowledge graph visualizer data:", err);
+					document.getElementById('loading').innerHTML = `
+						<div style="color:#ff007f; font-weight:800; font-size:18px;">⚠️ LOAD FAILURE</div>
+						<div style="font-size:12px; margin-top:8px; color:#8b949e;">Could not load public_graph_viz.json. Ensure file exists in public/</div>
+					`;
+				}
+			}
+
+			// Sidebar Tab switching
+			function switchTab(tabId) {
+				document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+				document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+
+				document.getElementById(`tab-${tabId}`).classList.add('active');
+				document.getElementById(`content-${tabId}`).classList.add('active');
+			}
+
+			// Dynamic insights compiler
+			function renderInsights() {
+				const industries = allNodes
+					.filter(n => n.type === 'industry_node' && n.mentions > 0)
+					.sort((a, b) => b.mentions - a.mentions)
+					.slice(0, 8);
+
+				const maxMentions = d3.max(industries, d => d.mentions) || 1;
+				const connectedContainer = document.getElementById('insightsConnected');
+				connectedContainer.innerHTML = industries.map(ind => `
+					<div class="insight-card" onclick="focusNode('${ind.id}')">
+						<div class="insight-header">
+							<span>🏢 ${ind.name}</span>
+							<span style="color:#00e676">${ind.mentions} mentions</span>
+						</div>
+						<div class="insight-bar-bg">
+							<div class="insight-bar-fill" style="width:${(ind.mentions / maxMentions) * 100}%; background:#00e676"></div>
+						</div>
+					</div>
+				`).join('');
+
+				const candidates = allNodes
+					.filter(n => n.type === 'candidate_node' && n.frequency > 0)
+					.sort((a, b) => b.frequency - a.frequency)
+					.slice(0, 8);
+
+				const maxFreq = d3.max(candidates, d => d.frequency) || 1;
+				const candidatesContainer = document.getElementById('insightsCandidates');
+				candidatesContainer.innerHTML = candidates.map(cand => `
+					<div class="insight-card" onclick="focusNode('${cand.id}')">
+						<div class="insight-header">
+							<span>🏷️ ${cand.name}</span>
+							<span style="color:#ffb300">freq: ${cand.frequency}</span>
+						</div>
+						<div class="insight-bar-bg">
+							<div class="insight-bar-fill" style="width:${(cand.frequency / maxFreq) * 100}%; background:#ffb300"></div>
+						</div>
+					</div>
+				`).join('');
+			}
+
+			function handleSearch(e) {
+				const query = e.target.value.toLowerCase().trim();
+				if (!query) return;
+				const match = allNodes.find(n => n.name.toLowerCase() === query || n.id.toLowerCase() === query);
+				if (match) {
+					focusNode(match.id);
+				}
+			}
+
+			function resize() {
+				const wrap = document.getElementById('canvas-wrap');
+				if (!wrap) return;
+				W = wrap.clientWidth; H = wrap.clientHeight;
+				canvas.width = W * devicePixelRatio; canvas.height = H * devicePixelRatio;
+				canvas.style.width = W + 'px'; canvas.style.height = H + 'px';
+				ctx.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
+				draw();
+			}
+
+			function rebuildGraph() {
+				const showTiers = new Set();
+				if (document.getElementById('showConnected').checked) showTiers.add('connected');
+				if (document.getElementById('showCandidate').checked) showTiers.add('candidate');
+				if (document.getElementById('showArtifact').checked) showTiers.add('artifact');
+				if (document.getElementById('showAnalyst').checked) showTiers.add('always');
+
+				const chainFilter = document.getElementById('chainFilter').value;
+				const search = document.getElementById('search').value.toLowerCase().trim();
+
+				const nodeSet = new Set();
+				visNodes = allNodes.filter(n => {
+					if (!showTiers.has(n.tier)) return false;
+					if (chainFilter && n.type === 'industry_node' && !n.chains.some(c => c === chainFilter)) return false;
+					if (search && !n.name.toLowerCase().includes(search) && !n.id.toLowerCase().includes(search)) return false;
+					nodeSet.add(n.id);
+					return true;
+				});
+
+				if (activePath) {
+					allNodes.forEach(n => {
+						if (activePath.nodes.has(n.id) && !nodeSet.has(n.id)) {
+							visNodes.push(n);
+							nodeSet.add(n.id);
+						}
+					});
+				}
+
+				visEdges = allEdges.filter(e => {
+					const srcId = e.source.id || e.source;
+					const tgtId = e.target.id || e.target;
+					
+					if (activePath && activePath.edges.has(e)) {
+						return true;
+					}
+					return nodeSet.has(srcId) && nodeSet.has(tgtId);
+				});
+
+				const nodeIndex = new Map();
+				visNodes.forEach(n => nodeIndex.set(n.id, n));
+
+				const simEdges = visEdges.map(e => ({
+					source: nodeIndex.get(e.source.id || e.source),
+					target: nodeIndex.get(e.target.id || e.target),
+					type: e.type,
+					rawEdge: e
+				})).filter(e => e.source && e.target);
+
+				if (simulation) simulation.stop();
+
+				visNodes.forEach((n, i) => {
+					if (!n._placed) {
+						const angle = (i / visNodes.length) * Math.PI * 2;
+						const r = Math.min(W, H) * 0.3;
+						n.x = W / 2 + Math.cos(angle) * r * (0.6 + Math.random() * 0.4);
+						n.y = H / 2 + Math.sin(angle) * r * (0.6 + Math.random() * 0.4);
+						n._placed = true;
+					}
+				});
+
+				const count = visNodes.length;
+				const defaultStrength = count > 1500 ? -12 : count > 500 ? -25 : -55;
+				const defaultCollide = count > 1500 ? 4 : count > 500 ? 7 : 10;
+				const defaultLinkDist = count > 1500 ? 35 : count > 500 ? 60 : 85;
+
+				const charge = +document.getElementById('sliderCharge').value || defaultStrength;
+				const collide = +document.getElementById('sliderCollide').value || defaultCollide;
+				const linkDist = +document.getElementById('sliderLink').value || defaultLinkDist;
+
+				simulation = d3.forceSimulation(visNodes)
+					.force('charge', d3.forceManyBody().strength(charge).distanceMax(400))
+					.force('link', d3.forceLink(simEdges).id(d => d.id).distance(linkDist).strength(0.35))
+					.force('center', d3.forceCenter(W / 2, H / 2))
+					.force('collision', d3.forceCollide().radius(d => d.size + collide))
+					.alphaDecay(0.02)
+					.on('tick', draw);
+
+				// Sync stats UI
+				const sb = document.getElementById('statsBar');
+				sb.innerHTML = `
+					<div class="stat"><b>${visNodes.length.toLocaleString()}</b>visible nodes</div>
+					<div class="stat"><b>${visEdges.length.toLocaleString()}</b>visible edges</div>
+				`;
+			}
+
+			function updateForces() {
+				const charge = +document.getElementById('sliderCharge').value;
+				const collide = +document.getElementById('sliderCollide').value;
+				const linkDist = +document.getElementById('sliderLink').value;
+
+				document.getElementById('valCharge').textContent = charge;
+				document.getElementById('valCollide').textContent = collide + 'px';
+				document.getElementById('valLink').textContent = linkDist + 'px';
+
+				if (simulation) {
+					simulation.force('charge').strength(charge);
+					simulation.force('collision').radius(d => d.size + collide);
+					const linkForce = simulation.force('link');
+					if (linkForce) {
+						linkForce.distance(linkDist);
+					}
+					simulation.alpha(0.3).restart();
+				}
+			}
+
+			function calculateRoute() {
+				const startName = document.getElementById('routeStart').value.trim();
+				const endName = document.getElementById('routeEnd').value.trim();
+
+				if (!startName || !endName) {
+					alert("Please select both a Start and an End node.");
+					return;
+				}
+
+				const startNode = allNodes.find(n => n.name.toLowerCase() === startName.toLowerCase());
+				const endNode = allNodes.find(n => n.name.toLowerCase() === endName.toLowerCase());
+
+				if (!startNode || !endNode) {
+					alert("One of the selected nodes could not be found.");
+					return;
+				}
+
+				// BFS Path Tracer
+				const adj = new Map();
+				allEdges.forEach(e => {
+					const s = e.source.id || e.source;
+					const t = e.target.id || e.target;
+					if (!adj.has(s)) adj.set(s, []);
+					if (!adj.has(t)) adj.set(t, []);
+					adj.get(s).push({ node: t, edge: e });
+					adj.get(t).push({ node: s, edge: e });
+				});
+
+				const startId = startNode.id;
+				const targetId = endNode.id;
+
+				if (!adj.has(startId) || !adj.has(targetId)) {
+					alert("No trace exists between these sectors.");
+					return;
+				}
+
+				const queue = [startId];
+				const visited = new Set([startId]);
+				const parent = new Map();
+				let pathFound = false;
+
+				while (queue.length > 0) {
+					const curr = queue.shift();
+					if (curr === targetId) {
+						pathFound = true;
+						break;
+					}
+
+					const neighbors = adj.get(curr) || [];
+					for (const n of neighbors) {
+						if (!visited.has(n.node)) {
+							visited.add(n.node);
+							parent.set(n.node, { parent: curr, edge: n.edge });
+							queue.push(n.node);
+						}
+					}
+				}
+
+				if (!pathFound) {
+					alert(`No connective path exists between "${startNode.name}" and "${endNode.name}".`);
+					return;
+				}
+
+				const routeNodes = [];
+				const routeEdges = new Set();
+				let temp = targetId;
+				while (temp !== startId) {
+					const p = parent.get(temp);
+					routeNodes.unshift(temp);
+					routeEdges.add(p.edge);
+					temp = p.parent;
+				}
+				routeNodes.unshift(startId);
+
+				activePath = {
+					nodes: new Set(routeNodes),
+					edges: routeEdges
+				};
+
+				const pBox = document.getElementById('pathDisplay');
+				pBox.style.display = 'block';
+				pBox.innerHTML = `
+					<strong>⚡ Connection Trace (${routeNodes.length - 1} links):</strong><br>
+					${routeNodes.map(id => allNodes.find(nn => nn.id === id)?.name || id).join(' → ')}
+				`;
+
+				rebuildGraph();
+				fitView();
+			}
+
+			function resetRoute() {
+				activePath = null;
+				document.getElementById('routeStart').value = '';
+				document.getElementById('routeEnd').value = '';
+				document.getElementById('pathDisplay').style.display = 'none';
+				rebuildGraph();
+			}
+
+			function distanceToSegment(p, v, w) {
+				const l2 = (v.x - w.x)**2 + (v.y - w.y)**2;
+				if (l2 === 0) return Math.hypot(p.x - v.x, p.y - v.y);
+				let t = ((p.x - v.x) * (w.x - v.x) + (p.y - v.y) * (w.y - v.y)) / l2;
+				t = Math.max(0, Math.min(1, t));
+				return Math.hypot(p.x - (v.x + t * (w.x - v.x)), p.y - (v.y + t * (w.y - v.y)));
+			}
+
+			function findEdge(sx, sy) {
+				const { x, y } = screenToGraph(sx, sy);
+				let best = null, bestD = 8;
+				
+				for (const e of visEdges) {
+					const src = visNodes.find(n => n.id === e.source || n.id === (e.source?.id));
+					const tgt = visNodes.find(n => n.id === e.target || n.id === (e.target?.id));
+					if (!src || !tgt) continue;
+					
+					const d = distanceToSegment({x, y}, src, tgt);
+					if (d < bestD) {
+						best = e;
+						bestD = d;
+					}
+				}
+				return best;
+			}
+
+			function draw() {
+				if (!ctx) return;
+				ctx.save();
+				ctx.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
+				ctx.clearRect(0, 0, W, H);
+				ctx.translate(transform.x, transform.y);
+				ctx.scale(transform.k, transform.k);
+
+				const hasPath = activePath !== null;
+
+				// 1. Draw Connective Edges
+				for (const e of visEdges) {
+					const src = visNodes.find(n => n.id === e.source || n.id === (e.source?.id));
+					const tgt = visNodes.find(n => n.id === e.target || n.id === (e.target?.id));
+					if (!src || !tgt) continue;
+
+					const isPathEdge = hasPath && activePath.edges.has(e);
+					const isHoveredEdge = hoveredEdge === e;
+					const isSelectedEdge = selectedEdge === e;
+
+					ctx.beginPath();
+					ctx.moveTo(src.x, src.y);
+					ctx.lineTo(tgt.x, tgt.y);
+
+					if (hasPath) {
+						ctx.globalAlpha = isPathEdge ? 1.0 : 0.04;
+					} else {
+						ctx.globalAlpha = isSelectedEdge || isHoveredEdge ? 1.0 : 0.55;
+					}
+
+					if (isPathEdge) {
+						ctx.strokeStyle = '#ff007f';
+						ctx.lineWidth = 3.5;
+						ctx.shadowColor = '#ff007f';
+						ctx.shadowBlur = 12;
+					} else if (isSelectedEdge) {
+						ctx.strokeStyle = '#ffffff';
+						ctx.lineWidth = 2.5;
+						ctx.shadowColor = '#ffffff';
+						ctx.shadowBlur = 8;
+					} else if (isHoveredEdge) {
+						ctx.strokeStyle = '#00e5ff';
+						ctx.lineWidth = 2.0;
+					} else {
+						ctx.strokeStyle = EDGE_COLOR[e.type] || 'rgba(100, 100, 100, 0.15)';
+						ctx.lineWidth = e.type === 'authored_by' ? 1.5 : 0.5;
+					}
+					
+					ctx.stroke();
+					ctx.shadowBlur = 0;
+				}
+				ctx.globalAlpha = 1.0;
+
+				// 2. Draw Nodes
+				for (const n of visNodes) {
+					const isHovered = hoveredNode === n;
+					const isSelected = selectedNode === n;
+					const isPathNode = hasPath && activePath.nodes.has(n.id);
+
+					if (hasPath) {
+						ctx.globalAlpha = isPathNode ? 1.0 : 0.12;
+					} else {
+						ctx.globalAlpha = 1.0;
+					}
+
+					const r = n.size * (isHovered ? 1.5 : 1);
+					ctx.beginPath();
+					ctx.arc(n.x, n.y, r, 0, Math.PI * 2);
+					ctx.fillStyle = COLOR[n.tier] || '#666';
+
+					if (isSelected) {
+						ctx.fillStyle = '#ffffff';
+						ctx.shadowColor = COLOR[n.tier] || '#ffffff';
+						ctx.shadowBlur = 24;
+					} else if (isPathNode) {
+						ctx.shadowColor = '#ff007f';
+						ctx.shadowBlur = 18;
+					} else if (isHovered) {
+						ctx.shadowColor = COLOR[n.tier] || '#ffffff';
+						ctx.shadowBlur = 14;
+					}
+
+					ctx.fill();
+					ctx.shadowBlur = 0;
+
+					if (transform.k > 1.4 || isHovered || isSelected || isPathNode || (n.tier === 'always' && transform.k > 0.4)) {
+						ctx.fillStyle = isPathNode ? '#ff007f' : '#ffffff';
+						ctx.font = `${isPathNode || isSelected ? 'bold' : 'normal'} ${Math.max(8, 11 / transform.k)}px 'Outfit', sans-serif`;
+						ctx.textAlign = 'center';
+						ctx.fillText(n.name, n.x, n.y - r - 4);
+					}
+				}
+
+				ctx.restore();
+			}
+
+			function screenToGraph(sx, sy) {
+				return { x: (sx - transform.x) / transform.k, y: (sy - transform.y) / transform.k };
+			}
+
+			function findNode(sx, sy) {
+				const { x, y } = screenToGraph(sx, sy);
+				let best = null, bestD = Infinity;
+				for (const n of visNodes) {
+					const d = Math.hypot(n.x - x, n.y - y);
+					if (d < n.size * 1.6 + 6 && d < bestD) {
+						best = n;
+						bestD = d;
+					}
+				}
+				return best;
+			}
+
+			function setupInteraction() {
+				let isDragging = false, lastMouse = { x: 0, y: 0 };
+
+				canvas.addEventListener('wheel', e => {
+					e.preventDefault();
+					const scale = e.deltaY < 0 ? 1.15 : 1 / 1.15;
+					const mx = e.offsetX, my = e.offsetY;
+					transform.x = mx - (mx - transform.x) * scale;
+					transform.y = my - (my - transform.y) * scale;
+					transform.k *= scale;
+					draw();
+				}, { passive: false });
+
+				canvas.addEventListener('mousedown', e => {
+					const n = findNode(e.offsetX, e.offsetY);
+					if (n) {
+						dragNode = n;
+						dragNode.fx = dragNode.x; dragNode.fy = dragNode.y;
+						simulation.alphaTarget(0.3).restart();
+					}
+					isDragging = true;
+					lastMouse = { x: e.clientX, y: e.clientY };
+				});
+
+				canvas.addEventListener('mousemove', e => {
+					if (dragNode) {
+						const { x, y } = screenToGraph(e.offsetX, e.offsetY);
+						dragNode.fx = x; dragNode.fy = y;
+						return;
+					}
+					if (isDragging) {
+						transform.x += e.clientX - lastMouse.x;
+						transform.y += e.clientY - lastMouse.y;
+						lastMouse = { x: e.clientX, y: e.clientY };
+						draw();
+						return;
+					}
+
+					const n = findNode(e.offsetX, e.offsetY);
+					const ed = n ? null : findEdge(e.offsetX, e.offsetY);
+
+					let needsRedraw = false;
+
+					if (n !== hoveredNode) {
+						hoveredNode = n;
+						canvas.style.cursor = n ? 'pointer' : 'grab';
+						needsRedraw = true;
+						const tt = document.getElementById('tooltip');
+						if (n) {
+							let html = `<b>${n.name}</b><br><span style="color:${COLOR[n.tier]}">${n.tier.toUpperCase()}</span>`;
+							if (n.mentions) html += ` · ${n.mentions} mentions`;
+							if (n.frequency) html += ` · freq: ${n.frequency}`;
+							if (n.chains && n.chains.length) html += `<br>Chains: ${n.chains.join(', ')}`;
+							tt.innerHTML = html;
+							tt.style.display = 'block';
+							tt.style.left = (e.offsetX + 15) + 'px';
+							tt.style.top = (e.offsetY - 10) + 'px';
+						} else {
+							tt.style.display = 'none';
+						}
+					} else if (n) {
+						const tt = document.getElementById('tooltip');
+						tt.style.left = (e.offsetX + 15) + 'px';
+						tt.style.top = (e.offsetY - 10) + 'px';
+					}
+
+					if (ed !== hoveredEdge) {
+						hoveredEdge = ed;
+						if (ed) canvas.style.cursor = 'help';
+						needsRedraw = true;
+					}
+
+					if (needsRedraw) {
+						draw();
+					}
+				});
+
+				canvas.addEventListener('mouseup', () => {
+					if (dragNode) { dragNode.fx = null; dragNode.fy = null; simulation.alphaTarget(0); dragNode = null; }
+					isDragging = false;
+				});
+
+				canvas.addEventListener('click', e => {
+					if (dragNode) return;
+					const n = findNode(e.offsetX, e.offsetY);
+					const ed = n ? null : findEdge(e.offsetX, e.offsetY);
+
+					selectedNode = n;
+					selectedEdge = ed;
+
+					if (n) {
+						showDetail(n);
+					} else if (ed) {
+						showEdgeDetail(ed);
+					} else {
+						document.getElementById('detail').innerHTML = '<p style="color:var(--text-muted)">Click a node or edge to inspect details</p>';
+					}
+					draw();
+				});
+			}
+
+			function showDetail(n) {
+				const det = document.getElementById('detail');
+				if (!n) { det.innerHTML = '<p style="color:var(--text-muted)">Click a node or edge to inspect details</p>'; return; }
+
+				const connected = visEdges.filter(e => {
+					const s = e.source.id || e.source;
+					const t = e.target.id || e.target;
+					return s === n.id || t === n.id;
+				});
+
+				const neighbors = new Map();
+				connected.forEach(e => {
+					const s = e.source.id || e.source;
+					const t = e.target.id || e.target;
+					const otherId = s === n.id ? t : s;
+					const other = visNodes.find(nn => nn.id === otherId);
+					if (other) neighbors.set(otherId, { node: other, type: e.type });
+				});
+
+				let html = `<h2>${n.name}</h2>`;
+				html += `<div class="tag" style="background:${COLOR[n.tier]};color:#000;font-weight:600;">${n.tier.toUpperCase()}</div>`;
+				html += `<div class="tag">${n.type}</div>`;
+				if (n.mentions) html += `<div class="tag">📌 ${n.mentions} mentions</div>`;
+				if (n.frequency) html += `<div class="tag">🔢 frequency: ${n.frequency}</div>`;
+				if (n.chains && n.chains.length) html += `<p style="margin-top:8px;color:#8b949e">Chains: ${n.chains.join(', ')}</p>`;
+
+				if (neighbors.size) {
+					html += `<div class="neighbors"><div class="section-title">${neighbors.size} Connections</div>`;
+					const sorted = [...neighbors.values()].sort((a, b) => (b.node.mentions || 0) - (a.node.mentions || 0));
+					sorted.slice(0, 10).forEach(({ node: nn, type }) => {
+						const c = COLOR[nn.tier] || '#666';
+						html += `
+							<div class="neighbor-item" onclick="focusNode('${nn.id}')">
+								<span><span style="color:${c}">●</span> ${nn.name}</span>
+								<span style="color:#8b949e; font-size:10px;">${type.replace('_', ' ')}</span>
+							</div>`;
+					});
+					if (sorted.length > 10) html += `<p style="color:#8b949e; margin-top:4px; font-size:11px;">...and ${sorted.length - 10} more</p>`;
+					html += `</div>`;
+				}
+				det.innerHTML = html;
+			}
+
+			function showEdgeDetail(e) {
+				const det = document.getElementById('detail');
+				const srcNode = allNodes.find(n => n.id === (e.source.id || e.source));
+				const tgtNode = allNodes.find(n => n.id === (e.target.id || e.target));
+
+				if (!srcNode || !tgtNode) return;
+
+				let html = `<h2>Edge Connector</h2>`;
+				html += `<p style="margin-bottom:8px; font-weight:600;"><span style="color:${COLOR[srcNode.tier]}">●</span> ${srcNode.name} ➡️ <span style="color:${COLOR[tgtNode.tier]}">●</span> ${tgtNode.name}</p>`;
+				html += `<div class="tag" style="background:rgba(255,255,255,0.05)">Type: ${e.type.replace('_',' ')}</div>`;
+				if (e.chain) html += `<div class="tag">Chain: ${e.chain}</div>`;
+				
+				det.innerHTML = html;
+			}
+
+			function focusNode(id) {
+				const n = visNodes.find(nn => nn.id === id);
+				if (!n) return;
+				selectedNode = n;
+				transform.x = W / 2 - n.x * transform.k;
+				transform.y = H / 2 - n.y * transform.k;
+				showDetail(n);
+				draw();
+			}
+
+			function fitView() {
+				if (!visNodes.length) return;
+				let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+				visNodes.forEach(n => {
+					minX = Math.min(minX, n.x); maxX = Math.max(maxX, n.x);
+					minY = Math.min(minY, n.y); maxY = Math.max(maxY, n.y);
+				});
+				const dx = maxX - minX || 1, dy = maxY - minY || 1;
+				const k = Math.min(W / (dx + 120), H / (dy + 120));
+				transform.k = k;
+				transform.x = W / 2 - (minX + dx / 2) * k;
+				transform.y = H / 2 - (minY + dy / 2) * k;
+				draw();
+			}
+
+			function setupGraphDecryption() {
+				const btnShowDecrypt = document.getElementById('btn-show-decrypt');
+				const decryptDrawer = document.getElementById('cyber-decrypt-drawer');
+				const btnVerify = document.getElementById('btn-graph-decrypt');
+				const passcodeInput = document.getElementById('graph-passcode');
+				const errorMsg = document.getElementById('graph-decrypt-error');
+				const lockBadge = document.getElementById('cyber-lock-status');
+				const lockLabel = document.getElementById('lock-perimeter-label');
+
+				if (!btnShowDecrypt || !decryptDrawer || !btnVerify || !passcodeInput || !lockBadge || !lockLabel) return;
+
+				btnShowDecrypt.addEventListener('click', () => {
+					if (decryptDrawer.style.display === 'none') {
+						decryptDrawer.style.display = 'block';
+						passcodeInput.focus();
+					} else {
+						decryptDrawer.style.display = 'none';
+					}
+				});
+
+				function attemptDecryption() {
+					const passcode = passcodeInput.value.trim();
+					if (!passcode) {
+						showError("Please enter a passcode.");
+						return;
+					}
+
+					try {
+						// 1. Derive key
+						const key = CryptoJS.SHA256(passcode);
+						let successCount = 0;
+
+						// 2. Loop through allNodes and attempt to decrypt
+						allNodes.forEach(n => {
+							if (n.encrypted_name) {
+								const parts = n.encrypted_name.split(':');
+								if (parts.length === 2) {
+									const iv = CryptoJS.enc.Base64.parse(parts[0]);
+									const decrypted = CryptoJS.AES.decrypt(parts[1], key, {
+										iv: iv,
+										mode: CryptoJS.mode.CBC,
+										padding: CryptoJS.pad.Pkcs7
+									});
+									const plaintext = decrypted.toString(CryptoJS.enc.Utf8);
+									if (plaintext) {
+										n.name = plaintext;
+										successCount++;
+									}
+								}
+							}
+						});
+
+						if (successCount === 0) {
+							showError("Decryption failed. Incorrect passcode.");
+							return;
+						}
+
+						// 3. Update status UI to unlocked state
+						decryptDrawer.style.display = 'none';
+						btnShowDecrypt.style.display = 'none';
+						
+						lockBadge.style.borderColor = 'rgba(0, 176, 255, 0.4)';
+						lockBadge.style.backgroundColor = 'rgba(0, 176, 255, 0.05)';
+						lockBadge.style.boxShadow = '0 0 15px rgba(0, 176, 255, 0.15), inset 0 0 10px rgba(0, 176, 255, 0.05)';
+						lockLabel.style.color = '#00b0ff';
+						lockLabel.style.textShadow = '0 0 4px rgba(0, 176, 255, 0.3)';
+						lockLabel.textContent = '🔓 [PERIMETER]: ACTIVE-DECRYPTED';
+
+						// 4. Update dynamic canvas titles and sidebar datalist
+						const datalist = document.getElementById('node-list');
+						if (datalist) {
+							datalist.innerHTML = '';
+							allNodes.forEach(n => {
+								const opt = document.createElement('option');
+								opt.value = n.name;
+								datalist.appendChild(opt);
+							});
+						}
+
+						// Rebuild/refresh D3 graph display with new decrypted names
+						rebuildGraph();
+						renderInsights();
+						
+						// If a node is currently selected, re-render its details drawer
+						if (selectedNode) {
+							showDetail(selectedNode);
+						}
+						
+						draw();
+
+					} catch (err) {
+						console.error("Decryption error:", err);
+						showError("Decryption failed. Incorrect passcode.");
+					}
+				}
+
+				function showError(msg) {
+					if (errorMsg) {
+						errorMsg.textContent = msg;
+						errorMsg.style.display = 'block';
+					}
+					passcodeInput.classList.add('input-error');
+					setTimeout(() => passcodeInput.classList.remove('input-error'), 500);
+				}
+
+				btnVerify.addEventListener('click', attemptDecryption);
+				passcodeInput.addEventListener('keypress', (e) => {
+					if (e.key === 'Enter') {
+						attemptDecryption();
+					}
+				});
+			}
+
+			window.focusNode = focusNode;
+			
+			// Auto start after DOM loads
+			if (document.readyState === 'loading') {
+				document.addEventListener('DOMContentLoaded', init);
+			} else {
+				init();
+			}
+		</script>
+	</body>
+</html>
+
+<style is:global>
+	#btn-show-decrypt:hover, #btn-graph-decrypt:hover {
+		background: rgba(0, 230, 118, 0.1) !important;
+		box-shadow: 0 0 10px rgba(0, 230, 118, 0.3) !important;
+	}
+	.graph-sidebar input.input-error {
+		border-color: #f85149 !important;
+		color: #f85149 !important;
+		animation: shake 0.3s ease !important;
+	}
+	@keyframes shake {
+		0%, 100% { transform: translateX(0); }
+		25% { transform: translateX(-6px); }
+		75% { transform: translateX(6px); }
+	}
+	.graph-main {
+		max-width: 100% !important;
+		width: 100% !important;
+		padding: 0 !important;
+		margin: 0 !important;
+		background: #090d16;
+		overflow: hidden;
+	}
+
+	.graph-container {
+		display: flex;
+		height: calc(100vh - 56px - 100px); /* Fill screen minus Header (56px) and Footer (100px) */
+		min-height: 600px;
+		position: relative;
+		border-bottom: 1px solid #30363d;
+	}
+
+	/* Sidebar controls drawer with frosted glassmorphism */
+	.graph-sidebar {
+		width: 360px;
+		background: rgba(13, 19, 33, 0.82);
+		backdrop-filter: blur(20px);
+		-webkit-backdrop-filter: blur(20px);
+		border-right: 1px solid #30363d;
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+		flex-shrink: 0;
+		z-index: 10;
+		box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5);
+	}
+
+	.sidebar-header {
+		padding: 16px 20px;
+		border-bottom: 1px solid #30363d;
+		background: linear-gradient(135deg, rgba(233, 69, 96, 0.1), rgba(15, 52, 96, 0.05));
+	}
+
+	.sidebar-header h2 {
+		font-size: 17px;
+		font-weight: 800;
+		margin: 0;
+		letter-spacing: 0.5px;
+		color: #e6edf3;
+		border: none;
+		padding: 0;
+	}
+
+	.sidebar-subtitle {
+		font-size: 11px;
+		color: #8b949e;
+		margin: 3px 0 0 0;
+	}
+
+	/* Tabs Header */
+	.tabs-header {
+		display: flex;
+		background: rgba(0, 0, 0, 0.3);
+		border-bottom: 1px solid #30363d;
+	}
+
+	.tab-btn {
+		flex: 1;
+		background: transparent;
+		border: none;
+		color: #8b949e;
+		padding: 10px 0;
+		font-weight: 600;
+		cursor: pointer;
+		transition: all 0.2s ease;
+		font-size: 12px;
+		border-bottom: 2px solid transparent;
+	}
+
+	.tab-btn:hover {
+		color: #e6edf3;
+	}
+
+	.tab-btn.active {
+		color: #ff007f;
+		border-bottom-color: #ff007f;
+		background: rgba(255, 0, 127, 0.03);
+	}
+
+	.tab-content {
+		flex: 1;
+		overflow-y: auto;
+		padding: 16px;
+		display: none;
+	}
+
+	.tab-content.active {
+		display: block;
+	}
+
+	/* Form Items */
+	.section-title {
+		color: #8b949e;
+		text-transform: uppercase;
+		font-size: 9px;
+		font-weight: 800;
+		letter-spacing: 1.5px;
+		margin: 16px 0 6px;
+	}
+
+	.section-title:first-child {
+		margin-top: 0;
+	}
+
+	.input-group {
+		position: relative;
+		margin-bottom: 12px;
+	}
+
+	.graph-sidebar input[type=text], .graph-sidebar select {
+		background: rgba(0, 0, 0, 0.4);
+		color: #e6edf3;
+		border: 1px solid #30363d;
+		border-radius: 6px;
+		padding: 8px 12px;
+		font-size: 12px;
+		width: 100%;
+		outline: none;
+		transition: all 0.2s ease;
+	}
+
+	.graph-sidebar input[type=text]:focus, .graph-sidebar select:focus {
+		border-color: #ff007f;
+		box-shadow: 0 0 8px rgba(255, 0, 127, 0.25);
+	}
+
+	.checkbox-list {
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+		background: rgba(255, 255, 255, 0.01);
+		padding: 8px 10px;
+		border-radius: 8px;
+		border: 1px solid #30363d;
+	}
+
+	.checkbox-list label {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		font-size: 11px;
+		cursor: pointer;
+		padding: 3px 6px;
+		border-radius: 4px;
+		transition: all 0.15s;
+	}
+
+	.checkbox-list label:hover {
+		background: rgba(255, 255, 255, 0.03);
+	}
+
+	.checkbox-list input[type=checkbox] {
+		accent-color: #ff007f;
+		width: 14px;
+		height: 14px;
+		cursor: pointer;
+	}
+
+	/* Sliders */
+	.slider-container {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		background: rgba(255, 255, 255, 0.01);
+		padding: 10px;
+		border-radius: 8px;
+		border: 1px solid #30363d;
+	}
+
+	.slider-group {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+	}
+
+	.slider-label {
+		display: flex;
+		justify-content: space-between;
+		font-size: 10px;
+		color: #8b949e;
+	}
+
+	.slider-label span {
+		font-weight: 600;
+		color: #e6edf3;
+	}
+
+	.graph-sidebar input[type=range] {
+		accent-color: #ff007f;
+		width: 100%;
+		height: 4px;
+		background: rgba(255, 255, 255, 0.08);
+		border-radius: 2px;
+		outline: none;
+		cursor: pointer;
+	}
+
+	/* Route Finder Box */
+	.route-finder-box {
+		background: rgba(255, 0, 127, 0.03);
+		border: 1px dashed rgba(255, 0, 127, 0.2);
+		padding: 10px;
+		border-radius: 8px;
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	.route-inputs {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 8px;
+	}
+
+	.path-info {
+		background: rgba(255, 0, 127, 0.08);
+		border: 1px solid rgba(255, 0, 127, 0.25);
+		border-radius: 6px;
+		padding: 8px;
+		font-size: 10px;
+		line-height: 1.4;
+		color: #ff007f;
+	}
+
+	/* Buttons style */
+	.btn {
+		padding: 6px 10px;
+		border: 1px solid #30363d;
+		border-radius: 6px;
+		background: rgba(255, 255, 255, 0.03);
+		color: #e6edf3;
+		cursor: pointer;
+		font-size: 11px;
+		font-weight: 600;
+		transition: all 0.2s ease;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 4px;
+	}
+
+	.btn:hover {
+		background: rgba(255, 255, 255, 0.06);
+		border-color: #ff007f;
+	}
+
+	.btn.btn-accent {
+		background: #ff007f;
+		border-color: #ff007f;
+		color: #0d1117;
+	}
+
+	.btn.btn-accent:hover {
+		background: #ff3399;
+		box-shadow: 0 0 12px rgba(255, 0, 127, 0.35);
+	}
+
+	.btn-row {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 8px;
+	}
+
+	/* Stats mini bar */
+	.stats-bar {
+		display: flex;
+		gap: 6px;
+		padding: 10px 16px;
+		border-bottom: 1px solid #30363d;
+		background: rgba(0, 0, 0, 0.2);
+	}
+
+	.stats-bar .stat {
+		flex: 1;
+		background: rgba(255, 255, 255, 0.01);
+		border: 1px solid #30363d;
+		border-radius: 6px;
+		padding: 4px 6px;
+		font-size: 10px;
+		text-align: center;
+		color: #8b949e;
+	}
+
+	.stats-bar .stat b {
+		display: block;
+		font-size: 14px;
+		color: #ff007f;
+		font-family: var(--font-mono);
+	}
+
+	/* Details drawer */
+	#detail {
+		padding: 14px 16px;
+		border-top: 1px solid #30363d;
+		background: rgba(0, 0, 0, 0.3);
+		max-height: 220px;
+		overflow-y: auto;
+		font-size: 11px;
+	}
+
+	#detail h2 {
+		font-size: 14px;
+		margin-bottom: 4px;
+		font-weight: 700;
+		color: #ffffff;
+		border: none;
+		padding: 0;
+	}
+
+	#detail .tag {
+		display: inline-block;
+		padding: 2px 6px;
+		border-radius: 4px;
+		font-size: 9px;
+		margin: 2px;
+		background: rgba(88, 166, 255, 0.08);
+		border: 1px solid #30363d;
+		color: #e6edf3;
+	}
+
+	#detail .neighbors {
+		margin-top: 8px;
+	}
+
+	#detail .neighbor-item {
+		padding: 4px 6px;
+		margin: 3px 0;
+		background: rgba(255, 255, 255, 0.01);
+		border: 1px solid #30363d;
+		border-radius: 4px;
+		cursor: pointer;
+		transition: all 0.15s;
+		font-size: 10px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	#detail .neighbor-item:hover {
+		background: rgba(255, 0, 127, 0.04);
+		border-color: #ff007f;
+	}
+
+	/* Canvas wrapping layout */
+	.canvas-wrap {
+		flex: 1;
+		position: relative;
+		background: radial-gradient(circle at 50% 50%, #0d1527 0%, #05080f 100%);
+	}
+
+	.canvas-wrap canvas {
+		display: block;
+	}
+
+	/* Tooltips & Legend */
+	#tooltip {
+		position: absolute;
+		padding: 8px 12px;
+		background: rgba(9, 13, 22, 0.95);
+		border: 1px solid #ff007f;
+		border-radius: 6px;
+		font-size: 11px;
+		pointer-events: none;
+		display: none;
+		max-width: 280px;
+		z-index: 10;
+		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8), 0 0 10px rgba(255, 0, 127, 0.2);
+		backdrop-filter: blur(8px);
+		color: #e6edf3;
+	}
+
+	#legend {
+		position: absolute;
+		bottom: 16px;
+		right: 16px;
+		background: rgba(9, 13, 22, 0.85);
+		backdrop-filter: blur(12px);
+		border: 1px solid #30363d;
+		border-radius: 8px;
+		padding: 10px 12px;
+		font-size: 10px;
+		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+	}
+
+	.legend-item {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		font-weight: 500;
+		color: #8b949e;
+	}
+
+	.legend-dot {
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		flex-shrink: 0;
+	}
+
+	#loading {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 14px;
+		font-weight: 600;
+		color: #8b949e;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+	}
+
+	.spinner {
+		width: 32px;
+		height: 32px;
+		border: 3px solid rgba(255, 0, 127, 0.1);
+		border-top-color: #ff007f;
+		border-radius: 50%;
+		animation: spin 1s infinite linear;
+	}
+
+	/* Insights Cards */
+	.insights-list {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	.insight-card {
+		background: rgba(255, 255, 255, 0.01);
+		border: 1px solid #30363d;
+		border-radius: 6px;
+		padding: 8px 10px;
+		cursor: pointer;
+		transition: all 0.2s ease;
+	}
+
+	.insight-card:hover {
+		background: rgba(255, 255, 255, 0.03);
+		border-color: #ff007f;
+	}
+
+	.insight-header {
+		display: flex;
+		justify-content: space-between;
+		font-weight: 600;
+		font-size: 11px;
+		margin-bottom: 4px;
+		color: #e6edf3;
+	}
+
+	.insight-bar-bg {
+		width: 100%;
+		height: 4px;
+		background: rgba(255, 255, 255, 0.06);
+		border-radius: 2px;
+		overflow: hidden;
+	}
+
+	.insight-bar-fill {
+		height: 100%;
+		border-radius: 2px;
+		transition: width 0.8s ease-out;
+	}
+
+	@media (max-width: 820px) {
+		.graph-container {
+			flex-direction: column;
+			height: auto;
+		}
+		.graph-sidebar {
+			width: 100%;
+			height: 400px;
+		}
+		.canvas-wrap {
+			height: 500px;
+		}
+	}
+</style>

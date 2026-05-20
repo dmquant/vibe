@@ -67,6 +67,31 @@ briefZh.forEach(p => {
 	</head>
 	<body>
 		<Header />
+		<!-- Bloomberg-style Market Ticker Banner -->
+		<div class="market-ticker-banner">
+			<div class="ticker-wrapper">
+				<div class="ticker-track">
+					<div class="ticker-item"><span class="ticker-label">SPX</span> <span class="ticker-val">5,283.40</span> <span class="ticker-change up">+0.82%</span></div>
+					<div class="ticker-item"><span class="ticker-label">IXIC</span> <span class="ticker-val">16,420.50</span> <span class="ticker-change up">+1.15%</span></div>
+					<div class="ticker-item"><span class="ticker-label">DJI</span> <span class="ticker-val">39,127.10</span> <span class="ticker-change down">-0.12%</span></div>
+					<div class="ticker-item"><span class="ticker-label">US10Y</span> <span class="ticker-val">4.364%</span> <span class="ticker-change down">-0.015</span></div>
+					<div class="ticker-item"><span class="ticker-label">GC=F</span> <span class="ticker-val">$2,382.40</span> <span class="ticker-change up">+0.45%</span></div>
+					<div class="ticker-item"><span class="ticker-label">CL=F</span> <span class="ticker-val">$78.25</span> <span class="ticker-change up">+1.08%</span></div>
+					<div class="ticker-item"><span class="ticker-label">BTC/USD</span> <span class="ticker-val">$67,240</span> <span class="ticker-change up">+2.34%</span></div>
+					<div class="ticker-item"><span class="ticker-label">EUR/USD</span> <span class="ticker-val">1.0845</span> <span class="ticker-change down">-0.08%</span></div>
+
+					<!-- Duplicated for seamless loop -->
+					<div class="ticker-item"><span class="ticker-label">SPX</span> <span class="ticker-val">5,283.40</span> <span class="ticker-change up">+0.82%</span></div>
+					<div class="ticker-item"><span class="ticker-label">IXIC</span> <span class="ticker-val">16,420.50</span> <span class="ticker-change up">+1.15%</span></div>
+					<div class="ticker-item"><span class="ticker-label">DJI</span> <span class="ticker-val">39,127.10</span> <span class="ticker-change down">-0.12%</span></div>
+					<div class="ticker-item"><span class="ticker-label">US10Y</span> <span class="ticker-val">4.364%</span> <span class="ticker-change down">-0.015</span></div>
+					<div class="ticker-item"><span class="ticker-label">GC=F</span> <span class="ticker-val">$2,382.40</span> <span class="ticker-change up">+0.45%</span></div>
+					<div class="ticker-item"><span class="ticker-label">CL=F</span> <span class="ticker-val">$78.25</span> <span class="ticker-change up">+1.08%</span></div>
+					<div class="ticker-item"><span class="ticker-label">BTC/USD</span> <span class="ticker-val">$67,240</span> <span class="ticker-change up">+2.34%</span></div>
+					<div class="ticker-item"><span class="ticker-label">EUR/USD</span> <span class="ticker-val">1.0845</span> <span class="ticker-change down">-0.08%</span></div>
+				</div>
+			</div>
+		</div>
 		<main>
 			<!-- Compact Hero Banner -->
 			<section class="hero-banner">
@@ -110,8 +135,8 @@ briefZh.forEach(p => {
 									<span class="brief-type">{en}</span>
 									<span class="brief-date"><FormattedDate date={post.data.pubDate} /></span>
 								</div>
-								<h3>{post.data.title}</h3>
-								<p class="brief-desc">{post.data.description}</p>
+								<h3>{post.data.private ? '🔒 Classified Intelligence' : post.data.title}</h3>
+								<p class="brief-desc">{post.data.private ? 'This report is encrypted to prevent public data leakage. Enter authorized decryption key inside the article to proceed.' : post.data.description}</p>
 								<span class="brief-cta">Read full report →</span>
 							</a>
 						) : (
@@ -136,8 +161,8 @@ briefZh.forEach(p => {
 									<span class="brief-type">{zh}</span>
 									<span class="brief-date"><FormattedDate date={post.data.pubDate} /></span>
 								</div>
-								<h3>{post.data.title}</h3>
-								<p class="brief-desc">{post.data.description}</p>
+								<h3>{post.data.private ? '🔒 机密情报审查' : post.data.title}</h3>
+								<p class="brief-desc">{post.data.private ? '此报告已加密以防止公开数据泄露。请输入授权解密密钥以继续。' : post.data.description}</p>
 								<span class="brief-cta">阅读完整报告 →</span>
 							</a>
 						) : (
@@ -211,8 +236,8 @@ briefZh.forEach(p => {
 								<span class="lang-badge en">EN</span>
 								<FormattedDate date={post.data.pubDate} />
 							</div>
-							<h3>{post.data.title}</h3>
-							<p>{post.data.description}</p>
+							<h3>{post.data.private ? '🔒 Classified Intelligence' : post.data.title}</h3>
+							<p>{post.data.private ? 'This report is encrypted to prevent public data leakage. Enter authorized decryption key inside the article to proceed.' : post.data.description}</p>
 						</a>
 					))}
 				</div>
@@ -223,8 +248,8 @@ briefZh.forEach(p => {
 								<span class="lang-badge zh">中文</span>
 								<FormattedDate date={post.data.pubDate} />
 							</div>
-							<h3>{post.data.title}</h3>
-							<p>{post.data.description}</p>
+							<h3>{post.data.private ? '🔒 机密情报审查' : post.data.title}</h3>
+							<p>{post.data.private ? '此报告已加密以防止公开数据泄露。请输入授权解密密钥以继续。' : post.data.description}</p>
 						</a>
 					))}
 				</div>
@@ -241,8 +266,8 @@ briefZh.forEach(p => {
 						<a href={`/blog/${post.id}/`} class="series-item">
 							<span class="series-num">{String(i + 1).padStart(2, '0')}</span>
 							<div class="series-content">
-								<h4>{post.data.title}</h4>
-								<p>{post.data.description}</p>
+								<h4>{post.data.private ? '🔒 Classified Intelligence' : post.data.title}</h4>
+								<p>{post.data.private ? 'This report is encrypted to prevent public data leakage. Enter authorized decryption key inside the article to proceed.' : post.data.description}</p>
 							</div>
 							<span class="series-arrow">→</span>
 						</a>
@@ -253,8 +278,8 @@ briefZh.forEach(p => {
 						<a href={`/blog/${post.id}/`} class="series-item">
 							<span class="series-num">{String(i + 1).padStart(2, '0')}</span>
 							<div class="series-content">
-								<h4>{post.data.title}</h4>
-								<p>{post.data.description}</p>
+								<h4>{post.data.private ? '🔒 机密情报审查' : post.data.title}</h4>
+								<p>{post.data.private ? '此报告已加密以防止公开数据泄露。请输入授权解密密钥以继续。' : post.data.description}</p>
 							</div>
 							<span class="series-arrow">→</span>
 						</a>
@@ -274,8 +299,8 @@ briefZh.forEach(p => {
 								<span class="lang-badge en">EN</span>
 								<FormattedDate date={post.data.pubDate} />
 							</div>
-							<h3>{post.data.title}</h3>
-							<p>{post.data.description}</p>
+							<h3>{post.data.private ? '🔒 Classified Intelligence' : post.data.title}</h3>
+							<p>{post.data.private ? 'This report is encrypted to prevent public data leakage. Enter authorized decryption key inside the article to proceed.' : post.data.description}</p>
 						</a>
 					))}
 				</div>
@@ -286,8 +311,8 @@ briefZh.forEach(p => {
 								<span class="lang-badge zh">中文</span>
 								<FormattedDate date={post.data.pubDate} />
 							</div>
-							<h3>{post.data.title}</h3>
-							<p>{post.data.description}</p>
+							<h3>{post.data.private ? '🔒 机密情报审查' : post.data.title}</h3>
+							<p>{post.data.private ? '此报告已加密以防止公开数据泄露。请输入授权解密密钥以继续。' : post.data.description}</p>
 						</a>
 					))}
 				</div>
@@ -413,12 +438,14 @@ briefZh.forEach(p => {
 	.brief-card {
 		display: flex;
 		flex-direction: column;
-		background: var(--bg-surface, #161b22);
+		background: rgba(22, 27, 34, 0.4);
+		backdrop-filter: blur(8px);
+		-webkit-backdrop-filter: blur(8px);
 		border: 1px solid var(--border, #30363d);
 		border-radius: 10px;
 		padding: 1.1rem 1.2rem;
 		text-decoration: none;
-		transition: all 0.25s;
+		transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 		position: relative;
 		overflow: hidden;
 	}
@@ -436,8 +463,9 @@ briefZh.forEach(p => {
 	.brief-card:hover::before { opacity: 1; }
 	.brief-card:hover {
 		border-color: var(--accent-cyan, #58a6ff);
-		box-shadow: 0 0 20px rgba(88,166,255,0.08);
-		transform: translateY(-2px);
+		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 20px rgba(88, 166, 255, 0.18);
+		transform: translateY(-4px);
+		background: rgba(22, 27, 34, 0.6);
 	}
 	.brief-card-empty {
 		opacity: 0.4;
@@ -535,14 +563,21 @@ briefZh.forEach(p => {
 	.article-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; }
 	.article-card {
 		display: block;
-		background: var(--bg-surface, #161b22);
+		background: rgba(22, 27, 34, 0.4);
+		backdrop-filter: blur(8px);
+		-webkit-backdrop-filter: blur(8px);
 		border: 1px solid var(--border, #30363d);
 		border-radius: 10px;
 		padding: 1.1rem;
 		text-decoration: none;
-		transition: all 0.25s;
+		transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 	}
-	.article-card:hover { border-color: var(--accent-cyan, #58a6ff); box-shadow: 0 0 15px rgba(88,166,255,0.06); transform: translateY(-2px); }
+	.article-card:hover {
+		border-color: var(--accent-cyan, #58a6ff);
+		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(88, 166, 255, 0.12);
+		transform: translateY(-4px);
+		background: rgba(22, 27, 34, 0.6);
+	}
 	.research-card { border-left: 3px solid var(--accent-gold, #d29922); }
 	.card-meta { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; font-size: 0.75rem; color: var(--text-muted, #484f58); }
 	.lang-badge { padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 600; font-size: 0.62rem; }
@@ -578,5 +613,64 @@ briefZh.forEach(p => {
 		.hero-stats-inline { flex-wrap: wrap; justify-content: center; }
 		.article-grid { grid-template-columns: 1fr; }
 		.archive-row { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
+	}
+
+	/* ═══ Bloomberg Market Ticker Banner ═══ */
+	.market-ticker-banner {
+		background: #090d16;
+		border-bottom: 1px solid var(--border, #30363d);
+		overflow: hidden;
+		width: 100%;
+		height: 32px;
+		display: flex;
+		align-items: center;
+		z-index: 90;
+	}
+	.ticker-wrapper {
+		width: 100%;
+		overflow: hidden;
+		white-space: nowrap;
+		display: flex;
+		align-items: center;
+	}
+	.ticker-track {
+		display: inline-flex;
+		align-items: center;
+		animation: scroll-left 28s linear infinite;
+	}
+	.ticker-track:hover {
+		animation-play-state: paused;
+	}
+	.ticker-item {
+		display: inline-flex;
+		align-items: center;
+		padding: 0 1.5rem;
+		font-family: var(--font-mono, 'JetBrains Mono', monospace);
+		font-size: 0.72rem;
+		border-right: 1px solid rgba(48, 54, 61, 0.5);
+	}
+	.ticker-label {
+		color: var(--text-secondary, #8b949e);
+		font-weight: 700;
+		margin-right: 0.4rem;
+	}
+	.ticker-val {
+		color: var(--text-primary, #e6edf3);
+		font-weight: 600;
+		margin-right: 0.4rem;
+	}
+	.ticker-change {
+		font-weight: 700;
+	}
+	.ticker-change.up {
+		color: var(--accent-green, #3fb950);
+	}
+	.ticker-change.down {
+		color: var(--accent-red, #f85149);
+	}
+
+	@keyframes scroll-left {
+		0% { transform: translateX(0); }
+		100% { transform: translateX(-50%); }
 	}
 </style>

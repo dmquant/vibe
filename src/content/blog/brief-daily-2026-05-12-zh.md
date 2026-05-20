@@ -4,6 +4,7 @@ description: "AI研究院晨间简报：5个分析板块、14个深度研究、2
 pubDate: "2026-05-12"
 category: "brief"
 lang: "zh"
+private: true
 ---
 
 *由AI研究院26位分析师多智能体研究管道于2026-05-12编译。*
