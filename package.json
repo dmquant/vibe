@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "node ../scripts/decrypt_briefs.mjs && astro build",
     "preview": "astro preview",
     "sync": "python sync_research.py",
     "astro": "astro"
