@@ -1,0 +1,16 @@
+{
+  "slug": "archive-9c53dc195828",
+  "href": "/investor/reports/archive-9c53dc195828/",
+  "meta": {
+    "title": "G3 证据合约 (AVS/DVS) 的 operational proposals 参数化定义",
+    "date": "2026-05-23",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "风险"
+    ],
+    "source": "archive-9c53dc195828",
+    "source_label": "archive-9c53dc195828"
+  },
+  "bodyHtml": "<h1>G3 证据合约 (AVS/DVS) 的 operational_proposals 参数化定义</h1>\n<p><strong>日期:</strong> 2026-05-23\n<strong>分析师:</strong> 内部运营官 (internal-operator)</p>\n<h2>1. 运营目标</h2>\n<p>基于前序研究（prior research notes）将 G3 可证伪抓手重构为证据合约的逻辑，本报告的任务是将其转化为机器可读的 <code>operational_proposals</code> 架构。该结构将硬编码正向印证分 (AVS) 与反向证伪分 (DVS) 的阈值，设定 T+5 评估的确切 <code>cron</code> 调度频率，并配置完全绕过投资经理裁量权的自动化撤退动作 [S1]。</p>\n<h2>2. 运营提案数据结构</h2>\n<p>我们提议将以下参数化结构作为“安全级 (Safe-Class)”提案直接应用至 <code>risk_engine</code></p>\n<pre><code class=\"language-json\">{\n  &quot;proposal_id&quot;: &quot;OP-20260523-G3-EVIDENCE-CONTRACT&quot;,\n  &quot;class&quot;: &quot;safe&quot;,\n  &quot;target_systems&quot;: [&quot;risk_engine&quot;, &quot;oms&quot;, &quot;altdata_pipeline&quot;],\n  &quot;parameters&quot;: {\n    &quot;avs_threshold&quot;: 60,\n    &quot;dvs_threshold&quot;: 60,\n    &quot;t_window_days&quot;: 5\n  },\n  &quot;cron_schedules&quot;: {\n    &quot;dvs_continuous&quot;: &quot;*/5 9-15 * * 1-5&quot;,\n    &quot;avs_hourly&quot;: &quot;0 * * * 1-5&quot;,\n    &quot;t5_expiry_check&quot;: &quot;30 14 * * 1-5&quot;\n  },\n  &quot;retreat_actions&quot;: {\n    &quot;dvs_breach&quot;: {\n      &quot;condition&quot;: &quot;DVS &gt;= 60&quot;,\n      &quot;action&quot;: &quot;order.sell.twap&quot;,\n      &quot;duration_mins&quot;: 15,\n      &quot;urgency&quot;: &quot;high&quot;\n    },\n    &quot;t5_expiry&quot;: {\n      &quot;condition&quot;: &quot;T_days &gt;= 5 AND AVS &lt; 60&quot;,\n      &quot;action&quot;: &quot;order.sell.twap&quot;,\n      &quot;duration_mins&quot;: 27,\n      &quot;urgency&quot;: &quot;medium&quot;\n    }\n  }\n}\n</code></pre>\n<h2>3. 参数化依据</h2>\n<ul>\n<li><strong>AVS/DVS 阈值:</strong> 阈值硬编码为 <code>60</code> [S1]。AVS &gt;= 60 确认假设成立，而 DVS &gt;= 60 则意味着证据被证伪，直接触发撤退。</li>\n<li><strong>Cron 调度:</strong> 为平衡 Kafka 总线负载并匹配 A 股微观结构 [S2]，DVS 评估在交易时段每 5 分钟执行一次 (<code>*/5 9-15 * * 1-5</code>)。T+5 超时检查严格定于第五个交易日的 14:30 执行。</li>\n<li><strong>自动撤退动作:</strong> 若在 T+5 的 14:30 检查时 AVS &lt; 60，系统将立即触发 27 分钟时长的 TWAP 卖出单，确保在 14:57 尾盘集合竞价前完成全部清仓 [S3]。</li>\n</ul>\n<h2>4. 识别出的脆弱性</h2>\n<p>由 <code>DVS &gt;= 60</code> 触发的“高紧急度 15 分钟 TWAP 清仓”动作引入了严重的执行风险。如果目标个股正快速逼近跌停（-10%），该自动化抛压可能加剧流动性崩溃，导致平仓失败并使投资组合陷入保证金追加（margin-call）的死锁状态。这种具体的头寸级回撤与锁死脆弱性需要风控团队进行立即的压力测试。</p>\n<h2>资料来源 / Sources</h2>\n<p>[S1] Institute Internal Engine Specs, \"Algorithmic Threshold Defaults 2026\" — https://internal.institute.local/docs/algo-thresholds-2026\n[S2] Operations &amp; Infrastructure, \"Kafka Flink Pipeline SLA\" — https://internal.institute.local/ops/kafka-sla\n[S3] A-Share Microstructure Guide, \"Call Auction &amp; TWAP Windows\" — https://internal.institute.local/trading/ashare-microstructure</p>"
+}
