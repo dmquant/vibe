@@ -77,15 +77,29 @@ const articleMatches = [...bodyHtml.matchAll(/<article class="deep-article">([\s
 const zhArticle = decorateArticle(articleMatches[0] || bodyHtml, "zh");
 const enArticle = decorateArticle(articleMatches[1] || "", "en");
 const chains = Array.isArray(item.chains) ? item.chains : [];
+const downloadBase = `/investor-downloads/deep-research/${slug}`;
+function normalizeDownloadHref(value, file) {
+  const href = String(value || `${downloadBase}/${file}`);
+  const outputMatch = href.match(/^outputs\/deep-research\/reports\/[^/]+\/(.+)$/);
+  if (outputMatch) return `${downloadBase}/${outputMatch[1]}`;
+  if (href.startsWith("/deep-research/downloads/")) return href.replace(/^\/deep-research\/downloads\//, "/investor-downloads/deep-research/");
+  if (href.startsWith("deep-research/downloads/")) return href.replace(/^deep-research\/downloads\//, "/investor-downloads/deep-research/");
+  return href;
+}
 const downloads = [
-  ["中文 PDF", "report_zh.pdf"],
-  ["中文 DOCX", "report_zh.docx"],
-  ["English PDF", "report_en.pdf"],
-  ["English DOCX", "report_en.docx"],
-  ["JSON", "report.json"],
-  ["Markdown ZH", "report_zh.md"],
-  ["Markdown EN", "report_en.md"],
-].map(([label, file]) => ({ label, href: `/investor-downloads/deep-research/${slug}/${file}` }));
+  item.pdf_zh ? ["中文 PDF", normalizeDownloadHref(item.pdf_zh, "report_zh.pdf")] : null,
+  ["中文 DOCX", normalizeDownloadHref(item.docx_zh, "report_zh.docx")],
+  item.pdf_en ? ["English PDF", normalizeDownloadHref(item.pdf_en, "report_en.pdf")] : null,
+  ["English DOCX", normalizeDownloadHref(item.docx_en, "report_en.docx")],
+  ["JSON", normalizeDownloadHref(item.json_href, "report.json")],
+  ["Markdown ZH", `${downloadBase}/report_zh.md`],
+  ["Markdown EN", `${downloadBase}/report_en.md`],
+]
+  .filter(Boolean)
+  .map(([label, href]) => ({ label, href }));
+const downloadDescription = item.pdf_zh || item.pdf_en
+  ? "提供网页阅读、PDF、DOCX 和 Markdown 版本；网页版会保留图表、表格和目录导航。"
+  : "提供网页阅读、DOCX、Markdown 和 JSON 版本；网页版会保留图表、表格和目录导航。";
 ---
 
 <!doctype html>
@@ -139,7 +153,7 @@ const downloads = [
     <section class="deep-download-panel" aria-label="报告下载">
       <div>
         <h2>下载报告</h2>
-        <p>提供网页阅读、PDF、DOCX 和 Markdown 版本；网页版会保留图表、表格和目录导航。</p>
+        <p>{downloadDescription}</p>
       </div>
       <div class="deep-download-grid">
         {downloads.map((download) => <a class="deep-download-link" href={download.href}>{download.label}</a>)}

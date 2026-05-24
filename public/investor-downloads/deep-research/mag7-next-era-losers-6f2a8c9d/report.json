@@ -1,0 +1,1782 @@
+{
+  "schema_version": "deep-research.report.v1",
+  "id": "mag7-next-era-losers-6f2a8c9d",
+  "slug": "mag7-next-era-losers-6f2a8c9d",
+  "topic_id": "mag7-next-era-losers",
+  "generated_at": "2026-05-24T04:03:17.360317+00:00",
+  "metadata_generated_at": "2026-05-24T04:03:17.360317+00:00",
+  "date": "2026-05-24",
+  "source_fetch": "2026-05-23T14:08:31.544Z",
+  "daily_date": "2026-05-23",
+  "title": {
+    "zh": "下一代周期中，Mag7 谁会输？",
+    "en": "Who Loses in the Next Era of Mag7?"
+  },
+  "thesis": {
+    "zh": "AI Institute 语料指向的输家不是简单的股价下跌名单，而是三类失败：没有被本轮 AI 基础设施、能效、推理商业化和电力约束直接验证的战略相对输家；有清晰资本开支、折旧、SBC 与自由现金流压力的利润表输家；以及仍能增长但估值从稀缺性重定价为资本强度的倍数输家。若必须给出一个名字，苹果是最清晰的战略相对输家；若只看语料中直接证据，Meta 是最清晰的 P&L/FCF 压力对象；NVIDIA 更像倍数风险而非基本面失败。",
+    "en": "The AI Institute corpus does not point to a simple short list. It separates three ways to lose: strategic relative losers that lack direct validation in the AI infrastructure, power, efficiency, and monetization chain; P&L losers where capex, depreciation, SBC, and FCF pressure are directly visible; and multiple losers that still grow but get repriced from scarcity to capital intensity. Forced to pick one strategic loser, Apple is the clearest. Within the directly evidenced corpus, Meta is the clearest P&L/FCF pressure candidate. NVIDIA is primarily a multiple-risk candidate, not a base-case fundamental loser."
+  },
+  "questions": {
+    "zh": [
+      "哪一家 Mag7 拥有直接 AI 变现证据，哪一家只是叙事久期？",
+      "AI 资本开支何时从护城河变成 FCF、ROIC、折旧和 SBC 的负担？",
+      "当算力从云端稀缺转向能效、ASIC、自研芯片、电力纪律和边缘推理时，谁会失去估值领导力？"
+    ],
+    "en": [
+      "Which Mag7 names have direct AI monetization evidence, and which still rely on narrative duration?",
+      "When does AI capex change from a moat into an FCF, ROIC, depreciation, and SBC burden?",
+      "Who loses valuation leadership if compute shifts from cloud scarcity to efficiency, ASICs, custom silicon, power discipline, and edge inference?"
+    ]
+  },
+  "keywords": [
+    "Mag7",
+    "Mag-7",
+    "NVIDIA",
+    "NVDA",
+    "Microsoft",
+    "MSFT",
+    "Alphabet",
+    "GOOGL",
+    "Google",
+    "Amazon",
+    "AMZN",
+    "Meta",
+    "META",
+    "Apple",
+    "AAPL",
+    "Tesla",
+    "TSLA",
+    "AI capex",
+    "hyperscaler",
+    "ROIC",
+    "FCF",
+    "SBC",
+    "ASIC",
+    "custom silicon",
+    "edge AI",
+    "power",
+    "electricity",
+    "云厂",
+    "资本开支",
+    "货币化",
+    "估值",
+    "折旧",
+    "自研芯片",
+    "边缘AI",
+    "电力"
+  ],
+  "chains": [
+    {
+      "label_zh": "AI 基础设施",
+      "label_en": "AI infrastructure"
+    },
+    {
+      "label_zh": "电力与电网",
+      "label_en": "power and grid"
+    },
+    {
+      "label_zh": "半导体与存储",
+      "label_en": "semiconductors and memory"
+    },
+    {
+      "label_zh": "生产率与效率",
+      "label_en": "productivity and efficiency"
+    },
+    {
+      "label_zh": "宏观通胀传导",
+      "label_en": "macro inflation transmission"
+    }
+  ],
+  "counts": {
+    "evidence": 14,
+    "risks": 15,
+    "analysts": 2,
+    "source_sentences": 856
+  },
+  "analysts": [
+    {
+      "name_zh": "TMT行业分析师",
+      "name_en": "TMT analyst",
+      "evidence_count": 10
+    },
+    {
+      "name_zh": "主题研究员",
+      "name_en": "主题研究员",
+      "evidence_count": 4
+    }
+  ],
+  "evidence": [
+    {
+      "rank": 1,
+      "title_zh": "TMT 判断：META/MSFT/GOOGL 2H26 Capex 下修依据与电力侧领先性",
+      "title_en": "TMT 判断：META/MSFT/GOOGL 2H26 Capex 下修依据与电力侧领先性",
+      "analyst_zh": "TMT行业分析师",
+      "analyst_en": "TMT analyst",
+      "date": "2026-05-18",
+      "href": "reports/archive-75257c8eee7f",
+      "source": "archive-75257c8eee7f",
+      "source_path": "frontend/generated/reports/archive-75257c8eee7f.json",
+      "source_sentence_count": 51,
+      "tags": [
+        "AI",
+        "通胀",
+        "港美股",
+        "能源",
+        "风险"
+      ],
+      "score": 97.8,
+      "summary_zh": "对股票映射，应区分“名义 Capex 上修”利好电力设备、网络、内存和部分 AI ASIC/GPU 供应链；“FCF 压力/ROIC 担忧”压制 hyperscaler 估值倍数。 补充交叉验证：Moody’s 在 2026-05-14 将包含 Microsoft、Amazon、Meta、Alphabet、Oracle、CoreWeave 的 hyperscaler 2026 Capex 预测从 3 月的约 $700B 上调到 $78…",
+      "summary_en": "对股票映射，应区分“名义 Capex 上修”利好电力设备、网络、内存和部分 AI ASIC/GPU 供应链；“FCF 压力/ROIC 担忧”压制 hyperscaler 估值倍数。 补充交叉验证：Moody’s 在 2026-05-14 将包含 Microsoft、Amazon、Meta、Alphabet、Oracle、CoreWeave 的 hyperscaler 2026 Capex 预测从 3 月的约 $700B 上调到 $78…",
+      "implication_zh": "说明 AI 基础设施的约束首先体现在电力、电网和设备交付，而不是只体现在芯片供给。",
+      "implication_en": "Shows that the first binding constraint is power, grid access, and equipment delivery, not only chip supply."
+    },
+    {
+      "rank": 2,
+      "title_zh": "Big Tech 2Q26 SBC 假设调升建议（GOOGL / META / MSFT）",
+      "title_en": "Big Tech 2Q26 SBC 假设调升建议（GOOGL / META / MSFT）",
+      "analyst_zh": "TMT行业分析师",
+      "analyst_en": "TMT analyst",
+      "date": "2026-05-22",
+      "href": "reports/archive-b4ec7402b03e",
+      "source": "archive-b4ec7402b03e",
+      "source_path": "frontend/generated/reports/archive-b4ec7402b03e.json",
+      "source_sentence_count": 59,
+      "tags": [
+        "AI",
+        "宏观",
+        "A股",
+        "港美股",
+        "风险"
+      ],
+      "score": 95.6,
+      "summary_zh": "[ ] 在 2Q26 财报 print 当周（GOOGL 7/22、META 7/24、MSFT 7/29 —— 三家档期均为暂定，需核实）对照实际 SBC 数据与本备忘录假设。 SBC 的会计本质：新授予 RSU 按 4 年（GOOGL、META）或 3–5 年（MSFT）摊销，叠加 cliff vesting。 建议在 2Q26 财报 print 上保守上调 SBC 假设（GOOGL +40 bps、META +60 bps、MS…",
+      "summary_en": "[ ] 在 2Q26 财报 print 当周（GOOGL 7/22、META 7/24、MSFT 7/29 —— 三家档期均为暂定，需核实）对照实际 SBC 数据与本备忘录假设。 SBC 的会计本质：新授予 RSU 按 4 年（GOOGL、META）或 3–5 年（MSFT）摊销，叠加 cliff vesting。 建议在 2Q26 财报 print 上保守上调 SBC 假设（GOOGL +40 bps、META +60 bps、MS…",
+      "implication_zh": "提示估值和资本开支节奏需要纳入延期、集中度和交付失败的压力测试。",
+      "implication_en": "Requires valuation and capex timing to include delay, concentration, and delivery-failure stress tests."
+    },
+    {
+      "rank": 3,
+      "title_zh": "前序研究 — 2026-05-20 利率中枢上移下高久期 TMT 的估值脆弱性",
+      "title_en": "前序研究 — 2026-05-20 利率中枢上移下高久期 TMT 的估值脆弱性",
+      "analyst_zh": "TMT行业分析师",
+      "analyst_en": "TMT analyst",
+      "date": "2026-05-20",
+      "href": "reports/archive-95cffc374e55",
+      "source": "archive-95cffc374e55",
+      "source_path": "frontend/generated/reports/archive-95cffc374e55.json",
+      "source_sentence_count": 60,
+      "tags": [
+        "AI",
+        "通胀",
+        "宏观",
+        "A股",
+        "港美股"
+      ],
+      "score": 98.5,
+      "summary_zh": "NVIDIA、Microsoft、Alphabet、Amazon和Meta的AI相关收入、订单、积压与资本开支承诺都很强。 Microsoft与Alphabet通过云增长、AI ARR、积压订单和经营利润展示变现；Meta通过广告价格与广告展示量体现杠杆；Amazon体现AWS再加速。 若云厂商订单增速放缓、议价更强、自研芯片替代上升，或受电力/数据中心瓶颈限制，半导体估值可能先于盈利预测下修。",
+      "summary_en": "The risk analysis treats AIDC energy reliability as a valuation variable because delayed power availability can weaken utilization and revenue timing.",
+      "implication_zh": "提示估值和资本开支节奏需要纳入延期、集中度和交付失败的压力测试。",
+      "implication_en": "Connects the AI demand shock to prices, rates, and duration-sensitive asset pricing."
+    },
+    {
+      "rank": 4,
+      "title_zh": "研究报告：2027-2028 AI 货币化与 1 万亿美元 Capex 压力测试",
+      "title_en": "研究报告：2027-2028 AI 货币化与 1 万亿美元 Capex 压力测试",
+      "analyst_zh": "主题研究员",
+      "analyst_en": "主题研究员",
+      "date": "",
+      "href": "reports/archive-9c321f3e52cb",
+      "source": "archive-9c321f3e52cb",
+      "source_path": "frontend/generated/reports/archive-9c321f3e52cb.json",
+      "source_sentence_count": 35,
+      "tags": [
+        "AI",
+        "宏观",
+        "风险"
+      ],
+      "score": 94.4,
+      "summary_zh": "折旧冲击： 到 2027 年，“三巨头”（MSFT, GOOG, AMZN）的年度折旧预计将达到 3500 亿 - 4000 亿美元。 在递归自我改进（RSI）模型和超大规模 Agentic 推理集群的推动下，超大规模云厂商（Hyperscaler）的资本支出（Capex）预计将在 2027 年达到每年 1 万亿美元。 研究报告：2027-2028 AI 货币化与 1 万亿美元 Capex 压力测试。",
+      "summary_en": "折旧冲击： 到 2027 年，“三巨头”（MSFT, GOOG, AMZN）的年度折旧预计将达到 3500 亿 - 4000 亿美元。 在递归自我改进（RSI）模型和超大规模 Agentic 推理集群的推动下，超大规模云厂商（Hyperscaler）的资本支出（Capex）预计将在 2027 年达到每年 1 万亿美元。 研究报告：2027-2028 AI 货币化与 1 万亿美元 Capex 压力测试。",
+      "implication_zh": "提示估值和资本开支节奏需要纳入延期、集中度和交付失败的压力测试。",
+      "implication_en": "Requires valuation and capex timing to include delay, concentration, and delivery-failure stress tests."
+    },
+    {
+      "rank": 5,
+      "title_zh": "2026-05-08 压力测试：软件变现能否修复美国云厂AI资本开支ROIC缺口？",
+      "title_en": "2026-05-08 压力测试：软件变现能否修复美国云厂AI资本开支ROIC缺口？",
+      "analyst_zh": "TMT行业分析师",
+      "analyst_en": "TMT analyst",
+      "date": "2026-05-08",
+      "href": "reports/archive-a464b2999395",
+      "source": "archive-a464b2999395",
+      "source_path": "frontend/generated/reports/archive-a464b2999395.json",
+      "source_sentence_count": 87,
+      "tags": [
+        "AI",
+        "通胀",
+        "宏观",
+        "A股",
+        "港美股"
+      ],
+      "score": 96.7,
+      "summary_zh": "四大云厂内部，我按软件修复概率排序为 MSFT &gt; GOOGL &gt; AMZN &gt; META。 Microsoft现在把calendar 2026资本开支描述为约 USD 190B；Meta把2026资本开支指引上调至 USD 125-145B；Alphabet披露2026年Q1购置物业设备 USD 35.674B；Amazon披露2026年Q1购置物业设备 USD 44.203B，TTM自由现金流同比下降 95% 至…",
+      "summary_en": "四大云厂内部，我按软件修复概率排序为 MSFT &gt; GOOGL &gt; AMZN &gt; META。 Microsoft现在把calendar 2026资本开支描述为约 USD 190B；Meta把2026资本开支指引上调至 USD 125-145B；Alphabet披露2026年Q1购置物业设备 USD 35.674B；Amazon披露2026年Q1购置物业设备 USD 44.203B，TTM自由现金流同比下降 95% 至…",
+      "implication_zh": "提示估值和资本开支节奏需要纳入延期、集中度和交付失败的压力测试。",
+      "implication_en": "Requires valuation and capex timing to include delay, concentration, and delivery-failure stress tests."
+    },
+    {
+      "rank": 6,
+      "title_zh": "2026年云厂AI资本开支：收入兑现是否真实？还是ROIC缺口仍在扩大？",
+      "title_en": "2026年云厂AI资本开支：收入兑现是否真实？还是ROIC缺口仍在扩大？",
+      "analyst_zh": "TMT行业分析师",
+      "analyst_en": "TMT analyst",
+      "date": "2026-05-06",
+      "href": "reports/archive-da7dd73266b8",
+      "source": "archive-da7dd73266b8",
+      "source_path": "frontend/generated/reports/archive-da7dd73266b8.json",
+      "source_sentence_count": 39,
+      "tags": [
+        "AI",
+        "通胀",
+        "宏观",
+        "港美股",
+        "能源"
+      ],
+      "score": 94.2,
+      "summary_zh": "2026年Q1业绩季（4月底至5月初披露）合上了AI资本开支辩论中最受关注的一段：四大美国云厂 MSFT、GOOGL、META、AMZN 合计将2026年资本开支指引上调至 4000亿美元以上，对比2025年约 3300亿美元 、2024年约 2300亿美元。 Cohort 内部： 按资本效率排序偏好 GOOGL &gt; MSFT &gt; AMZN &gt; META。 但 MSFT 与 META 的FCF增速已与利润增速明显脱钩…",
+      "summary_en": "2026年Q1业绩季（4月底至5月初披露）合上了AI资本开支辩论中最受关注的一段：四大美国云厂 MSFT、GOOGL、META、AMZN 合计将2026年资本开支指引上调至 4000亿美元以上，对比2025年约 3300亿美元 、2024年约 2300亿美元。 Cohort 内部： 按资本效率排序偏好 GOOGL &gt; MSFT &gt; AMZN &gt; META。 但 MSFT 与 META 的FCF增速已与利润增速明显脱钩…",
+      "implication_zh": "说明 AI 基础设施的约束首先体现在电力、电网和设备交付，而不是只体现在芯片供给。",
+      "implication_en": "Shows that the first binding constraint is power, grid access, and equipment delivery, not only chip supply."
+    },
+    {
+      "rank": 7,
+      "title_zh": "AI电力成本台阶下的Mag-7估值离散度",
+      "title_en": "AI电力成本台阶下的Mag-7估值离散度",
+      "analyst_zh": "TMT行业分析师",
+      "analyst_en": "TMT analyst",
+      "date": "2026-05-06",
+      "href": "reports/archive-308b055065a6",
+      "source": "archive-308b055065a6",
+      "source_path": "frontend/generated/reports/archive-308b055065a6.json",
+      "source_sentence_count": 114,
+      "tags": [
+        "AI",
+        "通胀",
+        "宏观",
+        "港美股",
+        "能源"
+      ],
+      "score": 95.1,
+      "summary_zh": "入场估值： META约25倍NTM P/E，AMZN云隐含约30–32倍（AWS分拆口径）——META相对自身历史FCF的溢价正在被一个因电力成本压力而日益受损的OPM扩张逻辑所支撑。 估值离散度本身被错误定价，而不仅仅是方向： MSFT与META之间的电力调整后价差，比当前乘数差异所隐含的更宽。 模型压缩（量化、知识蒸馏）和自研芯片（MSFT Maia 2、AMZN Trainium 3、GOOG TPU v7、META MTIA…",
+      "summary_en": "入场估值： META约25倍NTM P/E，AMZN云隐含约30–32倍（AWS分拆口径）——META相对自身历史FCF的溢价正在被一个因电力成本压力而日益受损的OPM扩张逻辑所支撑。 估值离散度本身被错误定价，而不仅仅是方向： MSFT与META之间的电力调整后价差，比当前乘数差异所隐含的更宽。 模型压缩（量化、知识蒸馏）和自研芯片（MSFT Maia 2、AMZN Trainium 3、GOOG TPU v7、META MTIA…",
+      "implication_zh": "说明 AI 基础设施的约束首先体现在电力、电网和设备交付，而不是只体现在芯片供给。",
+      "implication_en": "Shows that the first binding constraint is power, grid access, and equipment delivery, not only chip supply."
+    },
+    {
+      "rank": 8,
+      "title_zh": "AI企业电力成本：物理红线触碰估值天花板",
+      "title_en": "AI企业电力成本：物理红线触碰估值天花板",
+      "analyst_zh": "TMT行业分析师",
+      "analyst_en": "TMT analyst",
+      "date": "2026-05-06",
+      "href": "reports/archive-d7c398488336",
+      "source": "archive-d7c398488336",
+      "source_path": "frontend/generated/reports/archive-d7c398488336.json",
+      "source_sentence_count": 20,
+      "tags": [
+        "AI",
+        "通胀",
+        "宏观",
+        "港美股",
+        "能源"
+      ],
+      "score": 94.8,
+      "summary_zh": "AI巨头——微软 (MSFT)、谷歌 (GOOGL)、Meta (META) 和亚马逊 (AMZN)——的看涨逻辑此前一直建立在AI基础设施规模化将带来经营杠杆的假设之上。 这种利润率的收缩是触发估值回调、验证“集中度悬崖”逻辑的核心基本面催化剂。 2000年的“墙”是光纤利用率不足和资本市场崩溃；2026年的“墙”是在盈利价格点上无法物理性支持AI梦想的电力缺口。",
+      "summary_en": "AI巨头——微软 (MSFT)、谷歌 (GOOGL)、Meta (META) 和亚马逊 (AMZN)——的看涨逻辑此前一直建立在AI基础设施规模化将带来经营杠杆的假设之上。 这种利润率的收缩是触发估值回调、验证“集中度悬崖”逻辑的核心基本面催化剂。 2000年的“墙”是光纤利用率不足和资本市场崩溃；2026年的“墙”是在盈利价格点上无法物理性支持AI梦想的电力缺口。",
+      "implication_zh": "说明 AI 基础设施的约束首先体现在电力、电网和设备交付，而不是只体现在芯片供给。",
+      "implication_en": "Shows that the first binding constraint is power, grid access, and equipment delivery, not only chip supply."
+    },
+    {
+      "rank": 9,
+      "title_zh": "“大脱钩”时代：CSP ASIC 的规模化扩张与 NVIDIA 利润率拐点研判",
+      "title_en": "“大脱钩”时代：CSP ASIC 的规模化扩张与 NVIDIA 利润率拐点研判",
+      "analyst_zh": "TMT行业分析师",
+      "analyst_en": "TMT analyst",
+      "date": "2026-05-15",
+      "href": "reports/archive-8d31950f7c05",
+      "source": "archive-8d31950f7c05",
+      "source_path": "frontend/generated/reports/archive-8d31950f7c05.json",
+      "source_sentence_count": 27,
+      "tags": [
+        "AI",
+        "通胀",
+        "宏观",
+        "港美股"
+      ],
+      "score": 96.1,
+      "summary_zh": "主要超大规模云厂商已成功将其内部核心负载迁移至 3nm 自研芯片，相比 NVIDIA 的 B200/GB200 集群，在总拥有成本（TCO）上取得了显著优势。 推理侧定价权丧失： 随着 CSP 将最高容量的负载（推理）转入自研 ASIC，NVIDIA 被迫在剩余的“算力租赁”市场中进行价格竞争。 虽然 NVIDIA 仍是万亿参数级“拓荒模型”训练的金标准，但推理这一“现金奶牛”市场向 CSP ASIC 的流失已不可逆。",
+      "summary_en": "主要超大规模云厂商已成功将其内部核心负载迁移至 3nm 自研芯片，相比 NVIDIA 的 B200/GB200 集群，在总拥有成本（TCO）上取得了显著优势。 推理侧定价权丧失： 随着 CSP 将最高容量的负载（推理）转入自研 ASIC，NVIDIA 被迫在剩余的“算力租赁”市场中进行价格竞争。 虽然 NVIDIA 仍是万亿参数级“拓荒模型”训练的金标准，但推理这一“现金奶牛”市场向 CSP ASIC 的流失已不可逆。",
+      "implication_zh": "提示估值和资本开支节奏需要纳入延期、集中度和交付失败的压力测试。",
+      "implication_en": "Requires valuation and capex timing to include delay, concentration, and delivery-failure stress tests."
+    },
+    {
+      "rank": 10,
+      "title_zh": "压力测试：GPU 迭代周期与折旧悬崖如何重塑云厂商 Capex 节奏",
+      "title_en": "压力测试：GPU 迭代周期与折旧悬崖如何重塑云厂商 Capex 节奏",
+      "analyst_zh": "TMT行业分析师",
+      "analyst_en": "TMT analyst",
+      "date": "2026-05-16",
+      "href": "reports/archive-798b9fdbebe0",
+      "source": "archive-798b9fdbebe0",
+      "source_path": "frontend/generated/reports/archive-798b9fdbebe0.json",
+      "source_sentence_count": 40,
+      "tags": [
+        "AI",
+        "港美股",
+        "能源",
+        "风险"
+      ],
+      "score": 93.9,
+      "summary_zh": "目前 Microsoft, Alphabet 和 Meta 尚未在财报中明确剥离 AI 服务器的折旧年限（仍混合在 5-6 年的整体数据中心设备中）。 本报告问题: 针对 Amazon 缩短服务器寿命的趋势，评估主流云厂商在 GPU 架构迭代下的资产折旧压力及其对 Capex 节奏的影响。 压力测试：GPU 迭代周期与折旧悬崖如何重塑云厂商 Capex 节奏。",
+      "summary_en": "目前 Microsoft, Alphabet 和 Meta 尚未在财报中明确剥离 AI 服务器的折旧年限（仍混合在 5-6 年的整体数据中心设备中）。 本报告问题: 针对 Amazon 缩短服务器寿命的趋势，评估主流云厂商在 GPU 架构迭代下的资产折旧压力及其对 Capex 节奏的影响。 压力测试：GPU 迭代周期与折旧悬崖如何重塑云厂商 Capex 节奏。",
+      "implication_zh": "说明 AI 基础设施的约束首先体现在电力、电网和设备交付，而不是只体现在芯片供给。",
+      "implication_en": "Shows that the first binding constraint is power, grid access, and equipment delivery, not only chip supply."
+    },
+    {
+      "rank": 11,
+      "title_zh": "2026-05-21 — AI算力硬件与云基础设施：能效是第一座“电厂”",
+      "title_en": "2026-05-21 — AI算力硬件与云基础设施：能效是第一座“电厂”",
+      "analyst_zh": "主题研究员",
+      "analyst_en": "主题研究员",
+      "date": "2026-05-21",
+      "href": "reports/archive-645dd078834d",
+      "source": "archive-645dd078834d",
+      "source_path": "frontend/generated/reports/archive-645dd078834d.json",
+      "source_sentence_count": 59,
+      "tags": [
+        "AI",
+        "通胀",
+        "宏观",
+        "港美股",
+        "能源"
+      ],
+      "score": 96.8,
+      "summary_zh": "截至2026-05-21，我支持上一张卡对电网互联、居民电价政治和变压器/开关设备交期的压力测试结论；TMT视角的增量判断是，芯片、机架、散热和工作负载架构正在把刚性的“电力红线”改造成分阶段约束，而不是一刀切的产能停止线。 因此，电力瓶颈更像是资本配置过滤器，而不是AI收入的固定天花板。 [S12] NVIDIA Developer Blog, \"NVIDIA 800 V HVDC Architecture Will Power t…",
+      "summary_en": "截至2026-05-21，我支持上一张卡对电网互联、居民电价政治和变压器/开关设备交期的压力测试结论；TMT视角的增量判断是，芯片、机架、散热和工作负载架构正在把刚性的“电力红线”改造成分阶段约束，而不是一刀切的产能停止线。 因此，电力瓶颈更像是资本配置过滤器，而不是AI收入的固定天花板。 [S12] NVIDIA Developer Blog, \"NVIDIA 800 V HVDC Architecture Will Power t…",
+      "implication_zh": "说明 AI 基础设施的约束首先体现在电力、电网和设备交付，而不是只体现在芯片供给。",
+      "implication_en": "Shows that the first binding constraint is power, grid access, and equipment delivery, not only chip supply."
+    },
+    {
+      "rank": 12,
+      "title_zh": "跟踪稀土与核能板块资金推动系列研究（九）：超大规模云厂商对AI电力缺口的选址与算力架构应对",
+      "title_en": "AI data-center power bottlenecks across utilities, grid equipment, and firm power",
+      "analyst_zh": "主题研究员",
+      "analyst_en": "主题研究员",
+      "date": "2026-05-23",
+      "href": "reports/archive-fc7d12b2edcf",
+      "source": "archive-fc7d12b2edcf",
+      "source_path": "frontend/generated/reports/archive-fc7d12b2edcf.json",
+      "source_sentence_count": 102,
+      "tags": [
+        "AI",
+        "宏观",
+        "港美股",
+        "能源",
+        "风险"
+      ],
+      "score": 94.6,
+      "summary_zh": "TMT端需要回答的问题是：AWS、Microsoft、Google、Meta、Oracle以及商用算力层（CoreWeave、Crusoe、Lambda）的选址与算力架构调整速度，是否足以中和该缺口。 地理分散仍需变压器和并网；BTM天然气避开排队但继承了前序研究的中游断供风险；性能/瓦效率提升被训练总FLOP需求增长完全抵消（Stargate、Microsoft–OpenAI、Google Gemini-3合计意味着2030年园区储…",
+      "summary_en": "TMT端需要回答的问题是：AWS、Microsoft、Google、Meta、Oracle以及商用算力层（CoreWeave、Crusoe、Lambda）的选址与算力架构调整速度，是否足以中和该缺口。 地理分散仍需变压器和并网；BTM天然气避开排队但继承了前序研究的中游断供风险；性能/瓦效率提升被训练总FLOP需求增长完全抵消（Stargate、Microsoft–OpenAI、Google Gemini-3合计意味着2030年园区储…",
+      "implication_zh": "说明 AI 基础设施的约束首先体现在电力、电网和设备交付，而不是只体现在芯片供给。",
+      "implication_en": "Shows that the first binding constraint is power, grid access, and equipment delivery, not only chip supply."
+    },
+    {
+      "rank": 13,
+      "title_zh": "AI 商业化、推理经济性与供应链订单：验证 Capex 到 FCF 的桥梁",
+      "title_en": "AI 商业化、推理经济性与供应链订单：验证 Capex 到 FCF 的桥梁",
+      "analyst_zh": "主题研究员",
+      "analyst_en": "主题研究员",
+      "date": "2026-05-23",
+      "href": "reports/archive-97e246c1a972",
+      "source": "archive-97e246c1a972",
+      "source_path": "frontend/generated/reports/archive-97e246c1a972.json",
+      "source_sentence_count": 79,
+      "tags": [
+        "AI",
+        "通胀",
+        "港美股",
+        "风险"
+      ],
+      "score": 97.2,
+      "summary_zh": "基于 RPO 的爆发式增长以及供应链订单的物理性售罄，我们认为 结构性 Capex 退潮（10%）的概率应当进一步下调至 5%，而 获利了结与叙事消化（55%）的概率上修至 60%，估值压力与 FCF 底部验证（35%）保持不变。 AWS 2026 年 $200B 的 Capex 计划 [S4] 表明，在前期折旧和资本开支高峰期，云巨头在 2026 财年的 FCF 利润率确实会受到压制。 极度扎实的云巨头 Backlog (RPO)…",
+      "summary_en": "The risk analysis treats AIDC energy reliability as a valuation variable because delayed power availability can weaken utilization and revenue timing.",
+      "implication_zh": "提示估值和资本开支节奏需要纳入延期、集中度和交付失败的压力测试。",
+      "implication_en": "Requires valuation and capex timing to include delay, concentration, and delivery-failure stress tests."
+    },
+    {
+      "rank": 14,
+      "title_zh": "把 NVDA Q1 FY27 当作一张 Capex 表来读：AI 硬件全栈解构",
+      "title_en": "把 NVDA Q1 FY27 当作一张 Capex 表来读：AI 硬件全栈解构",
+      "analyst_zh": "TMT行业分析师",
+      "analyst_en": "TMT analyst",
+      "date": "2026-05-23",
+      "href": "reports/archive-f71244f03be1",
+      "source": "archive-f71244f03be1",
+      "source_path": "frontend/generated/reports/archive-f71244f03be1.json",
+      "source_sentence_count": 84,
+      "tags": [
+        "AI",
+        "通胀",
+        "宏观",
+        "港美股",
+        "能源"
+      ],
+      "score": 96.3,
+      "summary_zh": "可证伪信号：（a）下一轮 hyperscaler 财报（MSFT / META / GOOGL / AMZN）出现 capex 持平 指引；（b）TSMC CoWoS 产能利用率从 100% 滑落到 90% 中段；（c）SK 海力士 Q3 财报 HBM 报价转弱；（d）Arista 或 Broadcom 下调 AI 网络占比指引；（e）中际旭创 / 新易盛 出货数据环比走平或下滑。 四家美国超大规模云厂商（MSFT、GOOGL、AMZ…",
+      "summary_en": "可证伪信号：（a）下一轮 hyperscaler 财报（MSFT / META / GOOGL / AMZN）出现 capex 持平 指引；（b）TSMC CoWoS 产能利用率从 100% 滑落到 90% 中段；（c）SK 海力士 Q3 财报 HBM 报价转弱；（d）Arista 或 Broadcom 下调 AI 网络占比指引；（e）中际旭创 / 新易盛 出货数据环比走平或下滑。 四家美国超大规模云厂商（MSFT、GOOGL、AMZ…",
+      "implication_zh": "说明 AI 基础设施的约束首先体现在电力、电网和设备交付，而不是只体现在芯片供给。",
+      "implication_en": "Shows that the first binding constraint is power, grid access, and equipment delivery, not only chip supply."
+    }
+  ],
+  "risk_matrix": [
+    {
+      "rank": 1,
+      "title_zh": "变压器与液冷供应链对 AI 基础设施的约束",
+      "title_en": "power and grid risk signal",
+      "chain": "电力与电网",
+      "chain_en": "power and grid",
+      "impact": 5,
+      "probability": 5,
+      "severity": 25,
+      "summary_zh": "工作日期：2026-05-23。本报告对前序“AI capex 正在遭遇物理部署约束”的判断作压力测试，并给出更窄的结论：变压器、变电站设备及相关电网硬件，很可能是继电力可得性之后的第二个硬物理约束...",
+      "summary_en": "Flags power and grid execution risk that can delay capacity, pressure margins, or raise discount rates.",
+      "href": "reports/archive-f158c8e7e23e"
+    },
+    {
+      "rank": 2,
+      "title_zh": "前序研究 · 房地产视角反驳：真正的瓶颈是土地，不是变压器",
+      "title_en": "power and grid risk signal",
+      "chain": "电力与电网",
+      "chain_en": "power and grid",
+      "impact": 5,
+      "probability": 4,
+      "severity": 20,
+      "summary_zh": "根主题：AI算力物理瓶颈——从GPU算力到电力变压器与电网并网瓶颈的转移 - 分析师：房地产分析师（一二级土地市场、土地拍卖、政策、REITs） - 立场： deny（反驳） ——挑战\"变压器/电网并网才...",
+      "summary_en": "Flags power and grid execution risk that can delay capacity, pressure margins, or raise discount rates.",
+      "href": "reports/archive-d2491bcecc68"
+    },
+    {
+      "rank": 3,
+      "title_zh": "研究报告：2026-05-17 - 变压器供应瓶颈与GOES利润捕获",
+      "title_en": "industrial supply bottlenecks risk signal",
+      "chain": "工业供给瓶颈",
+      "chain_en": "industrial supply bottlenecks",
+      "impact": 5,
+      "probability": 2,
+      "severity": 10,
+      "summary_zh": "截至研究所工作日2026-05-17（Asia/Singapore），我支持研究记录1的主线：AI电力交易应从泛买公用事业久期资产，转向电力设备瓶颈和上游关键材料。最新证据更强：变压器交付仍受限于稀缺产能窗...",
+      "summary_en": "Flags industrial supply bottlenecks execution risk that can delay capacity, pressure margins, or raise discount rates.",
+      "href": "reports/archive-8e56e5109bff"
+    },
+    {
+      "rank": 4,
+      "title_zh": "研究记录 07 · 硅钢（GOES）产能缺口对变压器毛利的压力测试",
+      "title_en": "industrial supply bottlenecks risk signal",
+      "chain": "工业供给瓶颈",
+      "chain_en": "industrial supply bottlenecks",
+      "impact": 5,
+      "probability": 3,
+      "severity": 15,
+      "summary_zh": "板块研究会话：AI算力多头 — 需求短缺还是融资/电力信用拐点？ - 研究记录 · 立场：stress-test - 分析师：材料行业分析师（materials-analyst） - 工作日：2026-05-21（亚洲/新加坡）",
+      "summary_en": "Flags industrial supply bottlenecks execution risk that can delay capacity, pressure margins, or raise discount rates.",
+      "href": "reports/archive-c1f1503528aa"
+    },
+    {
+      "rank": 5,
+      "title_zh": "关键电力设备供应链瓶颈：变压器与开关设备交付周期调研",
+      "title_en": "industrial supply bottlenecks risk signal",
+      "chain": "工业供给瓶颈",
+      "chain_en": "industrial supply bottlenecks",
+      "impact": 5,
+      "probability": 3,
+      "severity": 15,
+      "summary_zh": "研究记录 ｜ 立场：stress-test（压力测试） - 分析师：工业制造分析师 - 工作日期：2026-05-18（亚洲/新加坡） - 议题：变压器与开关设备等核心电力基础设施的交付延迟，是否足以构成 2H26 之...",
+      "summary_en": "Flags industrial supply bottlenecks execution risk that can delay capacity, pressure margins, or raise discount rates.",
+      "href": "reports/archive-90262cad3c96"
+    },
+    {
+      "rank": 6,
+      "title_zh": "电网基础设施扩容节奏 vs AI 算力资本开支切换",
+      "title_en": "industrial supply bottlenecks risk signal",
+      "chain": "工业供给瓶颈",
+      "chain_en": "industrial supply bottlenecks",
+      "impact": 5,
+      "probability": 4,
+      "severity": 20,
+      "summary_zh": "研究记录 立场: 支持 (support) - 分析师:公用事业分析师 工作日期: 2026-05-19 (亚洲/新加坡) - 主题:AI 驱动的电网扩容——变压器、特高压、开关设备瓶颈评估 - 问题:配电侧设备(变压器、开关...",
+      "summary_en": "The research stress-tests whether AI compute growth is constrained by grid expansion, transformers, and distribution infrastructure rather than only by semiconductor availability.",
+      "href": "reports/archive-674f035a6c53"
+    },
+    {
+      "rank": 7,
+      "title_zh": "AIDC 交付悖论：国产变压器速度 vs 局部电网消纳",
+      "title_en": "AIDC delivery paradox: transformer speed versus local grid absorption",
+      "chain": "电力与电网",
+      "chain_en": "power and grid",
+      "impact": 5,
+      "probability": 5,
+      "severity": 25,
+      "summary_zh": "说明国产变压器交付速度不能自动转化为可用算力，关键仍是并网、电力质量、调度规则和本地电网消纳。",
+      "summary_en": "Shows that faster transformer delivery does not automatically become usable compute; interconnection, power quality, dispatch rules, and local grid absorption remain binding constraints.",
+      "href": "reports/archive-c3e9417f3658"
+    },
+    {
+      "rank": 8,
+      "title_zh": "电力设备与电网侧容量缺口对算力扩建的物理约束研究",
+      "title_en": "AI infrastructure risk signal",
+      "chain": "AI 基础设施",
+      "chain_en": "AI infrastructure",
+      "impact": 5,
+      "probability": 5,
+      "severity": 25,
+      "summary_zh": "工作日期：2026-05-23（Asia/Singapore） - 研究记录 - 分析师：能源行业分析师（energy-analyst） - 立场：stress-test（压力测试 prior research notes的\"电力设备超配 30%\"配置结论） - 上游...",
+      "summary_en": "Flags AI infrastructure execution risk that can delay capacity, pressure margins, or raise discount rates.",
+      "href": "reports/archive-3e4d481a5a47"
+    },
+    {
+      "rank": 9,
+      "title_zh": "变压器及电力设备产业链：全球产能弹性、毛利率水平与出海竞争格局",
+      "title_en": "Nonferrous-metal stress test for power-equipment gross margins",
+      "chain": "工业供给瓶颈",
+      "chain_en": "industrial supply bottlenecks",
+      "impact": 5,
+      "probability": 1,
+      "severity": 5,
+      "summary_zh": "压力测试铜、铝等有色金属价格是否足以压缩电力设备毛利率和业绩确定性。",
+      "summary_en": "Tests whether copper and aluminum price pressure can compress power-equipment margins and earnings visibility.",
+      "href": "reports/archive-c48f4f6ca286"
+    },
+    {
+      "rank": 10,
+      "title_zh": "AI数据中心电力侧供应瓶颈与电网并网进度评估",
+      "title_en": "AI infrastructure risk signal",
+      "chain": "AI 基础设施",
+      "chain_en": "AI infrastructure",
+      "impact": 5,
+      "probability": 3,
+      "severity": 15,
+      "summary_zh": "分析师： 公用事业分析师 - 立场： 支持（验证前序研究\"time-to-power 而非 capex 美元是约束\"的核心判断） - 工作日期（亚洲/新加坡）： 2026-05-18",
+      "summary_en": "Flags AI infrastructure execution risk that can delay capacity, pressure margins, or raise discount rates.",
+      "href": "reports/archive-ab20b4305a16"
+    },
+    {
+      "rank": 11,
+      "title_zh": "产业链调研：电力设备产业链：变压器及配电网核心组件的产能与交期评估",
+      "title_en": "Transformer and distribution-grid component capacity and lead-time survey",
+      "chain": "工业供给瓶颈",
+      "chain_en": "industrial supply bottlenecks",
+      "impact": 5,
+      "probability": 3,
+      "severity": 15,
+      "summary_zh": "核查变压器和配电网核心组件的产能、交期与订单兑现度。",
+      "summary_en": "Checks transformer and distribution-grid component capacity, lead times, and order convertibility.",
+      "href": "reports/archive-388cb1707be7"
+    },
+    {
+      "rank": 12,
+      "title_zh": "AI 算力扩张驱动下的电力基础设施（变压器与电网设备）需求确定性分析",
+      "title_en": "power and grid risk signal",
+      "chain": "电力与电网",
+      "chain_en": "power and grid",
+      "impact": 5,
+      "probability": 1,
+      "severity": 5,
+      "summary_zh": "作者：能源行业分析师 (energy-analyst) - 日期：2026-05-22（Asia/Singapore） - 立场： 支持 （support）研究记录 01 的\"AI 物理化\"主线 - 前序研究：首席策略师 — 把 AI 物理化定义为电力、...",
+      "summary_en": "Flags power and grid execution risk that can delay capacity, pressure margins, or raise discount rates.",
+      "href": "reports/archive-922cc52bb3c4"
+    },
+    {
+      "rank": 13,
+      "title_zh": "研究记录 06 研究报告：电力设备供应链的产能与交付周期评估，2026-05-20",
+      "title_en": "industrial supply bottlenecks risk signal",
+      "chain": "工业供给瓶颈",
+      "chain_en": "industrial supply bottlenecks",
+      "impact": 5,
+      "probability": 1,
+      "severity": 5,
+      "summary_zh": "研究记录 06 研究报告：电力设备供应链的产能与交付周期评估，2026-05-20 工作日期： 2026-05-20，Asia/Singapore 分析师： 工业制造分析师 (industrials-analyst) 研究记录 立场： 支持，但...",
+      "summary_en": "Flags industrial supply bottlenecks execution risk that can delay capacity, pressure margins, or raise discount rates.",
+      "href": "reports/archive-98627db061d7"
+    },
+    {
+      "rank": 14,
+      "title_zh": "AI电力硬件瓶颈：变压器与GOES交付风险",
+      "title_en": "AI power-hardware bottlenecks: transformer and GOES delivery risk",
+      "chain": "工业供给瓶颈",
+      "chain_en": "industrial supply bottlenecks",
+      "impact": 5,
+      "probability": 4,
+      "severity": 20,
+      "summary_zh": "跟踪变压器与 GOES 交付风险，作为 AI 电力硬件部署的关键约束。",
+      "summary_en": "Tracks transformer and GOES delivery risk as a key constraint on AI power-hardware deployment.",
+      "href": "reports/archive-27a9426bc753"
+    },
+    {
+      "rank": 15,
+      "title_zh": "智算中心扩张下的能源供给压力与新型电力系统建设",
+      "title_en": "AI infrastructure risk signal",
+      "chain": "AI 基础设施",
+      "chain_en": "AI infrastructure",
+      "impact": 5,
+      "probability": 3,
+      "severity": 15,
+      "summary_zh": "作者：能源行业分析师 - 日期 (Asia/Singapore)：2026-05-22 - 研究记录 — 立场： support（支持） - 议题主线：量子纠错与 AI 算力范式转移 - 本报告问题：随着国产 GPU 在推理市场规模化，如...",
+      "summary_en": "Flags AI infrastructure execution risk that can delay capacity, pressure margins, or raise discount rates.",
+      "href": "reports/archive-9e988f0804e5"
+    }
+  ],
+  "chain_evidence": [
+    {
+      "chain": "AI 基础设施",
+      "chain_en": "AI infrastructure",
+      "latest": 218,
+      "recent": 1269,
+      "risk": 910,
+      "heat": 2689.3
+    },
+    {
+      "chain": "电力与电网",
+      "chain_en": "power and grid",
+      "latest": 27,
+      "recent": 190,
+      "risk": 143,
+      "heat": 401.5
+    },
+    {
+      "chain": "半导体与存储",
+      "chain_en": "semiconductors and memory",
+      "latest": 94,
+      "recent": 701,
+      "risk": 486,
+      "heat": 1487.1
+    },
+    {
+      "chain": "生产率与效率",
+      "chain_en": "productivity and efficiency",
+      "latest": 80,
+      "recent": 697,
+      "risk": 301,
+      "heat": 1078.4
+    },
+    {
+      "chain": "宏观通胀传导",
+      "chain_en": "macro inflation transmission",
+      "latest": 219,
+      "recent": 1308,
+      "risk": 932,
+      "heat": 2751.6
+    }
+  ],
+  "tables": {
+    "by_kind": {
+      "transmission_framework": {
+        "zh": {
+          "headers": [
+            "层级",
+            "主要变量",
+            "财务传导",
+            "投资含义"
+          ],
+          "rows": [
+            {
+              "层级": "需求",
+              "主要变量": "训练、推理、云工作负载、AI 广告、企业 Copilot",
+              "财务传导": "收入增长、利用率、backlog 转化",
+              "投资含义": "需求真实，但必须变成收入密度和 FCF"
+            },
+            {
+              "层级": "资本基数",
+              "主要变量": "数据中心、GPU、网络、土地、电力、租赁",
+              "财务传导": "折旧上升、短期 FCF 下降、ROIC 压力",
+              "投资含义": "市场只奖励可见利用率的 capex"
+            },
+            {
+              "层级": "电力与能效",
+              "主要变量": "PUE、液冷、互联、firm power、自研芯片",
+              "财务传导": "运营成本、容量释放、项目节奏",
+              "投资含义": "能效成为战略护城河和估值过滤器"
+            },
+            {
+              "层级": "人才与 SBC",
+              "主要变量": "AI 研究员、基础设施工程师、高价竞才",
+              "财务传导": "费用上升、稀释、EPS 压力滞后体现",
+              "投资含义": "Meta、Alphabet 更明显；Microsoft 部分已预告"
+            },
+            {
+              "层级": "供应商与架构",
+              "主要变量": "NVIDIA GPU、CoWoS/HBM、网络、ASIC、TPU",
+              "财务传导": "硬件栈利润再分配",
+              "投资含义": "NVIDIA 可赢盈利但输稀缺倍数"
+            },
+            {
+              "层级": "折现率",
+              "主要变量": "长期实际利率、久期、风险溢价",
+              "财务传导": "倍数压缩、更高回报要求",
+              "投资含义": "Apple/Tesla 叙事久期最暴露"
+            }
+          ],
+          "kind": "transmission_framework"
+        },
+        "en": {
+          "headers": [
+            "Layer",
+            "Main variables",
+            "Financial transmission",
+            "Investment implication"
+          ],
+          "rows": [
+            {
+              "Layer": "Demand",
+              "Main variables": "Training, inference, cloud workloads, AI advertising, enterprise copilots",
+              "Financial transmission": "Revenue growth, utilization, backlog conversion",
+              "Investment implication": "Demand is real, but it must become revenue density and FCF"
+            },
+            {
+              "Layer": "Capital Base",
+              "Main variables": "Data centers, GPUs, networking, land, power, leases",
+              "Financial transmission": "Higher depreciation, lower near-term FCF, ROIC pressure",
+              "Investment implication": "The market rewards capex only when utilization is visible"
+            },
+            {
+              "Layer": "Power and Efficiency",
+              "Main variables": "PUE, liquid cooling, grid access, firm power, custom silicon",
+              "Financial transmission": "Operating cost, capacity release, project timing",
+              "Investment implication": "Efficiency becomes a strategic moat and a valuation filter"
+            },
+            {
+              "Layer": "Talent and SBC",
+              "Main variables": "AI researchers, infrastructure engineers, competitive offers",
+              "Financial transmission": "Higher operating expense, dilution, delayed EPS pressure",
+              "Investment implication": "Meta and Alphabet are most visible; Microsoft is partly pre-guided"
+            },
+            {
+              "Layer": "Supplier and Architecture",
+              "Main variables": "NVIDIA GPUs, CoWoS/HBM, networking, ASICs, TPUs",
+              "Financial transmission": "Margin allocation across the hardware stack",
+              "Investment implication": "NVIDIA can win earnings but lose scarcity multiple"
+            },
+            {
+              "Layer": "Discount Rate",
+              "Main variables": "Long real yields, duration, risk premium",
+              "Financial transmission": "Multiple compression and higher hurdle rate",
+              "Investment implication": "Apple/Tesla narrative duration is most exposed"
+            }
+          ],
+          "kind": "transmission_framework"
+        }
+      },
+      "scenario_analysis": {
+        "zh": {
+          "headers": [
+            "情景",
+            "触发条件",
+            "宏观/资产含义",
+            "投资动作"
+          ],
+          "rows": [
+            {
+              "情景": "基准：AI capex 真实，FCF 桥梁不均",
+              "触发条件": "capex 保持高位；Microsoft/Alphabet 显示收入桥梁；Meta/Amazon 面对回收期压力；Apple/Tesla 缺直接证据",
+              "宏观/资产含义": "Mag7 内部分化上升；市场为证明付费，而不是为类别付费",
+              "投资动作": "超配已证明 capex-to-revenue 的公司，低配未验证久期"
+            },
+            {
+              "情景": "熊市：capex 跑赢商业化",
+              "触发条件": "收入密度和利用率滞后，折旧和 SBC 上升，电力约束推迟上线",
+              "宏观/资产含义": "云厂倍数压缩，高久期叙事跌幅最大",
+              "投资动作": "降低 Apple/Tesla 叙事久期和 Meta 回收期风险，要求 FCF 证据"
+            },
+            {
+              "情景": "硬件再分配",
+              "触发条件": "NVDA 确认需求，但现金流向 CoWoS/HBM、网络、ODM、电力设备、ASIC",
+              "宏观/资产含义": "NVIDIA 仍赚钱，但失去纯稀缺溢价",
+              "投资动作": "用更广的供应链和能效篮子表达 AI 硬件"
+            },
+            {
+              "情景": "能效突破",
+              "触发条件": "自研芯片、PUE、液冷和推理成本下降释放容量",
+              "宏观/资产含义": "Alphabet/Microsoft 相对位置改善；NVIDIA 定价受考验",
+              "投资动作": "偏好同时拥有能效和分发的公司"
+            },
+            {
+              "情景": "Meta 上行情景",
+              "触发条件": "AI 广告工具让 ROAS、参与度、消息收入和定价快于 capex/SBC",
+              "宏观/资产含义": "Meta 退出输家桶，重新获得轻资产平台溢价",
+              "投资动作": "只有广告效率和 FCF 同步改善后才重估 Meta"
+            }
+          ],
+          "kind": "scenario_analysis"
+        },
+        "en": {
+          "headers": [
+            "Scenario",
+            "Trigger",
+            "Macro/Asset Implication",
+            "Investor Action"
+          ],
+          "rows": [
+            {
+              "Scenario": "Base Case: AI capex real, FCF bridge uneven",
+              "Trigger": "Capex remains high; Microsoft/Alphabet show revenue bridge; Meta and Amazon face payback scrutiny; Apple/Tesla lack direct evidence",
+              "Macro/Asset Implication": "Dispersion within Mag7 rises; market pays for proof, not category membership",
+              "Investor Action": "Overweight proven capex-to-revenue names; underweight unvalidated duration"
+            },
+            {
+              "Scenario": "Bear Case: Capex outruns monetization",
+              "Trigger": "Revenue density and utilization lag; depreciation and SBC rise; power constraints delay live capacity",
+              "Macro/Asset Implication": "Hyperscaler multiples compress; high-duration narratives lose most",
+              "Investor Action": "Cut exposure to Apple/Tesla narrative duration and Meta payback risk; demand FCF evidence"
+            },
+            {
+              "Scenario": "Hardware Reallocation Case",
+              "Trigger": "NVDA confirms demand but cash flows to CoWoS/HBM, networking, ODMs, power equipment, ASIC suppliers",
+              "Macro/Asset Implication": "NVIDIA remains profitable but loses pure scarcity premium",
+              "Investor Action": "Express AI hardware through broader supply-chain and efficiency baskets"
+            },
+            {
+              "Scenario": "Efficiency Breakthrough Case",
+              "Trigger": "Custom silicon, PUE improvement, liquid cooling, and inference cost decline release capacity",
+              "Macro/Asset Implication": "Alphabet/Microsoft improve relative position; NVIDIA pricing power is tested",
+              "Investor Action": "Favor companies that own efficiency and distribution together"
+            },
+            {
+              "Scenario": "Meta Upside Case",
+              "Trigger": "AI ad tools raise ROAS, engagement, messaging revenue, and pricing faster than capex/SBC",
+              "Macro/Asset Implication": "Meta exits loser bucket and regains asset-light platform premium",
+              "Investor Action": "Re-rate Meta only after ad efficiency and FCF conversion move together"
+            }
+          ],
+          "kind": "scenario_analysis"
+        }
+      },
+      "portfolio_buckets": {
+        "zh": {
+          "headers": [
+            "组合",
+            "投资暴露",
+            "配置逻辑",
+            "关键检查项"
+          ],
+          "rows": [
+            {
+              "组合": "防守型赢家",
+              "投资暴露": "Microsoft、Alphabet",
+              "配置逻辑": "AI 变现、云 backlog 和能效杠杆证据最直接",
+              "关键检查项": "Azure、Copilot、Google Cloud backlog、TPU/Ironwood 经济性"
+            },
+            {
+              "组合": "回收期测试",
+              "投资暴露": "Meta、Amazon",
+              "配置逻辑": "有真实资产和变现，但现金转化必须追上 capex、SBC 与折旧",
+              "关键检查项": "广告 ROAS、Reels/消息变现、AWS、服务器寿命、FCF"
+            },
+            {
+              "组合": "倍数风险",
+              "投资暴露": "NVIDIA",
+              "配置逻辑": "基本面强，但受自研芯片、云厂议价和硬件利润池扩散影响",
+              "关键检查项": "毛利率、云厂 capex 指引、ASIC 渗透、CoWoS/HBM/网络分配"
+            },
+            {
+              "组合": "战略相对输家",
+              "投资暴露": "Apple、Tesla",
+              "配置逻辑": "在语料验证的 AI 基础设施和 capex-to-FCF 链条中直接证据稀少",
+              "关键检查项": "端侧 AI ARPU、换机周期、自动驾驶/机器人单位经济性、重复现金流"
+            }
+          ],
+          "kind": "portfolio_buckets"
+        },
+        "en": {
+          "headers": [
+            "Bucket",
+            "Exposure",
+            "Rationale",
+            "Key Checks"
+          ],
+          "rows": [
+            {
+              "Bucket": "Defended Leaders",
+              "Exposure": "Microsoft, Alphabet",
+              "Rationale": "Best direct evidence of AI monetization, cloud backlog, and efficiency levers",
+              "Key Checks": "Azure growth, Copilot revenue, Google Cloud backlog conversion, TPU/Ironwood economics"
+            },
+            {
+              "Bucket": "Payback Tests",
+              "Exposure": "Meta, Amazon",
+              "Rationale": "Real assets and monetization, but cash conversion must catch up with capex, SBC, and depreciation",
+              "Key Checks": "Ad ROAS, Reels/messaging monetization, AWS growth, server-life assumptions, FCF"
+            },
+            {
+              "Bucket": "Multiple Risk",
+              "Exposure": "NVIDIA",
+              "Rationale": "Strong fundamentals but vulnerable to custom silicon, hyperscaler bargaining, and broader hardware profit-pool rotation",
+              "Key Checks": "Gross margin, cloud capex guidance, ASIC penetration, CoWoS/HBM/networking allocation"
+            },
+            {
+              "Bucket": "Strategic Relative Losers",
+              "Exposure": "Apple, Tesla",
+              "Rationale": "Sparse direct evidence in the corpus-validated AI infrastructure and capex-to-FCF chain",
+              "Key Checks": "Device AI ARPU, replacement cycles, autonomy/robotics unit economics, recurring cash flow"
+            }
+          ],
+          "kind": "portfolio_buckets"
+        }
+      },
+      "monitoring_dashboard": {
+        "zh": {
+          "headers": [
+            "维度",
+            "指标",
+            "如何解读",
+            "证据来源"
+          ],
+          "rows": [
+            {
+              "维度": "Capex 承诺",
+              "指标": "MSFT/GOOGL/META/AMZN 季度 capex 与租赁披露",
+              "如何解读": "只有 backlog 和利用率改善时，高 capex 才是利好",
+              "证据来源": "证据 1、4、5、6"
+            },
+            {
+              "维度": "商业化密度",
+              "指标": "AI ARR、Copilot、Google Cloud 经营利润、广告 ROAS、AWS AI 收入",
+              "如何解读": "把叙事转成可衡量收入密度",
+              "证据来源": "证据 5、13"
+            },
+            {
+              "维度": "FCF 转化",
+              "指标": "FCF 利润率、折旧、服务器经济寿命、融资租赁",
+              "如何解读": "检验 capex 是否变成股东现金",
+              "证据来源": "证据 4、10"
+            },
+            {
+              "维度": "人才通胀",
+              "指标": "SBC 占收入比、AI/Infra 招聘",
+              "如何解读": "捕捉 EPS 与稀释滞后压力",
+              "证据来源": "证据 2"
+            },
+            {
+              "维度": "电力约束",
+              "指标": "PUE、互联、firm power、数据中心选址",
+              "如何解读": "决定上线容量和成本曲线",
+              "证据来源": "证据 7、8、11、12"
+            },
+            {
+              "维度": "架构迁移",
+              "指标": "TPU、Trainium/Inferentia、MTIA、Maia、CSP ASIC",
+              "如何解读": "把利润从通用 GPU 稀缺转移出去",
+              "证据来源": "证据 9、11"
+            },
+            {
+              "维度": "久期风险",
+              "指标": "长期实际利率与股票倍数",
+              "如何解读": "惩罚未验证期权价值",
+              "证据来源": "证据 3"
+            }
+          ],
+          "kind": "monitoring_dashboard"
+        },
+        "en": {
+          "headers": [
+            "Dimension",
+            "Indicator",
+            "Interpretation",
+            "Evidence Source"
+          ],
+          "rows": [
+            {
+              "Dimension": "Capex Commitment",
+              "Indicator": "MSFT/GOOGL/META/AMZN quarterly capex and lease disclosures",
+              "Interpretation": "High capex is positive only if backlog and utilization improve",
+              "Evidence Source": "Evidence 1, 4, 5, 6"
+            },
+            {
+              "Dimension": "Monetization Density",
+              "Indicator": "AI ARR, Copilot uptake, Google Cloud operating profit, ad ROAS, AWS AI revenue",
+              "Interpretation": "Converts narrative into measurable revenue density",
+              "Evidence Source": "Evidence 5, 13"
+            },
+            {
+              "Dimension": "FCF Conversion",
+              "Indicator": "FCF margin, depreciation, economic server life, finance leases",
+              "Interpretation": "Tests whether capex is becoming shareholder cash",
+              "Evidence Source": "Evidence 4, 10"
+            },
+            {
+              "Dimension": "Talent Inflation",
+              "Indicator": "SBC as percentage of revenue and AI/Infra hiring",
+              "Interpretation": "Captures delayed EPS and dilution pressure",
+              "Evidence Source": "Evidence 2"
+            },
+            {
+              "Dimension": "Power Constraint",
+              "Indicator": "PUE, grid interconnection, firm power, data-center siting",
+              "Interpretation": "Determines live capacity and cost curve",
+              "Evidence Source": "Evidence 7, 8, 11, 12"
+            },
+            {
+              "Dimension": "Architecture Shift",
+              "Indicator": "TPU, Trainium/Inferentia, MTIA, Maia, CSP ASIC adoption",
+              "Interpretation": "Reallocates margin away from general-purpose GPU scarcity",
+              "Evidence Source": "Evidence 9, 11"
+            },
+            {
+              "Dimension": "Duration Risk",
+              "Indicator": "Long real rates and equity multiples",
+              "Interpretation": "Penalizes unproven optionality",
+              "Evidence Source": "Evidence 3"
+            }
+          ],
+          "kind": "monitoring_dashboard"
+        }
+      }
+    },
+    "all": {
+      "zh": [
+        {
+          "headers": [
+            "排名",
+            "公司",
+            "输的类型",
+            "语料依据",
+            "反证条件"
+          ],
+          "rows": [
+            {
+              "排名": "1",
+              "公司": "Apple",
+              "输的类型": "战略相对输家",
+              "语料依据": "语料验证的下一代链条是云端 AI、电力、AI 基础设施、推理经济性、自研芯片和 capex-to-FCF。Apple 缺乏针对这些变量的直接证据，因此风险是失去领导力溢价，而非短期盈利崩塌。",
+              "反证条件": "端侧 AI 明确带来服务 ARPU、换机周期、端侧推理利润率或企业分发收入。"
+            },
+            {
+              "排名": "2",
+              "公司": "Tesla",
+              "输的类型": "叙事久期输家",
+              "语料依据": "Tesla 同样不在语料验证的 AI 基础设施和商业化链条中。高实际利率环境下，自动驾驶和机器人期权需要现金流证明。",
+              "反证条件": "自动驾驶/机器人出现可验证单位经济性和可重复收入，而非只有技术进展。"
+            },
+            {
+              "排名": "3",
+              "公司": "Meta",
+              "输的类型": "直接 P&L/FCF 压力对象",
+              "语料依据": "直接证据指向 capex、SBC、折旧和人才成本压力；AI 广告必须继续证明定价、参与度和转化效率增益。",
+              "反证条件": "广告价格、Reels 变现、Advantage+ 效率和消息商业化增速持续快于 capex、折旧与 SBC。"
+            },
+            {
+              "排名": "4",
+              "公司": "NVIDIA",
+              "输的类型": "估值倍数输家候选",
+              "语料依据": "Q1 FY27 数据中心收入确认 AI capex，但语料同时指向 CSP ASIC、云厂议价、电力瓶颈，以及现金向 CoWoS/HBM、网络和 ODM 分散。",
+              "反证条件": "数据中心收入继续加速、毛利率稳定、自研 ASIC 延后、云厂 capex 仍受供给限制。"
+            },
+            {
+              "排名": "5",
+              "公司": "Amazon",
+              "输的类型": "ROIC 与折旧测试",
+              "语料依据": "AWS、自研芯片和物流自动化是缓冲，但云 capex、服务器寿命、折旧和 FCF 转化仍是压力点。",
+              "反证条件": "AWS 增长、Trainium/Inferentia 经济性、物流自动化和 capex 纪律同步改善。"
+            },
+            {
+              "排名": "6",
+              "公司": "Alphabet",
+              "输的类型": "重资本幸存者",
+              "语料依据": "有 Google Cloud backlog、云利润改善、TPU/Ironwood 和能效证据支持。",
+              "反证条件": "云 backlog 不能转化、搜索 AI 压利润率、TPU 不能降低资本强度、SBC 快于变现。"
+            },
+            {
+              "排名": "7",
+              "公司": "Microsoft",
+              "输的类型": "本语料中最不容易输",
+              "语料依据": "有最直接的 AI 变现证据：Cloud 收入、AI ARR、企业分发、Copilot 定价迁移、backlog 和 Azure 需求。",
+              "反证条件": "Azure/Copilot 放缓，而 capex、租赁、折旧和 SBC 继续上升。"
+            }
+          ],
+          "kind": "other"
+        },
+        {
+          "headers": [
+            "证据",
+            "来源",
+            "贡献",
+            "Mag7 含义"
+          ],
+          "rows": [
+            {
+              "证据": "1",
+              "来源": "META/MSFT/GOOGL 2H26 Capex 与电力领先性",
+              "贡献": "2026 capex 仍维持高强度或上修风险；电力互联具有 12-36 个月领先性；FCF/ROIC 压力仍可能压制云厂倍数。",
+              "Mag7 含义": "MSFT/GOOGL/META 不是硬需求下修，但股票负担转向现金流验证。"
+            },
+            {
+              "证据": "2",
+              "来源": "Big Tech 2Q26 SBC 假设调升",
+              "贡献": "AI/Infra 高端人才竞争会抬升 SBC 占收入比，影响主要进入 2H26 和 FY27。",
+              "Mag7 含义": "Meta、Alphabet 的稀释和费用压力更可见；Microsoft 已部分纳入指引。"
+            },
+            {
+              "证据": "3",
+              "来源": "高久期 TMT 估值脆弱性",
+              "贡献": "AI 盈利真实，但高长期实际利率与资本强度抬升会制造估值脆弱性。",
+              "Mag7 含义": "NVDA、MSFT、GOOGL、AMZN、META 都可增长但输倍数。"
+            },
+            {
+              "证据": "4",
+              "来源": "2027-2028 AI 货币化与 1 万亿美元 Capex 压力测试",
+              "贡献": "1 万亿美元 capex 需要更高收入密度，并暴露折旧墙。",
+              "Mag7 含义": "云厂必须证明每 MW 收入和利用率，不只是 capex 扩张。"
+            },
+            {
+              "证据": "5",
+              "来源": "软件变现能否修复云厂 ROIC 缺口",
+              "贡献": "软件变现改善，但不足以在 2026 年扭转 FCF，除非资本密度下降。",
+              "Mag7 含义": "Microsoft/Google 更好，Meta 更间接，Amazon 仍需 AWS 与 capex 证明。"
+            },
+            {
+              "证据": "6",
+              "来源": "云厂 AI 资本开支收入兑现",
+              "贡献": "AI 需求需要用收入、ROIC 和 FCF 共同验证。",
+              "Mag7 含义": "下一代奖励 capex 纪律，而不只是容量所有权。"
+            },
+            {
+              "证据": "7",
+              "来源": "AI 电力成本下的 Mag7 估值离散",
+              "贡献": "电力成本会扩大 Mag7 利润率和估值离散。",
+              "Mag7 含义": "有电力效率和变现证据者保溢价，缺乏者失去领导力。"
+            },
+            {
+              "证据": "8",
+              "来源": "AI 企业电力成本触碰估值天花板",
+              "贡献": "电力可得性、PUE、互联排队、变压器和本地电网吸纳进入 DCF。",
+              "Mag7 含义": "云端 AI 赢家受物理基础设施约束，而非只看模型。"
+            },
+            {
+              "证据": "9",
+              "来源": "CSP ASIC 与 NVIDIA 利润率拐点",
+              "贡献": "自研 ASIC 规模化会降低 GPU 链条边际弹性。",
+              "Mag7 含义": "NVIDIA 的风险是稀缺性溢价压缩，不是需求立刻崩塌。"
+            },
+            {
+              "证据": "10",
+              "来源": "GPU 迭代与折旧悬崖",
+              "贡献": "硬件代际缩短经济寿命，扩大会计折旧与真实 ROIC 差距。",
+              "Mag7 含义": "云厂面对折旧墙；Amazon 对服务器寿命假设尤其敏感。"
+            },
+            {
+              "证据": "11",
+              "来源": "能效是第一座“电厂”",
+              "贡献": "Blackwell、Ironwood TPU、液冷和 PUE 改善让竞争转向能效。",
+              "Mag7 含义": "Alphabet/Microsoft 有能效证据支持；NVIDIA 需要证明效率不会损害定价。"
+            },
+            {
+              "证据": "12",
+              "来源": "云厂应对 AI 电力缺口",
+              "贡献": "选址、firm power、核能和算力架构成为战略变量。",
+              "Mag7 含义": "胜出者是解决电力和架构者，而非只做模型营销者。"
+            },
+            {
+              "证据": "13",
+              "来源": "AI 商业化、推理经济性与供应链订单",
+              "贡献": "capex 只有在推理收入密度、利用率和单位成本同步改善时才变成股东价值。",
+              "Mag7 含义": "这是区分 Microsoft/Alphabet 与弱 AI 叙事的核心桥梁。"
+            },
+            {
+              "证据": "14",
+              "来源": "NVDA Q1 FY27 作为 capex 表",
+              "贡献": "NVDA 数据中心收入确认 AI capex，但现金也流向 CoWoS/HBM、网络和 ODM。",
+              "Mag7 含义": "NVDA 股票故事可能与更广的 AI 硬件利润池分叉。"
+            }
+          ],
+          "kind": "other"
+        },
+        {
+          "headers": [
+            "层级",
+            "主要变量",
+            "财务传导",
+            "投资含义"
+          ],
+          "rows": [
+            {
+              "层级": "需求",
+              "主要变量": "训练、推理、云工作负载、AI 广告、企业 Copilot",
+              "财务传导": "收入增长、利用率、backlog 转化",
+              "投资含义": "需求真实，但必须变成收入密度和 FCF"
+            },
+            {
+              "层级": "资本基数",
+              "主要变量": "数据中心、GPU、网络、土地、电力、租赁",
+              "财务传导": "折旧上升、短期 FCF 下降、ROIC 压力",
+              "投资含义": "市场只奖励可见利用率的 capex"
+            },
+            {
+              "层级": "电力与能效",
+              "主要变量": "PUE、液冷、互联、firm power、自研芯片",
+              "财务传导": "运营成本、容量释放、项目节奏",
+              "投资含义": "能效成为战略护城河和估值过滤器"
+            },
+            {
+              "层级": "人才与 SBC",
+              "主要变量": "AI 研究员、基础设施工程师、高价竞才",
+              "财务传导": "费用上升、稀释、EPS 压力滞后体现",
+              "投资含义": "Meta、Alphabet 更明显；Microsoft 部分已预告"
+            },
+            {
+              "层级": "供应商与架构",
+              "主要变量": "NVIDIA GPU、CoWoS/HBM、网络、ASIC、TPU",
+              "财务传导": "硬件栈利润再分配",
+              "投资含义": "NVIDIA 可赢盈利但输稀缺倍数"
+            },
+            {
+              "层级": "折现率",
+              "主要变量": "长期实际利率、久期、风险溢价",
+              "财务传导": "倍数压缩、更高回报要求",
+              "投资含义": "Apple/Tesla 叙事久期最暴露"
+            }
+          ],
+          "kind": "transmission_framework"
+        },
+        {
+          "headers": [
+            "情景",
+            "触发条件",
+            "宏观/资产含义",
+            "投资动作"
+          ],
+          "rows": [
+            {
+              "情景": "基准：AI capex 真实，FCF 桥梁不均",
+              "触发条件": "capex 保持高位；Microsoft/Alphabet 显示收入桥梁；Meta/Amazon 面对回收期压力；Apple/Tesla 缺直接证据",
+              "宏观/资产含义": "Mag7 内部分化上升；市场为证明付费，而不是为类别付费",
+              "投资动作": "超配已证明 capex-to-revenue 的公司，低配未验证久期"
+            },
+            {
+              "情景": "熊市：capex 跑赢商业化",
+              "触发条件": "收入密度和利用率滞后，折旧和 SBC 上升，电力约束推迟上线",
+              "宏观/资产含义": "云厂倍数压缩，高久期叙事跌幅最大",
+              "投资动作": "降低 Apple/Tesla 叙事久期和 Meta 回收期风险，要求 FCF 证据"
+            },
+            {
+              "情景": "硬件再分配",
+              "触发条件": "NVDA 确认需求，但现金流向 CoWoS/HBM、网络、ODM、电力设备、ASIC",
+              "宏观/资产含义": "NVIDIA 仍赚钱，但失去纯稀缺溢价",
+              "投资动作": "用更广的供应链和能效篮子表达 AI 硬件"
+            },
+            {
+              "情景": "能效突破",
+              "触发条件": "自研芯片、PUE、液冷和推理成本下降释放容量",
+              "宏观/资产含义": "Alphabet/Microsoft 相对位置改善；NVIDIA 定价受考验",
+              "投资动作": "偏好同时拥有能效和分发的公司"
+            },
+            {
+              "情景": "Meta 上行情景",
+              "触发条件": "AI 广告工具让 ROAS、参与度、消息收入和定价快于 capex/SBC",
+              "宏观/资产含义": "Meta 退出输家桶，重新获得轻资产平台溢价",
+              "投资动作": "只有广告效率和 FCF 同步改善后才重估 Meta"
+            }
+          ],
+          "kind": "scenario_analysis"
+        },
+        {
+          "headers": [
+            "组合",
+            "投资暴露",
+            "配置逻辑",
+            "关键检查项"
+          ],
+          "rows": [
+            {
+              "组合": "防守型赢家",
+              "投资暴露": "Microsoft、Alphabet",
+              "配置逻辑": "AI 变现、云 backlog 和能效杠杆证据最直接",
+              "关键检查项": "Azure、Copilot、Google Cloud backlog、TPU/Ironwood 经济性"
+            },
+            {
+              "组合": "回收期测试",
+              "投资暴露": "Meta、Amazon",
+              "配置逻辑": "有真实资产和变现，但现金转化必须追上 capex、SBC 与折旧",
+              "关键检查项": "广告 ROAS、Reels/消息变现、AWS、服务器寿命、FCF"
+            },
+            {
+              "组合": "倍数风险",
+              "投资暴露": "NVIDIA",
+              "配置逻辑": "基本面强，但受自研芯片、云厂议价和硬件利润池扩散影响",
+              "关键检查项": "毛利率、云厂 capex 指引、ASIC 渗透、CoWoS/HBM/网络分配"
+            },
+            {
+              "组合": "战略相对输家",
+              "投资暴露": "Apple、Tesla",
+              "配置逻辑": "在语料验证的 AI 基础设施和 capex-to-FCF 链条中直接证据稀少",
+              "关键检查项": "端侧 AI ARPU、换机周期、自动驾驶/机器人单位经济性、重复现金流"
+            }
+          ],
+          "kind": "portfolio_buckets"
+        },
+        {
+          "headers": [
+            "维度",
+            "指标",
+            "如何解读",
+            "证据来源"
+          ],
+          "rows": [
+            {
+              "维度": "Capex 承诺",
+              "指标": "MSFT/GOOGL/META/AMZN 季度 capex 与租赁披露",
+              "如何解读": "只有 backlog 和利用率改善时，高 capex 才是利好",
+              "证据来源": "证据 1、4、5、6"
+            },
+            {
+              "维度": "商业化密度",
+              "指标": "AI ARR、Copilot、Google Cloud 经营利润、广告 ROAS、AWS AI 收入",
+              "如何解读": "把叙事转成可衡量收入密度",
+              "证据来源": "证据 5、13"
+            },
+            {
+              "维度": "FCF 转化",
+              "指标": "FCF 利润率、折旧、服务器经济寿命、融资租赁",
+              "如何解读": "检验 capex 是否变成股东现金",
+              "证据来源": "证据 4、10"
+            },
+            {
+              "维度": "人才通胀",
+              "指标": "SBC 占收入比、AI/Infra 招聘",
+              "如何解读": "捕捉 EPS 与稀释滞后压力",
+              "证据来源": "证据 2"
+            },
+            {
+              "维度": "电力约束",
+              "指标": "PUE、互联、firm power、数据中心选址",
+              "如何解读": "决定上线容量和成本曲线",
+              "证据来源": "证据 7、8、11、12"
+            },
+            {
+              "维度": "架构迁移",
+              "指标": "TPU、Trainium/Inferentia、MTIA、Maia、CSP ASIC",
+              "如何解读": "把利润从通用 GPU 稀缺转移出去",
+              "证据来源": "证据 9、11"
+            },
+            {
+              "维度": "久期风险",
+              "指标": "长期实际利率与股票倍数",
+              "如何解读": "惩罚未验证期权价值",
+              "证据来源": "证据 3"
+            }
+          ],
+          "kind": "monitoring_dashboard"
+        }
+      ],
+      "en": [
+        {
+          "headers": [
+            "Rank",
+            "Company",
+            "Loss Type",
+            "Corpus-Based Rationale",
+            "What Would Change the View"
+          ],
+          "rows": [
+            {
+              "Rank": "1",
+              "Company": "Apple",
+              "Loss Type": "Strategic relative loser",
+              "Corpus-Based Rationale": "The validated next-era chain is cloud AI, power, AI infrastructure, inference economics, custom silicon, and capex-to-FCF conversion. Apple has little direct evidence in the Institute corpus against those variables, so it risks losing leadership premium rather than facing immediate earnings collapse.",
+              "What Would Change the View": "Clear evidence that device-side AI creates measurable services ARPU, replacement-cycle acceleration, or on-device inference economics that rival cloud monetization."
+            },
+            {
+              "Rank": "2",
+              "Company": "Tesla",
+              "Loss Type": "Narrative-duration loser",
+              "Corpus-Based Rationale": "Tesla is also outside the corpus-validated AI infrastructure and monetization chain. In a higher real-rate environment, long-duration optionality needs proof of cash conversion, not only autonomy or robotics narrative value.",
+              "What Would Change the View": "Verified unit economics and deployment proof for autonomy/robotics that show recurring cash flow, not only technical progress."
+            },
+            {
+              "Rank": "3",
+              "Company": "Meta",
+              "Loss Type": "Direct P&L/FCF loser candidate",
+              "Corpus-Based Rationale": "Direct evidence highlights capex intensity, SBC pressure, and the need for advertising AI to keep raising engagement, pricing, and conversion efficiency. Meta is the clearest name where AI spend can become a payback-period test.",
+              "What Would Change the View": "Ad pricing, Reels monetization, Advantage+ efficiency, and messaging monetization keep rising faster than capex, depreciation, and SBC."
+            },
+            {
+              "Rank": "4",
+              "Company": "NVIDIA",
+              "Loss Type": "Valuation-multiple loser candidate",
+              "Corpus-Based Rationale": "Q1 FY27 data-center revenue confirms AI capex, but the corpus also points to CSP ASIC expansion, hyperscaler bargaining, power bottlenecks, and cash moving into CoWoS/HBM, networking, and ODMs.",
+              "What Would Change the View": "Data-center growth keeps accelerating while margins hold, CSP ASIC penetration is delayed, and hyperscaler capex remains supply constrained."
+            },
+            {
+              "Rank": "5",
+              "Company": "Amazon",
+              "Loss Type": "ROIC and depreciation test",
+              "Corpus-Based Rationale": "AWS and automation are offsets, but cloud capex, server-life assumptions, and FCF conversion remain under pressure. Amazon is not the top loser because it has multiple internal efficiency levers.",
+              "What Would Change the View": "AWS growth, Trainium/Inferentia economics, logistics automation, and capex discipline improve together."
+            },
+            {
+              "Rank": "6",
+              "Company": "Alphabet",
+              "Loss Type": "Heavy-capex survivor",
+              "Corpus-Based Rationale": "Alphabet faces capex and SBC pressure, but has direct corpus support from Google Cloud backlog, TPU/Ironwood efficiency, and cloud operating-profit improvement.",
+              "What Would Change the View": "Cloud backlog fails to convert, TPU efficiency does not lower capital intensity, or search AI monetization weakens margins."
+            },
+            {
+              "Rank": "7",
+              "Company": "Microsoft",
+              "Loss Type": "Least likely loser in this corpus",
+              "Corpus-Based Rationale": "Microsoft has the strongest direct monetization evidence: Cloud revenue growth, AI ARR, backlog, enterprise distribution, and Copilot pricing migration. It still has a capital-intensity problem, but the corpus gives it the best bridge from capex to revenue.",
+              "What Would Change the View": "Azure/Copilot growth slows while capex, leases, depreciation, and SBC keep rising."
+            }
+          ],
+          "kind": "other"
+        },
+        {
+          "headers": [
+            "Evidence",
+            "Source",
+            "What It Contributes",
+            "Mag7 Implication"
+          ],
+          "rows": [
+            {
+              "Evidence": "1",
+              "Source": "TMT 判断：META/MSFT/GOOGL 2H26 Capex 下修依据与电力侧领先性",
+              "What It Contributes": "2026 capex remains high or upward biased; power interconnection has 12-36 month lead value; FCF/ROIC pressure can still compress hyperscaler multiples.",
+              "Mag7 Implication": "MSFT/GOOGL/META are not cutting from hard demand weakness, but their equity burden shifts to cash-flow conversion."
+            },
+            {
+              "Evidence": "2",
+              "Source": "Big Tech 2Q26 SBC 假设调升建议",
+              "What It Contributes": "AI/Infra high-end hiring and competition can lift SBC ratios, especially into 2H26 and FY27.",
+              "Mag7 Implication": "Meta and Alphabet face visible dilution/expense pressure; Microsoft already partly framed it in guidance."
+            },
+            {
+              "Evidence": "3",
+              "Source": "利率中枢上移下高久期 TMT 的估值脆弱性",
+              "What It Contributes": "AI earnings are real, but higher long real rates and heavier capital intensity create valuation fragility.",
+              "Mag7 Implication": "NVIDIA, MSFT, GOOGL, AMZN, and META can all grow yet lose multiple if execution is less than perfect."
+            },
+            {
+              "Evidence": "4",
+              "Source": "2027-2028 AI 货币化与 1 万亿美元 Capex 压力测试",
+              "What It Contributes": "A 1 trillion dollar capex run-rate requires much higher revenue density and exposes a depreciation wall.",
+              "Mag7 Implication": "Cloud owners must show utilization and revenue per MW, not only larger capex."
+            },
+            {
+              "Evidence": "5",
+              "Source": "软件变现能否修复美国云厂AI资本开支ROIC缺口",
+              "What It Contributes": "Software monetization is improving, but not enough to reverse 2026 FCF pressure unless capital intensity falls.",
+              "Mag7 Implication": "Microsoft and Google are better positioned; Meta is more indirect; Amazon still needs AWS and capex proof."
+            },
+            {
+              "Evidence": "6",
+              "Source": "云厂AI资本开支：收入兑现是否真实",
+              "What It Contributes": "AI demand must be tested through revenue conversion, ROIC, and FCF.",
+              "Mag7 Implication": "The next era rewards capex discipline, not only capacity ownership."
+            },
+            {
+              "Evidence": "7",
+              "Source": "AI电力成本台阶下的Mag-7估值离散度",
+              "What It Contributes": "Power costs create Mag7 margin and valuation dispersion.",
+              "Mag7 Implication": "Firms with power efficiency and monetization evidence deserve premium; those without lose leadership premium."
+            },
+            {
+              "Evidence": "8",
+              "Source": "AI企业电力成本：物理红线触碰估值天花板",
+              "What It Contributes": "Power availability, PUE, interconnection, transformers, and grid absorption enter DCF math.",
+              "Mag7 Implication": "Cloud AI winners are constrained by physical infrastructure, not only models."
+            },
+            {
+              "Evidence": "9",
+              "Source": "CSP ASIC 与 NVIDIA 利润率拐点",
+              "What It Contributes": "Custom ASIC scale can reduce the marginal elasticity of the GPU chain.",
+              "Mag7 Implication": "NVIDIA's risk is scarcity-premium compression, not immediate demand collapse."
+            },
+            {
+              "Evidence": "10",
+              "Source": "GPU 迭代周期与折旧悬崖",
+              "What It Contributes": "Hardware generations shorten economic life and can widen the gap between accounting depreciation and real ROIC.",
+              "Mag7 Implication": "Cloud owners face a depreciation-wall test; Amazon is especially sensitive to server-life assumptions."
+            },
+            {
+              "Evidence": "11",
+              "Source": "能效是第一座“电厂”",
+              "What It Contributes": "Blackwell, Ironwood TPU, liquid cooling, and PUE gains shift the battle to energy efficiency.",
+              "Mag7 Implication": "Alphabet and Microsoft gain support from efficiency evidence; NVIDIA must prove efficiency does not destroy pricing."
+            },
+            {
+              "Evidence": "12",
+              "Source": "云厂商对AI电力缺口的选址与算力架构应对",
+              "What It Contributes": "Site selection, power access, nuclear/firm power, and architecture become strategic inputs.",
+              "Mag7 Implication": "The winning Mag7 names are those that solve power and architecture, not only model marketing."
+            },
+            {
+              "Evidence": "13",
+              "Source": "AI 商业化、推理经济性与供应链订单",
+              "What It Contributes": "Capex only becomes equity value when inference revenue density, utilization, and unit cost improve together.",
+              "Mag7 Implication": "This is the core bridge separating Microsoft/Alphabet from weaker AI narratives."
+            },
+            {
+              "Evidence": "14",
+              "Source": "NVDA Q1 FY27 作为 Capex 表",
+              "What It Contributes": "NVDA data-center revenue confirms AI capex, but cash also shifts to CoWoS/HBM, networking, and server ODMs.",
+              "Mag7 Implication": "The pure NVDA equity story can diverge from the broader AI hardware profit pool."
+            }
+          ],
+          "kind": "other"
+        },
+        {
+          "headers": [
+            "Layer",
+            "Main variables",
+            "Financial transmission",
+            "Investment implication"
+          ],
+          "rows": [
+            {
+              "Layer": "Demand",
+              "Main variables": "Training, inference, cloud workloads, AI advertising, enterprise copilots",
+              "Financial transmission": "Revenue growth, utilization, backlog conversion",
+              "Investment implication": "Demand is real, but it must become revenue density and FCF"
+            },
+            {
+              "Layer": "Capital Base",
+              "Main variables": "Data centers, GPUs, networking, land, power, leases",
+              "Financial transmission": "Higher depreciation, lower near-term FCF, ROIC pressure",
+              "Investment implication": "The market rewards capex only when utilization is visible"
+            },
+            {
+              "Layer": "Power and Efficiency",
+              "Main variables": "PUE, liquid cooling, grid access, firm power, custom silicon",
+              "Financial transmission": "Operating cost, capacity release, project timing",
+              "Investment implication": "Efficiency becomes a strategic moat and a valuation filter"
+            },
+            {
+              "Layer": "Talent and SBC",
+              "Main variables": "AI researchers, infrastructure engineers, competitive offers",
+              "Financial transmission": "Higher operating expense, dilution, delayed EPS pressure",
+              "Investment implication": "Meta and Alphabet are most visible; Microsoft is partly pre-guided"
+            },
+            {
+              "Layer": "Supplier and Architecture",
+              "Main variables": "NVIDIA GPUs, CoWoS/HBM, networking, ASICs, TPUs",
+              "Financial transmission": "Margin allocation across the hardware stack",
+              "Investment implication": "NVIDIA can win earnings but lose scarcity multiple"
+            },
+            {
+              "Layer": "Discount Rate",
+              "Main variables": "Long real yields, duration, risk premium",
+              "Financial transmission": "Multiple compression and higher hurdle rate",
+              "Investment implication": "Apple/Tesla narrative duration is most exposed"
+            }
+          ],
+          "kind": "transmission_framework"
+        },
+        {
+          "headers": [
+            "Scenario",
+            "Trigger",
+            "Macro/Asset Implication",
+            "Investor Action"
+          ],
+          "rows": [
+            {
+              "Scenario": "Base Case: AI capex real, FCF bridge uneven",
+              "Trigger": "Capex remains high; Microsoft/Alphabet show revenue bridge; Meta and Amazon face payback scrutiny; Apple/Tesla lack direct evidence",
+              "Macro/Asset Implication": "Dispersion within Mag7 rises; market pays for proof, not category membership",
+              "Investor Action": "Overweight proven capex-to-revenue names; underweight unvalidated duration"
+            },
+            {
+              "Scenario": "Bear Case: Capex outruns monetization",
+              "Trigger": "Revenue density and utilization lag; depreciation and SBC rise; power constraints delay live capacity",
+              "Macro/Asset Implication": "Hyperscaler multiples compress; high-duration narratives lose most",
+              "Investor Action": "Cut exposure to Apple/Tesla narrative duration and Meta payback risk; demand FCF evidence"
+            },
+            {
+              "Scenario": "Hardware Reallocation Case",
+              "Trigger": "NVDA confirms demand but cash flows to CoWoS/HBM, networking, ODMs, power equipment, ASIC suppliers",
+              "Macro/Asset Implication": "NVIDIA remains profitable but loses pure scarcity premium",
+              "Investor Action": "Express AI hardware through broader supply-chain and efficiency baskets"
+            },
+            {
+              "Scenario": "Efficiency Breakthrough Case",
+              "Trigger": "Custom silicon, PUE improvement, liquid cooling, and inference cost decline release capacity",
+              "Macro/Asset Implication": "Alphabet/Microsoft improve relative position; NVIDIA pricing power is tested",
+              "Investor Action": "Favor companies that own efficiency and distribution together"
+            },
+            {
+              "Scenario": "Meta Upside Case",
+              "Trigger": "AI ad tools raise ROAS, engagement, messaging revenue, and pricing faster than capex/SBC",
+              "Macro/Asset Implication": "Meta exits loser bucket and regains asset-light platform premium",
+              "Investor Action": "Re-rate Meta only after ad efficiency and FCF conversion move together"
+            }
+          ],
+          "kind": "scenario_analysis"
+        },
+        {
+          "headers": [
+            "Bucket",
+            "Exposure",
+            "Rationale",
+            "Key Checks"
+          ],
+          "rows": [
+            {
+              "Bucket": "Defended Leaders",
+              "Exposure": "Microsoft, Alphabet",
+              "Rationale": "Best direct evidence of AI monetization, cloud backlog, and efficiency levers",
+              "Key Checks": "Azure growth, Copilot revenue, Google Cloud backlog conversion, TPU/Ironwood economics"
+            },
+            {
+              "Bucket": "Payback Tests",
+              "Exposure": "Meta, Amazon",
+              "Rationale": "Real assets and monetization, but cash conversion must catch up with capex, SBC, and depreciation",
+              "Key Checks": "Ad ROAS, Reels/messaging monetization, AWS growth, server-life assumptions, FCF"
+            },
+            {
+              "Bucket": "Multiple Risk",
+              "Exposure": "NVIDIA",
+              "Rationale": "Strong fundamentals but vulnerable to custom silicon, hyperscaler bargaining, and broader hardware profit-pool rotation",
+              "Key Checks": "Gross margin, cloud capex guidance, ASIC penetration, CoWoS/HBM/networking allocation"
+            },
+            {
+              "Bucket": "Strategic Relative Losers",
+              "Exposure": "Apple, Tesla",
+              "Rationale": "Sparse direct evidence in the corpus-validated AI infrastructure and capex-to-FCF chain",
+              "Key Checks": "Device AI ARPU, replacement cycles, autonomy/robotics unit economics, recurring cash flow"
+            }
+          ],
+          "kind": "portfolio_buckets"
+        },
+        {
+          "headers": [
+            "Dimension",
+            "Indicator",
+            "Interpretation",
+            "Evidence Source"
+          ],
+          "rows": [
+            {
+              "Dimension": "Capex Commitment",
+              "Indicator": "MSFT/GOOGL/META/AMZN quarterly capex and lease disclosures",
+              "Interpretation": "High capex is positive only if backlog and utilization improve",
+              "Evidence Source": "Evidence 1, 4, 5, 6"
+            },
+            {
+              "Dimension": "Monetization Density",
+              "Indicator": "AI ARR, Copilot uptake, Google Cloud operating profit, ad ROAS, AWS AI revenue",
+              "Interpretation": "Converts narrative into measurable revenue density",
+              "Evidence Source": "Evidence 5, 13"
+            },
+            {
+              "Dimension": "FCF Conversion",
+              "Indicator": "FCF margin, depreciation, economic server life, finance leases",
+              "Interpretation": "Tests whether capex is becoming shareholder cash",
+              "Evidence Source": "Evidence 4, 10"
+            },
+            {
+              "Dimension": "Talent Inflation",
+              "Indicator": "SBC as percentage of revenue and AI/Infra hiring",
+              "Interpretation": "Captures delayed EPS and dilution pressure",
+              "Evidence Source": "Evidence 2"
+            },
+            {
+              "Dimension": "Power Constraint",
+              "Indicator": "PUE, grid interconnection, firm power, data-center siting",
+              "Interpretation": "Determines live capacity and cost curve",
+              "Evidence Source": "Evidence 7, 8, 11, 12"
+            },
+            {
+              "Dimension": "Architecture Shift",
+              "Indicator": "TPU, Trainium/Inferentia, MTIA, Maia, CSP ASIC adoption",
+              "Interpretation": "Reallocates margin away from general-purpose GPU scarcity",
+              "Evidence Source": "Evidence 9, 11"
+            },
+            {
+              "Dimension": "Duration Risk",
+              "Indicator": "Long real rates and equity multiples",
+              "Interpretation": "Penalizes unproven optionality",
+              "Evidence Source": "Evidence 3"
+            }
+          ],
+          "kind": "monitoring_dashboard"
+        }
+      ]
+    }
+  },
+  "assets": [
+    {
+      "id": "chain-evidence",
+      "label_zh": "产业链证据密度",
+      "label_en": "Industry-chain evidence density",
+      "path": "outputs/deep-research/reports/mag7-next-era-losers-6f2a8c9d/assets/chain-evidence.png",
+      "href": "/deep-research/mag7-next-era-losers-6f2a8c9d/assets/chain-evidence.png"
+    },
+    {
+      "id": "transmission-map",
+      "label_zh": "传导机制图",
+      "label_en": "Transmission map",
+      "path": "outputs/deep-research/reports/mag7-next-era-losers-6f2a8c9d/assets/transmission-map.png",
+      "href": "/deep-research/mag7-next-era-losers-6f2a8c9d/assets/transmission-map.png"
+    },
+    {
+      "id": "risk-matrix",
+      "label_zh": "风险矩阵",
+      "label_en": "Risk matrix",
+      "path": "outputs/deep-research/reports/mag7-next-era-losers-6f2a8c9d/assets/risk-matrix.png",
+      "href": "/deep-research/mag7-next-era-losers-6f2a8c9d/assets/risk-matrix.png"
+    }
+  ],
+  "documents": {
+    "markdown_en": "outputs/deep-research/reports/mag7-next-era-losers-6f2a8c9d/report_en.md",
+    "markdown_zh": "outputs/deep-research/reports/mag7-next-era-losers-6f2a8c9d/report_zh.md",
+    "docx_en": "outputs/deep-research/reports/mag7-next-era-losers-6f2a8c9d/report_en.docx",
+    "docx_zh": "outputs/deep-research/reports/mag7-next-era-losers-6f2a8c9d/report_zh.docx",
+    "pdf_en": "",
+    "pdf_zh": "",
+    "json": "outputs/deep-research/reports/mag7-next-era-losers-6f2a8c9d/report.json"
+  },
+  "web": {
+    "site_href": "deep-research/mag7-next-era-losers-6f2a8c9d/index.html",
+    "frontend_href": "/deep-research/mag7-next-era-losers-6f2a8c9d",
+    "downloads": [
+      {
+        "label": "Markdown EN",
+        "file": "report_en.md",
+        "path": "outputs/deep-research/reports/mag7-next-era-losers-6f2a8c9d/report_en.md",
+        "href": "/deep-research/downloads/mag7-next-era-losers-6f2a8c9d/report_en.md"
+      },
+      {
+        "label": "Markdown ZH",
+        "file": "report_zh.md",
+        "path": "outputs/deep-research/reports/mag7-next-era-losers-6f2a8c9d/report_zh.md",
+        "href": "/deep-research/downloads/mag7-next-era-losers-6f2a8c9d/report_zh.md"
+      },
+      {
+        "label": "DOCX EN",
+        "file": "report_en.docx",
+        "path": "outputs/deep-research/reports/mag7-next-era-losers-6f2a8c9d/report_en.docx",
+        "href": "/deep-research/downloads/mag7-next-era-losers-6f2a8c9d/report_en.docx"
+      },
+      {
+        "label": "DOCX ZH",
+        "file": "report_zh.docx",
+        "path": "outputs/deep-research/reports/mag7-next-era-losers-6f2a8c9d/report_zh.docx",
+        "href": "/deep-research/downloads/mag7-next-era-losers-6f2a8c9d/report_zh.docx"
+      },
+      {
+        "label": "Structured JSON",
+        "file": "report.json",
+        "path": "outputs/deep-research/reports/mag7-next-era-losers-6f2a8c9d/report.json",
+        "href": "/deep-research/downloads/mag7-next-era-losers-6f2a8c9d/report.json"
+      }
+    ]
+  }
+}
