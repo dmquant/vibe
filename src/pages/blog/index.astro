@@ -12,10 +12,10 @@ const posts = (await getCollection('blog')).sort(
 
 const categories = ['brief', 'research', 'institute', 'vibelog'] as const;
 const categoryLabels: Record<string, { en: string; zh: string; icon: string }> = {
-	brief:     { en: 'Daily Brief', zh: '每日简报', icon: '📋' },
-	research:  { en: 'Deep Research', zh: '深度研究', icon: '📊' },
-	institute: { en: 'Institute Series', zh: '智研所系列', icon: '🏛️' },
-	vibelog:   { en: 'Vibelog & Guides', zh: '指南与文档', icon: '📝' },
+	brief:     { en: 'Daily Brief', zh: '每日简报', icon: '01' },
+	research:  { en: 'Deep Research', zh: '深度研究', icon: '02' },
+	institute: { en: 'Institute Series', zh: '智研所系列', icon: '03' },
+	vibelog:   { en: 'Vibelog & Guides', zh: '指南与文档', icon: '04' },
 };
 ---
 
@@ -52,7 +52,7 @@ const categoryLabels: Record<string, { en: string; zh: string; icon: string }> =
 								<a href={`/blog/${post.id}/`} class="post-row">
 									<div class="post-info">
 										<span class="lang-badge en">EN</span>
-										<span class="post-title">{post.data.private ? '🔒 Classified Intelligence' : post.data.title}</span>
+										<span class="post-title">{post.data.private ? 'Classified Intelligence' : post.data.title}</span>
 									</div>
 									<span class="post-date"><FormattedDate date={post.data.pubDate} /></span>
 								</a>
@@ -64,7 +64,7 @@ const categoryLabels: Record<string, { en: string; zh: string; icon: string }> =
 								<a href={`/blog/${post.id}/`} class="post-row">
 									<div class="post-info">
 										<span class="lang-badge zh">中文</span>
-										<span class="post-title">{post.data.private ? '🔒 机密情报审查' : post.data.title}</span>
+										<span class="post-title">{post.data.private ? '机密情报审查' : post.data.title}</span>
 									</div>
 									<span class="post-date"><FormattedDate date={post.data.pubDate} /></span>
 								</a>
@@ -116,7 +116,12 @@ const categoryLabels: Record<string, { en: string; zh: string; icon: string }> =
 		padding-bottom: 0.5rem;
 		border-bottom: 1px solid var(--border);
 	}
-	.cat-icon { font-size: 1.3rem; }
+	.cat-icon {
+		color: var(--accent-blue);
+		font-family: var(--font-mono);
+		font-size: 0.82rem;
+		font-weight: 800;
+	}
 	.cat-count {
 		font-size: 0.7rem;
 		padding: 0.15rem 0.5rem;
@@ -158,8 +163,8 @@ const categoryLabels: Record<string, { en: string; zh: string; icon: string }> =
 		margin-left: 1rem;
 	}
 	.lang-badge { padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 600; font-size: 0.6rem; flex-shrink: 0; }
-	.lang-badge.en { background: rgba(88,166,255,0.15); color: var(--accent-cyan); }
-	.lang-badge.zh { background: rgba(248,81,73,0.15); color: var(--accent-red); }
+	.lang-badge.en { background: color-mix(in srgb, var(--accent-blue) 14%, transparent); color: var(--accent-blue); }
+	.lang-badge.zh { background: color-mix(in srgb, var(--accent-red) 14%, transparent); color: var(--accent-red); }
 
 	@media (max-width: 720px) {
 		.post-row { flex-direction: column; align-items: flex-start; gap: 0.3rem; }

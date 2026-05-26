@@ -19,6 +19,10 @@ import HeaderLink from './HeaderLink.astro';
 			<HeaderLink href="/about">About</HeaderLink>
 		</div>
 		<div class="nav-right">
+			<button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme" aria-pressed="false">
+				<span class="theme-dot" aria-hidden="true"></span>
+				<span class="theme-label">Dark</span>
+			</button>
 			<button id="lang-toggle" class="lang-toggle" aria-label="Toggle language">
 				<span class="lang-option" data-lang="en">EN</span>
 				<span class="lang-divider">/</span>
@@ -49,6 +53,24 @@ import HeaderLink from './HeaderLink.astro';
 		});
 	}
 
+	function updateThemeToggle(theme: string) {
+		const button = document.getElementById('theme-toggle');
+		const label = button?.querySelector('.theme-label');
+		button?.setAttribute('aria-pressed', theme === 'light' ? 'true' : 'false');
+		if (label) label.textContent = theme === 'light' ? 'Light' : 'Dark';
+	}
+
+	function initTheme() {
+		const params = new URLSearchParams(window.location.search);
+		const explicit = params.get('theme');
+		const current =
+			explicit === 'light' || explicit === 'dark'
+				? explicit
+				: document.documentElement.getAttribute('data-theme') || localStorage.getItem('researchos-theme') || 'dark';
+		document.documentElement.setAttribute('data-theme', current);
+		updateThemeToggle(current);
+	}
+
 	document.getElementById('lang-toggle')?.addEventListener('click', () => {
 		const current = document.documentElement.getAttribute('data-lang') || 'en';
 		const next = current === 'en' ? 'zh' : 'en';
@@ -59,6 +81,16 @@ import HeaderLink from './HeaderLink.astro';
 		window.dispatchEvent(new CustomEvent('lang-change', { detail: { lang: next } }));
 	});
 
+	document.getElementById('theme-toggle')?.addEventListener('click', () => {
+		const current = document.documentElement.getAttribute('data-theme') || 'dark';
+		const next = current === 'dark' ? 'light' : 'dark';
+		localStorage.setItem('researchos-theme', next);
+		document.documentElement.setAttribute('data-theme', next);
+		updateThemeToggle(next);
+		window.dispatchEvent(new CustomEvent('theme-change', { detail: { theme: next } }));
+	});
+
+	initTheme();
 	initLang();
 </script>
 
@@ -68,7 +100,7 @@ import HeaderLink from './HeaderLink.astro';
 		top: 0;
 		z-index: 100;
 		padding: 0 1.5rem;
-		background: rgba(13, 17, 23, 0.85);
+		background: var(--nav-bg, rgba(0, 0, 0, 0.88));
 		backdrop-filter: blur(12px);
 		-webkit-backdrop-filter: blur(12px);
 		border-bottom: 1px solid var(--border, #30363d);
@@ -91,7 +123,7 @@ import HeaderLink from './HeaderLink.astro';
 		font-weight: 700;
 		font-size: 1.1rem;
 	}
-	.logo-icon { color: var(--accent-cyan, #58a6ff); font-size: 1.2rem; }
+	.logo-icon { color: var(--accent-blue, #2f80ed); font-size: 1.2rem; }
 	.internal-links { display: flex; gap: 0.25rem; }
 	nav a {
 		padding: 0.5em 0.75em;
@@ -103,10 +135,11 @@ import HeaderLink from './HeaderLink.astro';
 	}
 	nav a:hover, nav a.active {
 		color: var(--text-primary, #e6edf3);
-		background: rgba(88, 166, 255, 0.08);
+		background: var(--bg-elevated, #151515);
 	}
 	.nav-right { display: flex; align-items: center; gap: 0.75rem; }
-	.lang-toggle {
+	.lang-toggle,
+	.theme-toggle {
 		display: flex;
 		align-items: center;
 		gap: 0.3rem;
@@ -118,14 +151,30 @@ import HeaderLink from './HeaderLink.astro';
 		font-size: 0.78rem;
 		font-family: var(--font-ui, 'Inter', sans-serif);
 		transition: border-color 0.2s;
+		color: var(--text-primary, #e6edf3);
 	}
-	.lang-toggle:hover { border-color: var(--accent-cyan, #58a6ff); }
+	.lang-toggle:hover,
+	.theme-toggle:hover { border-color: var(--border-strong, #707070); }
+	.theme-dot {
+		width: 10px;
+		height: 10px;
+		border: 1px solid var(--text-primary, #e6edf3);
+		border-radius: 50%;
+		background: var(--text-primary, #e6edf3);
+	}
+	:root[data-theme="light"] .theme-dot {
+		background: transparent;
+	}
+	.theme-label {
+		color: var(--text-secondary, #8b949e);
+		font-weight: 700;
+	}
 	.lang-option {
 		color: var(--text-muted, #484f58);
 		transition: color 0.2s;
 		font-weight: 500;
 	}
-	.lang-option.active { color: var(--accent-cyan, #58a6ff); font-weight: 600; }
+	.lang-option.active { color: var(--accent-blue, #2f80ed); font-weight: 600; }
 	.lang-divider { color: var(--text-muted, #484f58); }
 	.github-link {
 		display: flex;

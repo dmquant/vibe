@@ -202,6 +202,21 @@ export function renderAnalystTracker(context) {
   });
 }
 
+const toneColorMap = new Map([
+  ["#b43d49", "var(--accent-red)"],
+  ["#237a5b", "var(--accent-green)"],
+  ["#285b9d", "var(--accent-blue)"],
+  ["#a8731b", "var(--accent-yellow)"],
+]);
+
+function safeToneColor(value, fallback = "var(--accent-blue)") {
+  const raw = String(value || "").trim();
+  const lower = raw.toLowerCase();
+  if (toneColorMap.has(lower)) return toneColorMap.get(lower);
+  if (/^var\(--(accent-)?(blue|green|red|yellow|orange|gold)\)$/.test(lower)) return raw;
+  return fallback;
+}
+
 function renderSignalRadar(points = []) {
   const width = 560;
   const height = 360;
@@ -220,7 +235,7 @@ function renderSignalRadar(points = []) {
   `).join("");
   const circles = points.map((point, idx) => `
     <g class="radar-point" style="animation-delay:${idx * 55}ms">
-      <circle cx="${x(point.x)}" cy="${y(point.y)}" r="${Number(point.size || 22) / 2}" fill="${esc(point.tone || "#285b9d")}" opacity=".78">
+      <circle cx="${x(point.x)}" cy="${y(point.y)}" r="${Number(point.size || 22) / 2}" fill="${esc(safeToneColor(point.tone))}" opacity=".78">
         <title>${esc(point.label)} · 热度 ${fmt(point.heat)} · 风险 ${fmt(point.risk)}</title>
       </circle>
       <text x="${x(point.x)}" y="${y(point.y) - Number(point.size || 22) / 2 - 7}" text-anchor="middle">${esc(point.label)}</text>
@@ -238,7 +253,7 @@ function renderSignalRadar(points = []) {
 }
 
 function renderLane(lane) {
-  return `<article class="signal-lane" style="border-top-color:${esc(lane.tone || "var(--blue)")}">
+  return `<article class="signal-lane" style="border-top-color:${esc(safeToneColor(lane.tone))}">
     <div class="signal-lane-head">
       <div>
         <div class="eyebrow">Signal Lane</div>

@@ -4,6 +4,7 @@ import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { readSiteData } from '../lib/investor-generated.js';
 import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('blog')).sort(
@@ -22,9 +23,9 @@ const classifyBrief = (id: string) => {
 };
 
 const briefTypes = [
-	{ key: 'morning', icon: '📋', en: 'Morning Brief', zh: '晨间简报', desc_en: '7-stage analyst pipeline', desc_zh: '7阶段分析师管线' },
-	{ key: 'editor', icon: '⚖️', en: 'Editor Report', zh: '总编报告', desc_en: '4-phase contradiction sweep', desc_zh: '4阶段矛盾梳理' },
-	{ key: 'mailbox', icon: '📬', en: 'Mailbox Digest', zh: '邮箱摘要', desc_en: 'Cross-desk exchanges', desc_zh: '跨部门交流' },
+	{ key: 'morning', icon: '01', en: 'Morning Brief', zh: '晨间简报', desc_en: '7-stage analyst pipeline', desc_zh: '7阶段分析师管线' },
+	{ key: 'editor', icon: '02', en: 'Editor Report', zh: '总编报告', desc_en: '4-phase contradiction sweep', desc_zh: '4阶段矛盾梳理' },
+	{ key: 'mailbox', icon: '03', en: 'Mailbox Digest', zh: '邮箱摘要', desc_en: 'Cross-desk exchanges', desc_zh: '跨部门交流' },
 ];
 
 // Get latest brief of each type
@@ -58,6 +59,48 @@ briefZh.forEach(p => {
 	if (!briefDatesZh.has(date)) briefDatesZh.set(date, []);
 	briefDatesZh.get(date)!.push(p);
 });
+
+const investorData = readSiteData();
+const dailyBrief = investorData.dailyBrief || {};
+const dailySynthesis = dailyBrief.synthesis || {};
+const dailyStats = dailyBrief.stats || {};
+const dailyBullets = Array.isArray(dailySynthesis.bullets) ? dailySynthesis.bullets.slice(0, 3) : [];
+const dailyWatchItems = Array.isArray(dailySynthesis.watchItems) ? dailySynthesis.watchItems.slice(0, 3) : [];
+const mapCoordinates: Record<string, [number, number]> = {
+	'宏观通胀传导': [39.5, -98.35],
+	'AI 基础设施': [37.34, -121.89],
+	'工业供给瓶颈': [31.23, 121.47],
+	'电力与电网': [52.52, 13.4],
+	'半导体与存储': [24.8, 120.99],
+	'消费与生产率': [35.68, 139.76],
+};
+const fallbackCoordinates: [number, number][] = [[51.5, -0.1], [1.35, 103.82], [19.07, 72.88], [-33.86, 151.21]];
+const signalAccents = ['#2f80ed', '#169b62', '#d64545', '#d7a316', '#e46f2e'];
+const dailyMapItems = (dailyBrief.chainRadar || []).slice(0, 6).map((item, index) => ({
+	label: item.label,
+	heat: item.heat,
+	latest: item.latest,
+	recent: item.recent,
+	risk: item.risk,
+	href: item.evidence?.[0]?.href || '/investor/#dailyReports',
+	evidenceTitle: item.evidence?.[0]?.title || '',
+	coords: mapCoordinates[item.label] || fallbackCoordinates[index % fallbackCoordinates.length],
+	accent: signalAccents[index % signalAccents.length],
+}));
+const serializedHomeSignalMap = JSON.stringify(dailyMapItems).replaceAll('<', '\\u003c');
+const parseMarketLine = (line: string) => {
+	const text = String(line || '').replace(/\s+/g, ' ').trim();
+	const match = text.match(/^(.+?)\s+([~]?[0-9][0-9,]*(?:\.[0-9]+)?(?:\s*(?:USD\/bbl|USD\/oz|%))?)(?:\s+\((.*)\))?$/);
+	const change = match?.[3] || '';
+	return {
+		label: match?.[1] || text,
+		value: match?.[2] || '',
+		change,
+		direction: change.includes('-') ? 'down' : change ? 'up' : 'flat',
+	};
+};
+const marketTickerRows = (dailyBrief.marketTape?.zh || []).slice(0, 8).map(parseMarketLine);
+const marketTapeRows = (dailyBrief.marketTape?.zh || []).slice(0, 10).map(parseMarketLine);
 ---
 
 <!doctype html>
@@ -71,24 +114,13 @@ briefZh.forEach(p => {
 		<div class="market-ticker-banner">
 			<div class="ticker-wrapper">
 				<div class="ticker-track">
-					<div class="ticker-item"><span class="ticker-label">SPX</span> <span class="ticker-val">5,283.40</span> <span class="ticker-change up">+0.82%</span></div>
-					<div class="ticker-item"><span class="ticker-label">IXIC</span> <span class="ticker-val">16,420.50</span> <span class="ticker-change up">+1.15%</span></div>
-					<div class="ticker-item"><span class="ticker-label">DJI</span> <span class="ticker-val">39,127.10</span> <span class="ticker-change down">-0.12%</span></div>
-					<div class="ticker-item"><span class="ticker-label">US10Y</span> <span class="ticker-val">4.364%</span> <span class="ticker-change down">-0.015</span></div>
-					<div class="ticker-item"><span class="ticker-label">GC=F</span> <span class="ticker-val">$2,382.40</span> <span class="ticker-change up">+0.45%</span></div>
-					<div class="ticker-item"><span class="ticker-label">CL=F</span> <span class="ticker-val">$78.25</span> <span class="ticker-change up">+1.08%</span></div>
-					<div class="ticker-item"><span class="ticker-label">BTC/USD</span> <span class="ticker-val">$67,240</span> <span class="ticker-change up">+2.34%</span></div>
-					<div class="ticker-item"><span class="ticker-label">EUR/USD</span> <span class="ticker-val">1.0845</span> <span class="ticker-change down">-0.08%</span></div>
-
-					<!-- Duplicated for seamless loop -->
-					<div class="ticker-item"><span class="ticker-label">SPX</span> <span class="ticker-val">5,283.40</span> <span class="ticker-change up">+0.82%</span></div>
-					<div class="ticker-item"><span class="ticker-label">IXIC</span> <span class="ticker-val">16,420.50</span> <span class="ticker-change up">+1.15%</span></div>
-					<div class="ticker-item"><span class="ticker-label">DJI</span> <span class="ticker-val">39,127.10</span> <span class="ticker-change down">-0.12%</span></div>
-					<div class="ticker-item"><span class="ticker-label">US10Y</span> <span class="ticker-val">4.364%</span> <span class="ticker-change down">-0.015</span></div>
-					<div class="ticker-item"><span class="ticker-label">GC=F</span> <span class="ticker-val">$2,382.40</span> <span class="ticker-change up">+0.45%</span></div>
-					<div class="ticker-item"><span class="ticker-label">CL=F</span> <span class="ticker-val">$78.25</span> <span class="ticker-change up">+1.08%</span></div>
-					<div class="ticker-item"><span class="ticker-label">BTC/USD</span> <span class="ticker-val">$67,240</span> <span class="ticker-change up">+2.34%</span></div>
-					<div class="ticker-item"><span class="ticker-label">EUR/USD</span> <span class="ticker-val">1.0845</span> <span class="ticker-change down">-0.08%</span></div>
+					{[...marketTickerRows, ...marketTickerRows].map((row) => (
+						<a class="ticker-item" href="/investor/#dailyReports">
+							<span class="ticker-label">{row.label}</span>
+							<span class="ticker-val">{row.value}</span>
+							<span class={`ticker-change ${row.direction}`}>{row.change || 'latest'}</span>
+						</a>
+					))}
 				</div>
 			</div>
 		</div>
@@ -116,12 +148,80 @@ briefZh.forEach(p => {
 				</div>
 			</section>
 
+			<section class="home-signal-board" id="daily-dashboard">
+				<div class="signal-board-top">
+					<div>
+						<div class="signal-eyebrow" data-en="Daily Signal Dashboard" data-zh="每日信号看板">Daily Signal Dashboard</div>
+						<h2 data-en="Morning brief, market tape, and research-chain map" data-zh="晨会简报、市场报价与研究链地图">Morning brief, market tape, and research-chain map</h2>
+						<p>{dailySynthesis.headline || '今日研究信号已同步。'}</p>
+					</div>
+					<div class="signal-actions">
+						<a href="/investor/#daily" class="btn btn-sm btn-primary" data-en="Open full dashboard" data-zh="打开完整看板">Open full dashboard</a>
+						<a href={dailyBrief.docxHref || '/investor/#dailyReports'} class="btn btn-sm btn-ghost" data-en="Download brief" data-zh="下载简报">Download brief</a>
+					</div>
+				</div>
+				<div class="signal-stat-strip">
+					<a href="/investor/#dailyReports"><span data-en="Reports" data-zh="报告">Reports</span><strong>{dailyStats.reports || 0}</strong></a>
+					<a href="/investor/#dailyHeatmap"><span data-en="Analysts" data-zh="分析师">Analysts</span><strong>{dailyStats.analysts || 0}</strong></a>
+					<a href="/investor/#dailyChains"><span data-en="Chains" data-zh="链条">Chains</span><strong>{dailyStats.activeChains || 0}</strong></a>
+					<a href="/investor/#dailyRisks"><span data-en="Risks" data-zh="风险">Risks</span><strong>{dailyStats.riskItems || 0}</strong></a>
+				</div>
+				<div class="signal-board-grid">
+					<article class="signal-panel signal-main-panel">
+						<div class="signal-panel-title" data-en="Priority conclusions" data-zh="优先结论">Priority conclusions</div>
+						<a class="signal-lead" href={dailyBullets[0]?.href || '/investor/#dailyReports'}>
+							<strong>{dailySynthesis.headline || '今日研究信号'}</strong>
+							<span>{dailySynthesis.lead || '简报优先呈现可追溯的结论、变化、风险和证据入口。'}</span>
+						</a>
+						<div class="signal-bullet-list">
+							{dailyBullets.map((item, index) => (
+								<a href={item.href || '/investor/#dailyReports'} class="signal-bullet" style={`--accent:${signalAccents[index % signalAccents.length]}`}>
+									<span>{item.label || `Signal ${index + 1}`}</span>
+									<strong>{item.text || ''}</strong>
+								</a>
+							))}
+						</div>
+					</article>
+					<article class="signal-panel signal-map-panel">
+						<div class="signal-panel-title" data-en="Global research-chain map" data-zh="全球研究链地图">Global research-chain map</div>
+						<div id="homeSignalMap" class="home-signal-map" aria-label="Research-chain map"></div>
+						<div class="signal-map-tags">
+							{dailyMapItems.map((item, index) => (
+								<a href={item.href} style={`--accent:${signalAccents[index % signalAccents.length]}`}>{item.label}</a>
+							))}
+						</div>
+					</article>
+					<article class="signal-panel signal-tape-panel">
+						<div class="signal-panel-title" data-en="Latest prices" data-zh="最新报价">Latest prices</div>
+						<div class="signal-market-list">
+							{marketTapeRows.map((row) => (
+								<a href="/investor/#dailyReports" class={`signal-market-row ${row.direction}`}>
+									<span>{row.label}</span>
+									<strong>{row.value}</strong>
+									<em>{row.change || 'latest'}</em>
+								</a>
+							))}
+						</div>
+						{dailyWatchItems.length ? (
+							<div class="signal-watch-list">
+								{dailyWatchItems.map((item) => (
+									<a href={item.href || '/investor/#dailyReports'}>
+										<strong>{item.title}</strong>
+										<span>{item.reason}</span>
+									</a>
+								))}
+							</div>
+						) : null}
+					</article>
+				</div>
+			</section>
+
 			<!-- ═══════════════════════════════════════════════════════════ -->
 			<!-- Latest Daily Briefs — the primary content                 -->
 			<!-- ═══════════════════════════════════════════════════════════ -->
 			<section class="section briefs-section">
 				<div class="section-header">
-					<h2 data-en="📰 Latest Daily Briefs" data-zh="📰 最新每日简报">📰 Latest Daily Briefs</h2>
+					<h2 data-en="Latest Daily Briefs" data-zh="最新每日简报">Latest Daily Briefs</h2>
 					<span class="section-badge live-badge" data-en="Auto-generated" data-zh="自动生成">Auto-generated</span>
 				</div>
 
@@ -135,7 +235,7 @@ briefZh.forEach(p => {
 									<span class="brief-type">{en}</span>
 									<span class="brief-date"><FormattedDate date={post.data.pubDate} /></span>
 								</div>
-								<h3>{post.data.private ? '🔒 Classified Intelligence' : post.data.title}</h3>
+								<h3>{post.data.private ? 'Classified Intelligence' : post.data.title}</h3>
 								<p class="brief-desc">{post.data.private ? 'This report is encrypted to prevent public data leakage. Enter authorized decryption key inside the article to proceed.' : post.data.description}</p>
 								<span class="brief-cta">Read full report →</span>
 							</a>
@@ -161,7 +261,7 @@ briefZh.forEach(p => {
 									<span class="brief-type">{zh}</span>
 									<span class="brief-date"><FormattedDate date={post.data.pubDate} /></span>
 								</div>
-								<h3>{post.data.private ? '🔒 机密情报审查' : post.data.title}</h3>
+								<h3>{post.data.private ? '机密情报审查' : post.data.title}</h3>
 								<p class="brief-desc">{post.data.private ? '此报告已加密以防止公开数据泄露。请输入授权解密密钥以继续。' : post.data.description}</p>
 								<span class="brief-cta">阅读完整报告 →</span>
 							</a>
@@ -181,7 +281,7 @@ briefZh.forEach(p => {
 			<!-- Brief Archive -->
 			<section class="section">
 				<div class="section-header">
-					<h2 data-en="📅 Brief Archive" data-zh="📅 简报存档">📅 Brief Archive</h2>
+					<h2 data-en="Brief Archive" data-zh="简报存档">Brief Archive</h2>
 				</div>
 
 				<div class="archive-list lang-content" data-show-lang="en">
@@ -226,7 +326,7 @@ briefZh.forEach(p => {
 			<!-- Deep Research Papers -->
 			<section class="section">
 				<div class="section-header">
-					<h2 data-en="📊 Deep Research Papers" data-zh="📊 深度研究论文">📊 Deep Research Papers</h2>
+					<h2 data-en="Deep Research Papers" data-zh="深度研究论文">Deep Research Papers</h2>
 					<span class="section-badge" data-en="Latest" data-zh="最新">Latest</span>
 				</div>
 				<div class="article-grid lang-content" data-show-lang="en">
@@ -236,7 +336,7 @@ briefZh.forEach(p => {
 								<span class="lang-badge en">EN</span>
 								<FormattedDate date={post.data.pubDate} />
 							</div>
-							<h3>{post.data.private ? '🔒 Classified Intelligence' : post.data.title}</h3>
+							<h3>{post.data.private ? 'Classified Intelligence' : post.data.title}</h3>
 							<p>{post.data.private ? 'This report is encrypted to prevent public data leakage. Enter authorized decryption key inside the article to proceed.' : post.data.description}</p>
 						</a>
 					))}
@@ -248,7 +348,7 @@ briefZh.forEach(p => {
 								<span class="lang-badge zh">中文</span>
 								<FormattedDate date={post.data.pubDate} />
 							</div>
-							<h3>{post.data.private ? '🔒 机密情报审查' : post.data.title}</h3>
+							<h3>{post.data.private ? '机密情报审查' : post.data.title}</h3>
 							<p>{post.data.private ? '此报告已加密以防止公开数据泄露。请输入授权解密密钥以继续。' : post.data.description}</p>
 						</a>
 					))}
@@ -258,7 +358,7 @@ briefZh.forEach(p => {
 			<!-- Institute Series -->
 			<section class="section">
 				<div class="section-header">
-					<h2 data-en="🏛️ The Institute Series" data-zh="🏛️ 智研所系列">🏛️ The Institute Series</h2>
+					<h2 data-en="The Institute Series" data-zh="智研所系列">The Institute Series</h2>
 					<span class="section-badge" data-en="6-Part Deep Dive" data-zh="6篇深度解析">6-Part Deep Dive</span>
 				</div>
 				<div class="series-list lang-content" data-show-lang="en">
@@ -266,7 +366,7 @@ briefZh.forEach(p => {
 						<a href={`/blog/${post.id}/`} class="series-item">
 							<span class="series-num">{String(i + 1).padStart(2, '0')}</span>
 							<div class="series-content">
-								<h4>{post.data.private ? '🔒 Classified Intelligence' : post.data.title}</h4>
+								<h4>{post.data.private ? 'Classified Intelligence' : post.data.title}</h4>
 								<p>{post.data.private ? 'This report is encrypted to prevent public data leakage. Enter authorized decryption key inside the article to proceed.' : post.data.description}</p>
 							</div>
 							<span class="series-arrow">→</span>
@@ -278,7 +378,7 @@ briefZh.forEach(p => {
 						<a href={`/blog/${post.id}/`} class="series-item">
 							<span class="series-num">{String(i + 1).padStart(2, '0')}</span>
 							<div class="series-content">
-								<h4>{post.data.private ? '🔒 机密情报审查' : post.data.title}</h4>
+								<h4>{post.data.private ? '机密情报审查' : post.data.title}</h4>
 								<p>{post.data.private ? '此报告已加密以防止公开数据泄露。请输入授权解密密钥以继续。' : post.data.description}</p>
 							</div>
 							<span class="series-arrow">→</span>
@@ -290,7 +390,7 @@ briefZh.forEach(p => {
 			<!-- Vibelog & Guides -->
 			<section class="section">
 				<div class="section-header">
-					<h2 data-en="📝 Vibelog & Guides" data-zh="📝 指南与文档">📝 Vibelog & Guides</h2>
+					<h2 data-en="Vibelog & Guides" data-zh="指南与文档">Vibelog & Guides</h2>
 				</div>
 				<div class="article-grid lang-content" data-show-lang="en">
 					{vibelogEn.map((post) => (
@@ -299,7 +399,7 @@ briefZh.forEach(p => {
 								<span class="lang-badge en">EN</span>
 								<FormattedDate date={post.data.pubDate} />
 							</div>
-							<h3>{post.data.private ? '🔒 Classified Intelligence' : post.data.title}</h3>
+							<h3>{post.data.private ? 'Classified Intelligence' : post.data.title}</h3>
 							<p>{post.data.private ? 'This report is encrypted to prevent public data leakage. Enter authorized decryption key inside the article to proceed.' : post.data.description}</p>
 						</a>
 					))}
@@ -311,7 +411,7 @@ briefZh.forEach(p => {
 								<span class="lang-badge zh">中文</span>
 								<FormattedDate date={post.data.pubDate} />
 							</div>
-							<h3>{post.data.private ? '🔒 机密情报审查' : post.data.title}</h3>
+							<h3>{post.data.private ? '机密情报审查' : post.data.title}</h3>
 							<p>{post.data.private ? '此报告已加密以防止公开数据泄露。请输入授权解密密钥以继续。' : post.data.description}</p>
 						</a>
 					))}
@@ -320,6 +420,10 @@ briefZh.forEach(p => {
 		</main>
 		<Footer />
 
+		<script id="home-signal-map-data" type="application/json" is:inline set:html={serializedHomeSignalMap}></script>
+		<script>
+			import "../scripts/home-signal-map.js";
+		</script>
 		<script>
 			function applyLang(lang: string) {
 				document.querySelectorAll('.lang-content').forEach(el => {
@@ -346,7 +450,11 @@ briefZh.forEach(p => {
 	/* ═══ Compact Hero Banner ═══ */
 	.hero-banner {
 		border-bottom: 1px solid var(--border, #30363d);
-		background: linear-gradient(180deg, rgba(88,166,255,0.04) 0%, transparent 100%);
+		background:
+			linear-gradient(var(--grid-faint) 1px, transparent 1px),
+			linear-gradient(90deg, var(--grid-faint) 1px, transparent 1px),
+			var(--bg-primary);
+		background-size: 28px 28px;
 		padding: 1.5rem 1rem;
 	}
 	.hero-inner {
@@ -363,7 +471,7 @@ briefZh.forEach(p => {
 		margin: 0 0 0.25rem;
 		letter-spacing: -0.02em;
 	}
-	.accent { color: var(--accent-cyan, #58a6ff); }
+	.accent { color: var(--accent-blue, #2f80ed); }
 	.hero-tagline {
 		color: var(--text-secondary, #8b949e);
 		font-size: 0.88rem;
@@ -386,11 +494,11 @@ briefZh.forEach(p => {
 		padding: 0.2rem 0.6rem;
 		background: var(--bg-surface, #161b22);
 		border: 1px solid var(--border, #30363d);
-		border-radius: 16px;
+		border-radius: 6px;
 		font-size: 0.72rem;
 	}
 	.stat-pill strong {
-		color: var(--accent-cyan, #58a6ff);
+		color: var(--text-primary, #f5f5f5);
 		font-weight: 700;
 	}
 	.stat-pill em {
@@ -405,14 +513,221 @@ briefZh.forEach(p => {
 	}
 	.btn { text-decoration: none; transition: all 0.2s; font-weight: 600; border-radius: 6px; }
 	.btn-sm { font-size: 0.78rem; padding: 0.35rem 0.8rem; }
-	.btn-primary { background: var(--accent-cyan, #58a6ff); color: #0d1117; }
-	.btn-primary:hover { background: #79c0ff; }
+	.btn-primary { background: var(--text-primary, #f5f5f5); color: var(--bg-primary, #000); border: 1px solid var(--text-primary, #f5f5f5); }
+	.btn-primary:hover { background: var(--accent-blue, #2f80ed); border-color: var(--accent-blue, #2f80ed); color: #fff; }
 	.btn-ghost {
 		color: var(--text-secondary, #8b949e);
 		border: 1px solid var(--border, #30363d);
 		background: transparent;
 	}
-	.btn-ghost:hover { border-color: var(--accent-cyan, #58a6ff); color: var(--text-primary, #e6edf3); }
+	.btn-ghost:hover { border-color: var(--border-strong, #707070); color: var(--text-primary, #e6edf3); }
+
+	/* ═══ Home Daily Signal Dashboard ═══ */
+	.home-signal-board {
+		margin: 1.4rem 0 2.7rem;
+		padding: 1rem;
+		border: 1px solid var(--border, #30363d);
+		background:
+			linear-gradient(var(--grid-faint) 1px, transparent 1px),
+			linear-gradient(90deg, var(--grid-faint) 1px, transparent 1px),
+			var(--bg-surface, #0b0b0b);
+		background-size: 36px 36px;
+		border-radius: 8px;
+		box-shadow: var(--shadow);
+	}
+	.signal-board-top {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) auto;
+		gap: 1rem;
+		align-items: start;
+		padding: 0.3rem 0.3rem 1rem;
+		border-bottom: 1px solid var(--border, #30363d);
+	}
+	.signal-eyebrow,
+	.signal-panel-title {
+		color: var(--text-secondary, #b8b8b8);
+		font-family: var(--font-mono, 'JetBrains Mono', monospace);
+		font-size: 0.7rem;
+		font-weight: 800;
+		letter-spacing: 0;
+		text-transform: uppercase;
+	}
+	.signal-board-top h2 {
+		margin: 0.25rem 0 0.45rem;
+		padding: 0;
+		border: 0;
+		font-size: clamp(1.45rem, 3vw, 2.35rem);
+		line-height: 1.08;
+	}
+	.signal-board-top p {
+		max-width: 840px;
+		margin: 0;
+		color: var(--text-secondary, #b8b8b8);
+		font-size: 0.94rem;
+		line-height: 1.55;
+	}
+	.signal-actions {
+		display: flex;
+		gap: 0.45rem;
+		justify-content: flex-end;
+	}
+	.signal-stat-strip {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		gap: 0.55rem;
+		margin: 0.8rem 0;
+	}
+	.signal-stat-strip a {
+		display: grid;
+		gap: 0.2rem;
+		min-height: 72px;
+		padding: 0.75rem;
+		border: 1px solid var(--border, #30363d);
+		background: var(--card-bg, rgba(15, 15, 15, .72));
+		border-radius: 6px;
+		text-decoration: none;
+	}
+	.signal-stat-strip span {
+		color: var(--text-muted, #747474);
+		font-family: var(--font-mono, 'JetBrains Mono', monospace);
+		font-size: 0.68rem;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+	.signal-stat-strip strong {
+		color: var(--text-primary, #f5f5f5);
+		font-size: 1.65rem;
+		line-height: 1;
+	}
+	.signal-board-grid {
+		display: grid;
+		grid-template-columns: minmax(280px, 1.05fr) minmax(320px, 1.12fr) minmax(250px, .84fr);
+		gap: 0.65rem;
+	}
+	.signal-panel {
+		min-width: 0;
+		padding: 0.8rem;
+		border: 1px solid var(--border, #30363d);
+		background: var(--card-bg, rgba(15, 15, 15, .72));
+		border-radius: 6px;
+	}
+	.signal-lead,
+	.signal-bullet,
+	.signal-market-row,
+	.signal-watch-list a {
+		text-decoration: none;
+	}
+	.signal-lead {
+		display: grid;
+		gap: 0.45rem;
+		margin-top: 0.65rem;
+		padding-bottom: 0.75rem;
+		border-bottom: 1px solid var(--border, #30363d);
+	}
+	.signal-lead strong {
+		color: var(--text-primary, #f5f5f5);
+		font-size: 1.05rem;
+		line-height: 1.35;
+	}
+	.signal-lead span {
+		color: var(--text-secondary, #b8b8b8);
+		font-size: 0.82rem;
+		line-height: 1.55;
+	}
+	.signal-bullet-list {
+		display: grid;
+		gap: 0.55rem;
+		margin-top: 0.65rem;
+	}
+	.signal-bullet {
+		display: grid;
+		gap: 0.32rem;
+		min-height: 76px;
+		padding: 0.65rem;
+		border: 1px solid var(--border, #30363d);
+		border-left: 4px solid var(--accent, var(--text-primary));
+		background: var(--bg-inset, #050505);
+		border-radius: 0;
+	}
+	.signal-bullet span {
+		color: var(--accent, var(--text-secondary));
+		font-size: 0.72rem;
+		font-weight: 900;
+	}
+	.signal-bullet strong {
+		color: var(--text-secondary, #b8b8b8);
+		font-size: 0.78rem;
+		line-height: 1.45;
+	}
+	.home-signal-map {
+		height: 250px;
+		margin-top: 0.65rem;
+		border: 1px solid var(--border, #30363d);
+		background: var(--bg-inset, #050505);
+		filter: grayscale(0.88) contrast(1.06);
+	}
+	.signal-map-tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem;
+		margin-top: 0.6rem;
+	}
+	.signal-map-tags a {
+		padding: 0.25rem 0.45rem;
+		border: 1px solid var(--border, #30363d);
+		border-left: 3px solid var(--accent, var(--text-primary));
+		color: var(--text-secondary, #b8b8b8);
+		font-size: 0.72rem;
+		text-decoration: none;
+	}
+	.signal-market-list,
+	.signal-watch-list {
+		display: grid;
+		margin-top: 0.65rem;
+	}
+	.signal-market-row {
+		display: grid;
+		grid-template-columns: minmax(82px, .95fr) minmax(70px, .7fr) minmax(72px, .75fr);
+		gap: 0.45rem;
+		align-items: center;
+		min-height: 32px;
+		border-bottom: 1px solid var(--border, #30363d);
+		color: var(--text-secondary, #b8b8b8);
+		font-size: 0.76rem;
+	}
+	.signal-market-row strong,
+	.signal-market-row em {
+		font-family: var(--font-mono, 'JetBrains Mono', monospace);
+		text-align: right;
+	}
+	.signal-market-row strong {
+		color: var(--text-primary, #f5f5f5);
+	}
+	.signal-market-row em {
+		color: var(--text-muted, #747474);
+		font-style: normal;
+	}
+	.signal-market-row.up em { color: var(--accent-green, #169b62); }
+	.signal-market-row.down em { color: var(--accent-red, #d64545); }
+	.signal-watch-list {
+		gap: 0.45rem;
+		padding-top: 0.7rem;
+	}
+	.signal-watch-list a {
+		display: grid;
+		gap: 0.25rem;
+		padding: 0.55rem 0;
+		border-top: 1px dashed var(--border, #30363d);
+	}
+	.signal-watch-list strong {
+		color: var(--text-primary, #f5f5f5);
+		font-size: 0.8rem;
+	}
+	.signal-watch-list span {
+		color: var(--text-secondary, #b8b8b8);
+		font-size: 0.74rem;
+		line-height: 1.45;
+	}
 
 	/* ═══ Sections ═══ */
 	.section { margin: 2.5rem 0; }
@@ -420,12 +735,13 @@ briefZh.forEach(p => {
 	.section-header h2 { font-size: 1.35rem; margin: 0; border: none; padding: 0; }
 	.section-badge {
 		font-size: 0.68rem; padding: 0.2rem 0.55rem;
-		background: rgba(88,166,255,0.1); color: var(--accent-cyan, #58a6ff);
-		border-radius: 10px; font-weight: 600;
+		background: var(--bg-surface, #0b0b0b); color: var(--text-secondary, #b8b8b8);
+		border: 1px solid var(--border, #30363d);
+		border-radius: 6px; font-weight: 600;
 	}
 	.live-badge {
-		background: rgba(63,185,80,0.12);
-		color: var(--accent-green, #3fb950);
+		background: var(--bg-surface, #0b0b0b);
+		color: var(--accent-green, #169b62);
 		animation: pulse-badge 2s ease-in-out infinite;
 	}
 	@keyframes pulse-badge {
@@ -438,11 +754,11 @@ briefZh.forEach(p => {
 	.brief-card {
 		display: flex;
 		flex-direction: column;
-		background: rgba(22, 27, 34, 0.4);
+		background: var(--card-bg, rgba(15, 15, 15, 0.72));
 		backdrop-filter: blur(8px);
 		-webkit-backdrop-filter: blur(8px);
 		border: 1px solid var(--border, #30363d);
-		border-radius: 10px;
+		border-radius: 8px;
 		padding: 1.1rem 1.2rem;
 		text-decoration: none;
 		transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -456,16 +772,16 @@ briefZh.forEach(p => {
 		left: 0;
 		right: 0;
 		height: 2px;
-		background: linear-gradient(90deg, var(--accent-cyan, #58a6ff), var(--accent-green, #3fb950));
+		background: var(--text-primary, #f5f5f5);
 		opacity: 0;
 		transition: opacity 0.25s;
 	}
 	.brief-card:hover::before { opacity: 1; }
 	.brief-card:hover {
-		border-color: var(--accent-cyan, #58a6ff);
-		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 20px rgba(88, 166, 255, 0.18);
+		border-color: var(--border-strong, #707070);
+		box-shadow: var(--shadow-hover);
 		transform: translateY(-4px);
-		background: rgba(22, 27, 34, 0.6);
+		background: var(--card-bg-hover, rgba(24, 24, 24, 0.88));
 	}
 	.brief-card-empty {
 		opacity: 0.4;
@@ -477,13 +793,23 @@ briefZh.forEach(p => {
 		gap: 0.5rem;
 		margin-bottom: 0.6rem;
 	}
-	.brief-icon { font-size: 1.1rem; }
+	.brief-icon {
+		display: inline-grid;
+		place-items: center;
+		width: 1.55rem;
+		height: 1.35rem;
+		border: 1px solid var(--border, #30363d);
+		color: var(--text-secondary, #b8b8b8);
+		font-family: var(--font-mono);
+		font-size: 0.7rem;
+		font-weight: 900;
+	}
 	.brief-type {
 		font-size: 0.72rem;
 		font-weight: 600;
 		text-transform: uppercase;
 		letter-spacing: 0.04em;
-		color: var(--accent-cyan, #58a6ff);
+		color: var(--text-secondary, #b8b8b8);
 	}
 	.brief-date {
 		margin-left: auto;
@@ -508,7 +834,7 @@ briefZh.forEach(p => {
 		margin-top: 0.8rem;
 		font-size: 0.78rem;
 		font-weight: 600;
-		color: var(--accent-cyan, #58a6ff);
+		color: var(--accent-blue, #2f80ed);
 		transition: transform 0.2s;
 	}
 	.brief-card:hover .brief-cta { transform: translateX(3px); }
@@ -544,45 +870,45 @@ briefZh.forEach(p => {
 		border: 1px solid transparent;
 	}
 	.tag-morning {
-		background: rgba(88,166,255,0.1);
-		color: var(--accent-cyan, #58a6ff);
+		background: var(--bg-surface, #0b0b0b);
+		color: var(--accent-blue, #2f80ed);
 	}
-	.tag-morning:hover { border-color: var(--accent-cyan, #58a6ff); }
+	.tag-morning:hover { border-color: var(--accent-blue, #2f80ed); }
 	.tag-editor {
-		background: rgba(210,153,34,0.1);
-		color: var(--accent-gold, #d29922);
+		background: var(--bg-surface, #0b0b0b);
+		color: var(--accent-gold, #d7a316);
 	}
-	.tag-editor:hover { border-color: var(--accent-gold, #d29922); }
+	.tag-editor:hover { border-color: var(--accent-gold, #d7a316); }
 	.tag-mailbox {
-		background: rgba(63,185,80,0.1);
-		color: var(--accent-green, #3fb950);
+		background: var(--bg-surface, #0b0b0b);
+		color: var(--accent-green, #169b62);
 	}
-	.tag-mailbox:hover { border-color: var(--accent-green, #3fb950); }
+	.tag-mailbox:hover { border-color: var(--accent-green, #169b62); }
 
 	/* ═══ Article Grid ═══ */
 	.article-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; }
 	.article-card {
 		display: block;
-		background: rgba(22, 27, 34, 0.4);
+		background: var(--card-bg, rgba(15, 15, 15, 0.72));
 		backdrop-filter: blur(8px);
 		-webkit-backdrop-filter: blur(8px);
 		border: 1px solid var(--border, #30363d);
-		border-radius: 10px;
+		border-radius: 8px;
 		padding: 1.1rem;
 		text-decoration: none;
 		transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 	}
 	.article-card:hover {
-		border-color: var(--accent-cyan, #58a6ff);
-		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(88, 166, 255, 0.12);
+		border-color: var(--border-strong, #707070);
+		box-shadow: var(--shadow-hover);
 		transform: translateY(-4px);
-		background: rgba(22, 27, 34, 0.6);
+		background: var(--card-bg-hover, rgba(24, 24, 24, 0.88));
 	}
-	.research-card { border-left: 3px solid var(--accent-gold, #d29922); }
+	.research-card { border-left: 3px solid var(--accent-gold, #d7a316); }
 	.card-meta { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; font-size: 0.75rem; color: var(--text-muted, #484f58); }
 	.lang-badge { padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 600; font-size: 0.62rem; }
-	.lang-badge.en { background: rgba(88,166,255,0.15); color: var(--accent-cyan, #58a6ff); }
-	.lang-badge.zh { background: rgba(248,81,73,0.15); color: var(--accent-red, #f85149); }
+	.lang-badge.en { background: var(--bg-surface, #0b0b0b); color: var(--accent-blue, #2f80ed); }
+	.lang-badge.zh { background: var(--bg-surface, #0b0b0b); color: var(--accent-red, #d64545); }
 	.article-card h3 { font-size: 0.95rem; margin: 0 0 0.35rem; color: var(--text-primary, #e6edf3); line-height: 1.35; }
 	.article-card p { font-size: 0.82rem; color: var(--text-secondary, #8b949e); margin: 0; line-height: 1.5; }
 
@@ -594,30 +920,40 @@ briefZh.forEach(p => {
 		background: var(--bg-surface, #161b22); border: 1px solid var(--border, #30363d);
 		border-radius: 8px; text-decoration: none; transition: all 0.25s;
 	}
-	.series-item:hover { border-color: var(--accent-green, #3fb950); background: var(--bg-elevated, #1c2128); }
-	.series-num { font-size: 1.3rem; font-weight: 800; color: var(--accent-green, #3fb950); min-width: 2rem; font-family: var(--font-mono); }
+	.series-item:hover { border-color: var(--accent-green, #169b62); background: var(--bg-elevated, #151515); }
+	.series-num { font-size: 1.3rem; font-weight: 800; color: var(--accent-green, #169b62); min-width: 2rem; font-family: var(--font-mono); }
 	.series-content { flex: 1; }
 	.series-content h4 { font-size: 0.9rem; margin: 0 0 0.15rem; color: var(--text-primary, #e6edf3); }
 	.series-content p { font-size: 0.78rem; color: var(--text-secondary, #8b949e); margin: 0; }
 	.series-arrow { color: var(--text-muted, #484f58); font-size: 1.1rem; transition: transform 0.2s; }
-	.series-item:hover .series-arrow { transform: translateX(4px); color: var(--accent-green, #3fb950); }
+	.series-item:hover .series-arrow { transform: translateX(4px); color: var(--accent-green, #169b62); }
 
 	/* ═══ Responsive ═══ */
 	@media (max-width: 900px) {
 		.brief-grid { grid-template-columns: 1fr; }
+		.signal-board-top,
+		.signal-board-grid {
+			grid-template-columns: 1fr;
+		}
+		.signal-actions {
+			justify-content: flex-start;
+			flex-wrap: wrap;
+		}
 	}
 	@media (max-width: 768px) {
 		.hero-inner { flex-direction: column; text-align: center; gap: 1rem; }
 		.hero-left h1 { font-size: 1.8rem; }
 		.hero-right { align-items: center; }
 		.hero-stats-inline { flex-wrap: wrap; justify-content: center; }
+		.signal-stat-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+		.home-signal-map { height: 220px; }
 		.article-grid { grid-template-columns: 1fr; }
 		.archive-row { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
 	}
 
 	/* ═══ Bloomberg Market Ticker Banner ═══ */
 	.market-ticker-banner {
-		background: #090d16;
+		background: var(--bg-primary, #000);
 		border-bottom: 1px solid var(--border, #30363d);
 		overflow: hidden;
 		width: 100%;
@@ -647,7 +983,8 @@ briefZh.forEach(p => {
 		padding: 0 1.5rem;
 		font-family: var(--font-mono, 'JetBrains Mono', monospace);
 		font-size: 0.72rem;
-		border-right: 1px solid rgba(48, 54, 61, 0.5);
+		border-right: 1px solid var(--border, #30363d);
+		text-decoration: none;
 	}
 	.ticker-label {
 		color: var(--text-secondary, #8b949e);
@@ -663,10 +1000,13 @@ briefZh.forEach(p => {
 		font-weight: 700;
 	}
 	.ticker-change.up {
-		color: var(--accent-green, #3fb950);
+		color: var(--accent-green, #169b62);
 	}
 	.ticker-change.down {
-		color: var(--accent-red, #f85149);
+		color: var(--accent-red, #d64545);
+	}
+	.ticker-change.flat {
+		color: var(--accent-yellow, #d7a316);
 	}
 
 	@keyframes scroll-left {

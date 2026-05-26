@@ -19,24 +19,24 @@ import { SITE_TITLE } from '../consts';
 				<!-- Sidebar Glassmorphism Controls Drawer -->
 				<aside class="graph-sidebar" id="sidebar">
 					<div class="sidebar-header">
-						<h2>🧭 Network Dashboard</h2>
+						<h2>Network Dashboard</h2>
 						<p class="sidebar-subtitle">Multi-agent connection matrix</p>
 					</div>
 
 					<!-- Premium cyber security status badge and credential lock drawer -->
-					<div class="cyber-security-badge" id="cyber-lock-status" style="margin: 12px 16px 4px; padding: 10px 14px; border-radius: 6px; border: 1px solid rgba(0, 230, 118, 0.2); background: rgba(0, 230, 118, 0.04); font-family: monospace; font-size: 11px; display: flex; align-items: center; justify-content: space-between; box-shadow: inset 0 0 10px rgba(0, 230, 118, 0.05); transition: all 0.3s ease;">
-						<span id="lock-perimeter-label" style="color: #00e676; font-weight: bold; text-shadow: 0 0 4px rgba(0, 230, 118, 0.2);">🔒 [PERIMETER]: GATED</span>
-						<button id="btn-show-decrypt" style="background: transparent; border: 1px solid #00e676; color: #00e676; border-radius: 4px; padding: 3px 8px; font-size: 10px; cursor: pointer; font-family: monospace; font-weight: bold; transition: all 0.2s ease;">DECRYPT</button>
+					<div class="cyber-security-badge" id="cyber-lock-status" style="margin: 12px 16px 4px; padding: 10px 14px; border-radius: 6px; border: 1px solid color-mix(in srgb, var(--accent-green) 24%, transparent); background: color-mix(in srgb, var(--accent-green) 6%, transparent); font-family: monospace; font-size: 11px; display: flex; align-items: center; justify-content: space-between; box-shadow: inset 0 0 10px color-mix(in srgb, var(--accent-green) 8%, transparent); transition: all 0.3s ease;">
+						<span id="lock-perimeter-label" style="color: var(--accent-green); font-weight: bold; text-shadow: 0 0 4px color-mix(in srgb, var(--accent-green) 24%, transparent);">[PERIMETER]: GATED</span>
+						<button id="btn-show-decrypt" style="background: transparent; border: 1px solid var(--accent-green); color: var(--accent-green); border-radius: 4px; padding: 3px 8px; font-size: 10px; cursor: pointer; font-family: monospace; font-weight: bold; transition: all 0.2s ease;">DECRYPT</button>
 					</div>
 
-					<div id="cyber-decrypt-drawer" style="display: none; margin: 0 16px 12px; padding: 12px 14px; border: 1px solid #00e676; border-radius: 6px; background: rgba(3, 7, 18, 0.96); font-family: monospace; box-shadow: 0 0 20px rgba(0, 230, 118, 0.1), inset 0 0 10px rgba(0, 230, 118, 0.02); transition: all 0.3s ease;">
-						<div style="font-size: 10px; color: #8b949e; margin-bottom: 6px; font-weight: bold;">[SYS_GATE]: INPUT ACCESS KEY</div>
+					<div id="cyber-decrypt-drawer" style="display: none; margin: 0 16px 12px; padding: 12px 14px; border: 1px solid var(--accent-green); border-radius: 6px; background: var(--bg-surface); font-family: monospace; box-shadow: 0 0 20px color-mix(in srgb, var(--accent-green) 12%, transparent), inset 0 0 10px color-mix(in srgb, var(--accent-green) 3%, transparent); transition: all 0.3s ease;">
+						<div style="font-size: 10px; color: var(--text-muted); margin-bottom: 6px; font-weight: bold;">[SYS_GATE]: INPUT ACCESS KEY</div>
 						<div style="display: flex; gap: 6px; align-items: center;">
-							<span style="color: #00e676; font-weight: bold;">&gt;</span>
-							<input type="password" id="graph-passcode" placeholder="PASSCODE" style="flex: 1; background: #000; border: 1px solid rgba(0, 230, 118, 0.25); border-radius: 4px; padding: 6px 10px; color: #00e676; font-size: 11px; outline: none; font-family: monospace; letter-spacing: 2px;" />
-							<button id="btn-graph-decrypt" style="background: transparent; border: 1px solid #00e676; color: #00e676; border-radius: 4px; padding: 6px 12px; font-size: 11px; cursor: pointer; font-family: monospace; font-weight: bold; transition: all 0.2s ease;">VERIFY</button>
+							<span style="color: var(--accent-green); font-weight: bold;">&gt;</span>
+							<input type="password" id="graph-passcode" placeholder="PASSCODE" style="flex: 1; background: var(--bg-inset); border: 1px solid color-mix(in srgb, var(--accent-green) 30%, transparent); border-radius: 4px; padding: 6px 10px; color: var(--accent-green); font-size: 11px; outline: none; font-family: monospace; letter-spacing: 2px;" />
+							<button id="btn-graph-decrypt" style="background: transparent; border: 1px solid var(--accent-green); color: var(--accent-green); border-radius: 4px; padding: 6px 12px; font-size: 11px; cursor: pointer; font-family: monospace; font-weight: bold; transition: all 0.2s ease;">VERIFY</button>
 						</div>
-						<div id="graph-decrypt-error" style="color: #f85149; font-size: 10px; margin-top: 6px; font-weight: bold; display: none;"></div>
+						<div id="graph-decrypt-error" style="color: var(--accent-red); font-size: 10px; margin-top: 6px; font-weight: bold; display: none;"></div>
 					</div>
 
 					<div class="stats-bar" id="statsBar">
@@ -46,8 +46,8 @@ import { SITE_TITLE } from '../consts';
 					</div>
 
 					<div class="tabs-header">
-						<button class="tab-btn active" id="tab-controls">⚙️ Controls</button>
-						<button class="tab-btn" id="tab-insights">📊 Insights</button>
+						<button class="tab-btn active" id="tab-controls">Controls</button>
+						<button class="tab-btn" id="tab-insights">Insights</button>
 					</div>
 
 					<!-- TAB 1: CONTROLS & SETTINGS -->
@@ -75,19 +75,19 @@ import { SITE_TITLE } from '../consts';
 						<div class="checkbox-list">
 							<label>
 								<input type="checkbox" id="showConnected" checked />
-								<span style="color:#00e676">●</span> Connected Industry
+								<span style="color:var(--accent-green)">●</span> Connected Industry
 							</label>
 							<label>
 								<input type="checkbox" id="showCandidate" checked />
-								<span style="color:#ffb300">●</span> Candidates
+								<span style="color:var(--accent-yellow)">●</span> Candidates
 							</label>
 							<label>
 								<input type="checkbox" id="showArtifact" checked />
-								<span style="color:#00b0ff">●</span> Research Artifacts
+								<span style="color:var(--accent-blue)">●</span> Research Artifacts
 							</label>
 							<label>
 								<input type="checkbox" id="showAnalyst" checked />
-								<span style="color:#ff007f">●</span> Research Analysts
+								<span style="color:var(--accent-red)">●</span> Research Analysts
 							</label>
 						</div>
 
@@ -113,8 +113,8 @@ import { SITE_TITLE } from '../consts';
 						</div>
 
 						<div style="margin-top: 16px; display: flex; gap: 8px;">
-							<button class="btn" style="flex:1" id="btnFit">📐 Fit View</button>
-							<button class="btn" style="flex:1" id="btnReset">🔄 Center</button>
+							<button class="btn" style="flex:1" id="btnFit">Fit View</button>
+							<button class="btn" style="flex:1" id="btnReset">Center</button>
 						</div>
 					</div>
 
@@ -138,10 +138,10 @@ import { SITE_TITLE } from '../consts';
 					<canvas id="canvas"></canvas>
 					<div id="tooltip"></div>
 					<div id="legend">
-						<div class="legend-item"><div class="legend-dot" style="background:#00e676"></div> Connected Industry</div>
-						<div class="legend-item"><div class="legend-dot" style="background:#ffb300"></div> Candidate</div>
-						<div class="legend-item"><div class="legend-dot" style="background:#00b0ff"></div> Research Artifact</div>
-						<div class="legend-item"><div class="legend-dot" style="background:#ff007f"></div> Research Analyst</div>
+						<div class="legend-item"><div class="legend-dot" style="background:var(--accent-green)"></div> Connected Industry</div>
+						<div class="legend-item"><div class="legend-dot" style="background:var(--accent-yellow)"></div> Candidate</div>
+						<div class="legend-item"><div class="legend-dot" style="background:var(--accent-blue)"></div> Research Artifact</div>
+						<div class="legend-item"><div class="legend-dot" style="background:var(--accent-red)"></div> Research Analyst</div>
 					</div>
 					
 					<div id="loading">
@@ -156,17 +156,17 @@ import { SITE_TITLE } from '../consts';
 		<script>
 			// Constants
 			const COLOR = {
-				connected: '#00e676',
-				candidate: '#ffb300',
-				artifact: '#00b0ff',
-				always: '#ff007f'
+				connected: '#169b62',
+				candidate: '#d7a316',
+				artifact: '#2f80ed',
+				always: '#d64545'
 			};
 
 			const EDGE_COLOR = {
-				industry_chain: 'rgba(100, 116, 139, 0.15)',
-				mentioned_in: 'rgba(0, 176, 255, 0.35)',
-				authored_by: 'rgba(255, 0, 127, 0.55)',
-				candidate_seen_in: 'rgba(255, 179, 0, 0.25)'
+				industry_chain: 'rgba(116, 116, 116, 0.2)',
+				mentioned_in: 'rgba(47, 128, 237, 0.35)',
+				authored_by: 'rgba(214, 69, 69, 0.55)',
+				candidate_seen_in: 'rgba(215, 163, 22, 0.28)'
 			};
 
 			let allNodes = [], allEdges = [], visNodes = [], visEdges = [];
@@ -175,6 +175,10 @@ import { SITE_TITLE } from '../consts';
 			let hoveredEdge = null, selectedEdge = null;
 			let canvas, ctx, W, H;
 			let activePath = null; // Holds { nodes: Set, edges: Set }
+
+			function cssVar(name, fallback) {
+				return getComputedStyle(document.documentElement).getPropertyValue(name).trim() || fallback;
+			}
 
 			async function init() {
 				canvas = document.getElementById('canvas');
@@ -253,8 +257,8 @@ import { SITE_TITLE } from '../consts';
 				} catch (err) {
 					console.error("Failed to load knowledge graph visualizer data:", err);
 					document.getElementById('loading').innerHTML = `
-						<div style="color:#ff007f; font-weight:800; font-size:18px;">⚠️ LOAD FAILURE</div>
-						<div style="font-size:12px; margin-top:8px; color:#8b949e;">Could not load public_graph_viz.json. Ensure file exists in public/</div>
+						<div style="color:var(--accent-red); font-weight:800; font-size:18px;">LOAD FAILURE</div>
+						<div style="font-size:12px; margin-top:8px; color:var(--text-muted);">Could not load public_graph_viz.json. Ensure file exists in public/</div>
 					`;
 				}
 			}
@@ -280,11 +284,11 @@ import { SITE_TITLE } from '../consts';
 				connectedContainer.innerHTML = industries.map(ind => `
 					<div class="insight-card" onclick="focusNode('${ind.id}')">
 						<div class="insight-header">
-							<span>🏢 ${ind.name}</span>
-							<span style="color:#00e676">${ind.mentions} mentions</span>
+							<span>${ind.name}</span>
+							<span style="color:var(--accent-green)">${ind.mentions} mentions</span>
 						</div>
 						<div class="insight-bar-bg">
-							<div class="insight-bar-fill" style="width:${(ind.mentions / maxMentions) * 100}%; background:#00e676"></div>
+							<div class="insight-bar-fill" style="width:${(ind.mentions / maxMentions) * 100}%; background:var(--accent-green)"></div>
 						</div>
 					</div>
 				`).join('');
@@ -299,11 +303,11 @@ import { SITE_TITLE } from '../consts';
 				candidatesContainer.innerHTML = candidates.map(cand => `
 					<div class="insight-card" onclick="focusNode('${cand.id}')">
 						<div class="insight-header">
-							<span>🏷️ ${cand.name}</span>
-							<span style="color:#ffb300">freq: ${cand.frequency}</span>
+							<span>${cand.name}</span>
+							<span style="color:var(--accent-yellow)">freq: ${cand.frequency}</span>
 						</div>
 						<div class="insight-bar-bg">
-							<div class="insight-bar-fill" style="width:${(cand.frequency / maxFreq) * 100}%; background:#ffb300"></div>
+							<div class="insight-bar-fill" style="width:${(cand.frequency / maxFreq) * 100}%; background:var(--accent-yellow)"></div>
 						</div>
 					</div>
 				`).join('');
@@ -515,7 +519,7 @@ import { SITE_TITLE } from '../consts';
 				const pBox = document.getElementById('pathDisplay');
 				pBox.style.display = 'block';
 				pBox.innerHTML = `
-					<strong>⚡ Connection Trace (${routeNodes.length - 1} links):</strong><br>
+					<strong>Connection Trace (${routeNodes.length - 1} links):</strong><br>
 					${routeNodes.map(id => allNodes.find(nn => nn.id === id)?.name || id).join(' → ')}
 				`;
 
@@ -566,6 +570,7 @@ import { SITE_TITLE } from '../consts';
 				ctx.scale(transform.k, transform.k);
 
 				const hasPath = activePath !== null;
+				const canvasText = cssVar('--text-primary', '#f5f5f5');
 
 				// 1. Draw Connective Edges
 				for (const e of visEdges) {
@@ -588,17 +593,17 @@ import { SITE_TITLE } from '../consts';
 					}
 
 					if (isPathEdge) {
-						ctx.strokeStyle = '#ff007f';
+						ctx.strokeStyle = COLOR.always;
 						ctx.lineWidth = 3.5;
-						ctx.shadowColor = '#ff007f';
+						ctx.shadowColor = COLOR.always;
 						ctx.shadowBlur = 12;
 					} else if (isSelectedEdge) {
-						ctx.strokeStyle = '#ffffff';
+						ctx.strokeStyle = canvasText;
 						ctx.lineWidth = 2.5;
-						ctx.shadowColor = '#ffffff';
+						ctx.shadowColor = canvasText;
 						ctx.shadowBlur = 8;
 					} else if (isHoveredEdge) {
-						ctx.strokeStyle = '#00e5ff';
+						ctx.strokeStyle = COLOR.artifact;
 						ctx.lineWidth = 2.0;
 					} else {
 						ctx.strokeStyle = EDGE_COLOR[e.type] || 'rgba(100, 100, 100, 0.15)';
@@ -628,14 +633,14 @@ import { SITE_TITLE } from '../consts';
 					ctx.fillStyle = COLOR[n.tier] || '#666';
 
 					if (isSelected) {
-						ctx.fillStyle = '#ffffff';
-						ctx.shadowColor = COLOR[n.tier] || '#ffffff';
+						ctx.fillStyle = canvasText;
+						ctx.shadowColor = COLOR[n.tier] || canvasText;
 						ctx.shadowBlur = 24;
 					} else if (isPathNode) {
-						ctx.shadowColor = '#ff007f';
+						ctx.shadowColor = COLOR.always;
 						ctx.shadowBlur = 18;
 					} else if (isHovered) {
-						ctx.shadowColor = COLOR[n.tier] || '#ffffff';
+						ctx.shadowColor = COLOR[n.tier] || canvasText;
 						ctx.shadowBlur = 14;
 					}
 
@@ -643,7 +648,7 @@ import { SITE_TITLE } from '../consts';
 					ctx.shadowBlur = 0;
 
 					if (transform.k > 1.4 || isHovered || isSelected || isPathNode || (n.tier === 'always' && transform.k > 0.4)) {
-						ctx.fillStyle = isPathNode ? '#ff007f' : '#ffffff';
+						ctx.fillStyle = isPathNode ? COLOR.always : canvasText;
 						ctx.font = `${isPathNode || isSelected ? 'bold' : 'normal'} ${Math.max(8, 11 / transform.k)}px 'Outfit', sans-serif`;
 						ctx.textAlign = 'center';
 						ctx.fillText(n.name, n.x, n.y - r - 4);
@@ -793,9 +798,9 @@ import { SITE_TITLE } from '../consts';
 				let html = `<h2>${n.name}</h2>`;
 				html += `<div class="tag" style="background:${COLOR[n.tier]};color:#000;font-weight:600;">${n.tier.toUpperCase()}</div>`;
 				html += `<div class="tag">${n.type}</div>`;
-				if (n.mentions) html += `<div class="tag">📌 ${n.mentions} mentions</div>`;
-				if (n.frequency) html += `<div class="tag">🔢 frequency: ${n.frequency}</div>`;
-				if (n.chains && n.chains.length) html += `<p style="margin-top:8px;color:#8b949e">Chains: ${n.chains.join(', ')}</p>`;
+				if (n.mentions) html += `<div class="tag">${n.mentions} mentions</div>`;
+				if (n.frequency) html += `<div class="tag">frequency: ${n.frequency}</div>`;
+				if (n.chains && n.chains.length) html += `<p style="margin-top:8px;color:var(--text-muted)">Chains: ${n.chains.join(', ')}</p>`;
 
 				if (neighbors.size) {
 					html += `<div class="neighbors"><div class="section-title">${neighbors.size} Connections</div>`;
@@ -805,10 +810,10 @@ import { SITE_TITLE } from '../consts';
 						html += `
 							<div class="neighbor-item" onclick="focusNode('${nn.id}')">
 								<span><span style="color:${c}">●</span> ${nn.name}</span>
-								<span style="color:#8b949e; font-size:10px;">${type.replace('_', ' ')}</span>
+								<span style="color:var(--text-muted); font-size:10px;">${type.replace('_', ' ')}</span>
 							</div>`;
 					});
-					if (sorted.length > 10) html += `<p style="color:#8b949e; margin-top:4px; font-size:11px;">...and ${sorted.length - 10} more</p>`;
+					if (sorted.length > 10) html += `<p style="color:var(--text-muted); margin-top:4px; font-size:11px;">...and ${sorted.length - 10} more</p>`;
 					html += `</div>`;
 				}
 				det.innerHTML = html;
@@ -822,7 +827,7 @@ import { SITE_TITLE } from '../consts';
 				if (!srcNode || !tgtNode) return;
 
 				let html = `<h2>Edge Connector</h2>`;
-				html += `<p style="margin-bottom:8px; font-weight:600;"><span style="color:${COLOR[srcNode.tier]}">●</span> ${srcNode.name} ➡️ <span style="color:${COLOR[tgtNode.tier]}">●</span> ${tgtNode.name}</p>`;
+				html += `<p style="margin-bottom:8px; font-weight:600;"><span style="color:${COLOR[srcNode.tier]}">●</span> ${srcNode.name} -> <span style="color:${COLOR[tgtNode.tier]}">●</span> ${tgtNode.name}</p>`;
 				html += `<div class="tag" style="background:rgba(255,255,255,0.05)">Type: ${e.type.replace('_',' ')}</div>`;
 				if (e.chain) html += `<div class="tag">Chain: ${e.chain}</div>`;
 				
@@ -915,12 +920,12 @@ import { SITE_TITLE } from '../consts';
 						decryptDrawer.style.display = 'none';
 						btnShowDecrypt.style.display = 'none';
 						
-						lockBadge.style.borderColor = 'rgba(0, 176, 255, 0.4)';
-						lockBadge.style.backgroundColor = 'rgba(0, 176, 255, 0.05)';
-						lockBadge.style.boxShadow = '0 0 15px rgba(0, 176, 255, 0.15), inset 0 0 10px rgba(0, 176, 255, 0.05)';
-						lockLabel.style.color = '#00b0ff';
-						lockLabel.style.textShadow = '0 0 4px rgba(0, 176, 255, 0.3)';
-						lockLabel.textContent = '🔓 [PERIMETER]: ACTIVE-DECRYPTED';
+						lockBadge.style.borderColor = 'color-mix(in srgb, var(--accent-blue) 45%, transparent)';
+						lockBadge.style.backgroundColor = 'color-mix(in srgb, var(--accent-blue) 7%, transparent)';
+						lockBadge.style.boxShadow = '0 0 15px color-mix(in srgb, var(--accent-blue) 18%, transparent), inset 0 0 10px color-mix(in srgb, var(--accent-blue) 6%, transparent)';
+						lockLabel.style.color = 'var(--accent-blue)';
+						lockLabel.style.textShadow = '0 0 4px color-mix(in srgb, var(--accent-blue) 30%, transparent)';
+						lockLabel.textContent = '[PERIMETER]: ACTIVE-DECRYPTED';
 
 						// 4. Update dynamic canvas titles and sidebar datalist
 						const datalist = document.getElementById('node-list');
@@ -968,6 +973,7 @@ import { SITE_TITLE } from '../consts';
 			}
 
 			window.focusNode = focusNode;
+			window.addEventListener('theme-change', () => draw());
 			
 			// Auto start after DOM loads
 			if (document.readyState === 'loading') {
@@ -981,12 +987,12 @@ import { SITE_TITLE } from '../consts';
 
 <style is:global>
 	#btn-show-decrypt:hover, #btn-graph-decrypt:hover {
-		background: rgba(0, 230, 118, 0.1) !important;
-		box-shadow: 0 0 10px rgba(0, 230, 118, 0.3) !important;
+		background: color-mix(in srgb, var(--accent-green) 12%, transparent) !important;
+		box-shadow: 0 0 10px color-mix(in srgb, var(--accent-green) 32%, transparent) !important;
 	}
 	.graph-sidebar input.input-error {
-		border-color: #f85149 !important;
-		color: #f85149 !important;
+		border-color: var(--accent-red) !important;
+		color: var(--accent-red) !important;
 		animation: shake 0.3s ease !important;
 	}
 	@keyframes shake {
@@ -999,7 +1005,7 @@ import { SITE_TITLE } from '../consts';
 		width: 100% !important;
 		padding: 0 !important;
 		margin: 0 !important;
-		background: #090d16;
+		background: var(--bg-primary);
 		overflow: hidden;
 	}
 
@@ -1008,28 +1014,28 @@ import { SITE_TITLE } from '../consts';
 		height: calc(100vh - 56px - 100px); /* Fill screen minus Header (56px) and Footer (100px) */
 		min-height: 600px;
 		position: relative;
-		border-bottom: 1px solid #30363d;
+		border-bottom: 1px solid var(--border);
 	}
 
 	/* Sidebar controls drawer with frosted glassmorphism */
 	.graph-sidebar {
 		width: 360px;
-		background: rgba(13, 19, 33, 0.82);
+		background: var(--card-bg);
 		backdrop-filter: blur(20px);
 		-webkit-backdrop-filter: blur(20px);
-		border-right: 1px solid #30363d;
+		border-right: 1px solid var(--border);
 		display: flex;
 		flex-direction: column;
 		overflow: hidden;
 		flex-shrink: 0;
 		z-index: 10;
-		box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5);
+		box-shadow: var(--shadow);
 	}
 
 	.sidebar-header {
 		padding: 16px 20px;
-		border-bottom: 1px solid #30363d;
-		background: linear-gradient(135deg, rgba(233, 69, 96, 0.1), rgba(15, 52, 96, 0.05));
+		border-bottom: 1px solid var(--border);
+		background: linear-gradient(135deg, var(--bg-elevated), var(--bg-surface));
 	}
 
 	.sidebar-header h2 {
@@ -1037,29 +1043,29 @@ import { SITE_TITLE } from '../consts';
 		font-weight: 800;
 		margin: 0;
 		letter-spacing: 0.5px;
-		color: #e6edf3;
+		color: var(--text-primary);
 		border: none;
 		padding: 0;
 	}
 
 	.sidebar-subtitle {
 		font-size: 11px;
-		color: #8b949e;
+		color: var(--text-muted);
 		margin: 3px 0 0 0;
 	}
 
 	/* Tabs Header */
 	.tabs-header {
 		display: flex;
-		background: rgba(0, 0, 0, 0.3);
-		border-bottom: 1px solid #30363d;
+		background: var(--bg-surface);
+		border-bottom: 1px solid var(--border);
 	}
 
 	.tab-btn {
 		flex: 1;
 		background: transparent;
 		border: none;
-		color: #8b949e;
+		color: var(--text-muted);
 		padding: 10px 0;
 		font-weight: 600;
 		cursor: pointer;
@@ -1069,13 +1075,13 @@ import { SITE_TITLE } from '../consts';
 	}
 
 	.tab-btn:hover {
-		color: #e6edf3;
+		color: var(--text-primary);
 	}
 
 	.tab-btn.active {
-		color: #ff007f;
-		border-bottom-color: #ff007f;
-		background: rgba(255, 0, 127, 0.03);
+		color: var(--accent-red);
+		border-bottom-color: var(--accent-red);
+		background: color-mix(in srgb, var(--accent-red) 5%, transparent);
 	}
 
 	.tab-content {
@@ -1091,7 +1097,7 @@ import { SITE_TITLE } from '../consts';
 
 	/* Form Items */
 	.section-title {
-		color: #8b949e;
+		color: var(--text-muted);
 		text-transform: uppercase;
 		font-size: 9px;
 		font-weight: 800;
@@ -1109,9 +1115,9 @@ import { SITE_TITLE } from '../consts';
 	}
 
 	.graph-sidebar input[type=text], .graph-sidebar select {
-		background: rgba(0, 0, 0, 0.4);
-		color: #e6edf3;
-		border: 1px solid #30363d;
+		background: var(--bg-inset);
+		color: var(--text-primary);
+		border: 1px solid var(--border);
 		border-radius: 6px;
 		padding: 8px 12px;
 		font-size: 12px;
@@ -1121,18 +1127,18 @@ import { SITE_TITLE } from '../consts';
 	}
 
 	.graph-sidebar input[type=text]:focus, .graph-sidebar select:focus {
-		border-color: #ff007f;
-		box-shadow: 0 0 8px rgba(255, 0, 127, 0.25);
+		border-color: var(--accent-red);
+		box-shadow: 0 0 8px color-mix(in srgb, var(--accent-red) 28%, transparent);
 	}
 
 	.checkbox-list {
 		display: flex;
 		flex-direction: column;
 		gap: 6px;
-		background: rgba(255, 255, 255, 0.01);
+		background: var(--bg-surface);
 		padding: 8px 10px;
 		border-radius: 8px;
-		border: 1px solid #30363d;
+		border: 1px solid var(--border);
 	}
 
 	.checkbox-list label {
@@ -1147,11 +1153,11 @@ import { SITE_TITLE } from '../consts';
 	}
 
 	.checkbox-list label:hover {
-		background: rgba(255, 255, 255, 0.03);
+		background: var(--card-bg-hover);
 	}
 
 	.checkbox-list input[type=checkbox] {
-		accent-color: #ff007f;
+		accent-color: var(--accent-red);
 		width: 14px;
 		height: 14px;
 		cursor: pointer;
@@ -1162,10 +1168,10 @@ import { SITE_TITLE } from '../consts';
 		display: flex;
 		flex-direction: column;
 		gap: 10px;
-		background: rgba(255, 255, 255, 0.01);
+		background: var(--bg-surface);
 		padding: 10px;
 		border-radius: 8px;
-		border: 1px solid #30363d;
+		border: 1px solid var(--border);
 	}
 
 	.slider-group {
@@ -1178,19 +1184,19 @@ import { SITE_TITLE } from '../consts';
 		display: flex;
 		justify-content: space-between;
 		font-size: 10px;
-		color: #8b949e;
+		color: var(--text-muted);
 	}
 
 	.slider-label span {
 		font-weight: 600;
-		color: #e6edf3;
+		color: var(--text-primary);
 	}
 
 	.graph-sidebar input[type=range] {
-		accent-color: #ff007f;
+		accent-color: var(--accent-red);
 		width: 100%;
 		height: 4px;
-		background: rgba(255, 255, 255, 0.08);
+		background: var(--bg-elevated);
 		border-radius: 2px;
 		outline: none;
 		cursor: pointer;
@@ -1198,8 +1204,8 @@ import { SITE_TITLE } from '../consts';
 
 	/* Route Finder Box */
 	.route-finder-box {
-		background: rgba(255, 0, 127, 0.03);
-		border: 1px dashed rgba(255, 0, 127, 0.2);
+		background: color-mix(in srgb, var(--accent-red) 5%, transparent);
+		border: 1px dashed color-mix(in srgb, var(--accent-red) 25%, transparent);
 		padding: 10px;
 		border-radius: 8px;
 		display: flex;
@@ -1214,22 +1220,22 @@ import { SITE_TITLE } from '../consts';
 	}
 
 	.path-info {
-		background: rgba(255, 0, 127, 0.08);
-		border: 1px solid rgba(255, 0, 127, 0.25);
+		background: color-mix(in srgb, var(--accent-red) 9%, transparent);
+		border: 1px solid color-mix(in srgb, var(--accent-red) 30%, transparent);
 		border-radius: 6px;
 		padding: 8px;
 		font-size: 10px;
 		line-height: 1.4;
-		color: #ff007f;
+		color: var(--accent-red);
 	}
 
 	/* Buttons style */
 	.btn {
 		padding: 6px 10px;
-		border: 1px solid #30363d;
+		border: 1px solid var(--border);
 		border-radius: 6px;
-		background: rgba(255, 255, 255, 0.03);
-		color: #e6edf3;
+		background: var(--bg-surface);
+		color: var(--text-primary);
 		cursor: pointer;
 		font-size: 11px;
 		font-weight: 600;
@@ -1241,19 +1247,19 @@ import { SITE_TITLE } from '../consts';
 	}
 
 	.btn:hover {
-		background: rgba(255, 255, 255, 0.06);
-		border-color: #ff007f;
+		background: var(--card-bg-hover);
+		border-color: var(--accent-red);
 	}
 
 	.btn.btn-accent {
-		background: #ff007f;
-		border-color: #ff007f;
-		color: #0d1117;
+		background: var(--accent-red);
+		border-color: var(--accent-red);
+		color: #ffffff;
 	}
 
 	.btn.btn-accent:hover {
-		background: #ff3399;
-		box-shadow: 0 0 12px rgba(255, 0, 127, 0.35);
+		background: var(--accent-orange);
+		box-shadow: 0 0 12px color-mix(in srgb, var(--accent-red) 38%, transparent);
 	}
 
 	.btn-row {
@@ -1267,33 +1273,33 @@ import { SITE_TITLE } from '../consts';
 		display: flex;
 		gap: 6px;
 		padding: 10px 16px;
-		border-bottom: 1px solid #30363d;
-		background: rgba(0, 0, 0, 0.2);
+		border-bottom: 1px solid var(--border);
+		background: var(--bg-surface);
 	}
 
 	.stats-bar .stat {
 		flex: 1;
-		background: rgba(255, 255, 255, 0.01);
-		border: 1px solid #30363d;
+		background: var(--bg-inset);
+		border: 1px solid var(--border);
 		border-radius: 6px;
 		padding: 4px 6px;
 		font-size: 10px;
 		text-align: center;
-		color: #8b949e;
+		color: var(--text-muted);
 	}
 
 	.stats-bar .stat b {
 		display: block;
 		font-size: 14px;
-		color: #ff007f;
+		color: var(--accent-red);
 		font-family: var(--font-mono);
 	}
 
 	/* Details drawer */
 	#detail {
 		padding: 14px 16px;
-		border-top: 1px solid #30363d;
-		background: rgba(0, 0, 0, 0.3);
+		border-top: 1px solid var(--border);
+		background: var(--bg-surface);
 		max-height: 220px;
 		overflow-y: auto;
 		font-size: 11px;
@@ -1303,7 +1309,7 @@ import { SITE_TITLE } from '../consts';
 		font-size: 14px;
 		margin-bottom: 4px;
 		font-weight: 700;
-		color: #ffffff;
+		color: var(--text-primary);
 		border: none;
 		padding: 0;
 	}
@@ -1314,9 +1320,9 @@ import { SITE_TITLE } from '../consts';
 		border-radius: 4px;
 		font-size: 9px;
 		margin: 2px;
-		background: rgba(88, 166, 255, 0.08);
-		border: 1px solid #30363d;
-		color: #e6edf3;
+		background: color-mix(in srgb, var(--accent-blue) 10%, transparent);
+		border: 1px solid var(--border);
+		color: var(--text-primary);
 	}
 
 	#detail .neighbors {
@@ -1326,8 +1332,8 @@ import { SITE_TITLE } from '../consts';
 	#detail .neighbor-item {
 		padding: 4px 6px;
 		margin: 3px 0;
-		background: rgba(255, 255, 255, 0.01);
-		border: 1px solid #30363d;
+		background: var(--bg-inset);
+		border: 1px solid var(--border);
 		border-radius: 4px;
 		cursor: pointer;
 		transition: all 0.15s;
@@ -1338,15 +1344,15 @@ import { SITE_TITLE } from '../consts';
 	}
 
 	#detail .neighbor-item:hover {
-		background: rgba(255, 0, 127, 0.04);
-		border-color: #ff007f;
+		background: color-mix(in srgb, var(--accent-red) 6%, transparent);
+		border-color: var(--accent-red);
 	}
 
 	/* Canvas wrapping layout */
 	.canvas-wrap {
 		flex: 1;
 		position: relative;
-		background: radial-gradient(circle at 50% 50%, #0d1527 0%, #05080f 100%);
+		background: radial-gradient(circle at 50% 50%, var(--bg-surface) 0%, var(--bg-primary) 100%);
 	}
 
 	.canvas-wrap canvas {
@@ -1357,30 +1363,30 @@ import { SITE_TITLE } from '../consts';
 	#tooltip {
 		position: absolute;
 		padding: 8px 12px;
-		background: rgba(9, 13, 22, 0.95);
-		border: 1px solid #ff007f;
+		background: var(--bg-surface);
+		border: 1px solid var(--accent-red);
 		border-radius: 6px;
 		font-size: 11px;
 		pointer-events: none;
 		display: none;
 		max-width: 280px;
 		z-index: 10;
-		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8), 0 0 10px rgba(255, 0, 127, 0.2);
+		box-shadow: var(--shadow), 0 0 10px color-mix(in srgb, var(--accent-red) 20%, transparent);
 		backdrop-filter: blur(8px);
-		color: #e6edf3;
+		color: var(--text-primary);
 	}
 
 	#legend {
 		position: absolute;
 		bottom: 16px;
 		right: 16px;
-		background: rgba(9, 13, 22, 0.85);
+		background: var(--card-bg);
 		backdrop-filter: blur(12px);
-		border: 1px solid #30363d;
+		border: 1px solid var(--border);
 		border-radius: 8px;
 		padding: 10px 12px;
 		font-size: 10px;
-		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+		box-shadow: var(--shadow);
 		display: flex;
 		flex-direction: column;
 		gap: 5px;
@@ -1391,7 +1397,7 @@ import { SITE_TITLE } from '../consts';
 		align-items: center;
 		gap: 6px;
 		font-weight: 500;
-		color: #8b949e;
+		color: var(--text-muted);
 	}
 
 	.legend-dot {
@@ -1408,7 +1414,7 @@ import { SITE_TITLE } from '../consts';
 		transform: translate(-50%, -50%);
 		font-size: 14px;
 		font-weight: 600;
-		color: #8b949e;
+		color: var(--text-muted);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -1418,8 +1424,8 @@ import { SITE_TITLE } from '../consts';
 	.spinner {
 		width: 32px;
 		height: 32px;
-		border: 3px solid rgba(255, 0, 127, 0.1);
-		border-top-color: #ff007f;
+		border: 3px solid color-mix(in srgb, var(--accent-red) 12%, transparent);
+		border-top-color: var(--accent-red);
 		border-radius: 50%;
 		animation: spin 1s infinite linear;
 	}
@@ -1432,8 +1438,8 @@ import { SITE_TITLE } from '../consts';
 	}
 
 	.insight-card {
-		background: rgba(255, 255, 255, 0.01);
-		border: 1px solid #30363d;
+		background: var(--bg-inset);
+		border: 1px solid var(--border);
 		border-radius: 6px;
 		padding: 8px 10px;
 		cursor: pointer;
@@ -1441,8 +1447,8 @@ import { SITE_TITLE } from '../consts';
 	}
 
 	.insight-card:hover {
-		background: rgba(255, 255, 255, 0.03);
-		border-color: #ff007f;
+		background: var(--card-bg-hover);
+		border-color: var(--accent-red);
 	}
 
 	.insight-header {
@@ -1451,13 +1457,13 @@ import { SITE_TITLE } from '../consts';
 		font-weight: 600;
 		font-size: 11px;
 		margin-bottom: 4px;
-		color: #e6edf3;
+		color: var(--text-primary);
 	}
 
 	.insight-bar-bg {
 		width: 100%;
 		height: 4px;
-		background: rgba(255, 255, 255, 0.06);
+		background: var(--bg-elevated);
 		border-radius: 2px;
 		overflow: hidden;
 	}

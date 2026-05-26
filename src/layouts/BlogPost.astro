@@ -43,8 +43,8 @@ if (isPrivate) {
 }
 
 // Compute display values to mask sensitive strategic keywords from search crawlers
-const displayTitle = isPrivate 
-	? (lang === 'zh' ? '🔒 机密情报审查' : '🔒 Classified Intelligence') 
+const displayTitle = isPrivate
+	? (lang === 'zh' ? '机密情报审查' : 'Classified Intelligence')
 	: title;
 
 const displayDesc = isPrivate 
@@ -80,7 +80,7 @@ const displayDesc = isPrivate
 				color: var(--text-secondary, #8b949e);
 				text-decoration: none;
 			}
-			.breadcrumb a:hover { color: var(--accent-cyan, #58a6ff); }
+			.breadcrumb a:hover { color: var(--accent-blue, #2f80ed); }
 			.breadcrumb .sep { color: var(--text-muted, #484f58); }
 
 			.article-meta {
@@ -95,8 +95,8 @@ const displayDesc = isPrivate
 				border-radius: 6px;
 				font-size: 0.7rem;
 				font-weight: 600;
-				background: rgba(88,166,255,0.1);
-				color: var(--accent-cyan, #58a6ff);
+				background: color-mix(in srgb, var(--accent-blue) 10%, transparent);
+				color: var(--accent-blue, #2f80ed);
 			}
 			.lang-indicator {
 				padding: 0.15rem 0.4rem;
@@ -104,8 +104,8 @@ const displayDesc = isPrivate
 				font-weight: 600;
 				font-size: 0.65rem;
 			}
-			.lang-indicator.en { background: rgba(88,166,255,0.15); color: var(--accent-cyan, #58a6ff); }
-			.lang-indicator.zh { background: rgba(248,81,73,0.15); color: var(--accent-red, #f85149); }
+			.lang-indicator.en { background: color-mix(in srgb, var(--accent-blue) 14%, transparent); color: var(--accent-blue, #2f80ed); }
+			.lang-indicator.zh { background: color-mix(in srgb, var(--accent-red) 14%, transparent); color: var(--accent-red, #d64545); }
 			.date-text {
 				color: var(--text-muted, #484f58);
 				font-size: 0.82rem;
@@ -121,8 +121,8 @@ const displayDesc = isPrivate
 				transition: all 0.2s;
 			}
 			.counterpart-link:hover {
-				border-color: var(--accent-cyan, #58a6ff);
-				color: var(--accent-cyan, #58a6ff);
+				border-color: var(--accent-blue, #2f80ed);
+				color: var(--accent-blue, #2f80ed);
 			}
 
 			.article-title {
@@ -170,7 +170,7 @@ const displayDesc = isPrivate
 			.prose :global(.mermaid-container) {
 				margin: 1.5rem 0;
 				padding: 1.5rem;
-				background: #0d1117;
+				background: var(--bg-surface);
 				border: 1px solid var(--border, #30363d);
 				border-radius: 8px;
 				overflow-x: auto;
@@ -181,7 +181,7 @@ const displayDesc = isPrivate
 				height: auto;
 			}
 			.prose :global(pre.mermaid-error) {
-				border-color: var(--accent-red, #f85149) !important;
+				border-color: var(--accent-red, #d64545) !important;
 				opacity: 0.7;
 			}
 
@@ -195,15 +195,15 @@ const displayDesc = isPrivate
 				position: relative;
 				overflow: hidden;
 				border-radius: 12px;
-				background: #030712;
-				border: 1px solid rgba(0, 230, 118, 0.15);
+				background: var(--bg-inset);
+				border: 1px solid var(--border);
 			}
 			.lock-screen-wrapper::before {
 				content: " ";
 				display: block;
 				position: absolute;
 				top: 0; left: 0; bottom: 0; right: 0;
-				background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(0, 230, 118, 0.03), rgba(0, 176, 255, 0.02), rgba(0, 230, 118, 0.03));
+				background: linear-gradient(color-mix(in srgb, var(--bg-primary) 0%, transparent) 50%, color-mix(in srgb, var(--text-primary) 5%, transparent) 50%), linear-gradient(90deg, color-mix(in srgb, var(--accent-green) 5%, transparent), color-mix(in srgb, var(--accent-blue) 4%, transparent), color-mix(in srgb, var(--accent-green) 5%, transparent));
 				z-index: 2;
 				background-size: 100% 3px, 6px 100%;
 				pointer-events: none;
@@ -212,7 +212,7 @@ const displayDesc = isPrivate
 				content: '';
 				position: absolute;
 				top: 0; left: 0; width: 100%; height: 100%;
-				background: radial-gradient(circle, transparent 40%, rgba(3, 7, 18, 0.8) 100%);
+				background: radial-gradient(circle, transparent 40%, color-mix(in srgb, var(--bg-primary) 80%, transparent) 100%);
 				pointer-events: none;
 				z-index: 2;
 			}
@@ -231,16 +231,16 @@ const displayDesc = isPrivate
 				height: 100%;
 			}
 			.lock-card {
-				background: rgba(10, 15, 30, 0.85);
+				background: var(--card-bg);
 				backdrop-filter: blur(16px);
 				-webkit-backdrop-filter: blur(16px);
-				border: 1px solid #00e676;
+				border: 1px solid var(--accent-green);
 				border-radius: 8px;
 				padding: 2.5rem;
 				max-width: 480px;
 				width: 100%;
 				text-align: center;
-				box-shadow: 0 0 30px rgba(0, 230, 118, 0.15), inset 0 0 15px rgba(0, 230, 118, 0.05);
+				box-shadow: var(--shadow), inset 0 0 15px color-mix(in srgb, var(--accent-green) 6%, transparent);
 				transition: all 0.3s ease;
 				z-index: 3;
 				position: relative;
@@ -249,12 +249,12 @@ const displayDesc = isPrivate
 				content: '';
 				position: absolute;
 				top: 0; left: 0; right: 0; height: 3px;
-				background: linear-gradient(90deg, #00e676, #00b0ff);
+				background: linear-gradient(90deg, var(--accent-green), var(--accent-blue));
 				border-radius: 8px 8px 0 0;
 			}
 			.lock-card:hover {
-				border-color: #00b0ff;
-				box-shadow: 0 0 40px rgba(0, 176, 255, 0.25), inset 0 0 20px rgba(0, 176, 255, 0.1);
+				border-color: var(--accent-blue);
+				box-shadow: var(--shadow-hover), inset 0 0 20px color-mix(in srgb, var(--accent-blue) 10%, transparent);
 			}
 			.lock-icon {
 				font-size: 3rem;
@@ -262,33 +262,33 @@ const displayDesc = isPrivate
 				animation: pulse-glow 2.5s infinite ease-in-out;
 			}
 			@keyframes pulse-glow {
-				0%, 100% { transform: scale(1); filter: drop-shadow(0 0 5px rgba(0, 230, 118, 0.4)); }
-				50% { transform: scale(1.06); filter: drop-shadow(0 0 20px rgba(0, 230, 118, 0.8)); }
+				0%, 100% { transform: scale(1); filter: drop-shadow(0 0 5px color-mix(in srgb, var(--accent-green) 42%, transparent)); }
+				50% { transform: scale(1.04); filter: drop-shadow(0 0 18px color-mix(in srgb, var(--accent-green) 60%, transparent)); }
 			}
 			.lock-title {
 				font-size: 1.2rem;
 				font-weight: 800;
 				margin: 0 0 1rem;
 				letter-spacing: 2px;
-				color: #ffffff;
-				text-shadow: 0 0 8px rgba(0, 230, 118, 0.4);
+				color: var(--text-primary);
+				text-shadow: 0 0 8px color-mix(in srgb, var(--accent-green) 35%, transparent);
 				font-family: var(--font-mono, monospace);
 				text-transform: uppercase;
 			}
 			.lock-desc {
 				font-size: 0.82rem;
-				color: #8b949e;
+				color: var(--text-secondary);
 				line-height: 1.6;
 				margin-bottom: 1.5rem;
 				text-align: left;
-				background: rgba(0, 0, 0, 0.4);
-				border: 1px solid rgba(0, 230, 118, 0.1);
+				background: var(--bg-surface);
+				border: 1px solid color-mix(in srgb, var(--accent-green) 16%, transparent);
 				padding: 12px 16px;
 				border-radius: 6px;
 				font-family: var(--font-mono, monospace);
 			}
 			.terminal-prompt {
-				color: #00e676;
+				color: var(--accent-green);
 				margin-right: 6px;
 				font-weight: bold;
 				animation: blink 1s infinite steps(1);
@@ -305,9 +305,9 @@ const displayDesc = isPrivate
 			}
 			.input-group-cyber input[type="password"] {
 				flex: 1;
-				background: rgba(0, 0, 0, 0.6);
-				color: #00e676;
-				border: 1px solid rgba(0, 230, 118, 0.25);
+				background: var(--bg-inset);
+				color: var(--accent-green);
+				border: 1px solid color-mix(in srgb, var(--accent-green) 28%, transparent);
 				border-radius: 4px;
 				padding: 10px 16px;
 				font-size: 0.95rem;
@@ -317,12 +317,12 @@ const displayDesc = isPrivate
 				letter-spacing: 3px;
 			}
 			.input-group-cyber input[type="password"]:focus {
-				border-color: #00e676;
-				box-shadow: 0 0 10px rgba(0, 230, 118, 0.3);
+				border-color: var(--accent-green);
+				box-shadow: 0 0 10px color-mix(in srgb, var(--accent-green) 32%, transparent);
 			}
 			.input-group-cyber input.input-error {
-				border-color: #f85149;
-				color: #f85149;
+				border-color: var(--accent-red);
+				color: var(--accent-red);
 				animation: shake 0.3s ease;
 			}
 			@keyframes shake {
@@ -332,8 +332,8 @@ const displayDesc = isPrivate
 			}
 			.btn-cyber {
 				background: transparent;
-				color: #00e676;
-				border: 1px solid #00e676;
+				color: var(--accent-green);
+				border: 1px solid var(--accent-green);
 				border-radius: 4px;
 				padding: 10px 20px;
 				font-size: 0.85rem;
@@ -344,11 +344,11 @@ const displayDesc = isPrivate
 				font-family: var(--font-mono, monospace);
 			}
 			.btn-cyber:hover {
-				background: rgba(0, 230, 118, 0.1);
-				box-shadow: 0 0 15px rgba(0, 230, 118, 0.3);
+				background: color-mix(in srgb, var(--accent-green) 12%, transparent);
+				box-shadow: 0 0 15px color-mix(in srgb, var(--accent-green) 32%, transparent);
 			}
 			.error-msg {
-				color: #f85149;
+				color: var(--accent-red);
 				font-size: 0.8rem;
 				font-weight: bold;
 				margin-top: 0.5rem;
@@ -381,7 +381,7 @@ const displayDesc = isPrivate
 						)}
 						{counterpartUrl && (
 							<a href={counterpartUrl} class="counterpart-link" id="counterpart-link" data-url={counterpartUrl}>
-								{lang === 'zh' ? '🇺🇸 Read in English' : '🇨🇳 阅读中文版'}
+								{lang === 'zh' ? 'Read in English' : '阅读中文版'}
 							</a>
 						)}
 					</div>
@@ -394,13 +394,13 @@ const displayDesc = isPrivate
 							<div class="lock-screen-wrapper">
 								<div class="matrix-bg" id="matrix-rain"></div>
 								<div class="lock-card">
-									<div class="lock-icon">🔒</div>
+									<div class="lock-icon">[LOCK]</div>
 									<h2 class="lock-title">
 										{lang === 'zh' ? 'SECURE COGNITIVE GATEWAY' : 'SECURE COGNITIVE GATEWAY'}
 									</h2>
 									<div class="lock-desc">
-										<div><span style="color:#00b0ff;">[SECURE_SHELL]:</span> ACTIVE</div>
-										<div><span style="color:#00e676;">[PERIMETER]:</span> SAFE-GATED</div>
+										<div><span style="color:var(--accent-blue);">[SECURE_SHELL]:</span> ACTIVE</div>
+										<div><span style="color:var(--accent-green);">[PERIMETER]:</span> SAFE-GATED</div>
 										<div style="margin-top: 8px;">{lang === 'zh' 
 											? '此报告属于AI研究所机密研究。请输入授权解密密钥以加载数据流。' 
 											: 'Classified multi-agent research payload. Enter cryptographic key to resolve data-stream.'}</div>
@@ -448,22 +448,25 @@ const displayDesc = isPrivate
 
 				// Dynamic import from CDN
 				const { default: mermaid } = await import('https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs');
+				const styles = getComputedStyle(document.documentElement);
+				const themeValue = (name, fallback) => styles.getPropertyValue(name).trim() || fallback;
+				const isLight = document.documentElement.dataset.theme === 'light';
 
 				mermaid.initialize({
 					startOnLoad: false,
-					theme: 'dark',
+					theme: isLight ? 'base' : 'dark',
 					themeVariables: {
-						darkMode: true,
-						background: '#161b22',
-						primaryColor: '#1f6feb',
-						primaryTextColor: '#e6edf3',
-						primaryBorderColor: '#30363d',
-						lineColor: '#8b949e',
-						secondaryColor: '#21262d',
-						tertiaryColor: '#161b22',
+						darkMode: !isLight,
+						background: themeValue('--bg-surface', '#0b0b0b'),
+						primaryColor: themeValue('--accent-blue', '#2f80ed'),
+						primaryTextColor: themeValue('--text-primary', '#f5f5f5'),
+						primaryBorderColor: themeValue('--border', '#2d2d2d'),
+						lineColor: themeValue('--text-muted', '#747474'),
+						secondaryColor: themeValue('--bg-elevated', '#151515'),
+						tertiaryColor: themeValue('--bg-surface', '#0b0b0b'),
 						fontFamily: 'Inter, sans-serif',
 						fontSize: '14px',
-						nodeTextColor: '#e6edf3',
+						nodeTextColor: themeValue('--text-primary', '#f5f5f5'),
 					},
 					securityLevel: 'loose',
 					fontFamily: 'Inter, sans-serif',
@@ -541,10 +544,12 @@ const displayDesc = isPrivate
 						const ypos = Array(columns).fill(0);
 
 						function matrix() {
-							ctx.fillStyle = 'rgba(3, 7, 18, 0.05)';
+							const styles = getComputedStyle(document.documentElement);
+							const isLight = document.documentElement.dataset.theme === 'light';
+							ctx.fillStyle = isLight ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.08)';
 							ctx.fillRect(0, 0, w, h);
 							
-							ctx.fillStyle = '#00e676';
+							ctx.fillStyle = styles.getPropertyValue('--accent-green').trim() || '#169b62';
 							ctx.font = '8px monospace';
 							
 							ypos.forEach((y, index) => {

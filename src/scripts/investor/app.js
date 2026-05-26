@@ -27,6 +27,15 @@ const KNOWN_VIEWS = new Set([
   "reports",
   "analysts",
 ]);
+const DAILY_SECTION_HASHES = new Set([
+  "dailyOverview",
+  "dailyReports",
+  "dailyMomentum",
+  "dailyChains",
+  "dailyRisks",
+  "dailyHeatmap",
+  "dailyHighlights",
+]);
 
 function readSiteData() {
   const jsonScript = document.querySelector("#institute-site-data");
@@ -46,9 +55,17 @@ export function mountInvestorConsole() {
     return;
   }
 
-  const initialHash = location.hash.replace("#", "");
+  function resolveHash(hashValue) {
+    const hash = hashValue.replace("#", "");
+    if (KNOWN_VIEWS.has(hash)) return { view: hash, anchor: "" };
+    if (DAILY_SECTION_HASHES.has(hash)) return { view: "daily", anchor: hash };
+    return { view: "dashboard", anchor: "" };
+  }
+
+  const initial = resolveHash(location.hash);
+  let pendingAnchor = initial.anchor;
   const state = {
-    view: KNOWN_VIEWS.has(initialHash) ? initialHash : "dashboard",
+    view: initial.view,
     query: "",
     tag: "",
     analyst: "",
@@ -104,6 +121,11 @@ export function mountInvestorConsole() {
     };
 
     (renderers[state.view] || renderDashboard)(context);
+    if (pendingAnchor) {
+      const anchor = pendingAnchor;
+      pendingAnchor = "";
+      requestAnimationFrame(() => document.getElementById(anchor)?.scrollIntoView({ behavior: "smooth", block: "start" }));
+    }
     document.querySelectorAll("#app [data-view]").forEach((button) => {
       button.addEventListener("click", () => setView(button.dataset.view));
     });
@@ -117,9 +139,10 @@ export function mountInvestorConsole() {
     render();
   });
   window.addEventListener("hashchange", () => {
-    const next = location.hash.replace("#", "");
-    if (KNOWN_VIEWS.has(next) && next !== state.view) {
-      state.view = next;
+    const next = resolveHash(location.hash);
+    if (next.view !== state.view || next.anchor) {
+      state.view = next.view;
+      pendingAnchor = next.anchor;
       render();
     }
   });

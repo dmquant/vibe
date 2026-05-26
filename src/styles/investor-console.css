@@ -1,18 +1,20 @@
 /* Scoped investor console styles ported from Codex frontend. */
 .investor-console {
-  color-scheme: light;
-  --bg: #f4f1ea;
-  --paper: #fffdfa;
-  --panel: #ffffff;
-  --ink: #111827;
-  --muted: #667085;
-  --line: #ded6c9;
-  --blue: #285b9d;
-  --green: #237a5b;
-  --red: #b43d49;
-  --gold: #a8731b;
-  --slate: #475569;
-  --shadow: 0 18px 46px rgba(32, 41, 57, 0.09);
+  color-scheme: inherit;
+  --bg: var(--bg-primary);
+  --paper: var(--bg-surface);
+  --panel: var(--card-bg);
+  --ink: var(--text-primary);
+  --muted: var(--text-secondary);
+  --line: var(--border);
+  --blue: var(--accent-blue);
+  --green: var(--accent-green);
+  --red: var(--accent-red);
+  --gold: var(--accent-yellow);
+  --orange: var(--accent-orange);
+  --slate: var(--text-secondary);
+  --shadow: var(--shadow);
+  --hover-bg: var(--bg-elevated);
 }
 .investor-console * { box-sizing: border-box; }
 .investor-console { scroll-behavior: smooth; }
@@ -46,8 +48,12 @@
   justify-content: space-between;
   gap: 28px;
   padding: 32px 40px 24px;
-  border-top: 6px solid var(--blue);
-  background: linear-gradient(180deg, #fffdf8 0%, #f7f3ea 100%);
+  border-top: 1px solid var(--line);
+  background:
+    linear-gradient(var(--grid-faint) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-faint) 1px, transparent 1px),
+    var(--bg);
+  background-size: 28px 28px;
 }
 .investor-console .app-header h1 { margin: 8px 0 8px; font-size: 38px; letter-spacing: 0; }
 .investor-console .app-header p { margin: 0; color: var(--muted); max-width: 760px; }
@@ -83,7 +89,7 @@
   font-weight: 700;
   cursor: pointer;
 }
-.investor-console button:hover, .investor-console button.active, .investor-console .nav-tabs a:hover { border-color: var(--blue); color: var(--blue); background: #f1f6ff; }
+.investor-console button:hover, .investor-console button.active, .investor-console .nav-tabs a:hover { border-color: var(--border-strong); color: var(--ink); background: var(--hover-bg); }
 .investor-console .nav-tabs a {
   display: inline-flex;
   align-items: center;
@@ -97,7 +103,7 @@
   display: flex;
   gap: 8px;
   padding: 10px 40px;
-  background: rgba(244, 241, 234, .94);
+  background: var(--nav-bg);
   backdrop-filter: blur(10px);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -168,20 +174,29 @@
 }
 .investor-console .daily-brief-board {
   margin-bottom: 16px;
-  color-scheme: dark;
+  color-scheme: inherit;
+  --signal-bg: var(--bg-primary);
+  --signal-panel: var(--bg-surface);
+  --signal-panel-soft: var(--bg-elevated);
+  --signal-ink: var(--text-primary);
+  --signal-muted: var(--text-secondary);
+  --signal-faint: var(--text-muted);
+  --signal-line: var(--border);
+  --signal-strong: var(--border-strong);
+  --signal-grid: var(--grid-faint);
 }
 .investor-console .daily-board-terminal {
   position: relative;
   overflow: hidden;
   padding: 26px;
-  border: 1px solid #565656;
+  border: 1px solid var(--signal-strong);
   border-radius: 8px;
   background:
-    linear-gradient(rgba(255, 255, 255, .05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, .045) 1px, transparent 1px),
-    #000;
+    linear-gradient(var(--signal-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--signal-grid) 1px, transparent 1px),
+    var(--signal-bg);
   background-size: 44px 44px, 44px 44px, auto;
-  box-shadow: 0 20px 46px rgba(0, 0, 0, .22);
+  box-shadow: var(--shadow);
 }
 .investor-console .daily-board-terminal::before {
   content: "";
@@ -225,17 +240,17 @@
   margin: 8px 0 0;
   font-size: 52px;
   line-height: 1.18;
-  color: #f7f7f7;
+  color: var(--signal-ink);
   font-weight: 950;
 }
 .investor-console .daily-board-head p {
   margin: 6px 0 0;
-  color: #d7d7d7;
+  color: var(--signal-muted);
   font-size: 17px;
   font-weight: 800;
 }
 .investor-console .daily-brief-board .eyebrow {
-  color: #eeeeee;
+  color: var(--signal-muted);
   letter-spacing: .08em;
 }
 .investor-console .daily-board-actions {
@@ -269,10 +284,10 @@
 }
 .investor-console .daily-brief-board .daily-stat-card {
   min-height: 92px;
-  border-color: #555;
-  border-left: 1px solid #555;
-  background: rgba(12, 12, 12, .92);
-  color: #f5f5f5;
+  border-color: var(--signal-line);
+  border-left: 1px solid var(--signal-line);
+  background: var(--signal-panel);
+  color: var(--signal-ink);
 }
 .investor-console .daily-stat-card:hover,
 .investor-console .daily-signal-card:hover,
@@ -290,7 +305,7 @@
 }
 .investor-console .daily-brief-board .daily-stat-card span,
 .investor-console .daily-brief-board .daily-stat-card em {
-  color: #bdbdbd;
+  color: var(--signal-muted);
 }
 .investor-console .daily-stat-card strong {
   color: var(--accent);
@@ -298,7 +313,7 @@
   line-height: 1;
 }
 .investor-console .daily-brief-board .daily-stat-card strong {
-  color: #ffffff;
+  color: var(--signal-ink);
   font-size: 32px;
 }
 .investor-console .daily-stat-card em {
@@ -320,15 +335,15 @@
   align-content: space-between;
   gap: 8px;
   padding: 10px 12px 14px;
-  border: 1px solid #777;
+  border: 1px solid var(--signal-line);
   border-radius: 0;
-  background: rgba(0, 0, 0, .78);
-  color: #f7f7f7;
+  background: var(--signal-panel);
+  color: var(--signal-ink);
   text-decoration: none;
 }
 .investor-console .daily-brief-tile:hover {
-  border-color: #ffffff;
-  background: rgba(255, 255, 255, .08);
+  border-color: var(--signal-strong);
+  background: var(--signal-panel-soft);
   text-decoration: none;
 }
 .investor-console .daily-brief-tile span {
@@ -336,17 +351,17 @@
   height: 28px;
   display: grid;
   place-items: center;
-  border: 1px solid #bdbdbd;
-  color: #f5f5f5;
+  border: 1px solid var(--signal-line);
+  color: var(--signal-ink);
   font-size: 16px;
   font-weight: 950;
 }
 .investor-console .daily-brief-tile strong {
-  color: #ffffff;
+  color: var(--signal-ink);
   font-size: 19px;
 }
 .investor-console .daily-brief-tile em {
-  color: #d4d4d4;
+  color: var(--signal-muted);
   font-size: 15px;
   font-style: normal;
   font-weight: 800;
@@ -368,8 +383,8 @@
 .investor-console .daily-risk-preview,
 .investor-console .daily-flow-panel,
 .investor-console .daily-market-tape {
-  border: 1px solid #666;
-  background: rgba(0, 0, 0, .82);
+  border: 1px solid var(--signal-line);
+  background: var(--signal-panel);
   padding: 12px;
 }
 .investor-console .daily-key-panel { grid-area: keys; }
@@ -380,8 +395,8 @@
 .investor-console .daily-panel-title {
   margin-bottom: 10px;
   padding-bottom: 8px;
-  border-bottom: 1px dashed #565656;
-  color: #f2f2f2;
+  border-bottom: 1px dashed var(--signal-line);
+  color: var(--signal-ink);
   font-size: 13px;
   font-weight: 950;
 }
@@ -390,17 +405,17 @@
   gap: 7px;
   margin-bottom: 10px;
   padding: 10px 0 12px;
-  border-bottom: 1px solid #3f3f3f;
-  color: #f5f5f5;
+  border-bottom: 1px solid var(--signal-line);
+  color: var(--signal-ink);
   text-decoration: none;
 }
 .investor-console .daily-main-callout strong {
-  color: #ffffff;
+  color: var(--signal-ink);
   font-size: 17px;
   line-height: 1.35;
 }
 .investor-console .daily-main-callout span {
-  color: #cfcfcf;
+  color: var(--signal-muted);
   font-size: 13px;
   line-height: 1.6;
 }
@@ -415,14 +430,14 @@
   align-content: start;
   gap: 5px;
   padding: 10px;
-  border: 1px solid #444;
+  border: 1px solid var(--signal-line);
   border-radius: 0;
-  background: rgba(255, 255, 255, .04);
-  color: #f2f2f2;
+  background: var(--signal-panel-soft);
+  color: var(--signal-ink);
   text-decoration: none;
 }
 .investor-console .daily-signal-card strong {
-  color: #ffffff;
+  color: var(--signal-ink);
   font-size: 14px;
 }
 .investor-console .daily-signal-card span {
@@ -430,7 +445,7 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  color: #cfcfcf;
+  color: var(--signal-muted);
   font-size: 13px;
   line-height: 1.5;
 }
@@ -443,6 +458,12 @@
     radial-gradient(ellipse at 22% 38%, rgba(255, 255, 255, .28) 0 1px, transparent 2px) 0 0 / 13px 13px,
     radial-gradient(ellipse at 64% 48%, rgba(255, 255, 255, .22) 0 1px, transparent 2px) 0 0 / 17px 17px,
     #050505;
+}
+.investor-console .daily-leaflet-map {
+  height: 190px;
+  border: 1px solid var(--signal-line);
+  background: var(--signal-panel-soft);
+  filter: grayscale(.88) contrast(1.06);
 }
 .investor-console .daily-map-visual i {
   position: absolute;
@@ -463,8 +484,9 @@
 }
 .investor-console .daily-map-tags a {
   padding: 5px 7px;
-  border: 1px solid #666;
-  color: #f5f5f5;
+  border: 1px solid var(--signal-line);
+  border-left: 3px solid var(--accent, var(--signal-ink));
+  color: var(--signal-muted);
   font-size: 12px;
   text-decoration: none;
 }
@@ -478,14 +500,14 @@
   min-height: 42px;
   display: grid;
   place-items: center;
-  border: 1px solid #6b6b6b;
-  color: #f5f5f5;
+  border: 1px solid var(--signal-line);
+  color: var(--signal-ink);
   font-weight: 900;
   text-decoration: none;
 }
-.investor-console .daily-risk-mini-grid .low { background: rgba(255, 255, 255, .08); }
-.investor-console .daily-risk-mini-grid .mid { background: rgba(255, 255, 255, .14); }
-.investor-console .daily-risk-mini-grid .high { background: rgba(255, 255, 255, .22); }
+.investor-console .daily-risk-mini-grid .low { background: var(--signal-panel-soft); }
+.investor-console .daily-risk-mini-grid .mid { background: color-mix(in srgb, var(--signal-panel-soft) 82%, var(--accent-yellow) 18%); }
+.investor-console .daily-risk-mini-grid .high { background: color-mix(in srgb, var(--signal-panel-soft) 82%, var(--accent-red) 18%); }
 .investor-console .daily-flow-panel {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -499,16 +521,16 @@
   display: grid;
   gap: 4px;
   padding: 9px;
-  border-left: 1px solid #777;
-  color: #f5f5f5;
+  border-left: 1px solid var(--signal-line);
+  color: var(--signal-ink);
   text-decoration: none;
 }
 .investor-console .daily-flow-panel a span {
-  color: #c8c8c8;
+  color: var(--signal-muted);
   font-size: 12px;
 }
 .investor-console .daily-flow-panel a strong {
-  color: #ffffff;
+  color: var(--signal-ink);
   font-size: 22px;
 }
 .investor-console .daily-flow-panel a em {
@@ -518,7 +540,7 @@
 }
 .investor-console .daily-quote-table {
   display: grid;
-  border-top: 1px solid #565656;
+  border-top: 1px solid var(--signal-line);
 }
 .investor-console .daily-quote-row {
   display: grid;
@@ -527,8 +549,8 @@
   gap: 8px;
   min-height: 33px;
   padding: 6px 0;
-  border-bottom: 1px solid #3e3e3e;
-  color: #f5f5f5;
+  border-bottom: 1px solid var(--signal-line);
+  color: var(--signal-ink);
   text-decoration: none;
 }
 .investor-console .daily-quote-row:hover,
@@ -536,28 +558,28 @@
 .investor-console .daily-flow-panel a:hover,
 .investor-console .daily-watch-strip a:hover,
 .investor-console .daily-main-callout:hover {
-  background: rgba(255, 255, 255, .08);
+  background: var(--signal-panel-soft);
   text-decoration: none;
 }
 .investor-console .daily-quote-row span {
-  color: #eeeeee;
+  color: var(--signal-muted);
   font-weight: 850;
 }
 .investor-console .daily-quote-row strong {
-  color: #ffffff;
+  color: var(--signal-ink);
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
   font-size: 14px;
   text-align: right;
 }
 .investor-console .daily-quote-row em {
-  color: #cfcfcf;
+  color: var(--signal-muted);
   font-size: 12px;
   font-style: normal;
   text-align: right;
 }
 .investor-console .daily-quote-empty {
   padding: 18px 0;
-  color: #a8a8a8;
+  color: var(--signal-muted);
 }
 .investor-console .daily-watch-strip {
   position: relative;
@@ -571,27 +593,27 @@
   display: grid;
   gap: 4px;
   padding: 9px 10px;
-  border: 1px dashed #606060;
-  color: #f2f2f2;
+  border: 1px dashed var(--signal-line);
+  color: var(--signal-ink);
   text-decoration: none;
 }
 .investor-console .daily-watch-strip strong {
-  color: #ffffff;
+  color: var(--signal-ink);
   font-size: 13px;
 }
 .investor-console .daily-watch-strip span {
-  color: #bfbfbf;
+  color: var(--signal-muted);
   font-size: 12px;
 }
 .investor-console .daily-market-read {
   display: block;
   margin-top: 16px;
   padding: 12px 14px;
-  border: 1px solid #777;
-  border-left: 6px solid #f2f2f2;
+  border: 1px solid var(--signal-line);
+  border-left: 6px solid var(--accent-blue);
   border-radius: 0;
-  background: rgba(255, 255, 255, .06);
-  color: #f1f1f1;
+  background: var(--signal-panel-soft);
+  color: var(--signal-ink);
   font-size: 15px;
   font-weight: 700;
   line-height: 1.65;
@@ -613,19 +635,19 @@
   text-decoration: none;
 }
 .investor-console .daily-brief-board .daily-date {
-  border-color: #777;
-  background: #111;
-  color: #fff;
+  border-color: var(--signal-line);
+  background: var(--signal-panel);
+  color: var(--signal-ink);
 }
 .investor-console .daily-brief-board .download-button {
-  border-color: #f5f5f5;
-  background: #f5f5f5;
-  color: #000;
+  border-color: var(--signal-ink);
+  background: var(--signal-ink);
+  color: var(--signal-bg);
 }
 .investor-console .daily-brief-board .download-button:hover {
-  border-color: #ffffff;
-  background: #ffffff;
-  color: #000;
+  border-color: var(--accent-blue);
+  background: var(--accent-blue);
+  color: #fff;
 }
 .investor-console .download-button:hover {
   background: #1f4d84;
@@ -1965,6 +1987,103 @@
 .investor-console .markdown-report pre { overflow: auto; background: #111827; color: #f8fafc; padding: 16px; border-radius: 6px; }
 .investor-console .markdown-report code { background: #f1f5f9; padding: 2px 5px; border-radius: 4px; }
 .investor-console .markdown-report pre code { background: transparent; padding: 0; }
+
+/* Monochrome theme overrides for inherited Codex research views. */
+.investor-console .daily-date,
+.investor-console .synthesis-card,
+.investor-console .synthesis-point,
+.investor-console .watch-item,
+.investor-console .flow-node,
+.investor-console .risk-cell,
+.investor-console .risk-token,
+.investor-console .source-note,
+.investor-console .source-ledger span,
+.investor-console .tracker-score,
+.investor-console .score-chip,
+.investor-console .deep-card,
+.investor-console .deep-reader-rail,
+.investor-console .deep-report-shell,
+.investor-console .deep-download-grid a,
+.investor-console .markdown-report .mdx-fallback {
+  background: var(--paper);
+  border-color: var(--line);
+  color: var(--ink);
+}
+.investor-console .graph-stage,
+.investor-console .radar-wrap {
+  background:
+    linear-gradient(var(--grid-faint) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-faint) 1px, transparent 1px),
+    var(--paper);
+  background-size: 28px 28px;
+}
+.investor-console .synthesis-card {
+  border-left-color: var(--blue);
+}
+.investor-console .synthesis-lead,
+.investor-console .synthesis-point p,
+.investor-console .deep-prose p,
+.investor-console .deep-prose li {
+  color: var(--muted);
+}
+.investor-console .synthesis-read {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--orange);
+  color: var(--ink);
+}
+.investor-console .tag,
+.investor-console .status-pill,
+.investor-console .score-badge,
+.investor-console .direction-pill,
+.investor-console .stance-badge {
+  background: var(--paper);
+  border: 1px solid var(--line);
+}
+.investor-console .bar-track,
+.investor-console .chain-meter,
+.investor-console .conviction-meter {
+  background: var(--bg-elevated);
+}
+.investor-console .data-table tr:hover td {
+  background: var(--bg-elevated);
+}
+.investor-console .heat-cell {
+  color: var(--ink);
+}
+.investor-console .deep-prose h2,
+.investor-console .deep-prose h3,
+.investor-console .deep-prose p,
+.investor-console .deep-prose li,
+.investor-console .deep-toc a {
+  color: var(--ink);
+}
+.investor-console .deep-prose blockquote,
+.investor-console .markdown-report blockquote,
+.investor-console .deep-prose th,
+.investor-console .deep-prose tr:nth-child(even) td,
+.investor-console .deep-prose code,
+.investor-console .markdown-report th,
+.investor-console .markdown-report code {
+  background: var(--bg-elevated);
+  color: var(--ink);
+}
+.investor-console .deep-prose figure,
+.investor-console .deep-prose img {
+  background: var(--paper);
+  border-color: var(--line);
+}
+:root[data-theme="light"] .investor-console .daily-board-terminal::before {
+  border-color: rgba(0, 0, 0, .16);
+  background:
+    radial-gradient(circle at 20% 50%, rgba(0, 0, 0, .9) 0 3px, transparent 4px),
+    radial-gradient(circle at 48% 32%, rgba(0, 0, 0, .8) 0 2px, transparent 3px),
+    radial-gradient(circle at 78% 60%, rgba(0, 0, 0, .7) 0 2px, transparent 3px);
+}
+:root[data-theme="light"] .investor-console .daily-board-terminal::after {
+  background:
+    linear-gradient(90deg, transparent 0 8%, rgba(0, 0, 0, .55) 8% 10%, transparent 10% 16%, rgba(0, 0, 0, .8) 16% 18%, transparent 18% 24%, rgba(0, 0, 0, .45) 24% 26%, transparent 26% 32%, rgba(0, 0, 0, .9) 32% 34%, transparent 34% 40%, rgba(0, 0, 0, .55) 40% 42%, transparent 42% 48%, rgba(0, 0, 0, .72) 48% 50%, transparent 50% 56%, rgba(0, 0, 0, .95) 56% 58%, transparent 58% 64%, rgba(0, 0, 0, .62) 64% 66%, transparent 66% 72%, rgba(0, 0, 0, .45) 72% 74%, transparent 74% 80%, rgba(0, 0, 0, .7) 80% 82%, transparent 82% 100%);
+}
 @media (max-width: 980px) {
   .investor-console .app-header, .investor-console .hero-layout, .investor-console .daily-hero, .investor-console .daily-board-head, .investor-console .risk-grid, .investor-console .report-shell, .investor-console .graph-layout, .investor-console .delta-grid, .investor-console .thesis-detail, .investor-console .radar-hero, .investor-console .tracker-layout, .investor-console .tracker-detail, .investor-console .analyst-tracker-layout, .investor-console .analyst-focus-grid, .investor-console .deep-reading-hero, .investor-console .deep-download-panel, .investor-console .deep-report-layout, .investor-console .deep-latest { grid-template-columns: 1fr; display: grid; }
   .investor-console .app-header { align-items: stretch; padding: 24px 18px; }

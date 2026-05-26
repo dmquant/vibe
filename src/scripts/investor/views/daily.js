@@ -1,6 +1,18 @@
 import { esc, fmt, sectionHead, truncate } from "../utils.js";
+import { mountSignalMap } from "../../signal-map.js";
 
 const link = (href, fallback = "#dailyReports") => esc(href || fallback);
+const MAP_ACCENTS = ["#2f80ed", "#169b62", "#d64545", "#d7a316", "#e46f2e"];
+const MAP_COORDINATES = {
+  "宏观通胀传导": [39.5, -98.35],
+  "AI 基础设施": [37.34, -121.89],
+  "工业供给瓶颈": [31.23, 121.47],
+  "电力与电网": [52.52, 13.4],
+  "半导体与存储": [24.8, 120.99],
+  "消费与生产率": [35.68, 139.76],
+};
+const FALLBACK_COORDINATES = [[51.5, -0.1], [1.35, 103.82], [19.07, 72.88], [-33.86, 151.21]];
+let latestDailyMapBrief = null;
 
 const MARKET_LABELS_ZH = {
   DOW: "道琼斯",
@@ -73,6 +85,20 @@ function normalizedMarketRows(brief) {
   return [];
 }
 
+function dailyMapItems(brief) {
+  return (brief.chainRadar || []).slice(0, 6).map((item, index) => ({
+    label: item.label,
+    heat: item.heat,
+    latest: item.latest,
+    recent: item.recent,
+    risk: item.risk,
+    href: item.evidence?.[0]?.href || "#dailyReports",
+    evidenceTitle: item.evidence?.[0]?.title || "",
+    coords: MAP_COORDINATES[item.label] || FALLBACK_COORDINATES[index % FALLBACK_COORDINATES.length],
+    accent: MAP_ACCENTS[index % MAP_ACCENTS.length],
+  }));
+}
+
 function renderBriefingTiles() {
   return BRIEFING_TILES.map((tile) => `<a class="daily-brief-tile" href="${link(tile.href)}" ${tile.query ? `data-daily-query="${esc(tile.query)}"` : ""}>
     <span>${esc(tile.no)}</span>
@@ -85,11 +111,9 @@ function renderDailyBoardMap(brief) {
   const chains = (brief.chainRadar || []).slice(0, 5);
   return `<div class="daily-map-panel">
     <div class="daily-panel-title">全球风险地图（隔夜变动）</div>
-    <div class="daily-map-visual" aria-hidden="true">
-      <i></i><i></i><i></i><i></i><i></i>
-    </div>
+    <div id="dailySignalMap" class="daily-leaflet-map" aria-label="全球研究链地图"></div>
     <div class="daily-map-tags">
-      ${chains.map((item) => `<a href="#dailyReports" data-daily-chain="${esc(item.label)}">${esc(item.label)}</a>`).join("")}
+      ${chains.map((item, index) => `<a href="#dailyReports" data-daily-chain="${esc(item.label)}" style="--accent:${MAP_ACCENTS[index % MAP_ACCENTS.length]}">${esc(item.label)}</a>`).join("")}
     </div>
   </div>`;
 }
@@ -201,7 +225,7 @@ function renderDailyTrend(brief) {
   const pad = 42;
   const values = series.flatMap((item) => item.values || []);
   const max = Math.max(1, ...values);
-  const colors = ["#285b9d", "#237a5b", "#b43d49", "#a8731b", "#6856c6"];
+  const colors = MAP_ACCENTS;
   const x = (idx) => pad + (dates.length <= 1 ? 0 : idx * (W - pad * 2) / (dates.length - 1));
   const y = (value) => H - pad - (Number(value || 0) / max) * (H - pad * 2);
   const grid = [0, .25, .5, .75, 1].map((ratio) => {
@@ -230,13 +254,13 @@ function renderDailyTrend(brief) {
 
 function renderChainRadar(brief) {
   const max = Math.max(1, ...brief.chainRadar.map((item) => Number(item.heat || 0)));
-  return `<div class="chain-radar">${brief.chainRadar.slice(0, 6).map((item) => `
+  return `<div class="chain-radar">${brief.chainRadar.slice(0, 6).map((item, index) => `
     <article class="chain-card">
       <div class="chain-card-head">
         <h3><a href="#dailyReports" data-daily-chain="${esc(item.label)}">${esc(item.label)}</a></h3>
         <span class="score-badge">${fmt(item.heat)}</span>
       </div>
-      <a class="chain-meter" href="#dailyReports" data-daily-chain="${esc(item.label)}" aria-label="${esc(item.label)} 证据表筛选"><span style="width:${Math.max(4, item.heat / max * 100)}%; background:${esc(item.color)}"></span></a>
+      <a class="chain-meter" href="#dailyReports" data-daily-chain="${esc(item.label)}" aria-label="${esc(item.label)} 证据表筛选"><span style="width:${Math.max(4, item.heat / max * 100)}%; background:${MAP_ACCENTS[index % MAP_ACCENTS.length]}"></span></a>
       <div class="mini-stats" style="margin-top:8px">
         <a href="#dailyReports" data-daily-chain="${esc(item.label)}">今日 <strong>${fmt(item.latest)}</strong></a>
         <a href="#dailyReports" data-daily-chain="${esc(item.label)}">近七日 <strong>${fmt(item.recent)}</strong></a>
@@ -407,6 +431,8 @@ export function renderDaily(context) {
         </table>
       </div>
     </section>`;
+  latestDailyMapBrief = brief;
+  mountSignalMap(app.querySelector("#dailySignalMap"), dailyMapItems(brief), { maxZoom: 3 });
   document.querySelector("#dailySearch").addEventListener("input", (event) => { state.dailyQuery = event.target.value; renderDaily(context); });
   document.querySelector("#dailyChain").addEventListener("change", (event) => { state.dailyChain = event.target.value; renderDaily(context); });
   app.querySelectorAll("[data-daily-query]").forEach((item) => {
@@ -436,5 +462,12 @@ export function renderDaily(context) {
     row.addEventListener("keydown", (event) => {
       if (event.key === "Enter") window.location.href = row.dataset.rowHref;
     });
+  });
+}
+
+if (typeof window !== "undefined") {
+  window.addEventListener("theme-change", () => {
+    if (!latestDailyMapBrief) return;
+    mountSignalMap(document.querySelector("#dailySignalMap"), dailyMapItems(latestDailyMapBrief), { maxZoom: 3 });
   });
 }
