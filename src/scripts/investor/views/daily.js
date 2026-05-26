@@ -1,4 +1,66 @@
-import { esc, fmt, metric, sectionHead, tags, truncate } from "../utils.js";
+import { esc, fmt, sectionHead, truncate } from "../utils.js";
+
+const link = (href, fallback = "#dailyReports") => esc(href || fallback);
+
+function dailyStat(label, value, color, href, detail = "") {
+  return `<a class="daily-stat-card" href="${link(href)}" style="--accent:${esc(color)}">
+    <span>${esc(label)}</span>
+    <strong>${fmt(value)}</strong>
+    ${detail ? `<em>${esc(detail)}</em>` : ""}
+  </a>`;
+}
+
+function dailySignalHref(item, label) {
+  if (item?.href) return item.href;
+  if (/变化|动量|升温|降温/.test(label || item?.label || "")) return "#dailyMomentum";
+  if (/风险/.test(label || item?.label || "")) return "#dailyRisks";
+  if (/证据|链条/.test(label || item?.label || "")) return "#dailyChains";
+  return "#dailyReports";
+}
+
+function renderDailyBriefBoard(brief) {
+  const synthesis = brief.synthesis || {};
+  const bullets = Array.isArray(synthesis.bullets) ? synthesis.bullets : [];
+  const headline = synthesis.headline || "每日研究简报";
+  const lead = synthesis.lead || "今日研究结果已归并为可点击的结论、变化、风险和证据入口。";
+  const firstHighlight = (brief.highlights || [])[0];
+  return `<section class="daily-brief-board" id="dailyOverview">
+    <div class="daily-board-head">
+      <div>
+        <div class="eyebrow">AI Institute · Daily Investor Brief</div>
+        <h2>${esc(headline)}</h2>
+      </div>
+      <div class="daily-board-actions">
+        <a class="daily-date" href="${link(brief.docxHref || brief.docxLatestHref, "#dailyReports")}" download>${esc(brief.date)}</a>
+        <a class="download-button" href="${link(brief.docxHref || brief.docxLatestHref, "#dailyReports")}" download>下载 DOCX</a>
+      </div>
+    </div>
+    <div class="daily-board-panel">
+      <p class="daily-lead">${esc(lead)}</p>
+      <div class="daily-stat-grid">
+        ${dailyStat("今日报告", brief.stats.reports, "var(--blue)", "#dailyReports", "打开证据表")}
+        ${dailyStat("活跃分析师", brief.stats.analysts, "var(--green)", "#dailyHeatmap", "查看活跃度")}
+        ${dailyStat("活跃链条", brief.stats.activeChains, "var(--gold)", "#dailyChains", "查看雷达")}
+        ${dailyStat("风险信号", brief.stats.riskItems, "var(--red)", "#dailyRisks", "查看矩阵")}
+      </div>
+      <div class="daily-signal-grid">
+        ${bullets.map((item) => {
+          const href = dailySignalHref(item, item.label);
+          return `<a class="daily-signal-card" href="${link(href)}">
+            <strong>${esc(item.label || "要点")}</strong>
+            <span>${esc(item.text || "")}</span>
+          </a>`;
+        }).join("") || (firstHighlight ? `<a class="daily-signal-card" href="${link(firstHighlight.href)}">
+          <strong>主线判断</strong>
+          <span>${esc(firstHighlight.title)}</span>
+        </a>` : "")}
+      </div>
+      ${synthesis.marketRead ? `<a class="daily-market-read" href="#dailyChains">
+        <strong>投资解读：</strong>${esc(synthesis.marketRead)}
+      </a>` : ""}
+    </div>
+  </section>`;
+}
 
 function renderDailyTrend(brief) {
   const dates = brief.trend.dates || [];
@@ -19,11 +81,13 @@ function renderDailyTrend(brief) {
     const points = (item.values || []).map((value, i) => `${x(i)},${y(value)}`);
     const path = points.length ? `M ${points.join(" L ")}` : "";
     const color = colors[idx % colors.length];
-    const dots = (item.values || []).map((value, i) => `<circle class="trend-dot" cx="${x(i)}" cy="${y(value)}" r="4" fill="${color}" style="animation-delay:${i * 45}ms"><title>${esc(item.label)} ${esc(dates[i])}: ${fmt(value)}</title></circle>`).join("");
+    const dots = (item.values || []).map((value, i) => `<a href="#dailyReports" data-daily-query="${esc(item.label)}" aria-label="${esc(item.label)} ${esc(dates[i])}: ${fmt(value)}">
+      <circle class="trend-dot" cx="${x(i)}" cy="${y(value)}" r="4" fill="${color}" style="animation-delay:${i * 45}ms"><title>${esc(item.label)} ${esc(dates[i])}: ${fmt(value)}</title></circle>
+    </a>`).join("");
     return `<path class="trend-line" d="${path}" stroke="${color}" style="animation-delay:${idx * 120}ms" />${dots}`;
   }).join("");
   const labels = dates.map((date, idx) => `<text class="axis-label" x="${x(idx)}" y="${H - 12}" text-anchor="middle">${esc(date.slice(5))}</text>`).join("");
-  const legend = series.map((item, idx) => `<span><i class="legend-dot" style="background:${colors[idx % colors.length]}"></i>${esc(item.label)}</span>`).join("");
+  const legend = series.map((item, idx) => `<a href="#dailyReports" data-daily-query="${esc(item.label)}"><i class="legend-dot" style="background:${colors[idx % colors.length]}"></i>${esc(item.label)}</a>`).join("");
   return `<div class="graph-legend">${legend}</div><svg class="trend-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="主题热度趋势">
     ${grid}
     <line class="axis-line" x1="${pad}" y1="${H - pad}" x2="${W - pad}" y2="${H - pad}" />
@@ -38,17 +102,17 @@ function renderChainRadar(brief) {
   return `<div class="chain-radar">${brief.chainRadar.slice(0, 6).map((item) => `
     <article class="chain-card">
       <div class="chain-card-head">
-        <h3>${esc(item.label)}</h3>
+        <h3><a href="#dailyReports" data-daily-chain="${esc(item.label)}">${esc(item.label)}</a></h3>
         <span class="score-badge">${fmt(item.heat)}</span>
       </div>
-      <div class="chain-meter"><span style="width:${Math.max(4, item.heat / max * 100)}%; background:${esc(item.color)}"></span></div>
+      <a class="chain-meter" href="#dailyReports" data-daily-chain="${esc(item.label)}" aria-label="${esc(item.label)} 证据表筛选"><span style="width:${Math.max(4, item.heat / max * 100)}%; background:${esc(item.color)}"></span></a>
       <div class="mini-stats" style="margin-top:8px">
-        <span>今日 <strong>${fmt(item.latest)}</strong></span>
-        <span>近七日 <strong>${fmt(item.recent)}</strong></span>
-        <span>风险 <strong>${fmt(item.risk)}</strong></span>
+        <a href="#dailyReports" data-daily-chain="${esc(item.label)}">今日 <strong>${fmt(item.latest)}</strong></a>
+        <a href="#dailyReports" data-daily-chain="${esc(item.label)}">近七日 <strong>${fmt(item.recent)}</strong></a>
+        <a href="#dailyRisks" data-daily-chain="${esc(item.label)}">风险 <strong>${fmt(item.risk)}</strong></a>
       </div>
       <div class="chain-links">
-        ${(item.evidence || []).map((report) => `<a href="${esc(report.href)}">${esc(report.title)}</a>`).join("")}
+        ${(item.evidence || []).map((report) => `<a href="${link(report.href)}">${esc(report.title)}</a>`).join("")}
       </div>
     </article>`).join("")}</div>`;
 }
@@ -75,11 +139,11 @@ function renderRiskMatrix(brief) {
     const cellItems = grouped.get(`${probability}-${impact}`) || [];
     const visible = cellItems.slice(0, 2);
     return `<div class="risk-cell ${severity(impact, probability)} ${cellItems.length ? "has-items" : ""}" aria-label="概率 ${probability} 影响 ${impact}">
-      ${visible.map((item, idx) => `<a class="risk-token" href="${esc(item.href)}" style="--risk-delay:${idx * 45}ms" title="${esc(item.chain)} · ${esc(item.title)}">
+      ${visible.map((item, idx) => `<a class="risk-token" href="${link(item.href)}" style="--risk-delay:${idx * 45}ms" title="${esc(item.chain)} · ${esc(item.title)}">
         <strong>${esc(truncate(item.chain, 9))}</strong>
         <span>${esc(truncate(item.title, 34))}</span>
       </a>`).join("")}
-      ${cellItems.length > visible.length ? `<span class="risk-more">+${fmt(cellItems.length - visible.length)}</span>` : ""}
+      ${cellItems.length > visible.length ? `<a class="risk-more" href="#dailyReports" data-daily-chain="${esc(cellItems[0]?.chain || "")}">+${fmt(cellItems.length - visible.length)}</a>` : ""}
     </div>`;
   };
   return `<div class="risk-matrix-wrap" role="img" aria-label="风险矩阵：纵轴为发生概率，横轴为影响程度">
@@ -100,10 +164,10 @@ function renderHeatmap(brief) {
     <thead><tr><th>分析师</th>${heatmap.dates.map((date) => `<th>${esc(date.slice(5))}</th>`).join("")}</tr></thead>
     <tbody>
       ${heatmap.analysts.map((analyst) => `<tr>
-        <th>${esc(analyst.name)}</th>
+        <th><a href="#dailyReports" data-daily-query="${esc(analyst.name)}">${esc(analyst.name)}</a></th>
         ${(analyst.values || []).map((value, idx) => {
           const alpha = .12 + (Number(value || 0) / max) * .72;
-          return `<td><div class="heat-cell" style="background:rgba(40,91,157,${alpha}); animation-delay:${idx * 25}ms">${value ? fmt(value) : ""}</div></td>`;
+          return `<td><a class="heat-cell" href="#dailyReports" data-daily-query="${esc(analyst.name)}" style="background:rgba(40,91,157,${alpha}); animation-delay:${idx * 25}ms" aria-label="${esc(analyst.name)} ${esc(heatmap.dates[idx] || "")} ${fmt(value)}">${value ? fmt(value) : ""}</a></td>`;
         }).join("")}
       </tr>`).join("")}
     </tbody>
@@ -122,38 +186,13 @@ function dailyFilteredReports({ data, state }) {
 }
 
 function renderDailyTableRows(reports) {
-  return reports.map((report) => `<tr>
-    <td><a href="${esc(report.href)}">${esc(report.title)}</a><div class="mini-stats">${tags(report.tags || [])}</div></td>
-    <td>${esc(report.analyst)}</td>
-    <td>${esc(report.chain)}</td>
-    <td><span class="score-badge">${fmt(report.score)}</span></td>
-    <td>${report.risk ? `<span class="status-pill">风险 ${fmt(report.risk)}</span>` : `<span class="status-pill">常规</span>`}</td>
+  return reports.map((report) => `<tr class="clickable-row" data-row-href="${link(report.href)}" tabindex="0" role="link">
+    <td><a href="${link(report.href)}">${esc(report.title)}</a><div class="mini-stats"><div class="tags">${(report.tags || []).map((tag) => `<a class="tag" href="#dailyReports" data-daily-query="${esc(tag)}">${esc(tag)}</a>`).join("")}</div></div></td>
+    <td><a href="#dailyReports" data-daily-query="${esc(report.analyst)}">${esc(report.analyst)}</a></td>
+    <td><a href="#dailyReports" data-daily-chain="${esc(report.chain)}">${esc(report.chain)}</a></td>
+    <td><a class="score-badge" href="${link(report.href)}">${fmt(report.score)}</a></td>
+    <td>${report.risk ? `<a class="status-pill" href="#dailyRisks" data-daily-chain="${esc(report.chain)}">风险 ${fmt(report.risk)}</a>` : `<a class="status-pill" href="${link(report.href)}">常规</a>`}</td>
   </tr>`).join("");
-}
-
-function renderSynthesis(brief) {
-  const synthesis = brief.synthesis || {};
-  const bullets = Array.isArray(synthesis.bullets) ? synthesis.bullets : [];
-  const watchItems = Array.isArray(synthesis.watchItems) ? synthesis.watchItems : [];
-  if (!synthesis.headline && !synthesis.lead) return "";
-  return `<section class="synthesis-card">
-    <div class="eyebrow">Research Synthesis · ${synthesis.source === "skill_override" ? "Skill Override" : "Auto Draft"}</div>
-    <h3>${esc(synthesis.headline || "今日研究综述")}</h3>
-    <p class="synthesis-lead">${esc(synthesis.lead || "")}</p>
-    <div class="synthesis-grid">
-      ${bullets.map((item) => `<article class="synthesis-point">
-        <strong>${esc(item.label || "要点")}</strong>
-        <p>${item.href ? `<a href="${esc(item.href)}">${esc(item.text || "")}</a>` : esc(item.text || "")}</p>
-      </article>`).join("")}
-    </div>
-    ${synthesis.marketRead ? `<div class="synthesis-read"><strong>投资解读：</strong>${esc(synthesis.marketRead)}</div>` : ""}
-    ${watchItems.length ? `<div class="watch-list">
-      ${watchItems.map((item) => `<a class="watch-item" href="${esc(item.href || "#daily")}">
-        <strong>${esc(item.title || "")}</strong>
-        <span>${esc(item.reason || "")}</span>
-      </a>`).join("")}
-    </div>` : ""}
-  </section>`;
 }
 
 export function renderDaily(context) {
@@ -162,33 +201,16 @@ export function renderDaily(context) {
   const rows = dailyFilteredReports(context);
   const chains = [...new Set((brief.tableReports || []).map((report) => report.chain).filter(Boolean))].sort();
   app.innerHTML = `
+    ${renderDailyBriefBoard(brief)}
     <section class="daily-hero">
-      <div class="panel">
-        <div class="daily-title">
-          <div>
-            <div class="eyebrow">Daily Investor Brief</div>
-            <h2>每日研究简报</h2>
-            <p>把当天研究结果压缩成可扫描的结论、变化、风险和证据入口。</p>
-          </div>
-          <div class="daily-actions">
-            <div class="daily-date">${esc(brief.date)}</div>
-            <a class="download-button" href="${esc(brief.docxHref || brief.docxLatestHref || "#daily")}" download>下载 DOCX</a>
-          </div>
-        </div>
-        ${renderSynthesis(brief)}
-        <div class="grid cols-4">
-          ${metric("今日报告", brief.stats.reports)}
-          ${metric("活跃分析师", brief.stats.analysts, "var(--green)")}
-          ${metric("活跃链条", brief.stats.activeChains, "var(--gold)")}
-          ${metric("风险信号", brief.stats.riskItems, "var(--red)")}
-        </div>
-        <div style="margin-top:16px">
+      <div class="panel" id="dailyHighlights">
+        <div>
           ${sectionHead("今日核心结论", "按重要性、行业链关联、风险信号和证据密度排序。")}
           <div class="highlight-list">
-            ${brief.highlights.map((item, idx) => `<article class="highlight-item">
+            ${brief.highlights.map((item, idx) => `<a class="highlight-item" href="${link(item.href)}">
               <div class="highlight-rank">${idx + 1}</div>
               <div>
-                <h3><a href="${esc(item.href)}">${esc(item.title)}</a></h3>
+                <h3>${esc(item.title)}</h3>
                 <p>${esc(item.summary)}</p>
                 <div class="mini-stats" style="margin-top:8px">
                   <span>${esc(item.analyst)}</span>
@@ -197,21 +219,21 @@ export function renderDaily(context) {
                   <span>${esc(item.reason)}</span>
                 </div>
               </div>
-            </article>`).join("") || `<div class="empty">暂无可用结论。</div>`}
+            </a>`).join("") || `<div class="empty">暂无可用结论。</div>`}
           </div>
         </div>
       </div>
-      <aside class="panel">
+      <aside class="panel" id="dailyMomentum">
         ${sectionHead("重大变化", brief.previousDate ? `对比 ${brief.previousDate}` : "暂无前一交易日对比")}
         <div class="momentum-list">
-          ${brief.momentum.slice(0, 8).map((item) => `<div class="momentum-row">
+          ${brief.momentum.slice(0, 8).map((item) => `<a class="momentum-row" href="#dailyReports" data-daily-query="${esc(item.tag)}">
             <strong>${esc(item.tag)}</strong>
             <span>${fmt(item.today)}</span>
             <span>${fmt(item.previous)}</span>
             <span class="${item.delta >= 0 ? "delta-up" : "delta-down"}">${item.delta >= 0 ? "+" : ""}${fmt(item.delta)}</span>
-          </div>`).join("") || `<div class="empty">暂无变化数据。</div>`}
+          </a>`).join("") || `<div class="empty">暂无变化数据。</div>`}
         </div>
-        <div style="margin-top:18px">
+        <div style="margin-top:18px" id="dailyChains">
           ${sectionHead("行业链雷达", "今日热度 = 当日提及、近七日证据和风险信号的组合。")}
           ${renderChainRadar(brief)}
         </div>
@@ -222,26 +244,26 @@ export function renderDaily(context) {
         ${sectionHead("主题热度趋势", "近七日高频主题变化。")}
         ${renderDailyTrend(brief)}
       </div>
-      <div class="panel chart-panel">
+      <div class="panel chart-panel" id="dailyRisks">
         ${sectionHead("风险矩阵", "按发生概率与影响程度分格展示；点击单元格中的报告进入证据。")}
         ${renderRiskMatrix(brief)}
       </div>
     </section>
     <section class="grid cols-2" style="margin-top:16px">
-      <div class="panel">
+      <div class="panel" id="dailyHeatmap">
         ${sectionHead("分析师活跃度", "按近七日报告数量选择前 12 位分析师。")}
         ${renderHeatmap(brief)}
       </div>
       <div class="panel">
         ${sectionHead("简报数据", "为例行同步保留机器可读出口。")}
         <div class="grid cols-2">
-          ${metric("近七日报告", brief.stats.recentReports, "var(--blue)")}
-          ${metric("表格证据", brief.tableReports.length, "var(--green)")}
+          ${dailyStat("近七日报告", brief.stats.recentReports, "var(--blue)", "#dailyReports", "打开证据表")}
+          ${dailyStat("表格证据", brief.tableReports.length, "var(--green)", "#dailyReports", "查看当前列表")}
         </div>
         <p style="color:var(--muted);line-height:1.6">本页数据已同步输出为 daily JSON，可用于后续自动发布、邮件摘要或投研工作台嵌入。</p>
       </div>
     </section>
-    <section class="panel" style="margin-top:16px">
+    <section class="panel" style="margin-top:16px" id="dailyReports">
       ${sectionHead("重点报告表", `当前显示 ${fmt(rows.length)} 条，可搜索并按行业链筛选。`)}
       <div class="daily-controls">
         <input id="dailySearch" type="search" placeholder="搜索结论、分析师、链条、标签..." value="${esc(state.dailyQuery)}">
@@ -256,4 +278,32 @@ export function renderDaily(context) {
     </section>`;
   document.querySelector("#dailySearch").addEventListener("input", (event) => { state.dailyQuery = event.target.value; renderDaily(context); });
   document.querySelector("#dailyChain").addEventListener("change", (event) => { state.dailyChain = event.target.value; renderDaily(context); });
+  app.querySelectorAll("[data-daily-query]").forEach((item) => {
+    item.addEventListener("click", (event) => {
+      event.preventDefault();
+      state.dailyQuery = item.dataset.dailyQuery || "";
+      if (!item.dataset.dailyChain) state.dailyChain = "";
+      renderDaily(context);
+      requestAnimationFrame(() => document.querySelector("#dailyReports")?.scrollIntoView({ behavior: "smooth", block: "start" }));
+    });
+  });
+  app.querySelectorAll("[data-daily-chain]").forEach((item) => {
+    item.addEventListener("click", (event) => {
+      event.preventDefault();
+      state.dailyChain = item.dataset.dailyChain || "";
+      state.dailyQuery = item.dataset.dailyQuery || "";
+      renderDaily(context);
+      const target = item.getAttribute("href") === "#dailyRisks" ? "#dailyRisks" : "#dailyReports";
+      requestAnimationFrame(() => document.querySelector(target)?.scrollIntoView({ behavior: "smooth", block: "start" }));
+    });
+  });
+  app.querySelectorAll(".clickable-row").forEach((row) => {
+    row.addEventListener("click", (event) => {
+      if (event.target.closest("a,button,input,select")) return;
+      window.location.href = row.dataset.rowHref;
+    });
+    row.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") window.location.href = row.dataset.rowHref;
+    });
+  });
 }

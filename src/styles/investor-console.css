@@ -31,6 +31,8 @@
 .investor-console h6 {
   color: var(--ink);
   letter-spacing: 0;
+  border-bottom: 0;
+  padding-bottom: 0;
 }
 .investor-console p,
 .investor-console strong {
@@ -164,6 +166,124 @@
   gap: 8px;
   justify-items: end;
 }
+.investor-console .daily-brief-board {
+  margin-bottom: 16px;
+}
+.investor-console .daily-board-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 22px;
+  align-items: start;
+  margin-bottom: 18px;
+}
+.investor-console .daily-board-head h2 {
+  max-width: 980px;
+  margin: 8px 0 0;
+  font-size: 40px;
+  line-height: 1.18;
+  color: #0b2545;
+}
+.investor-console .daily-board-actions {
+  display: grid;
+  gap: 8px;
+  justify-items: end;
+}
+.investor-console .daily-board-panel {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 253, 250, .92);
+  box-shadow: 0 16px 42px rgba(32, 41, 57, .08);
+}
+.investor-console .daily-lead {
+  margin: 0 0 22px;
+  color: #2b3d55;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.65;
+}
+.investor-console .daily-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.investor-console .daily-stat-card {
+  min-height: 112px;
+  display: grid;
+  align-content: center;
+  gap: 8px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--accent);
+  border-radius: 8px;
+  background: #fffdfa;
+  color: var(--ink);
+  text-decoration: none;
+}
+.investor-console .daily-stat-card:hover,
+.investor-console .daily-signal-card:hover,
+.investor-console .daily-market-read:hover,
+.investor-console .highlight-item:hover,
+.investor-console .momentum-row:hover {
+  border-color: var(--blue);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+.investor-console .daily-stat-card span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+}
+.investor-console .daily-stat-card strong {
+  color: var(--accent);
+  font-size: 34px;
+  line-height: 1;
+}
+.investor-console .daily-stat-card em {
+  color: var(--muted);
+  font-size: 12px;
+  font-style: normal;
+}
+.investor-console .daily-signal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 14px;
+}
+.investor-console .daily-signal-card {
+  min-height: 112px;
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fffdfa;
+  color: var(--ink);
+  text-decoration: none;
+}
+.investor-console .daily-signal-card strong {
+  color: var(--blue);
+  font-size: 14px;
+}
+.investor-console .daily-signal-card span {
+  color: #28374f;
+  line-height: 1.58;
+}
+.investor-console .daily-market-read {
+  display: block;
+  margin-top: 16px;
+  padding: 15px 18px;
+  border: 1px solid #f3dfb6;
+  border-left: 5px solid var(--gold);
+  border-radius: 8px;
+  background: #fff8e8;
+  color: #7c2d12;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.65;
+  text-decoration: none;
+}
 .investor-console .download-button {
   display: inline-flex;
   align-items: center;
@@ -228,6 +348,7 @@
   font-size: 13px;
 }
 .investor-console .synthesis-read {
+  display: block;
   margin-top: 12px;
   padding: 11px 12px;
   border-radius: 7px;
@@ -235,6 +356,7 @@
   color: #7c2d12;
   line-height: 1.55;
   font-size: 13px;
+  text-decoration: none;
 }
 .investor-console .watch-list {
   display: grid;
@@ -262,6 +384,8 @@
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--paper);
+  color: var(--ink);
+  text-decoration: none;
 }
 .investor-console .highlight-rank {
   width: 30px;
@@ -305,6 +429,7 @@
 }
 .investor-console .chain-card h3 { margin: 0; font-size: 15px; }
 .investor-console .chain-meter {
+  display: block;
   height: 9px;
   border-radius: 999px;
   background: #e9e1d5;
@@ -326,6 +451,8 @@
   align-items: center;
   padding: 9px 0;
   border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  text-decoration: none;
 }
 .investor-console .delta-up { color: var(--green); font-weight: 900; }
 .investor-console .delta-down { color: var(--red); font-weight: 900; }
@@ -415,6 +542,7 @@
   color: var(--slate);
   font-size: 11px;
   font-weight: 900;
+  text-decoration: none;
 }
 .investor-console .heatmap { width: 100%; border-collapse: separate; border-spacing: 4px; font-size: 12px; }
 .investor-console .heatmap th { color: var(--muted); font-weight: 800; text-align: left; }
@@ -422,12 +550,15 @@
 .investor-console .heat-cell {
   min-width: 28px;
   height: 24px;
+  display: grid;
+  place-items: center;
   border-radius: 5px;
   text-align: center;
   color: #0f172a;
   font-weight: 900;
   background: #eef2ff;
   animation: fade-up .35s ease both;
+  text-decoration: none;
 }
 .investor-console .daily-controls {
   display: grid;
@@ -455,6 +586,11 @@
   vertical-align: top;
 }
 .investor-console .data-table tr:hover td { background: #f8fafc; }
+.investor-console .clickable-row { cursor: pointer; }
+.investor-console .clickable-row:focus td {
+  outline: 2px solid rgba(40, 91, 157, .35);
+  outline-offset: -2px;
+}
 .investor-console .score-badge {
   display: inline-flex;
   align-items: center;
@@ -465,6 +601,7 @@
   background: #edf4ff;
   color: var(--blue);
   font-weight: 900;
+  text-decoration: none;
 }
 @keyframes draw-line { to { stroke-dashoffset: 0; } }
 @keyframes grow-x { from { transform: scaleX(0); } to { transform: scaleX(1); } }
@@ -502,7 +639,9 @@
   border-radius: 999px;
   font-size: 12px;
   color: var(--slate);
+  text-decoration: none;
 }
+.investor-console a.tag:hover { border-color: var(--blue); color: var(--blue); text-decoration: none; }
 .investor-console .bar-row { display: grid; grid-template-columns: 128px 1fr 48px; gap: 10px; align-items: center; margin: 10px 0; }
 .investor-console .bar-name { color: var(--slate); font-weight: 700; font-size: 13px; }
 .investor-console .bar-track { height: 11px; background: #e9e1d5; border-radius: 999px; overflow: hidden; }
@@ -545,6 +684,12 @@
 }
 .investor-console .mini-stats { display: flex; gap: 12px; flex-wrap: wrap; color: var(--muted); font-size: 12px; }
 .investor-console .mini-stats strong { color: var(--ink); }
+.investor-console .mini-stats a {
+  color: var(--muted);
+  font-weight: 800;
+  text-decoration: none;
+}
+.investor-console .mini-stats a:hover { color: var(--blue); text-decoration: none; }
 .investor-console .board-flow {
   display: flex;
   flex-wrap: wrap;
@@ -569,6 +714,7 @@
   color: var(--slate);
   font-weight: 800;
   font-size: 12px;
+  text-decoration: none;
 }
 .investor-console .chart-frame img {
   width: 100%;
@@ -611,6 +757,16 @@
 .investor-console .graph-node.report text { font-size: 9.5px; font-weight: 700; }
 .investor-console .graph-side { display: grid; gap: 12px; }
 .investor-console .graph-legend { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0; }
+.investor-console .graph-legend a,
+.investor-console .graph-legend span {
+  display: inline-flex;
+  align-items: center;
+  color: var(--slate);
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+}
+.investor-console .graph-legend a:hover { color: var(--blue); text-decoration: none; }
 .investor-console .legend-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 5px; }
 .investor-console .graph-report-list { max-height: 560px; overflow: auto; display: grid; gap: 10px; padding-right: 4px; }
 .investor-console .graph-report {
@@ -1480,12 +1636,15 @@
 .investor-console .markdown-report code { background: #f1f5f9; padding: 2px 5px; border-radius: 4px; }
 .investor-console .markdown-report pre code { background: transparent; padding: 0; }
 @media (max-width: 980px) {
-  .investor-console .app-header, .investor-console .hero-layout, .investor-console .daily-hero, .investor-console .risk-grid, .investor-console .report-shell, .investor-console .graph-layout, .investor-console .delta-grid, .investor-console .thesis-detail, .investor-console .radar-hero, .investor-console .tracker-layout, .investor-console .tracker-detail, .investor-console .analyst-tracker-layout, .investor-console .analyst-focus-grid, .investor-console .deep-reading-hero, .investor-console .deep-download-panel, .investor-console .deep-report-layout, .investor-console .deep-latest { grid-template-columns: 1fr; display: grid; }
+  .investor-console .app-header, .investor-console .hero-layout, .investor-console .daily-hero, .investor-console .daily-board-head, .investor-console .risk-grid, .investor-console .report-shell, .investor-console .graph-layout, .investor-console .delta-grid, .investor-console .thesis-detail, .investor-console .radar-hero, .investor-console .tracker-layout, .investor-console .tracker-detail, .investor-console .analyst-tracker-layout, .investor-console .analyst-focus-grid, .investor-console .deep-reading-hero, .investor-console .deep-download-panel, .investor-console .deep-report-layout, .investor-console .deep-latest { grid-template-columns: 1fr; display: grid; }
   .investor-console .app-header { align-items: stretch; padding: 24px 18px; }
   .investor-console .header-actions, .investor-console .toolbar, .investor-console .daily-controls, .investor-console .graph-toolbar, .investor-console .tracker-toolbar { min-width: 0; grid-template-columns: 1fr; }
   .investor-console .nav-tabs, .investor-console main, .investor-console .site-footer { padding-left: 18px; padding-right: 18px; }
-  .investor-console .grid.cols-4, .investor-console .grid.cols-3, .investor-console .grid.cols-2, .investor-console .doc-list, .investor-console .synthesis-grid, .investor-console .thesis-score, .investor-console .tracker-meters, .investor-console .source-ledger, .investor-console .analyst-change-grid, .investor-console .analyst-metric-strip, .investor-console .deep-logic-strip, .investor-console .deep-download-grid { grid-template-columns: 1fr; }
-  .investor-console .daily-actions { justify-items: start; }
+  .investor-console .grid.cols-4, .investor-console .grid.cols-3, .investor-console .grid.cols-2, .investor-console .doc-list, .investor-console .synthesis-grid, .investor-console .daily-stat-grid, .investor-console .daily-signal-grid, .investor-console .thesis-score, .investor-console .tracker-meters, .investor-console .source-ledger, .investor-console .analyst-change-grid, .investor-console .analyst-metric-strip, .investor-console .deep-logic-strip, .investor-console .deep-download-grid { grid-template-columns: 1fr; }
+  .investor-console .daily-actions, .investor-console .daily-board-actions { justify-items: start; }
+  .investor-console .daily-board-head h2 { font-size: 29px; }
+  .investor-console .daily-board-panel { padding: 16px; }
+  .investor-console .daily-lead { font-size: 16px; }
   .investor-console .tracker-card-head, .investor-console .analyst-focus-head { display: grid; grid-template-columns: 1fr; }
   .investor-console .report-card { grid-template-columns: 1fr; }
   .investor-console .report-meta { position: static; }
