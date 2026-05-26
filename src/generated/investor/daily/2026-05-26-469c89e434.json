@@ -1872,5 +1872,152 @@
         "能源"
       ]
     }
-  ]
+  ],
+  "marketTape": {
+    "en": [
+      "Dow Jones 50,579.70 (+0.58%)",
+      "S&P 500 7,473.50 (+0.37%)",
+      "Nasdaq 100 29481.643",
+      "Nasdaq Comp. 26,343.97 (+0.19%)",
+      "Nikkei 225 65,158.19 (+2.87%)",
+      "Hang Seng 25,606.03 (+0.86%)",
+      "VIX 16.59",
+      "UST 10Y 4.56% (2s10s +43bp)",
+      "WTI crude 90.31 USD/bbl",
+      "Brent crude 93.65 USD/bbl",
+      "Spot gold 4575.63 USD/oz",
+      "DXY 99.239",
+      "EUR/USD 1.16417",
+      "USD/JPY 158.913",
+      "USD/CNY 6.7837"
+    ],
+    "zh": [
+      "道琼斯 50,579.70 (+0.58%)",
+      "标普500 7,473.50 (+0.37%)",
+      "纳斯达克100 29481.643",
+      "纳斯达克综指 26,343.97 (+0.19%)",
+      "日经225 65,158.19 (+2.87%)",
+      "恒生指数 25,606.03 (+0.86%)",
+      "VIX 16.59",
+      "美国10Y 4.56% (2s10s +43bp)",
+      "WTI原油 90.31 USD/bbl",
+      "Brent原油 93.65 USD/bbl",
+      "现货黄金 4575.63 USD/oz",
+      "DXY 99.239",
+      "EUR/USD 1.16417",
+      "USD/JPY 158.913",
+      "USD/CNY 6.7837"
+    ]
+  },
+  "marketQuotes": [
+    {
+      "key": "DOW",
+      "labelZh": "道琼斯",
+      "value": "50,579.70",
+      "change": "+0.58%",
+      "score": "15"
+    },
+    {
+      "key": "SPX",
+      "labelZh": "标普500",
+      "value": "7,473.50",
+      "change": "+0.37%",
+      "score": "15"
+    },
+    {
+      "key": "NDX",
+      "labelZh": "纳斯达克100",
+      "value": "29481.643",
+      "change": "](https://financialmodelingprep.com/api/v3/quote/^GSPC,^NDX,^DJI,^N225,^HSI,EURUSD,USDJPY,GC=F,^VIX,DX-Y.NYB)",
+      "score": "15"
+    },
+    {
+      "key": "NASDAQ",
+      "labelZh": "纳斯达克综指",
+      "value": "26,343.97",
+      "change": "+0.19%",
+      "score": "15"
+    },
+    {
+      "key": "N225",
+      "labelZh": "日经225",
+      "value": "65,158.19",
+      "change": "+2.87%",
+      "score": "15"
+    },
+    {
+      "key": "HSI",
+      "labelZh": "恒生指数",
+      "value": "25,606.03",
+      "change": "+0.86%",
+      "score": "15"
+    },
+    {
+      "key": "VIX",
+      "labelZh": "VIX",
+      "value": "16.59",
+      "change": "](https://financialmodelingprep.com/api/v3/quote/^GSPC,^NDX,^DJI,^N225,^HSI,EURUSD,USDJPY,GC=F,^VIX,DX-Y.NYB)",
+      "score": "15"
+    },
+    {
+      "key": "UST10Y",
+      "labelZh": "美国10Y",
+      "value": "4.56%",
+      "change": "2s10s +43bp",
+      "score": "15"
+    },
+    {
+      "key": "WTI",
+      "labelZh": "WTI原油",
+      "value": "90.31 美元/桶",
+      "change": "](https://stooq.com/q/l/?s=cl.f&i=d&f=sd2t2ohlc)",
+      "score": "15"
+    },
+    {
+      "key": "BRENT",
+      "labelZh": "Brent原油",
+      "value": "93.65 美元/桶",
+      "change": "](https://stooq.com/q/l/?s=cb.f&i=d&f=sd2t2ohlc)",
+      "score": "15"
+    },
+    {
+      "key": "GOLD",
+      "labelZh": "现货黄金",
+      "value": "4575.63 美元/盎司",
+      "change": "/sources[1]](https://financialmodelingprep.com/api/v3/quote/^GSPC,^NDX,^DJI,^N225,^HSI,EURUSD,USDJPY,GC=F,^VIX,DX-Y.NYB)",
+      "score": "15"
+    },
+    {
+      "key": "DXY",
+      "labelZh": "DXY",
+      "value": "99.239",
+      "change": "markets_overnight_us",
+      "score": "140"
+    },
+    {
+      "key": "EURUSD",
+      "labelZh": "EUR/USD",
+      "value": "1.16417",
+      "change": "markets_overnight_us",
+      "score": "140"
+    },
+    {
+      "key": "USDJPY",
+      "labelZh": "USD/JPY",
+      "value": "158.913",
+      "change": "markets_overnight_us",
+      "score": "140"
+    },
+    {
+      "key": "USDCNY",
+      "labelZh": "USD/CNY",
+      "value": "6.7837",
+      "change": "fx_majors",
+      "score": "140"
+    }
+  ],
+  "morningSignalBoard": {
+    "date": "2026-05-26",
+    "source": "outputs/morning-brief-images manifest"
+  }
 }

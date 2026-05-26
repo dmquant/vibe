@@ -2,6 +2,34 @@ import { esc, fmt, sectionHead, truncate } from "../utils.js";
 
 const link = (href, fallback = "#dailyReports") => esc(href || fallback);
 
+const MARKET_LABELS_ZH = {
+  DOW: "道琼斯",
+  SPX: "标普500",
+  NDX: "纳斯达克100",
+  NASDAQ: "纳斯达克综指",
+  N225: "日经225",
+  HSI: "恒生指数",
+  VIX: "VIX",
+  UST10Y: "美国10Y",
+  WTI: "WTI原油",
+  BRENT: "Brent原油",
+  GOLD: "现货黄金",
+  DXY: "DXY",
+  EURUSD: "EUR/USD",
+  USDJPY: "USD/JPY",
+  USDCNY: "USD/CNY",
+  USDCNH: "USD/CNH",
+};
+
+const BRIEFING_TILES = [
+  { no: "01", title: "宏观脉冲", text: "隔夜风险地图", query: "宏观", href: "#dailyReports" },
+  { no: "02", title: "中国政策", text: "政策与增长观察", query: "中国", href: "#dailyReports" },
+  { no: "03", title: "A股策略", text: "宽幅震荡、缩量、去杠杆", query: "A股", href: "#dailyReports" },
+  { no: "04", title: "资金情绪", text: "资金与仓位结构", href: "#dailyMomentum" },
+  { no: "05", title: "风险监控", text: "下行触发因素", href: "#dailyRisks" },
+  { no: "06", title: "全球概览", text: "海外市场速览", query: "全球", href: "#dailyReports" },
+];
+
 function dailyStat(label, value, color, href, detail = "") {
   return `<a class="daily-stat-card" href="${link(href)}" style="--accent:${esc(color)}">
     <span>${esc(label)}</span>
@@ -18,43 +46,146 @@ function dailySignalHref(item, label) {
   return "#dailyReports";
 }
 
+function parseMarketTapeLine(line) {
+  const text = String(line || "").replace(/\s+/g, " ").trim();
+  const match = text.match(/^(.+?)\s+([~]?[0-9][0-9,]*(?:\.[0-9]+)?(?:\s*(?:USD\/bbl|USD\/oz|%))?)(?:\s+\((.*)\))?$/);
+  if (!match) return { label: text, value: "", change: "" };
+  return {
+    label: match[1],
+    value: match[2],
+    change: match[3] || "",
+  };
+}
+
+function normalizedMarketRows(brief) {
+  const tape = brief.marketTape?.zh || brief.synthesis?.marketTape?.zh || [];
+  if (Array.isArray(tape) && tape.length) {
+    return tape.slice(0, 15).map(parseMarketTapeLine);
+  }
+  const quotes = brief.marketQuotes || brief.synthesis?.marketQuotes || [];
+  if (Array.isArray(quotes) && quotes.length) {
+    return quotes.slice(0, 15).map((quote) => ({
+      label: quote.labelZh || MARKET_LABELS_ZH[quote.key] || quote.key || "市场",
+      value: quote.value || "",
+      change: quote.change || "",
+    }));
+  }
+  return [];
+}
+
+function renderBriefingTiles() {
+  return BRIEFING_TILES.map((tile) => `<a class="daily-brief-tile" href="${link(tile.href)}" ${tile.query ? `data-daily-query="${esc(tile.query)}"` : ""}>
+    <span>${esc(tile.no)}</span>
+    <strong>${esc(tile.title)}</strong>
+    <em>${esc(tile.text)}</em>
+  </a>`).join("");
+}
+
+function renderDailyBoardMap(brief) {
+  const chains = (brief.chainRadar || []).slice(0, 5);
+  return `<div class="daily-map-panel">
+    <div class="daily-panel-title">全球风险地图（隔夜变动）</div>
+    <div class="daily-map-visual" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i></i>
+    </div>
+    <div class="daily-map-tags">
+      ${chains.map((item) => `<a href="#dailyReports" data-daily-chain="${esc(item.label)}">${esc(item.label)}</a>`).join("")}
+    </div>
+  </div>`;
+}
+
+function renderDailyRiskPreview(brief) {
+  const items = (brief.riskMatrix || []).slice(0, 9);
+  return `<div class="daily-risk-preview" id="dailyRiskPreview">
+    <div class="daily-panel-title">风险矩阵（概率 × 影响）</div>
+    <div class="daily-risk-mini-grid">
+      ${Array.from({ length: 9 }, (_, idx) => {
+        const item = items[idx];
+        const level = idx > 5 ? "high" : idx > 2 ? "mid" : "low";
+        return item
+          ? `<a class="${level}" href="${link(item.href)}" title="${esc(item.chain)} · ${esc(item.title)}">${idx + 1}</a>`
+          : `<span class="${level}">${idx + 1}</span>`;
+      }).join("")}
+    </div>
+  </div>`;
+}
+
+function renderDailyMarketTape(brief) {
+  const rows = normalizedMarketRows(brief);
+  return `<div class="daily-market-tape" id="dailyMarketTape">
+    <div class="daily-panel-title">市场报价（隔夜收盘）</div>
+    <div class="daily-quote-table">
+      ${rows.length ? rows.map((row) => `<a class="daily-quote-row" href="#dailyReports" data-daily-query="${esc(row.label)}">
+        <span>${esc(row.label)}</span>
+        <strong>${esc(row.value)}</strong>
+        <em>${esc(row.change)}</em>
+      </a>`).join("") : `<div class="daily-quote-empty">暂无市场报价。</div>`}
+    </div>
+  </div>`;
+}
+
 function renderDailyBriefBoard(brief) {
   const synthesis = brief.synthesis || {};
   const bullets = Array.isArray(synthesis.bullets) ? synthesis.bullets : [];
-  const headline = synthesis.headline || "每日研究简报";
+  const headline = synthesis.headline || "今日研究信号";
   const lead = synthesis.lead || "今日研究结果已归并为可点击的结论、变化、风险和证据入口。";
   const firstHighlight = (brief.highlights || [])[0];
+  const watchItems = Array.isArray(synthesis.watchItems) ? synthesis.watchItems : [];
   return `<section class="daily-brief-board" id="dailyOverview">
-    <div class="daily-board-head">
-      <div>
-        <div class="eyebrow">AI Institute · Daily Investor Brief</div>
-        <h2>${esc(headline)}</h2>
+    <div class="daily-board-terminal">
+      <div class="daily-board-head">
+        <div>
+          <div class="eyebrow">AI Institute · Morning Signal Board</div>
+          <h2>AI研究院晨会简报</h2>
+          <p>每日研究信号图 - ${esc(brief.date)}</p>
+        </div>
+        <div class="daily-board-actions">
+          <a class="daily-date" href="${link(brief.docxHref || brief.docxLatestHref, "#dailyReports")}" download>${esc(brief.date)}</a>
+          <a class="download-button" href="${link(brief.docxHref || brief.docxLatestHref, "#dailyReports")}" download>下载 DOCX</a>
+        </div>
       </div>
-      <div class="daily-board-actions">
-        <a class="daily-date" href="${link(brief.docxHref || brief.docxLatestHref, "#dailyReports")}" download>${esc(brief.date)}</a>
-        <a class="download-button" href="${link(brief.docxHref || brief.docxLatestHref, "#dailyReports")}" download>下载 DOCX</a>
-      </div>
-    </div>
-    <div class="daily-board-panel">
-      <p class="daily-lead">${esc(lead)}</p>
+      <div class="daily-brief-tile-grid">${renderBriefingTiles()}</div>
       <div class="daily-stat-grid">
-        ${dailyStat("今日报告", brief.stats.reports, "var(--blue)", "#dailyReports", "打开证据表")}
-        ${dailyStat("活跃分析师", brief.stats.analysts, "var(--green)", "#dailyHeatmap", "查看活跃度")}
-        ${dailyStat("活跃链条", brief.stats.activeChains, "var(--gold)", "#dailyChains", "查看雷达")}
-        ${dailyStat("风险信号", brief.stats.riskItems, "var(--red)", "#dailyRisks", "查看矩阵")}
+        ${dailyStat("今日报告", brief.stats.reports, "#f5f5f5", "#dailyReports", "打开证据表")}
+        ${dailyStat("活跃分析师", brief.stats.analysts, "#d8d8d8", "#dailyHeatmap", "查看活跃度")}
+        ${dailyStat("活跃链条", brief.stats.activeChains, "#bfbfbf", "#dailyChains", "查看雷达")}
+        ${dailyStat("风险信号", brief.stats.riskItems, "#ffffff", "#dailyRisks", "查看矩阵")}
       </div>
-      <div class="daily-signal-grid">
-        ${bullets.map((item) => {
-          const href = dailySignalHref(item, item.label);
-          return `<a class="daily-signal-card" href="${link(href)}">
-            <strong>${esc(item.label || "要点")}</strong>
-            <span>${esc(item.text || "")}</span>
-          </a>`;
-        }).join("") || (firstHighlight ? `<a class="daily-signal-card" href="${link(firstHighlight.href)}">
-          <strong>主线判断</strong>
-          <span>${esc(firstHighlight.title)}</span>
-        </a>` : "")}
+      <div class="daily-board-layout">
+        <div class="daily-key-panel">
+          <div class="daily-panel-title">今日关键要点</div>
+          <a class="daily-main-callout" href="${link(firstHighlight?.href || bullets[0]?.href)}">
+            <strong>${esc(headline)}</strong>
+            <span>${esc(lead)}</span>
+          </a>
+          <div class="daily-signal-grid">
+            ${bullets.map((item) => {
+              const href = dailySignalHref(item, item.label);
+              return `<a class="daily-signal-card" href="${link(href)}">
+                <strong>${esc(item.label || "要点")}</strong>
+                <span>${esc(item.text || "")}</span>
+              </a>`;
+            }).join("") || (firstHighlight ? `<a class="daily-signal-card" href="${link(firstHighlight.href)}">
+              <strong>主线判断</strong>
+              <span>${esc(firstHighlight.title)}</span>
+            </a>` : "")}
+          </div>
+        </div>
+        ${renderDailyBoardMap(brief)}
+        ${renderDailyRiskPreview(brief)}
+        <div class="daily-flow-panel">
+          <div class="daily-panel-title">资金与情绪概览</div>
+          ${(brief.momentum || []).slice(0, 4).map((item) => `<a href="#dailyReports" data-daily-query="${esc(item.tag)}">
+            <span>${esc(item.tag)}</span>
+            <strong>${fmt(item.today)}</strong>
+            <em class="${item.delta >= 0 ? "delta-up" : "delta-down"}">${item.delta >= 0 ? "+" : ""}${fmt(item.delta)}</em>
+          </a>`).join("")}
+        </div>
+        ${renderDailyMarketTape(brief)}
       </div>
+      ${watchItems.length ? `<div class="daily-watch-strip">
+        ${watchItems.slice(0, 3).map((item) => `<a href="${link(item.href)}"><strong>${esc(item.title)}</strong><span>${esc(item.reason)}</span></a>`).join("")}
+      </div>` : ""}
       ${synthesis.marketRead ? `<a class="daily-market-read" href="#dailyChains">
         <strong>投资解读：</strong>${esc(synthesis.marketRead)}
       </a>` : ""}
