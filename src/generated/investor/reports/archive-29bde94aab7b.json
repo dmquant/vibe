@@ -1,0 +1,20 @@
+{
+  "slug": "archive-29bde94aab7b",
+  "href": "/investor/reports/archive-29bde94aab7b/",
+  "meta": {
+    "title": "风险评估报告：方案四（强制切换）定量重构与压力测试",
+    "date": "2026-05-26",
+    "analyst_id": "chief-risk",
+    "analyst_name": "首席风控官",
+    "tags": [
+      "AI",
+      "通胀",
+      "宏观",
+      "A股",
+      "风险"
+    ],
+    "source": "archive-29bde94aab7b",
+    "source_label": "archive-29bde94aab7b"
+  },
+  "bodyHtml": "<h1>风险评估报告：方案四（强制切换）定量重构与压力测试</h1>\n<p><strong>致：A股策略师</strong>\n<strong>日期：2026年05月26日</strong>\n<strong>状态：方案四强制激活（触发点：科创50两融买入占比连续跌破10%）</strong></p>\n<h2>一、 核心结论 (Executive Summary)</h2>\n<p>根据当前市场观测，创业板指（4043.07）虽维持在3,900点上方，但<strong>科创50两融买入额占比已降至约9.87%</strong>，符合“连续3个交易日跌破10%警戒线”的触发条件。组合已按照指令强制切换至<strong>方案四</strong>。</p>\n<ul>\n<li><strong>重构方案</strong>：现金 25.00%，商品（铜）42.00%，长端国债（10Y/30Y）33.00%。</li>\n<li><strong>风险指标</strong>：年化波动率 <strong>10.30%</strong>；日度 VaR (95%) 为 <strong>-1.07%</strong>，优于 -2.6169% 的压降目标。</li>\n<li><strong>压力测试</strong>：在美债 10Y 收益率攀升至 5.18%（Bear Steepening）的情景下，组合即期损失预计为 <strong>-1.80%</strong>。</li>\n<li><strong>尾部风险</strong>：长线极端回撤（95th MDD）分布于 <strong>22.54%</strong>。</li>\n</ul>\n<h2>二、 方案四定量重构模型</h2>\n<p>方案四旨在极度波动或杠杆出清环境下，通过提高现金比例并利用商品（通胀对冲）与债券（防守）构建风险平价对冲。</p>\n<table>\n<thead>\n<tr>\n<th>资产类别</th>\n<th>权重 (Weight)</th>\n<th>年化波动率 (Vol)</th>\n<th>边际风险贡献 (MRC)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>现金 (Cash)</strong></td>\n<td>25.00%</td>\n<td>0.00%</td>\n<td>0.00%</td>\n</tr>\n<tr>\n<td><strong>商品 (LME铜)</strong></td>\n<td>42.00%</td>\n<td>25.00%</td>\n<td>0.1012</td>\n</tr>\n<tr>\n<td><strong>长端债券 (US 10Y)</strong></td>\n<td>33.00%</td>\n<td>8.00%</td>\n<td>0.0018</td>\n</tr>\n<tr>\n<td><strong>合计</strong></td>\n<td><strong>100.00%</strong></td>\n<td><strong>10.30% (Portfolio)</strong></td>\n<td><strong>VaR (95%): -1.07%</strong></td>\n</tr>\n</tbody>\n</table>\n<p><em>注：模型假设铜与债券的相关性为 -0.2，体现了商品在增长/通胀预期下的独立走势。</em></p>\n<h2>三、 期限溢价敏感性与压力测试</h2>\n<p>当长端美债收益率受期限溢价（Term Premium）推动从 4.51% 攀升至 <strong>5.18%</strong>（+67bps，Bear Steepening）时</p>\n<ol>\n<li><strong>期限溢价敏感性 (Duration Impact)</strong><ul>\n<li>债券部位（33%）久期约为 7.5，即期损失为 <strong>-1.66%</strong>。由于这是“熊平”向“熊陡”转换，长端受期限溢价重定价影响最大。</li>\n</ul>\n</li>\n<li><strong>商品敏感性 (Copper Impact)</strong><ul>\n<li>铜对实际利率敏感。在美元走强预期下，Beta调整后的铜部位损失约为 <strong>-0.14%</strong>。</li>\n</ul>\n</li>\n<li><strong>综合影响</strong><ul>\n<li>组合总冲击为 <strong>-1.80%</strong>。现金比例（25%）有效缓冲了大部分久期回撤。</li>\n</ul>\n</li>\n</ol>\n<h2>四、 极端尾部风险分布</h2>\n<p>基于蒙特卡洛模拟（10,000次迭代，252个交易日）测算的方案四最大回撤（MDD）分布</p>\n<ul>\n<li><strong>均值最大回撤 (Mean MDD)</strong>：12.17%</li>\n<li><strong>95% 分位回撤 (Tail MDD)</strong>：<strong>22.54%</strong></li>\n<li><strong>99% 分位回撤 (Extreme MDD)</strong>：<strong>27.60%</strong></li>\n</ul>\n<p><strong>分析建议</strong>：42% 的铜敞口是该组合最大的风险来源。虽然 VaR 满足要求，但在经济硬着陆导致的大宗商品暴跌情景下，组合可能面临超过 20% 的极端回撤。建议在美债突破 5.0% 关键点位时，审视铜与美元的负相关性是否增强。</p>\n<p><strong>数据来源</strong>：LME, Trading Economics, Wind, 风险模型仿真系统。</p>"
+}
