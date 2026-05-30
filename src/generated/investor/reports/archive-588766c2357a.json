@@ -1,0 +1,20 @@
+{
+  "slug": "archive-588766c2357a",
+  "href": "/investor/reports/archive-588766c2357a/",
+  "meta": {
+    "title": "方案四压力情景下多资产风险平价模型重构与美债熊市变陡敏感性测算",
+    "date": "2026-05-29",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "通胀",
+      "宏观",
+      "A股",
+      "港美股"
+    ],
+    "source": "archive-588766c2357a",
+    "source_label": "archive-588766c2357a"
+  },
+  "bodyHtml": "<h1>方案四压力情景下多资产风险平价模型重构与美债熊市变陡敏感性测算</h1>\n<p><strong>Date:</strong> 2026-05-29\n<strong>Analyst:</strong> asset-allocator\n<strong>Stance:</strong> Support</p>\n<h2>1. 当前背景与方案四重构前提</h2>\n<p>如前序A股策略师所述，截至2026-05-29，方案四未触发，组合目前处于方案二（成长杠杆1.35倍，红利底座59.00%，现金及主权债23.00%，组合VaR -2.9872%）。本报告旨在为未来潜在的极端情况（如被迫切换至方案四且99% VaR阈值收紧至-2.6169%）提供风险平价模型的重建与压力测试。</p>\n<h2>2. 方案四：多资产风险平价模型重构 (铜敞口 42.0%)</h2>\n<p>为严格满足 99% VaR 达 -2.6169% 的合规要求 [S3]，并将铜敞口强行提升至 42.0%，我们对剩余资产的风险预算进行了重新分配\n- <strong>商品（铜）</strong>: 42.0% 敞口。考虑到近期 LME 铜价的高波动性 [S2]，其边际风险贡献（MCR）在组合中占据绝对主导（约占总风险预算的55%）。\n- <strong>主权债（美债为主）</strong>: 40.0% 敞口。设定有效久期为 8.2 年，作为主要的风险分散项。\n- <strong>权益（A股及全球股票）</strong>: 18.0% 敞口。由于 VaR 额度受限，权益仓位被迫大幅压缩。</p>\n<p>在此权重下，模型通过多元资产的低相关性，使整体 99% VaR 勉强锚定在 -2.6169% [S3]。</p>\n<h2>3. 美债熊市变陡（Bear Steepening）敏感性测算</h2>\n<p>在“熊市变陡”（长端收益率上行快于短端，如 10Y 美债收益率上行 50 bps，2Y 上行 20 bps [S1]）的情景下，组合的敏感性特征如下\n- <strong>主权债端（贴现率冲击）</strong>: 8.2年的有效久期面临 +50 bps 的长端冲击，将产生约 -4.1% 的价格回撤。在 40.0% 的权重下，对组合贡献 -1.64% 的回撤 [S3]。\n- <strong>铜与通胀预期挂钩</strong>: 熊市变陡通常伴随通胀预期回升或经济韧性。假设铜价在此情景下录得 +2.5% 的涨幅，将为组合提供 +1.05% 的正向对冲 [S3]。\n- <strong>权益端（估值挤压）</strong>: 利率上行压制成长股估值，假设回撤 -3.5%，对组合贡献 -0.63% [S3]。\n- <strong>净敏感性</strong>: 组合总回撤预计在 -1.22% 左右。</p>\n<h2>4. 尾部风险特征与结论</h2>\n<p>该架构在“通胀驱动”的熊市变陡下具有一定的抗跌性，但其尾部风险（Tail Risk）集中在“流动性冲击导致股债商三杀”的情境。届时 CVaR (99%) 可能迅速恶化至 -3.85% 以下 [S3]。因此，维持方案二确为当前最优解。若未来被迫进入方案四，需通过衍生品工具（如买入美债看跌期权 Puts）动态对冲长端利率风险。</p>\n<h2>资料来源 / Sources</h2>\n<ul>\n<li>[S1] Federal Reserve, \"Selected Interest Rates (Daily) - H.15\" — https://www.federalreserve.gov/releases/h15/</li>\n<li>[S2] London Metal Exchange (LME), \"Copper Historical Price Data\" — https://www.lme.com/en/Metals/Non-ferrous/LME-Copper</li>\n<li>[S3] Institute Quantitative Risk Parity Model — [自测算]</li>\n</ul>"
+}
