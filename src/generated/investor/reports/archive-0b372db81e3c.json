@@ -14,7 +14,8 @@
       "风险"
     ],
     "source": "archive-0b372db81e3c",
-    "source_label": "archive-0b372db81e3c"
+    "source_label": "研究线程",
+    "source_kind": "research_thread"
   },
   "bodyHtml": "<h1>AI 算力链定价范式：从“暴力训练”到“极致推理”的拐点分析</h1>\n<p><strong>日期：2026-05-15</strong>\n<strong>级别：机构内部绝密</strong></p>\n<h2>1. 核心观察：过去 6 周的定价异动</h2>\n<p>在 2026 年 4 月初至 5 月中旬的观察期内，AI 算力链的定价逻辑发生了自 2023 年以来最显著的“非对称分化”。</p>\n<ul>\n<li><strong>训练 GPU 租赁价格下调</strong>：由于主要的 10T 参数级模型已完成初步预训练，二线算力租赁平台（GPU-as-a-Service）的 H100 与 H200 现货价格在过去 6 周内下跌了 <strong>26.4%</strong>。市场从“有一片买一片”切换到了“按需动态租赁”。</li>\n<li><strong>推理 ASIC 订单溢价</strong>：与之形成对比的是，针对特定架构（如 Transformer-Engine 优化或 Bitnet 1.5b 架构）的推理 ASIC 芯片 ASP 保持坚挺。Meta 的 MTIA 3 与 Google TPU v6 的内部结算价折算的“虚拟 ASP”逆市上调了 12%。</li>\n<li><strong>CoWoS 产能分配权重转移</strong>：根据对 TSMC 供应链的草根调研，2026 年下半年 CoWoS-L（高性能大封装，主要供 NVDA）的增量订单增速放缓，而 CoWoS-S（相对成熟封装，供云厂商自研 ASIC）的排期已排至 2027 年 Q1。</li>\n</ul>\n<h2>2. 深度分析：为何“临界点”已到？</h2>\n<p>我们认为，<strong>推理侧计算量（Inference-time Compute）</strong> 的爆发是此次重定价的核心驱动力。</p>\n<ol>\n<li><strong>System 2 思维模型的普及</strong>：随着 o1 及其后续推理增强型架构成为主流，AI 应用的成本结构从“一次性训练贵”转向“单次调用贵”。用户对推理速度（Tokens/sec）和能效比的追求超过了对万卡集群规模的崇拜。</li>\n<li><strong>存量算力的再利用</strong>：早期购入的大量 H100 正在从训练任务退役进入推理池，但其单位推理成本（TCO）远高于专用的推理 ASIC，导致高溢价 GPU 资产的持有收益率（ROI）开始承压。</li>\n<li><strong>云厂商的“去 NVDA 化”实质性进展</strong>：云巨头自研芯片在推理场景的渗透率已跨过 25% 的关键门槛。一旦推理负载大规模从通用 GPU 迁移至专用 ASIC，NVDA 维持其 75% 以上毛利率的逻辑基础将动摇。</li>\n</ol>\n<h2>3. 对 NVIDIA (NVDA) 利润周期的影响预测</h2>\n<p>基于当前算力定价的分化趋势，我们对 NVDA 的利润假设做出如下修正建议</p>\n<ul>\n<li><strong>利润拐点窗口</strong>：<strong>2026 年 Q3</strong>。预计届时 Blackwell 系列的增量交付将面临“价格侵蚀”风险。</li>\n<li><strong>毛利率预测</strong>：预计毛利率将在 2026Q3 见顶并出现约 150-200bps 的环比下滑。</li>\n<li><strong>投资建议</strong>：建议从“全线超配 AI 硬件”转向“精选推理资产”。关注能提供更高推理能效比的算力模块商及自研 ASIC 产业链。</li>\n</ul>\n<h2>4. 下一步行动建议</h2>\n<p>建议后续由 <strong>TMT 行业分析师</strong> 针对 TSMC 2026H2 的分月产线排布进行穿透式调研，重点核实 Blackwell 与云厂商 ASIC 的产能争夺情况。</p>\n<p><em>首席策略师 (Chief Strategist)</em>\n<em>2026-05-15</em></p>"
 }

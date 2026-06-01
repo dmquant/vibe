@@ -2073,6 +2073,124 @@
   background: var(--paper);
   border-color: var(--line);
 }
+.investor-console .ops-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(320px, .55fr);
+  gap: 16px;
+  align-items: stretch;
+}
+.investor-console .ops-toolbar {
+  margin-top: 16px;
+}
+.investor-console .ops-status-grid {
+  display: grid;
+  gap: 10px;
+}
+.investor-console .ops-status-grid span {
+  display: grid;
+  gap: 4px;
+  min-height: 74px;
+  align-content: center;
+  padding: 12px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--muted);
+}
+.investor-console .ops-status-grid strong {
+  color: var(--ink);
+  font-size: 24px;
+}
+.investor-console .ops-thread-list,
+.investor-console .ops-mail-list {
+  display: grid;
+  gap: 12px;
+}
+.investor-console .ops-thread-card,
+.investor-console .ops-mail-item {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+.investor-console .ops-card-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+}
+.investor-console .ops-thread-card h3,
+.investor-console .ops-mail-item h3 {
+  margin: 6px 0 0;
+  font-size: 17px;
+  line-height: 1.35;
+}
+.investor-console .ops-thread-card p,
+.investor-console .ops-mail-item p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.58;
+}
+.investor-console .ops-flow-line {
+  display: grid;
+  grid-template-columns: minmax(82px, max-content) minmax(26px, 1fr) minmax(82px, max-content);
+  gap: 8px;
+  align-items: center;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+.investor-console .ops-flow-line.compact {
+  grid-template-columns: minmax(82px, max-content) minmax(20px, 1fr) minmax(82px, max-content);
+}
+.investor-console .ops-flow-line i {
+  display: block;
+  height: 1px;
+  background: var(--line);
+}
+.investor-console .ops-card-stack {
+  display: grid;
+  gap: 8px;
+}
+.investor-console .ops-card-stack a {
+  display: grid;
+  grid-template-columns: 34px minmax(82px, .34fr) minmax(0, 1fr);
+  gap: 8px;
+  align-items: center;
+  min-height: 42px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  text-decoration: none;
+}
+.investor-console .ops-card-stack a:hover,
+.investor-console .ops-thread-card:hover,
+.investor-console .ops-mail-item:hover {
+  border-color: var(--border-strong);
+  background: var(--hover-bg);
+  text-decoration: none;
+}
+.investor-console .ops-card-stack strong {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--line);
+  color: var(--blue);
+}
+.investor-console .ops-card-stack span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+.investor-console .ops-card-stack em {
+  overflow: hidden;
+  color: var(--ink);
+  font-size: 13px;
+  font-style: normal;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 :root[data-theme="light"] .investor-console .daily-board-terminal::before {
   border-color: rgba(0, 0, 0, .16);
   background:
@@ -2085,7 +2203,7 @@
     linear-gradient(90deg, transparent 0 8%, rgba(0, 0, 0, .55) 8% 10%, transparent 10% 16%, rgba(0, 0, 0, .8) 16% 18%, transparent 18% 24%, rgba(0, 0, 0, .45) 24% 26%, transparent 26% 32%, rgba(0, 0, 0, .9) 32% 34%, transparent 34% 40%, rgba(0, 0, 0, .55) 40% 42%, transparent 42% 48%, rgba(0, 0, 0, .72) 48% 50%, transparent 50% 56%, rgba(0, 0, 0, .95) 56% 58%, transparent 58% 64%, rgba(0, 0, 0, .62) 64% 66%, transparent 66% 72%, rgba(0, 0, 0, .45) 72% 74%, transparent 74% 80%, rgba(0, 0, 0, .7) 80% 82%, transparent 82% 100%);
 }
 @media (max-width: 980px) {
-  .investor-console .app-header, .investor-console .hero-layout, .investor-console .daily-hero, .investor-console .daily-board-head, .investor-console .risk-grid, .investor-console .report-shell, .investor-console .graph-layout, .investor-console .delta-grid, .investor-console .thesis-detail, .investor-console .radar-hero, .investor-console .tracker-layout, .investor-console .tracker-detail, .investor-console .analyst-tracker-layout, .investor-console .analyst-focus-grid, .investor-console .deep-reading-hero, .investor-console .deep-download-panel, .investor-console .deep-report-layout, .investor-console .deep-latest { grid-template-columns: 1fr; display: grid; }
+  .investor-console .app-header, .investor-console .hero-layout, .investor-console .daily-hero, .investor-console .daily-board-head, .investor-console .risk-grid, .investor-console .report-shell, .investor-console .graph-layout, .investor-console .delta-grid, .investor-console .thesis-detail, .investor-console .radar-hero, .investor-console .tracker-layout, .investor-console .tracker-detail, .investor-console .analyst-tracker-layout, .investor-console .analyst-focus-grid, .investor-console .deep-reading-hero, .investor-console .deep-download-panel, .investor-console .deep-report-layout, .investor-console .deep-latest, .investor-console .ops-hero { grid-template-columns: 1fr; display: grid; }
   .investor-console .app-header { align-items: stretch; padding: 24px 18px; }
   .investor-console .header-actions, .investor-console .toolbar, .investor-console .daily-controls, .investor-console .graph-toolbar, .investor-console .tracker-toolbar { min-width: 0; grid-template-columns: 1fr; }
   .investor-console .nav-tabs, .investor-console main, .investor-console .site-footer { padding-left: 18px; padding-right: 18px; }
@@ -2108,6 +2226,10 @@
   .investor-console .daily-quote-row { grid-template-columns: minmax(94px, 1fr) minmax(80px, auto); }
   .investor-console .daily-quote-row em { grid-column: 1 / -1; text-align: left; }
   .investor-console .tracker-card-head, .investor-console .analyst-focus-head { display: grid; grid-template-columns: 1fr; }
+  .investor-console .ops-card-head,
+  .investor-console .ops-card-stack a,
+  .investor-console .ops-flow-line { grid-template-columns: 1fr; }
+  .investor-console .ops-flow-line i { display: none; }
   .investor-console .report-card { grid-template-columns: 1fr; }
   .investor-console .report-meta { position: static; }
   .investor-console .deep-page { padding: 18px 14px 34px; }

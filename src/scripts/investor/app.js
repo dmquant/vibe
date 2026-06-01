@@ -10,6 +10,7 @@ import {
 } from "./views/dashboard.js";
 import { renderAnalystTracker, renderChangeRadar, renderThesisTracker } from "./views/investor-workflows.js";
 import { renderKnowledge } from "./views/knowledge.js";
+import { renderOperations } from "./views/operations.js";
 import { renderReports } from "./views/reports.js";
 
 const KNOWN_VIEWS = new Set([
@@ -18,6 +19,7 @@ const KNOWN_VIEWS = new Set([
   "radar",
   "theses",
   "analyst-tracker",
+  "operations",
   "delta",
   "cockpit",
   "deep",
@@ -75,6 +77,8 @@ export function mountInvestorConsole() {
     thesisDirection: "",
     analystTrackerQuery: "",
     analystTrackerStance: "",
+    operationsQuery: "",
+    operationsStatus: "",
   };
 
   const context = {
@@ -110,6 +114,7 @@ export function mountInvestorConsole() {
       radar: renderChangeRadar,
       theses: renderThesisTracker,
       "analyst-tracker": renderAnalystTracker,
+      operations: renderOperations,
       delta: renderDelta,
       cockpit: renderCockpit,
       deep: renderDeepResearch,

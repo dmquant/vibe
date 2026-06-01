@@ -34,6 +34,7 @@ export function renderDashboard({ app, data }) {
           <button data-view="radar">打开变化雷达</button>
           <button data-view="theses">打开主线追踪</button>
           <button data-view="analyst-tracker">打开分析师动向</button>
+          <button data-view="operations">打开研究工作流</button>
         </div>
       </div>
       <div class="panel">

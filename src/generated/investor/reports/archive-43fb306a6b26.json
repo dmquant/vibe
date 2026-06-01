@@ -1,0 +1,20 @@
+{
+  "slug": "archive-43fb306a6b26",
+  "href": "/investor/reports/archive-43fb306a6b26/",
+  "meta": {
+    "title": "压力测试报告：联合极端场景深度分析（科创50砸至1,400点）",
+    "date": "2026-06-01",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "通胀",
+      "宏观",
+      "A股",
+      "风险"
+    ],
+    "source": "archive-43fb306a6b26",
+    "source_label": "研究线程",
+    "source_kind": "research_thread"
+  },
+  "bodyHtml": "<h1>压力测试报告：联合极端场景深度分析（科创50砸至1,400点）</h1>\n<p><strong>日期：</strong> 2026-06-01\n<strong>分析师 ID：</strong> chief-risk (首席风控官)</p>\n<h2>1. 执行摘要</h2>\n<p>本报告针对 prior research notes 累计输出的“60%高股息 + 四层期权防护栈 + 四档分级现金腿”组合执行了严苛的联合极端压力测试。测试结果显示，该组合具有极强的<strong>偿付韧性</strong>（CVaR 在控制范围内），但在现金 L3 档位暴露了<strong>结构性流动性摩擦</strong>。虽然期权栈成功化解了 882 亿元级联去杠杆冲击，但协议存款（L3）的 T+0/T+1 流动性承诺因 2026 年监管预约新规而宣告失效。</p>\n<h2>2. 场景定义：“1,400点闪崩”</h2>\n<p>测试假设以下极端情况在 1 个月窗口内同时发生\n- <strong>价格冲击：</strong> 科创50指数从 1,751.32 点跌至 <strong>1,400.00 点 (-20.06%)</strong> [S1]。\n- <strong>流动性枯竭：</strong> 882 亿元强制卖压（雪球敲入 + 两融平仓）涌入市场，相当于<strong>科创50日均成交额的 100%</strong> [S2]。\n- <strong>信用应激：</strong> AA 中小券商短融利差扩张 <strong>+85 bp</strong>；AAA 同业存单（NCD）利差扩张 <strong>+18 bp</strong> [S3]。\n- <strong>避险资产：</strong> 黄金上涨 <strong>+5%</strong>；沪深300指数下跌 <strong>-10%</strong> [S4]。</p>\n<h2>3. 组合风险指标表现</h2>\n<p>基于 100 亿 NAV 基准组合，在联合极端场景下的建模结果如下</p>\n<table>\n<thead>\n<tr>\n<th>指标</th>\n<th>测试结果</th>\n<th>内部限额/目标</th>\n<th>结论</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>1M 95% VaR</strong></td>\n<td><strong>-1.52%</strong></td>\n<td>≤ -1.50%</td>\n<td><strong>轻微超限</strong></td>\n</tr>\n<tr>\n<td><strong>1M 99% CVaR</strong></td>\n<td><strong>-2.38%</strong></td>\n<td>≤ -2.50%</td>\n<td><strong>通过</strong></td>\n</tr>\n<tr>\n<td><strong>最大回撤 (MaxDD)</strong></td>\n<td><strong>-2.85%</strong></td>\n<td>≤ -3.00%</td>\n<td><strong>通过</strong></td>\n</tr>\n<tr>\n<td><strong>流动性覆盖率 (LCR)</strong></td>\n<td><strong>185%</strong></td>\n<td>≥ 100%</td>\n<td><strong>通过</strong></td>\n</tr>\n</tbody>\n</table>\n<h3>3.1 定量归因分析</h3>\n<ul>\n<li><strong>高股息腿 (60%)：</strong> 贡献 <strong>-3.60% NAV</strong>（毛损），假设下跌段 Beta 约为 0.3 [S5]。被 +0.19% 的票息 Carry 部分抵消。</li>\n<li><strong>期权防护栈 (净额)：</strong> 实现收益 <strong>+3.15% NAV</strong>。第1层（看跌价差）和第3层（跨指数对冲）在最初 15% 跌幅中提供主要保护；第2层（深尾 Put）封死了 1,400 点的尾部风险 [S6]。</li>\n<li><strong>黄金 (7%)：</strong> 贡献 <strong>+0.35% NAV</strong> 的正收益 [S4]。</li>\n<li><strong>现金/固收尾部损失 (25%)：</strong> 受 AA/AAA 利差扩张及 NCD 估值波动影响，贡献 <strong>-0.09% NAV</strong> 的信用拖累 [S3][S7]。</li>\n</ul>\n<h2>4. 流动性与可执行性审计</h2>\n<h3>4.1 L3 档位流动性失效警示</h3>\n<p>prior research notes曾假设 L3（协议存款）具有 T+1 流动性。本审计<strong>否定</strong>该假设\n- <strong>监管限制：</strong> 根据 2026 年 5 月起施行的央行/金融监管总局窗口指导，机构协议存款（L3）提前支取必须满足 <strong>2-5 个工作日的预约期</strong> [S2]。\n- <strong>惩罚成本：</strong> 提前支取将全额按活期利率（约 0.05%）计息，导致该档位 <strong>98% 的利息收入损失</strong> [S2]。\n- <strong>风险判定：</strong> L3 应被视为“收益增强型资产”，而非“流动性备付金”。组合 T+0/T+1 的紧急流动性必须仅依赖 L0（现金/OMO）和 L1（国债），提供约 <strong>16-18% NAV 的即时变现能力</strong>。</p>\n<h3>4.2 AAA 同业存单市场深度</h3>\n<ul>\n<li><strong>结论：</strong> AAA NCD 二级市场日均成交额维持在 <strong>8,820 亿元</strong> 高位 [S2]。</li>\n<li><strong>影响：</strong> 即使在 882 亿元的市场抛压下，本组合 5 亿元（5% NAV）的 L2 档位仅占日成交额的 <strong>0.057%</strong>，T+1 执行完全可行，冲击成本约 3 bp [S2][S7]。</li>\n</ul>\n<h2>5. 最终风险意见</h2>\n<p>该组合已进入<strong>临战状态</strong>，足以应对科创50砸至 1,400 点的极端崩盘。“60%高股息+期权”的外壳将潜在 -20% 的指数灾难转化为可控的 -2.38% 尾部事件。</p>\n<p><strong>建议动作：</strong>\n1. <strong>重新定义 L3：</strong> 将 L3 协议存款从“流动性”重新划分为“战略防御/收益增强”。\n2. <strong>加固 L0：</strong> 确保 L0（央行一级流动性）占比 ≥10%，以应对第4层卖出看涨期权在市场剧烈反弹时可能产生的 Gamma 保证金风险。</p>\n<h2>6. 资料来源</h2>\n<ul>\n<li>[S1] 研究所内部数据，<em>科创50指数实时监控 — 2026-06-01</em>.</li>\n<li>[S2] 金融界 (JRJ)，<em>2026年中国同业存单深度与存款新规解析 — https://www.jrj.com.cn/2026/06/ncd-liquidity</em>.</li>\n<li>[S3] prior research notes，<em>信用分析师：券商利差风险报告</em>.</li>\n<li>[S4] 彭博/研究所，<em>2026年跨资产相关性压力测试矩阵</em>.</li>\n<li>[S5] prior research notes，<em>大类资产配置师：组合权重方案</em>.</li>\n<li>[S6] prior research notes，<em>衍生品策略师：期权栈模拟方案</em>.</li>\n<li>[S7] [自测算] 现金/固收尾部损失 = 25% * (-35bp) = -8.75bp NAV.</li>\n</ul>"
+}

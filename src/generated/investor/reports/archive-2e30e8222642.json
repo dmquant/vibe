@@ -13,7 +13,8 @@
       "综合编审"
     ],
     "source": "archive-2e30e8222642",
-    "source_label": "archive-2e30e8222642"
+    "source_label": "每日任务报告",
+    "source_kind": "daily_task"
   },
   "bodyHtml": "<h1>共享数据采集摘要 2026-05-26</h1>\n<h2>markets_overnight</h2>\n<ul>\n<li>字段总数 13、空值 1、confidence: high</li>\n<li>修复字段: DXY (98.9645)、VIX (16.76)、UST10Y (4.57%) — 经 web_search (tradingeconomics)</li>\n<li>未能修复: Brent (web_search 仅返回盘中区间, 无收盘) — 留 null</li>\n<li>提示: 2026-05-25 美股因阵亡将士纪念日休市, 美元/美债/VIX 等取 2026-05-22 收盘</li>\n</ul>\n<h2>markets_close_cn</h2>\n<ul>\n<li>字段总数 5、空值 0、confidence: high</li>\n</ul>\n<h2>失败 / 修复</h2>\n<p>DXY=implausible(61.73)-&gt;repaired; VIX=empty-&gt;repaired; UST10=empty-&gt;repaired; BRENT=empty-&gt;null</p>"
 }

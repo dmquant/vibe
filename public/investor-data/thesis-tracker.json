@@ -1,20 +1,19 @@
 {
-  "generatedAt": "2026-06-01T01:18:42.479955+00:00",
+  "generatedAt": "2026-06-01T13:32:54.572070+00:00",
   "stats": {
     "total": 7,
-    "avgConviction": 53.3,
+    "avgConviction": 54.4,
     "highConviction": 2,
     "riskPressure": 7,
-    "conflicting": 5,
+    "conflicting": 3,
     "sourceEvidence": 105,
-    "sourceReports": 97,
+    "sourceReports": 98,
     "sourceAnalysts": 10
   },
   "directionCounts": {
-    "weakening": 1,
+    "strengthening": 3,
     "stable": 1,
-    "conflicting": 4,
-    "strengthening": 1
+    "conflicting": 3
   },
   "statusCounts": {
     "审慎验证": 7
@@ -25,7 +24,7 @@
     "GPU、HBM 与先进封装决定 AI 资本开支供给节奏：是否需要降级、等待证伪指标，还是补充新的支持证据？",
     "AI 电力与电网瓶颈仍是基础设施主线：是否需要降级、等待证伪指标，还是补充新的支持证据？",
     "中国电力设备出海进入订单质量与政策筛选期：是否需要降级、等待证伪指标，还是补充新的支持证据？",
-    "风险核查与证据质量是主题交易的必要过滤器：是否需要降级、等待证伪指标，还是补充新的支持证据？"
+    "中国资产定价仍受政策、流动性与风险偏好共同驱动：是否需要降级、等待证伪指标，还是补充新的支持证据？"
   ],
   "theses": [
     {
@@ -33,18 +32,18 @@
       "title": "AI 资本开支通过能源、设备和利率进入通胀定价",
       "titleEn": "AI capex enters inflation pricing through energy, equipment, and rates",
       "coreView": "当前共有 40 条证据、4 位分析师和 8 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
-      "direction": "weakening",
-      "conviction": 72,
+      "direction": "strengthening",
+      "conviction": 74,
       "status": "审慎验证",
-      "priority": 86.4,
-      "evidenceQuality": 98,
+      "priority": 92,
+      "evidenceQuality": 100,
       "riskPressure": 100,
       "supportBalance": 6,
       "score": {
         "for": 14,
         "against": 8,
         "analysts": 4,
-        "recent": 1,
+        "recent": 2,
         "risks": 8
       },
       "sourceLedger": {
@@ -63,6 +62,18 @@
             "chain": "AI 基础设施",
             "supportType": "risk",
             "importance": 67.9,
+            "confidence": 0.9
+          },
+          {
+            "id": "ev_d764d9acb6",
+            "title": "能源与电力政策反转对公路物流成本支撑力的侵蚀风险",
+            "summary": "研究记录 - 分析师: 能源行业分析师 (energy-analyst) - 立场: stress-test (压测研究记录 的 70—110 bps 物流毛利率冗余) - 工作日期 (Asia/Singapore): 2026-...",
+            "href": "/investor/reports/archive-8e34d0b88548/",
+            "analyst": "未识别",
+            "date": "2026-06-01",
+            "chain": "宏观通胀传导",
+            "supportType": "risk",
+            "importance": 65.9,
             "confidence": 0.9
           },
           {
@@ -100,18 +111,6 @@
             "supportType": "supports",
             "importance": 50.2,
             "confidence": 0.868
-          },
-          {
-            "id": "ev_f28a6bc5a5",
-            "title": "能源价格下移的宏观外溢效应：三季度全球通胀预测重调与美联储、欧洲央行及人民银行政策空间展望",
-            "summary": "能源价格下移的宏观外溢效应：三季度全球通胀预测重调与美联储、欧洲央行及人民银行政策空间展望 发布日期：2026-05-29 分析师：首席经济学家 (Chief Economist)...",
-            "href": "/investor/reports/archive-e3364e456186/",
-            "analyst": "未识别",
-            "date": "2026-05-29",
-            "chain": "宏观通胀传导",
-            "supportType": "supports",
-            "importance": 49.2,
-            "confidence": 0.86
           }
         ]
       },
@@ -1250,22 +1249,242 @@
       ]
     },
     {
+      "id": "thesis_china_market_liquidity",
+      "title": "中国资产定价仍受政策、流动性与风险偏好共同驱动",
+      "titleEn": "China asset pricing remains driven by policy, liquidity, and risk appetite",
+      "coreView": "当前共有 40 条证据、2 位分析师和 5 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
+      "direction": "strengthening",
+      "conviction": 44,
+      "status": "审慎验证",
+      "priority": 41.7,
+      "evidenceQuality": 29,
+      "riskPressure": 87.8,
+      "supportBalance": -5,
+      "score": {
+        "for": 3,
+        "against": 8,
+        "analysts": 2,
+        "recent": 2,
+        "risks": 5
+      },
+      "sourceLedger": {
+        "evidence": 11,
+        "reports": 11,
+        "analysts": 2,
+        "latestDate": "2026-06-01",
+        "topReports": [
+          {
+            "id": "ev_e417505b01",
+            "title": "科技出海进攻端（40%权重）的全球贸易政策与供应链管制风险评估",
+            "summary": "科技出海进攻端（40%权重）的全球贸易政策与供应链管制风险评估 作者 : 政策分析师 ( policy-analyst ) 权威工作日期 : 2026-06-01 研究讨论共享研究记录索引 :...",
+            "href": "/investor/reports/archive-a32f5a2dc4fb/",
+            "analyst": "未识别",
+            "date": "2026-06-01",
+            "chain": "宏观通胀传导",
+            "supportType": "risk",
+            "importance": 66.4,
+            "confidence": 0.9
+          },
+          {
+            "id": "ev_3c9ab7a48d",
+            "title": "2026年下半年人民币汇率展望：中美利差分化、贸易顺差之锚与央行“不可能三角”政策红线",
+            "summary": "2026年下半年人民币汇率展望：中美利差分化、贸易顺差之锚与央行“不可能三角”政策红线",
+            "href": "/investor/reports/archive-79ae6d33f119/",
+            "analyst": "外汇策略师",
+            "date": "2026-06-01",
+            "chain": "宏观通胀传导",
+            "supportType": "risk",
+            "importance": 45,
+            "confidence": 0.825
+          },
+          {
+            "id": "ev_3288c56aa8",
+            "title": "农业作为流动性隔离层的可行性验证 - 2026-05-29",
+            "summary": "截至研究所工作日 2026-05-29，我对上一张卡的方向给出 有边界的支持：中国农业板块，尤其是种业公司，确实具备低北向敞口与粮食安全政策底，能够在红利资产踩踏...",
+            "href": "/investor/reports/archive-3eeff1822dc4/",
+            "analyst": "未识别",
+            "date": "2026-05-29",
+            "chain": "宏观通胀传导",
+            "supportType": "supports",
+            "importance": 43.4,
+            "confidence": 0.812
+          },
+          {
+            "id": "ev_b8a891ebc7",
+            "title": "prior research notes— 关税驱动的供应链重构与中国贸易政策应对：人民币波动边界的压力测试",
+            "summary": "prior research notes— 关税驱动的供应链重构与中国贸易政策应对：人民币波动边界的压力测试",
+            "href": "/investor/reports/archive-52afca00f694/",
+            "analyst": "未识别",
+            "date": "2026-05-27",
+            "chain": "贸易政策与出海",
+            "supportType": "risk",
+            "importance": 48.4,
+            "confidence": 0.853
+          },
+          {
+            "id": "ev_a9848ab1ea",
+            "title": "prior research notes: 美国出口管制政策对人形机器人Tier-1供应链“出海”逻辑的冲击评估",
+            "summary": "prior research notes: 美国出口管制政策对人形机器人Tier-1供应链“出海”逻辑的冲击评估",
+            "href": "/investor/reports/archive-36cc88f28015/",
+            "analyst": "未识别",
+            "date": "2026-05-23",
+            "chain": "贸易政策与出海",
+            "supportType": "supports",
+            "importance": 55,
+            "confidence": 0.9
+          }
+        ]
+      },
+      "lastUpdated": "2026-06-01",
+      "evidenceFor": [
+        {
+          "id": "ev_3288c56aa8",
+          "title": "农业作为流动性隔离层的可行性验证 - 2026-05-29",
+          "summary": "截至研究所工作日 2026-05-29，我对上一张卡的方向给出 有边界的支持：中国农业板块，尤其是种业公司，确实具备低北向敞口与粮食安全政策底，能够在红利资产踩踏...",
+          "href": "/investor/reports/archive-3eeff1822dc4/",
+          "analyst": "未识别",
+          "date": "2026-05-29",
+          "chain": "宏观通胀传导",
+          "supportType": "supports",
+          "importance": 43.4,
+          "confidence": 0.812
+        },
+        {
+          "id": "ev_a9848ab1ea",
+          "title": "prior research notes: 美国出口管制政策对人形机器人Tier-1供应链“出海”逻辑的冲击评估",
+          "summary": "prior research notes: 美国出口管制政策对人形机器人Tier-1供应链“出海”逻辑的冲击评估",
+          "href": "/investor/reports/archive-36cc88f28015/",
+          "analyst": "未识别",
+          "date": "2026-05-23",
+          "chain": "贸易政策与出海",
+          "supportType": "supports",
+          "importance": 55,
+          "confidence": 0.9
+        },
+        {
+          "id": "ev_e65136272e",
+          "title": "港股通/陆股通资金流向日报 (2026-05-19)",
+          "summary": "核心结论 今日（2026年5月19日）市场情绪显著回暖。 北向资金 重点布局AI算力与半导体芯片板块，中际旭创单日获逾20亿元抢筹； 南向资金 全天呈现稳步净流入态势...",
+          "href": "/investor/reports/archive-907f7aaa92d7/",
+          "analyst": "全球宏观分析师",
+          "date": "2026-05-19",
+          "chain": "AI 基础设施",
+          "supportType": "supports",
+          "importance": 52.6,
+          "confidence": 0.888
+        }
+      ],
+      "evidenceAgainst": [
+        {
+          "id": "ev_c26fb30e4f",
+          "title": "研究记录 中国宏观分析师 2026-05-21",
+          "summary": "板块：2d137dd4-038b-4e2b-b65f-4b2a7aaa559c - - 主题：美国信贷收缩与跨境美元流动性向人民银行（PBOC）政策空间的传导 - 立场：stress-test（压力测试） - 工...",
+          "href": "/investor/reports/archive-93de2533dc73/",
+          "analyst": "未识别",
+          "date": "2026-05-21",
+          "chain": "AI 基础设施",
+          "supportType": "risk",
+          "importance": 52.2,
+          "confidence": 0.885
+        },
+        {
+          "id": "ev_b8a891ebc7",
+          "title": "prior research notes— 关税驱动的供应链重构与中国贸易政策应对：人民币波动边界的压力测试",
+          "summary": "prior research notes— 关税驱动的供应链重构与中国贸易政策应对：人民币波动边界的压力测试",
+          "href": "/investor/reports/archive-52afca00f694/",
+          "analyst": "未识别",
+          "date": "2026-05-27",
+          "chain": "贸易政策与出海",
+          "supportType": "risk",
+          "importance": 48.4,
+          "confidence": 0.853
+        },
+        {
+          "id": "ev_3c9ab7a48d",
+          "title": "2026年下半年人民币汇率展望：中美利差分化、贸易顺差之锚与央行“不可能三角”政策红线",
+          "summary": "2026年下半年人民币汇率展望：中美利差分化、贸易顺差之锚与央行“不可能三角”政策红线",
+          "href": "/investor/reports/archive-79ae6d33f119/",
+          "analyst": "外汇策略师",
+          "date": "2026-06-01",
+          "chain": "宏观通胀传导",
+          "supportType": "risk",
+          "importance": 45,
+          "confidence": 0.825
+        }
+      ],
+      "risks": [
+        {
+          "id": "risk_762f9e73d3",
+          "title": "AI算力扩张与电网基础设施约束：压力测试CapEx叙事的物理极限",
+          "summary": "作者： energy-analyst （能源行业分析师） 权威工作日期： 2026-05-28 课题立场： 压力测试（通过定量化原材料与监管政策建模，支持并扩展“电力瓶颈可绕行”的...",
+          "href": "/investor/reports/archive-393766a70997/",
+          "chain": "AI 基础设施",
+          "impact": 5,
+          "probability": 5,
+          "trend": "rising"
+        },
+        {
+          "id": "risk_e105eea86d",
+          "title": "压力测试：电力设备供应链瓶颈 vs. AI 数据中心物理上限",
+          "summary": "作者 / 角色： 能源行业分析师 (Energy Analyst) - 工作日期： 2026-05-28（亚洲/新加坡时区） - 研究 / 研究记录： 10a0a000-51a6-4f27-92e8-1b2eb2ac0a22 / -...",
+          "href": "/investor/reports/archive-5ec4b09c4941/",
+          "chain": "AI 基础设施",
+          "impact": 5,
+          "probability": 5,
+          "trend": "rising"
+        },
+        {
+          "id": "risk_aa67bbc7f1",
+          "title": "AI算力扩张的电力基础设施压力测试 - 2026-05-29",
+          "summary": "截至研究所工作日 2026-05-29，我从能源与电力基础设施侧对上一张 TMT 结论做压力测试：AI算力需求已经足以改变并网排队、变压器采购和新能源消纳格局，但真正的...",
+          "href": "/investor/reports/archive-8664b76c4305/",
+          "chain": "电力与电网",
+          "impact": 5,
+          "probability": 5,
+          "trend": "rising"
+        },
+        {
+          "id": "risk_d97d146cb0",
+          "title": "AI芯片能效演进对算力扩张瓶颈的压力测试 (2026-05-29)",
+          "summary": "核心观点 尽管以先进封装（Advanced Packaging）、背面供电（BSPD）和共封装光学（CPO）为代表的AI芯片架构演进显著提升了单芯片能效，但其 无法从根本上缓解能...",
+          "href": "/investor/reports/archive-9557740dfbb9/",
+          "chain": "半导体与存储",
+          "impact": 5,
+          "probability": 3,
+          "trend": "rising"
+        }
+      ],
+      "falsifiers": [
+        "政策预期落空",
+        "流动性边际收紧",
+        "外资流出加速",
+        "信用风险上升"
+      ],
+      "monitors": [
+        "融资余额",
+        "北向/南向资金",
+        "人民币汇率",
+        "政策会议"
+      ],
+      "linkedReports": []
+    },
+    {
       "id": "thesis_research_risk_quality",
       "title": "风险核查与证据质量是主题交易的必要过滤器",
       "titleEn": "Risk verification and evidence quality are necessary filters for theme trades",
       "coreView": "当前共有 40 条证据、2 位分析师和 8 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
       "direction": "strengthening",
-      "conviction": 36,
+      "conviction": 34,
       "status": "审慎验证",
-      "priority": 37.6,
-      "evidenceQuality": 30,
+      "priority": 30,
+      "evidenceQuality": 22,
       "riskPressure": 100,
       "supportBalance": -8,
       "score": {
         "for": 0,
         "against": 8,
         "analysts": 2,
-        "recent": 4,
+        "recent": 3,
         "risks": 8
       },
       "sourceLedger": {
@@ -1447,226 +1666,6 @@
           "label": "consumer downgrade health silver economy 78a2530"
         }
       ]
-    },
-    {
-      "id": "thesis_china_market_liquidity",
-      "title": "中国资产定价仍受政策、流动性与风险偏好共同驱动",
-      "titleEn": "China asset pricing remains driven by policy, liquidity, and risk appetite",
-      "coreView": "当前共有 40 条证据、1 位分析师和 5 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
-      "direction": "conflicting",
-      "conviction": 36,
-      "status": "审慎验证",
-      "priority": 19.1,
-      "evidenceQuality": 2,
-      "riskPressure": 87.8,
-      "supportBalance": -5,
-      "score": {
-        "for": 3,
-        "against": 8,
-        "analysts": 1,
-        "recent": 0,
-        "risks": 5
-      },
-      "sourceLedger": {
-        "evidence": 11,
-        "reports": 11,
-        "analysts": 1,
-        "latestDate": "2026-05-29",
-        "topReports": [
-          {
-            "id": "ev_3288c56aa8",
-            "title": "农业作为流动性隔离层的可行性验证 - 2026-05-29",
-            "summary": "截至研究所工作日 2026-05-29，我对上一张卡的方向给出 有边界的支持：中国农业板块，尤其是种业公司，确实具备低北向敞口与粮食安全政策底，能够在红利资产踩踏...",
-            "href": "/investor/reports/archive-3eeff1822dc4/",
-            "analyst": "未识别",
-            "date": "2026-05-29",
-            "chain": "宏观通胀传导",
-            "supportType": "supports",
-            "importance": 43.4,
-            "confidence": 0.812
-          },
-          {
-            "id": "ev_02b5602561",
-            "title": "AI物理墙哑铃组合的最终风险审计：单名GPU云减值、关税摩擦与流动性事件的整合压力测试",
-            "summary": "AI物理墙哑铃组合的最终风险审计：单名GPU云减值、关税摩擦与流动性事件的整合压力测试 报告日期： 2026-05-27（亚洲/新加坡） 研究记录（终卷研究记录） 分析师...",
-            "href": "/investor/reports/archive-1bf7e2c5147e/",
-            "analyst": "未识别",
-            "date": "2026-05-27",
-            "chain": "AI 基础设施",
-            "supportType": "risk",
-            "importance": 59.6,
-            "confidence": 0.9
-          },
-          {
-            "id": "ev_b8a891ebc7",
-            "title": "prior research notes— 关税驱动的供应链重构与中国贸易政策应对：人民币波动边界的压力测试",
-            "summary": "prior research notes— 关税驱动的供应链重构与中国贸易政策应对：人民币波动边界的压力测试",
-            "href": "/investor/reports/archive-52afca00f694/",
-            "analyst": "未识别",
-            "date": "2026-05-27",
-            "chain": "贸易政策与出海",
-            "supportType": "risk",
-            "importance": 48.4,
-            "confidence": 0.853
-          },
-          {
-            "id": "ev_a9848ab1ea",
-            "title": "prior research notes: 美国出口管制政策对人形机器人Tier-1供应链“出海”逻辑的冲击评估",
-            "summary": "prior research notes: 美国出口管制政策对人形机器人Tier-1供应链“出海”逻辑的冲击评估",
-            "href": "/investor/reports/archive-36cc88f28015/",
-            "analyst": "未识别",
-            "date": "2026-05-23",
-            "chain": "贸易政策与出海",
-            "supportType": "supports",
-            "importance": 55,
-            "confidence": 0.9
-          },
-          {
-            "id": "ev_c24cfe15e6",
-            "title": "全球宏观反馈：G-SIB 美元资产负债表配给、贸易融资收缩与央行政策协调的结构性摩擦",
-            "summary": "全球宏观反馈：G-SIB 美元资产负债表配给、贸易融资收缩与央行政策协调的结构性摩擦",
-            "href": "/investor/reports/archive-34f2f2bb11ec/",
-            "analyst": "未识别",
-            "date": "2026-05-22",
-            "chain": "宏观通胀传导",
-            "supportType": "risk",
-            "importance": 40.6,
-            "confidence": 0.788
-          }
-        ]
-      },
-      "lastUpdated": "2026-05-31",
-      "evidenceFor": [
-        {
-          "id": "ev_3288c56aa8",
-          "title": "农业作为流动性隔离层的可行性验证 - 2026-05-29",
-          "summary": "截至研究所工作日 2026-05-29，我对上一张卡的方向给出 有边界的支持：中国农业板块，尤其是种业公司，确实具备低北向敞口与粮食安全政策底，能够在红利资产踩踏...",
-          "href": "/investor/reports/archive-3eeff1822dc4/",
-          "analyst": "未识别",
-          "date": "2026-05-29",
-          "chain": "宏观通胀传导",
-          "supportType": "supports",
-          "importance": 43.4,
-          "confidence": 0.812
-        },
-        {
-          "id": "ev_a9848ab1ea",
-          "title": "prior research notes: 美国出口管制政策对人形机器人Tier-1供应链“出海”逻辑的冲击评估",
-          "summary": "prior research notes: 美国出口管制政策对人形机器人Tier-1供应链“出海”逻辑的冲击评估",
-          "href": "/investor/reports/archive-36cc88f28015/",
-          "analyst": "未识别",
-          "date": "2026-05-23",
-          "chain": "贸易政策与出海",
-          "supportType": "supports",
-          "importance": 55,
-          "confidence": 0.9
-        },
-        {
-          "id": "ev_e65136272e",
-          "title": "港股通/陆股通资金流向日报 (2026-05-19)",
-          "summary": "核心结论 今日（2026年5月19日）市场情绪显著回暖。 北向资金 重点布局AI算力与半导体芯片板块，中际旭创单日获逾20亿元抢筹； 南向资金 全天呈现稳步净流入态势...",
-          "href": "/investor/reports/archive-907f7aaa92d7/",
-          "analyst": "全球宏观分析师",
-          "date": "2026-05-19",
-          "chain": "AI 基础设施",
-          "supportType": "supports",
-          "importance": 52.6,
-          "confidence": 0.888
-        }
-      ],
-      "evidenceAgainst": [
-        {
-          "id": "ev_c26fb30e4f",
-          "title": "研究记录 中国宏观分析师 2026-05-21",
-          "summary": "板块：2d137dd4-038b-4e2b-b65f-4b2a7aaa559c - - 主题：美国信贷收缩与跨境美元流动性向人民银行（PBOC）政策空间的传导 - 立场：stress-test（压力测试） - 工...",
-          "href": "/investor/reports/archive-93de2533dc73/",
-          "analyst": "未识别",
-          "date": "2026-05-21",
-          "chain": "AI 基础设施",
-          "supportType": "risk",
-          "importance": 52.2,
-          "confidence": 0.885
-        },
-        {
-          "id": "ev_b8a891ebc7",
-          "title": "prior research notes— 关税驱动的供应链重构与中国贸易政策应对：人民币波动边界的压力测试",
-          "summary": "prior research notes— 关税驱动的供应链重构与中国贸易政策应对：人民币波动边界的压力测试",
-          "href": "/investor/reports/archive-52afca00f694/",
-          "analyst": "未识别",
-          "date": "2026-05-27",
-          "chain": "贸易政策与出海",
-          "supportType": "risk",
-          "importance": 48.4,
-          "confidence": 0.853
-        },
-        {
-          "id": "ev_9d831a8691",
-          "title": "风险评估：财政供应冲击与银行分红可持续性",
-          "summary": "1. 执行摘要 本报告评估了 13万亿人民币 政府债券总供应量（国债、特别国债及地方债）对中国银行业流动性和分红能力的系统性风险。随着中国人民银行（PBOC）的政...",
-          "href": "/investor/reports/archive-cfad0603a78a/",
-          "analyst": "未识别",
-          "date": "",
-          "chain": "AI 基础设施",
-          "supportType": "risk",
-          "importance": 41,
-          "confidence": 0.792
-        }
-      ],
-      "risks": [
-        {
-          "id": "risk_762f9e73d3",
-          "title": "AI算力扩张与电网基础设施约束：压力测试CapEx叙事的物理极限",
-          "summary": "作者： energy-analyst （能源行业分析师） 权威工作日期： 2026-05-28 课题立场： 压力测试（通过定量化原材料与监管政策建模，支持并扩展“电力瓶颈可绕行”的...",
-          "href": "/investor/reports/archive-393766a70997/",
-          "chain": "AI 基础设施",
-          "impact": 5,
-          "probability": 5,
-          "trend": "rising"
-        },
-        {
-          "id": "risk_e105eea86d",
-          "title": "压力测试：电力设备供应链瓶颈 vs. AI 数据中心物理上限",
-          "summary": "作者 / 角色： 能源行业分析师 (Energy Analyst) - 工作日期： 2026-05-28（亚洲/新加坡时区） - 研究 / 研究记录： 10a0a000-51a6-4f27-92e8-1b2eb2ac0a22 / -...",
-          "href": "/investor/reports/archive-5ec4b09c4941/",
-          "chain": "AI 基础设施",
-          "impact": 5,
-          "probability": 5,
-          "trend": "rising"
-        },
-        {
-          "id": "risk_aa67bbc7f1",
-          "title": "AI算力扩张的电力基础设施压力测试 - 2026-05-29",
-          "summary": "截至研究所工作日 2026-05-29，我从能源与电力基础设施侧对上一张 TMT 结论做压力测试：AI算力需求已经足以改变并网排队、变压器采购和新能源消纳格局，但真正的...",
-          "href": "/investor/reports/archive-8664b76c4305/",
-          "chain": "电力与电网",
-          "impact": 5,
-          "probability": 5,
-          "trend": "rising"
-        },
-        {
-          "id": "risk_d97d146cb0",
-          "title": "AI芯片能效演进对算力扩张瓶颈的压力测试 (2026-05-29)",
-          "summary": "核心观点 尽管以先进封装（Advanced Packaging）、背面供电（BSPD）和共封装光学（CPO）为代表的AI芯片架构演进显著提升了单芯片能效，但其 无法从根本上缓解能...",
-          "href": "/investor/reports/archive-9557740dfbb9/",
-          "chain": "半导体与存储",
-          "impact": 5,
-          "probability": 3,
-          "trend": "rising"
-        }
-      ],
-      "falsifiers": [
-        "政策预期落空",
-        "流动性边际收紧",
-        "外资流出加速",
-        "信用风险上升"
-      ],
-      "monitors": [
-        "融资余额",
-        "北向/南向资金",
-        "人民币汇率",
-        "政策会议"
-      ],
-      "linkedReports": []
     }
   ]
 }
