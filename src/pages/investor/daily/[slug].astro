@@ -1,38 +1,53 @@
 ---
 import BaseHead from "../../../components/BaseHead.astro";
 import Header from "../../../components/Header.astro";
-import { listDailyBriefs } from "../../../lib/investor-generated.js";
-import "../../../styles/investor-console.css";
+import DailyDashboardPage from "../../../components/investor/DailyDashboardPage.astro";
+import { listDailyBriefs, readDailyDashboard } from "../../../lib/investor-generated.js";
+import "../../../styles/daily-dashboard.css";
 
 export function getStaticPaths() {
-  const briefs = listDailyBriefs();
-  const paths = briefs.map(({ slug, brief }) => ({ params: { slug }, props: { brief } }));
-  if (!paths.some((path) => path.params.slug === "latest")) {
-    const latest = briefs[0]?.brief || {};
-    paths.push({ params: { slug: "latest" }, props: { brief: latest } });
+  const dashboard = readDailyDashboard();
+  const paths = new Map();
+  const addDashboardPath = (slug) => {
+    if (slug) paths.set(slug, { params: { slug }, props: { dashboard, mode: "dashboard" } });
+  };
+  addDashboardPath("latest");
+  addDashboardPath(dashboard.date);
+  for (const { slug, brief } of listDailyBriefs()) {
+    if (!paths.has(slug)) {
+      paths.set(slug, {
+        params: { slug },
+        props: { brief, dashboard, mode: "redirect" },
+      });
+    }
   }
-  return paths;
+  return [...paths.values()];
 }
 
-const { brief } = Astro.props;
-const date = brief.date || "latest";
+const { brief, dashboard, mode } = Astro.props;
+const date = mode === "dashboard" ? dashboard.date : brief?.date || dashboard.date || "latest";
 ---
 
 <!doctype html>
 <html lang="zh-CN" data-lang="zh">
   <head>
-    <BaseHead title={`${date} 每日研究简报 · AI Institute 投资研究台`} description="每日研究简报跳转页" />
-    <meta http-equiv="refresh" content="0; url=/investor/#daily" />
+    <BaseHead title={`${date} 每日研究简报 · AI Institute`} description="AI Institute morning brief dashboard." />
+    {mode === "redirect" ? <meta http-equiv="refresh" content="0; url=/investor/daily/" /> : null}
   </head>
   <body>
     <Header />
-    <section class="investor-console">
-      <main class="report-shell">
-        <section class="panel">
-          <h1>{date} 每日研究简报</h1>
-          <p>正在打开交互式简报。如果没有自动跳转，请访问 <a href="/investor/#daily">每日简报</a>。</p>
+    {mode === "dashboard" ? (
+      <DailyDashboardPage dashboard={dashboard} />
+    ) : (
+      <main class="daily-dashboard-page">
+        <section class="daily-dashboard-panel">
+          <div class="daily-dashboard-panel-head">
+            <h1>{date} 每日研究简报</h1>
+            <span>Redirect</span>
+          </div>
+          <p>该静态入口已迁移到 <a href="/investor/daily/">晨会信号看板</a>。</p>
         </section>
       </main>
-    </section>
+    )}
   </body>
 </html>

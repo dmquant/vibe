@@ -61,10 +61,25 @@ briefZh.forEach(p => {
 });
 
 const investorData = readSiteData();
+const dailyDashboard = investorData.dailyDashboard || {};
 const dailyBrief = investorData.dailyBrief || {};
-const dailySynthesis = dailyBrief.synthesis || {};
+const dailySynthesis = {
+	...(dailyBrief.synthesis || {}),
+	headline: dailyDashboard.headline || dailyBrief.synthesis?.headline,
+	lead: dailyDashboard.lead || dailyBrief.synthesis?.lead,
+};
 const dailyStats = dailyBrief.stats || {};
-const dailyBullets = Array.isArray(dailySynthesis.bullets) ? dailySynthesis.bullets.slice(0, 3) : [];
+const dashboardStats = dailyDashboard.stats || {};
+const homeStats = {
+	sections: dashboardStats.sections ?? dailyStats.reports ?? 0,
+	research: dashboardStats.deepResearch ?? dailyStats.activeChains ?? 0,
+	handoffs: dashboardStats.handoffs ?? dailyStats.analysts ?? 0,
+	quotes: dashboardStats.marketQuotes ?? dailyStats.riskItems ?? 0,
+};
+const dashboardSections = Array.isArray(dailyDashboard.morningSections) ? dailyDashboard.morningSections : [];
+const dailyBullets = dashboardSections.length
+	? dashboardSections.slice(0, 3).map((item) => ({ label: item.title, text: item.detail, href: item.href }))
+	: Array.isArray(dailySynthesis.bullets) ? dailySynthesis.bullets.slice(0, 3) : [];
 const dailyWatchItems = Array.isArray(dailySynthesis.watchItems) ? dailySynthesis.watchItems.slice(0, 3) : [];
 const mapCoordinates: Record<string, [number, number]> = {
 	'宏观通胀传导': [39.5, -98.35],
@@ -76,7 +91,8 @@ const mapCoordinates: Record<string, [number, number]> = {
 };
 const fallbackCoordinates: [number, number][] = [[51.5, -0.1], [1.35, 103.82], [19.07, 72.88], [-33.86, 151.21]];
 const signalAccents = ['#2f80ed', '#169b62', '#d64545', '#d7a316', '#e46f2e'];
-const dailyMapItems = (dailyBrief.chainRadar || []).slice(0, 6).map((item, index) => ({
+const chainRadarSource = Array.isArray(dailyDashboard.chainRadar) && dailyDashboard.chainRadar.length ? dailyDashboard.chainRadar : dailyBrief.chainRadar || [];
+const dailyMapItems = chainRadarSource.slice(0, 6).map((item, index) => ({
 	label: item.label,
 	heat: item.heat,
 	latest: item.latest,
@@ -99,8 +115,20 @@ const parseMarketLine = (line: string) => {
 		direction: change.includes('-') ? 'down' : change ? 'up' : 'flat',
 	};
 };
-const marketTickerRows = (dailyBrief.marketTape?.zh || []).slice(0, 8).map(parseMarketLine);
-const marketTapeRows = (dailyBrief.marketTape?.zh || []).slice(0, 10).map(parseMarketLine);
+const parseMarketQuote = (quote) => {
+	const change = quote.change || '';
+	const value = quote.value || '';
+	const direction = `${value} ${change}`.includes('-') ? 'down' : `${value} ${change}`.includes('+') ? 'up' : 'flat';
+	return {
+		label: quote.labelZh || quote.key || 'Market',
+		value,
+		change,
+		direction,
+	};
+};
+const dashboardQuoteRows = (dailyDashboard.marketQuotes || []).map(parseMarketQuote);
+const marketTickerRows = (dashboardQuoteRows.length ? dashboardQuoteRows : (dailyBrief.marketTape?.zh || []).map(parseMarketLine)).slice(0, 8);
+const marketTapeRows = (dashboardQuoteRows.length ? dashboardQuoteRows : (dailyBrief.marketTape?.zh || []).map(parseMarketLine)).slice(0, 10);
 ---
 
 <!doctype html>
@@ -156,15 +184,15 @@ const marketTapeRows = (dailyBrief.marketTape?.zh || []).slice(0, 10).map(parseM
 						<p>{dailySynthesis.headline || '今日研究信号已同步。'}</p>
 					</div>
 					<div class="signal-actions">
-						<a href="/investor/#daily" class="btn btn-sm btn-primary" data-en="Open full dashboard" data-zh="打开完整看板">Open full dashboard</a>
-						<a href={dailyBrief.docxHref || '/investor/#dailyReports'} class="btn btn-sm btn-ghost" data-en="Download brief" data-zh="下载简报">Download brief</a>
+						<a href="/investor/daily/" class="btn btn-sm btn-primary" data-en="Open full dashboard" data-zh="打开完整看板">Open full dashboard</a>
+						<a href={dailyDashboard.links?.docx || dailyBrief.docxHref || '/investor/#dailyReports'} class="btn btn-sm btn-ghost" data-en="Download brief" data-zh="下载简报">Download brief</a>
 					</div>
 				</div>
 				<div class="signal-stat-strip">
-					<a href="/investor/#dailyReports"><span data-en="Reports" data-zh="报告">Reports</span><strong>{dailyStats.reports || 0}</strong></a>
-					<a href="/investor/#dailyHeatmap"><span data-en="Analysts" data-zh="分析师">Analysts</span><strong>{dailyStats.analysts || 0}</strong></a>
-					<a href="/investor/#dailyChains"><span data-en="Chains" data-zh="链条">Chains</span><strong>{dailyStats.activeChains || 0}</strong></a>
-					<a href="/investor/#dailyRisks"><span data-en="Risks" data-zh="风险">Risks</span><strong>{dailyStats.riskItems || 0}</strong></a>
+					<a href="/investor/daily/"><span data-en="Sections" data-zh="板块">Sections</span><strong>{homeStats.sections}</strong></a>
+					<a href="/investor/daily/"><span data-en="Research" data-zh="深研">Research</span><strong>{homeStats.research}</strong></a>
+					<a href="/investor/daily/"><span data-en="Handoffs" data-zh="传递">Handoffs</span><strong>{homeStats.handoffs}</strong></a>
+					<a href="/investor/daily/"><span data-en="Quotes" data-zh="报价">Quotes</span><strong>{homeStats.quotes}</strong></a>
 				</div>
 				<div class="signal-board-grid">
 					<article class="signal-panel signal-main-panel">

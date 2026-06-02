@@ -1,0 +1,23 @@
+---
+import BaseHead from "../../../components/BaseHead.astro";
+import Header from "../../../components/Header.astro";
+import DailyDashboardPage from "../../../components/investor/DailyDashboardPage.astro";
+import { readDailyDashboard } from "../../../lib/investor-generated.js";
+import "../../../styles/daily-dashboard.css";
+
+const dashboard = readDailyDashboard();
+---
+
+<!doctype html>
+<html lang="zh-CN" data-lang="zh">
+  <head>
+    <BaseHead
+      title={`${dashboard.date || "最新"} 晨会信号看板 · AI Institute`}
+      description="AI Institute morning brief dashboard with market tape, editor signals, research-chain map, and deep research handoffs."
+    />
+  </head>
+  <body>
+    <Header />
+    <DailyDashboardPage dashboard={dashboard} />
+  </body>
+</html>
