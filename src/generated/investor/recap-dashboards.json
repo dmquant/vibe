@@ -1,0 +1,800 @@
+{
+  "generatedAt": "2026-06-02T06:35:00+08:00",
+  "dashboards": [
+    {
+      "slug": "kc50-recap-2026-06-01",
+      "title": "科创50研究观点与市场表现复盘",
+      "subtitle": "A-Share 衍生品与杠杆出清复盘",
+      "date": "2026-06-01",
+      "badge": "STAR50 / KC50",
+      "reportHref": "/investor/reports/recap-kc50-recap-2026-06-01/",
+      "chartTitle": "指数点位波动窗口",
+      "chartDescription": "点击折线节点联动下方研究时间线，观察 AI Institute 如何从点位风险转向微观结构框架。",
+      "chartUnit": "科创50点位",
+      "chart": {
+        "labels": [
+          "5/11",
+          "5/22",
+          "5/25",
+          "5/27",
+          "5/28",
+          "5/29",
+          "6/01"
+        ],
+        "values": [
+          1716.69,
+          1747.14,
+          1896.04,
+          1815.45,
+          1844.25,
+          1777.24,
+          1663.69
+        ]
+      },
+      "metrics": [
+        {
+          "label": "窗口高点",
+          "value": "1,896.04",
+          "accent": "red"
+        },
+        {
+          "label": "窗口低点",
+          "value": "1,663.69",
+          "accent": "orange"
+        },
+        {
+          "label": "复盘源",
+          "value": "12",
+          "accent": "blue"
+        },
+        {
+          "label": "当前框架",
+          "value": "质量Alpha",
+          "accent": "green"
+        }
+      ],
+      "conclusions": [
+        {
+          "title": "纠偏：点位不是统一机械平仓线",
+          "text": "1,750、1,800、1,900 是观察坐标，不是券商统一强平规则。真正风险来自个股融资、ETF折溢价、期权Delta和市场宽度。"
+        },
+        {
+          "title": "去杠杆真实，但不是全市场钱荒",
+          "text": "科创50从 1,896.04 回撤至 1,663.69，验证成长拥挤出清；DR007/OMO 稳定，说明系统性流动性危机没有被证实。"
+        },
+        {
+          "title": "从叙事Beta转向质量Alpha",
+          "text": "AI硬件主题没有结束，但配置应拆到订单、毛利率、技术迭代、融资盘压力和ETF微观结构。"
+        }
+      ],
+      "checklist": [
+        {
+          "label": "指数点位",
+          "status": "1,663.69",
+          "detail": "当前仍在 1,750 下方，优先按出清延续处理。",
+          "bull": "重回并站稳 1,750/1,800，且不是缩量反抽",
+          "bear": "1,750 下方放量下跌，1,720 附近无有效承接",
+          "active": "bear"
+        },
+        {
+          "label": "ETF 折溢价",
+          "status": "折价观察",
+          "detail": "588000 高成交不自动等于托底，需要净申赎和折溢价共同确认。",
+          "bull": "折价收敛、放量上涨、申购回升",
+          "bear": "高成交伴随折价扩大，反弹时量能不足",
+          "active": "bear"
+        },
+        {
+          "label": "成分股宽度",
+          "status": "龙头分化",
+          "detail": "只有少数龙头护盘，不能证明成长仓位已修复。",
+          "bull": "半导体/CPO/存储龙头宽度改善",
+          "bear": "多数成长股继续破位，融资盘被动去化",
+          "active": "bear"
+        },
+        {
+          "label": "两融与衍生品",
+          "status": "情景压力",
+          "detail": "雪球/Gamma 名义本金不能写成既成事实，只能用于情景压力测试。",
+          "bull": "新月度期权风险分散，融资买入占比回升",
+          "bear": "关键行权价 Delta 集中，融资余额下降但价格仍跌",
+          "active": "bear"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "5月中旬",
+          "value": "1,716.69",
+          "label": "杠杆冲突",
+          "title": "半导体暴涨与大盘风格非对称虹吸",
+          "view": "半导体和 AI 硬件吸走风险资金，两融和风格拥挤开始构成反身性风险。",
+          "check": "后续未立即崩溃，但 5月下旬波动证明拥挤度是正确观察轴。",
+          "href": "/investor/reports/archive-043e3b01dfc5/"
+        },
+        {
+          "date": "5/20-5/22",
+          "value": "1,747.14",
+          "label": "1,750 重新定义",
+          "title": "机械触发还是情绪位",
+          "view": "1,750 不是指数级机械强平线，真实风险在高融资成分股组合压力。",
+          "check": "市场回踩后企稳，证明它更像情绪锚而非统一强平线。",
+          "href": "/investor/reports/archive-a099e754fe5d/"
+        },
+        {
+          "date": "5/25-5/26",
+          "value": "1,896.04",
+          "label": "1,900 Delta cliff",
+          "title": "全球 risk-on 遇上科创50 1900 点",
+          "view": "若指数突破但 ETF 折价，可能是分发而不是健康突破。",
+          "check": "未能稳定突破，5月27日转弱，验证不追未确认突破。",
+          "href": "/investor/reports/archive-5ea4dab5dede/"
+        },
+        {
+          "date": "5/27",
+          "value": "1,815.45",
+          "label": "去杠杆触发",
+          "title": "A股策略 TMT 去杠杆触发线",
+          "view": "三条触发线中两条破位，应从对冲轮动升级为统一降杠杆。",
+          "check": "当天 588000 与科创50同步走弱，触发线具有操作价值。",
+          "href": "/investor/reports/archive-0328351782b0/"
+        },
+        {
+          "date": "5/28",
+          "value": "1,844.25",
+          "label": "1,800 尾部风险",
+          "title": "把破位当作可交易尾部风险",
+          "view": "5月期权到期后不能沿用旧 Gamma 墙；高成交不能证明 ETF 托底。",
+          "check": "5月29日跌破 1,800，托底幻想被证伪。",
+          "href": "/investor/reports/archive-5d41f2d12458/"
+        },
+        {
+          "date": "5/29-5/30",
+          "value": "1,663.69",
+          "label": "QA 与质量硬科技",
+          "title": "雪球假设纠偏与 AI 硬件订单验证",
+          "view": "把极端踩踏降级为条件化尾部风险，并转向 CPO、存储、先进封装的质量验证。",
+          "check": "6月1日继续下跌说明风险未消失，但框架从机械叙事升级为条件化研究。",
+          "href": "/investor/reports/archive-ca5dd3abe002/"
+        }
+      ],
+      "dimensions": [
+        {
+          "label": "维度一",
+          "title": "点位恐慌 → 机制拆解",
+          "front": "把整数关口拆成融资、ETF、期权和宽度。",
+          "back": "核心不是猜底，而是用 588000 折溢价、两融、DR007/OMO 和新月度期权验证卖压机制。"
+        },
+        {
+          "label": "维度二",
+          "title": "全市场危机 → 成长出清",
+          "front": "DR007 与 OMO 稳定，说明不是系统性钱荒。",
+          "back": "风险集中在成长/TMT/AI硬件拥挤仓位，价值、红利、公用事业承担再配置缓冲。"
+        },
+        {
+          "label": "维度三",
+          "title": "叙事Beta → 质量Alpha",
+          "front": "不再无脑买跌指数。",
+          "back": "后续只保留订单、毛利率、客户结构和融资盘压力可验证的硬科技。"
+        }
+      ],
+      "sources": [
+        {
+          "href": "/investor/reports/archive-043e3b01dfc5/",
+          "label": "杠杆突围",
+          "tag": "去杠杆"
+        },
+        {
+          "href": "/investor/reports/archive-a099e754fe5d/",
+          "label": "1750 情绪位",
+          "tag": "纠偏"
+        },
+        {
+          "href": "/investor/reports/archive-5ea4dab5dede/",
+          "label": "1900 Delta cliff",
+          "tag": "期权"
+        },
+        {
+          "href": "/investor/reports/archive-0328351782b0/",
+          "label": "TMT 去杠杆线",
+          "tag": "执行"
+        },
+        {
+          "href": "/investor/reports/archive-ca5dd3abe002/",
+          "label": "发布前 QA",
+          "tag": "质量控制"
+        }
+      ]
+    },
+    {
+      "slug": "msci-rebalance-2026-05-30",
+      "title": "MSCI 调仓复盘与口径统一",
+      "subtitle": "MOC 被动买盘、主动派发与数据披露陷阱",
+      "date": "2026-05-30",
+      "badge": "MSCI / MOC",
+      "reportHref": "/investor/reports/recap-msci-rebalance-reconciliation-report-2026-05-30.zh/",
+      "chartTitle": "事件风险强度演化",
+      "chartDescription": "折线展示研究所如何从一般事件风险，升级到 14:50 / 14:57 / 14:59 的交易室防守预案。",
+      "chartUnit": "防守等级",
+      "chart": {
+        "labels": [
+          "5/08",
+          "5/14",
+          "5/22",
+          "5/26",
+          "5/27",
+          "5/28",
+          "5/29"
+        ],
+        "values": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          5,
+          4
+        ]
+      },
+      "metrics": [
+        {
+          "label": "被动买盘",
+          "value": "$1.1-1.4bn",
+          "accent": "blue"
+        },
+        {
+          "label": "主动卖盘风险",
+          "value": "$0.54-0.90bn",
+          "accent": "red"
+        },
+        {
+          "label": "核心窗口",
+          "value": "14:57-15:00",
+          "accent": "orange"
+        },
+        {
+          "label": "统一口径",
+          "value": "双向流动性",
+          "accent": "green"
+        }
+      ],
+      "conclusions": [
+        {
+          "title": "不是单向利多，而是双向流动性事件",
+          "text": "MSCI 生效日不能被写成被动外资净流入利多。正确口径是被动需求、主动派发风险和成交/净额披露陷阱并存。"
+        },
+        {
+          "title": "MOC 是执行窗口，不是情绪口号",
+          "text": "研究从 5月22日开始把 MOC 光学幻觉拆开，最终形成 14:50、14:57、14:59 三段风控预案。"
+        },
+        {
+          "title": "数据纪律是这次复盘的关键",
+          "text": "没有真实买卖净额时，只能写成交活跃，不能把 HKEX/互联互通成交额直接等同于净买入。"
+        }
+      ],
+      "checklist": [
+        {
+          "label": "被动买盘",
+          "status": "$1.1-1.4bn",
+          "detail": "买盘存在，但集中在 MOC，不等于盘中可自由吸收。",
+          "bull": "被动买盘大于主动卖盘，篮子滑点小于阈值",
+          "bear": "被动买盘成为主动资金退出流动性",
+          "active": "bear"
+        },
+        {
+          "label": "主动外资",
+          "status": "派发风险",
+          "detail": "主动基金可能借被动买盘窗口减仓拥挤 TMT/AI 硬件。",
+          "bull": "MOC 后北向净额与篮子强度同步改善",
+          "bear": "14:57 后权重篮子转弱或净额为负",
+          "active": "bear"
+        },
+        {
+          "label": "披露纪律",
+          "status": "不可过度推断",
+          "detail": "成交活跃不等于净买入。",
+          "bull": "有可验证净流入数据",
+          "bear": "只有成交额，没有净买卖方向",
+          "active": "bear"
+        },
+        {
+          "label": "执行动作",
+          "status": "黄/橙/红",
+          "detail": "橙色触发降低 MSCI 权重多头，红色触发关闭杠杆并启用对冲。",
+          "bull": "滑点温和、权重篮子不弱于大盘",
+          "bear": "篮子下跌超过阈值或个股异常错位",
+          "active": "bear"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "5/08",
+          "value": "1",
+          "label": "事件监测",
+          "title": "MSCI 审查进入事件风险列表",
+          "view": "早期只把 MSCI 作为后续波动事件，生效日和净流入口径仍不够精确。",
+          "check": "后续 QA 要求提高日期和资金流口径精度。",
+          "href": "/investor/reports/recap-msci-rebalance-reconciliation-report-2026-05-30.zh/"
+        },
+        {
+          "date": "5/14",
+          "value": "2",
+          "label": "因子扫描",
+          "title": "MSCI SAIR 与价值/动量/高波动因子",
+          "view": "量化视角把 SAIR 识别为事件窗口，建议降低 beta、转向价值/红利。",
+          "check": "为后续防守执行提供因子层依据。",
+          "href": "/investor/reports/recap-msci-rebalance-reconciliation-report-2026-05-30.zh/"
+        },
+        {
+          "date": "5/22",
+          "value": "3",
+          "label": "MOC 光学幻觉",
+          "title": "被动买盘可能掩护主动外资派发",
+          "view": "首次把被动前置套利和主动外资流向拆开。",
+          "check": "这是从事件提醒升级为交易机制分析的关键节点。",
+          "href": "/investor/reports/archive-306b57115d6e/"
+        },
+        {
+          "date": "5/26",
+          "value": "4",
+          "label": "策略综合",
+          "title": "真杠铃配置与现金/对冲",
+          "view": "科技成长降权，红利、周期价值、出口链 Alpha 和现金/短债成为防守结构。",
+          "check": "组合语言从方向判断进入风险预算。",
+          "href": "/investor/reports/recap-msci-rebalance-reconciliation-report-2026-05-30.zh/"
+        },
+        {
+          "date": "5/27",
+          "value": "5",
+          "label": "主动退出窗口",
+          "title": "白板将 MOC 定义为流动性出口",
+          "view": "被动需求被看成主动长线和对冲基金派发拥挤 TMT 的窗口。",
+          "check": "科技成长名义仓位建议从 40% 降至 18%。",
+          "href": "/investor/reports/recap-msci-rebalance-reconciliation-report-2026-05-30.zh/"
+        },
+        {
+          "date": "5/28",
+          "value": "5",
+          "label": "最终预案",
+          "title": "14:50 / 14:57 / 14:59 三段风控",
+          "view": "估算被动买盘与主动卖盘，建立橙色和红色触发条件。",
+          "check": "编辑裁决统一为双向流动性事件，不得写成净流入利多。",
+          "href": "/investor/reports/archive-c239e310c4eb/"
+        },
+        {
+          "date": "5/29-5/30",
+          "value": "4",
+          "label": "待补事后验证",
+          "title": "缺少完整 postmortem",
+          "view": "仍需重建 14:30 VWAP、14:50 指示价、14:57 MOC 与 15:00 收盘。",
+          "check": "本次复盘明确列出后续 reconciliation 项。",
+          "href": "/investor/reports/recap-msci-rebalance-reconciliation-report-2026-05-30.zh/"
+        }
+      ],
+      "dimensions": [
+        {
+          "label": "维度一",
+          "title": "事件风险 → 执行预案",
+          "front": "从日历事件升级为交易室时间表。",
+          "back": "关键不再是 MSCI 是否生效，而是 14:57-15:00 谁利用流动性。"
+        },
+        {
+          "label": "维度二",
+          "title": "成交额 → 净额纪律",
+          "front": "成交活跃不能自动写成净买入。",
+          "back": "没有买卖净额时，报告只能写 active trading / 成交活跃。"
+        },
+        {
+          "label": "维度三",
+          "title": "利多叙事 → 双向窗口",
+          "front": "被动需求可以是支撑，也可以是主动退出通道。",
+          "back": "交易建议因此偏防守：不追高 beta，使用黄/橙/红触发。"
+        }
+      ],
+      "sources": [
+        {
+          "href": "/investor/reports/recap-msci-rebalance-reconciliation-report-2026-05-30.zh/",
+          "label": "MSCI 复盘中文",
+          "tag": "主报告"
+        },
+        {
+          "href": "/investor/reports/recap-msci-rebalance-reconciliation-report-2026-05-30.en/",
+          "label": "MSCI recap EN",
+          "tag": "English"
+        },
+        {
+          "href": "/investor/reports/archive-c239e310c4eb/",
+          "label": "MOC 防守预案",
+          "tag": "执行"
+        },
+        {
+          "href": "/investor/reports/archive-d835c63851ab/",
+          "label": "最后三分钟",
+          "tag": "MOC"
+        }
+      ]
+    },
+    {
+      "slug": "mag7-next-era-losers-2026-06-02",
+      "title": "Mag7 下一时代输家复盘",
+      "subtitle": "入口、基础设施、现金流桥梁与物理供应链",
+      "date": "2026-06-02",
+      "badge": "MAG7",
+      "reportHref": "/investor/reports/recap-mag7-next-era-losers-recap-2026-06-02/",
+      "chartTitle": "相对输家风险评分",
+      "chartDescription": "风险分数不是看空幅度，而是衡量该公司在 AI 时代入口、物理基础设施、现金流桥梁和估值倍数上的待验证压力。",
+      "chartUnit": "风险分",
+      "chart": {
+        "labels": [
+          "Microsoft",
+          "Apple",
+          "Tesla",
+          "Meta",
+          "NVIDIA",
+          "Amazon",
+          "Alphabet"
+        ],
+        "values": [
+          88,
+          82,
+          80,
+          76,
+          64,
+          58,
+          34
+        ]
+      },
+      "metrics": [
+        {
+          "label": "新增争议核心",
+          "value": "Microsoft",
+          "accent": "red"
+        },
+        {
+          "label": "战略相对风险",
+          "value": "Apple",
+          "accent": "orange"
+        },
+        {
+          "label": "基本面基石",
+          "value": "NVIDIA",
+          "accent": "green"
+        },
+        {
+          "label": "物理基石",
+          "value": "封装+存储",
+          "accent": "blue"
+        }
+      ],
+      "conclusions": [
+        {
+          "title": "Microsoft 需要重新争议化",
+          "text": "Office 与 Windows 是上一时代软件基石；AI agent 若绕过文件、窗口和 Office 工作流，Azure 的基础也需要模型、自研芯片和企业入口共同验证。"
+        },
+        {
+          "title": "Apple 不是立刻输，而是平台溢价降级",
+          "text": "Apple Silicon 和端侧 AI 可能增强专业桌面，但若缺少 AI 基础设施和变现证据，它更像强消费公司而不是 AI 时代领导平台。"
+        },
+        {
+          "title": "NVIDIA 仍牢固，但利润池扩散",
+          "text": "NVIDIA 是基本面赢家；风险是 HBM、先进封装、CPO、ODM、电力设备和 CSP ASIC 分走下一美元 AI capex 的稀缺溢价。"
+        }
+      ],
+      "checklist": [
+        {
+          "label": "Microsoft 入口",
+          "status": "高争议",
+          "detail": "Copilot 必须证明它增强 Office/Windows，而不是被 agent 替代。",
+          "bull": "Office/Copilot ARPU 与 Azure AI 毛利同步改善",
+          "bear": "企业工作流绕开 Office/Windows，Azure capex 回收慢",
+          "active": "bear"
+        },
+        {
+          "label": "Apple 端侧 AI",
+          "status": "待验证",
+          "detail": "端侧 AI 要落到服务 ARPU、换机周期和专业工作流。",
+          "bull": "Apple Silicon 成为深度 AI 工作桌面入口",
+          "bear": "AI 功能无法改变服务收入与换机经济性",
+          "active": "bear"
+        },
+        {
+          "label": "NVIDIA 倍数",
+          "status": "基本面强",
+          "detail": "需求强不等于倍数不会被供应链扩散压缩。",
+          "bull": "数据中心收入和毛利率继续领先 HBM/ASIC 替代表达",
+          "bear": "HBM、ASIC、ODM、电力设备跑赢，NVDA 相对倍数压缩",
+          "active": "bull"
+        },
+        {
+          "label": "Meta/Amazon 回收期",
+          "status": "FCF 测试",
+          "detail": "AI 支出直接，收入和效率收益必须用现金流证明。",
+          "bull": "广告 ROAS/AWS AI 收入快于折旧与 SBC",
+          "bear": "capex、折旧、SBC 快于收入密度",
+          "active": "bear"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "上一周期",
+          "value": "轻资产",
+          "label": "平台溢价",
+          "title": "软件、网络效应和久期资产被奖励",
+          "view": "Office、Windows、iPhone、广告平台和电商云都享受轻资产平台倍数。",
+          "check": "AI 时代开始把估值约束转向 capex、折旧、SBC 和电力。"
+        },
+        {
+          "date": "2026-05-16",
+          "value": "Capex",
+          "label": "资本强度",
+          "title": "Mag7 AI capex 与 FCF 桥梁成为核心问题",
+          "view": "AI 需求真实，但股东价值取决于利用率、收入密度和自由现金流。",
+          "check": "Meta、Amazon、NVIDIA 的输法开始分化。"
+        },
+        {
+          "date": "2026-05-20",
+          "value": "电力",
+          "label": "物理约束",
+          "title": "AI 基础设施从芯片扩展到电力和数据中心",
+          "view": "能效、自研芯片、PUE、液冷和 firm power 成为 Mag7 估值变量。",
+          "check": "Alphabet/Microsoft 的能效和企业分发得到支撑。"
+        },
+        {
+          "date": "2026-05-24",
+          "value": "排序",
+          "label": "原深度研究",
+          "title": "Apple、Tesla、Meta 被列为主要风险",
+          "view": "Apple 缺少直接基础设施证据；Tesla 是叙事久期；Meta 是 P&L/FCF 测试。",
+          "check": "原报告没有充分争议化 Microsoft 的 Office/Windows 风险。"
+        },
+        {
+          "date": "2026-06-02",
+          "value": "修正",
+          "label": "用户观点合并",
+          "title": "Microsoft 被提升为第一争议候选",
+          "view": "Office/Windows 可能在 agent 时代逐渐崩塌，CEO 更换只是必要不充分条件。",
+          "check": "新框架把 Microsoft、Apple、NVIDIA、先进封装和存储放入同一张价值链图。"
+        }
+      ],
+      "dimensions": [
+        {
+          "label": "维度一",
+          "title": "入口控制",
+          "front": "Office/Windows/iPhone/Search 谁还控制入口？",
+          "back": "Agent 时代会削弱传统桌面入口，只有能把 agent 变成分发层的公司保溢价。"
+        },
+        {
+          "label": "维度二",
+          "title": "物理基础设施",
+          "front": "云、电力、自研芯片和数据中心成为估值锚。",
+          "back": "没有自研芯片、firm power 和收入密度证明，AI 曝光会变成资本强度压力。"
+        },
+        {
+          "label": "维度三",
+          "title": "封装与存储",
+          "front": "两大物理基石贯穿很久。",
+          "back": "先进封装和 HBM 决定 GPU、ASIC、端侧 AI 与云端推理的真实上限。"
+        }
+      ],
+      "sources": [
+        {
+          "href": "/investor/reports/recap-mag7-next-era-losers-recap-2026-06-02/",
+          "label": "Mag7 复盘",
+          "tag": "新复盘"
+        },
+        {
+          "href": "/investor/deep-research/mag7-next-era-losers-6f2a8c9d/",
+          "label": "Mag7 深度研究",
+          "tag": "源报告"
+        },
+        {
+          "href": "/investor/deep-research/ai-power-inflation-transmission-0c9ba15c/",
+          "label": "AI 电力瓶颈",
+          "tag": "基石"
+        },
+        {
+          "href": "/investor/deep-research/transformer-goes-copper-bottleneck-fe892901/",
+          "label": "变压器/GOES/铜",
+          "tag": "物理约束"
+        }
+      ]
+    },
+    {
+      "slug": "ai-infra-bottleneck-2026-06-02",
+      "title": "AI 基础设施瓶颈复盘",
+      "subtitle": "电力、CPO、存储、先进封装与电力设备",
+      "date": "2026-06-02",
+      "badge": "AI INFRA",
+      "reportHref": "/investor/reports/recap-ai-infra-bottleneck-recap-2026-06-02/",
+      "chartTitle": "物理瓶颈强度图",
+      "chartDescription": "风险分数衡量瓶颈对 AI capex 转化为可用算力和自由现金流的约束强度。",
+      "chartUnit": "瓶颈强度",
+      "chart": {
+        "labels": [
+          "Firm power",
+          "变压器/GOES",
+          "HBM/封装",
+          "CPO上游",
+          "液冷/电源",
+          "软件beta"
+        ],
+        "values": [
+          94,
+          91,
+          86,
+          78,
+          70,
+          42
+        ]
+      },
+      "metrics": [
+        {
+          "label": "最早白板",
+          "value": "2026-05-02",
+          "accent": "blue"
+        },
+        {
+          "label": "核心瓶颈",
+          "value": "电力+HBM",
+          "accent": "red"
+        },
+        {
+          "label": "利润迁移",
+          "value": "上游材料",
+          "accent": "orange"
+        },
+        {
+          "label": "反证路径",
+          "value": "效率/ASIC",
+          "accent": "green"
+        }
+      ],
+      "conclusions": [
+        {
+          "title": "AI 交易已经物理化",
+          "text": "最早白板已把 firm power、HBM、先进封装、光互联、液冷、变压器、GOES、铜和电网设备列为核心稀缺输入。"
+        },
+        {
+          "title": "capex 不是收入，订单不是算力上线",
+          "text": "AI capex 必须经过 PPA、并网、交付、验收、利用率和收入密度，才会转化为自由现金流。"
+        },
+        {
+          "title": "CPO 与 HBM 的关键是租金归属",
+          "text": "CPO 需要判断利润留在模块还是迁移至 InP/EML/DSP/硅光；HBM 要看验证、CoWoS、基板和测试。"
+        }
+      ],
+      "checklist": [
+        {
+          "label": "Firm power / 并网",
+          "status": "最高约束",
+          "detail": "签约 PPA、可用电力和并网节点优先于 capex headline。",
+          "bull": "已签 PPA、明确并网节点、客户预付款",
+          "bear": "负荷申请虚高、排队拉长、PPA 通胀",
+          "active": "bear"
+        },
+        {
+          "label": "变压器 / GOES / 铜",
+          "status": "材料咽喉",
+          "detail": "真正硬约束是 HiB/薄规格 GOES、铜、认证和熟练工。",
+          "bull": "价格联动条款、130-160周交期、订单质量高",
+          "bear": "固定价合同、订单延期、贸易路径受阻",
+          "active": "bull"
+        },
+        {
+          "label": "HBM / 先进封装",
+          "status": "系统瓶颈",
+          "detail": "HBM4 验证、CoWoS、基板和测试时间比普通 DRAM 周期更关键。",
+          "bull": "HBM4 验证成功、封装排产锁定",
+          "bear": "良率不达标、LTA 取消、出口管制扰动",
+          "active": "bull"
+        },
+        {
+          "label": "CPO / 光互联",
+          "status": "租金迁移",
+          "detail": "不要只看模块量，要看 InP、EML、硅光、DSP 和材料。",
+          "bull": "800G/1.6T 需求兑现，上游材料稀缺",
+          "bear": "模块价格快速下行，上游吸走利润",
+          "active": "bull"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-05-02",
+          "value": "白板",
+          "label": "物理 AI stack",
+          "title": "Q1 云巨头 capex 后的瓶颈预警",
+          "view": "capex 真实，但最高置信度受益项从软件迁移到电力、HBM、设备和光互联。",
+          "check": "后续深度研究沿用物理约束过滤 capex 的框架。"
+        },
+        {
+          "date": "2026-05-02",
+          "value": "HBM",
+          "label": "推理 scaling",
+          "title": "Inference scaling 提高 HBM per accelerator",
+          "view": "HBM4、CoWoS、interposer、基板和测试成为系统级约束。",
+          "check": "后续存储研究不再只看 DRAM 周期，而看验证与封装集成。"
+        },
+        {
+          "date": "2026-05-03",
+          "value": "CPO",
+          "label": "租金上移",
+          "title": "光互联从模块 beta 变成上游稀缺租",
+          "view": "InP、200G/lane EML、DSP、硅光与高端材料可能比模块装配更有利润弹性。",
+          "check": "后续 CPO 研究要求验证毛利率而非只看出货。"
+        },
+        {
+          "date": "2026-05-18",
+          "value": "电力",
+          "label": "通胀再定价",
+          "title": "AI power 从叙事进入 PPA/并网/设备交期",
+          "view": "需求冲击先进入电力和电网，再进入资本成本，生产率缓释滞后。",
+          "check": "买电力被修正为买有交付确定性和订单质量的设备/材料。",
+          "href": "/investor/deep-research/ai-power-inflation-transmission-0c9ba15c/"
+        },
+        {
+          "date": "2026-05-23",
+          "value": "GOES",
+          "label": "材料咽喉",
+          "title": "变压器、GOES 与铜的价格传导",
+          "view": "高等级 GOES、铜、认证与工人缺口决定有效产出，不是组装名义产能。",
+          "check": "交易表达上移到 OEM、GOES、铜和高端开关设备。",
+          "href": "/investor/deep-research/transformer-goes-copper-bottleneck-fe892901/"
+        },
+        {
+          "date": "2026-06-01",
+          "value": "中国路径",
+          "label": "国产算力闭环",
+          "title": "能源约束进入国产算力和西部绿电框架",
+          "view": "政策信用必须变成可用物理算力：液冷、光互联、电力调峰、水资源和软件栈共同决定兑现。",
+          "check": "中国 AI 基建需要独立的能耗、利用率和政策验证框架。"
+        }
+      ],
+      "dimensions": [
+        {
+          "label": "维度一",
+          "title": "Capex → 可用算力",
+          "front": "capex headline 只是第一步。",
+          "back": "必须穿过电力、设备、并网、验收、利用率和收入密度，才能成为 FCF。"
+        },
+        {
+          "label": "维度二",
+          "title": "模块量 → 租金归属",
+          "front": "CPO/光模块不是一篮子。",
+          "back": "增量利润可能留在 InP、EML、DSP、硅光、先进封装材料和测试环节。"
+        },
+        {
+          "label": "维度三",
+          "title": "电力概念 → 订单质量",
+          "front": "AI power 要看真实项目。",
+          "back": "客户预付款、项目名、认证、电压等级、价格联动和现金回款比概念标签更重要。"
+        }
+      ],
+      "sources": [
+        {
+          "href": "/investor/reports/recap-ai-infra-bottleneck-recap-2026-06-02/",
+          "label": "AI infra 复盘",
+          "tag": "新复盘"
+        },
+        {
+          "href": "/investor/deep-research/ai-power-inflation-transmission-0c9ba15c/",
+          "label": "AI 电力与通胀",
+          "tag": "电力"
+        },
+        {
+          "href": "/investor/deep-research/transformer-goes-copper-bottleneck-fe892901/",
+          "label": "变压器/GOES/铜",
+          "tag": "设备"
+        },
+        {
+          "href": "/investor/reports/archive-8f061fe00b4a/",
+          "label": "800G/1.6T 到 CPO",
+          "tag": "光互联"
+        },
+        {
+          "href": "/investor/reports/archive-5b1eba54b8d1/",
+          "label": "HBM/先进封装",
+          "tag": "存储"
+        }
+      ]
+    }
+  ]
+}

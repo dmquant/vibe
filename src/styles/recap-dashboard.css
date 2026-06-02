@@ -1,0 +1,664 @@
+.recap-dashboard {
+  --recap-bg: var(--bg-primary);
+  --recap-panel: var(--bg-surface);
+  --recap-paper: var(--card-bg);
+  --recap-ink: var(--text-primary);
+  --recap-muted: var(--text-secondary);
+  --recap-faint: var(--text-muted);
+  --recap-line: var(--border);
+  --recap-strong: var(--border-strong);
+  --recap-grid: var(--grid-faint);
+  --red: var(--accent-red);
+  --green: var(--accent-green);
+  --blue: var(--accent-blue);
+  --yellow: var(--accent-yellow);
+  --orange: var(--accent-orange);
+  max-width: none;
+  margin: 0;
+  padding: 28px 36px 48px;
+  background:
+    linear-gradient(var(--recap-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--recap-grid) 1px, transparent 1px),
+    var(--recap-bg);
+  background-size: 32px 32px;
+  color: var(--recap-ink);
+}
+
+.recap-dashboard a {
+  color: var(--blue);
+}
+
+.recap-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  border-bottom: 3px solid var(--recap-strong);
+  padding: 10px 0 24px;
+}
+
+.recap-hero.compact {
+  display: block;
+}
+
+.recap-kicker {
+  margin-bottom: 8px;
+  color: var(--recap-muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.recap-hero h1 {
+  margin: 0;
+  max-width: 980px;
+  font-size: clamp(32px, 5vw, 64px);
+  line-height: 1.02;
+  letter-spacing: 0;
+}
+
+.recap-hero p {
+  margin: 12px 0 0;
+  max-width: 900px;
+  color: var(--recap-muted);
+  font-size: 17px;
+}
+
+.recap-hero-actions,
+.recap-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.recap-hero-actions a,
+.recap-actions a {
+  display: inline-flex;
+  min-height: 38px;
+  align-items: center;
+  border: 1px solid var(--recap-strong);
+  border-radius: 6px;
+  padding: 0 12px;
+  color: var(--recap-ink);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.recap-meta-line {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid var(--recap-line);
+  padding: 10px 0;
+  color: var(--recap-muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.recap-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin: 22px 0;
+}
+
+.recap-metric,
+.recap-list-card {
+  border: 1px solid var(--recap-line);
+  border-radius: 8px;
+  background: var(--recap-paper);
+  box-shadow: var(--shadow);
+}
+
+.recap-metric {
+  min-height: 86px;
+  padding: 14px;
+}
+
+.recap-metric span {
+  display: block;
+  color: var(--recap-muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.recap-metric strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 25px;
+  line-height: 1.1;
+}
+
+.accent-red strong,
+.accent-red > strong { color: var(--red); }
+.accent-green strong,
+.accent-green > strong { color: var(--green); }
+.accent-blue strong,
+.accent-blue > strong { color: var(--blue); }
+.accent-yellow strong,
+.accent-yellow > strong { color: var(--yellow); }
+.accent-orange strong,
+.accent-orange > strong { color: var(--orange); }
+
+.recap-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.92fr) minmax(420px, 1.35fr) minmax(280px, 0.92fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.recap-column {
+  display: grid;
+  gap: 22px;
+}
+
+.recap-panel {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--recap-line);
+  border-radius: 8px;
+  background: var(--recap-paper);
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+.recap-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: var(--recap-ink);
+}
+
+.recap-panel-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid var(--recap-strong);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+  font-weight: 900;
+}
+
+.recap-panel-title span:last-child {
+  color: var(--recap-muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.recap-panel-copy {
+  color: var(--recap-muted);
+  font-size: 14px;
+}
+
+.recap-conclusions {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.recap-conclusions li {
+  border-bottom: 1px dashed var(--recap-line);
+  padding: 0 0 14px 18px;
+  position: relative;
+}
+
+.recap-conclusions li::before {
+  content: "■";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: var(--recap-ink);
+  font-size: 10px;
+}
+
+.recap-conclusions li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.recap-conclusions strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.recap-conclusions p,
+.recap-check p,
+.recap-timeline-card p,
+.recap-list-card p {
+  margin: 0;
+  color: var(--recap-muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.recap-checklist {
+  display: grid;
+  gap: 12px;
+}
+
+.recap-check {
+  border: 1px solid var(--recap-line);
+  border-radius: 6px;
+  padding: 12px;
+  background: var(--recap-panel);
+}
+
+.recap-check-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 1px solid var(--recap-line);
+  padding-bottom: 6px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.recap-check-head span {
+  color: var(--orange);
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.recap-toggle-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.recap-signal {
+  min-height: 34px;
+  border: 1px solid var(--recap-line);
+  border-radius: 6px;
+  background: var(--recap-paper);
+  color: var(--recap-ink);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.recap-signal.is-green {
+  border-color: var(--green);
+  background: var(--green);
+  color: #fff;
+}
+
+.recap-signal.is-red {
+  border-color: var(--red);
+  background: var(--red);
+  color: #fff;
+}
+
+.recap-chart-frame {
+  overflow: hidden;
+  border: 1px solid var(--recap-line);
+  border-radius: 6px;
+  background: var(--recap-panel);
+  padding: 10px;
+}
+
+.recap-svg-chart {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 230px;
+}
+
+.recap-svg-chart rect {
+  fill: transparent;
+}
+
+.recap-svg-chart > rect,
+.recap-svg-chart line,
+.recap-svg-chart polyline,
+.recap-chart-point text {
+  pointer-events: none;
+}
+
+.recap-svg-chart line {
+  stroke: var(--recap-line);
+  stroke-width: 1;
+}
+
+.recap-svg-chart polyline {
+  fill: none;
+  stroke: var(--recap-ink);
+  stroke-width: 3;
+}
+
+.recap-chart-point {
+  cursor: pointer;
+}
+
+.recap-chart-point circle {
+  fill: var(--recap-bg);
+  stroke: var(--recap-ink);
+  stroke-width: 3;
+}
+
+.recap-chart-point.is-active circle {
+  fill: var(--red);
+  stroke: var(--red);
+}
+
+.recap-chart-point text {
+  fill: var(--recap-muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-anchor: middle;
+}
+
+.recap-chart-point .value-label {
+  opacity: 0;
+  fill: var(--red);
+  font-weight: 900;
+}
+
+.recap-chart-point.is-active .value-label,
+.recap-chart-point:hover .value-label {
+  opacity: 1;
+}
+
+.recap-chart-hit {
+  fill: rgba(214, 69, 69, 0.001);
+  pointer-events: all;
+}
+
+.recap-timeline {
+  position: relative;
+  display: grid;
+  gap: 14px;
+  max-height: 640px;
+  overflow: auto;
+  border-left: 2px solid var(--recap-strong);
+  padding-left: 18px;
+}
+
+.recap-timeline-card {
+  position: relative;
+  border: 1px solid var(--recap-line);
+  border-radius: 6px;
+  background: var(--recap-panel);
+  padding: 12px;
+  cursor: pointer;
+}
+
+.recap-timeline-card::before {
+  content: "";
+  position: absolute;
+  left: -26px;
+  top: 16px;
+  width: 12px;
+  height: 12px;
+  border: 3px solid var(--recap-strong);
+  border-radius: 999px;
+  background: var(--recap-bg);
+}
+
+.recap-timeline-card.is-active {
+  outline: 2px solid var(--recap-strong);
+}
+
+.recap-timeline-card.is-active::before {
+  background: var(--red);
+  border-color: var(--red);
+}
+
+.recap-timeline-date {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px dashed var(--recap-line);
+  padding-bottom: 5px;
+  margin-bottom: 8px;
+  color: var(--recap-muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.recap-timeline-card h2 {
+  margin: 0 0 6px;
+  border: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.recap-timeline-check {
+  margin-top: 8px;
+  border: 1px dashed var(--recap-line);
+  border-radius: 4px;
+  padding: 8px;
+  color: var(--recap-muted);
+  font-size: 13px;
+}
+
+.recap-deck {
+  display: grid;
+  gap: 12px;
+}
+
+.recap-flip-card {
+  position: relative;
+  height: 138px;
+  padding: 0;
+  border: 1px solid var(--recap-line);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--recap-ink);
+  cursor: pointer;
+  transform-style: preserve-3d;
+  perspective: 1200px;
+}
+
+.recap-card-face {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  align-content: space-between;
+  padding: 12px;
+  backface-visibility: hidden;
+  background: var(--recap-panel);
+  transition: transform .55s ease;
+}
+
+.recap-card-face.back {
+  transform: rotateY(180deg);
+  background: var(--recap-paper);
+}
+
+.recap-flip-card.is-flipped .front {
+  transform: rotateY(180deg);
+}
+
+.recap-flip-card.is-flipped .back {
+  transform: rotateY(360deg);
+}
+
+.recap-deck-label {
+  width: fit-content;
+  border: 1px solid var(--recap-strong);
+  border-radius: 4px;
+  padding: 2px 7px;
+  color: var(--recap-muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.recap-flip-card strong {
+  display: block;
+  font-size: 16px;
+}
+
+.recap-flip-card em {
+  color: var(--recap-muted);
+  font-size: 13px;
+  font-style: normal;
+  line-height: 1.45;
+}
+
+.recap-notes {
+  width: 100%;
+  min-height: 128px;
+  border: 1px solid var(--recap-line);
+  border-radius: 6px;
+  background: var(--recap-panel);
+  color: var(--recap-ink);
+  padding: 12px;
+  resize: vertical;
+}
+
+.recap-note-status {
+  margin-top: 8px;
+  color: var(--recap-muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.recap-source-list {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.recap-source-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px dashed var(--recap-line);
+  padding-bottom: 7px;
+  font-size: 13px;
+}
+
+.recap-source-list li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.recap-source-list span {
+  color: var(--orange);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.recap-next {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-top: 3px solid var(--recap-strong);
+  margin-top: 30px;
+  padding-top: 18px;
+}
+
+.recap-next span,
+.recap-next a {
+  border: 1px solid var(--recap-line);
+  border-radius: 6px;
+  padding: 6px 10px;
+  background: var(--recap-paper);
+}
+
+.recap-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.recap-list-card {
+  display: grid;
+  align-content: space-between;
+  min-height: 320px;
+  padding: 18px;
+}
+
+.recap-card-top,
+.recap-mini-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.recap-card-top {
+  justify-content: space-between;
+  color: var(--recap-muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.recap-list-card h2 {
+  margin: 16px 0 8px;
+  border: 0;
+  padding: 0;
+  font-size: 24px;
+}
+
+.recap-mini-metrics {
+  margin: 14px 0;
+}
+
+.recap-mini-metrics span {
+  display: grid;
+  min-width: 110px;
+  border: 1px solid var(--recap-line);
+  border-radius: 6px;
+  padding: 8px;
+  color: var(--recap-muted);
+  font-size: 12px;
+}
+
+.recap-mini-metrics strong {
+  display: block;
+  color: var(--recap-ink);
+}
+
+@media (max-width: 1280px) {
+  .recap-grid,
+  .recap-card-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .recap-column.central {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 820px) {
+  .recap-dashboard {
+    padding: 18px;
+  }
+
+  .recap-hero {
+    display: block;
+  }
+
+  .recap-hero-actions {
+    margin-top: 16px;
+  }
+
+  .recap-metrics,
+  .recap-grid,
+  .recap-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recap-column.central {
+    grid-column: auto;
+  }
+
+  .recap-meta-line,
+  .recap-panel-title,
+  .recap-timeline-date {
+    display: grid;
+  }
+}

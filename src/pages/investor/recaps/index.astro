@@ -1,0 +1,57 @@
+---
+import BaseHead from "../../../components/BaseHead.astro";
+import Header from "../../../components/Header.astro";
+import { readRecapDashboards } from "../../../lib/investor-generated.js";
+import "../../../styles/recap-dashboard.css";
+
+const { dashboards, generatedAt } = readRecapDashboards();
+---
+
+<!doctype html>
+<html lang="zh-CN" data-lang="zh">
+  <head>
+    <BaseHead
+      title="关键复盘仪表盘 · AI Institute 投资研究台"
+      description="AI Institute critical recap dashboards with interactive timelines, signal checklists, and mechanism maps."
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="recap-dashboard recap-index">
+      <header class="recap-hero compact">
+        <div class="recap-kicker">AI Institute · Critical Recap Visuals</div>
+        <h1>关键复盘仪表盘</h1>
+        <p>把重要研究线索整理成可点击时间线、信号清单、机制剖面和源报告入口。</p>
+        <div class="recap-meta-line">
+          <span>生成时间：{generatedAt}</span>
+          <a href="/investor/">返回投资研究台</a>
+        </div>
+      </header>
+
+      <section class="recap-card-grid">
+        {dashboards.map((dashboard) => (
+          <article class="recap-list-card">
+            <div class="recap-card-top">
+              <span>{dashboard.badge}</span>
+              <span>{dashboard.date}</span>
+            </div>
+            <h2><a href={`/investor/recaps/${dashboard.slug}/`}>{dashboard.title}</a></h2>
+            <p>{dashboard.subtitle}</p>
+            <div class="recap-mini-metrics">
+              {(dashboard.metrics || []).slice(0, 4).map((metric) => (
+                <span class={`accent-${metric.accent || "blue"}`}>
+                  <strong>{metric.value}</strong>
+                  {metric.label}
+                </span>
+              ))}
+            </div>
+            <div class="recap-actions">
+              <a href={`/investor/recaps/${dashboard.slug}/`}>打开仪表盘</a>
+              <a href={dashboard.reportHref}>阅读复盘报告</a>
+            </div>
+          </article>
+        ))}
+      </section>
+    </main>
+  </body>
+</html>

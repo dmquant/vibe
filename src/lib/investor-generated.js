@@ -106,6 +106,10 @@ export function readSiteData() {
   return rewriteInvestorPaths(readJson("site-data.json"));
 }
 
+export function readRecapDashboards() {
+  return rewriteInvestorPaths(readJson("recap-dashboards.json"));
+}
+
 export function readDeepIndex() {
   return rewriteInvestorPaths(readJson("deep-research/index.json"));
 }

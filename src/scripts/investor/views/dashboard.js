@@ -20,6 +20,7 @@ export function renderDashboard({ app, data }) {
   const stats = data.stats;
   const graphStats = data.knowledgeGraph.stats;
   const topViews = uniqueViews(data.topViews);
+  const recapDashboards = data.recapDashboards || [];
   app.innerHTML = `
     <section class="hero-layout">
       <div class="panel">
@@ -45,6 +46,26 @@ export function renderDashboard({ app, data }) {
     <section class="grid cols-3" style="margin-top:16px">
       ${topViews.slice(0, 6).map(viewCard).join("")}
     </section>
+    ${
+      recapDashboards.length
+        ? `<section class="panel" style="margin-top:16px">
+            ${sectionHead("关键复盘仪表盘", "把重要研究线索做成可点击时间线、信号清单和机制剖面。")}
+            <div class="grid cols-4">${recapDashboards
+              .map(
+                (item) => `<article class="card thesis-card">
+                  <div class="mini-stats"><span>${esc(item.date || "未标注日期")}</span><span>${esc(item.badge || "RECAP")}</span></div>
+                  <h3><a href="${esc(item.href)}">${esc(item.title)}</a></h3>
+                  <p>${esc(item.subtitle || "")}</p>
+                  <div class="mini-stats">${(item.metrics || [])
+                    .slice(0, 2)
+                    .map((metricItem) => `<span><strong>${esc(metricItem.value)}</strong> ${esc(metricItem.label)}</span>`)
+                    .join("")}</div>
+                </article>`,
+              )
+              .join("")}</div>
+          </section>`
+        : ""
+    }
     <section class="grid cols-2" style="margin-top:16px">
       <div class="panel">
         ${sectionHead("证据图谱", "来自通胀与 AI 深度研究的核心图表")}

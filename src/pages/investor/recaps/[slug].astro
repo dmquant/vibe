@@ -1,0 +1,299 @@
+---
+import BaseHead from "../../../components/BaseHead.astro";
+import Header from "../../../components/Header.astro";
+import { readRecapDashboards } from "../../../lib/investor-generated.js";
+import "../../../styles/recap-dashboard.css";
+
+export function getStaticPaths() {
+  const data = readRecapDashboards();
+  return (data.dashboards || []).map((dashboard) => ({
+    params: { slug: dashboard.slug },
+    props: { dashboard, allDashboards: data.dashboards || [] },
+  }));
+}
+
+const { dashboard, allDashboards } = Astro.props;
+const chart = dashboard.chart || { labels: [], values: [] };
+const values = (chart.values || []).map((value) => Number(value));
+const min = Math.min(...values);
+const max = Math.max(...values);
+const span = Math.max(max - min, 1);
+const chartWidth = 760;
+const chartHeight = 240;
+const padX = 46;
+const padY = 28;
+const plotWidth = chartWidth - padX * 2;
+const plotHeight = chartHeight - padY * 2;
+const points = values.map((value, index) => {
+  const x = values.length <= 1 ? chartWidth / 2 : padX + (index * plotWidth) / (values.length - 1);
+  const y = padY + ((max - value) / span) * plotHeight;
+  return {
+    x: Number(x.toFixed(2)),
+    y: Number(y.toFixed(2)),
+    value,
+    label: chart.labels[index] || "",
+  };
+});
+const pointString = points.map((point) => `${point.x},${point.y}`).join(" ");
+const yTicks = [max, min + span / 2, min].map((value) => ({
+  value,
+  y: padY + ((max - value) / span) * plotHeight,
+}));
+---
+
+<!doctype html>
+<html lang="zh-CN" data-lang="zh">
+  <head>
+    <BaseHead
+      title={`${dashboard.title} · 关键复盘仪表盘`}
+      description={`${dashboard.subtitle} · ${dashboard.date}`}
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="recap-dashboard" data-recap-dashboard>
+      <header class="recap-hero">
+        <div>
+          <div class="recap-kicker">AI Institute · {dashboard.badge}</div>
+          <h1>{dashboard.title}</h1>
+          <p>{dashboard.subtitle}</p>
+        </div>
+        <div class="recap-hero-actions">
+          <a href="/investor/recaps/">全部复盘</a>
+          <a href={dashboard.reportHref}>阅读复盘报告</a>
+        </div>
+      </header>
+
+      <div class="recap-meta-line">
+        <span>锚定日期：{dashboard.date}</span>
+        <span>视觉样式：Monochrome dashboard with sparse risk colors</span>
+      </div>
+
+      <section class="recap-metrics">
+        {(dashboard.metrics || []).map((metric) => (
+          <article class={`recap-metric accent-${metric.accent || "blue"}`}>
+            <span>{metric.label}</span>
+            <strong>{metric.value}</strong>
+          </article>
+        ))}
+      </section>
+
+      <section class="recap-grid">
+        <div class="recap-column">
+          <section class="recap-panel">
+            <div class="recap-panel-title">
+              <span>优先结论</span>
+              <span>Editorial Summary</span>
+            </div>
+            <ul class="recap-conclusions">
+              {(dashboard.conclusions || []).map((item) => (
+                <li>
+                  <strong>{item.title}</strong>
+                  <p>{item.text}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section class="recap-panel">
+            <div class="recap-panel-title">
+              <span>观察清单</span>
+              <span>Signals</span>
+            </div>
+            <div class="recap-checklist">
+              {(dashboard.checklist || []).map((item) => (
+                <article class="recap-check">
+                  <div class="recap-check-head">
+                    <strong>{item.label}</strong>
+                    <span>{item.status}</span>
+                  </div>
+                  <p class="recap-check-detail">{item.detail}</p>
+                  <div class="recap-toggle-row">
+                    <button
+                      type="button"
+                      class:list={["recap-signal", item.active === "bull" && "is-green"]}
+                      data-signal="bull"
+                      data-text={item.bull}
+                    >
+                      看多修复
+                    </button>
+                    <button
+                      type="button"
+                      class:list={["recap-signal", item.active !== "bull" && "is-red"]}
+                      data-signal="bear"
+                      data-text={item.bear}
+                    >
+                      压力延续
+                    </button>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+        </div>
+
+        <div class="recap-column central">
+          <section class="recap-panel">
+            <div class="recap-panel-title">
+              <span>{dashboard.chartTitle}</span>
+              <span>{chart.chartUnit || dashboard.chartUnit}</span>
+            </div>
+            <p class="recap-panel-copy">{dashboard.chartDescription}</p>
+            <div class="recap-chart-frame" role="img" aria-label={`${dashboard.chartTitle} chart`}>
+              <svg viewBox={`0 0 ${chartWidth} ${chartHeight}`} class="recap-svg-chart">
+                <rect x="0" y="0" width={chartWidth} height={chartHeight} rx="0"></rect>
+                {yTicks.map((tick) => (
+                  <g>
+                    <line x1={padX} x2={chartWidth - padX} y1={tick.y} y2={tick.y}></line>
+                    <text x="8" y={tick.y + 4}>{Math.round(tick.value)}</text>
+                  </g>
+                ))}
+                <polyline points={pointString}></polyline>
+                {points.map((point, index) => (
+                  <g class="recap-chart-point" data-index={index}>
+                    <rect
+                      class="recap-chart-hit"
+                      x={point.x - 26}
+                      y={point.y - 26}
+                      width="52"
+                      height="52"
+                      aria-label={`Open ${point.label}`}
+                    ></rect>
+                    <circle cx={point.x} cy={point.y} r="6"></circle>
+                    <text x={point.x} y={chartHeight - 8}>{point.label}</text>
+                    <text class="value-label" x={point.x} y={point.y - 12}>{point.value}</text>
+                  </g>
+                ))}
+              </svg>
+            </div>
+          </section>
+
+          <section class="recap-panel">
+            <div class="recap-panel-title">
+              <span>研究观点时间线</span>
+              <span>Clickable Timeline</span>
+            </div>
+            <div class="recap-timeline">
+              {(dashboard.timeline || []).map((item, index) => (
+                <article class="recap-timeline-card" data-index={index}>
+                  <div class="recap-timeline-date">
+                    <span>{item.date} · {item.label}</span>
+                    <span>{item.value}</span>
+                  </div>
+                  <h2>{item.href ? <a href={item.href}>{item.title}</a> : item.title}</h2>
+                  <p>{item.view}</p>
+                  <div class="recap-timeline-check">{item.check}</div>
+                </article>
+              ))}
+            </div>
+          </section>
+        </div>
+
+        <div class="recap-column">
+          <section class="recap-panel">
+            <div class="recap-panel-title">
+              <span>观点演化维度</span>
+              <span>Flip Deck</span>
+            </div>
+            <div class="recap-deck">
+              {(dashboard.dimensions || []).map((item) => (
+                <button type="button" class="recap-flip-card">
+                  <span class="recap-card-face front">
+                    <span class="recap-deck-label">{item.label}</span>
+                    <strong>{item.title}</strong>
+                    <em>{item.front}</em>
+                  </span>
+                  <span class="recap-card-face back">
+                    <strong>机制说明</strong>
+                    <em>{item.back}</em>
+                  </span>
+                </button>
+              ))}
+            </div>
+          </section>
+
+          <section class="recap-panel">
+            <div class="recap-panel-title">
+              <span>复盘备忘录</span>
+              <span>Local Notes</span>
+            </div>
+            <textarea class="recap-notes" placeholder="记录后续验证点、交易触发条件或需要补做的数据..." data-notes></textarea>
+            <div class="recap-note-status">状态：<span data-save-status>已同步</span></div>
+          </section>
+
+          <section class="recap-panel">
+            <div class="recap-panel-title">
+              <span>引用源</span>
+              <span>Archives</span>
+            </div>
+            <ul class="recap-source-list">
+              {(dashboard.sources || []).map((source) => (
+                <li>
+                  <a href={source.href}>{source.label}</a>
+                  <span>{source.tag}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        </div>
+      </section>
+
+      <section class="recap-next">
+        <span>其他复盘：</span>
+        {allDashboards.filter((item) => item.slug !== dashboard.slug).map((item) => (
+          <a href={`/investor/recaps/${item.slug}/`}>{item.title}</a>
+        ))}
+      </section>
+    </main>
+    <script define:vars={{ dashboardSlug: dashboard.slug }}>
+      const root = document.querySelector("[data-recap-dashboard]");
+      if (root) {
+        const timelineCards = [...root.querySelectorAll(".recap-timeline-card")];
+        const chartPoints = [...root.querySelectorAll(".recap-chart-point")];
+        const activate = (index, shouldScroll = true) => {
+          timelineCards.forEach((card) => card.classList.toggle("is-active", Number(card.dataset.index) === index));
+          chartPoints.forEach((point) => point.classList.toggle("is-active", Number(point.dataset.index) === index));
+          if (shouldScroll) timelineCards[index]?.scrollIntoView({ behavior: "smooth", block: "center" });
+        };
+        timelineCards.forEach((card) => {
+          card.addEventListener("click", () => activate(Number(card.dataset.index), false));
+        });
+        chartPoints.forEach((point) => {
+          point.addEventListener("click", () => activate(Number(point.dataset.index), true));
+        });
+        activate(0, false);
+
+        root.querySelectorAll(".recap-toggle-row").forEach((row) => {
+          const detail = row.closest(".recap-check")?.querySelector(".recap-check-detail");
+          row.querySelectorAll(".recap-signal").forEach((button) => {
+            button.addEventListener("click", () => {
+              row.querySelectorAll(".recap-signal").forEach((item) => item.classList.remove("is-green", "is-red"));
+              button.classList.add(button.dataset.signal === "bull" ? "is-green" : "is-red");
+              if (detail) detail.textContent = button.dataset.text || "";
+            });
+          });
+        });
+
+        root.querySelectorAll(".recap-flip-card").forEach((card) => {
+          card.addEventListener("click", () => card.classList.toggle("is-flipped"));
+        });
+
+        const notes = root.querySelector("[data-notes]");
+        const status = root.querySelector("[data-save-status]");
+        const storageKey = `researchos-recap-notes:${dashboardSlug}`;
+        let timer = 0;
+        if (notes) {
+          notes.value = localStorage.getItem(storageKey) || "";
+          notes.addEventListener("input", () => {
+            if (status) status.textContent = "正在保存";
+            clearTimeout(timer);
+            timer = window.setTimeout(() => {
+              localStorage.setItem(storageKey, notes.value);
+              if (status) status.textContent = "已同步";
+            }, 500);
+          });
+        }
+      }
+    </script>
+  </body>
+</html>
