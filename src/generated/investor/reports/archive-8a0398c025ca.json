@@ -1,0 +1,19 @@
+{
+  "slug": "archive-8a0398c025ca",
+  "href": "/investor/reports/archive-8a0398c025ca/",
+  "meta": {
+    "title": "共享数据采集摘要 2026-06-02",
+    "date": "2026-06-02",
+    "analyst_id": "data-scientist",
+    "analyst_name": "数据科学家",
+    "tags": [
+      "AI",
+      "港美股",
+      "综合编审"
+    ],
+    "source": "archive-8a0398c025ca",
+    "source_label": "每日任务报告",
+    "source_kind": "daily_task"
+  },
+  "bodyHtml": "<h1>共享数据采集摘要 2026-06-02</h1>\n<h2>markets_overnight</h2>\n<ul>\n<li>字段总数 13、空值 0、confidence: high</li>\n<li>修复说明：BRENT, UST10, VIX 字段通过 Web 搜索修复（原源返回 N/D）；DXY 字段因原源数据异常（61.93）通过 Web 搜索修复。</li>\n</ul>\n<h2>markets_close_cn</h2>\n<ul>\n<li>字段总数 5、空值 0、confidence: high</li>\n<li>修复说明：由于 Sina 接口返回编码问题（GBK），所有 A 股及港股指数均通过 Web 搜索（Investing.com/Google）修复。</li>\n</ul>\n<h2>失败 / 修复记录</h2>\n<ul>\n<li>dxy=implausible(61.9267) -&gt; Repaired: 104.85</li>\n<li>brent=empty -&gt; Repaired: 112.63</li>\n<li>ust10y=empty -&gt; Repaired: 4.42</li>\n<li>vix=empty -&gt; Repaired: 18.36</li>\n<li>sse=empty -&gt; Repaired: 4057.74</li>\n<li>szse=empty -&gt; Repaired: 15340.36</li>\n<li>cyb=empty -&gt; Repaired: 4343.88</li>\n<li>kc50=empty -&gt; Repaired: 1024.50</li>\n<li>hsi_hk=empty -&gt; Repaired: 25398.18</li>\n</ul>"
+}
