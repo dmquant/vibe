@@ -1,9 +1,58 @@
 ---
 import { type CollectionEntry, getCollection, render } from 'astro:content';
+import fs from 'node:fs';
+import path from 'node:path';
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
 import BlogPost from '../../layouts/BlogPost.astro';
+import { readDailyDashboard } from '../../lib/investor-generated.js';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
+	const postIds = new Set(posts.map((post) => post.id));
+	const privateDailyPattern = /(?:^|\/)(brief-daily|editor-daily|mailbox-digest)-\d{4}-\d{2}-\d{2}-(?:en|zh)(?=\/|#|\?|$)/;
+	const extractPrivateDailySlug = (value: unknown) => {
+		if (typeof value !== 'string') return null;
+		const match = value.match(privateDailyPattern);
+		return match?.[0]?.replace(/^\//, '') || null;
+	};
+	const collectPrivateDailySlugs = (value: unknown, slugs = new Set<string>()) => {
+		const slug = extractPrivateDailySlug(value);
+		if (slug) slugs.add(slug);
+		if (Array.isArray(value)) {
+			value.forEach((item) => collectPrivateDailySlugs(item, slugs));
+		} else if (value && typeof value === 'object') {
+			Object.values(value).forEach((item) => collectPrivateDailySlugs(item, slugs));
+		}
+		return slugs;
+	};
+	const dailyRedirectSlugs = () => {
+		const slugs = new Set<string>();
+		const addDateSlugs = (date: unknown) => {
+			if (typeof date !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(date)) return;
+			for (const lang of ['en', 'zh']) {
+				slugs.add(`brief-daily-${date}-${lang}`);
+				slugs.add(`editor-daily-${date}-${lang}`);
+				slugs.add(`mailbox-digest-${date}-${lang}`);
+			}
+		};
+		const blogDir = path.resolve(process.cwd(), 'src/content/blog');
+		if (fs.existsSync(blogDir)) {
+			for (const file of fs.readdirSync(blogDir)) {
+				if (/^(brief-daily|editor-daily|mailbox-digest)-\d{4}-\d{2}-\d{2}-(?:en|zh)\.md(?:\.enc)?$/.test(file)) {
+					slugs.add(file.replace(/\.md(?:\.enc)?$/, ''));
+				}
+			}
+		}
+		try {
+			const dashboard = readDailyDashboard();
+			addDateSlugs(dashboard?.date);
+			collectPrivateDailySlugs(dashboard, slugs);
+		} catch {
+			// Generated dashboard data is optional during partial local builds.
+		}
+		return slugs;
+	};
 
 	// Build a map of counterpart URLs
 	const counterpartMap = new Map<string, string>();
@@ -30,38 +79,82 @@ export async function getStaticPaths() {
 		}
 	}
 
-	return posts.map((post) => ({
+	const postPaths = posts.map((post) => ({
 		params: { slug: post.id },
 		props: post,
 	}));
+	const redirectPaths = [...dailyRedirectSlugs()]
+		.filter((slug) => !postIds.has(slug))
+		.map((slug) => ({
+			params: { slug },
+			props: {
+				mode: 'redirect',
+				slug,
+				target: '/investor/daily/',
+			},
+		}));
+
+	return [...postPaths, ...redirectPaths];
 }
 
 type Props = CollectionEntry<'blog'>;
 
-const post = Astro.props;
-const { Content } = await render(post);
+const page = Astro.props as Props | { mode: 'redirect'; slug: string; target: string };
+const isRedirect = 'mode' in page && page.mode === 'redirect';
+let post = null as Props | null;
+let Content = null as Awaited<ReturnType<typeof render>>['Content'] | null;
+let counterpartUrl = null as string | null;
 
-// Compute counterpart URL from the post ID
-const lang = post.data.lang || 'en';
-const other = lang === 'en' ? 'zh' : 'en';
-const id = post.id;
-let cpId = '';
+if (!isRedirect) {
+	post = page as Props;
+	const rendered = await render(post);
+	Content = rendered.Content;
 
-if (id.startsWith('institute-')) {
-	cpId = id.replace(`institute-${lang}-`, `institute-${other}-`);
-} else if (id.startsWith('vibelog-') && id.endsWith(`-${lang}`)) {
-	cpId = id.slice(0, -lang.length) + other;
-} else if (id.startsWith('research-') && id.endsWith(`_${lang}`)) {
-	cpId = id.slice(0, -lang.length) + other;
-} else if (id.startsWith('brief-') && id.endsWith(`-${lang}`)) {
-	cpId = id.slice(0, -lang.length) + other;
+	// Compute counterpart URL from the post ID
+	const lang = post.data.lang || 'en';
+	const other = lang === 'en' ? 'zh' : 'en';
+	const id = post.id;
+	let cpId = '';
+
+	if (id.startsWith('institute-')) {
+		cpId = id.replace(`institute-${lang}-`, `institute-${other}-`);
+	} else if (id.startsWith('vibelog-') && id.endsWith(`-${lang}`)) {
+		cpId = id.slice(0, -lang.length) + other;
+	} else if (id.startsWith('research-') && id.endsWith(`_${lang}`)) {
+		cpId = id.slice(0, -lang.length) + other;
+	} else if (id.startsWith('brief-') && id.endsWith(`-${lang}`)) {
+		cpId = id.slice(0, -lang.length) + other;
+	}
+
+	const allPosts = await getCollection('blog');
+	const hasCounterpart = cpId && allPosts.some(p => p.id === cpId);
+	counterpartUrl = hasCounterpart ? `/blog/${cpId}/` : null;
 }
 
-const allPosts = await getCollection('blog');
-const hasCounterpart = cpId && allPosts.some(p => p.id === cpId);
-const counterpartUrl = hasCounterpart ? `/blog/${cpId}/` : null;
+const redirectTarget = isRedirect ? page.target : '';
 ---
 
-<BlogPost {...post.data} counterpartUrl={counterpartUrl}>
-	<Content />
-</BlogPost>
+{isRedirect ? (
+	<html lang="zh-CN" data-lang="zh">
+		<head>
+			<BaseHead title="Daily brief moved · AI Institute" description="This private daily brief now resolves to the public morning brief dashboard." />
+			<meta http-equiv="refresh" content={`0; url=${redirectTarget}`} />
+			<link rel="canonical" href={redirectTarget} />
+		</head>
+		<body>
+			<Header />
+			<main style="max-width: 760px; margin: 96px auto; padding: 0 24px;">
+				<h1>晨会简报已迁移到公开看板</h1>
+				<p>该私有简报正文不在 Vibe 部署中公开发布。公开信号、报价、总编冲突和研究链条已归并到晨会信号看板。</p>
+				<p><a href={redirectTarget}>打开晨会信号看板</a></p>
+			</main>
+			<script is:inline define:vars={{ redirectTarget }}>
+				window.location.replace(redirectTarget);
+			</script>
+		</body>
+	</html>
+) : post && Content ? (
+	<BlogPost {...post.data} counterpartUrl={counterpartUrl}>
+		<Content />
+	</BlogPost>
+) : null}

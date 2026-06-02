@@ -70,6 +70,12 @@ const dailySynthesis = {
 };
 const dailyStats = dailyBrief.stats || {};
 const dashboardStats = dailyDashboard.stats || {};
+const publicDailyHref = (href, fallback = '/investor/daily/') => {
+	const value = String(href || '');
+	if (!value) return fallback;
+	if (/^\/blog\/(?:brief-daily|editor-daily|mailbox-digest)-/.test(value)) return fallback;
+	return value;
+};
 const homeStats = {
 	sections: dashboardStats.sections ?? dailyStats.reports ?? 0,
 	research: dashboardStats.deepResearch ?? dailyStats.activeChains ?? 0,
@@ -78,7 +84,11 @@ const homeStats = {
 };
 const dashboardSections = Array.isArray(dailyDashboard.morningSections) ? dailyDashboard.morningSections : [];
 const dailyBullets = dashboardSections.length
-	? dashboardSections.slice(0, 3).map((item) => ({ label: item.title, text: item.detail, href: item.href }))
+	? dashboardSections.slice(0, 3).map((item) => ({
+		label: item.title,
+		text: item.detail,
+		href: publicDailyHref(item.href, '/investor/daily/#daily-dashboard-sections'),
+	}))
 	: Array.isArray(dailySynthesis.bullets) ? dailySynthesis.bullets.slice(0, 3) : [];
 const dailyWatchItems = Array.isArray(dailySynthesis.watchItems) ? dailySynthesis.watchItems.slice(0, 3) : [];
 const mapCoordinates: Record<string, [number, number]> = {
@@ -98,7 +108,7 @@ const dailyMapItems = chainRadarSource.slice(0, 6).map((item, index) => ({
 	latest: item.latest,
 	recent: item.recent,
 	risk: item.risk,
-	href: item.evidence?.[0]?.href || '/investor/#dailyReports',
+	href: publicDailyHref(item.href || item.evidence?.[0]?.href, '/investor/#dailyReports'),
 	evidenceTitle: item.evidence?.[0]?.title || '',
 	coords: mapCoordinates[item.label] || fallbackCoordinates[index % fallbackCoordinates.length],
 	accent: signalAccents[index % signalAccents.length],
@@ -197,13 +207,13 @@ const marketTapeRows = (dashboardQuoteRows.length ? dashboardQuoteRows : (dailyB
 				<div class="signal-board-grid">
 					<article class="signal-panel signal-main-panel">
 						<div class="signal-panel-title" data-en="Priority conclusions" data-zh="优先结论">Priority conclusions</div>
-						<a class="signal-lead" href={dailyBullets[0]?.href || '/investor/#dailyReports'}>
+						<a class="signal-lead" href={publicDailyHref(dailyBullets[0]?.href, '/investor/daily/#daily-dashboard-sections')}>
 							<strong>{dailySynthesis.headline || '今日研究信号'}</strong>
 							<span>{dailySynthesis.lead || '简报优先呈现可追溯的结论、变化、风险和证据入口。'}</span>
 						</a>
 						<div class="signal-bullet-list">
 							{dailyBullets.map((item, index) => (
-								<a href={item.href || '/investor/#dailyReports'} class="signal-bullet" style={`--accent:${signalAccents[index % signalAccents.length]}`}>
+								<a href={publicDailyHref(item.href, '/investor/daily/#daily-dashboard-sections')} class="signal-bullet" style={`--accent:${signalAccents[index % signalAccents.length]}`}>
 									<span>{item.label || `Signal ${index + 1}`}</span>
 									<strong>{item.text || ''}</strong>
 								</a>
@@ -233,7 +243,7 @@ const marketTapeRows = (dashboardQuoteRows.length ? dashboardQuoteRows : (dailyB
 						{dailyWatchItems.length ? (
 							<div class="signal-watch-list">
 								{dailyWatchItems.map((item) => (
-									<a href={item.href || '/investor/#dailyReports'}>
+									<a href={publicDailyHref(item.href, '/investor/#dailyReports')}>
 										<strong>{item.title}</strong>
 										<span>{item.reason}</span>
 									</a>

@@ -1,6 +1,19 @@
 ---
 const { dashboard } = Astro.props;
 
+const dashboardHref = dashboard.links?.dashboard || "/investor/daily/";
+const hrefWithAnchor = (anchor) => `${dashboardHref}${dashboardHref.includes("#") ? "" : `#${anchor}`}`;
+const publicDailyHref = (href, fallback = dashboardHref) => {
+  if (!href) return fallback;
+  const value = String(href);
+  if (/^\/blog\/(?:brief-daily|editor-daily|mailbox-digest)-/.test(value)) return fallback;
+  return value;
+};
+const sectionHref = hrefWithAnchor("daily-dashboard-sections");
+const editorHref = hrefWithAnchor("daily-dashboard-editor");
+const researchHref = hrefWithAnchor("daily-dashboard-research");
+const mailboxHref = publicDailyHref(dashboard.links?.mailboxZh, "/investor/#operations");
+
 const quoteGroups = ["Equity", "Rates/Risk", "Commodities", "FX"];
 const quotesByGroup = quoteGroups.map((group) => ({
   group,
@@ -30,7 +43,7 @@ const mapItems = (dashboard.chainRadar || []).map((item, index) => ({
   latest: item.latest,
   recent: item.recent,
   risk: item.risk,
-  href: item.href || "/investor/#dailyReports",
+  href: publicDailyHref(item.href, "/investor/#dailyReports"),
   evidenceTitle: item.evidenceTitle || "",
   coords: mapCoordinates[item.label] || fallbackCoordinates[index % fallbackCoordinates.length],
   accent: accents[index % accents.length],
@@ -54,23 +67,23 @@ const isAhead = dashboard.status === "morning_manifest_ahead_of_investor_daily";
   </header>
 
   <section class="daily-dashboard-actions" aria-label="Morning brief links">
-    <a href={dashboard.links?.briefZh || "/investor/#daily"}>中文晨会简报</a>
-    <a href={dashboard.links?.editorZh || "/investor/#daily"}>总编报告</a>
-    <a href={dashboard.links?.mailboxZh || "/investor/#daily"}>邮箱摘要</a>
+    <a href={sectionHref}>中文晨会简报</a>
+    <a href={editorHref}>总编报告</a>
+    <a href={mailboxHref}>邮箱摘要</a>
     <a href={dashboard.links?.investorShell || "/investor/#daily"}>投资台交互版</a>
     {dashboard.links?.docx ? <a href={dashboard.links.docx}>下载 DOCX</a> : null}
   </section>
 
   <section class="daily-dashboard-metrics">
-    <a href={dashboard.links?.briefZh || "/investor/#daily"}>
+    <a href={sectionHref}>
       <span>晨会板块</span>
       <strong>{dashboard.stats?.sections || 0}</strong>
     </a>
-    <a href={dashboard.links?.briefZh || "/investor/#daily"}>
+    <a href={researchHref}>
       <span>深度研究</span>
       <strong>{dashboard.stats?.deepResearch || 0}</strong>
     </a>
-    <a href={dashboard.links?.mailboxZh || "/investor/#daily"}>
+    <a href={mailboxHref}>
       <span>跨部门传递</span>
       <strong>{dashboard.stats?.handoffs || 0}</strong>
     </a>
@@ -92,7 +105,7 @@ const isAhead = dashboard.status === "morning_manifest_ahead_of_investor_daily";
             <h3>{group}</h3>
             <div>
               {items.length ? items.map((item) => (
-                <a class={`daily-quote ${directionFor(item)}`} href={item.href || dashboard.links?.briefZh || "/investor/#daily"}>
+                <a class={`daily-quote ${directionFor(item)}`} href={publicDailyHref(item.href, sectionHref)}>
                   <span>{item.labelZh || item.key}</span>
                   <strong>{item.value}</strong>
                   <em>{item.change || "latest"}</em>
@@ -104,14 +117,14 @@ const isAhead = dashboard.status === "morning_manifest_ahead_of_investor_daily";
       </div>
     </section>
 
-    <section class="daily-dashboard-panel">
+    <section class="daily-dashboard-panel" id="daily-dashboard-sections">
       <div class="daily-dashboard-panel-head">
         <h2>晨会板块</h2>
         <span>Sections</span>
       </div>
       <div class="daily-section-list">
-        {(dashboard.morningSections || []).map((item) => (
-          <a href={item.href || dashboard.links?.briefZh || "/investor/#daily"}>
+        {(dashboard.morningSections || []).map((item, index) => (
+          <a id={`daily-dashboard-section-${index + 1}`} href={publicDailyHref(item.href, sectionHref)}>
             <span>{item.label}</span>
             <strong>{item.title}</strong>
             <em>{item.detail}</em>
@@ -133,14 +146,14 @@ const isAhead = dashboard.status === "morning_manifest_ahead_of_investor_daily";
       </div>
     </section>
 
-    <section class="daily-dashboard-panel">
+    <section class="daily-dashboard-panel" id="daily-dashboard-editor">
       <div class="daily-dashboard-panel-head">
         <h2>总编冲突图</h2>
         <span>Editor Signals</span>
       </div>
       <div class="daily-editor-list">
-        {(dashboard.editorSignals || []).map((item) => (
-          <a href={item.href || dashboard.links?.editorZh || "/investor/#daily"}>
+        {(dashboard.editorSignals || []).map((item, index) => (
+          <a id={`daily-dashboard-editor-${index + 1}`} href={publicDailyHref(item.href, editorHref)}>
             <span>{item.priority}</span>
             <strong>{item.title}</strong>
             <em>{item.conclusion}</em>
@@ -149,14 +162,14 @@ const isAhead = dashboard.status === "morning_manifest_ahead_of_investor_daily";
       </div>
     </section>
 
-    <section class="daily-dashboard-panel daily-dashboard-wide">
+    <section class="daily-dashboard-panel daily-dashboard-wide" id="daily-dashboard-research">
       <div class="daily-dashboard-panel-head">
         <h2>深度研究入口</h2>
         <span>Research Handoffs</span>
       </div>
       <div class="daily-research-list">
         {(dashboard.deepResearch || []).map((item, index) => (
-          <a href={item.href || dashboard.links?.briefZh || "/investor/#daily"}>
+          <a id={`daily-dashboard-research-${index + 1}`} href={publicDailyHref(item.href, researchHref)}>
             <span>{String(index + 1).padStart(2, "0")}</span>
             <strong>{item.title}</strong>
           </a>
