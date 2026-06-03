@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T09:07:39.703Z",
+  "generatedAt": "2026-06-03T14:44:30.740Z",
   "date": "2026-06-03",
   "source": "outputs/morning-brief-images/manifest.json",
   "investorDailyDate": "2026-06-03",
@@ -386,5 +386,52 @@
     "mailboxDigestAvailable": true,
     "investorDailyReports": 153,
     "investorTableReports": 60
+  },
+  "readerReport": {
+    "id": "reader-daily-reader-2026-06-03",
+    "title": "2026-06-03 AI Institute 每日读者报告",
+    "date": "2026-06-03",
+    "href": "/investor/reports/reader-daily-reader-2026-06-03/",
+    "summary": "AI 基础设施热度和宏观通胀传导风险同时位居前列，市场仍在奖励 AI 硬件与算力叙事，但研究图谱要求优先核对电网、设备交付、并网队列、HBM、信用再融资与利率敏感性。",
+    "priorityViews": [
+      {
+        "title": "风险偏好仍强，但瓶颈风险上台前",
+        "view": "标普500、纳斯达克100和道琼斯仍处强势区间，VIX 低位运行；但研究图谱把风险焦点从指数涨跌转向 AI 基础设施的物理约束。",
+        "whyItMatters": "这决定了读者应先核对电网、设备、存储和融资约束，而不是只追踪单一强势指数。",
+        "provenance": [
+          "daily-dashboard:marketQuotes",
+          "change-radar:chainSignals:ai-infrastructure",
+          "/investor/reports/archive-5166d41eec14/"
+        ]
+      },
+      {
+        "title": "AI capex 与宏观通胀是一条链",
+        "view": "AI 基础设施 heat 2900.1、risk 1054；宏观通胀传导 heat 2874.1、risk 1039。两者共同描述资本开支、能源、设备、材料和融资成本的传导。",
+        "whyItMatters": "AI 需求越强，越需要证明供给链和资金链不会先成为利润池的约束。",
+        "provenance": [
+          "change-radar:chainSignals:ai-infrastructure",
+          "change-radar:chainSignals:macro-inflation",
+          "/investor/reports/archive-2c96ae80c2ff/"
+        ]
+      },
+      {
+        "title": "Living theses 进入高信念高风险阶段",
+        "view": "32 条主线全部存在风险压力，21 条出现分歧或走弱信号；MSCI、Mag7、散户与北向背离、AI 生产率去通胀是今日优先核对项。",
+        "whyItMatters": "这说明读者需要把报告当成可证伪的跟踪假设，而不是孤立观点合集。",
+        "provenance": [
+          "thesis-tracker:stats",
+          "thesis_msci_rebalance_active_exit_window",
+          "thesis_mag7_ai_platform_reshuffling"
+        ]
+      }
+    ],
+    "relatedTheses": [
+      "thesis_msci_rebalance_active_exit_window",
+      "thesis_mag7_ai_platform_reshuffling",
+      "thesis_retail_northbound_divergence",
+      "thesis_ai_productivity_disinflation",
+      "thesis_macro_inflation_policy",
+      "thesis_options_gamma_volatility_microstructure"
+    ]
   }
 }

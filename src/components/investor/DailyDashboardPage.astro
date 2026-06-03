@@ -13,6 +13,8 @@ const sectionHref = hrefWithAnchor("daily-dashboard-sections");
 const editorHref = hrefWithAnchor("daily-dashboard-editor");
 const researchHref = hrefWithAnchor("daily-dashboard-research");
 const mailboxHref = publicDailyHref(dashboard.links?.mailboxZh, "/investor/#operations");
+const readerReport = dashboard.readerReport || null;
+const readerHref = publicDailyHref(readerReport?.href, "/investor/reports/");
 
 const quoteGroups = ["Equity", "Rates/Risk", "Commodities", "FX"];
 const quotesByGroup = quoteGroups.map((group) => ({
@@ -70,6 +72,7 @@ const isAhead = dashboard.status === "morning_manifest_ahead_of_investor_daily";
     <a href={sectionHref}>中文晨会简报</a>
     <a href={editorHref}>总编报告</a>
     <a href={mailboxHref}>邮箱摘要</a>
+    {readerReport ? <a href={readerHref}>读者报告</a> : null}
     <a href={dashboard.links?.investorShell || "/investor/#daily"}>投资台交互版</a>
     {dashboard.links?.docx ? <a href={dashboard.links.docx}>下载 DOCX</a> : null}
   </section>
@@ -116,6 +119,29 @@ const isAhead = dashboard.status === "morning_manifest_ahead_of_investor_daily";
         ))}
       </div>
     </section>
+
+    {readerReport ? (
+      <section class="daily-dashboard-panel daily-dashboard-wide daily-reader-report-panel" id="daily-dashboard-reader-report">
+        <div class="daily-dashboard-panel-head">
+          <h2>读者报告</h2>
+          <span>Reader Memo</span>
+        </div>
+        <a class="daily-reader-report-lead" href={readerHref}>
+          <span>{readerReport.date || dashboard.date || "Latest"}</span>
+          <strong>{readerReport.title}</strong>
+          <em>{readerReport.summary}</em>
+        </a>
+        <div class="daily-reader-priority-grid">
+          {(readerReport.priorityViews || []).map((item, index) => (
+            <a href={readerHref} style={`--accent:${accents[index % accents.length]}`}>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <strong>{item.title}</strong>
+              <em>{item.view}</em>
+            </a>
+          ))}
+        </div>
+      </section>
+    ) : null}
 
     <section class="daily-dashboard-panel" id="daily-dashboard-sections">
       <div class="daily-dashboard-panel-head">
