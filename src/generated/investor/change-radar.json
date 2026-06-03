@@ -56,7 +56,7 @@
   },
   "stats": {
     "newEvidence": 30,
-    "thesisShifts": 6,
+    "thesisShifts": 14,
     "risingRisks": 13,
     "mustRead": 6,
     "activeChains": 6
@@ -455,9 +455,33 @@
     {
       "id": "thesis-shift",
       "label": "主线变化",
-      "count": 6,
+      "count": 14,
       "tone": "#a8731b",
       "items": [
+        {
+          "id": "thesis_msci_rebalance_active_exit_window",
+          "title": "MSCI 调整窗口是被动资金与主动减仓相互博弈的流动性事件",
+          "summary": "当前共有 40 条证据、7 位分析师和 5 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
+          "direction": "strengthening",
+          "conviction": 80,
+          "date": "2026-06-03"
+        },
+        {
+          "id": "thesis_retail_northbound_divergence",
+          "title": "散户情绪与北向资金背离是 A 股风险偏好的关键温度计",
+          "summary": "当前共有 40 条证据、6 位分析师和 7 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
+          "direction": "strengthening",
+          "conviction": 74,
+          "date": "2026-06-03"
+        },
+        {
+          "id": "thesis_consumer_downgrade_health_silver_economy",
+          "title": "消费降级、健康刚需与银发经济正在重塑防御型增长",
+          "summary": "当前共有 40 条证据、3 位分析师和 6 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
+          "direction": "strengthening",
+          "conviction": 70,
+          "date": "2026-06-03"
+        },
         {
           "id": "thesis_research_risk_quality",
           "title": "风险核查与证据质量是主题交易的必要过滤器",
@@ -480,30 +504,6 @@
           "summary": "当前共有 40 条证据、5 位分析师和 8 条风险信号指向该判断；主导链条为 AI 基础设施。该主题应作为可跟踪投资假设，而不是孤立结论。",
           "direction": "conflicting",
           "conviction": 60,
-          "date": "2026-06-03"
-        },
-        {
-          "id": "thesis_ai_power_grid_bottleneck",
-          "title": "AI 电力与电网瓶颈仍是基础设施主线",
-          "summary": "当前共有 40 条证据、3 位分析师和 8 条风险信号指向该判断；主导链条为 电力与电网。该主题应作为可跟踪投资假设，而不是孤立结论。",
-          "direction": "conflicting",
-          "conviction": 51,
-          "date": "2026-06-02"
-        },
-        {
-          "id": "thesis_china_market_liquidity",
-          "title": "中国资产定价仍受政策、流动性与风险偏好共同驱动",
-          "summary": "当前共有 40 条证据、3 位分析师和 8 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
-          "direction": "conflicting",
-          "conviction": 43,
-          "date": "2026-06-03"
-        },
-        {
-          "id": "thesis_china_power_equipment_exports",
-          "title": "中国电力设备出海进入订单质量与政策筛选期",
-          "summary": "当前共有 40 条证据、4 位分析师和 8 条风险信号指向该判断；主导链条为 AI 基础设施。该主题应作为可跟踪投资假设，而不是孤立结论。",
-          "direction": "conflicting",
-          "conviction": 41,
           "date": "2026-06-03"
         }
       ]
@@ -1299,11 +1299,11 @@
     }
   ],
   "openQuestions": [
+    "MSCI 调整窗口是被动资金与主动减仓相互博弈的流动性事件：风险是否足以改变 80 分的当前信念？",
+    "Mag7 在 AI 时代从平台垄断转向基础设施再分层：风险是否足以改变 76 分的当前信念？",
+    "散户情绪与北向资金背离是 A 股风险偏好的关键温度计：风险是否足以改变 74 分的当前信念？",
     "AI 生产率去通胀需要等待采用率和流程重构验证：风险是否足以改变 72 分的当前信念？",
-    "AI 资本开支通过能源、设备和利率进入通胀定价：风险是否足以改变 67 分的当前信念？",
-    "GPU、HBM 与先进封装决定 AI 资本开支供给节奏：风险是否足以改变 60 分的当前信念？",
-    "AI 电力与电网瓶颈仍是基础设施主线：风险是否足以改变 51 分的当前信念？",
-    "中国资产定价仍受政策、流动性与风险偏好共同驱动：风险是否足以改变 43 分的当前信念？",
+    "消费降级、健康刚需与银发经济正在重塑防御型增长：风险是否足以改变 70 分的当前信念？",
     "算力瓶颈压力测试：电网传输与并网队列的真实时滞：下一次更新中影响/概率是否继续上修？",
     "前序研究研究报告 — 2026-05-28：下一次更新中影响/概率是否继续上修？",
     "AI算力扩张与电网基础设施约束：压力测试CapEx叙事的物理极限：下一次更新中影响/概率是否继续上修？"
