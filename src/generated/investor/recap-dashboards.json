@@ -1,6 +1,1148 @@
 {
-  "generatedAt": "2026-06-02T06:35:00+08:00",
+  "generatedAt": "2026-06-03T11:30:00+08:00",
   "dashboards": [
+    {
+      "slug": "ai-power-second-order-bottleneck-2026-06-03",
+      "title": "AI电力瓶颈二阶复盘",
+      "subtitle": "从“电不够”到并网、变压器、GOES、铜铝、开关柜、液冷与监管摩擦",
+      "date": "2026-06-03",
+      "badge": "AI POWER / SECOND ORDER",
+      "reportHref": "/investor/reports/recap-ai-power-second-order-bottleneck-recap-2026-06-03/",
+      "chartTitle": "二阶瓶颈强度演化",
+      "chartDescription": "点击节点查看研究所如何把 AI power 从一阶需求叙事拆成交付队列、设备材料和监管接入。",
+      "chartUnit": "证据强度",
+      "chart": {
+        "labels": [
+          "5/28",
+          "5/30A",
+          "5/30B",
+          "5/31",
+          "6/03A",
+          "6/03B",
+          "6/03C"
+        ],
+        "values": [
+          57.5,
+          61.5,
+          57.2,
+          57,
+          67.3,
+          66.7,
+          73.4
+        ]
+      },
+      "metrics": [
+        {
+          "label": "活跃链条",
+          "value": "电力+设备",
+          "accent": "blue"
+        },
+        {
+          "label": "最高风险",
+          "value": "5x5",
+          "accent": "red"
+        },
+        {
+          "label": "最新瓶颈",
+          "value": "监管",
+          "accent": "orange"
+        },
+        {
+          "label": "交易口径",
+          "value": "订单质量",
+          "accent": "green"
+        }
+      ],
+      "conclusions": [
+        {
+          "title": "AI power 已进入二阶瓶颈",
+          "text": "问题不再是电量够不够，而是 PPA、并网、变压器、GOES、铜铝、开关柜、液冷和监管接入哪一环最慢。"
+        },
+        {
+          "title": "有电不等于可用算力",
+          "text": "数据中心必须穿过设备交付、并网验收、冷却、上架、利用率和收入密度，才会变成现金流。"
+        },
+        {
+          "title": "泛电力 beta 要降权",
+          "text": "更好的表达是高压设备、核心材料、价格联动条款、客户预付款和明确项目名。"
+        }
+      ],
+      "checklist": [
+        {
+          "label": "Firm power",
+          "status": "排队系统",
+          "detail": "PPA、变电容量和并网节点比 headline capex 更重要。",
+          "bull": "已签 PPA、并网节点明确、负荷可用",
+          "bear": "负荷申请虚高、并网排队拉长、PPA 通胀",
+          "active": "bear"
+        },
+        {
+          "label": "变压器/GOES",
+          "status": "材料咽喉",
+          "detail": "高磁感硅钢、铜、叠片、认证和测试能力决定有效产出。",
+          "bull": "高等级 GOES 紧缺且订单有价格联动",
+          "bear": "固定价合同被材料成本击穿",
+          "active": "bull"
+        },
+        {
+          "label": "监管接入",
+          "status": "第二瓶颈",
+          "detail": "审批、环保、接入、关税和本地认证正在放大交付不确定性。",
+          "bull": "审批路径清晰，本地化认证通过",
+          "bear": "接入规则收紧，出口管制或关税升级",
+          "active": "bear"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-05-28",
+          "value": "57.5",
+          "label": "物理极限",
+          "title": "AI算力扩张与电网基础设施约束",
+          "view": "电力与电网开始被写成 AI capex 的物理极限。",
+          "check": "后续研究继续拆解并网、设备和材料瓶颈。",
+          "href": "/investor/reports/archive-393766a70997/"
+        },
+        {
+          "date": "2026-05-30",
+          "value": "61.5",
+          "label": "并网队列",
+          "title": "电网传输与并网队列的真实时滞",
+          "view": "工业设备进入配额年，并网排队拖慢算力上线。",
+          "check": "交付周期开始取代 capex headline 成为核心变量。",
+          "href": "/investor/reports/archive-5166d41eec14/"
+        },
+        {
+          "date": "2026-05-30",
+          "value": "57.2",
+          "label": "成本回收",
+          "title": "设备延期对数据中心成本回收的冲击",
+          "view": "设备成本上升和延迟会压低项目 IRR。",
+          "check": "瓶颈从供应链利好扩展到 hyperscaler FCF 压力。",
+          "href": "/investor/reports/archive-035608ac057a/"
+        },
+        {
+          "date": "2026-05-31",
+          "value": "57.0",
+          "label": "硅钢卷",
+          "title": "AI数据中心节奏由硅钢卷而非硅晶圆决定",
+          "view": "变压器与开关柜成为设备侧咽喉。",
+          "check": "材料与认证成为真正可投资稀缺点。",
+          "href": "/investor/reports/archive-1ba0209b8947/"
+        },
+        {
+          "date": "2026-06-03",
+          "value": "67.3",
+          "label": "材料压力",
+          "title": "变压器核心材料压力测试",
+          "view": "GOES、铜、铝和叠片能力限制交付爬坡。",
+          "check": "材料端通胀与设备商毛利率必须一起看。",
+          "href": "/investor/reports/archive-c9ec0cc135a0/"
+        },
+        {
+          "date": "2026-06-03",
+          "value": "66.7",
+          "label": "供应缺口",
+          "title": "电力基础设施供应链的产能缺口",
+          "view": "设备链稀缺真实，但必须核查订单质量。",
+          "check": "只买可兑现订单，不买概念标签。",
+          "href": "/investor/reports/archive-451de955c4c3/"
+        },
+        {
+          "date": "2026-06-03",
+          "value": "73.4",
+          "label": "监管摩擦",
+          "title": "监管摩擦成为电力缺口后的第二瓶颈",
+          "view": "审批、接入和地缘规则进入兑现链条。",
+          "check": "AI power 升级为物理与监管双瓶颈。",
+          "href": "/investor/reports/archive-e81f0e468101/"
+        }
+      ],
+      "dimensions": [
+        {
+          "label": "维度一",
+          "title": "电量 → 队列",
+          "front": "有电只是起点。",
+          "back": "PPA、变电容量、主变交付、线路接入和验收共同决定可用算力。"
+        },
+        {
+          "label": "维度二",
+          "title": "主题 → 订单",
+          "front": "泛电力标签不够。",
+          "back": "项目名、预付款、价格联动、认证和现金回款决定估值质量。"
+        },
+        {
+          "label": "维度三",
+          "title": "物理 → 监管",
+          "front": "监管是新瓶颈。",
+          "back": "环保、接入、关税、出口管制和本地认证可能重排交付顺序。"
+        }
+      ],
+      "sources": [
+        {
+          "href": "/investor/reports/recap-ai-power-second-order-bottleneck-recap-2026-06-03/",
+          "label": "二阶复盘报告",
+          "tag": "复盘"
+        },
+        {
+          "href": "/investor/reports/archive-5166d41eec14/",
+          "label": "并网队列",
+          "tag": "电网"
+        },
+        {
+          "href": "/investor/reports/archive-c9ec0cc135a0/",
+          "label": "核心材料",
+          "tag": "GOES"
+        },
+        {
+          "href": "/investor/reports/archive-e81f0e468101/",
+          "label": "监管摩擦",
+          "tag": "政策"
+        }
+      ]
+    },
+    {
+      "slug": "ai-capex-inflation-disinflation-2026-06-03",
+      "title": "AI CapEx 通胀与去通胀拉锯复盘",
+      "subtitle": "能源、设备、利率先涨；生产率、自动化和单位任务成本等待验证",
+      "date": "2026-06-03",
+      "badge": "AI CAPEX / MACRO",
+      "reportHref": "/investor/reports/recap-ai-capex-inflation-disinflation-recap-2026-06-03/",
+      "chartTitle": "通胀与去通胀证据强度",
+      "chartDescription": "折线展示再通胀证据先进入价格系统，生产率去通胀信念更高但兑现更滞后。",
+      "chartUnit": "thesis score",
+      "chart": {
+        "labels": [
+          "5/24",
+          "5/27",
+          "5/29A",
+          "5/29B",
+          "5/30",
+          "6/02",
+          "6/03"
+        ],
+        "values": [
+          52.6,
+          60.2,
+          50.2,
+          49.2,
+          58.8,
+          53.3,
+          72
+        ]
+      },
+      "metrics": [
+        {
+          "label": "去通胀 thesis",
+          "value": "72",
+          "accent": "green"
+        },
+        {
+          "label": "CapEx通胀",
+          "value": "67",
+          "accent": "orange"
+        },
+        {
+          "label": "方向",
+          "value": "拉锯",
+          "accent": "blue"
+        },
+        {
+          "label": "关键反证",
+          "value": "Jevons",
+          "accent": "red"
+        }
+      ],
+      "conclusions": [
+        {
+          "title": "再通胀成本先到",
+          "text": "电力、PPA、设备、折旧和融资成本会先进入项目 IRR 与利率预期。"
+        },
+        {
+          "title": "去通胀需要任务级证据",
+          "text": "模型更强不等于宏观通缩，必须看到单位任务成本、采用率和利润表捕获。"
+        },
+        {
+          "title": "两条线可以同时成立",
+          "text": "单位成本下降可能带来更多使用量，因此 AI capex 再通胀和生产率去通胀不是互斥答案。"
+        }
+      ],
+      "checklist": [
+        {
+          "label": "PPA/设备成本",
+          "status": "先行压力",
+          "detail": "项目成本先进入企业现金流，再传导到宏观通胀和利率预期。",
+          "bull": "能源和设备价格回落，项目 IRR 改善",
+          "bear": "PPA、变压器、GOES 和长端利率继续上行",
+          "active": "bear"
+        },
+        {
+          "label": "单位任务成本",
+          "status": "等待验证",
+          "detail": "去通胀需要任务成本和工作流数据，而不是模型能力展示。",
+          "bull": "任务成本下降并进入毛利率/Opex",
+          "bear": "复核、失败率和云成本抵消节省",
+          "active": "bull"
+        },
+        {
+          "label": "Jevons 效应",
+          "status": "核心反证",
+          "detail": "推理变便宜可能增加总调用量，使总电力和硬件需求继续扩大。",
+          "bull": "边缘 AI/ASIC 降低云端总需求",
+          "bear": "调用量增长快于单位成本下降",
+          "active": "bear"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-05-24",
+          "value": "52.6",
+          "label": "利率上移",
+          "title": "全球流动性与非美央行外溢",
+          "view": "利率路径上移压制长久期资产。",
+          "check": "AI capex 若推高通胀，会强化高利率环境。",
+          "href": "/investor/reports/archive-652522f38f6f/"
+        },
+        {
+          "date": "2026-05-27",
+          "value": "60.2",
+          "label": "算力通胀",
+          "title": "AI 电力缺口与全球宏观通胀压力",
+          "view": "AI 电力驱动的算力通胀渠道真实存在。",
+          "check": "再通胀机制被纳入宏观框架。",
+          "href": "/investor/reports/archive-c695158fafe9/"
+        },
+        {
+          "date": "2026-05-29",
+          "value": "50.2",
+          "label": "终端利率",
+          "title": "AI 基建热潮对结构性通胀与 Fed 路径的挤压",
+          "view": "capex 与能源成本形成宏观负反馈。",
+          "check": "资本开支越强，越需要生产率对冲。",
+          "href": "/investor/reports/archive-768462ac196c/"
+        },
+        {
+          "date": "2026-05-29",
+          "value": "49.2",
+          "label": "能源缓冲",
+          "title": "能源价格下移的宏观外溢",
+          "view": "外部能源回落可缓冲通胀压力。",
+          "check": "AI 再通胀不能脱离能源周期。",
+          "href": "/investor/reports/archive-e3364e456186/"
+        },
+        {
+          "date": "2026-05-30",
+          "value": "58.8",
+          "label": "项目成本",
+          "title": "并网容量、大负荷电价与设备交期",
+          "view": "电价、设备交期和并网共同抬升资本强度。",
+          "check": "再通胀从宏观叙事落到项目 IRR。",
+          "href": "/investor/reports/archive-374c1f8518ea/"
+        },
+        {
+          "date": "2026-06-02",
+          "value": "53.3",
+          "label": "电价承受力",
+          "title": "AI 数据中心高电价承受力",
+          "view": "省级政策和电价约束限制数据中心经济性。",
+          "check": "高电价不能无限转嫁。",
+          "href": "/investor/reports/archive-c6bda912f68e/"
+        },
+        {
+          "date": "2026-06-03",
+          "value": "72",
+          "label": "去通胀 thesis",
+          "title": "AI 生产率去通胀仍需采用率和流程验证",
+          "view": "去通胀信念更高，但兑现滞后于资本账单。",
+          "check": "后续必须跟踪单位任务成本。",
+          "href": "/investor/deep-research/ai-productivity-disinflation-timing-af09345c/"
+        }
+      ],
+      "dimensions": [
+        {
+          "label": "维度一",
+          "title": "成本先到",
+          "front": "capex 账单先进入现金流。",
+          "back": "PPA、设备、折旧和融资成本比自动化红利更早可见。"
+        },
+        {
+          "label": "维度二",
+          "title": "效率需证明",
+          "front": "模型能力不是生产率。",
+          "back": "单位任务成本、采用率和工作流重构才是去通胀证据。"
+        },
+        {
+          "label": "维度三",
+          "title": "Jevons 风险",
+          "front": "越便宜可能用得越多。",
+          "back": "单位成本下降可能增加总调用量，继续支撑算力、电力和硬件需求。"
+        }
+      ],
+      "sources": [
+        {
+          "href": "/investor/reports/recap-ai-capex-inflation-disinflation-recap-2026-06-03/",
+          "label": "拉锯复盘",
+          "tag": "复盘"
+        },
+        {
+          "href": "/investor/deep-research/ai-power-inflation-transmission-0c9ba15c/",
+          "label": "AI 电力与通胀",
+          "tag": "通胀"
+        },
+        {
+          "href": "/investor/deep-research/ai-productivity-disinflation-timing-af09345c/",
+          "label": "生产率去通胀",
+          "tag": "效率"
+        }
+      ]
+    },
+    {
+      "slug": "china-power-equipment-exports-2026-06-03",
+      "title": "中国电力设备出海复盘",
+      "subtitle": "海外缺口、订单质量、本地化产能、原产地规则与 GOES/铜成本",
+      "date": "2026-06-03",
+      "badge": "CHINA GRID / EXPORT",
+      "reportHref": "/investor/reports/recap-china-power-equipment-exports-recap-2026-06-03/",
+      "chartTitle": "出海逻辑压力强度",
+      "chartDescription": "从需求缺口走向订单质量和政策筛选，贸易壁垒成为高毛利兑现的关键反证。",
+      "chartUnit": "压力强度",
+      "chart": {
+        "labels": [
+          "5/14",
+          "5/23",
+          "5/25",
+          "5/29",
+          "5/30",
+          "6/02"
+        ],
+        "values": [
+          73.6,
+          65,
+          57.6,
+          61.6,
+          72,
+          57.4
+        ]
+      },
+      "metrics": [
+        {
+          "label": "thesis",
+          "value": "41",
+          "accent": "orange"
+        },
+        {
+          "label": "方向",
+          "value": "conflict",
+          "accent": "red"
+        },
+        {
+          "label": "核心筛选",
+          "value": "订单质量",
+          "accent": "green"
+        },
+        {
+          "label": "最大反证",
+          "value": "贸易规则",
+          "accent": "blue"
+        }
+      ],
+      "conclusions": [
+        {
+          "title": "海外需求不等于中国利润",
+          "text": "欧美电网和 AI 负荷缺口真实，但关税、原产地规则、认证和本地化会筛掉低质量订单。"
+        },
+        {
+          "title": "出海进入订单质量阶段",
+          "text": "本地化产能、售后、价格联动、客户信用和项目融资比单纯出口规模更重要。"
+        },
+        {
+          "title": "材料决定毛利率",
+          "text": "GOES、铜、物流和固定价合同会决定海外订单是利润增量还是成本陷阱。"
+        }
+      ],
+      "checklist": [
+        {
+          "label": "本地化",
+          "status": "准入门槛",
+          "detail": "本地产能、认证和服务网络决定订单能否穿透到收入。",
+          "bull": "本地认证、客户框架协议和预付款落地",
+          "bear": "只靠转口或短期贸易套利",
+          "active": "bear"
+        },
+        {
+          "label": "贸易规则",
+          "status": "尾部风险",
+          "detail": "原产地规则、反规避调查和出口管制可能瞬间改变订单经济性。",
+          "bull": "规则稳定且本地化路径清晰",
+          "bear": "关税、补贴审查或反规避升级",
+          "active": "bear"
+        },
+        {
+          "label": "材料成本",
+          "status": "毛利约束",
+          "detail": "GOES、铜和物流决定订单能否保住高毛利。",
+          "bull": "价格联动条款覆盖材料涨价",
+          "bear": "固定价合同叠加材料上涨",
+          "active": "bear"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-05-14",
+          "value": "73.6",
+          "label": "早期反证",
+          "title": "贸易壁垒压力测试中国电力设备出海",
+          "view": "需求真实，但贸易规则可能压制兑现。",
+          "check": "早期已经识别政策反证。",
+          "href": "/investor/reports/archive-4a23ad4c08c6/"
+        },
+        {
+          "date": "2026-05-23",
+          "value": "65.0",
+          "label": "供给缺口",
+          "title": "全球产能弹性、毛利率与出海竞争格局",
+          "view": "全球变压器和电力设备供给缺口支持出海。",
+          "check": "但需要订单质量筛选。",
+          "href": "/investor/reports/archive-c48f4f6ca286/"
+        },
+        {
+          "date": "2026-05-25",
+          "value": "57.6",
+          "label": "本地化",
+          "title": "欧美墨贸易壁垒下的高毛利维持能力",
+          "view": "本地化战略是维持毛利的关键。",
+          "check": "出海 2.0 不只是出口。",
+          "href": "/investor/reports/archive-a50a823a5cb2/"
+        },
+        {
+          "date": "2026-05-29",
+          "value": "61.6",
+          "label": "GOES贸易",
+          "title": "变压器与GOES贸易壁垒",
+          "view": "AI 并网进度变成地缘供应链问题。",
+          "check": "材料和规则共同定价。",
+          "href": "/investor/reports/archive-234dfe7536c5/"
+        },
+        {
+          "date": "2026-05-30",
+          "value": "72.0",
+          "label": "出口管制",
+          "title": "全球贸易壁垒与出口管制",
+          "view": "评估美欧对变压器、GIS 和开关设备限制。",
+          "check": "贸易政策进入高优先级压力测试。",
+          "href": "/investor/reports/archive-62c018213b9d/"
+        },
+        {
+          "date": "2026-06-02",
+          "value": "57.4",
+          "label": "原产地规则",
+          "title": "Hi-B 硅钢与变压器外溢订单",
+          "view": "原产地规则和美国壁垒挤压毛利支撑。",
+          "check": "出口订单质量分化加速。",
+          "href": "/investor/reports/archive-2e04e29e20bb/"
+        }
+      ],
+      "dimensions": [
+        {
+          "label": "维度一",
+          "title": "缺口 → 准入",
+          "front": "海外缺口只是起点。",
+          "back": "认证、本地化、服务和项目融资决定中国企业能否吃到份额。"
+        },
+        {
+          "label": "维度二",
+          "title": "收入 → 毛利",
+          "front": "订单不等于利润。",
+          "back": "GOES、铜、物流、固定价合同和价格联动决定毛利率。"
+        },
+        {
+          "label": "维度三",
+          "title": "出口 → 本地化",
+          "front": "贸易套利持续性低。",
+          "back": "真正长期溢价来自本地化产能和优质客户框架协议。"
+        }
+      ],
+      "sources": [
+        {
+          "href": "/investor/reports/recap-china-power-equipment-exports-recap-2026-06-03/",
+          "label": "出海复盘",
+          "tag": "复盘"
+        },
+        {
+          "href": "/investor/deep-research/china-power-equipment-export-policy-8678db7f/",
+          "label": "出海政策深研",
+          "tag": "政策"
+        },
+        {
+          "href": "/investor/reports/archive-62c018213b9d/",
+          "label": "贸易壁垒",
+          "tag": "风险"
+        }
+      ]
+    },
+    {
+      "slug": "hbm-memory-advanced-packaging-2026-06-03",
+      "title": "HBM、存储与先进封装复盘",
+      "subtitle": "把 HBM、CoWoS、ABF、CPO 和测试排产放进 AI capex 兑现链",
+      "date": "2026-06-03",
+      "badge": "HBM / PACKAGING",
+      "reportHref": "/investor/reports/recap-hbm-memory-advanced-packaging-recap-2026-06-03/",
+      "chartTitle": "硬件瓶颈证据演化",
+      "chartDescription": "从 CPO 与光互联开始，逐步扩展到 HBM、先进封装、材料、测试和存储周期反证。",
+      "chartUnit": "瓶颈强度",
+      "chart": {
+        "labels": [
+          "5/21",
+          "5/24",
+          "5/27",
+          "5/30",
+          "6/02",
+          "6/03"
+        ],
+        "values": [
+          50,
+          56,
+          60,
+          56.7,
+          55,
+          60
+        ]
+      },
+      "metrics": [
+        {
+          "label": "thesis",
+          "value": "60",
+          "accent": "blue"
+        },
+        {
+          "label": "方向",
+          "value": "conflict",
+          "accent": "orange"
+        },
+        {
+          "label": "核心基石",
+          "value": "HBM+封装",
+          "accent": "green"
+        },
+        {
+          "label": "反证",
+          "value": "供给周期",
+          "accent": "red"
+        }
+      ],
+      "conclusions": [
+        {
+          "title": "HBM 不是普通 DRAM 周期",
+          "text": "它受客户验证、HBM4、CoWoS、基板和测试排产共同约束。"
+        },
+        {
+          "title": "封装决定系统出货",
+          "text": "GPU die 只是第一步，先进封装和测试能力才决定加速器交付。"
+        },
+        {
+          "title": "利润池正在扩散",
+          "text": "NVIDIA 需求强，但 HBM、封装、CPO、ODM、电源和液冷会分走稀缺租。"
+        }
+      ],
+      "checklist": [
+        {
+          "label": "HBM",
+          "status": "系统瓶颈",
+          "detail": "容量 per accelerator、HBM4 验证、客户锁量和 ASP 是核心指标。",
+          "bull": "HBM4 验证成功、客户锁量、毛利率维持",
+          "bear": "供给扩张、LTA 松动、良率不达标",
+          "active": "bull"
+        },
+        {
+          "label": "先进封装",
+          "status": "交付瓶颈",
+          "detail": "CoWoS、ABF、interposer 和测试排产决定系统供给。",
+          "bull": "封装和测试排产锁定",
+          "bear": "产能释放快于需求，价格竞争",
+          "active": "bull"
+        },
+        {
+          "label": "CPO/光互联",
+          "status": "租金归属",
+          "detail": "出货量不是利润，关键是 InP、EML、DSP、硅光和材料定价权。",
+          "bull": "800G/1.6T 需求兑现，上游材料稀缺",
+          "bear": "模块价格快速下行，上游吸走利润",
+          "active": "bear"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-05-21",
+          "value": "50",
+          "label": "CPO路径",
+          "title": "800G/1.6T 到 CPO",
+          "view": "网络带宽瓶颈推动光互联路径升级。",
+          "check": "光互联是封装/网络瓶颈的外延。",
+          "href": "/investor/reports/archive-8f061fe00b4a/"
+        },
+        {
+          "date": "2026-05-24",
+          "value": "56",
+          "label": "HBM/封装",
+          "title": "HBM/先进封装供给弹性与技术风险",
+          "view": "HBM、封装和材料决定 AI 硬件供给弹性。",
+          "check": "存储不只是价格周期。",
+          "href": "/investor/reports/archive-5b1eba54b8d1/"
+        },
+        {
+          "date": "2026-05-27",
+          "value": "60",
+          "label": "材料瓶颈",
+          "title": "先进封装材料瓶颈",
+          "view": "材料和测试环节影响算力周期。",
+          "check": "利润池向上游材料扩散。",
+          "href": "/investor/reports/archive-8ab2bac1c4c5/"
+        },
+        {
+          "date": "2026-05-30",
+          "value": "56.7",
+          "label": "HBM缺口",
+          "title": "HBM 产能缺口与供应链约束",
+          "view": "HBM 对 AI 硬件杠铃策略形成压力测试。",
+          "check": "高需求必须与供给响应一起看。",
+          "href": "/investor/reports/archive-5e7a13d18f92/"
+        },
+        {
+          "date": "2026-06-02",
+          "value": "55",
+          "label": "存储悖论",
+          "title": "STX/MU 存储悖论",
+          "view": "AI 需求和存储周期估值风险并存。",
+          "check": "瓶颈溢价可能切回周期估值。",
+          "href": "/investor/reports/archive-43dc2a525bc6/"
+        },
+        {
+          "date": "2026-06-03",
+          "value": "60",
+          "label": "利润池扩散",
+          "title": "资金从 GPU 转向 HBM、ASIC 与 ODM",
+          "view": "NVIDIA 强需求不等于独占利润池。",
+          "check": "要跟踪 HBM/CoWoS/网络/ODM 分配。",
+          "href": "/investor/reports/archive-2925b6e2056e/"
+        }
+      ],
+      "dimensions": [
+        {
+          "label": "维度一",
+          "title": "DRAM → HBM",
+          "front": "HBM 不是普通内存。",
+          "back": "客户验证、HBM4、封装、基板和测试共同决定供给。"
+        },
+        {
+          "label": "维度二",
+          "title": "Die → 系统",
+          "front": "GPU die 不等于系统出货。",
+          "back": "CoWoS、ABF、散热、电源、网络和测试决定实际交付。"
+        },
+        {
+          "label": "维度三",
+          "title": "出货 → 租金",
+          "front": "CPO 看利润归属。",
+          "back": "InP、EML、DSP、硅光和材料可能比模块装配更有定价权。"
+        }
+      ],
+      "sources": [
+        {
+          "href": "/investor/reports/recap-hbm-memory-advanced-packaging-recap-2026-06-03/",
+          "label": "HBM复盘",
+          "tag": "复盘"
+        },
+        {
+          "href": "/investor/reports/archive-5e7a13d18f92/",
+          "label": "HBM 缺口",
+          "tag": "存储"
+        },
+        {
+          "href": "/investor/reports/archive-8ab2bac1c4c5/",
+          "label": "先进封装材料",
+          "tag": "封装"
+        }
+      ]
+    },
+    {
+      "slug": "ai-productivity-disinflation-2026-06-03",
+      "title": "AI生产率去通胀复盘",
+      "subtitle": "单位任务成本、采用率、边缘 AI、ASIC 与 Jevons 反证",
+      "date": "2026-06-03",
+      "badge": "PRODUCTIVITY / DISINFLATION",
+      "reportHref": "/investor/reports/recap-ai-productivity-disinflation-recap-2026-06-03/",
+      "chartTitle": "生产率证据链",
+      "chartDescription": "从生态质疑、机器人降本、边缘 AI 到 ASIC 效率，观察去通胀命题如何等待真实采用率验证。",
+      "chartUnit": "证据强度",
+      "chart": {
+        "labels": [
+          "5/02",
+          "5/20",
+          "5/23",
+          "5/25",
+          "5/28",
+          "6/02",
+          "6/03"
+        ],
+        "values": [
+          50.2,
+          51.2,
+          61.4,
+          61.2,
+          46.8,
+          50.2,
+          72
+        ]
+      },
+      "metrics": [
+        {
+          "label": "thesis",
+          "value": "72",
+          "accent": "green"
+        },
+        {
+          "label": "优先级",
+          "value": "90",
+          "accent": "blue"
+        },
+        {
+          "label": "状态",
+          "value": "审慎验证",
+          "accent": "orange"
+        },
+        {
+          "label": "反证",
+          "value": "总需求",
+          "accent": "red"
+        }
+      ],
+      "conclusions": [
+        {
+          "title": "生产率必须落到任务成本",
+          "text": "模型更强、API 更便宜或 demo 更好，都不等于企业利润率和宏观物价已改变。"
+        },
+        {
+          "title": "Jevons 是核心反证",
+          "text": "单位推理成本下降可能带来更多调用、更大模型和更高总算力需求。"
+        },
+        {
+          "title": "端侧、边缘和 ASIC 是缓释变量",
+          "text": "如果本地推理和专用芯片降低云端依赖，AI power 再通胀压力会被削弱。"
+        }
+      ],
+      "checklist": [
+        {
+          "label": "单位任务成本",
+          "status": "核心指标",
+          "detail": "同一任务用更少人力、时间、能耗或外包成本完成，才是去通胀证据。",
+          "bull": "任务成本下降并进入毛利率/Opex",
+          "bear": "复核、失败率和云成本抵消节省",
+          "active": "bull"
+        },
+        {
+          "label": "采用率",
+          "status": "等待验证",
+          "detail": "生产环境使用、付费 seat 和 workflow penetration 比发布会更重要。",
+          "bull": "付费 seat、usage 和流程嵌入上升",
+          "bear": "试点多，生产环境少",
+          "active": "bear"
+        },
+        {
+          "label": "总算力需求",
+          "status": "反向约束",
+          "detail": "效率提高可能被更多推理需求吞噬。",
+          "bull": "边缘/ASIC 降低云端总需求",
+          "bear": "调用量增长快于单位成本下降",
+          "active": "bear"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-05-02",
+          "value": "50.2",
+          "label": "生态质疑",
+          "title": "DeepSeek V4 工业设备渠道质疑",
+          "view": "公告和适配不等于真实部署。",
+          "check": "去通胀需要真实采用率。",
+          "href": "/investor/reports/archive-38bc161839a7/"
+        },
+        {
+          "date": "2026-05-20",
+          "value": "51.2",
+          "label": "机器人BOM",
+          "title": "具身智能 BOM 降本路径",
+          "view": "成本下降存在，但执行器仍是瓶颈。",
+          "check": "自动化降本不能跳过量产约束。",
+          "href": "/investor/reports/archive-4482cda4c357/"
+        },
+        {
+          "date": "2026-05-23",
+          "value": "61.4",
+          "label": "破局反证",
+          "title": "AI算力物理瓶颈的破局",
+          "view": "模型效率和边缘 AI 可缓释电力墙。",
+          "check": "效率是 AI power 叙事核心反证。",
+          "href": "/investor/reports/archive-6638a49f6271/"
+        },
+        {
+          "date": "2026-05-25",
+          "value": "61.2",
+          "label": "算力平权",
+          "title": "高成本算力平权下的国产AI毛利率",
+          "view": "算法效率维持商业可用，但不是免费。",
+          "check": "效率提高不等于供给约束消失。",
+          "href": "/investor/reports/archive-88067c6fcec3/"
+        },
+        {
+          "date": "2026-05-28",
+          "value": "46.8",
+          "label": "边缘AI",
+          "title": "边缘AI结构性替代",
+          "view": "边缘部署可能改变科技板块利润池。",
+          "check": "端侧和边缘是可投资去通胀路径。",
+          "href": "/investor/reports/archive-4f447f4177ba/"
+        },
+        {
+          "date": "2026-06-02",
+          "value": "50.2",
+          "label": "ASIC效率",
+          "title": "ASIC/FPGA 与 CapEx 效率",
+          "view": "专用芯片经济性改善长期效率。",
+          "check": "自研芯片是单位成本跟踪项。",
+          "href": "/investor/reports/archive-6eb7b6e715a0/"
+        },
+        {
+          "date": "2026-06-03",
+          "value": "72",
+          "label": "thesis",
+          "title": "AI 生产率去通胀仍需验证",
+          "view": "高优先级，但还不是已兑现宏观结论。",
+          "check": "建立单位任务成本仪表盘。",
+          "href": "/investor/deep-research/ai-productivity-disinflation-timing-af09345c/"
+        }
+      ],
+      "dimensions": [
+        {
+          "label": "维度一",
+          "title": "模型 → 任务",
+          "front": "模型更强不是结论。",
+          "back": "同一任务的用时、人力、能耗和复核成本下降才是证据。"
+        },
+        {
+          "label": "维度二",
+          "title": "试点 → 生产",
+          "front": "demo 不等于采用。",
+          "back": "付费 seat、usage、流程嵌入和组织重构决定生产率。"
+        },
+        {
+          "label": "维度三",
+          "title": "单位 → 总量",
+          "front": "单位成本下降可能增加总需求。",
+          "back": "Jevons 效应是去通胀 thesis 的核心反证。"
+        }
+      ],
+      "sources": [
+        {
+          "href": "/investor/reports/recap-ai-productivity-disinflation-recap-2026-06-03/",
+          "label": "生产率复盘",
+          "tag": "复盘"
+        },
+        {
+          "href": "/investor/deep-research/ai-productivity-disinflation-timing-af09345c/",
+          "label": "去通胀深研",
+          "tag": "效率"
+        },
+        {
+          "href": "/investor/reports/archive-6638a49f6271/",
+          "label": "物理瓶颈破局",
+          "tag": "反证"
+        }
+      ]
+    },
+    {
+      "slug": "ashare-ai-compute-hardware-2026-06-03",
+      "title": "A股算力硬件与科创50延伸复盘",
+      "subtitle": "从指数点位恐慌转向 CPO、存储、先进封装、国产算力和融资盘质量筛选",
+      "date": "2026-06-03",
+      "badge": "A-SHARE / AI HARDWARE",
+      "reportHref": "/investor/reports/recap-ashare-ai-compute-hardware-recap-2026-06-03/",
+      "chartTitle": "科创50波动与硬件筛选窗口",
+      "chartDescription": "沿用科创50点位复盘，把 1750/1800/1900 从机械触发线修正为市场结构观察坐标。",
+      "chartUnit": "科创50点位",
+      "chart": {
+        "labels": [
+          "5/11",
+          "5/22",
+          "5/25",
+          "5/27",
+          "5/29",
+          "6/01"
+        ],
+        "values": [
+          1716.69,
+          1747.14,
+          1896.04,
+          1815.45,
+          1777.24,
+          1663.69
+        ]
+      },
+      "metrics": [
+        {
+          "label": "窗口高点",
+          "value": "1,896",
+          "accent": "red"
+        },
+        {
+          "label": "窗口低点",
+          "value": "1,664",
+          "accent": "orange"
+        },
+        {
+          "label": "策略迁移",
+          "value": "质量Alpha",
+          "accent": "green"
+        },
+        {
+          "label": "核心风险",
+          "value": "融资盘",
+          "accent": "blue"
+        }
+      ],
+      "conclusions": [
+        {
+          "title": "点位不是机械平仓线",
+          "text": "1750、1800、1900 是情绪与微观结构锚点，真正风险在融资、ETF、期权和宽度。"
+        },
+        {
+          "title": "A股算力硬件从 beta 转向质量 Alpha",
+          "text": "CPO、存储、先进封装和国产算力都要用订单、毛利率、客户结构和技术路线验证。"
+        },
+        {
+          "title": "产业强不等于股票强",
+          "text": "需求真实，但推理成本通缩、关税、材料成本、出口限制和估值重构会压制部分硬件股。"
+        }
+      ],
+      "checklist": [
+        {
+          "label": "科创50/ETF",
+          "status": "微观结构",
+          "detail": "指数修复要同时看 ETF 折溢价、成交、宽度和融资买入。",
+          "bull": "放量收复关键区间且 ETF 折价收敛",
+          "bear": "反弹缩量、折价扩大、宽度不足",
+          "active": "bear"
+        },
+        {
+          "label": "硬件订单",
+          "status": "质量筛选",
+          "detail": "产业逻辑必须落到订单、客户和毛利率。",
+          "bull": "订单、客户验证和毛利率同步改善",
+          "bear": "只有主题热度，没有经营验证",
+          "active": "bull"
+        },
+        {
+          "label": "融资盘",
+          "status": "交易压力",
+          "detail": "融资余额下降但价格仍跌，说明被动去化未结束。",
+          "bull": "融资买入恢复且价格宽度改善",
+          "bear": "融资被动去化，龙头护盘但多数破位",
+          "active": "bear"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-05-11",
+          "value": "1716.69",
+          "label": "风格虹吸",
+          "title": "半导体暴涨与大盘风格虹吸",
+          "view": "AI 硬件吸走风险资金，两融和拥挤风险上升。",
+          "check": "主题 beta 强，但波动风险累积。",
+          "href": "/investor/reports/archive-043e3b01dfc5/"
+        },
+        {
+          "date": "2026-05-22",
+          "value": "1747.14",
+          "label": "1750纠偏",
+          "title": "1750 点重新定义",
+          "view": "1750 不是统一强平线，而是情绪锚。",
+          "check": "微观结构比指数点位更重要。",
+          "href": "/investor/reports/archive-a099e754fe5d/"
+        },
+        {
+          "date": "2026-05-25",
+          "value": "1896.04",
+          "label": "1900 Delta",
+          "title": "1900 Delta cliff",
+          "view": "突破若伴随 ETF 折价，可能是分发。",
+          "check": "不追未确认突破被后续验证。",
+          "href": "/investor/reports/archive-5ea4dab5dede/"
+        },
+        {
+          "date": "2026-05-27",
+          "value": "1815.45",
+          "label": "去杠杆",
+          "title": "TMT 去杠杆触发线",
+          "view": "多条触发线破位，应降低杠杆。",
+          "check": "风格拥挤进入去化阶段。",
+          "href": "/investor/reports/archive-0328351782b0/"
+        },
+        {
+          "date": "2026-05-30",
+          "value": "1777.24",
+          "label": "质量硬科技",
+          "title": "发布前 QA 与质量硬科技",
+          "view": "极端踩踏降级为条件化尾部风险。",
+          "check": "从机械叙事转向订单和毛利率验证。",
+          "href": "/investor/reports/archive-ca5dd3abe002/"
+        },
+        {
+          "date": "2026-06-03",
+          "value": "1663.69",
+          "label": "利润承压",
+          "title": "A股算力硬件龙头利润承压",
+          "view": "推理成本通缩、关税和估值重构进入模型。",
+          "check": "硬件股必须证明利润而非只证明需求。",
+          "href": "/investor/reports/archive-343ca2c9db3d/"
+        }
+      ],
+      "dimensions": [
+        {
+          "label": "维度一",
+          "title": "点位 → 结构",
+          "front": "整数位不是触发器。",
+          "back": "融资、ETF 折溢价、期权 Delta 和宽度才决定卖压机制。"
+        },
+        {
+          "label": "维度二",
+          "title": "Beta → Alpha",
+          "front": "AI 硬件不是一篮子。",
+          "back": "CPO、存储、封装、国产算力要按订单、毛利率和技术路线拆分。"
+        },
+        {
+          "label": "维度三",
+          "title": "需求 → 利润",
+          "front": "产业强不等于股价强。",
+          "back": "推理通缩、关税、材料和估值重构可能先压制高弹性股。"
+        }
+      ],
+      "sources": [
+        {
+          "href": "/investor/reports/recap-ashare-ai-compute-hardware-recap-2026-06-03/",
+          "label": "A股硬件复盘",
+          "tag": "复盘"
+        },
+        {
+          "href": "/investor/reports/recap-kc50-recap-2026-06-01/",
+          "label": "科创50复盘",
+          "tag": "基础"
+        },
+        {
+          "href": "/investor/reports/archive-343ca2c9db3d/",
+          "label": "硬件利润承压",
+          "tag": "风险"
+        }
+      ]
+    },
     {
       "slug": "kc50-recap-2026-06-01",
       "title": "科创50研究观点与市场表现复盘",
