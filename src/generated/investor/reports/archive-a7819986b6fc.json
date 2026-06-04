@@ -1,0 +1,20 @@
+{
+  "slug": "archive-a7819986b6fc",
+  "href": "/investor/reports/archive-a7819986b6fc/",
+  "meta": {
+    "title": "汇率-利率政策冲突下，跨境套利与高Beta硬件链流动性重置：多腿期权结构设计与对冲执行",
+    "date": "2026-06-03",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "通胀",
+      "宏观",
+      "A股",
+      "风险"
+    ],
+    "source": "archive-a7819986b6fc",
+    "source_label": "研究线程",
+    "source_kind": "research_thread"
+  },
+  "bodyHtml": "<h1>汇率-利率政策冲突下，跨境套利与高Beta硬件链流动性重置：多腿期权结构设计与对冲执行</h1>\n<p><strong>Date:</strong> 2026-06-03</p>\n<h2>核心观点 (Thesis)</h2>\n<p>在2026年6月15-16日BOJ议息会议前，通过“科创50认沽(-7% OTM) + USD/JPY 145认沽 + CNH/JPY远期空头”的三叉戟结构，能够以约40bp的组合NAV成本精准覆盖硬件链残余敞口50%-60%的Delta，同时针对SOX -3%与STAR50 -5%双触发下的雪球敲入负Gamma效应形成非线性保护。</p>\n<h2>1. 三叉戟（Trident）多腿对冲结构设计与定价</h2>\n<p>根据风控指令，硬件链残余净敞口需压缩至12%，并需覆盖其50%-60%的Delta（即总NAV的6.0%-7.2%）[S1]。我们设计了以下满足35-50bp成本约束的结构</p>\n<ul>\n<li><strong>Leg 1: 科创50 ETF 认沽期权 (STAR50 Put)</strong><ul>\n<li><strong>参数</strong>: 行权价为现价下浮7% (OTM -7%)，2026年7月到期。</li>\n<li><strong>成本</strong>: 分配约25bp组合NAV [S1]。</li>\n<li><strong>逻辑</strong>: 直接对冲A股硬件Beta。将行权价设在-7%是为了规避近端较高的隐含波动率(IV)溢价，同时精准卡位场外雪球集中敲入线（-5%）之后的加速下跌段。</li>\n</ul>\n</li>\n<li><strong>Leg 2: USD/JPY 145 认沽期权</strong><ul>\n<li><strong>参数</strong>: 行权价145，2026年6月底到期（覆盖6.15-16日BOJ窗口）。</li>\n<li><strong>成本</strong>: 分配约10bp组合NAV [S3]。</li>\n<li><strong>逻辑</strong>: 提供低成本的凸性（Convexity）保护。若BOJ加息至1.00%导致5000亿美元Carry平仓发酵，USD/JPY跌破145将带来非线性的盈亏比补偿。</li>\n</ul>\n</li>\n<li><strong>Leg 3: CNH/JPY 远期空头 (卖出CNH / 买入JPY)</strong><ul>\n<li><strong>参数</strong>: 1个月期远期合约（Forward）。</li>\n<li><strong>成本</strong>: 占用约5bp NAV作为保证金及基差摩擦 [S1]。</li>\n<li><strong>逻辑</strong>: 作为24小时前导信号的直接变现通道。中美日货币政策背离下，做空CNH/JPY在极端情景下具有强线性的Delta收益，可用于反哺期权端的Theta损耗。</li>\n</ul>\n</li>\n</ul>\n<h2>2. 成本与保护效率优化 (Cost-Efficiency Optimization)</h2>\n<p>该三腿结构总成本锁定在约40bp [S1]，不仅严格遵守了最高50bp的风控预算，且其保护效率远超单纯的股指期货空头。\n相比于直接做空IC或IM合约（将面临贴水扩大的线性基差损失），该期权结构在基准情形下（市场小幅震荡）损失有限，但在S2压力情景（SOX单日-8%，STAR50破位）下，组合Gamma的快速膨胀将使期权端Delta从初始的-6.5%迅速放大至-12%以上，实现对残余多头敞口的完全覆盖。</p>\n<h2>3. 应对雪球敲入与收益互换的“负Gamma”踩踏</h2>\n<p>当前场外收益互换及雪球类衍生品在科创50（STAR50）下行5%附近存在密集的敲入观察带 [S2]。\n*   <strong>风险机制</strong>: 当SOX -3%引发硬件链共振回调，STAR50触及-5%时，大量雪球产品敲入，迫使做市商（券商）在期货市场抛售以维持Delta中性。这种“跌得越多、卖得越多”的负Gamma效应将导致指数顺畅击穿-7% [S4]。\n*   <strong>对抗策略</strong>: 我们的-7% OTM认沽期权正是利用了做市商的对冲行为。一旦指数跌破-7%，该认沽期权的Gamma将达到峰值。我们建议交易台设定动态变现阈值：在STAR50下探至-7%至-9%区间时，分批Delta-hedge（平仓期权或买入标的），将券商的恐慌性流动性转化为对冲端的Alpha收益。</p>\n<h2>资料来源 / Sources</h2>\n<ul>\n<li>[S1] Institute Risk &amp; Quant Model, 衍生品定价与组合Delta-Gamma映射测算 (Inputs: NAV, STAR50 IV, CNH/JPY Forward points) — [自测算]</li>\n<li>[S2] 券商场外衍生品交易台报价参考 (OTC Dealer Quotes), 场外收益互换及雪球集中敲入水位预估 — [来源不明]</li>\n<li>[S3] BSM Pricing Options Model, USD/JPY 145 Put 1M期权费评估 — [自测算]</li>\n<li>[S4] 历史量化复盘与Gamma Squeeze研究, 2024年初A股微盘股雪球敲入流动性踩踏事件的量化映射 — [来源不明]</li>\n</ul>"
+}

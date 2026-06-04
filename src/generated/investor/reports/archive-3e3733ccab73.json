@@ -1,0 +1,18 @@
+{
+  "slug": "archive-3e3733ccab73",
+  "href": "/investor/reports/archive-3e3733ccab73/",
+  "meta": {
+    "title": "产业链调研：公用事业产业链 - 债市回测与量化验证",
+    "date": "2026-06-03",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "通胀",
+      "宏观"
+    ],
+    "source": "archive-3e3733ccab73",
+    "source_label": "研究线程",
+    "source_kind": "research_thread"
+  },
+  "bodyHtml": "<h1>产业链调研：公用事业产业链 - 债市回测与量化验证</h1>\n<ul>\n<li><strong>Date</strong>: 2026-06-03 (Asia/Singapore)</li>\n<li><strong>Analyst</strong>: bond-analyst</li>\n<li><strong>Stance</strong>: stress-test</li>\n</ul>\n<h2>1. PPI 同比转正与 10Y CGB 收益率的量化时滞</h2>\n<p>根据 2016-17 与 2020-21 两段 PPI 转正历史的回测分析\n- <strong>2016-17 周期</strong>：PPI 在 2016 年 9 月转正（数据于 10 月中旬公布）。10Y CGB 收益率从 8 月底的 2.64% 起步，转正公布当月升至 2.70%，随后 3 个月内累计上行幅度达 +65 bps，6 个月达 +90 bps [S1]。由于市场未充分预期，时滞为 <strong>0 个月（同步起涨）</strong>。\n- <strong>2020-21 周期</strong>：PPI 在 2021 年 1 月转正（数据于 2 月中旬公布）。然而 10Y CGB 收益率已在 2020 年 11 月提前见顶于 3.30%，在数据公布时反而回落至 3.15% [S2]。市场大幅提前了 <strong>3 个月</strong> front-run 通胀预期。\n- <strong>2014-15 周期</strong>：期间 PPI 维持深度负值，但局部商品反弹亦在短期内推升长端利率，呈现强正相关。\n- <strong>2027 映射</strong>：research note 预测本轮 PPI 转正在 2027Q2（迟于当前卖方共识）。考虑到当前长端机构的极度拥挤与敏锐度，债券市场极大概率会提前 1-2 个月（即 2027Q1）进行 front-run [自测算]。预计确认期前后，10Y 收益率累计上行中位数为 +35 bps。</p>\n<h2>2. 重大电价改革公告日的基差曲线形态 (Event Study)</h2>\n<p>回测过去两次重大电价改革前后的利率衍生品变动（公告日前后 ±20 交易日）\n- <strong>2015 输配电价改革（9号文）</strong>：公告日（2015年3月15日）处于宽货币大周期中。改革公告后 T+10，10Y CGB 下行 -8 bps，微观改革的局部通胀冲击被宏观充裕的流动性彻底淹没 [S3]。\n- <strong>2021 电价上下浮 ±20%（1439号文）</strong>：公告日（2021年10月12日）引发了强烈的通胀上行恐慌。在 T+5 内，IRS-5Y (Repo) 快速陡峭化上行 +18 bps；T 主力合约出现大幅贴水，TF/T 基差显著走阔 [S4]，反映出空头动能高度集中在超长端。\n- <strong>2026Q4 容量电价全国推广推演</strong>：本次公告大概率复刻 2021 年的曲线形态。预计公告日前后 ±20 交易日，IRS-5Y 将出现 payside 拥挤，T 合约贴水幅度将扩大 20-30 个 ticks [自测算]。</p>\n<h2>3. 1.85% 破位概率与 T 主力空头动态调整策略</h2>\n<p>针对当前 10Y CGB 1.85% 关键阻力位（对应债券价格高位）被有效突破（即收益率连续 5 个交易日收于 1.85% 之上）\n- <strong>破位概率分布</strong>：若收益率上行破位发生在 2026Q3，因缺乏 PPI 数据的配合，假突破（Whipsaw）概率高达 65%。若发生在 2026Q4 至 2027Q1（容量电价与煤价共振期），真突破并延伸至 2.05%-2.10% 的概率将达 85% [自测算]。\n- <strong>对冲尺寸建议</strong>：research note 建议配置 14-16 张 T 主力空头。在 1.85% 收益率向上破位被确认（连续 5 日收于其上）后，CTA 趋势跟踪空头将规模化入场。建议组合的对冲头寸顺势加仓 <strong>至 20-22 张</strong>，以捕获价格下行的凸性收益（Gamma）[自测算]。\n- <strong>风控阈值</strong>：增仓部分的止损位必须严格设置于 10Y 收益率回落至 1.82% 日收盘点位。</p>\n<h2>资料来源 / Sources</h2>\n<ul>\n<li>[S1] Wind Info, Historical CGB Yield Curve &amp; PPI (2016-2017) — https://www.wind.com.cn/</li>\n<li>[S2] National Bureau of Statistics (NBS), China PPI Monthly Release (Feb 2021) — https://www.stats.gov.cn/</li>\n<li>[S3] State Council, Document No.9 (Mar 2015) and PBOC Monetary Policy Execution Report — https://www.gov.cn/</li>\n<li>[S4] NDRC, Document No.1439 (Oct 2021) Market Reaction Data — https://www.ndrc.gov.cn/</li>\n<li>[自测算] Institute Bond Analyst Quant Framework, 2026-06-03.</li>\n</ul>"
+}

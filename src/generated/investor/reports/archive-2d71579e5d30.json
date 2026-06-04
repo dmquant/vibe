@@ -1,0 +1,21 @@
+{
+  "slug": "archive-2d71579e5d30",
+  "href": "/investor/reports/archive-2d71579e5d30/",
+  "meta": {
+    "title": "汽车行业分析师 · 午间团队同步简报",
+    "date": "2026-06-04",
+    "analyst_id": "industrials-analyst",
+    "analyst_name": "工业制造分析师",
+    "tags": [
+      "AI",
+      "通胀",
+      "宏观",
+      "A股",
+      "能源"
+    ],
+    "source": "archive-2d71579e5d30",
+    "source_label": "每日任务报告",
+    "source_kind": "daily_task"
+  },
+  "bodyHtml": "<h1>汽车行业分析师 · 午间团队同步简报</h1>\n<ul>\n<li><strong>日期锚点</strong>：2026-06-04</li>\n<li><strong>作者</strong>：auto-analyst (汽车与自动驾驶)</li>\n<li><strong>用途</strong>：午盘前团队 stand-up，对齐已有结论、待核数据、下午行动项、跨分析师协作请求。</li>\n<li><strong>与近期自有报告的一致性</strong>：无重大矛盾或立场反转。维持 2026-05-31 周报中关于“比亚迪璇玑A3芯片主导内部替代”、“理想汽车毛利受压（Q1跌至7.9%）”及“工信部强化安全监管加速尾部出清”的判断。今日新增宏观与策略维度的交叉验证，评估海外高息与国内科技股拥挤对汽车板块的溢出效应。</li>\n</ul>\n<h2>一、 上午已确认的事实与数据（\"已落地\"）</h2>\n<h3>1.1 汽车与智驾基本面（延续自验证）</h3>\n<ul>\n<li><strong>智驾自研与算力</strong>：比亚迪璇玑 A3 芯片（单颗 700 TOPS，4nm）主要针对内部高阶平台替代（如 Orin-X），外部市场替代尚无明确证据。</li>\n<li><strong>盈利与价格战</strong>：头部新能源车企盈利分化，理想汽车 Q1 总毛利率降至 7.9%（车辆毛利率 6.1%），净亏损 RMB 2.276bn，证实价格战对财务实质性侵蚀。蔚来维持高客单价策略（车辆毛利 18.8%），重点依赖换电利用率。</li>\n</ul>\n<h3>1.2 宏观与全院联动事实（对汽车产业链的映射）</h3>\n<ul>\n<li><strong>宏观压制与出口汇率（来自 <code>global-macro</code> / <code>fx-strategist</code>）</strong>：10Y美债收益率高达 4.50%，USD/JPY 逼近 160（当前 159.942），美日名义利差 182 bps。极度疲软的日元将增强日系车企（丰田、本田）在东南亚等第三方出口市场的价格竞争力，对中国 NEV 出海造成边际阻力。</li>\n<li><strong>A股资金面与科技拥挤（来自 <code>chief-strategist</code> / <code>ashare-strategist</code>）</strong>：A股 TMT 成交占比高达 45.8% 触及历史极值区间，且电子行业单日遭遇 618.59 亿元天量资金净流出。智驾与汽车电子硬件链面临严重的流动性挤出风险。</li>\n<li><strong>算力基础设施瓶颈（来自 <code>global-macro</code>）</strong>：AI 数据中心 Capex 面临电力分流（挤出约 300-700 亿美元 GPU 服务器订单），导致算力交付延后。这将间接推高自动驾驶端到端（E2E）大模型训练的算力获取成本。</li>\n</ul>\n<h2>二、 尚待验证的问题（Questions Pending Verification）</h2>\n<ol>\n<li><strong>科技股失血溢出率</strong>：电子行业 618.59 亿元的净流出中，有多大比例属于汽车级半导体、域控制器及 LiDAR 供应链？是否触发了智能汽车板块的被动去杠杆？</li>\n<li><strong>日元贬值实质影响</strong>：在 USD/JPY 160 的极值下，日系车企在东南亚及澳洲市场的单车降价空间有多大？是否已开始挤压比亚迪 Dolphin 等主力出口车型的利润空间？</li>\n<li><strong>智驾模型算力成本</strong>：在 AI Capex 向电网设备倾斜的背景下，国内车企（如小鹏、理想、华为HIMA）获取下一代训练算力的实际成本涨幅及排期延误情况。</li>\n</ol>\n<h2>三、 下午重点跟进与行动项（Action Items）</h2>\n<ul>\n<li><strong>资金流向监控</strong>：拉取今日下午 A股汽车零部件、汽车电子及整车板块的两融与主力资金净流出数据，评估 TMT 拥挤度瓦解对汽车硬件的拖累。</li>\n<li><strong>出海定价模型更新</strong>：结合 159.94 的 USD/JPY 汇率，更新中国头部 NEV 厂商在核心右舵国家市场的竞品比价模型。</li>\n<li><strong>周度基本面跟踪</strong>：持续跟踪 6 月首周的新能源车品牌上险量（Insurance Registrations），特别是理想及小米的交付节奏，验证需求韧性。</li>\n</ul>\n<h2>四、 跨分析师协作请求（Coordination Requests）</h2>\n<pre><code class=\"language-json\">{&quot;follow_ups&quot;:[\n  {&quot;to&quot;:&quot;global-macro&quot;,&quot;subject&quot;:&quot;Impact of AI Capex power constraints on AD training compute&quot;,&quot;question&quot;:&quot;Given your estimate of $30-70 billion in GPU server order delays due to BTM/SMR power constraints, how will this specifically impact the availability and cost of GPU clusters for auto OEMs training end-to-end autonomous driving models over the next 12-18 months?&quot;,&quot;priority&quot;:&quot;high&quot;},\n  {&quot;to&quot;:&quot;chief-strategist&quot;,&quot;subject&quot;:&quot;Spillover of TMT crowding to auto hardware&quot;,&quot;question&quot;:&quot;With TMT turnover at 45.8% and electronics seeing 618.59 billion CNY in net outflows, do you recommend treating auto-grade semiconductors and domain controllers as part of the TMT vulnerability requiring immediate IM short hedging, or do their fundamentals offer insulation?&quot;,&quot;priority&quot;:&quot;high&quot;}\n]}\n</code></pre>"
+}

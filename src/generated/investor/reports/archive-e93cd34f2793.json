@@ -1,0 +1,17 @@
+{
+  "slug": "archive-e93cd34f2793",
+  "href": "/investor/reports/archive-e93cd34f2793/",
+  "meta": {
+    "title": "共享数据采集摘要 2026-06-04",
+    "date": "2026-06-04",
+    "analyst_id": "data-scientist",
+    "analyst_name": "数据科学家",
+    "tags": [
+      "综合编审"
+    ],
+    "source": "archive-e93cd34f2793",
+    "source_label": "每日任务报告",
+    "source_kind": "daily_task"
+  },
+  "bodyHtml": "<h1>共享数据采集摘要 2026-06-04</h1>\n<h2>markets_overnight</h2>\n<ul>\n<li>字段总数 13、空值 ��confidence: high</li>\n</ul>\n<h2>markets_close_cn</h2>\n<ul>\n<li>字段总数 5、空值 ��confidence: high</li>\n</ul>\n<h2>失败 / 修复</h2>\n<p>无</p>\n<h2>修复说明</h2>\n<ul>\n<li>dxy: 种子源 usd_i 返回不合理值，改用 Investing.com US Dollar Index 报价 99.29。</li>\n<li>brent_usd: 种子源 brent.f 返回空值，改用 Investing.com Brent Oil Futures 报价 104.05。</li>\n<li>ust10y_pct: 种子源 us10yt 返回空值，改用 Investing.com United States 10-Year Bond Yield 报价 4.413。</li>\n<li>vix: 种子源 ^vix 返回空值，改用 Investing.com Global Indices 中 S&amp;P 500 VIX 报价 16.13。</li>\n</ul>"
+}

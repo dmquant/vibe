@@ -1,0 +1,21 @@
+{
+  "slug": "archive-83e226394b95",
+  "href": "/investor/reports/archive-83e226394b95/",
+  "meta": {
+    "title": "组合风险报告：‘物理资产’压力测试与对冲方案",
+    "date": "2026-06-04",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "通胀",
+      "宏观",
+      "A股",
+      "能源",
+      "风险"
+    ],
+    "source": "archive-83e226394b95",
+    "source_label": "研究线程",
+    "source_kind": "research_thread"
+  },
+  "bodyHtml": "<h1>组合风险报告：‘物理资产’压力测试与对冲方案</h1>\n<p><strong>日期：</strong> 2026-06-04\n<strong>分析师：</strong> 首席风控官 (agy)\n<strong>状态：</strong> 压力测试 (Stress-Test)</p>\n<h2>1. 执行摘要</h2>\n<p>本报告针对“物理资产”组合（电网出海、有色铜、核电）进行了量化风险评估。尽管“物理信仰”（从纸面资产向物理实物转移）的底层逻辑依然稳固 [S1]，但微观市场结构已显现脆弱性。截至2026年6月4日，我们测算该组合的<strong>10日99%风险价值（VaR）为8.16%</strong>。核心风险集中在第三季度电网设备激励行权带来的流动性抽水，以及“锚点”资产对债市收益率反转的敏感性。</p>\n<h2>2. 组合构成与参数设定</h2>\n<p>为模拟风险分布，我们定义标准“物理资产”组合如下</p>\n<table>\n<thead>\n<tr>\n<th>组成部分</th>\n<th>权重</th>\n<th>代表性标的</th>\n<th>年化波动率 (预测)</th>\n<th>贝塔系数 (相对沪深300)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>矛 (电网出海)</strong></td>\n<td>40%</td>\n<td>思源电气 (002028.SZ), 金盘科技 (688676.SH)</td>\n<td>28% - 32%</td>\n<td>1.15</td>\n</tr>\n<tr>\n<td><strong>盾 (铜资源)</strong></td>\n<td>30%</td>\n<td>紫金矿业 (601899.SH)</td>\n<td>30% - 35%</td>\n<td>1.25</td>\n</tr>\n<tr>\n<td><strong>锚 (核电红利)</strong></td>\n<td>30%</td>\n<td>中国核电 (601985.SH)</td>\n<td>15% - 18%</td>\n<td>0.24</td>\n</tr>\n</tbody>\n</table>\n<h3>风险指标测算</h3>\n<ul>\n<li><strong>组合波动率 ($\\sigma_p$):</strong> 约 17.6%（考虑了核电与铜之间的低相关性）[S2][自测算]。</li>\n<li><strong>10日99% VaR:</strong> <strong>8.16%</strong>。\n    <em>测算公式：$17.6\\% \\times 2.33 \\times \\sqrt{10/252} \\approx 8.16\\%$</em> [自测算]。\n    <em>这意味着在未来两周内，有1%的概率损失超过总价值的8.16%。</em></li>\n</ul>\n<h2>3. 压力测试情景（“三重挤压”）</h2>\n<h3>情景 A：Q3 微观流动性“抽水”（高概率）</h3>\n<ul>\n<li><strong>触发因素：</strong> 思源电气 (002028.SZ) 于2026年7月开启第三个期权行权期（约658万股） [S3]。虽然规模不算巨大，但结合 prior research notes提到的高两融杠杆，可能引发“矛”链条的局部踩踏。</li>\n<li><strong>影响：</strong> 矛 -12%，盾 -5%，锚 -1%。</li>\n<li><strong>组合回撤：</strong> -5.3%。</li>\n</ul>\n<h3>情景 B：全球流动性“套利平仓”（中概率）</h3>\n<ul>\n<li><strong>触发因素：</strong> 美国10年期 TIPS 实际收益率突破 2.5% [S4]，引发套利交易反转和大宗商品多头平仓。</li>\n<li><strong>影响：</strong> 铜 (盾) -20%，电网 (矛) -10%，核电 (锚) -4%（受外资流出拖累） [S2]。</li>\n<li><strong>组合回撤：</strong> -10.2%。(突破 10日 VaR 预警线)。</li>\n</ul>\n<h3>情景 C：“锚点”估值挤压（中低概率）</h3>\n<ul>\n<li><strong>触发因素：</strong> 中国10年期国债收益率因 PPI 通胀回升从 1.7% 均值回归至 2.2% [S5]。</li>\n<li><strong>影响：</strong> 核电 (锚) -10% (市盈率估值下修)，电网/铜中性。</li>\n<li><strong>组合回撤：</strong> -3.0%。</li>\n</ul>\n<h2>4. 优化后的动态对冲方案</h2>\n<h3>I. 权益贝塔对冲：IM/IC 期货</h3>\n<ul>\n<li><strong>机制：</strong> 做空 IM（中证1000）或 IC（中证500）期货，对冲电网和铜的高 Beta 风险。</li>\n<li><strong>机会：</strong> 目前 IM 合约处于 <strong>10% 年化贴水</strong> 状态 [S5]。持有空头头寸可获得约 0.8%/月的贴水收益（Alpha）。</li>\n<li><strong>仓位：</strong> 对“矛”和“盾”部分执行 60% 的对冲比例。</li>\n</ul>\n<h3>II. 利率风险对冲：TF 期货</h3>\n<ul>\n<li><strong>机制：</strong> 做空 5年期国债期货 (TF)，防御核电“锚”资产受收益率上行的冲击。</li>\n<li><strong>逻辑：</strong> 公用事业具有债性；50bp 的利率反弹可能导致严重的估值回调。</li>\n</ul>\n<h3>III. 尾部风险对冲：领口期权 (Collar) 策略</h3>\n<ul>\n<li><strong>机制：</strong><ul>\n<li><strong>买入看跌期权：</strong> 买入 2026年9月到期、行权价低于现价5%的 IC/IM 虚值期权。</li>\n<li><strong>卖出看涨期权：</strong> 卖出高出 10% 的虚值看涨期权以支付保费。</li>\n</ul>\n</li>\n<li><strong>成本：</strong> 根据波动率偏度（Skew），可实现“零成本”或极低成本。此策略在锁定 Q3 解禁下行风险的同时，保留了部分上行收益。</li>\n</ul>\n<h2>5. 风险监控阈值 (止损/再平衡)</h2>\n<ol>\n<li><strong>止损线：</strong> 若 5日实现回撤超过 6%（VaR 的 75%），强制平仓 50% 的“矛”板块。</li>\n<li><strong>波动率触发：</strong> 若紫金矿业 (601899.SH) 20日实现波动率突破 45%，上调 IM 对冲比例至 80%。</li>\n<li><strong>流动性触发：</strong> 若思源电气在行权期间日均成交额跌破 5亿人民币，需增加现金头寸。</li>\n</ol>\n<h2>资料来源 / Sources</h2>\n<ul>\n<li>[S1] 首席策略师, research discussion prior research notes— “物理资产配置排序”</li>\n<li>[S2] 金融数据，市场数据分析 — “紫金矿业与中国核电的 Beta 与波动率特征 (2026-06-04)”</li>\n<li>[S3] 公开披露，思源电气 (002028.SZ) — “2023年股票期权激励计划行权安排”</li>\n<li>[S4] 首席经济学家, research discussion prior research notes— “物理稀缺性的宏观环境”</li>\n<li>[S5] 市场报告，东方财富/中证报 — “A股指期货基差与国债走势 (2026-06-04)”</li>\n</ul>"
+}

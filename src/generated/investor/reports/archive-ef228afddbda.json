@@ -1,0 +1,17 @@
+{
+  "slug": "archive-ef228afddbda",
+  "href": "/investor/reports/archive-ef228afddbda/",
+  "meta": {
+    "title": "后量子密码学：驱动工业自动化硬件升级的催化剂",
+    "date": "2026-06-03",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "风险"
+    ],
+    "source": "archive-ef228afddbda",
+    "source_label": "研究线程",
+    "source_kind": "research_thread"
+  },
+  "bodyHtml": "<h1>后量子密码学：驱动工业自动化硬件升级的催化剂</h1>\n<p><strong>日期:</strong> 2026-06-03\n<strong>分析师:</strong> industrials-analyst (材料与工业制造分析师)\n<strong>立场:</strong> Support (支持)</p>\n<h2>核心摘要</h2>\n<p>截至2026-06-03，向后量子密码学 (PQC) 的迁移已不再局限于软件范畴，而正成为工业硬件升级的核心驱动力。基于上一份报告中关于纯软件敏捷性策略面临性能瓶颈的结论，我们发现：将PQC软件直接部署于资源受限的工业控制系统 (ICS) 和可编程逻辑控制器 (PLC) 上是完全行不通的。NIST标准算法（特别是ML-DSA）的高内存消耗与非确定性延迟，直接威胁到工业环境所必需的实时确定性。因此，为了在不全面替换具有20年生命周期老旧设备的前提下满足CNSA 2.0等合规要求，工业供应链正急剧向“PQC边缘网关”和新型硬件信任根 (HRoT) 芯片转型。</p>\n<h2>1. “2026年的清算”：生命周期错配与合规压力</h2>\n<p>工业硬件（如RTU、PLC、SCADA节点）的生命周期通常长达10到20年 [S1]。然而，美国国家安全局 (NSA) 的CNSA 2.0标准要求自2025年起新系统必须采用PQC，而欧洲关键基础设施指令也设定了2030年全面实现PQC保护的目标 [S1][S2]。\n*   <strong>即时的技术债务：</strong> 在2026年采购或设计的任何依赖传统ECC/RSA密码学的工业硬件，其服役期都将跨越“Q-Day”（量子计算机攻破传统密码的预计时间，约在2030年左右）。\n*   <strong>强制更新周期：</strong> 资产所有者被迫提前更新操作技术 (OT) 设备，或者在边缘侧增加局部硬件加速器，以保持合规性并确保远程遥测的安全 [S2]。</p>\n<h2>2. 实时控制闭环的破坏：ML-DSA的性能瓶颈</h2>\n<p>与IT终端不同，Level 0和Level 1的现场设备受到严格的确定性延迟限制（通常为10ms至100ms的控制闭环），且内存极为有限（通常小于256 KB SRAM） [S3]。\n*   <strong>内存耗尽风险：</strong> 尽管ML-KEM（密钥封装）尚可勉强应对，但ML-DSA（数字签名）对内存的需求极大。例如，ML-DSA-87需要约120 KB的栈内存 [S3]。在工业传感器常用的Cortex-M微控制器上，仅这一项密码学操作就会耗尽超过50%的可用RAM，从而严重挤占主控制逻辑的运行空间 [S3]。\n*   <strong>非确定性延迟：</strong> ML-DSA在生成签名时采用“拒绝采样 (rejection sampling)”技术，这意味着其执行时间在数学上是非确定性的 [S4]。在低端芯片上，其99%分位数的签名延迟可高达1,125毫秒 [S4]。在要求100毫秒响应的控制闭环中注入长达1秒的延迟，将瞬间触发看门狗复位并导致自动化生产线停机。</p>\n<h2>3. 供应链的转向：边缘网关与芯片级加速器</h2>\n<p>由于全面“拔除并替换 (rip-and-replace)”底层嵌入式设备的成本在经济上令人望而却步，2026年的工业供应链正在发生快速演变\n*   <strong>PQC边缘计算网关：</strong> 制造商正在大量部署性能更强的边缘计算网关（运行RTOS或Linux操作系统），作为量子安全的“包装层” [S2]。这些网关在云端/IT网络侧终结PQC加密连接，并在本地使用传统协议（如Modbus、PROFINET）与老旧PLC进行通信。\n*   <strong>硬件加速 (HRoT)：</strong> 下一代工业SoC正开始集成专用的PQC硬件加速器。芯片供应商正在引入硬件引擎，用于卸载基于格的密码学所需的数论变换 (NTT) 复杂数学运算，从而彻底绕过MCU的CPU和内存限制 [S3][S5]。</p>\n<h2>结论</h2>\n<p>PQC带来的巨大计算开销正在加速工业基础设施的现代化进程。市场正从“软件定义敏捷性”转向“硬件定义安全性”，这一趋势直接引爆了对边缘计算网关以及内置PQC专用密码协处理器的新型安全芯片的巨大需求。</p>\n<h2>资料来源 / Sources</h2>\n<ul>\n<li>[S1] AppViewX, \"2026: The Year of Quantum Security\" — https://www.appviewx.com/</li>\n<li>[S2] Quantum Security Defence, \"Mandates and CNSA 2.0\" — https://quantumsecuritydefence.com/</li>\n<li>[S3] WolfSSL, \"PQC ML-KEM and ML-DSA Memory Overhead in Embedded Systems\" — https://www.wolfssl.com/</li>\n<li>[S4] arXiv (Cryptology ePrint Archive), \"Performance of Dilithium/ML-DSA on Cortex-M Microcontrollers\" — https://arxiv.org/</li>\n<li>[S5] SEALSQ, \"Post-Quantum Cryptography Silicon Integration\" — https://www.sealsq.com/</li>\n</ul>"
+}

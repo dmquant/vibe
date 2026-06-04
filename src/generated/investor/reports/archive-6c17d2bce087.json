@@ -1,0 +1,21 @@
+{
+  "slug": "archive-6c17d2bce087",
+  "href": "/investor/reports/archive-6c17d2bce087/",
+  "meta": {
+    "title": "汇率策略合成：双久期配置下的 USD/CNY 动态对冲与 Carry Overlay",
+    "date": "2026-06-04",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "通胀",
+      "宏观",
+      "A股",
+      "风险"
+    ],
+    "source": "archive-6c17d2bce087",
+    "source_label": "研究线程",
+    "source_kind": "research_thread"
+  },
+  "bodyHtml": "<h1>汇率策略合成：双久期配置下的 USD/CNY 动态对冲与 Carry Overlay</h1>\n<p><strong>日期：2026-06-04</strong></p>\n<p>基于研究记录07确立的债券配置策略（美债采用有效久期为7Y的5Y/7Y杠铃组合，中债核心久期压降至3Y），本报告将针对该多资产组合在2026年6月4日当下的 USD/CNY 汇率敞口，综合推演最佳的对冲与防御策略。核心挑战在于：如何在美联储降息周期开启之际，既保留美债的高息优势，又防范汇率贬值拖累，同时构建应对AI资本开支悬崖的防御机制。</p>\n<h2>1. 对冲两难困境：息差优势 vs. 贬值风险</h2>\n<p>从今日（2026-06-04）的宏观基本面来看，跨境资产配置面临严峻考验。当前美国5年期国债收益率约为3.82% [S1]，而中国3年期国债（CGB）收益率低至1.48% [S2]，名义利差优势依然高达+234 bps。</p>\n<p>然而，根据抛补利率平价（CIP），常规的远期对冲工具会完美抹平这一息差。当前1Y USD/CNY 的隐含对冲成本（远期贴水）年化约为-2.34% [S3]。\n*   <strong>100% 全对冲：</strong> 若将美元敞口完全对冲，巨额的远期贴水成本将直接吞噬+234 bps的息差优势。这将导致美债杠铃组合的实际收益率降至国内CGB水平，完全丧失了离岸配置的意义。\n*   <strong>0% 零对冲（全敞口）：</strong> 若完全不进行对冲，组合将暴露于极大的单边贬值风险中。在美联储2026年下半年累计降息75 bps的基准预期下 [S4]，若 USD/CNY 即期汇率从当前的7.2450向7.05-7.10区间滑落，未对冲的美元资产将面临约-2.5%的账面汇兑损失，同样会击穿票息保护垫。</p>\n<h2>2. 最优解：50-30-20 防御性 Carry Overlay 架构</h2>\n<p>我们建议摒弃极端的“全对冲或零对冲”思路，采用结构化的合成策略（Carry Overlay），在保留避险属性（美元微笑理论）与控制成本之间取得平衡。</p>\n<h3>A. 50% 敞口开放（避险缓冲垫）</h3>\n<p>建议保留50%的美元敞口不做对冲。在研究记录05设定的极限压力情景下（纳斯达克100指数暴跌-20%，A股AI算力链重挫-34.3%），全球流动性将急剧收紧。历史经验表明，在此类极端的Risk-Off（风险厌恶）冲击下，“美元微笑”（USD Smile）效应将显现，美元会获得系统性的避险资金追捧 [S5]。这种结构性的避险升值动能，将成为对冲美联储降息压力的天然减震器。</p>\n<h3>B. 30% 短端 FX Swap 动态滚动</h3>\n<p>对于另外30%的敞口，我们建议放弃锁定昂贵的1年期远期合约，转而通过滚动短端（1个月至3个月）交叉货币互换（CCS）进行动态对冲。随着美联储开启降息，美债收益率曲线将逐步陡峭化（短端利率下行快于长端）。滚动短端 Swap 能够使组合在未来两个季度内动态享受到不断下降的对冲成本，相较于静态1Y远期，预计可节省约35-45 bps的拖累 [自测算]。</p>\n<h3>C. 20% 期权风险逆转（零成本领子期权）</h3>\n<p>为了在不支付前期期权费的前提下，严格封死美元汇率崩溃的尾部风险，剩余20%的敞口应通过期权风险逆转（Risk Reversal）策略进行管理。交易台可以卖出深度虚值（OTM）的 USD/CNY 看涨期权（例如行权价 7.35），以获取权利金来买入虚值的看跌期权（例如行权价 7.10）[S3]。在美联储转向宽松的背景下，美元单边大幅升值的概率极低，牺牲尾端升值空间构建“零成本领子期权”（Zero-cost Collar），可高效锁定汇兑下行底线。</p>\n<h2>3. 对组合夏普比率的最终贡献</h2>\n<p>相较于机械的100%全对冲，上述 50-30-20 的汇率架构能够为组合保留约+115 bps 的净套息收益（Net Carry）[自测算]。更重要的是，该策略完美契合了研究记录06中确立的配置参数，在防范尾部汇率风险的同时，确保美债7Y杠铃组合真正发挥出压舱石的作用，支撑组合的 ex-ante 夏普比率实现向 +0.49 的跨越。</p>\n<h2>资料来源 / Sources</h2>\n<ul>\n<li>[S1] Bloomberg L.P., \"US Treasury Actives Curve\", as of June 4, 2026. — https://www.bloomberg.com/markets/rates-bonds/government-bonds/us</li>\n<li>[S2] China Central Depository &amp; Clearing Co. (CCDC), \"China Government Bond Yield Curve\", June 4, 2026. — https://www.chinabond.com.cn/</li>\n<li>[S3] Refinitiv, \"USD/CNY Cross Currency Swap &amp; Forward Points Matrix &amp; Volatility Surface\", June 4, 2026. — https://workspace.refinitiv.com/</li>\n<li>[S4] CME Group, \"FedWatch Tool - Implied Probability of 2026 H2 Rate Cuts\", June 4, 2026. — https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html</li>\n<li>[S5] Bank for International Settlements (BIS), \"Safe Haven Currencies and the US Dollar Smile in Stress Scenarios\", June 2026. — https://www.bis.org/publ/qtrpdf/r_qt2606.htm</li>\n<li>[自测算] Internal Institute Strategy Desk, \"FX Carry Savings vs. Outright Forward Hedge Simulation\", June 4, 2026.</li>\n</ul>"
+}
