@@ -1,87 +1,73 @@
 # ResearchOS Vibe
 
-Vibe is the public static website for the ResearchOS ecosystem and the AI
-Institute investor console. It is an Astro site that can be deployed by itself:
-the build must not depend on `../scripts`, decrypted local briefings, or any
-workspace secrets.
+## English
 
-The private maintenance and data-production work lives one level up in the
-ResearchOS workspace. Vibe only publishes sanitized generated artifacts.
+ResearchOS Vibe is the public-facing web experience for ResearchOS and AI
+Institute. It presents AI-assisted research as an investable, inspectable, and
+repeatable operating system: human researchers define questions and judgment
+standards; AI analysts continuously gather evidence, produce research outputs,
+track thesis changes, and convert dense report graphs into reader-friendly
+decision support.
 
-## Quick Start
+The site is designed for investors, founders, operators, and research teams who
+need more than isolated reports. It shows how an AI research organization can
+turn daily market information, analyst handoffs, whiteboard threads, mailbox
+signals, deep research, and recap dashboards into a living knowledge product.
 
-Run these commands from `ResearchOS/vibe/`:
+Vibe is not the private research engine itself. It is the static publishing
+layer: a business-facing site and investor console that exposes sanitized AI
+Institute outputs without shipping secrets, local source data, or maintenance
+scripts.
 
-```bash
-npm install
-npm run dev
-npm run build
-```
+### Product Positioning
 
-Local dev uses `http://localhost:4321` by default. The production build writes
-to `dist/`.
+AI Institute is a multi-agent research workflow for financial and strategic
+decision-making. Its core value is not replacing human researchers, but giving
+them a parallel research team that can work continuously, preserve provenance,
+and surface decision-relevant signals.
 
-## Vercel
+Vibe turns that workflow into a usable product surface:
 
-Use `vibe/` as the project root.
+- A public introduction to ResearchOS and AI Institute.
+- A daily investor console for morning briefs, market tape, research-chain
+  signals, and risk alerts.
+- A searchable report library for AI analyst outputs.
+- Deep research pages that retain source context and thesis lineage.
+- Critical recap dashboards that compare past views with later evidence and
+  market performance.
+- Interactive presentation pages for business communication and handover.
 
-```text
-Install command: npm install
-Build command:   npm run build
-Output:          dist
-Node:            >=22.12.0
-```
+### Business Use Cases
 
-No production secret is required for the public static build. Do not configure a
-remote build step that calls `../scripts` or decrypts private brief markdown.
-
-## Main Routes
-
-| Route | Purpose |
+| Use case | What Vibe provides |
 | --- | --- |
-| `/` | ResearchOS home page with the current monochrome theme |
-| `/blog/` | Public articles and generated public posts |
-| `/graph/` | ResearchOS graph/map view |
+| Investment research | Daily brief dashboards, thesis trackers, analyst reports, deep research pages |
+| Research operations | Evidence provenance, analyst handoffs, change radar, recap dashboards |
+| Executive communication | Bilingual narratives, presentation routes, visual research summaries |
+| Product demonstration | A live static site showing how AI research can become a decision-support product |
+| Handover and continuity | Stable routes, generated contracts, and repeatable publishing workflows |
+
+### Key Public Routes
+
+| Route | Business purpose |
+| --- | --- |
+| `/` | ResearchOS and AI Institute landing experience |
 | `/investor/` | AI Institute investor console |
-| `/investor/daily/` | Latest morning brief dashboard |
-| `/investor/daily/[slug]/` | Historical daily dashboard entries |
-| `/investor/reports/[slug]/` | AI Institute report pages, including reader reports |
-| `/investor/deep-research/[slug]/` | Deep research pages |
+| `/investor/daily/` | Latest daily morning brief dashboard |
+| `/investor/reports/[slug]/` | AI analyst report pages and reader reports |
+| `/investor/deep-research/[slug]/` | Long-form deep research |
 | `/investor/recaps/` | Critical recap dashboards |
-| `/presentations/ai-human-research/` | Interactive Chinese presentation site |
+| `/graph/` | Research graph and map-style exploration |
+| `/presentations/ai-human-research/` | Interactive presentation: AI working in parallel with human researchers |
+| `/blog/` | Public articles, project narratives, and generated public posts |
 
-The current daily route is derived from
-`src/generated/investor/daily/latest.json`. The dashboard contract is
-`src/generated/investor/daily-dashboard.json`.
+### Operating Model
 
-## Repository Structure
+Vibe is a standalone Astro static site. It can be deployed independently on
+Vercel or any static host. All private production work happens outside this
+repository in the parent ResearchOS workspace.
 
-```text
-vibe/
-  src/
-    pages/                    Astro routes
-    components/investor/       Investor console and daily dashboard UI
-    lib/investor-generated.js  Generated-data readers
-    generated/investor/        Sanitized generated investor contracts
-    styles/                    Global, investor, and dashboard styles
-  public/
-    investor-assets/           Published charts, daily images, report assets
-    investor-data/             Public JSON data endpoints
-    investor-downloads/        Public DOCX and other downloads
-    charts/                    General public charts
-    screenshots/               Public screenshots
-  institute/                   Public bilingual institute source markdown
-  vibelog/                     Public guides and project notes
-  docs/                        Public docs only
-```
-
-`docs/maintenance-handover.md` is intentionally ignored in this repo because it
-contains local workspace handover details.
-
-## Generated Content Boundary
-
-Vibe is the publisher. These paths are safe to commit when generated by the
-maintenance workflow:
+The public repository contains only sanitized generated artifacts:
 
 ```text
 src/generated/investor/
@@ -90,7 +76,8 @@ public/investor-data/
 public/investor-downloads/
 ```
 
-The source data stays outside the Vibe repo:
+Private source data, API keys, maintenance scripts, and raw AI Institute outputs
+remain outside Vibe:
 
 ```text
 ../.env
@@ -100,12 +87,98 @@ The source data stays outside the Vibe repo:
 ../outputs/reader-reports/
 ```
 
-Keep `.env` only at `ResearchOS/.env`. Do not copy API keys or local workspace
-paths into Vibe.
+## 简体中文
 
-## Maintenance Commands
+ResearchOS Vibe 是 ResearchOS 与 AI Institute 的公开网站和投资研究展示台。它展示的不是单篇
+AI 报告，而是一套可运行、可追溯、可复盘的 AI 研究操作系统：人类研究员负责提出问题、设定判断标准和做最终决策；AI
+分析师持续收集证据、生成研究、跟踪观点变化，并把复杂的内部报告关系重组为更适合人阅读和决策的内容。
 
-Run maintenance from the parent `ResearchOS/` folder, not from `vibe/`:
+这个网站面向投资人、创业者、经营者和研究团队。它回答一个核心问题：当 AI 不再只是聊天工具，而是可以在合适算力、环境和工作流中持续演化的研究伙伴时，金融投资和战略研究应该如何组织？
+
+Vibe 不是私有研究引擎本身，而是公开的静态发布层。它把 AI Institute 中已经清洗过、适合公开展示的研究成果发布出来，同时避免把密钥、本地数据源或维护脚本放入静态网站仓库。
+
+### 产品定位
+
+AI Institute 是一个面向金融与战略决策的多智能体研究工作流。它的价值不是替代人类研究员，而是为人类研究员提供一支可以并行工作的 AI 研究团队：持续读材料、生成证据、保留来源关系、追踪观点漂移，并把结果转化为可以支持投资判断的研究产品。
+
+Vibe 把这套工作流呈现为一个可访问的产品界面：
+
+- ResearchOS 与 AI Institute 的公开业务介绍。
+- 面向投资研究的每日晨会简报看板。
+- AI 分析师报告库与人类友好的 reader report。
+- 保留来源、证据和观点脉络的深度研究页面。
+- 对关键主题进行时间线复盘和市场表现对照的 recap dashboard。
+- 用于路演、汇报和交接的交互式展示页面。
+
+### 业务场景
+
+| 场景 | Vibe 提供的能力 |
+| --- | --- |
+| 投资研究 | 每日简报、市场信号、观点追踪、深度研究、风险提示 |
+| 研究管理 | 证据来源、分析师交接、变化雷达、复盘仪表盘 |
+| 管理层沟通 | 双语叙事、交互式演示、可视化研究摘要 |
+| 产品展示 | 一个真实运行的 AI 研究产品前台 |
+| 长期交接 | 稳定路由、生成数据契约、可重复发布流程 |
+
+### 关键公开入口
+
+| 路由 | 业务用途 |
+| --- | --- |
+| `/` | ResearchOS 与 AI Institute 首页 |
+| `/investor/` | AI Institute 投资研究台 |
+| `/investor/daily/` | 最新晨会简报看板 |
+| `/investor/reports/[slug]/` | AI 分析师报告和 reader report |
+| `/investor/deep-research/[slug]/` | 长篇深度研究 |
+| `/investor/recaps/` | 关键主题复盘仪表盘 |
+| `/graph/` | 研究图谱与地图式探索 |
+| `/presentations/ai-human-research/` | 交互式中文演示：AI 如何与人类研究员并行 |
+| `/blog/` | 公开文章、项目叙事和生成内容 |
+
+### 运营边界
+
+Vibe 是一个可独立部署的 Astro 静态网站。Vercel 构建不需要访问父级 `../scripts`，也不需要读取密钥或解密私有简报。
+
+可以提交到 Vibe 的是已经清洗过的公开发布物：
+
+```text
+src/generated/investor/
+public/investor-assets/
+public/investor-data/
+public/investor-downloads/
+```
+
+私有数据、API key、维护脚本和原始 AI Institute 输出保留在父级 ResearchOS 工作区：
+
+```text
+../.env
+../scripts/
+../ai-institute-working-paper/codex/data/
+../ai-institute-working-paper/codex/outputs/
+../outputs/reader-reports/
+```
+
+## Deployment
+
+Use `vibe/` as the Vercel project root.
+
+```text
+Install command: npm install
+Build command:   npm run build
+Output:          dist
+Node:            >=22.12.0
+```
+
+The production build is intentionally self-contained:
+
+```bash
+npm install
+npm run dev
+npm run build
+```
+
+## Maintenance
+
+Run update work from the parent `ResearchOS/` folder, not from `vibe/`:
 
 ```bash
 # Full AI Institute investor refresh, daily DOCX generation, sync, and build
@@ -128,28 +201,24 @@ Reader reports are composed from AI Institute graph-style outputs and saved in
 `outputs/reader-reports/` before being synced into Vibe as
 `src/generated/investor/reports/reader-*.json`.
 
-## Push Checklist
-
-Before pushing `vibe/`:
-
-1. Run the relevant update workflow from `ResearchOS/`.
-2. Confirm the latest daily DOCX and daily PNG assets exist under
-   `vibe/public/investor-downloads/` and `vibe/public/investor-assets/daily/`.
-3. Run `scripts/vibe_maintenance.sh check` from `ResearchOS/`.
-4. Commit and push only the `vibe/` repository.
+Before pushing `vibe/`, confirm the latest daily DOCX and daily PNG assets exist
+under `vibe/public/investor-downloads/` and `vibe/public/investor-assets/daily/`,
+then run:
 
 ```bash
+scripts/vibe_maintenance.sh check
 git -C vibe status -sb
 git -C vibe add .
 git -C vibe commit -m "Publish investor update"
 git -C vibe push
 ```
 
-## Tech Stack
+## Technology
 
-- Astro 6
+- Astro 6 static site framework
 - Vanilla CSS with light/dark monochrome theme support
 - Leaflet for map-oriented UI
 - Static JSON contracts for investor data
-- Generated chart/image assets published from the parent workspace
+- Generated chart, document, and image assets published from the parent
+  ResearchOS workspace
 
