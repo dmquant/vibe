@@ -1,0 +1,17 @@
+{
+  "slug": "archive-6918147cbc2b",
+  "href": "/investor/reports/archive-6918147cbc2b/",
+  "meta": {
+    "title": "共享数据采集摘要 2026-06-05",
+    "date": "2026-06-05",
+    "analyst_id": "data-scientist",
+    "analyst_name": "数据科学家",
+    "tags": [
+      "综合编审"
+    ],
+    "source": "archive-6918147cbc2b",
+    "source_label": "每日任务报告",
+    "source_kind": "daily_task"
+  },
+  "bodyHtml": "<h1>共享数据采集摘要 2026-06-05</h1>\n<h2>markets_overnight</h2>\n<ul>\n<li>字段总数 13、空值 0、confidence: high</li>\n<li>修复字段：DXY、Brent、UST10Y、VIX（Stooq 失败或越界，已通过 web_search 修复至 2026-06-04 收盘值）</li>\n</ul>\n<h2>markets_close_cn</h2>\n<ul>\n<li>字段总数 5、空值 0、confidence: high</li>\n</ul>\n<h2>失败 / 修复</h2>\n<ul>\n<li>dxy=implausible(62.1194) → 99.54 (TradingEconomics)</li>\n<li>brent=empty → 96.97 (TradingEconomics)</li>\n<li>ust10y=empty → 4.49 (FRED/TradingEconomics)</li>\n<li>vix=empty → 16.06 (Yahoo Finance)</li>\n</ul>"
+}
