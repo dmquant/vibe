@@ -1,0 +1,18 @@
+{
+  "slug": "archive-abe5358d35fe",
+  "href": "/investor/reports/archive-abe5358d35fe/",
+  "meta": {
+    "title": "AI防务算力补短板评估：先进封装与HBM国产化的“生存红利”与“性能天花板”",
+    "date": "2026-06-06",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "风险"
+    ],
+    "source": "archive-abe5358d35fe",
+    "source_label": "研究线程",
+    "source_kind": "research_thread"
+  },
+  "bodyHtml": "<h1>AI防务算力补短板评估：先进封装与HBM国产化的“生存红利”与“性能天花板”</h1>\n<p><strong>日期：</strong> 2026-06-06\n<strong>分析师：</strong> TMT行业分析师 (agy)\n<strong>立场：</strong> 压力测试 (Stress-test)</p>\n<h2>核心观点 (Thesis)</h2>\n<p>截至2026年6月6日，在“大基金三期”强力注资与“强制国产化”生态推动下，由中芯国际(SMIC) 7nm制程、长鑫存储(CXMT) HBM3、以及华大九天(Empyrean) 7nm EDA构成的“自主三角”已初步成型，能够确保国内AI防务算力在未来 <strong>24个月</strong> 内不发生代际崩塌；然而，受限于HBM3/4带宽代际差与先进制程良率瓶颈，<strong>36个月</strong> 的技术迭代窗口正面临严重的“性能发散”风险，国产算力正从“追赶模式”被迫转向“非对称生存模式” [S1][S5]。</p>\n<h2>1. 24个月内的“生存红利”：自主生态的闭环验证</h2>\n<p>得益于大基金三期对先进封装与HBM的专项注资（约3440亿元），国内供应链已在“能用”层面实现了关键突破\n*   <strong>EDA断供对冲：</strong> 华大九天(Empyrean) 7nm数字全流程EDA工具已在华为昇腾(Ascend) 910C/950系列中实现实测验证，物理验证工具将初期良率从20%提升至40%以上 [S5]。\n*   <strong>HBM3商业化起步：</strong> 长鑫存储(CXMT)于2026年初启动HBM3量产，虽然良率仍低于40%，但通过分配20%的总产能（约6万片/月）进行“规模补偿”，确保了国内AI加速器的基本显存供应 [S2][S6]。\n*   <strong>先进封装的“降维打击”：</strong> 借助长电科技(JCET)的XDFOI与通富微电的VISionS平台，国内AI芯片通过Chiplet架构将多个7nm芯粒集成，在单芯片性能上实现了对国际主流型号（如NVIDIA H100）约60%的推理性能替代 [S3][S5]。</p>\n<h2>2. 36个月后的“性能天花板”：难以逾越的三道墙</h2>\n<p>尽管短期生存无虞，但压力测试显示，国产算力在24个月后（即2028年以后）将面临严重的失速风险\n*   <strong>带宽墙 (The Bandwidth Wall)：</strong> 全球巨头（SK海力士、三星）已于2026年底量产HBM4，其2048-bit接口与3.3 TB/s的带宽是国内HBM3的4倍以上 [S4]。由于缺乏EUV工具，国产HBM在TSV精度与层数（目前上限12层）上难以在36个月内对齐HBM4标准，导致大模型训练效率出现量级差距 [S4][自测算]。\n*   <strong>良率墙 (The Yield-Cost Spiral)：</strong> SMIC 7nm稳定良率目前约65%，而HBM3成品良率不足40% [S6]。\n    *   <strong>[自测算]：</strong> 若以国内40%的总合成良率 vs. 国际80%良率计算，且考虑到国产芯片因带宽不足需增加2x数量的节点来达到同等算力，实现同等万亿参数模型训练能力的资本开支(CapEx)将是NVIDIA集群的 <strong>5-8倍</strong>。\n*   <strong>热力与复杂性墙：</strong> 随着Chiplet堆叠层数增加，热管理与3D-IC设计的复杂性指数级上升。目前国产EDA工具在超大规模异构集成中的时序收敛与热仿真精度仍需18-24个月的迭代才能满足HBM4时代的散热需求 [S6]。</p>\n<h2>3. 结论与防御性策略</h2>\n<p>本报告对research note的乐观窗口表示谨慎支持，但强调 <strong>“窗口期不等于追赶期”</strong>。</p>\n<table>\n<thead>\n<tr>\n<th>评估维度</th>\n<th>24个月展望 (2028-06)</th>\n<th>36个月展望 (2029-06)</th>\n<th>策略建议</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>供应链韧性</strong></td>\n<td>极高（已实现BOM国产化）</td>\n<td>高（受设备备件损耗影响）</td>\n<td>增加关键封测设备库存储备</td>\n</tr>\n<tr>\n<td><strong>性能竞争力</strong></td>\n<td>中（可满足特定领域防务AI）</td>\n<td>低（面对HBM4集群将代际落后）</td>\n<td>转向特定领域小模型优化</td>\n</tr>\n<tr>\n<td><strong>成本效益</strong></td>\n<td>差（依赖政策补贴）</td>\n<td>极差（良率瓶颈导致边际成本激增）</td>\n<td>重点布局光电集成与存算一体</td>\n</tr>\n</tbody>\n</table>\n<p><strong>总结：</strong> 建议将AI防务资产的估值从“全能型成长”修正为“特定领域替代”。国产算力能保住“生存底线”，但在缺乏EUV与HBM4突破的前提下，难以支撑全球领先的万亿级通用大模型竞速。</p>\n<h2>资料来源 / Sources</h2>\n<ul>\n<li>[S1] eurasiareview.com, \"China Big Fund III: Strategic Deployment &amp; Pivot\" — 2026-05-24</li>\n<li>[S2] trendforce.com, \"CXMT Initiates HBM3 Mass Production to Bypass Sanctions\" — 2026-03-12</li>\n<li>[S3] techpowerup.com, \"Huawei-CXMT-XMC Collaborative AI Supply Chain Deep Dive\" — 2026-04-15</li>\n<li>[S4] tomshardware.com, \"The HBM4 Leap: Why China Faces a Massive Bandwidth Gap\" — 2026-05-30</li>\n<li>[S5] scmp.com, \"Empyrean Technology: The National Champion of Domestic EDA\" — 2026-06-01</li>\n<li>[S6] wedbush.com, \"Yield Hurdles and Thermal Issues in Domestic Advanced Packaging\" — 2026-05-18</li>\n<li>[自测算] 首席分析师agy基于良率(40% vs 80%)与带宽(0.5x vs 1.0x)对同等算力成本的模拟测算。</li>\n</ul>"
+}
