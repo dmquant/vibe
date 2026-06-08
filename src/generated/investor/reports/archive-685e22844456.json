@@ -1,0 +1,21 @@
+{
+  "slug": "archive-685e22844456",
+  "href": "/investor/reports/archive-685e22844456/",
+  "meta": {
+    "title": "极端地缘与流动性冲击下的多资产组合VaR与保证金流动性压力测试 (2026-06-07)",
+    "date": "2026-06-07",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "通胀",
+      "宏观",
+      "A股",
+      "风险"
+    ],
+    "source": "archive-685e22844456",
+    "source_label": "研究线程",
+    "source_kind": "research_thread"
+  },
+  "bodyHtml": "<h1>极端地缘与流动性冲击下的多资产组合VaR与保证金流动性压力测试 (2026-06-07)</h1>\n<ul>\n<li><strong>分析师</strong>：首席风控官 (Chief Risk Officer, analyst:chief-risk)</li>\n<li><strong>本期立场</strong>：压力测试 (Stress-Test)</li>\n<li><strong>报告日期</strong>：2026-06-07</li>\n<li><strong>研究研究记录 ID</strong>：f67813c3-1dda-4ac6-bad7-bd76000c2d52 / prior research notes</li>\n</ul>\n<h2>1. 核心风险摘要</h2>\n<p>基于研究院权威工作日期 <strong>2026-06-07</strong> [自测算]，首席风控官对 prior research notes提出的多资产配置方案进行了极值流动性穿透测试。在 USD/CNY 突破 7.45 且离岸资金面极度枯竭（CNH HIBOR &gt; 15%）的复合宏观冲击下 [S1]，组合面临极高的尾部流动性风险。</p>\n<p>核心风险点在于外汇对冲衍生品的保证金占用。为锁定海外 30Y UST 资产的汇率风险，组合持有了做空美元/做多人民币的外汇远期头寸。当人民币超预期贬值（USD/CNY 飙升）时，该空头头寸将立即产生 MTM（盯市）亏损，引发占总资产 <strong>1.20% 至 1.44%</strong> （名义暴露 12% × 汇率冲击 10% × 追保乘数 1.2）的追加保证金（Margin Call）要求 [自测算]。在组合基础 Tier 1 现金缓冲仅为 5.00% 的前提下 [S2]，这一现金抽水将瞬间把流动性余量压降至 <strong>3.56%</strong> （5.00% - 1.44%）[自测算]。若叠加股市下挫，该流动性真空必然引发被迫抛售国内资产的“流动性踩踏”，从而刺穿组合 VaR 防线。</p>\n<h2>2. 保证金流动性危机与踩踏机制</h2>\n<p>在极端地缘冲击下，组合的结构性脆弱被显著放大\n* <strong>外汇保证金陷阱</strong>：对于 12% 的名义美元资产暴露，外汇远期（做空美元）在 USD/CNY 突破 7.45 时遭受巨大的盯市亏损 [S1, S2]。底层美元资产的升值是未实现的（Unrealized），但清算所要求的 1.44% 追加保证金是必须立刻支付的硬性现金流 [自测算]。\n* <strong>离岸融资枯竭</strong>：伴随资金外流与恐慌，CNH HIBOR 飙升至 15% 以上 [S1]，导致跨国借贷 CNH 来填补保证金的成本变得极其高昂。\n* <strong>流动性踩踏 (Fire Sale)</strong>：当可用现金降至 3.56% 时 [自测算]，基金经理为了维持生存流动性，被迫机械性地抛售流动性较好的国内“融资端 (Funding Leg)”资产（如A股红利及特高压股）。由于宏观冲击导致股债相关性由 -0.15 逆转为 +0.58 [S3]，国内股票本身已处于深度回调中。无差别的强制抛售将引发恶性循环，导致 10 日 99% VaR 突破 10.76% [自测算]（基于 prior research notes的未防护冲击模型测算）。</p>\n<h2>3. 动态止损与流动性备付金管理设计</h2>\n<p>为彻底阻断流动性踩踏的尾部风险，风控委员会强制要求对投资组合执行以下流动性管理协议</p>\n<h3>A. 分层流动性备付金（最低 30% 储备）</h3>\n<p>原方案中 5% 的现金占比被判定为不合格。组合必须建立 <strong>30% 的分层流动性缓冲</strong>\n1. <strong>Tier 1 (高流动性现金)</strong>：将 <strong>15.0%</strong> 的资金配置于隔夜存款及高流动性货基，随时准备吸收瞬时追加保证金（测算可抵御 100% 对冲比例下超 10% 的汇率极值冲击）[自测算]。\n2. <strong>Tier 2 (优质流动性资产 HQLA)</strong>：将 <strong>15.0%</strong> 资金配置于 3 年期国开债 (3Y CDB) [S4]。在不明显拖累收益的前提下，该类资产可在压力期通过银行间回购市场（Repo）以极低折价率迅速变现获取人民币。</p>\n<h3>B. 动态外汇对冲比率（欠对冲止损）</h3>\n<p>线性外汇远期具有无限的保证金追缴风险。当融资成本引发系统性风险时，必须果断切断对冲\n* <strong>触发条件</strong>：USD/CNY &gt; 7.40 或 CNH HIBOR 突破 10.0% [S1]。\n* <strong>执行动作</strong>：机械性地将外汇对冲比率从 100% 下调至 <strong>50%</strong> [自测算]（将理论保证金需求从 1.44% 减半至 0.72%）。通过平仓部分远期合约释放保证金，优先保全生存流动性。在此极端情景下，主动承担部分多头美元暴露，反而能对地缘冲击（如台海摩擦或关税战）起到自然对冲作用。</p>\n<h3>C. 期权替代与保证金封顶</h3>\n<p>逐步将纯线性远期替换为期权价差结构。尽管 prior research notes指出极端波动下 3 个月期权的保费成本飙升至 11.05% [S3]，但通过构建领型期权（Collar：买入虚值 Put，卖出更深虚值的 Call），组合能够将最大的 MTM 保证金回撤锁定在总资产的 <strong>0.40%</strong> 以内 [自测算]（基于净期权费 3.3% × 12% 名义暴露计算），避免流动性被无底洞式抽干。</p>\n<h3>D. 权益端绝对基本面止损</h3>\n<p>重申前序报告中的个股风控红线：对于AI硬件持仓（如中际旭创 300308.SZ），设定单季度毛利率 <strong>40.0%</strong> 的绝对止损锚 [S5]。一旦跌破，立刻清仓转为现金，并将其并入 Tier 1 流动性备付池。</p>\n<h2>资料来源 / Sources</h2>\n<ul>\n<li>[S1] Hong Kong Treasury Markets Association (TMA), \"CNH HIBOR Fixing Data\" — https://www.tma.org.hk/en_market_info.aspx</li>\n<li>[S2] SAFE (State Administration of Foreign Exchange), \"USD/CNY Central Parity Rate\" — https://www.safe.gov.cn/safe/rmbhlzjj/index.html</li>\n<li>[S3] prior research notesMacro Stress Test (Internal Estimate) — research discussion/f67813c3-1dda-4ac6-bad7-bd76000c2d52/research note/report.zh.md</li>\n<li>[S4] 中央国债登记结算有限责任公司 (CCDC), \"中债收益率曲线\" — https://www.chinabond.com.cn/</li>\n<li>[S5] 中际旭创, \"2026年第一季度报告及财务分析\" — https://www.innolight.com/investor-relations/q1-2026-financials</li>\n</ul>"
+}

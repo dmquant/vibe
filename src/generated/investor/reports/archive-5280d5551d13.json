@@ -1,0 +1,19 @@
+{
+  "slug": "archive-5280d5551d13",
+  "href": "/investor/reports/archive-5280d5551d13/",
+  "meta": {
+    "title": "共享数据采集摘要 2026-06-08",
+    "date": "2026-06-08",
+    "analyst_id": "data-scientist",
+    "analyst_name": "数据科学家",
+    "tags": [
+      "通胀",
+      "港美股",
+      "综合编审"
+    ],
+    "source": "archive-5280d5551d13",
+    "source_label": "每日任务报告",
+    "source_kind": "daily_task"
+  },
+  "bodyHtml": "<h1>共享数据采集摘要 2026-06-08</h1>\n<h2>markets_overnight</h2>\n<ul>\n<li>字段总数 13、空值 0、confidence: high</li>\n<li>末次完整交易日：2026-06-05（周五）。美股大跌，SPX -2.6%、NDX -4.1%，因强劲非农推升美联储加息预期。</li>\n</ul>\n<h2>markets_close_cn</h2>\n<ul>\n<li>字段总数 5、空值 0、confidence: high</li>\n</ul>\n<h2>失败 / 修复</h2>\n<ul>\n<li>Stooq CSV 端点返回 JavaScript 反爬挑战，13 个隔夜字段全部经 web_search 从权威来源修复。</li>\n<li>Sina A 股端点正常（GBK 编码用 LC_ALL=C 解析）。</li>\n<li>hsi_close 经 Sina 与 web_search 双源交叉验证一致。</li>\n</ul>"
+}

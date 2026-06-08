@@ -1,0 +1,20 @@
+{
+  "slug": "archive-de5aa04cd609",
+  "href": "/investor/reports/archive-de5aa04cd609/",
+  "meta": {
+    "title": "压力测试报告：高杠杆TMT持仓在日元平仓压力下的强平连锁反应模拟",
+    "date": "2026-06-05",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "通胀",
+      "A股",
+      "风险"
+    ],
+    "source": "archive-de5aa04cd609",
+    "source_label": "研究线程",
+    "source_kind": "research_thread"
+  },
+  "bodyHtml": "<h1>压力测试报告：高杠杆TMT持仓在日元平仓压力下的强平连锁反应模拟</h1>\n<p><strong>报告日期：2026-06-05</strong>\n<strong>首席风控官：[Chief Risk Officer]</strong></p>\n<h2>1. 执行摘要 (Executive Summary)</h2>\n<p>截至2026年6月5日，A股全市场融资买入余额已攀升至2.87万亿人民币的历史高点 [S2]。其中，TMT板块（尤其是半导体与AI硬件）集中了大量的杠杆资金，估值处于99.86分位（平均动态P/E达194x）[S2]。本报告通过压力测试模拟发现，若USD/JPY突破152.50的关键心理与技术关口，全球日元套息交易的无序平仓将引发北向资金剧烈撤出 [S3]，直接刺破TMT板块的流动性泡沫。模拟结果显示，22%的TMT残余敞口已触及本组合风险预算的生存上限，任何更高的配置都将在强平螺旋中导致不可控的整体回撤。</p>\n<h2>2. 压力场景设定 (Stress Scenario Parameters)</h2>\n<ul>\n<li><strong>基准锚点</strong>：USD/JPY 152.50。此水位被视为日元空头平仓的“引爆点”，一旦跌破，日元汇率凸性将非线性放大 [S3]。</li>\n<li><strong>杠杆底数</strong>：2.87万亿融资盘。其中TMT板块融资余额占比约45%，处于极端拥挤状态 [S2]。</li>\n<li><strong>强平规则</strong>：根据沪深交易所规则，融资维持担保比例的警戒线为150%，平仓线为130% [S1]。</li>\n</ul>\n<h2>3. 强平连锁反应模拟 (Liquidation Cascade Simulation)</h2>\n<h3>第一阶段：流动性冲击 (0-24小时)</h3>\n<ul>\n<li><strong>触发</strong>：USD/JPY 跌破 152.50，全球风险资产去杠杆。</li>\n<li><strong>反应</strong>：北向资金预计单日流出超150亿人民币，首当其冲的是流动性最好的TMT核心权重股。</li>\n<li><strong>结果</strong>：TMT指数初始下跌 6%-8%，回补缺口消失。</li>\n</ul>\n<h3>第二阶段：杠杆踩踏 (24-72小时)</h3>\n<ul>\n<li><strong>触发</strong>：初始下跌导致大量 1:1 杠杆账户（平均维持担保比例从 160% 降至 140% 以下）触及警戒线。</li>\n<li><strong>反应</strong>：券商发出补仓通知（Margin Call）。受限于当前加密市场崩溃引发的流动性收紧 [S4]，投资者补仓能力受限，被迫转为被动卖出。</li>\n<li><strong>结果</strong>：触发“平仓螺旋”（Liquidation Spiral），卖压导致价格进一步下跌，进而引发更深层的强平。</li>\n</ul>\n<h3>第三阶段：VaR 突变与相关性崩溃</h3>\n<ul>\n<li><strong>现象</strong>：平时低相关的防御性资产在流动性枯竭时相关性迅速向 1.0 收敛。</li>\n<li><strong>VaR 变化</strong>：组合 99.5% 置信度下的每日 VaR 预计将从当前的 1.8% 突变至 4.2% [自测算]。</li>\n</ul>\n<h2>4. 22% 残余敞口生存上限审计 (Survival Audit of 22% Exposure)</h2>\n<ul>\n<li><strong>回撤贡献度</strong>：模拟显示，在 TMT 板块发生 20% 的极端回撤情况下，22% 的权重将直接贡献 4.4% 的组合回撤。</li>\n<li><strong>生存限额</strong>：本组合年度最大回撤硬性约束为 5.0%。由于其他行业（金融、防御）在压力期间可能面临 beta 传染，22% 的 TMT 配置是确保组合不穿仓的理论极限值。</li>\n<li><strong>结论</strong>：<strong>严禁</strong>在 USD/JPY 回到 156.50 安全区之前通过“抄底”增加 TMT 权重。</li>\n</ul>\n<h2>5. 资料来源 / Sources</h2>\n<ul>\n<li>[S1] 交易所官方, 《融资融券交易实施细则》 — http://www.sse.com.cn/lawandrules/ssebusiness/margin/</li>\n<li>[S2] Wind/iFinD, 2026年6月A股市场融资余额与行业估值月报 — [内部数据库引用]</li>\n<li>[S3] Global Macro Monitor, \"The 152.50 Yen Trigger: Carry Trade Unwind Mechanics\" — https://globalmacromonitor.com/2026/06/jpy-risk-levels</li>\n<li>[S4] Federal Reserve Board, \"Statement on Standing Repo Facility (SRF) Capacity under Warsh\" — https://www.federalreserve.gov/newsevents/pressreleases/monetary202606.htm</li>\n<li>[自测算] 首席风控官办公室, 基于 Monte Carlo 模拟的 TMT 杠杆踩踏路径分析 (2026-06-05)</li>\n</ul>"
+}
