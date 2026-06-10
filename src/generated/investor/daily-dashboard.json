@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-10T07:51:24.867Z",
+  "generatedAt": "2026-06-10T07:57:32.087Z",
   "date": "2026-06-09",
   "source": "outputs/morning-brief-images/manifest.json",
   "investorDailyDate": "2026-06-10",
@@ -358,43 +358,43 @@
     "investorTableReports": 60
   },
   "readerReport": {
-    "id": "reader-daily-reader-2026-06-09",
-    "title": "2026-06-09 AI Institute 每日读者报告",
-    "date": "2026-06-09",
-    "href": "/investor/reports/reader-daily-reader-2026-06-09/",
-    "summary": "6 月 9 日的主线不是 AI 基础设施降温，而是研究注意力从泛 AI capex 进一步收敛到电网并网、变压器/开关设备、GOES、铜、电价、PPA 和公用事业资本开支；A 股风险从主题选择转向科创 50 低位、融资盘、情绪低位和防守修复的执行窗口。",
+    "id": "reader-daily-reader-2026-06-10",
+    "title": "2026-06-10 AI Institute 每日读者报告",
+    "date": "2026-06-10",
+    "href": "/investor/reports/reader-daily-reader-2026-06-10/",
+    "summary": "6 月 10 日不是 AI 基础设施主线退潮，而是研究密度从广谱 AI / 宏观 / A 股讨论收缩到更硬的物理约束：变压器、关键电网部件、并网容量、能源成本、核电交付时滞和重资产 GPU 云的资本回报。",
     "priorityViews": [
       {
-        "title": "AI 基础设施与宏观通胀仍是同一条主链",
-        "view": "宏观通胀传导 heat 3890、risk 1370；AI 基础设施 heat 3796.1、risk 1322。两条链仍显著高于其他行业链。",
-        "whyItMatters": "AI capex 继续被电力、设备、材料、利率和风险预算共同定价，而不是只由芯片收入或模型能力定价。",
+        "title": "宏观通胀和 AI 基础设施仍是第一层主链",
+        "view": "宏观通胀传导 heat 3562.5，AI 基础设施 heat 3487.2；但 AI、宏观、A 股、通胀、风险和能源标签较前一日全部降温。",
+        "whyItMatters": "这说明主线没有消失，但研究系统正在从广谱讨论转向少数可验证约束。",
         "provenance": [
-          "change-radar:chainSignals:macro-inflation",
-          "change-radar:chainSignals:ai-infrastructure",
-          "/investor/reports/archive-69e3593d2d96/",
-          "claim_0609_ai_power_grid_chain"
+          "daily-dashboard:chainRadar:macro-inflation",
+          "daily-dashboard:chainRadar:ai-infrastructure",
+          "/investor/reports/archive-55ca263fedf8/",
+          "claim_0610_main_chains_cool_but_persist"
         ]
       },
       {
-        "title": "通电链条兑现是最高优先级风险",
-        "view": "公用事业 capex、PJM/ERCOT 并网和容量延期、PPA、变压器/开关设备、GOES 和铜成为今日证据密度最高的风险簇。",
-        "whyItMatters": "如果这些环节继续拉长交付或抬高成本，AI 硬件收入兑现、云厂商 capex 回报和硬科技估值都要重算。",
+        "title": "通电链条成为最高优先级风险",
+        "view": "今日最高分高亮信号是变压器及电网关键部件产能约束；并网、PPA、电表后直供电和监管成本传导仍在风险矩阵前列。",
+        "whyItMatters": "AI capex 是否兑现，越来越取决于电力设备、并网容量和能源价格，而不是只取决于 GPU 订单。",
         "provenance": [
-          "/investor/reports/archive-1541cdac5ad4/",
-          "/investor/reports/archive-76f1d07f82d3/",
-          "/investor/reports/archive-5a2f1baa6b90/",
-          "claim_0609_power_delivery_risk"
+          "/investor/reports/archive-06c38822d530/",
+          "/investor/reports/archive-33008c8f3e46/",
+          "/investor/reports/archive-fd770419e7fc/",
+          "claim_0610_power_delivery_risk"
         ]
       },
       {
-        "title": "A 股不是左侧买点，而是防守修复窗口",
-        "view": "晨会记录科创 50 收于 1596.57、跌 4.3%，低于 1600 记忆阈值；内部合成情绪指数 34/100，低位但未充分出清。",
-        "whyItMatters": "硬科技修复需要 ETF、两融、成交宽度和龙头相对强度共同确认，不能只靠低情绪或低点位触发加 beta。",
+        "title": "芯片需求未被证伪，但估值锚转向项目经济学",
+        "view": "核电并网时滞和变压器瓶颈更像阶段性平台期，而非需求见顶；重资产 GPU 云需要按能源成本、电力容量、利用率和折旧重算 ROIC。",
+        "whyItMatters": "这会把 AI 产业链从单一收入弹性，推向通电能力、能效和资本回报的综合筛选。",
         "provenance": [
-          "/investor/daily/",
-          "daily-dashboard:morningSections:ashare-strategy",
-          "daily-dashboard:morningSections:sentiment",
-          "claim_0609_ashare_defense_before_repair"
+          "/investor/reports/archive-d443fa264de1/",
+          "/investor/reports/archive-3ac7a253d823/",
+          "/investor/reports/archive-a68af4c08528/",
+          "claim_0610_chip_demand_platform_roic"
         ]
       }
     ],
@@ -403,8 +403,8 @@
       "thesis_semiconductor_ai_capex_cycle",
       "thesis_datacenter_reit_cooling_water",
       "thesis_mag7_ai_platform_reshuffling",
-      "thesis_ashare_dividend_barbell",
-      "thesis_ashare_hardtech_star50_rotation"
+      "thesis_optical_copper_interconnect_rent_shift",
+      "thesis_ai_productivity_disinflation"
     ]
   }
 }
