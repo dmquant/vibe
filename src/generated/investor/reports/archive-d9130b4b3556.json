@@ -1,0 +1,21 @@
+{
+  "slug": "archive-d9130b4b3556",
+  "href": "/investor/reports/archive-d9130b4b3556/",
+  "meta": {
+    "title": "TSMC CoWoS 产能分拆与基板供应链去中国化成本测算 (2026年底)",
+    "date": "2026-06-10",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "通胀",
+      "宏观",
+      "港美股",
+      "风险"
+    ],
+    "source": "archive-d9130b4b3556",
+    "source_label": "研究线程",
+    "source_kind": "research_thread"
+  },
+  "bodyHtml": "<h1>TSMC CoWoS 产能分拆与基板供应链去中国化成本测算 (2026年底)</h1>\n<p><strong>日期:</strong> 2026-06-10 | <strong>分析师:</strong> TMT 行业分析师 (agy) | <strong>状态:</strong> 压力测试 (STRESS-TEST)</p>\n<h2>执行摘要</h2>\n<p>截至2026年6月10日，AI半导体供应链正处于“地缘政治交汇点”。2026年11月10日中国稀土出口管制豁免期的结束，叠加美国对先进封装实施的“232条款全价值评估”，迫使台积电（TSMC）及其基板合作伙伴（Ibiden, Unimicron）加速建立“非中非台”（NCNT）供应链。本压力测试旨在量化“去风险溢价”及其对英伟达（Nvidia）Blackwell及即将推出的Rubin系列芯片毛利的边际挤压。</p>\n<h2>1. TSMC CoWoS 资本开支压力测试：“地缘政治税”</h2>\n<p>台积电2026年的资本开支指引为 <strong>520亿至560亿美元</strong>，其中约 <strong>110亿美元 (20%)</strong> 用于先进封装（CoWoS-L/R） [S1]。尽管台湾仍是效率核心（AP7/AP8），但被迫加速的亚利桑那（AP1/2）和熊本（Fab 3）产能扩建带有显著溢价。</p>\n<ul>\n<li><strong>资本开支溢价:</strong> 由于劳动力短缺、建筑通胀以及缺乏本土化的二级化学品生态系统，在日本和美国建设先进封装线的成本比台湾高出 <strong>25%–35%</strong> [S-自测算]。</li>\n<li><strong>产能分拆:</strong> 预计到2026年底，台积电将尝试将其15%–20%的高端AI封装产能转移至NCNT枢纽（主要是日本和马来西亚/ASE生态系统），以满足“主权AI”的合规要求。这将导致2026-2027年产生 <strong>25亿至35亿美元</strong> 的额外资本开支负担。</li>\n</ul>\n<h2>2. 基板供应链：30% 的材料悬崖</h2>\n<p>ABF（味之素堆积薄膜）基板是目前 Blackwell (B200) 双芯片架构的核心瓶颈。\n*   <strong>材料价格飙升:</strong> 味之素（Ajinomoto）已确认自2026年第三季度起将高端ABF薄膜价格上调 <strong>30%</strong>，理由是扩大非中国生产规模的成本以及研发下一代20层基板的投入 [S2]。\n*   <strong>供应商回流:</strong> Ibiden 和 Shinko 正在共同投入超过 <strong>47亿美元</strong> 将高端生产回流日本 [S2]。我们预计，这一转变叠加中国11月10日的稀土出口悬崖，将使2026下半年成品基板价格上涨 <strong>15%–22%</strong> [S4]。</p>\n<h2>3. 对 Blackwell/Rubin 毛利的边际挤压</h2>\n<p>单个 B200 GPU 的制造成本（COGS）约为 <strong>6,400美元</strong>，其中 CoWoS-L 封装及良率损失占总成本的 <strong>2,100美元 (33%)</strong> [S3]。</p>\n<table>\n<thead>\n<tr>\n<th>成本构成 (B200)</th>\n<th>当前 (以台湾为中心)</th>\n<th>去风险后 (NCNT 混合模式)</th>\n<th>变动</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>CoWoS 封装</td>\n<td>$1,100</td>\n<td>$1,265</td>\n<td>+15%</td>\n</tr>\n<tr>\n<td>封装良率损失</td>\n<td>$1,000</td>\n<td>$1,150</td>\n<td>+15%</td>\n</tr>\n<tr>\n<td>基板材料</td>\n<td>$350</td>\n<td>$455</td>\n<td>+30%</td>\n</tr>\n<tr>\n<td><strong>总封装制造成本</strong></td>\n<td><strong>$2,450</strong></td>\n<td><strong>$2,870</strong></td>\n<td><strong>+$420</strong></td>\n</tr>\n</tbody>\n</table>\n<ul>\n<li><strong>芯片级挤压:</strong> 在35,000美元的平均售价（ASP）下，<strong>420美元的成本增加</strong> 仅代表约 120 bps 的毛利压缩。虽然在芯片级影响较小，但在系统级会被放大。</li>\n<li><strong>系统级 (GB200 NVL72) 影响:</strong> 对于一套成本约为300万美元的满载机架，去风险成本（包括网络、冷却和72颗GPU的溢价）预计在 <strong>6.5万至8万美元</strong> 之间。</li>\n<li><strong>毛利侵蚀:</strong> 我们预计英伟达2026年的系统级毛利率将面临 <strong>150–250 bps 的挤压</strong>，因为这些去风险成本在转嫁给对价格敏感的企业客户之前，需要由厂商先行吸收。</li>\n</ul>\n<h2>4. 结论：效率边界的终结</h2>\n<p>AI供应链正在从“效率边界”转向“韧性边界”。2026年11月10日的“稀土悬崖” [S4] 是一个硬性期限。尽管英伟达和台积电拥有足够的定价权来生存，但旗舰AI芯片85%以上毛利率的时代可能正在见顶。投资者应准备好应对AI算力成本的“结构性通胀”，这可能会放缓下游大模型（LLM）提供商的TCO（总拥有成本）改善曲线。</p>\n<h2>资料来源 / Sources</h2>\n<ul>\n<li>[S1] <em>台积电投资者关系</em>, 2026 Q1 业绩电话会议 — \"2026 资本开支指引与先进封装目标\"。</li>\n<li>[S2] <em>日经亚洲</em>, \"味之素与 Ibiden：回流 AI 基板的数十亿美元竞赛\", 2026年5月。</li>\n<li>[S3] <em>Silicon Analysts</em>, \"Blackwell (B200) 成本结构与良率分析\", 2026年3月。</li>\n<li>[S4] <em>中国商务部 (MOFCOM)</em>, \"公告第70/72号：稀土出口管制豁免期届满\", 2025年11月（定于2026年11月10日执行）。</li>\n<li>[S-自测算] 分析师基于亚利桑那州与新竹地区劳动力及建筑成本指数的自行测算。</li>\n</ul>"
+}

@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-10T06:18:10.062Z",
+  "generatedAt": "2026-06-10T07:51:24.867Z",
   "date": "2026-06-09",
   "source": "outputs/morning-brief-images/manifest.json",
-  "investorDailyDate": "2026-06-09",
-  "status": "synced",
+  "investorDailyDate": "2026-06-10",
+  "status": "morning_manifest_ahead_of_investor_daily",
   "summary": {
     "headline": "2026-06-09 晨会信号：市场报价、策略偏置与研究链条已归并",
     "lead": "AI研究院晨间简报：5个分析板块、15个深度研究、25次跨部门传递。",
@@ -22,7 +22,7 @@
     "briefEn": "/investor/daily/#daily-dashboard-sections",
     "editorZh": "/investor/daily/#daily-dashboard-editor",
     "mailboxZh": "/investor/#operations",
-    "docx": "/investor-downloads/daily-brief-2026-06-09.docx"
+    "docx": "/investor-downloads/daily-brief-latest.docx"
   },
   "marketTape": {
     "en": [
@@ -228,60 +228,67 @@
   "chainRadar": [
     {
       "label": "宏观通胀传导",
-      "heat": 3890,
-      "latest": 228,
-      "recent": 1970,
-      "risk": 1370,
-      "href": "/investor/reports/archive-69e3593d2d96/",
-      "evidenceTitle": "高能效半导体架构与先进封装应对电网电力瓶颈的压力测试报告（2026–2027）"
+      "heat": 3562.5,
+      "latest": 162,
+      "recent": 1860,
+      "risk": 1291,
+      "href": "/investor/reports/archive-55ca263fedf8/",
+      "evidenceTitle": "首席经济学家回函 · 5月非农与CPI偏热下的2026年加息路径与10Y贴现率箱体上沿"
     },
     {
       "label": "AI 基础设施",
-      "heat": 3796.1,
-      "latest": 237,
-      "recent": 1913,
-      "risk": 1322,
-      "href": "/investor/reports/archive-69e3593d2d96/",
-      "evidenceTitle": "高能效半导体架构与先进封装应对电网电力瓶颈的压力测试报告（2026–2027）"
+      "heat": 3487.2,
+      "latest": 162,
+      "recent": 1821,
+      "risk": 1259,
+      "href": "/investor/reports/archive-55ca263fedf8/",
+      "evidenceTitle": "首席经济学家回函 · 5月非农与CPI偏热下的2026年加息路径与10Y贴现率箱体上沿"
     },
     {
       "label": "工业供给瓶颈",
-      "heat": 579.3,
-      "latest": 24,
-      "recent": 279,
-      "risk": 224,
-      "href": "/investor/reports/archive-02bcbac3e11e/",
-      "evidenceTitle": "资产配置研究记录 06：消费结构转型下“供应链-平台”杠铃的动态仓位与回撤覆盖（2026-06-09）"
+      "heat": 517.2,
+      "latest": 20,
+      "recent": 251,
+      "risk": 201,
+      "href": "/investor/reports/archive-5f556360d71e/",
+      "evidenceTitle": "规模化猪企财务韧性压测与生猪产能去化路径评估报告"
     },
     {
       "label": "电力与电网",
-      "heat": 447.4,
-      "latest": 29,
-      "recent": 207,
-      "risk": 163,
-      "href": "/investor/reports/archive-69e3593d2d96/",
-      "evidenceTitle": "高能效半导体架构与先进封装应对电网电力瓶颈的压力测试报告（2026–2027）"
+      "heat": 381.8,
+      "latest": 13,
+      "recent": 189,
+      "risk": 149,
+      "href": "/investor/reports/archive-3ac7a253d823/",
+      "evidenceTitle": "能源成本与电力容量：重资产算力运营商扩张的物理边界"
     },
     {
       "label": "半导体与存储",
-      "heat": 423.8,
-      "latest": 30,
-      "recent": 194,
-      "risk": 152,
-      "href": "/investor/reports/archive-69e3593d2d96/",
-      "evidenceTitle": "高能效半导体架构与先进封装应对电网电力瓶颈的压力测试报告（2026–2027）"
+      "heat": 367.1,
+      "latest": 13,
+      "recent": 183,
+      "risk": 142,
+      "href": "/investor/reports/archive-3ac7a253d823/",
+      "evidenceTitle": "能源成本与电力容量：重资产算力运营商扩张的物理边界"
     },
     {
       "label": "生产率与效率",
-      "heat": 124,
-      "latest": 5,
-      "recent": 60,
-      "risk": 48,
-      "href": "/investor/reports/archive-445335ba409b/",
-      "evidenceTitle": "研究报告：配电网技术性规制对低空经济产业准入与规模化效率的影响（2026-06-09）"
+      "heat": 98,
+      "latest": 3,
+      "recent": 50,
+      "risk": 38,
+      "href": "/investor/reports/archive-dc89a192804a/",
+      "evidenceTitle": "prior research notes· 发布前质量审计 — 家装→化工材料→自动化出海十卡链条"
     }
   ],
   "riskMatrix": [
+    {
+      "chain": "工业供给瓶颈",
+      "title": "电力设备供应链缺口：变压器及电网关键部件的产能约束",
+      "impact": 5,
+      "probability": 3,
+      "href": "/investor/reports/archive-06c38822d530/"
+    },
     {
       "chain": "电力与电网",
       "title": "AI数据中心的公用事业资本开支与电网并网瓶颈",
@@ -337,13 +344,6 @@
       "impact": 5,
       "probability": 5,
       "href": "/investor/reports/archive-76f1d07f82d3/"
-    },
-    {
-      "chain": "工业供给瓶颈",
-      "title": "电网 OEM 关键原材料供应弹性与扩产周期匹配度",
-      "impact": 5,
-      "probability": 3,
-      "href": "/investor/reports/archive-9bb326b17adb/"
     }
   ],
   "assets": {
@@ -354,7 +354,7 @@
   "relatedCounts": {
     "editorReportAvailable": true,
     "mailboxDigestAvailable": true,
-    "investorDailyReports": 278,
+    "investorDailyReports": 177,
     "investorTableReports": 60
   },
   "readerReport": {
