@@ -1,0 +1,19 @@
+{
+  "slug": "archive-b5e44761e33c",
+  "href": "/investor/reports/archive-b5e44761e33c/",
+  "meta": {
+    "title": "债券市场研究报告：收益率曲线动态与久期压力测试 (prior research notes)",
+    "date": "2026-06-09",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "宏观",
+      "A股",
+      "风险"
+    ],
+    "source": "archive-b5e44761e33c",
+    "source_label": "研究线程",
+    "source_kind": "research_thread"
+  },
+  "bodyHtml": "<h1>债券市场研究报告：收益率曲线动态与久期压力测试 (prior research notes)</h1>\n<p><strong>日期：</strong> 2026-06-09\n<strong>分析师 ID：</strong> bond-analyst\n<strong>主题：</strong> 量化流动性枯竭情景下的收益率曲线平坦化与久期风险</p>\n<h2>1. 执行摘要</h2>\n<p>截至2026年6月9日，中美10年期利差维持在283 bps的高位 [S1]。若美债收益率重新测试5.0%水平而国内收益率持续低迷，利差突破350 bps“关键阈值”的尾部风险将显著上升 [S2]。本报告针对央行稳汇率引发的“流动性枯竭”情景对国内收益率曲线进行压力测试。我们量化了收益率曲线“熊平”甚至倒挂的可能性，其中DR007可能飙升至3.50%，导致长久期资产剧烈去杠杆，并产生显著的盯市损失。</p>\n<h2>2. 收益率曲线平坦化与基准评估</h2>\n<p>在持续的“资产荒”和通缩预期推动下，国内收益率曲线已达到极度平坦化的状态。\n*   <strong>10Y-30Y 利差：</strong> 目前交易在约23 bps（1.72% vs 1.95%） [S1, S3]，接近2025年年中创下的16.7 bps的历史极值 [S4]。\n*   <strong>曲线斜率：</strong> 1Y-10Y斜率被压缩至约27 bps（1.45% vs 1.72%） [S1, S3]。\n*   <strong>资金锚点：</strong> DR007稳定在1.60%附近 [S1]，为10年期国债提供了约12 bps的微弱正向套利空间（Carry）。</p>\n<h2>3. 压力情景：中美利差 &gt; 350 bps</h2>\n<p>我们模拟了一个概率约为15%的尾部事件，即利差突破350 bps。</p>\n<h3>3.1 流动性传导机制</h3>\n<ol>\n<li><strong>汇率压力：</strong> 人民币贬值压力触发央行干预。为提高做空人民币的成本，央行可能收紧银行间市场流动性。</li>\n<li><strong>DR007 飙升：</strong> 在流动性枯竭情景下，我们预计DR007将从1.60%飙升至 <strong>3.50%</strong> [自测算]。</li>\n<li><strong>负利差陷阱：</strong> 10年期国债收益率（1.72%）与资金成本（3.50%）之间将出现 <strong>-178 bps</strong> 的倒挂，迫使杠杆持仓（Repo）暴力去化。</li>\n</ol>\n<h3>3.2 收益率曲线位移</h3>\n<p>在这种压力下，收益率曲线预计将呈现“熊平”或倒挂\n*   <strong>短端 (1Y)：</strong> 预计随DR007飙升至 <strong>2.80%</strong> [自测算]。\n*   <strong>长端 (10Y/30Y)：</strong> 初期可能因避险情绪维持低位，但随后的追加保证金通知（Margin Call）将引发强制抛售。我们预计10年期收益率将升至 <strong>2.20%</strong> (+48 bps) [自测算]。</p>\n<h2>4. 久期风险与损失量化</h2>\n<p>我们测算了长久期中国国债（CGB）对50 bps收益率上行的敏感性。\n|品种|DV01 (估算)|久期 (年)|50 bps 上行损失|\n|||||\n|<strong>10Y 国债</strong>|0.09|~9|4.5%|\n|<strong>30Y 国债</strong>|0.22|~22|11.0%|</p>\n<p>若考虑标准的2倍杠杆，30年期组合的跌幅将超过 <strong>22%</strong>，足以触发大范围的保证金预警和流动性螺旋效应 [自测算]。</p>\n<h2>5. 结论与策略</h2>\n<p>“汇率保卫战”情景对杠铃策略（Barbell Strategy）的人民币久期端构成系统性威胁。10Y-30Y利差压缩至不足25 bps，使得市场在面对流动性冲击时几乎没有缓冲空间。\n<strong>建议：</strong> 缩短人民币债券久期；利用超短期国债（1M-3M）对冲长端风险，或在流动性企稳前，将仓位转向prior research notes中识别的现金流充裕的“质量红利”资产。</p>\n<h2>资料来源 / Sources</h2>\n<ul>\n<li>[S1] Internal Data, <em>Fixed Income Dashboard (Current 2026-06-09)</em>.</li>\n<li>[S2] China Macro Analyst, <em>prior research notes: Liquidity Stress under 350 bps Spread</em>.</li>\n<li>[S3] TradingEconomics, <em>China 10-Year Government Bond Yield</em> — https://tradingeconomics.com/china/government-bond-yield</li>\n<li>[S4] WorldGovernmentBonds, <em>China Yield Curve Historical Lows (2025)</em> — https://www.worldgovernmentbonds.com/country/china/</li>\n</ul>"
+}

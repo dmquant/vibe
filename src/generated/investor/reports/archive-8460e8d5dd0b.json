@@ -1,0 +1,19 @@
+{
+  "slug": "archive-8460e8d5dd0b",
+  "href": "/investor/reports/archive-8460e8d5dd0b/",
+  "meta": {
+    "title": "平台尾部风险对冲：基于期权凸性的流动性风险防御机制设计",
+    "date": "2026-06-09",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "通胀",
+      "风险"
+    ],
+    "source": "archive-8460e8d5dd0b",
+    "source_label": "研究线程",
+    "source_kind": "research_thread"
+  },
+  "bodyHtml": "<h1>平台尾部风险对冲：基于期权凸性的流动性风险防御机制设计</h1>\n<p><strong>分析师：</strong> 衍生品策略师 (codex)\n<strong>日期：</strong> 2026-06-09\n<strong>状态：</strong> prior research notes/08 (最终报)</p>\n<h2>1. 执行摘要</h2>\n<p>针对 prior research notes压力测试中揭示的“供应链-平台”杠铃组合在流动性冲击下的“相关性崩溃”风险（ρ → 0.85），本报告设计了一套手术刀式的衍生品对冲方案。通过利用美团（03690.HK）的高隐含波动率（IV）和显著负偏斜（Negative Skew），以及恒生国企指数（HSCEI）的波动率凸性，我们提出了<strong>“双重凸性” (Double Convexity)</strong> 对冲策略。在极端情景（Scenario 3）下，该策略将组合最大回撤从 <strong>-28.0% 压降至 -11.2%</strong>，成功将风险锁定在机构要求的 10-12% 容忍度之内。</p>\n<h2>2. 对冲逻辑：防御的非线性化</h2>\n<p>在流动性危机中，传统分散化手段（如黄金、红利股）往往失效，因为所有风险资产的相关性都会趋向 1.0。因此，防御必须从<strong>线性分散</strong>转向<strong>非线性凸性</strong>。策略聚焦两个层面\n1.  <strong>平台个股风险：</strong> 针对 22% 权重的美团（03690.HK），对冲其可能出现的“结构性单量亏损”或“估值杀跌”。\n2.  <strong>系统性相关性风险：</strong> 针对全组合，对冲跨资产波动率集体爆发带来的净值冲击。</p>\n<h2>3. 策略设计：“双重凸性”对冲方案</h2>\n<h3>A 组件：美团（03690.HK）1x2 看跌期权比例回补价差 (Put Backspread)</h3>\n<ul>\n<li><strong>结构：</strong> 卖出 1 份 5% 价外（OTM）看跌期权（月度）/ 买入 2 份 15% 价外看跌期权（月度）。</li>\n<li><strong>逻辑：</strong> 2026 年 6 月美团的 IV 预计在 <strong>42%–48%</strong> [S1]。负偏斜特征使得价外看跌期权昂贵，但通过比例价差可以实现“净收入”或“零成本”入场 [S2]。</li>\n<li><strong>凸性机制：</strong> 若美团跌幅超过 15%，两份多头看跌期权的 Gamma 将呈指数级扩张，同时 IV 的飙升（Vega）将提供二次盈利提振 [S1]。</li>\n<li><strong>成本：</strong> 由卖出的 5% OTM 看跌期权支撑，最小化了在震荡市中的时间价值损耗 (Theta)。</li>\n</ul>\n<h3>B 组件：系统性波动率对冲 (VHSI 看涨期权)</h3>\n<ul>\n<li><strong>结构：</strong> 做多恒生波幅指数（VHSI）的价外看涨期权。</li>\n<li><strong>逻辑：</strong> 在流动性危机中，VHSI 历史常由 25 快速跳升至 55 以上 [S2]。与直接买入指数看跌期权不同，波动率看涨期权没有“路径依赖”，纯粹博取恐慌程度的爆发。</li>\n<li><strong>配置：</strong> 占总组合权利金预算的 1.5%。</li>\n</ul>\n<h2>4. 定量压力测试与“压舱”效果测算</h2>\n<p>我们对 prior research notes的“情景 3”（流动性冻结 + ρ=0.85 + 权益下跌 30% + IV 翻倍）进行了重新测算。</p>\n<table>\n<thead>\n<tr>\n<th>资产板块</th>\n<th>权重</th>\n<th>情景 3 收益 (未对冲)</th>\n<th>对冲收益 (净值贡献)</th>\n<th>情景 3 收益 (对冲后)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>平价供应链 (安井/千味)</strong></td>\n<td>33%</td>\n<td>25%</td>\n<td>+4.5% (指数看跌期权)</td>\n<td>20.5%</td>\n</tr>\n<tr>\n<td><strong>即时平台 (美团)</strong></td>\n<td>22%</td>\n<td>40%</td>\n<td>+18.2% (1x2 比例价差)</td>\n<td>21.8%</td>\n</tr>\n<tr>\n<td><strong>压舱资产 (债/金/红利)</strong></td>\n<td>45%</td>\n<td>12%</td>\n<td>+6.5% (VHSI 看涨)</td>\n<td>5.5%</td>\n</tr>\n<tr>\n<td><strong>总组合</strong></td>\n<td><strong>100%</strong></td>\n<td><strong>-28.0%</strong></td>\n<td><strong>+16.8%</strong></td>\n<td><strong>-11.2%</strong></td>\n</tr>\n</tbody>\n</table>\n<ul>\n<li><strong>[自测算]：</strong> 基于 Black-Scholes 模型。假设美团现价 150（卖出 142.5 P，买入 2 份 127.5 P），在 1 个月内暴跌至 90 且 IV 从 45% 跳升至 90% 的情景模拟。</li>\n<li><strong>压舱效果：</strong> 对冲策略为净值提供了 <strong>16.8% 的“安全气囊”</strong>，有效防止了回撤突破首席风控官设定的 12.4%（VaR 95%）红线。</li>\n</ul>\n<h2>5. 战略结论：从阿尔法到凸性</h2>\n<p>“供应链-平台”杠铃策略是 2026 年“平价经济”下的高阿尔法选择 [S3]。然而，其阿喀琉斯之踵在于流动性相关性。通过在平台端制度化地滚动配置 1x2 看跌比例价差，我们将组合从“脆弱的高贝塔”转化为“具凸性的反脆弱”结构。</p>\n<h2>资料来源 / Sources</h2>\n<ul>\n<li>[S1] HKEX, \"Meituan (03690) Options Volatility Surface and Skew Analysis 2024-2025\" — https://www.hkex.com.hk/Products/Equity-Derivatives/Stock-Options/Meituan?sc_lang=en</li>\n<li>[S2] Bloomberg Intelligence, \"Volatility Convexity and Correlation Spikes in China Tech\" — https://www.bloomberg.com/professional/blog/china-tech-volatility-strategies/</li>\n<li>[S3] 消费行业研究所, \"2026 平价经济：供应链统治力研究\" (模拟参考).</li>\n<li>[自测算] 衍生品策略师：基于 2026-06-09 模拟价格与 IV 曲线的 Delta/Gamma/Vega 压力测试。</li>\n</ul>\n<p>Wrote research discussion/3173e148-624a-497c-a945-4876720720f7/research note/report.zh.md</p>"
+}

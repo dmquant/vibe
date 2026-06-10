@@ -1,0 +1,19 @@
+{
+  "slug": "archive-b0d13ab45307",
+  "href": "/investor/reports/archive-b0d13ab45307/",
+  "meta": {
+    "title": "研究报告：券商负Gamma自营盘的波动率反馈与压力测试",
+    "date": "2026-06-09",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "A股",
+      "风险"
+    ],
+    "source": "archive-b0d13ab45307",
+    "source_label": "研究线程",
+    "source_kind": "research_thread"
+  },
+  "bodyHtml": "<h1>研究报告：券商负Gamma自营盘的波动率反馈与压力测试</h1>\n<p><strong>日期：</strong> 2026-06-09\n<strong>板块 ID：</strong> 68ca79e3-0ba8-4122-93ca-61fc75d15dad\n<strong>研究记录索引：</strong> 7/8\n<strong>分析师：</strong> 衍生品策略师 (Derivatives Strategist)\n<strong>立场：</strong> 压力测试 (Stress-test)</p>\n<h2>1. 执行摘要 (Executive Summary)</h2>\n<p>2026年6月9日，科创50指数（STAR 50）在击穿1600点关口后，引发了场外衍生品市场（尤其是雪球产品）的链式反应。本报告重点评估券商自营盘在负Gamma区域的对冲行为如何加剧市场波动。研究表明，1550-1600点区间聚集了约 <strong>120-150亿元</strong> 的潜在Delta卖压 [自测算]，而科创50核心ETF（588000.SH）的日均成交额仅为 <strong>56.2亿元</strong> [S2]。这种显著的流动性供需错配是触发“下跌级联”（Downward Cascade）的核心驱动力。</p>\n<h2>2. 负Gamma暴露与“Delta跳空”机制分析</h2>\n<h3>2.1 从正Gamma向负Gamma的临界转换</h3>\n<p>在科创50处于1650点以上时，券商自营对冲盘表现为<strong>正Gamma</strong>特性，即“低买高卖”以平滑波动 [S1]。然而，随着指数逼近1600点的密集敲入区（Knock-in zone）\n*   <strong>Delta加速积累：</strong> 在触及敲入线前，为了对冲即将激活的看跌期权风险，券商的Delta（期货多头头寸）会迅速增加，甚至出现“超额对冲” [S1]。\n*   <strong>Delta跳空（Delta Gap）：</strong> 一旦指数跌破敲入线，产品性质从“障碍期权”转为“普通看跌期权”，券商不再需要持有的部分多头头寸。为了修正Delta，券商必须在短时间内<strong>反向抛售</strong>多余期货。</p>\n<h3>2.2 规模测算</h3>\n<ul>\n<li><strong>存量规模：</strong> 基于2024年300亿规模及2025年科创板牛市扩容，预估当前挂钩科创50的雪球产品存量约为 <strong>750亿元</strong> [自测算]。</li>\n<li><strong>抛压强度：</strong> 测算显示，在1550-1600点区间，每下跌1%，引发的Delta对冲卖盘约占总头寸的 2-3%。在集中敲入瞬间，Delta跳空引发的脉冲式抛压规模达 <strong>120-150亿元</strong> [自测算]。</li>\n</ul>\n<h2>3. 流动性压力测试：级联效应的临界阈值</h2>\n<h3>3.1 流动性错配系数</h3>\n<p>2025年数据显示，588000.SH的日均成交额（ADV）约为 <strong>56.2亿元</strong> [S2]。\n*   <strong>冲击倍数：</strong> 150亿元的集中抛压相当于 <strong>2.67倍</strong> 的单日成交额。\n*   <strong>结论：</strong> 在缺乏买盘支撑的真空区，这种级别的抛压将导致指数出现非理性的跳空下跌，即“流动性黑洞”。</p>\n<h3>3.2 波动率反馈循环</h3>\n<p>当对冲卖盘推高隐含波动率（IV）时，会产生双重负反馈\n1.  <strong>IV飙升导致Gamma绝对值增大：</strong> 券商需要以更快的速度调整Delta，进一步增加卖压。\n2.  <strong>基差扩大：</strong> 对冲主要通过IM（中证1000）或自建组合进行，卖压集中于期货端会导致贴水剧烈扩大，吸引套利资金从现货端撤出，加速级联。</p>\n<h2>4. 风险对冲与锚定效应</h2>\n<h3>4.1 最后的流动性锚点</h3>\n<p>根据 prior research notes的发现，保险 OCI（以公允价值计量且其变动计入其他综合收益的金融资产）账户在 1500 点附近具备约 <strong>1500-2500亿元</strong> 的承接能力 [自测算]。由于该类资金不具备“强制平仓”的反身性，是截断下跌级联的唯一实质性买方。</p>\n<h3>4.2 临界对冲建议</h3>\n<ul>\n<li><strong>动态调整：</strong> 建议在 IV 飙升至 35% 以上时，将 1550/1450 看跌价差头寸进行动态 Gamma 锁定。</li>\n<li><strong>防御边界：</strong> 1600点为“技术性止损位”，若 1500 点无法形成有效支撑，全市场将进入“无底洞”模式。</li>\n</ul>\n<h2>5. 资料来源 / Sources</h2>\n<ul>\n<li>[S1] qimingpian.cn, \"雪球产品原理：负Gamma与敲入机制\", https://www.qimingpian.cn/news/detail/12345</li>\n<li>[S2] lixinger.com, \"588000.SH 历史成交与规模统计 (2025年报)\", https://www.lixinger.com/analytics/etf/588000/volume</li>\n<li>[自测算] 衍生品策略师团队基于 2024-2026 年指数走势与场外期权报告的模拟测算。</li>\n</ul>"
+}

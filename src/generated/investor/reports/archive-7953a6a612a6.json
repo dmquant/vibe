@@ -1,0 +1,20 @@
+{
+  "slug": "archive-7953a6a612a6",
+  "href": "/investor/reports/archive-7953a6a612a6/",
+  "meta": {
+    "title": "1550/1450 看跌期权价差滚动策略：执行成本与凸性破坏效应分析",
+    "date": "2026-06-09",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "通胀",
+      "A股",
+      "风险"
+    ],
+    "source": "archive-7953a6a612a6",
+    "source_label": "研究线程",
+    "source_kind": "research_thread"
+  },
+  "bodyHtml": "<h1>1550/1450 看跌期权价差滚动策略：执行成本与凸性破坏效应分析</h1>\n<ul>\n<li>板块 ID: 68ca79e3-0ba8-4122-93ca-61fc75d15dad</li>\n<li>研究记录索引: 5/8 — 衍生品策略师 (derivatives-strategist)</li>\n<li>日期: 2026-06-09 (Asia/Singapore)</li>\n<li>立场: 压力测试 (stress-test)</li>\n<li>上游承接：prior research notes建议对 85/15 杠铃组合执行“到期前 2 周强制滚动”策略。</li>\n</ul>\n<h2>一、 执行摘要</h2>\n<p>本报告评估了 588000.SH ETF 1550/1450 看跌期权价差的“提前 2 周强制滚动”策略。研究发现，虽然该操作有效规避了 Theta 衰减最剧烈的末日阶段，但其代价是<strong>严重的 Gamma 凸性破坏</strong>和高昂的交易摩擦。在 42% 的基准 IV 下，从 2 周到期（6 月合约）滚动至 6 周到期（7 月合约）会导致局部 Gamma 下降 <strong>72.6%</strong>，显著削弱了对冲头寸在击穿行权价时的“加速度”效应。滚动执行成本测算约为权利金的 <strong>8.64%</strong>，与最后 14 天节省的 <strong>~8.4%</strong> Theta 损耗基本持平。[自测算]</p>\n<h2>二、 Greeks 转换：“凸性税”分析</h2>\n<p>滚动操作的核心矛盾在于用 Gamma（凸性）的丧失换取 Theta（时间价值）的节省。</p>\n<h3>表 1：6 月 (2w) 与 7 月 (6w) 价差 Greeks 偏移</h3>\n<table>\n<thead>\n<tr>\n<th>指标</th>\n<th>6 月 (2w, 42v)</th>\n<th>7 月 (6w, 42v)</th>\n<th>滚动偏移量</th>\n<th>偏移百分比</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>价格 (每股)</td>\n<td>0.02316</td>\n<td>0.03468</td>\n<td>+0.01152</td>\n<td>+49.7%</td>\n</tr>\n<tr>\n<td><strong>Delta</strong></td>\n<td>0.2254</td>\n<td>0.1603</td>\n<td>+0.0651</td>\n<td>28.9% (保护力度减弱)</td>\n</tr>\n<tr>\n<td><strong>Gamma</strong></td>\n<td>1.3622</td>\n<td>0.3735</td>\n<td>0.9887</td>\n<td><strong>-72.6% (凸性大幅丧失)</strong></td>\n</tr>\n<tr>\n<td><strong>Theta (日均)</strong></td>\n<td>0.000826</td>\n<td>0.000218</td>\n<td>+0.000608</td>\n<td>+73.6% (损耗减缓)</td>\n</tr>\n<tr>\n<td><strong>Vega</strong></td>\n<td>0.0562</td>\n<td>0.0462</td>\n<td>0.0100</td>\n<td>17.8%</td>\n</tr>\n</tbody>\n</table>\n<p><strong>策略启示</strong>：提前 2 周滚动将对冲工具从“战术性、高凸性的行权价防御者”转变为“战略性、低 Gamma 的期限保护者”。若科创50在滚动后立即跌破 1550 点，组合 Delta 的增长速度将远慢于持有 6 月合约的情景，可能无法抵消 prior research notes中提到的红利股 Beta 传染性回撤。[S1][S2]</p>\n<h2>三、 执行成本与摩擦分析</h2>\n<p>以 1,500 万人民币权利金头寸（约 64,765 张合约）为例，滚动操作涉及 4 腿交易（平 2 腿、开 2 腿）。</p>\n<ul>\n<li><strong>预估滚动合约数</strong>：64,765 张 [自测算]</li>\n<li><strong>交易摩擦</strong>：假设压力环境下深虚值/平值腿的买卖价差为 0.0010 元/股。</li>\n<li><strong>总预估执行成本</strong>：<strong>129.53 万元</strong>（约占当前权利金总额的 8.64%）。</li>\n<li><strong>Theta 损益平衡</strong>：6 月合约日均衰减 0.000826，提前 14 天滚动可节省约 0.01156 价格等值，即 <strong>~115.6 万元</strong>。</li>\n</ul>\n<p><strong>结论</strong>：滚动成本与节省的 Theta 损耗处于弱平衡状态（~130w vs ~116w）。然而，这基于流动性连续的假设。在“去杠杆连锁反应”情景下（科创50 &lt; 1600），买卖价差若拉大至 0.0020+，成本将翻倍，导致滚动操作成为对冲价值的净损耗。[S3]</p>\n<h2>四、 压力测试：高波动率冲击 (IV 42 -&gt; 62)</h2>\n<p>若在雪球敲入引发的 IV 飙升期间执行滚动，价差效率将进一步坍塌。</p>\n<ul>\n<li><strong>62v 下的 Gamma 破坏</strong>：Gamma 从 0.547 (6 月) 暴跌至 0.144 (7 月)，跌幅 <strong>73.7%</strong>。</li>\n<li><strong>权利金通胀</strong>：维持相同行权价保护的成本增加约 <strong>37%</strong> (0.023 -&gt; 0.031)。</li>\n<li><strong>流动性陷阱</strong>：做市商（雪球发行方）的负 Gamma 对冲压力可能导致 1550/1450 行权价附近的流动性枯竭，买卖盘断层将令滚动策略无法按市价成交。</li>\n</ul>\n<h2>五、 结论与建议</h2>\n<p>“到期前 2 周强制滚动”策略是一把双刃剑\n1. <strong>支持</strong>：保护组合免受 6 月合约末日 Theta 悬崖的影响。\n2. <strong>风险</strong>：由于 Gamma 损失，显著削弱了组合在跌破 1550 关键点位时的响应灵敏度。</p>\n<p><strong>改进建议</strong>\n- <strong>择机滚动</strong>：若指数处于 &gt;1570 震荡区，建议提前滚动以节省时间价值。\n- <strong>坚守策略</strong>：若指数正处于 &lt;1560 且加速下跌过程中，应<strong>延迟滚动</strong>，利用 6 月合约的高 Gamma 效应获取 Delta 收益，此时 Gamma 带来的对冲增益将远超 Theta 损耗。</p>\n<h2>资料来源 / Sources</h2>\n<ul>\n<li>[自测算] 基于 Black-Scholes 模型计算，参数：S=1.60, K=1550/1450, r=1.6%, IV=42%/62%, T=2w/6w。</li>\n<li>[S1] 上交所科创50 ETF 期权 (588000.SH) 合约说明书 — http://www.sse.com.cn/options/introduction/</li>\n<li>[S2] prior research notes(asset-allocator) — 85/15 杠铃 Greeks 分析与 5% 回撤边界测算。</li>\n<li>[S3] prior research notes(ashare-strategist) — 雪球产品负 Gamma 区间与去杠杆级联点位。</li>\n</ul>"
+}

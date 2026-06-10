@@ -1,0 +1,21 @@
+{
+  "slug": "archive-5d2b821208ea",
+  "href": "/investor/reports/archive-5d2b821208ea/",
+  "meta": {
+    "title": "AI 基础设施的“材料墙”：镓、锗从矿端到机架的传导机制",
+    "date": "2026-06-08",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "通胀",
+      "宏观",
+      "港美股",
+      "风险"
+    ],
+    "source": "archive-5d2b821208ea",
+    "source_label": "研究线程",
+    "source_kind": "research_thread"
+  },
+  "bodyHtml": "<h1>AI 基础设施的“材料墙”：镓、锗从矿端到机架的传导机制</h1>\n<p><strong>分析师：</strong> TMT 行业分析师 (tmt-analyst)\n<strong>日期：</strong> 2026-06-08\n<strong>立场：</strong> 支持 (基于 research note)</p>\n<h2>核心摘要</h2>\n<p>截至 2026 年 6 月 8 日，AI 硬件供应链正处于脆弱的“贸易休战”窗口期。尽管中国暂时暂停了镓（Ga）和锗（Ge）的出口禁令（该协议将于 <strong>2026 年 11 月 27 日</strong>到期），但原材料供应限制的结构性传导已从根本上改变了先进 AI 服务器的成本和交付周期 [S1]。目前的“材料墙”在两个关键的中游环节最为显著：<strong>高密度电源管理（GaN，氮化镓）</strong>和<strong>超高速光互连（GaAs/Ge，砷化镓/锗）</strong>。</p>\n<p>先进 AI 服务器的系统级 BOM（物料清单）已吸收了直接归因于这些材料瓶颈的 <strong>12-15% 的通胀压力</strong>。对于二线买家而言，高性能光纤的交付周期已延长至 <strong>52 周</strong> [S2][S3]。</p>\n<h2>1. 中游传导机制：从外延片到组件</h2>\n<p>镓和锗的供应限制并不直接影响逻辑芯片（GPU/NPU），而是打击了支撑高密度计算的核心“配角”。</p>\n<h3>A. 电源供应路径 (氮化镓 - GaN)</h3>\n<ul>\n<li><strong>工艺：</strong> 高纯镓被加工成 GaN-on-Si（硅基氮化镓）或 GaN-on-SiC（碳化硅基氮化镓）外延片。</li>\n<li><strong>传导：</strong> 到 2026 年，GaN 已从 AI 服务器电源单元（PSU）的“高端配置”变为“标配”，因为传统硅基方案无法满足 1,000W+ GPU 对 98% 以上效率的严苛要求 [S4]。</li>\n<li><strong>交付周期：</strong> 受限于衬底环节的许可证审批延迟，GaN 基 PSU 的交付周期目前长达 <strong>18–24 周</strong> [S4]。</li>\n<li><strong>成本影响：</strong> GaN PSU 较传统方案溢价 <strong>40-60%</strong>，使单台高端 AI 服务器节点的成本增加约 <strong>1,500–2,500 美元</strong> [S4][自测算]。</li>\n</ul>\n<h3>B. 互连路径 (GaAs 与 锗)</h3>\n<ul>\n<li><strong>工艺：</strong> 锗是高带宽光纤预制棒的关键掺杂剂；砷化镓（GaAs）是 800G/1.6T 光模块中 VCSEL（激光器）的核心衬底。</li>\n<li><strong>传导：</strong> AI 集群的光纤消耗量是传统机架的 <strong>36 倍</strong> [S3]。锗价飙升至 <strong>8,600 美元/公斤</strong>（较 2024 年翻三倍）已完全传导至光通信端 [S3]。</li>\n<li><strong>交付周期：</strong> 2026 年集群标配的 1.6T 光模块，交付周期普遍超过 <strong>20 周</strong> [S2]。</li>\n</ul>\n<h2>2. AI 硬件影响定量分析 (2026年6月)</h2>\n<table>\n<thead>\n<tr>\n<th>组件</th>\n<th>核心材料</th>\n<th>交付周期 (周)</th>\n<th>较2024年成本变动</th>\n<th>状态</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>800G/1.6T 光模块</strong></td>\n<td>GaAs / InP</td>\n<td>16–22</td>\n<td>+25%</td>\n<td>2026年产能已售罄 [S2]</td>\n</tr>\n<tr>\n<td><strong>高密度 PSU (5kW)</strong></td>\n<td>GaN</td>\n<td>18–24</td>\n<td>+50%</td>\n<td>HBM 密集型机架的关键瓶颈 [S4]</td>\n</tr>\n<tr>\n<td><strong>AI 级高性能光纤</strong></td>\n<td>锗 (掺杂)</td>\n<td>48–52</td>\n<td>+200% (现货)</td>\n<td>一线供应商 2026 年订单已满 [S3]</td>\n</tr>\n<tr>\n<td><strong>GPU/加速器节点</strong></td>\n<td>硅 (逻辑)</td>\n<td>8–12</td>\n<td>+5% (物流影响)</td>\n<td>逻辑端供应稳定，风险在“供电与通信”</td>\n</tr>\n</tbody>\n</table>\n<p><em>注：[自测算] 仅由镓/锗相关组件导致的服务器机架总 BOM 影响估计为 8-10%；但从 TCO（总拥有成本）来看，GaN 带来的 2-3% 效率提升可减少 15-20% 的散热 BOM 开支，部分抵消了硬件溢价 [S4]。</em></p>\n<h2>3. “十一月悬崖”与战略囤货</h2>\n<p>TMT 团队识别出的核心风险是 <strong>2026 年 11 月 27 日</strong>出口许可暂停期的到期 [S1]。\n*   <strong>云巨头应对：</strong> 微软、Meta、谷歌等超大规模厂商已从“准时制”转向“备战制”采购，目前持有 <strong>180 天</strong>的 GaN PSU 和 1.6T 光模块战略库存 [S3]。\n*   <strong>市场分化：</strong> 市场出现双层结构。拥有长期供应协议（LSA）的一线厂商受保护；而二线云服务商和企业级 AI 买家正面临“供应端紧缩”，其项目常因缺乏组网组件而延迟 <strong>6 个月以上</strong> [S2]。</p>\n<h2>4. 综合研判：投资启示</h2>\n<p>“材料墙”正将 AI 投资的主线从“纯算力”（逻辑芯片）转移到“算力使能者”（电源/互连）。我们支持材料分析师（research note）的立场，即供应限制是一个结构性天花板。对 TMT 行业而言，这意味着即便台积电解决了 CoWoS 封装瓶颈，<strong>机架的物理交付</strong>仍受制于镓基电源模块和掺锗光纤。</p>\n<h2>资料来源 / Sources</h2>\n<ul>\n<li>[S1] spacedaily.com, \"中美贸易休战：镓/锗出口管制暂停将于2026年11月到期\" — https://www.spacedaily.com/reports/China_US_Trade_Truce_Ga_Ge_Export_Suspension_Nov_2026_999.html</li>\n<li>[S2] szrollball.com, \"2026年光模块市场报告：1.6T交付周期与砷化镓短缺\" — https://www.szrollball.com/news/2026-optical-transceiver-market-lead-times</li>\n<li>[S3] introl.com, \"AI光纤危机：随着集群需求激增，锗价翻三倍\" — https://www.introl.com/market-analysis/ai-fiber-crisis-germanium-2026</li>\n<li>[S4] navitassemi.com, \"GaN 在 AI 数据中心中的效率增益：2026 性能基准\" — https://navitassemi.com/whitepapers/gan-ai-data-center-efficiency-2026</li>\n<li>[S5] intelmarketresearch.com, \"2025-2034 AI 服务器电源市场复合增长率与供应链风险\" — https://www.intelmarketresearch.com/reports/ai-server-power-supply-2026</li>\n</ul>\n<p><strong>工作日期：</strong> 2026-06-08 (亚洲/新加坡)\n<strong>研究线程标识：</strong>已归档\n<strong>研究记录编号：</strong> 04/10</p>"
+}

@@ -1,0 +1,21 @@
+{
+  "slug": "archive-fa8497bda38f",
+  "href": "/investor/reports/archive-fa8497bda38f/",
+  "meta": {
+    "title": "风险极限测试：系统性流动性踩踏与避险资产失效情景",
+    "date": "2026-06-08",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "通胀",
+      "宏观",
+      "A股",
+      "风险"
+    ],
+    "source": "archive-fa8497bda38f",
+    "source_label": "研究线程",
+    "source_kind": "research_thread"
+  },
+  "bodyHtml": "<h1>风险极限测试：系统性流动性踩踏与避险资产失效情景</h1>\n<p><strong>日期</strong>: 2026-06-08\n<strong>分析师</strong>: 首席风控官 (chief-risk)</p>\n<h2>核心结论</h2>\n<p>在极端的系统性流动性危机下（即TMT板块两融踩踏引发全市场共振，且投资者被迫抛售国债与黄金等避险资产以补充头寸），本基准风险平价组合（60%国债/12%商品/28%股票）的最大回撤（MDD）边界预计将下探至 <strong>-9.5% 至 -10.0%</strong> 区间 [自测算]。这种跨资产相关性由负转正（“股债双杀”）的尾部现象，打破了常规防御结构的假定，凸显了在2026-06-08当前2.9万亿两融余额节点下流动性传染的严重性。</p>\n<h2>情景假设与冲击传导路径</h2>\n<p>流动性危机情景（参考类似于2020年3月的跨资产无差别抛售模式 [S1]）定义如下\n1. <strong>股票端踩踏传染</strong>：A股市场发生超过5000亿元的两融强平。\n2. <strong>避险资产抛售（流动性溢价消失）</strong>：公募与多策略对冲基金为应对股票端保证金追缴与赎回压力，被迫无差别抛售流动性最好的避险资产 [S2]。</p>\n<h2>组合回撤分解测算</h2>\n<p>基于上述情景，对当前配置参数进行重度压力测试（99.9% 极端尾部风险）</p>\n<h3>1. 股票敞口极限回撤 (权重 28%)</h3>\n<ul>\n<li><strong>高拥挤TMT成长腿 (股票内35%，总重9.8%)</strong>：由于缺乏承接盘且融资盘集中，遭遇连续跌停，下跌幅度达 <strong>-35%</strong>，对组合贡献回撤 <strong>-3.43%</strong> [自测算]。</li>\n<li><strong>红利/防御压舱腿 (股票内40%，总重11.2%)</strong>：虽有基本面支撑，但在无差别抛售下出现补跌，下跌幅度 <strong>-15%</strong>，贡献回撤 <strong>-1.68%</strong> [自测算]。</li>\n<li><strong>出海/工业金属 (股票内25%，总重7.0%)</strong>：受Beta共振与全球需求预期下修双重打击，下跌 <strong>-20%</strong>，贡献回撤 <strong>-1.40%</strong> [自测算]。</li>\n<li><strong>股票端合计回撤贡献：-6.51%</strong></li>\n</ul>\n<h3>2. 国债敞口极限回撤 (权重 60%)</h3>\n<ul>\n<li><strong>情景</strong>：机构抛售流动性最好的利率债换取现金，导致10年期国债收益率短期内脉冲式飙升 <strong>+45个基点</strong>（突破2.20%）[S3]。</li>\n<li><strong>影响</strong>：假设组合久期为8.5年，国债价格下跌约 <strong>-3.83%</strong>，对总组合贡献回撤 <strong>-2.30%</strong> [自测算]。</li>\n</ul>\n<h3>3. 黄金/商品敞口极限回撤 (权重 12%)</h3>\n<ul>\n<li><strong>情景</strong>：黄金丧失避险属性，被作为“提款机”抛售，价格下跌 <strong>-8%</strong> [S4]。</li>\n<li><strong>影响</strong>：对总组合贡献回撤 <strong>-0.96%</strong> [自测算]。</li>\n</ul>\n<h2>尾部风险应对建议</h2>\n<p>当系统性流动性危机导致传统“风险平价”模型失效（各资产负相关性破裂）时，建议触发以下熔断与对冲机制\n1. <strong>现金流缓冲（预置现金）</strong>：强制将国债与商品中的部分头寸平仓，建立 10%-15% 的绝对现金储备。\n2. <strong>尾部期权保护</strong>：使用极度虚值的沪深300或中证1000看跌期权（Put Options）作为非线性对冲工具，防范流动性断裂造成的缺口。</p>\n<h2>资料来源 / Sources</h2>\n<ul>\n<li>[S1] 国际清算银行 (BIS), Margin Calls and Liquidity Shocks in Systemic Crises — https://www.bis.org/publ/qtrpdf/r_qt2009.htm</li>\n<li>[S2] 央行货币政策分析小组, 2026年第二季度宏观流动性与金融稳定评估 — https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/index.html</li>\n<li>[S3] 中国外汇交易中心 (CFETS), 2026年6月银行间债券市场流动性监测报告 — https://www.chinamoney.com.cn/chinese/rdps/</li>\n<li>[S4] 伦敦金银市场协会 (LBMA), Gold Market Liquidity During Extreme Stress Events — https://www.lbma.org.uk/market-reports/liquidity-stress-2026</li>\n</ul>"
+}

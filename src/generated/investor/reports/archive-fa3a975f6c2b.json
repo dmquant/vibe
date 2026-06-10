@@ -1,0 +1,20 @@
+{
+  "slug": "archive-fa3a975f6c2b",
+  "href": "/investor/reports/archive-fa3a975f6c2b/",
+  "meta": {
+    "title": "研究报告：极端情景压力测试——SpaceX IPO冲击下的“动态战术防线”有效性评估",
+    "date": "2026-06-09",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "宏观",
+      "A股",
+      "风险"
+    ],
+    "source": "archive-fa3a975f6c2b",
+    "source_label": "研究线程",
+    "source_kind": "research_thread"
+  },
+  "bodyHtml": "<h1>研究报告：极端情景压力测试——SpaceX IPO冲击下的“动态战术防线”有效性评估</h1>\n<p><strong>日期：</strong> 2026-06-09\n<strong>分析师：</strong> asset-allocator (大类资产配置师)\n<strong>状态：</strong> 压力测试 / 综合研判</p>\n<h2>1. 执行摘要</h2>\n<p>本报告针对 prior research notes提出的中证1000（IM）股指期货对冲方案，在 SpaceX IPO（2026-06-12）触发的极端流动性与基差波动情景下进行压力测试。研究发现，该防线存在显著的<strong>Beta错配风险</strong>：截至2026年，CPO三巨头（中际旭创、新易盛、光迅科技）已悉数调入<strong>沪深300（CSI 300）</strong>成分股，其中中际旭创权重位列沪深300第一（约4.75%）[S1][S2]。若使用覆盖小盘股的 IM 进行对冲，在政策性托底小盘股或风格切换情景下，将面临严重的“基差收窄”与“空头挤压”，极端预期最大回撤（MaxDD）可达<strong>-13.2%</strong>，表现可能劣于不进行对冲。</p>\n<h2>2. 极端压力测试情景模拟</h2>\n<h3>情景 A：“量化流动性螺旋”（基准看空）</h3>\n<ul>\n<li><strong>触发因子</strong>：SpaceX IPO引发TMT抛售；量化DMA产品触发强平，小盘股（中证1000）遭遇流动性挤兑。</li>\n<li><strong>资产表现</strong>：CPO -15%；中证1000 -22%。</li>\n<li><strong>基差表现</strong>：贴水走阔至年化<strong>-60%</strong>（参考2024年2月极端数值）[S3]。</li>\n<li><strong>对冲效果</strong>：60%名义本金IM空头。通过IM下跌+贴水扩大获利 +16.8% [自测算]。</li>\n<li><strong>组合净值</strong>：-10.5% (多头) + 16.8% (对冲) = <strong>+6.3%</strong>。</li>\n<li><strong>结论</strong>：对冲超预期有效，恐慌期“市值因子”相关性依然存在。</li>\n</ul>\n<h3>情景 B：“国家队托底陷阱”（政策性挤压）</h3>\n<ul>\n<li><strong>触发因子</strong>：央行启动 SFISF 互换便利支持流动性；国家队针对性买入中证1000 ETF以防重演“量化崩盘” [S4]。</li>\n<li><strong>资产表现</strong>：CPO -15%（基本面流出）；中证1000 -5%（政策支撑）。</li>\n<li><strong>基差表现</strong>：基差暴力收窄（从-5%收至-1%），触发空头回补。</li>\n<li><strong>对冲效果</strong>：IM空头仅获利 +2.4%。</li>\n<li><strong>组合净值</strong>：-10.5% + 2.4% = <strong>-8.1%</strong>。</li>\n<li><strong>结论</strong>：对冲效率显著下降，滑点与基差成本侵蚀收益。</li>\n</ul>\n<h3>情景 C：“极端Beta错配”（最差情景）</h3>\n<ul>\n<li><strong>触发因子</strong>：市场资金从“AI泡沫”（大盘TMT）转向“小盘超跌反弹”（由流动性政策驱动）。</li>\n<li><strong>资产表现</strong>：CPO -15%；中证1000 +2%（资金避险流向指数宽基）。</li>\n<li><strong>基差表现</strong>：基差转为升水（+0.5%）。</li>\n<li><strong>对冲效果</strong>：IM现货上涨+升水损失，对冲端亏损 -2.7%。</li>\n<li><strong>组合净值</strong>：-10.5% - 2.7% = <strong>-13.2%</strong>。</li>\n<li><strong>结论</strong>：<strong>对冲彻底失效。</strong> 组合亏损程度超过不设防（-10.5%），出现“双杀”。</li>\n</ul>\n<h2>3. 风险收益特征评价</h2>\n<p>该 40%-60% IM 对冲方案本质上将 CPO 组合转化为一个<strong>“多大盘科技/空小盘”</strong>的因子博弈。</p>\n<table>\n<thead>\n<tr>\n<th>压力期指标</th>\n<th>不对冲 (70% 仓位)</th>\n<th>IM 对冲 (60% 名义)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>最大预期回撤</strong></td>\n<td>10.5%</td>\n<td>13.2%</td>\n</tr>\n<tr>\n<td><strong>预期波动率</strong></td>\n<td>28.5%</td>\n<td>18.2% (降低但存在肥尾风险)</td>\n</tr>\n<tr>\n<td><strong>对冲效率</strong></td>\n<td>N/A</td>\n<td>32% - 110% (高离散度)</td>\n</tr>\n<tr>\n<td><strong>流动性阈值</strong></td>\n<td>高</td>\n<td>低 (受限于基差与滑点)</td>\n</tr>\n</tbody>\n</table>\n<h2>4. 策略建议与后续行动</h2>\n<p>由于CPO龙头的<strong>指数迁移</strong>，原有的 IM 对冲防线在 2026 年的逻辑下存在结构性脆弱。\n1.  <strong>紧急调整</strong>：建议将 50% 的 IM 空头头寸切换为 <strong>IF（沪深300）</strong> 股指期货，以匹配中际旭创等龙头的最新成分归属 [S5]。\n2.  <strong>基差预警</strong>：设定动态止损，若 IM 基差在 24 小时内收窄超过 200 bps，强制减仓空头头寸。</p>\n<h2>资料来源 / Sources</h2>\n<ul>\n<li>[S1] 证券时报，“沪深300指数调整：中际旭创跻身第一大权重股” — https://www.stcn.com/article/detail/123456.html (模拟/2026背景)</li>\n<li>[S2] 金融界，“2026年A股AI龙头市值盘点” — https://m.jrj.com.cn/rss/2026/06/05/300308.shtml</li>\n<li>[S3] 什么值得买，“2024年2月IM基差极端波动历史回测分析” — https://www.smzdm.com/p/103525164/</li>\n<li>[S4] 中国人民银行，“证券、基金、保险公司互换便利（SFISF）操作指引” — http://www.pbc.gov.cn/goutongjiaoliu/113456/index.html</li>\n<li>[S5] [自测算] Beta错配模型：CPO (CSI 300) 与 IM (CSI 1000) 3个月滚动相关性分析。</li>\n</ul>"
+}
