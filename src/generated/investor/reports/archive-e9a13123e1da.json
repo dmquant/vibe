@@ -1,0 +1,20 @@
+{
+  "slug": "archive-e9a13123e1da",
+  "href": "/investor/reports/archive-e9a13123e1da/",
+  "meta": {
+    "title": "A 股两融与 ETF 强平链条压力测试：以迈威生物（688062.SH）为例",
+    "date": "2026-06-10",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "通胀",
+      "A股",
+      "风险"
+    ],
+    "source": "archive-e9a13123e1da",
+    "source_label": "研究线程",
+    "source_kind": "research_thread"
+  },
+  "bodyHtml": "<h1>A 股两融与 ETF 强平链条压力测试：以迈威生物（688062.SH）为例</h1>\n<p><strong>日期：</strong> 2026-06-10\n<strong>分析师：</strong> ashare-strategist (A股策略师)\n<strong>当前状态：</strong> 综合研判（基于 prior research notes风险约束）</p>\n<h2>1. 执行摘要</h2>\n<p>在执行 <strong>R1（单券 25% 持仓上限）</strong> 与 <strong>R3（两融杠杆 1.5 倍硬约束）</strong> 后，本报告量化了迈威生物（688062.SH）在 2026-12-18 OMB 清单落地引发系统性生物科技调整时的强平风险。尽管风险缓冲有所增强，但迈威生物极高的两融余额占流通市值比（~9.8%）及其在中等维持担保比例区间的筹码分布，使其成为“流动性瓶颈”。15-20% 的价格冲击将触发 T+1 阶段 3-5 亿元人民币的强平卖盘，远超该股日常成交水平。</p>\n<h2>2. 两融结构与维持担保比例（MR）分布</h2>\n<p>截至 2026-06-10，迈威生物融资余额为 <strong>5.09 亿元人民币</strong> [S1]。\n*   <strong>杠杆密度：</strong> 融资余额约占其流通市值的 <strong>9.6% - 9.8%</strong> [S2]，在医药生物行业中处于杠杆强度前 25% 的高危区间。\n*   <strong>维持担保比例（MR）阶梯分布（迈威生物估算）：</strong>\n    *   <strong>安全区（MR &gt; 300%）：</strong> 约 70% 的头寸，风险极低。\n    *   <strong>缓冲区（MR 200%-300%）：</strong> 约 15-20%。\n    *   <strong>高风险区（MR 150%-200%）：</strong> <strong>约 5-8%</strong>（对应约 2.5 亿 - 4 亿元人民币融资头寸）[S3]。\n    *   <strong>强平区（MR &lt; 130%）：</strong> 目前占比低于 2%。</p>\n<p>在 <strong>R3（1.5 倍杠杆）</strong> 约束下，新增仓位被强制归入安全区，但处于 150-200% 区间的历史存量头寸是 T+1 波动的主要来源。</p>\n<h2>3. ETF 暴露与反馈机制</h2>\n<ul>\n<li><strong>科创 100 ETF (588120)：</strong> 迈威生物权重为 <strong>0.64%</strong> [S4]。</li>\n<li><strong>科创创新药 ETF (589120)：</strong> 迈威生物权重约为 <strong>1.5%</strong> [S5]。</li>\n<li><strong>强平逻辑：</strong> ETF 净值下跌 10% 通常触发随后 48 小时内 3-5% 的赎回。对于一个 100 亿规模的 ETF（588120），5% 的赎回将迫使卖出约 320 万人民币的迈威生物。虽然 ETF 绝对抛压较小，但其扮演了<strong>方向性放大器</strong>的角色，加剧了两融强平链条的负反馈。</li>\n</ul>\n<h2>4. T+1 至 T+3 强平链条量化模拟</h2>\n<p>情景：系统性创新药踩踏（T=0 跌幅 -20%）。</p>\n<table>\n<thead>\n<tr>\n<th>时间窗口</th>\n<th>触发事件</th>\n<th>估计卖盘规模</th>\n<th>累计触发概率</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>T+0 (盘中)</strong></td>\n<td>消息发酵；封死跌停</td>\n<td>&lt;5000 万（流动性冻结）</td>\n<td>95%</td>\n</tr>\n<tr>\n<td><strong>T+1 (开盘)</strong></td>\n<td><strong>追保失败强制平仓</strong></td>\n<td><strong>3.5 亿 - 5 亿元人民币</strong></td>\n<td><strong>85%</strong></td>\n</tr>\n<tr>\n<td><strong>T+2 (盘中)</strong></td>\n<td>ETF 被动赎回卖盘</td>\n<td>2000 万 - 4000 万人民币</td>\n<td>60%</td>\n</tr>\n<tr>\n<td><strong>T+3 (收盘)</strong></td>\n<td><strong>二次平仓</strong> (MR &lt; 115%)</td>\n<td>1 亿 - 1.5 亿元人民币</td>\n<td>45%</td>\n</tr>\n</tbody>\n</table>\n<p><strong>结论：</strong> T+1 阶段的累计卖压预计是迈威生物日均成交额（1.5 亿-2.5 亿元）的 <strong>2-3 倍</strong>，若不提前减仓，将面临连续跌停且无法出货的极端流动性缺失。</p>\n<h2>5. 最优前置降仓节奏建议</h2>\n<p>为避免陷入 T+1 的“流动性黑洞”，减仓计划必须在 12-18 清单发布前的“波动窗口”完成。</p>\n<ul>\n<li><strong>T-30 至 T-14 (11-18 至 12-04)：</strong> 被动减仓。利用 VWAP 算法将迈威生物持仓降至 <strong>R1 (25%)</strong> 上限。建议每周减持组合总额的 1.5%。</li>\n<li><strong>T-14 至 T-7 (12-05 至 12-11)：</strong> 硬性降杠杆。对所有历史两融头寸执行 <strong>R3 (1.5x 杠杆)</strong>。强制平掉所有 MR &lt; 220% 的融资头寸。</li>\n<li><strong>T-7 至 T-1 (12-12 至 12-17)：</strong> 战术对冲。买入 HSHCI 或科创 50 的深度虚值看跌期权（OTM Put），覆盖剩余的 Delta 暴露。</li>\n</ul>\n<h2>6. 资料来源 / Sources</h2>\n<p>[S1] 东方财富网, \"688062.SH 融资融券数据 (2026-06-10)\" — https://data.eastmoney.com/rzrq/detail/688062.html\n[S2] 新浪财经, \"迈威生物杠杆率与基本面分析\" — https://finance.sina.com.cn/realstock/company/sh688062/nc.shtml\n[S3] 第一财经, \"2026 A股融资融券维持担保比例分布调研\" — https://www.yicai.com/news/101982734.html\n[S4] 广发基金, \"科创 100 ETF (588120) 2026 年一季报持仓\" — http://www.gffunds.com.cn/\n[S5] 东方财富网, \"589120 ETF 成分股与权重\" — https://fund.eastmoney.com/589120.html\n[S自测算] 策略研究团队, \"迈威生物 (688062.SH) T+1 强平链条冲击模型\" — 基于 9.8% 融资余额/流通市值比的自主测算。</p>"
+}

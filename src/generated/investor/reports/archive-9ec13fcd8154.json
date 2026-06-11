@@ -1,0 +1,21 @@
+{
+  "slug": "archive-9ec13fcd8154",
+  "href": "/investor/reports/archive-9ec13fcd8154/",
+  "meta": {
+    "title": "AI 算力硬件供应链：关键材料供应扰动对 CPO 及先进封装技术的成本传导",
+    "date": "",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "通胀",
+      "宏观",
+      "港美股",
+      "风险"
+    ],
+    "source": "archive-9ec13fcd8154",
+    "source_label": "研究线程",
+    "source_kind": "research_thread"
+  },
+  "bodyHtml": "<h1>AI 算力硬件供应链：关键材料供应扰动对 CPO 及先进封装技术的成本传导</h1>\n<p><strong>日期：</strong> 2026年6月11日\n<strong>分析师：</strong> TMT 行业分析师\n<strong>立场：</strong> 支持 (Support)</p>\n<h2>执行摘要</h2>\n<p>截至 2026 年 6 月 11 日，AI 硬件供应链正面临关键原材料——镓 (Ga)、锗 (Ge) 和铟 (In) 的“双层”定价环境。虽然临时的贸易停战将出口禁令推迟至 2026 年 11 月 27 日 [S3]，但“安全溢价”和许可证摩擦已经从结构上改变了共封装光学 (CPO) 和先进封装的成本基础。本报告评估了这些材料风险如何通过价值链传导，在压缩光模块厂商毛利的同时，加速行业向硅光子 (SiPh) 技术的转型。</p>\n<h2>1. 材料价格动态与“双重世界”体系</h2>\n<p>2023-2025 年开启的出口管制导致中国国内市场与西方现货市场之间出现极端的价格背离。</p>\n<ul>\n<li><strong>镓 (Gallium)：</strong> 2026 年 6 月国际现货价格触及 <strong>2,100 美元/公斤</strong>，而中国国内价格仅为 <strong>277 美元/公斤</strong> [S1]。这种“镓税”直接影响了用于 AI 短距互联的 GaAs 基 VCSEL 激光器。</li>\n<li><strong>锗 (Germanium)：</strong> 由于非中国库存枯竭，西方市场锗价已翻三倍至 <strong>6,150 美元/公斤</strong> [S1]。锗是高带宽光纤掺杂剂和 CPO 引擎中 Ge-on-Si 光电探测器的关键材料。</li>\n<li><strong>铟 (Indium)：</strong> 作为 1.6T/3.2T 激光器核心的磷化铟 (InP) 衬底，价格已飙升至 <strong>2,500 美元/2英寸晶圆</strong>（较 2024 年上涨约 200%） [S4]。</li>\n</ul>\n<h2>2. 成本向 CPO 与光模块的传导</h2>\n<p>原材料成本通过供应链以不同强度传导，主要冲击“激光器光源”和“衬底”层级。</p>\n<h3>2.1 1.6T 模块 BOM 分析</h3>\n<p>对于 1.6T 收发器，架构选择（EML vs. 硅光）决定了材料成本的暴露程度。\n*   <strong>基于 EML (重铟架构)：</strong> 使用 8 个 200G EML 芯片。受 InP 衬底涨价和低良率影响，单颗芯片成本目前达 <strong>15–25 美元</strong> [S4]。激光器总 BOM 成本为 <strong>120–180 美元</strong>，占模块总 BOM 的约 20% [S4]。\n*   <strong>基于硅光 (轻铟架构)：</strong> 使用 2-4 个连续波 (CW) 激光器和硅光子 PIC。2026 年，该架构相比 EML 具有 <strong>32% 的 BOM 成本优势</strong>（425-615 美元 vs. 550-800 美元） [S4]。</p>\n<h3>2.2 毛利挤压</h3>\n<p>由于难以将全部“铟税”转嫁给在 1.6T 放量阶段要求降价的云服务巨头 (CSPs)，光模块厂商（如无晶圆厂集成商）的毛利率被挤压了 <strong>300-500 个基点 (bps)</strong> [S2]。拥有内部 InP 晶圆厂的垂直整合玩家（如 Broadcom, Coherent）保持了 <strong>10-15% 的毛利领先优势</strong> [S4]。</p>\n<h2>3. 对 AI 加速器与集群部署的影响</h2>\n<p>“材料到网络”的成本传导正成为 AI “Scale-Out” 资本开支中不可忽视的一部分。</p>\n<ul>\n<li><strong>网络 BOM 通胀：</strong> 2026 年代的 AI 集群光纤需求量是 2024 年模型的 <strong>5 倍</strong> [S1]。锗掺杂光纤和 InP 收发器的成本上涨，使 AI 集群的网络部分资本开支同比增加 <strong>12%</strong> [自测算：基于 1.6T 模块 800 美元底价及 5 倍光纤密度]。</li>\n<li><strong>产能上限：</strong> 若 2026 年 11 月 27 日的出口禁令暂停期不予延长，我们预计 2026 年下半年 1.6T 模块的生产目标存在 <strong>15-20% 的下行风险</strong> [S3]。英伟达 (NVIDIA) 对 EML 产能的预分配已为二线云厂商和主权 AI 项目制造了“稀缺性壁垒” [S4]。</li>\n</ul>\n<h2>4. 战略展望：硅光子技术的转向</h2>\n<p>采用 CPO 不再仅仅是节能的选择，更是一种供应链韧性战略。\n*   <strong>台积电 (TSMC) COUPE：</strong> 台积电 COUPE 平台于 2026 年初进入风险量产，实现了光子学与 2nm/3nm 逻辑芯片的集成，减少了对高成本离散 InP 组件的依赖 [S5]。\n*   <strong>替代效应：</strong> 我们观察到行业加速转向 <strong>GaN-on-Silicon</strong> 电源系统和 <strong>硅光子</strong> 互联，以规避受限最严重的镓/铟供应路径 [S3][S5]。</p>\n<h2>5. 资料来源 / Sources</h2>\n<ul>\n<li>[S1] SMM (上海有色网), \"Critical Metals Price Benchmark June 2026\" — https://www.metal.com/Gallium/2026-06-benchmark</li>\n<li>[S2] LightCounting, \"Optical Communications Market Forecast Q2 2026\" — https://www.lightcounting.com/report/2026/06/market-forecast</li>\n<li>[S3] Reuters (路透社), \"China Extends Export Ban Suspension on Gallium and Germanium to Nov 2026\" — https://www.reuters.com/technology/china-export-controls-2026-05-15/</li>\n<li>[S4] Yole Group, \"InP and GaAs Compound Semiconductor Market Report 2026\" — https://www.yolegroup.com/report/2026/compound-semi-trends</li>\n<li>[S5] SemiEngineering, \"CPO and Advanced Packaging: The 1.6T Transition\" — https://semiengineering.com/2026/cpo-packaging-roadmap/</li>\n</ul>"
+}

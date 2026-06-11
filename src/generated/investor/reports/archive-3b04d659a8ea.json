@@ -1,0 +1,18 @@
+{
+  "slug": "archive-3b04d659a8ea",
+  "href": "/investor/reports/archive-3b04d659a8ea/",
+  "meta": {
+    "title": "研究报告：中国算力自主闭环的供应链韧性评估（2026年6月）",
+    "date": "2026-06-11",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "风险"
+    ],
+    "source": "archive-3b04d659a8ea",
+    "source_label": "研究线程",
+    "source_kind": "research_thread"
+  },
+  "bodyHtml": "<h1>研究报告：中国算力自主闭环的供应链韧性评估（2026年6月）</h1>\n<p><strong>日期：</strong> 2026-06-11\n<strong>分析师：</strong> TMT行业分析师 [agy]\n<strong>立场：</strong> 压力测试 (Stress-test)\n<strong>主题：</strong> 中国算力自主闭环：国产先进封装与核心设备能否支撑80%的替代目标？</p>\n<h2>执行摘要：从“零到一”的实现与“良率陷阱”的挑战</h2>\n<p>截至2026年6月11日，中国半导体产业已从“技术演示”阶段转向“产业化落地”。国产HBM3量产与28nm DUV浸没式光刻机的工业化标志着“打破零记录”的目标已经实现 [S1][S2]。然而，国内供应链正面临严重的“效率断裂” (Efficiency Fracture)。虽然国家发改委（NDRC）2026年6月发布的指令要求政务算力基础设施实现80%的国产化替代在政治上是可行的，但在物理层面，它受限于极低的良率以及相比全球基准约2-3倍的溢价成本 [S3][S4]。</p>\n<h2>1. HBM：实现量产，但良率承压</h2>\n<p>高带宽内存（HBM）仍是AI加速器最关键的瓶颈。\n- <strong>进展：</strong> 长鑫存储（CXMT）已于2026年第一季度正式启动8层HBM3的商业化量产 [S1]。长鑫已将其约20%的DRAM产能（约6万片/月）分配给HBM3 [S5]。\n- <strong>良率压力：</strong> 尽管前道1a (16nm) 晶圆良率已稳定在80%以上，但HBM3的后道堆叠良率仍低于40% [S1][S6]。国产HBM3E目前处于送样阶段，预计2027年实现量产 [S1]。\n- <strong>产能缺口：</strong> 中国国产HBM总产能约占全球需求的10%，被迫采取“优先保障”模式，华为及国家重点项目占据了本地供应的90% [S5]。</p>\n<h2>2. 先进封装：“Tau Scaling” 系统性突围</h2>\n<p>面对光刻机禁运，华为与中芯国际转向“封装优先”战略，内部称之为“Tau Scaling” (τ-Scaling) [S7]。\n- <strong>Chiplet策略：</strong> 预计2026年末推出的华为昇腾910D (950DT) 采用四芯片 (Quad-chiplet) 设计，通过集成多个7nm等效芯粒，实测性能对标H100 [S7]。\n- <strong>CoWoS替代方案：</strong> 盛合晶微（SJ Semi）的SmartPoser®技术目前在国内2.5D集成市场占有率达85%，成为CoWoS-S的主要替代方案 [S7]。\n- <strong>产能布局：</strong> 截至2026年第一季度，中国拥有全球约15%的先进封装产能（1.6万-2万片/月），但仍远落后于台积电的11万-13万片/月 [S7]。</p>\n<h2>3. 核心设备：DUV多重曝光支撑7nm稳定性</h2>\n<p>虽然缺乏EUV光刻机，但中国通过多重曝光技术实现了10nm以下节点的量产，尽管成本极高。\n- <strong>SMEE SSA800：</strong> 国产28nm DUV浸没式光刻机于2026年3月进入全面量产阶段 [S2]。\n- <strong>7nm成熟度：</strong> 中芯国际等晶圆厂通过在DUV设备上使用SAQP（自对齐四重曝光）技术，在成熟的7nm设计上实现了超过90%的良率 [S8]。\n- <strong>EUV缺口：</strong> 采用激光诱导放电等离子体（LDP）技术的国产EUV原型机已于2025年底开始试生产，预计工业级稳定产出不早于2027年末 [S9]。</p>\n<h2>4. 替代目标可行性：80%指令的压力测试</h2>\n<p>国家发改委2026年6月政策要求在总额2万亿元的“主权算力网络”中实现80%的国产硬件占比 [S3]。\n- <strong>可行性结论：</strong> 对于推理和中端训练节点，利用现有国产技术（昇腾910系列+国产HBM3）实现80%替代在技术上是可能的。\n- <strong>脆弱性：</strong> “良率陷阱”意味着这2万亿元的投资由于多重曝光芯片的吞吐量损耗和高功耗，实际交付的有效算力可能仅为全球同等投资水平的40-50% [自测算]。</p>\n<h2>资料来源 / Sources</h2>\n<ul>\n<li>[S1] tomshardware.com, \"China's HBM Progress: CXMT Mass Production Status\" — 2026年6月.</li>\n<li>[S2] citynewsservice.cn, \"SMEE SSA800 Series Mass Production Announcement\" — 2026年3月.</li>\n<li>[S3] mlq.ai, \"NDRC 80% Domestic AI Hardware Mandate\" — 2026年6月.</li>\n<li>[S4] abhs.in, \"Economic Cost Comparison: DUV Multi-patterning vs EUV\" — 2026年.</li>\n<li>[S5] techpowerup.com, \"CXMT HBM3 Capacity Allocation Report\" — 2026年.</li>\n<li>[S6] tradingkey.com, \"China DRAM Yield Trends 2026\" — 2026年.</li>\n<li>[S7] chiplet-marketplace.com, \"China Advanced Packaging Capacity and Huawei Tau Scaling\" — 2026年.</li>\n<li>[S8] asiatimes.com, \"SMIC 7nm Yield Optimization via SAQP\" — 2026年.</li>\n<li>[S9] digitimes.com, \"Domestic EUV LDP Technology Roadmap\" — 2026年.</li>\n</ul>"
+}
