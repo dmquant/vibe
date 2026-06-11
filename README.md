@@ -11,7 +11,7 @@ decision support.
 
 The site is designed for investors, founders, operators, and research leaders
 who need more than isolated reports. It shows how an AI research organization
-can turn daily market information, analyst handoffs, whiteboard debates,
+can turn daily market information, analyst handoffs, research debates,
 mailbox signals, deep research, and recap dashboards into a living knowledge
 product.
 
@@ -31,7 +31,7 @@ coordination, editorial judgment, and a publishable research record.
 The build story matters because it mirrors the product thesis. The first
 versions started as natural-language direction and grew into a working
 institute: specialist analysts, scheduled daily work, mailbox handoffs,
-whiteboard threads, research archives, quality checks, investor dashboards, and
+research debates, research archives, quality checks, investor dashboards, and
 public reports. The point was not to automate away the human researcher. The
 point was to give the human researcher enough parallel research capacity,
 context memory, and decision support to work at institutional scale.
@@ -47,7 +47,7 @@ risk, and deciding what should be acted on.
 
 AI Institute is a multi-agent research workflow for financial and strategic
 decision-making. Its core value is not content automation. It is research
-operating leverage: a way to keep many analytical threads moving in parallel
+operating leverage: a way to keep many analytical lines moving in parallel
 while retaining source context, thesis lineage, and recap discipline.
 
 The operating thesis is simple:
@@ -65,6 +65,8 @@ Vibe turns that workflow into a usable product surface:
 - A public introduction to ResearchOS and AI Institute.
 - A daily investor console for morning briefs, market tape, research-chain
   signals, and risk alerts.
+- A timeline tracker that shows how briefs, reports, recaps, and living theses
+  evolve over time.
 - A searchable report library for AI analyst outputs.
 - Deep research pages that retain source context and thesis lineage.
 - Critical recap dashboards that compare past views with later evidence and
@@ -88,6 +90,7 @@ Vibe turns that workflow into a usable product surface:
 | `/` | ResearchOS and AI Institute landing experience |
 | `/investor/` | AI Institute investor console |
 | `/investor/daily/` | Latest daily morning brief dashboard |
+| `/investor/timeline/` | Clickable timeline for briefs, reports, recaps, and thesis updates |
 | `/investor/reports/[slug]/` | AI analyst report pages and reader reports |
 | `/investor/deep-research/[slug]/` | Long-form deep research |
 | `/investor/recaps/` | Critical recap dashboards |
@@ -130,7 +133,7 @@ Vibe 不是私有研究引擎本身，而是公开的静态发布层。它把 AI
 AI Institute 的起点不是“让 AI 写一篇报告”，而是一个更像产品命题的问题：能不能让一座 AI
 研究院像真实机构一样运转？它不是通用聊天机器人，也不是一次性报告生成器，而是一套有角色分工、日常节奏、机构记忆、内部协作、编辑判断和可发布研究记录的工作系统。
 
-这个建设故事重要，是因为它本身就对应了产品主张。最初的版本从自然语言指令开始，逐步长成一个可以工作的研究院：专业分析师、每日任务、邮箱交接、白板讨论、研究档案、质量检查、投资看板和公开报告。目标不是把人类研究员替代掉，而是给人类研究员提供足够的并行研究能力、上下文记忆和决策支持，让一个人也能以接近机构化的方式组织研究。
+这个建设故事重要，是因为它本身就对应了产品主张。最初的版本从自然语言指令开始，逐步长成一个可以工作的研究院：专业分析师、每日任务、邮箱交接、研究讨论、研究档案、质量检查、投资看板和公开报告。目标不是把人类研究员替代掉，而是给人类研究员提供足够的并行研究能力、上下文记忆和决策支持，让一个人也能以接近机构化的方式组织研究。
 
 从业务角度看，AI Institute 更像一间数字新闻编辑部加投资研究部。AI 分析师负责扫描市场、阅读材料、形成初稿、互相挑战、交接开放问题，并记录一个观点如何随着证据变化而演进。人类研究员仍然是总编辑和投委会：选择问题、判断重要性、管理风险，并决定哪些结论真正值得行动。
 
@@ -149,6 +152,7 @@ Vibe 把这套工作流呈现为一个可访问的产品界面：
 
 - ResearchOS 与 AI Institute 的公开业务介绍。
 - 面向投资研究的每日晨会简报看板。
+- 研究时间线追踪器，用于查看简报、报告、复盘和动态论点如何演进。
 - AI 分析师报告库与人类友好的 reader report。
 - 保留来源、证据和观点脉络的深度研究页面。
 - 对关键主题进行时间线复盘和市场表现对照的 recap dashboard。
@@ -171,6 +175,7 @@ Vibe 把这套工作流呈现为一个可访问的产品界面：
 | `/` | ResearchOS 与 AI Institute 首页 |
 | `/investor/` | AI Institute 投资研究台 |
 | `/investor/daily/` | 最新晨会简报看板 |
+| `/investor/timeline/` | 简报、报告、复盘和论点更新的可点击研究时间线 |
 | `/investor/reports/[slug]/` | AI 分析师报告和 reader report |
 | `/investor/deep-research/[slug]/` | 长篇深度研究 |
 | `/investor/recaps/` | 关键主题复盘仪表盘 |

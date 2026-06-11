@@ -1,0 +1,275 @@
+---
+import BaseHead from "../../../components/BaseHead.astro";
+import Header from "../../../components/Header.astro";
+import { readSiteData } from "../../../lib/investor-generated.js";
+import { buildInvestorTimeline } from "../../../lib/investor-timeline.js";
+import { getCollection } from "astro:content";
+import "../../../styles/investor-timeline.css";
+
+const posts = await getCollection("blog");
+const siteData = readSiteData();
+const timeline = buildInvestorTimeline(siteData, posts);
+const sourceFilters = Object.entries(timeline.sourceMeta)
+  .map(([key, meta]) => ({
+    key,
+    ...meta,
+    count: timeline.events.filter((event) => event.source === key).length,
+  }))
+  .filter((item) => item.count > 0)
+  .sort((a, b) => b.count - a.count);
+const themeFilters = timeline.themeMix.slice(0, 10);
+const maxSourceCount = Math.max(1, ...timeline.sourceMix.map((item) => item.count));
+const maxThemeCount = Math.max(1, ...timeline.themeMix.map((item) => item.count));
+const splitDate = (date) => {
+  const [year = "", month = "", day = ""] = String(date || "").split("-");
+  return { year, month, day };
+};
+const escapeAttr = (value) => String(value || "").replaceAll('"', "&quot;");
+---
+
+<!doctype html>
+<html lang="zh-CN" data-lang="zh">
+  <head>
+    <BaseHead
+      title="研究时间线 · AI Institute 投资研究台"
+      description="AI Institute timeline tracker for daily briefs, reports, reader memos, recaps, deep research, living theses, and research-change signals."
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="timeline-page" data-visible-count={timeline.events.length}>
+      <section class="timeline-hero">
+        <div>
+          <div class="timeline-kicker">AI Institute · Timeline Tracker</div>
+          <h1>研究时间线追踪器</h1>
+          <p>
+            将每日简报、总编报告、邮箱摘要、人类友好报告、复盘、深度研究、动态论点和变化雷达合并为一条可检索、可过滤、可点击的公开研究时间线。
+          </p>
+          <div class="timeline-hero-actions">
+            <a href="/investor/daily/">打开今日看板</a>
+            <a href="/investor/recaps/">关键复盘</a>
+            <a href="/investor/">返回研究台</a>
+          </div>
+        </div>
+        <div class="timeline-stat-grid" aria-label="Timeline stats">
+          <div class="timeline-stat">
+            <span>Events</span>
+            <strong>{timeline.stats.events}</strong>
+            <em>公开研究节点</em>
+          </div>
+          <div class="timeline-stat">
+            <span>Days</span>
+            <strong>{timeline.stats.days}</strong>
+            <em>{timeline.startDate} → {timeline.latestDate}</em>
+          </div>
+          <div class="timeline-stat">
+            <span>Reports</span>
+            <strong>{timeline.stats.trackedReports}</strong>
+            <em>已归档报告</em>
+          </div>
+          <div class="timeline-stat">
+            <span>Theses</span>
+            <strong>{timeline.stats.activeTheses}</strong>
+            <em>动态论点池</em>
+          </div>
+        </div>
+      </section>
+
+      <section class="timeline-controls" aria-label="Timeline filters">
+        <div class="timeline-control-block">
+          <label class="timeline-control-label" for="timelineSearch">Search</label>
+          <input id="timelineSearch" class="timeline-search" type="search" placeholder="搜索主题、公司、资产、分析师、报告标题..." />
+        </div>
+        <div class="timeline-control-block">
+          <span class="timeline-control-label">Sources</span>
+          <div class="timeline-chip-row">
+            <button class="timeline-chip-button is-active" type="button" data-filter-source="all">全部</button>
+            {sourceFilters.slice(0, 9).map((source) => (
+              <button class={`timeline-chip-button accent-${source.accent}`} type="button" data-filter-source={source.key}>
+                {source.icon} {source.labelZh} · {source.count}
+              </button>
+            ))}
+          </div>
+        </div>
+        <div class="timeline-control-block">
+          <span class="timeline-control-label">Themes</span>
+          <div class="timeline-chip-row">
+            <button class="timeline-chip-button is-active" type="button" data-filter-theme="all">全部主题</button>
+            {themeFilters.map((theme) => (
+              <button class="timeline-chip-button" type="button" data-filter-theme={theme.label}>
+                {theme.label} · {theme.count}
+              </button>
+            ))}
+          </div>
+        </div>
+        <div class="timeline-control-block">
+          <span class="timeline-control-label">Visible</span>
+          <a id="timelineVisibleCounter" class="timeline-link-button" href="#timeline-stream">{timeline.events.length} events</a>
+        </div>
+      </section>
+
+      <section class="timeline-layout">
+        <div id="timeline-stream" class="timeline-stream">
+          <div class="timeline-empty">没有匹配的公开研究节点。请放宽筛选或搜索词。</div>
+          {timeline.groups.map((group) => {
+            const date = splitDate(group.date);
+            return (
+              <section class="timeline-day" data-day={group.date}>
+                <header class="timeline-day-header">
+                  <div class="timeline-day-date">
+                    <span>{date.year}</span>
+                    <span>{date.month}/{date.day}</span>
+                  </div>
+                  <div class="timeline-day-title">
+                    <h2>{group.date}</h2>
+                    <div class="timeline-day-meta">
+                      {group.sources.slice(0, 5).join(" / ")} · {group.themes.slice(0, 4).join(" / ")}
+                    </div>
+                  </div>
+                  <span class="timeline-day-count">{group.items.length} nodes</span>
+                </header>
+                <div class="timeline-event-list">
+                  {group.items.map((event) => (
+                    <article
+                      class={`timeline-event accent-${event.accent}`}
+                      data-source={event.source}
+                      data-theme={event.theme.labelZh}
+                      data-search={escapeAttr(`${event.title} ${event.summary} ${event.sourceLabelZh} ${event.theme.labelZh}`)}
+                    >
+                      <span class="timeline-event-dot">{event.icon}</span>
+                      <span class="timeline-event-body">
+                        <span class="timeline-event-top">
+                          <span class="timeline-event-source">{event.sourceLabelZh}</span>
+                          <span class="timeline-event-theme">{event.theme.labelZh}</span>
+                        </span>
+                        <h3><a href={event.href}>{event.title}</a></h3>
+                        {event.summary ? <p>{event.summary}</p> : null}
+                        {event.links?.length ? (
+                          <span class="timeline-event-links">
+                            {event.links.map((link) => (
+                              <a href={link.href}>{link.title}</a>
+                            ))}
+                          </span>
+                        ) : null}
+                      </span>
+                    </article>
+                  ))}
+                </div>
+              </section>
+            );
+          })}
+        </div>
+
+        <aside class="timeline-sidebar" aria-label="Timeline summary">
+          <section class="timeline-side-card">
+            <h2>来源构成</h2>
+            <div class="mix-list">
+              {timeline.sourceMix.slice(0, 9).map((item) => (
+                <div class="mix-row">
+                  <span>{item.label}</span>
+                  <strong>{item.count}</strong>
+                  <div class="mix-bar"><i style={`--width:${Math.round((item.count / maxSourceCount) * 100)}%`}></i></div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section class="timeline-side-card">
+            <h2>主题密度</h2>
+            <div class="mix-list">
+              {timeline.themeMix.slice(0, 9).map((item) => (
+                <div class="mix-row">
+                  <span>{item.label}</span>
+                  <strong>{item.count}</strong>
+                  <div class="mix-bar"><i style={`--width:${Math.round((item.count / maxThemeCount) * 100)}%`}></i></div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section class="timeline-side-card">
+            <h2>动态论点轨道</h2>
+            <div class="track-list">
+              {timeline.thesisTracks.slice(0, 7).map((track) => {
+                const primary = track.theses[0];
+                const event = track.events[0];
+                const href = event?.href || primary?.linkedReports?.[0]?.href || "/investor/#theses";
+                return (
+                  <a class={`track-card accent-${track.accent || "yellow"}`} href={href}>
+                    <span class="track-label">{track.labelZh} · {track.eventCount} events</span>
+                    <h3>{primary?.title || event?.title || track.labelZh}</h3>
+                    <p>{primary?.coreView || event?.summary || "持续跟踪最新证据、风险和论点变体。"}</p>
+                    <span class="track-source">
+                      <span>{primary?.status || "tracking"}</span>
+                      <span>{event?.date || primary?.lastUpdated || timeline.latestDate}</span>
+                    </span>
+                  </a>
+                );
+              })}
+            </div>
+          </section>
+        </aside>
+      </section>
+    </main>
+
+    <script>
+      const root = document.querySelector('.timeline-page');
+      const search = document.getElementById('timelineSearch');
+      const counter = document.getElementById('timelineVisibleCounter');
+      const sourceButtons = [...document.querySelectorAll('[data-filter-source]')];
+      const themeButtons = [...document.querySelectorAll('[data-filter-theme]')];
+      let activeSource = 'all';
+      let activeTheme = 'all';
+
+      function normalize(value) {
+        return String(value || '').toLowerCase().trim();
+      }
+
+      function syncButtons(buttons, attr, value) {
+        buttons.forEach((button) => {
+          button.classList.toggle('is-active', button.dataset[attr] === value);
+        });
+      }
+
+      function applyFilters() {
+        const query = normalize(search?.value);
+        let visible = 0;
+
+        document.querySelectorAll('.timeline-day').forEach((day) => {
+          let dayVisible = false;
+          day.querySelectorAll('.timeline-event').forEach((event) => {
+            const sourceOk = activeSource === 'all' || event.dataset.source === activeSource;
+            const themeOk = activeTheme === 'all' || event.dataset.theme === activeTheme;
+            const textOk = !query || normalize(event.dataset.search).includes(query);
+            const show = sourceOk && themeOk && textOk;
+            event.classList.toggle('is-hidden', !show);
+            if (show) {
+              dayVisible = true;
+              visible += 1;
+            }
+          });
+          day.classList.toggle('is-hidden', !dayVisible);
+        });
+
+        if (counter) counter.textContent = `${visible} events`;
+        root?.classList.toggle('has-empty', visible === 0);
+      }
+
+      search?.addEventListener('input', applyFilters);
+      sourceButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          activeSource = button.dataset.filterSource || 'all';
+          syncButtons(sourceButtons, 'filterSource', activeSource);
+          applyFilters();
+        });
+      });
+      themeButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          activeTheme = button.dataset.filterTheme || 'all';
+          syncButtons(themeButtons, 'filterTheme', activeTheme);
+          applyFilters();
+        });
+      });
+    </script>
+  </body>
+</html>
