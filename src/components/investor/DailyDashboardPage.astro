@@ -52,6 +52,7 @@ const mapItems = (dashboard.chainRadar || []).map((item, index) => ({
 }));
 const serializedMapData = JSON.stringify(mapItems).replaceAll("<", "\\u003c");
 const isAhead = dashboard.status === "morning_manifest_ahead_of_investor_daily";
+const comboCount = (dashboard.stats?.sections || 0) + (dashboard.stats?.deepResearch || 0);
 ---
 
 <main class="daily-dashboard-page">
@@ -60,6 +61,12 @@ const isAhead = dashboard.status === "morning_manifest_ahead_of_investor_daily";
       <div class="daily-dashboard-kicker">AI Institute · Morning Brief Dashboard</div>
       <h1>{dashboard.summary?.headline || "晨会信号看板"}</h1>
       <p>{dashboard.summary?.lead || "晨会结果已整理为市场报价、核心结论、编辑冲突和深度研究入口。"}</p>
+      <div class="daily-pixel-hud" aria-label="Daily brief game-style status">
+        <a href={readerHref}>🧠 Reader mode</a>
+        <a href="#daily-dashboard-market">⚡ Market tape</a>
+        <span>🎮 Quest log x{dashboard.stats?.sections || 0}</span>
+        <span>🔥 Combo x{comboCount}</span>
+      </div>
     </div>
     <div class="daily-dashboard-status">
       <span>{dashboard.date || "Latest"}</span>
