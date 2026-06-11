@@ -21,7 +21,8 @@
     "recentReports": 1909,
     "viewChanges": 12,
     "cautious": 31,
-    "positive": 1
+    "positive": 1,
+    "analysts": 40
   },
   "changes": [
     {
@@ -308,76 +309,6 @@
           ],
           "chain": "宏观通胀传导",
           "score": 36.6,
-          "source": "AI Institute report archive"
-        }
-      ]
-    },
-    {
-      "analystId": "institute-diagnostician",
-      "analyst": "研究院诊断师",
-      "avatar": "",
-      "category": "综合编审",
-      "stance": "偏谨慎",
-      "evidenceAdded": 3,
-      "changeZh": "新增 3 条证据，集中在 ai-infrastructure、macro-inflation。",
-      "changeEn": "Added 3 evidence items, concentrated in ai-infrastructure, macro-inflation.",
-      "linkedReports": [
-        {
-          "id": "archive-af01047811c7",
-          "title": "Active research-project theses",
-          "summary": "Scope : institute-diagnostician (editorial — sees all fleet projects) Active : 2 · Recently closed (last 14d) : 5",
-          "href": "/investor/reports/archive-af01047811c7/",
-          "analyst": "研究院诊断师",
-          "analyst_id": "institute-diagnostician",
-          "date": "2026-06-11",
-          "category": "综合编审",
-          "tags": [
-            "AI",
-            "通胀",
-            "宏观",
-            "A股",
-            "港美股"
-          ],
-          "chain": "AI 基础设施",
-          "score": 35.8,
-          "source": "AI Institute report archive"
-        },
-        {
-          "id": "archive-8c89107a7c87",
-          "title": "1. 一句话总览",
-          "summary": "截至 shell 日期 2026-06-11，研究院处于 watch-listed（观察名单）：核心工作流 81/81 完成且 archive 无失败，但深度研究队列显著拥堵，chain autonomy 与 fac...",
-          "href": "/investor/reports/archive-8c89107a7c87/",
-          "analyst": "研究院诊断师",
-          "analyst_id": "institute-diagnostician",
-          "date": "2026-06-11",
-          "category": "综合编审",
-          "tags": [
-            "AI",
-            "通胀",
-            "能源",
-            "综合编审"
-          ],
-          "chain": "宏观通胀传导",
-          "score": 37.1,
-          "source": "AI Institute report archive"
-        },
-        {
-          "id": "archive-d2bb464ae0d4",
-          "title": "Recent operator-action digest",
-          "summary": "Window : last 7 day(s) · scope=institute-diagnostician (editorial — sees all) Items : 12 · Forecasts emitted : 9 · Positions opened : 0",
-          "href": "/investor/reports/archive-d2bb464ae0d4/",
-          "analyst": "研究院诊断师",
-          "analyst_id": "institute-diagnostician",
-          "date": "2026-06-11",
-          "category": "综合编审",
-          "tags": [
-            "AI",
-            "通胀",
-            "风险",
-            "综合编审"
-          ],
-          "chain": "AI 基础设施",
-          "score": 36.8,
           "source": "AI Institute report archive"
         }
       ]
@@ -1509,257 +1440,6 @@
             ],
             "chain": "AI 基础设施",
             "score": 33.5,
-            "source": "AI Institute report archive"
-          }
-        ]
-      }
-    },
-    {
-      "id": "institute-diagnostician",
-      "name": "研究院诊断师",
-      "nameEn": "Institute Diagnostician",
-      "avatar": "",
-      "color": "#475569",
-      "category": "综合编审",
-      "specialty": "每日审视研究院全体运行的健康度，分析模式、识别异常并给出可执行的优化建议（顾问角色，不直接改动 prompt 或工作流）",
-      "reportCount": 65,
-      "latestDate": "2026-06-11",
-      "reportsToday": 3,
-      "recentReports": 21,
-      "stance": {
-        "label": "偏谨慎",
-        "bullish": 0,
-        "cautious": 3,
-        "balance": -3,
-        "tone": "cautious"
-      },
-      "themeCounts": [
-        {
-          "id": "AI",
-          "label": "AI",
-          "value": 65
-        },
-        {
-          "id": "通胀",
-          "label": "通胀",
-          "value": 48
-        },
-        {
-          "id": "风险",
-          "label": "风险",
-          "value": 38
-        },
-        {
-          "id": "A股",
-          "label": "A股",
-          "value": 35
-        },
-        {
-          "id": "宏观",
-          "label": "宏观",
-          "value": 33
-        },
-        {
-          "id": "能源",
-          "label": "能源",
-          "value": 30
-        }
-      ],
-      "chainCounts": [
-        {
-          "id": "ai-infrastructure",
-          "label": "AI 基础设施",
-          "value": 65
-        },
-        {
-          "id": "macro-inflation",
-          "label": "宏观通胀传导",
-          "value": 51
-        }
-      ],
-      "recentViews": [
-        {
-          "title": "Active research-project theses",
-          "summary": "Scope : institute-diagnostician (editorial — sees all fleet projects) Active : 2 · Recently closed (last 14d) : 5",
-          "date": "2026-06-11",
-          "href": "/investor/reports/archive-af01047811c7/",
-          "importance": 43
-        },
-        {
-          "title": "1. 一句话总览",
-          "summary": "截至 shell 日期 2026-06-11，研究院处于 watch-listed（观察名单）：核心工作流 81/81 完成且 archive 无失败，但深度研究队列显著拥堵，chain autonomy 与 fact-check v2 的监控信号均出现新...",
-          "date": "2026-06-11",
-          "href": "/investor/reports/archive-8c89107a7c87/",
-          "importance": 40.6
-        },
-        {
-          "title": "Recent operator-action digest",
-          "summary": "Window : last 7 day(s) · scope=institute-diagnostician (editorial — sees all) Items : 12 · Forecasts emitted : 9 · Positions opened : 0",
-          "date": "2026-06-11",
-          "href": "/investor/reports/archive-d2bb464ae0d4/",
-          "importance": 38.2
-        },
-        {
-          "title": "Active research-project theses",
-          "summary": "Scope : institute-diagnostician (editorial — sees all fleet projects) Active : 2 · Recently closed (last 14d) : 5",
-          "date": "2026-06-10",
-          "href": "/investor/reports/archive-77157516da74/",
-          "importance": 44
-        },
-        {
-          "title": "研究院每日健康诊断报告 — 2026-06-10",
-          "summary": "1. 一句话总览 研究院今日整体状态为： 需注意 (Watch-listed)。主要原因为深度研究队列由于每日容量限制存在严重积压停滞，且事实核查 v2 系统因节点路由故障及验证超时导致吞吐量暴跌 60%。",
-          "date": "2026-06-10",
-          "href": "/investor/reports/archive-c0c25cb8c0e9/",
-          "importance": 42.6
-        }
-      ],
-      "latestReports": [
-        {
-          "id": "archive-d2bb464ae0d4",
-          "title": "Recent operator-action digest",
-          "summary": "Window : last 7 day(s) · scope=institute-diagnostician (editorial — sees all) Items : 12 · Forecasts emitted : 9 · Positions opened : 0",
-          "href": "/investor/reports/archive-d2bb464ae0d4/",
-          "analyst": "研究院诊断师",
-          "analyst_id": "institute-diagnostician",
-          "date": "2026-06-11",
-          "category": "综合编审",
-          "tags": [
-            "AI",
-            "通胀",
-            "风险",
-            "综合编审"
-          ],
-          "chain": "AI 基础设施",
-          "score": 36.8,
-          "source": "AI Institute report archive"
-        },
-        {
-          "id": "archive-af01047811c7",
-          "title": "Active research-project theses",
-          "summary": "Scope : institute-diagnostician (editorial — sees all fleet projects) Active : 2 · Recently closed (last 14d) : 5",
-          "href": "/investor/reports/archive-af01047811c7/",
-          "analyst": "研究院诊断师",
-          "analyst_id": "institute-diagnostician",
-          "date": "2026-06-11",
-          "category": "综合编审",
-          "tags": [
-            "AI",
-            "通胀",
-            "宏观",
-            "A股",
-            "港美股"
-          ],
-          "chain": "AI 基础设施",
-          "score": 35.8,
-          "source": "AI Institute report archive"
-        },
-        {
-          "id": "archive-8c89107a7c87",
-          "title": "1. 一句话总览",
-          "summary": "截至 shell 日期 2026-06-11，研究院处于 watch-listed（观察名单）：核心工作流 81/81 完成且 archive 无失败，但深度研究队列显著拥堵，chain autonomy 与 fac...",
-          "href": "/investor/reports/archive-8c89107a7c87/",
-          "analyst": "研究院诊断师",
-          "analyst_id": "institute-diagnostician",
-          "date": "2026-06-11",
-          "category": "综合编审",
-          "tags": [
-            "AI",
-            "通胀",
-            "能源",
-            "综合编审"
-          ],
-          "chain": "宏观通胀传导",
-          "score": 37.1,
-          "source": "AI Institute report archive"
-        },
-        {
-          "id": "archive-c0c25cb8c0e9",
-          "title": "研究院每日健康诊断报告 — 2026-06-10",
-          "summary": "1. 一句话总览 研究院今日整体状态为： 需注意 (Watch-listed)。主要原因为深度研究队列由于每日容量限制存在严重积压停滞，且事实核查 v2 系统因节点路由故障及...",
-          "href": "/investor/reports/archive-c0c25cb8c0e9/",
-          "analyst": "研究院诊断师",
-          "analyst_id": "institute-diagnostician",
-          "date": "2026-06-10",
-          "category": "综合编审",
-          "tags": [
-            "AI",
-            "通胀",
-            "宏观",
-            "能源",
-            "风险"
-          ],
-          "chain": "宏观通胀传导",
-          "score": 41.9,
-          "source": "AI Institute report archive"
-        }
-      ],
-      "change": {
-        "analystId": "institute-diagnostician",
-        "analyst": "研究院诊断师",
-        "avatar": "",
-        "category": "综合编审",
-        "stance": "偏谨慎",
-        "evidenceAdded": 3,
-        "changeZh": "新增 3 条证据，集中在 ai-infrastructure、macro-inflation。",
-        "changeEn": "Added 3 evidence items, concentrated in ai-infrastructure, macro-inflation.",
-        "linkedReports": [
-          {
-            "id": "archive-af01047811c7",
-            "title": "Active research-project theses",
-            "summary": "Scope : institute-diagnostician (editorial — sees all fleet projects) Active : 2 · Recently closed (last 14d) : 5",
-            "href": "/investor/reports/archive-af01047811c7/",
-            "analyst": "研究院诊断师",
-            "analyst_id": "institute-diagnostician",
-            "date": "2026-06-11",
-            "category": "综合编审",
-            "tags": [
-              "AI",
-              "通胀",
-              "宏观",
-              "A股",
-              "港美股"
-            ],
-            "chain": "AI 基础设施",
-            "score": 35.8,
-            "source": "AI Institute report archive"
-          },
-          {
-            "id": "archive-8c89107a7c87",
-            "title": "1. 一句话总览",
-            "summary": "截至 shell 日期 2026-06-11，研究院处于 watch-listed（观察名单）：核心工作流 81/81 完成且 archive 无失败，但深度研究队列显著拥堵，chain autonomy 与 fac...",
-            "href": "/investor/reports/archive-8c89107a7c87/",
-            "analyst": "研究院诊断师",
-            "analyst_id": "institute-diagnostician",
-            "date": "2026-06-11",
-            "category": "综合编审",
-            "tags": [
-              "AI",
-              "通胀",
-              "能源",
-              "综合编审"
-            ],
-            "chain": "宏观通胀传导",
-            "score": 37.1,
-            "source": "AI Institute report archive"
-          },
-          {
-            "id": "archive-d2bb464ae0d4",
-            "title": "Recent operator-action digest",
-            "summary": "Window : last 7 day(s) · scope=institute-diagnostician (editorial — sees all) Items : 12 · Forecasts emitted : 9 · Positions opened : 0",
-            "href": "/investor/reports/archive-d2bb464ae0d4/",
-            "analyst": "研究院诊断师",
-            "analyst_id": "institute-diagnostician",
-            "date": "2026-06-11",
-            "category": "综合编审",
-            "tags": [
-              "AI",
-              "通胀",
-              "风险",
-              "综合编审"
-            ],
-            "chain": "AI 基础设施",
-            "score": 36.8,
             "source": "AI Institute report archive"
           }
         ]
@@ -4904,7 +4584,7 @@
       "avatar": "",
       "color": "#475569",
       "category": "综合编审",
-      "specialty": "维护研究院共享数据层（每日采集权威市场/宏观/资金面数值，写入 shared-data/<日期>/<topic>.json），审视全院数据使用，识别错用与缺失，提出新增数据源建议。负责报告输入侧的真实性，与 QA Manager（输出侧审计）和研究院诊断师（fleet 健康度）形成三层互补。",
+      "specialty": "维护研究院共享数据层（每日采集权威市场/宏观/资金面数值，写入 shared-data/<日期>/<topic>.json），审视全院数据使用，识别错用与缺失，提出新增数据源建议。负责报告输入侧的真实性，与 QA Manager（输出侧审计）和内部运营审查师（fleet 健康度）形成三层互补。",
       "reportCount": 23,
       "latestDate": "2026-06-11",
       "reportsToday": 1,
@@ -7800,7 +7480,7 @@
       "avatar": "",
       "color": "#475569",
       "category": "综合编审",
-      "specialty": "把研究院诊断师每日发现的运营缺陷转化为具体的、结构化的变更建议（参数、Cron、提示词），写入 operational_proposals 表；对安全类自动落地、对中高风险类等待审批；维护 operational_observations / operational_recipes / parameter_history / verified_facts 四类共享知识。诊断师只「看到」，运营官「做」。",
+      "specialty": "把内部运营审查师每日发现的运营缺陷转化为具体的、结构化的变更建议（参数、Cron、提示词），写入 operational_proposals 表；对安全类自动落地、对中高风险类等待审批；维护 operational_observations / operational_recipes / parameter_history / verified_facts 四类共享知识。内部运营审查只「看到」，运营官「做」。",
       "reportCount": 12,
       "latestDate": "2026-06-09",
       "reportsToday": 0,
