@@ -1,0 +1,20 @@
+{
+  "slug": "archive-dc6e80ce6d01",
+  "href": "/investor/reports/archive-dc6e80ce6d01/",
+  "meta": {
+    "title": "USD/JPY 凸性对冲结构化定价与日本当局反应函数映射 (2026年6月12日)",
+    "date": "",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "通胀",
+      "宏观",
+      "A股",
+      "风险"
+    ],
+    "source": "archive-dc6e80ce6d01",
+    "source_label": "研究线程",
+    "source_kind": "research_thread"
+  },
+  "bodyHtml": "<h1>USD/JPY 凸性对冲结构化定价与日本当局反应函数映射 (2026年6月12日)</h1>\n<h2>执行摘要</h2>\n<p>截至 2026 年 6 月 12 日，USD/JPY 正测试 <strong>160.20–160.50</strong> 的“红线” [S1]。继 4-5 月 ¥11.7 万亿的干预之后 [S2]，市场在 6 月 15-16 日日本央行（BOJ）会议和 6 月 17-18 日美联储会议前对冲情绪极度二元化。基于已设定的 <strong>8-12% 现金缓冲框架</strong>，我们提出“资助型凸性 (Funded Convexity)”策略：利用 T-bill 约 3.5%–3.75% 的收益 [S3] 来支付 OTM USD/JPY 看跌期权（JPY 看涨）的权利金。该结构在对冲“干预缺口”风险的同时，保持了组合整体的 Carry 中性。</p>\n<h2>1. 市场环境与当局反应函数</h2>\n<p>财务省（MOF）与日本央行正处于政策拐点。反应函数目前在口头干预、流动性抽紧式干预与结构化紧缩之间摆动。</p>\n<table>\n<thead>\n<tr>\n<th>情景</th>\n<th>当局行动</th>\n<th>USD/JPY 路径预测</th>\n<th>对冲表现</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>A: 战术防御</strong></td>\n<td>MOF 直接干预 (抛售美元储备)</td>\n<td>突发跳空：160.40 → 155.00</td>\n<td>高 Gamma 获利；偏斜（Skew）维持高位</td>\n</tr>\n<tr>\n<td><strong>B: 基本面转变</strong></td>\n<td>BOJ 加息 25bps 至 1.00% + QT [S1]</td>\n<td>结构性趋势：160 → 152</td>\n<td>Delta 驱动获利；波动率压缩</td>\n</tr>\n<tr>\n<td><strong>C: 政策投降</strong></td>\n<td>MOF 观察观望；BOJ 鸽派加息</td>\n<td>向上突破：160 → 165</td>\n<td>权利金全损；162 设止损点</td>\n</tr>\n<tr>\n<td><strong>D: 美联储主导</strong></td>\n<td>美联储主席 Warsh 维持鹰派 [S1]</td>\n<td>高位震荡：158–162 区间</td>\n<td>Carry 损耗；时间价值（Theta）衰减</td>\n</tr>\n</tbody>\n</table>\n<h2>2. 结构化凸性对冲</h2>\n<p>在 8-12% 的 T-bill 缓冲基础上，建议构建 <strong>USD Put / JPY Call</strong> 结构，以对冲组合的权益 Beta 和汇率风险。</p>\n<h3><strong>工具规格</strong></h3>\n<ul>\n<li><strong>类型：</strong> 1个月欧式 USD Put / JPY Call（看跌美元/看涨日元）。</li>\n<li><strong>执行价：</strong> 160.00 (平值) 或 158.00 (虚值)。</li>\n<li><strong>规模：</strong> 对冲总日元敏感敞口的 40%（相当于全球组合 NAV 的约 20%）。</li>\n<li><strong>定价（截至 2026 年 6 月 12 日）：</strong><ul>\n<li><strong>现货 (Spot)：</strong> 160.25 [S1]。</li>\n<li><strong>1M 隐含波动率：</strong> 7.2% [S1]。</li>\n<li><strong>25D 风险逆转 (Skew)：</strong> +2.5%（偏向 JPY 看涨期权）[S1]。</li>\n<li><strong>预估权利金：</strong> 约 1.75 日元/美元（约合对冲本金的 1.1%）。</li>\n</ul>\n</li>\n</ul>\n<h3><strong>融资策略：“现金资助”模式</strong></h3>\n<ul>\n<li><strong>缓冲收益：</strong> 10% NAV 配置于 1M T-bills，收益率 3.6% p.a. ≈ <strong>每月 30bps NAV 收入</strong>。</li>\n<li><strong>对冲成本：</strong> 20% NAV 的对冲敞口 * 1.1% 权利金 ≈ <strong>每月 22bps NAV 支出</strong>。</li>\n<li><strong>净利差 (Net Carry)：</strong> <strong>+8bps</strong>。通过利用研究记录 02 要求的流动性缓冲，该对冲实际上实现了“零成本”或微利融资。</li>\n</ul>\n<h2>3. 定价与路径风险</h2>\n<p>当前 <strong>+2.5% 的偏斜（Skew）</strong> 反映了市场对 MOF 的极端恐惧 [S1]。\n- <strong>对冲有效性：</strong> 在情景 A（干预）中，若汇率跳空 5 日元至 155.00，每张期权获利约 5.00 日元。相对于 1.75 日元的成本，这为尾部风险提供了 <strong>2.8 倍的赔率</strong>。\n- <strong>去杠杆信号：</strong> 遵循前序研究，我们维持去杠杆立场。对冲并非降低 Beta 的替代品，而是针对 <strong>相关性反转</strong>（日元-权益-黄金同涨/同跌）的保护。\n- <strong>路径监测：</strong> 若 USD/JPY 突破 <strong>161.00</strong> 且无干预发生，说明反应函数失效；建议平仓对冲并进一步将现金缓冲提至 15%，以应对更大规模的流动性事件。</p>\n<h2>## 资料来源 / Sources</h2>\n<ul>\n<li>[S1] Google Web Search, USD/JPY 1 month risk reversal skew June 2026 forecast; BOJ rate hike June 2026 expectations.</li>\n<li>[S2] 研究记录 01 / 财务省数据, ¥11.7 trillion intervention (Apr 28 - May 27, 2026).</li>\n<li>[S3] 自测算 [Own Estimate], 基于美联储主席 Warsh “Higher-for-longer” 指引的 T-bill 收益率 3.5%-3.75%。</li>\n<li>[S4] Investing.com, USD/JPY Spot and Volatility data as of June 12, 2026.</li>\n</ul>"
+}

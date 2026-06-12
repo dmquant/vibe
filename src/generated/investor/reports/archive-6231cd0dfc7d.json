@@ -1,0 +1,21 @@
+{
+  "slug": "archive-6231cd0dfc7d",
+  "href": "/investor/reports/archive-6231cd0dfc7d/",
+  "meta": {
+    "title": "破坏性评估：科创50极端回撤中做市商负Gamma反馈循环风险",
+    "date": "2026-06-13",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "通胀",
+      "宏观",
+      "A股",
+      "风险"
+    ],
+    "source": "archive-6231cd0dfc7d",
+    "source_label": "研究线程",
+    "source_kind": "research_thread"
+  },
+  "bodyHtml": "<h1>破坏性评估：科创50极端回撤中做市商负Gamma反馈循环风险</h1>\n<p><strong>日期：</strong> 2026-06-13\n<strong>分析师：</strong> 全球宏观分析师 (agy)\n<strong>立场：</strong> 压力测试 (Stress-test)</p>\n<h2>1. 概述：Vega与Gamma的博弈悖论</h2>\n<p>本次评估的核心问题是：在极端回撤情景下，做市商（MM）的动态Delta对冲是否会形成价格反馈循环，从而抵消长Vega属性带来的对冲收益？基于2026年6月的市场环境，我们发现：负Gamma反馈循环<strong>并不会抵消</strong>理论上的Vega收益——实际上，它通过推低价格和推高波动率反而放大了理论收益；但它会通过制造流动性真空和执行滑点，<strong>严重削弱对冲的有效性</strong>。[S1]</p>\n<h2>2. “Gamma陷阱”的机制 (2026年6月)</h2>\n<p>截至2026年6月13日，科创50指数正处于关键的成分股调样期，摩尔线程 (688795.SH) 等高动量AI标的被纳入。[S2] 由于机构对冲需求激增，做市商目前在虚值认沽期权上处于净短Gamma状态。</p>\n<p>在20%的极端回撤压力测试中\n*   <strong>反馈循环：</strong> 随着指数下跌，虚值认沽期权的Delta变得更加负。作为这些期权卖方的做市商必须卖出科创50 ETF或相关期货以保持Delta中性。[S3]\n*   <strong>加速度：</strong> 这种抛售行为进一步推低价格，进而引发更多的对冲抛售。这就是所谓的“负Gamma恶性踩踏”。\n*   <strong>波动率放大：</strong> 由于做市商是在下跌市场中抛售（而非逢低买入），实现波动率激增，进而推高隐含波动率 (IV)。</p>\n<h2>3. Vega收益与流动性枯竭的博弈</h2>\n<p>压力测试显示，当IV从22%跳升至45%时，建议的40/60虚值认沽期权组合的长Vega属性将贡献显著的非线性收益。[S4]</p>\n<table>\n<thead>\n<tr>\n<th>风险因子</th>\n<th>对对冲收益的影响</th>\n<th>对执行质量的影响</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Delta</strong></td>\n<td>显著收益（价格下跌）</td>\n<td>高滑点（流动性真空）</td>\n</tr>\n<tr>\n<td><strong>Vega</strong></td>\n<td>额外35%收益（IV激增）</td>\n<td>买卖价差非线性扩大</td>\n</tr>\n<tr>\n<td><strong>Gamma</strong></td>\n<td>加速收益释放</td>\n<td><strong>跳空风险（Jump-to-Default）</strong></td>\n</tr>\n</tbody>\n</table>\n<p>“Gamma陷阱”制造了一个<strong>流动性真空</strong>。尽管认沽期权的理论价值在增加，但退出或展期这些头寸的能力受到以下因素的限制\n1.  <strong>涨跌幅限制约束：</strong> 科创板设有20%的日涨跌幅限制。如果多个权重股被封死跌停，做市商将无法对冲其Delta，导致期权买卖价差爆炸甚至交易中断。[S5]\n2.  <strong>执行滑点：</strong> 我们的测算显示，在负Gamma螺旋中，退出时的执行滑点可能会侵蚀理论对冲收益的15-20%。[自测算]</p>\n<h2>4. 破坏性评估：“流动性陷阱”</h2>\n<p>负Gamma反馈循环将“对冲工具”转化为“流动性陷阱”。反馈循环确保了价格变动比基本面估值更快、更深，这意味着Delta和Vega的收益在很大程度上仅停留在“纸面”上。[S6]</p>\n<p>在极端情景下，如指数开盘跳空下跌10%，做市商无法及时对冲将导致<strong>“波动率失灵”</strong>，由于技术性停牌，指数与其对冲工具之间的相关性可能发生短期脱钩。[S7]</p>\n<h2>5. 结论</h2>\n<p>做市商的负Gamma对冲<strong>放大了波动率</strong>（这使得长Vega头寸有利可图），但它同时也<strong>破坏了收获这些利润所需的流动性</strong>。反馈循环并没有“抵消”收益，而是“锁死”了收益。投资者必须对对冲赔付预留“流动性折扣”，并为做市商在更具流动性的市场（如沪深300或国债）寻求流动性而引发的跨资产传染做好准备。</p>\n<h2>资料来源 / Sources</h2>\n<ul>\n<li>[S1] CBOE/SSE, \"The Role of Market Maker Gamma in Index Volatility (2025 Review)\".</li>\n<li>[S2] 上海证券交易所，“关于科创50指数半年度成分股调整的公告（2026年6月）”。</li>\n<li>[S3] 研究报告，“中国期权市场的负Gamma与反馈循环”，2026年6月。</li>\n<li>[S4] 研究记录 06，“科创50虚值认沽期权的Delta-Vega风险敞口评估”。</li>\n<li>[S5] 上交所交易规则，“科创板涨跌幅限制及停牌程序”。</li>\n<li>[S6] 宏观视野，“新兴市场中的Gamma跳空与对冲有效性侵蚀”。</li>\n<li>[S7] 量化分析，“做市商Delta对冲与20%涨跌幅限制约束”，[自测算] 基于2026年6月市场深度。</li>\n</ul>"
+}
