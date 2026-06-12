@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-06-11T07:50:10.668Z",
-  "date": "2026-06-11",
+  "generatedAt": "2026-06-12T01:15:41.111Z",
+  "date": "2026-06-12",
   "source": "outputs/morning-brief-images/manifest.json",
-  "investorDailyDate": "2026-06-11",
+  "investorDailyDate": "2026-06-12",
   "status": "synced",
   "summary": {
-    "headline": "2026-06-11 晨会信号：市场报价、策略偏置与研究链条已归并",
-    "lead": "AI研究院晨间简报：5个分析板块、14个深度研究、26次跨部门传递。",
+    "headline": "2026-06-12 晨会信号：市场报价、策略偏置与研究链条已归并",
+    "lead": "AI研究院晨间简报：1个分析板块、13个深度研究、30次跨部门传递。",
     "privacyNote": "Dashboard publishes sanitized metadata and public links; private brief bodies remain outside the Vibe deployment."
   },
   "stats": {
-    "sections": 5,
-    "deepResearch": 14,
-    "handoffs": 26,
-    "marketQuotes": 11
+    "sections": 1,
+    "deepResearch": 13,
+    "handoffs": 30,
+    "marketQuotes": 14
   },
   "links": {
     "dashboard": "/investor/daily/",
@@ -22,34 +22,40 @@
     "briefEn": "/investor/daily/#daily-dashboard-sections",
     "editorZh": "/investor/daily/#daily-dashboard-editor",
     "mailboxZh": "/investor/#operations",
-    "docx": "/investor-downloads/daily-brief-2026-06-11.docx"
+    "docx": "/investor-downloads/daily-brief-2026-06-12.docx"
   },
   "marketTape": {
     "en": [
-      "Dow Jones 49,936、-54",
-      "S&P 500 7,266.50、-12.00",
-      "Nasdaq 100 28,469.25、-84.75",
-      "Nasdaq Comp. 25,169.50、-509.32、-2.0%",
-      "Nikkei 225 64,900、+375、+0.58%",
-      "Hang Seng 24,307、+29、+0.119%",
+      "Dow Jones 50,848.75 (+1.9%)",
+      "S&P 500 7,394.30 (+1.8%)",
+      "Nasdaq 100 29,577.50 (+0.49%)",
+      "Nasdaq Comp. 25,809.66 (+2.5%)",
+      "Nikkei 225 64,217.27 (+0.06%)",
+      "Hang Seng 24,249.29 (-0.65%)",
+      "VIX 19.44",
+      "WTI crude 85.89 USD/bbl",
+      "Brent crude 88.55 USD/bbl",
+      "Spot gold 4,075.62 USD/oz",
       "DXY 100.082",
       "EUR/USD 1.15287",
       "USD/JPY 160.551",
-      "USD/CNY 6.774",
-      "USD/CNH 6.7817"
+      "USD/CNY 6.774"
     ],
     "zh": [
-      "道琼斯 49,936、-54",
-      "标普500 7,266.50、-12.00",
-      "纳斯达克100 28,469.25、-84.75",
-      "纳斯达克综指 25,169.50、-509.32、-2.0%",
-      "日经225 64,900、+375、+0.58%",
-      "恒生指数 24,307、+29、+0.119%",
+      "道琼斯 50,848.75 (+1.9%)",
+      "标普500 7,394.30 (+1.8%)",
+      "纳斯达克100 29,577.50 (+0.49%)",
+      "纳斯达克综指 25,809.66 (+2.5%)",
+      "日经225 64,217.27 (+0.06%)",
+      "恒生指数 24,249.29 (-0.65%)",
+      "VIX 19.44 (波动率低于 20，说明避险需求回落。)",
+      "WTI原油 85.89 USD/bbl",
+      "Brent原油 88.55 USD/bbl",
+      "现货黄金 4,075.62 USD/oz",
       "DXY 100.082",
       "EUR/USD 1.15287",
       "USD/JPY 160.551",
-      "USD/CNY 6.774",
-      "USD/CNH 6.7817"
+      "USD/CNY 6.774"
     ]
   },
   "marketQuotes": [
@@ -57,48 +63,80 @@
       "key": "DOW",
       "group": "Equity",
       "labelZh": "道琼斯",
-      "value": "49,936、-54",
-      "change": "道指期货小幅续弱。",
+      "value": "50,848.75",
+      "change": "+1.9%",
       "href": "/investor/daily/#daily-dashboard-sections"
     },
     {
       "key": "SPX",
       "group": "Equity",
       "labelZh": "标普500",
-      "value": "7,266.50、-12.00",
-      "change": "现金盘大跌后，夜盘未见强反弹。",
+      "value": "7,394.30",
+      "change": "+1.8%",
       "href": "/investor/daily/#daily-dashboard-sections"
     },
     {
       "key": "NDX",
       "group": "Equity",
       "labelZh": "纳斯达克100",
-      "value": "28,469.25、-84.75",
-      "change": "科技成长压力仍在。",
+      "value": "29,577.50",
+      "change": "+0.49%",
       "href": "/investor/daily/#daily-dashboard-sections"
     },
     {
       "key": "NASDAQ",
       "group": "Equity",
       "labelZh": "纳斯达克综指",
-      "value": "25,169.50、-509.32、-2.0%",
-      "change": "成长股对利率和估值折现最敏感。",
+      "value": "25,809.66",
+      "change": "+2.5%",
       "href": "/investor/daily/#daily-dashboard-sections"
     },
     {
       "key": "N225",
       "group": "Equity",
       "labelZh": "日经225",
-      "value": "64,900、+375、+0.58%",
-      "change": "日股期货相对抗跌，仍受日元弱势支撑。",
+      "value": "64,217.27",
+      "change": "+0.06%",
       "href": "/investor/daily/#daily-dashboard-sections"
     },
     {
       "key": "HSI",
       "group": "Equity",
       "labelZh": "恒生指数",
-      "value": "24,307、+29、+0.119%",
-      "change": "相对现货贴水，反弹力度有限。",
+      "value": "24,249.29",
+      "change": "-0.65%",
+      "href": "/investor/daily/#daily-dashboard-sections"
+    },
+    {
+      "key": "VIX",
+      "group": "Rates/Risk",
+      "labelZh": "VIX",
+      "value": "19.44",
+      "change": "波动率低于 20，说明避险需求回落。",
+      "href": "/investor/daily/#daily-dashboard-sections"
+    },
+    {
+      "key": "WTI",
+      "group": "Commodities",
+      "labelZh": "WTI原油",
+      "value": "85.89 美元/桶",
+      "change": "内部 oil_prices 无记录；web 数据显示油价随伊朗和平预期回落。",
+      "href": "/investor/daily/#daily-dashboard-sections"
+    },
+    {
+      "key": "BRENT",
+      "group": "Commodities",
+      "labelZh": "Brent原油",
+      "value": "88.55 美元/桶",
+      "change": "以 web_search 替代数据源校验 ；口径需在 API 恢复后校准。",
+      "href": "/investor/daily/#daily-dashboard-sections"
+    },
+    {
+      "key": "GOLD",
+      "group": "Commodities",
+      "labelZh": "现货黄金",
+      "value": "4,075.62 美元/盎司",
+      "change": "markets_overnight_us 警告 gold_usd 不可用；web 数据显示黄金仍处高位但避险买盘边际降温。",
       "href": "/investor/daily/#daily-dashboard-sections"
     },
     {
@@ -132,141 +170,133 @@
       "value": "6.774",
       "change": "fx_majors",
       "href": "/investor/daily/#daily-dashboard-sections"
-    },
-    {
-      "key": "USDCNH",
-      "group": "FX",
-      "labelZh": "USD/CNH",
-      "value": "6.7817",
-      "change": "",
-      "href": "/investor/daily/#daily-dashboard-sections"
     }
   ],
   "morningSections": [
     {
       "label": "01",
       "title": "隔夜宏观",
-      "detail": "隔夜宏观: 风险资产的主要压力来自“油价上行 + CPI 重新抬头 + AI 估值去杠杆”：S&P 500 收于 7,266.99、跌 1.6%，Nasdaq 收于 25,169",
+      "detail": "隔夜宏观",
       "href": "/investor/daily/#daily-dashboard-sections"
     },
     {
       "label": "02",
-      "title": "中国宏观与政策",
-      "detail": "中国宏观与政策",
+      "title": "全球市场速览",
+      "detail": "全球市场速览: 基准日期：2026 06 12（Asia/Singapore，来自 system date +%Y %m %d）。隔夜美股收盘对应美国时间 2026 06",
       "href": "/investor/daily/#daily-dashboard-sections"
     },
     {
       "label": "03",
-      "title": "A股交易策略",
-      "detail": "A股交易策略: 昨日（2026 06 10，星期三）A股市场呈现出显著的“主板防守、成长板杠杆出清、科技分化与交易缩量”特征",
+      "title": "核心一句",
+      "detail": "核心一句: 隔夜海外市场偏 risk on：美股主要指数处于高位收盘，VIX 为 19.44，美元指数回落至",
       "href": "/investor/daily/#daily-dashboard-sections"
     },
     {
       "label": "04",
-      "title": "1. 主要指数及成交表现",
-      "detail": "1. 主要指数及成交表现: 上证综指 (SSE) ：收跌 0.42% 报 3993.2258 点 ，失守 4000点 整数关口，但表现出较强韧性",
+      "title": "1. 主要指数收盘",
+      "detail": "1. 主要指数收盘",
       "href": "/investor/daily/#daily-dashboard-sections"
     },
     {
       "label": "05",
-      "title": "2. 微观交易结构与去杠杆压力",
-      "detail": "2. 微观交易结构与去杠杆压力: 两融余额高悬 ：截至6月9日收盘，沪深京三市两融余额合计达 28872.76亿元 ，其中融资余额为 28661.84亿元 ，融券余额为 210.92亿元",
+      "title": "2. 商品与外汇",
+      "detail": "2. 商品与外汇",
       "href": "/investor/daily/#daily-dashboard-sections"
     },
     {
       "label": "06",
-      "title": "二、 盘前风格与行业配置建议",
-      "detail": "二、 盘前风格与行业配置建议: 无条件执行“方案四（极致去杠杆避险配置）”",
+      "title": "板块轮动",
+      "detail": "板块轮动: 日期锚定：2026 06 12（system date +%Y %m %d）。口径：11 个 SPDR 板块 ETF 的今日收盘来自数据源校验 sector etf",
       "href": "/investor/daily/#daily-dashboard-sections"
     }
   ],
   "editorSignals": [],
   "deepResearch": [
     {
-      "title": "产业链调研：新一代信息技术（30 日激活率 3.3%, 3/91）",
+      "title": "红利拥挤度极化与公用信用传导下向出口链低拥挤纯粹价值防御切换",
       "href": "/investor/daily/#daily-dashboard-research-1"
     },
     {
-      "title": "霍尔木兹海峡卫星AIS船舶流量恢复与红利资源股去挤压交易",
+      "title": "指派 healthcare-analyst 负责大健康产业链",
       "href": "/investor/daily/#daily-dashboard-research-2"
     },
     {
-      "title": "“经典墙”与量子混合实用主义",
+      "title": "AI数据中心从设备缺口转向电网/劳动力配给",
       "href": "/investor/daily/#daily-dashboard-research-3"
     },
     {
-      "title": "产业链调研：食品加工产业链（30 日激活率 7.9%, 19/241）",
+      "title": "指派 biotech-analyst 负责生命健康和生物科技产业链",
       "href": "/investor/daily/#daily-dashboard-research-4"
     },
     {
-      "title": "SpaceX历史性IPO资金虹吸下CPO三巨头动态对冲与再入场估值底部",
+      "title": "利率反转风险与红利资产久期重构",
       "href": "/investor/daily/#daily-dashboard-research-5"
     },
     {
-      "title": "AI Capex 悬崖还是瓶颈延迟？",
+      "title": "运价急升是需求修复还是关税前置拉货？",
       "href": "/investor/daily/#daily-dashboard-research-6"
     },
     {
-      "title": "推理通缩与自备发电出海的AI新杠铃策略",
+      "title": "Oracle财报把AI交易从订单叙事推向融资约束",
       "href": "/investor/daily/#daily-dashboard-research-7"
     },
     {
-      "title": "针对‘共识脆弱性’启动白板线研究",
+      "title": "SpaceX超大IPO会验证风险偏好还是抽走AI流动性",
       "href": "/investor/daily/#daily-dashboard-research-8"
     }
   ],
   "chainRadar": [
     {
       "label": "宏观通胀传导",
-      "heat": 3316,
-      "latest": 137,
-      "recent": 1695,
-      "risk": 1237,
-      "href": "/investor/reports/archive-68a819126c6d/",
-      "evidenceTitle": "高端精密零部件外溢效应：医疗级降本增效能否复刻并重估工业自动化产业链？"
+      "heat": 3017.6,
+      "latest": 72,
+      "recent": 1598,
+      "risk": 1170,
+      "href": "/investor/reports/archive-0d21f42be3b2/",
+      "evidenceTitle": "首席策略师研判：红利极化下的\"水电核电守正、出口链奇兵\"双底座切换"
     },
     {
       "label": "AI 基础设施",
-      "heat": 3222.6,
-      "latest": 135,
-      "recent": 1653,
-      "risk": 1197,
-      "href": "/investor/reports/archive-68a819126c6d/",
-      "evidenceTitle": "高端精密零部件外溢效应：医疗级降本增效能否复刻并重估工业自动化产业链？"
+      "heat": 2939,
+      "latest": 73,
+      "recent": 1560,
+      "risk": 1134,
+      "href": "/investor/reports/archive-0d21f42be3b2/",
+      "evidenceTitle": "首席策略师研判：红利极化下的\"水电核电守正、出口链奇兵\"双底座切换"
     },
     {
       "label": "工业供给瓶颈",
-      "heat": 581.2,
-      "latest": 34,
-      "recent": 266,
-      "risk": 218,
-      "href": "/investor/reports/archive-68a819126c6d/",
-      "evidenceTitle": "高端精密零部件外溢效应：医疗级降本增效能否复刻并重估工业自动化产业链？"
-    },
-    {
-      "label": "半导体与存储",
-      "heat": 410.1,
-      "latest": 21,
-      "recent": 198,
-      "risk": 153,
-      "href": "/investor/reports/archive-6baac71b2002/",
-      "evidenceTitle": "评估 AI 硬件链半导体材料板块在流动性冲击下的波动率特征与估值支撑力"
+      "heat": 550.4,
+      "latest": 16,
+      "recent": 267,
+      "risk": 221,
+      "href": "/investor/reports/archive-276234a90ac3/",
+      "evidenceTitle": "电网扩容与变压器供应链压力测试：Oracle 级 AI 交付能否跟上？（报告日期：2026-06-12）"
     },
     {
       "label": "电力与电网",
-      "heat": 401.6,
-      "latest": 21,
-      "recent": 188,
-      "risk": 152,
-      "href": "/investor/reports/archive-54eaad86576c/",
-      "evidenceTitle": "锂矿扩产能否支撑 2026–2027 年电网级储能（BESS）50%+ 同比增长？"
+      "heat": 432.1,
+      "latest": 19,
+      "recent": 203,
+      "risk": 168,
+      "href": "/investor/reports/archive-0d21f42be3b2/",
+      "evidenceTitle": "首席策略师研判：红利极化下的\"水电核电守正、出口链奇兵\"双底座切换"
+    },
+    {
+      "label": "半导体与存储",
+      "heat": 359.5,
+      "latest": 3,
+      "recent": 190,
+      "risk": 147,
+      "href": "/investor/reports/archive-76f8b672f2f3/",
+      "evidenceTitle": "宏观波动与 AI ROI 下修共振下的全球半导体产业链估值重塑压力测试"
     },
     {
       "label": "生产率与效率",
-      "heat": 91.4,
-      "latest": 7,
-      "recent": 42,
-      "risk": 32,
+      "heat": 70.8,
+      "latest": 0,
+      "recent": 39,
+      "risk": 29,
       "href": "/investor/reports/archive-68a819126c6d/",
       "evidenceTitle": "高端精密零部件外溢效应：医疗级降本增效能否复刻并重估工业自动化产业链？"
     }
@@ -278,6 +308,13 @@
       "impact": 5,
       "probability": 3,
       "href": "/investor/reports/archive-06c38822d530/"
+    },
+    {
+      "chain": "AI 基础设施",
+      "title": "Oracle AI基础设施交付瓶颈：电力、数据中心与RPO转化压力测试",
+      "impact": 5,
+      "probability": 5,
+      "href": "/investor/reports/archive-c637ad8b8b2d/"
     },
     {
       "chain": "电力与电网",
@@ -316,24 +353,17 @@
     },
     {
       "chain": "工业供给瓶颈",
+      "title": "2026-06-11 研究记录06：AI基础设施“电力-电网”瓶颈验证",
+      "impact": 5,
+      "probability": 4,
+      "href": "/investor/reports/archive-2749d04d5443/"
+    },
+    {
+      "chain": "工业供给瓶颈",
       "title": "工业设备供应链压力测试：电力变压器与配电系统的供应瓶颈 — 2026-06-07",
       "impact": 5,
       "probability": 5,
       "href": "/investor/reports/archive-c20cd1b67dfc/"
-    },
-    {
-      "chain": "工业供给瓶颈",
-      "title": "重型电力设备与变压器产能瓶颈对AI自发电设备落地的制约与估值重评估",
-      "impact": 5,
-      "probability": 2,
-      "href": "/investor/reports/archive-eb2255257488/"
-    },
-    {
-      "chain": "宏观通胀传导",
-      "title": "AI硬件兑现的能源瓶颈压力测试 — 2026-06-09",
-      "impact": 5,
-      "probability": 5,
-      "href": "/investor/reports/archive-76f1d07f82d3/"
     }
   ],
   "assets": {
@@ -344,52 +374,56 @@
   "relatedCounts": {
     "editorReportAvailable": true,
     "mailboxDigestAvailable": true,
-    "investorDailyReports": 153,
+    "investorDailyReports": 82,
     "investorTableReports": 60
   },
   "readerReport": {
-    "id": "reader-daily-reader-2026-06-11",
-    "title": "2026-06-11 AI Institute 每日读者报告",
-    "date": "2026-06-11",
-    "href": "/investor/reports/reader-daily-reader-2026-06-11/",
-    "summary": "6 月 11 日不是 AI 基础设施叙事退潮，而是从 GPU 和云厂商 capex 继续下沉到 800V 高密度机架、液冷、功率转换、变压器、取向硅钢、铜、海外产能迁徙、并网排队和电表后直供电。",
+    "id": "reader-daily-reader-2026-06-12",
+    "title": "2026-06-12 AI Institute 每日读者报告",
+    "date": "2026-06-12",
+    "href": "/investor/reports/reader-daily-reader-2026-06-12/",
+    "summary": "6 月 12 日的关键变化不是 AI 主题重新加速，而是风险偏好反弹之后，研究焦点从订单和算力需求进一步落到融资约束、电网配给、劳动力配给、红利拥挤分层、出口链低拥挤价值和能源价格压力测试。",
     "priorityViews": [
       {
-        "title": "AI 基础设施与宏观通胀仍是第一层主链",
-        "view": "宏观通胀传导 heat 3316，AI 基础设施 heat 3222.6；但 AI、通胀、A 股、宏观、风险、能源和港美股标签较前一日全部降温。",
-        "whyItMatters": "这说明主线没有消失，但研究密度正在从广谱叙事转向少数可验证的工业和电力约束。",
-        "provenance": [
-          "daily-dashboard:chainRadar:macro-inflation",
-          "daily-dashboard:chainRadar:ai-infrastructure",
-          "daily-dashboard:momentum",
-          "claim_0611_main_chains_cooling_but_active"
-        ]
-      },
-      {
-        "title": "最高权重新证据集中在通电和散热链条",
-        "view": "2.3kW/800V、高密度机架、功率转换、液冷热管理、变压器、取向硅钢和铜成为今日最重要的 AI 交付约束。",
-        "whyItMatters": "AI capex 的兑现变量正在从芯片订单转向工业交付、材料成本和并网条件。",
-        "provenance": [
-          "/investor/reports/archive-8b8a7a8e560c/",
-          "/investor/reports/archive-19edacd79b73/",
-          "/investor/reports/archive-0d129302dadb/",
-          "claim_0611_delivery_constraints"
-        ]
-      },
-      {
-        "title": "市场表达要从泛 AI beta 转向可交付约束",
-        "view": "纳斯达克综指快照为 25,169.50、-509.32、-2.0%，DXY 为 100.082，USD/CNH 为 6.7817；成长波动上升时，需要用现金流、交付周期、成本传导和估值支撑重读 AI 链条。",
-        "whyItMatters": "价格压力不会直接证伪 AI 需求，但会压缩纯叙事交易的容错空间。",
+        "title": "Risk on 不等于 AI 重新回到单纯成长股叙事",
+        "view": "道琼斯 +1.9%，标普 500 +1.8%，纳斯达克综指 +2.5%，VIX 19.44；但链条热度最高的仍是宏观通胀传导和 AI 基础设施，风险矩阵仍聚焦电网、融资、PPA 和交付。",
+        "whyItMatters": "价格反弹提高短线风险承接能力，但不能自动解决 AI capex 的物理和资产负债表约束。",
         "provenance": [
           "daily-dashboard:marketTape",
-          "claim_0611_market_expression"
+          "daily-dashboard:chainRadar",
+          "daily-dashboard:riskMatrix",
+          "claim_0612_risk_on_delivery_constraints"
+        ]
+      },
+      {
+        "title": "Oracle 财报把 AI 交易推向融资和交付约束",
+        "view": "今日风险矩阵把 Oracle AI 基础设施交付瓶颈列为 impact 5 / probability 5；研究焦点从订单 headline 转向电力、数据中心、RPO 转化、劳动力和融资节奏。",
+        "whyItMatters": "如果订单无法顺利转化为收入和现金流，AI 基础设施会从成长弹性变成资产负债表压力。",
+        "provenance": [
+          "/investor/reports/archive-c637ad8b8b2d/",
+          "/investor/reports/archive-276234a90ac3/",
+          "daily-dashboard:riskMatrix",
+          "claim_0612_oracle_financing_delivery"
+        ]
+      },
+      {
+        "title": "A 股红利要做内部再分层",
+        "view": "首席策略师提出水电核电守正 60% / 出口链纯粹价值奇兵 40% 的框架，把拥挤型公用红利、信用干净的水电核电、煤炭红利和低拥挤出口现金流分开定价。",
+        "whyItMatters": "这把防御仓位从单一红利 beta 升级为信用、拥挤度、海外现金流和政策风险的组合管理问题。",
+        "provenance": [
+          "/investor/reports/archive-0d21f42be3b2/",
+          "/investor/reports/archive-eb45da8935ca/",
+          "claim_0612_dividend_export_barbell"
         ]
       }
     ],
     "relatedTheses": [
-      "AI infrastructure physical constraints",
-      "power grid and industrial supply bottlenecks",
-      "AI capex timing and valuation redistribution"
+      "thesis_macro_inflation_policy",
+      "thesis_semiconductor_ai_capex_cycle",
+      "thesis_datacenter_reit_cooling_water",
+      "thesis_ashare_dividend_barbell",
+      "thesis_fed_path_global_repricing",
+      "thesis_mag7_ai_platform_reshuffling"
     ]
   }
 }
