@@ -1,0 +1,21 @@
+{
+  "slug": "archive-3b69d3c4bdce",
+  "href": "/investor/reports/archive-3b69d3c4bdce/",
+  "meta": {
+    "title": "超大规模云厂商电力采购策略与数据中心架构演变",
+    "date": "2026-06-14",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "通胀",
+      "宏观",
+      "港美股",
+      "能源"
+    ],
+    "source": "archive-3b69d3c4bdce",
+    "source_label": "研究线程",
+    "source_kind": "research_thread"
+  },
+  "bodyHtml": "<h1>超大规模云厂商电力采购策略与数据中心架构演变</h1>\n<p><strong>日期:</strong> 2026-06-14\n<strong>分析师:</strong> AI基础设施分析师 (AI Infrastructure Analyst)</p>\n<h2>1. 核心观点与立场</h2>\n<p><strong>立场: 支持 (Support)。</strong> 基于前序研究的分析，我们确认：核电资产（存量 vs 增量）风险特征的分化，叠加系统级能效革命（BSPDN、CPO、MoE），正迫使超大规模云厂商大幅调整其能源采购结构与数据中心设计。为了对冲“算力能耗比提升导致锁定的长期电力资产搁浅”的风险，云厂商不再盲目线性外推电力需求，而是转向“模块化PPA协议”与“高密低容”的基础设施架构。</p>\n<h2>2. 核电PPA（购电协议）结构的重塑</h2>\n<p>针对不同风险特征的核电资产，2026年云厂商的采购策略已出现显著分化</p>\n<ul>\n<li><strong>存量核电（表后同址部署）：</strong> 为了绕过目前平均长达4-8年的公共电网排队时间[S3]，云厂商仍愿意为现有核电站提供高溢价，实现即插即用。例如亚马逊在Susquehanna的1.92 GW项目和微软重启Crane（三哩岛）的835 MW项目[S1][S2]。此类合同强调即时可用性与基载稳定性。</li>\n<li><strong>增量核电与SMR（模块化阶梯行权）：</strong> 对于SMR（小型模块化反应堆）等新建项目（如Google/Kairos、Meta规划的约4.0 GW SMR管线[S1]），PPA结构已从“统包式”GW级刚性兑付，转向与SMR部署节奏（约50 MW为增量单位）相匹配的阶梯行权协议[S1]。如果硅端能效提升导致整体电力需求放缓，云厂商可通过向下调节条款（Step-down clauses）停止后续容量的认购，实质上将产能过剩的风险转移回了能源开发商。</li>\n</ul>\n<h2>3. 数据中心架构：“向密度要能效”</h2>\n<p>为了承接研究记录02中提及的能效红利，2026年的数据中心架构正在放弃物理空间的无序扩张，转向极致的功率密度。</p>\n<ul>\n<li><strong>兆瓦级机柜与全面液冷：</strong> 风冷在50kW/机柜左右已达到物理极限[S4]。以2026年NVIDIA Rubin架构为代表，云厂商正将机柜标准推高至120kW以上，甚至探索2.2MW的“兆瓦级机柜”[S4]。通过微通道冷板直液冷（DLC）和45°C温水循环，不仅将PUE推至1.05极限，更大幅缩减了数据中心的物理占地。</li>\n<li><strong>硅级能效整合（BSPDN与CPO）：</strong> 在芯片层面，背面供电网络（BSPDN，如2026年下半年量产的台积电A16和Intel 18A）使IR电压降减少了30%，系统整体功耗降低15-20%[S5]。同时，共封装光学（CPO）的大规模部署使数据传输能耗骤降30-40%（达到5-7 pJ/bit水平）[S6]。</li>\n<li><strong>核心指标切换：</strong> 行业的考核指标正从粗放的PUE转向“每瓦特/每美元Token产出”（Tokens per Watt per Dollar）[S4]。系统内耗的极度压缩，意味着达成同等智能算力所需的宏观总电力（GW）规模被大幅削减。</li>\n</ul>\n<h2>4. 结论</h2>\n<p>超大规模云厂商正在动态对冲其能源敞口。通过对高风险的SMR项目实施模块化PPA，并借助液冷、BSPDN和CPO技术将单机柜算力密度推向极致，云厂商正在实现“算力指数级增长”与“电力绝对消耗线性增长”的脱钩，有效防御了基础设施单位经济效益恶化的风险。</p>\n<h2>资料来源 / Sources</h2>\n<p>[S1] nucnet.org, Hyperscaler Nuclear Capacity &amp; PPA Status (2026) — https://www.nucnet.org/\n[S2] mycnr.com, The 2026 Regulatory Pivot — https://www.mycnr.com/\n[S3] enkiai.com, Grid Bypass &amp; Co-location — https://www.enkiai.com/\n[S4] ecothermgroup.com, Liquid Cooling as the Standard — https://www.ecothermgroup.com/\n[S5] semiengineering.com, TSMC Super Power Rail (A16) — https://semiengineering.com/\n[S6] fiberopticom.com, CPO Efficiency Gains — https://www.fiberopticom.com/</p>"
+}

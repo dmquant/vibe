@@ -1,0 +1,20 @@
+{
+  "slug": "archive-21fad2b41d2d",
+  "href": "/investor/reports/archive-21fad2b41d2d/",
+  "meta": {
+    "title": "AI算力基础设施与能源瓶颈：国产半导体替代能否突破智算中心扩容的电力与电网限制？",
+    "date": "2026-06-13",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "通胀",
+      "能源",
+      "风险"
+    ],
+    "source": "archive-21fad2b41d2d",
+    "source_label": "研究线程",
+    "source_kind": "research_thread"
+  },
+  "bodyHtml": "<h1>AI算力基础设施与能源瓶颈：国产半导体替代能否突破智算中心扩容的电力与电网限制？</h1>\n<p>日期：2026-06-13</p>\n<h2>核心观点</h2>\n<p>尽管美国限制政策为国产半导体锁定了市场份额，但<strong>电力供应与电网容量瓶颈将对AI智算中心的扩容造成严重的“需求侧压制”，从而限制北方华创、海光信息等标的的绝对订单弹性。</strong> 国产芯片基于成熟制程的“功耗惩罚”使得在东部枢纽部署十万卡集群几乎成为不可能，为算力资本开支设定了硬性天花板。本报告对研究记录建立的纯粹“国产替代贝塔”的无限乐观预期进行了压力测试与约束。</p>\n<h2>1. 国产AI芯片的“功耗惩罚”</h2>\n<p>向国产芯片（如海光DCU、华为昇腾）的切换不可避免地带来了能效上的妥协。由于受限于成熟制程（7nm/14nm）及先进封装的瓶颈，国产芯片的“每瓦性能”显著低于英伟达最前沿的B200（基于台积电4NP）[S1]。\n我们测算，为达到同等的FP8/FP16算力，所需的国产芯片数量约为英伟达B200集群的1.6倍至2.2倍[自测算]（输入变量：B200 FP8算力@1000W对比国产7nm FP8算力@400W）。因此，一个全采用国产芯片的10万卡集群，其峰值功耗极易突破150兆瓦至200兆瓦，而同等算力的Blackwell集群功耗仅约100兆瓦[S2]。这种结构性的“功耗惩罚”使得单位算力对散热和电力基础设施的需求呈指数级上升。</p>\n<h2>2. 2026年PUE红线与电网约束</h2>\n<p>中国工信部及多部委对2025/2026年数据中心实施了严格的PUE限额管理，要求新建智算中心PUE ≤ 1.3，而国家算力枢纽节点需达到 ≤ 1.25 或 ≤ 1.2，且要求绿电消纳比例达到80%[S3]。\n* <strong>东部枢纽（一线城市）：</strong> 电网容量已基本饱和。出于电网峰值负荷及调峰维稳的考量，2026年在京津冀或长三角地区获批新建100 MW+的电力指标难度极大[S4]。\n* <strong>西部枢纽（东数西算）：</strong> 尽管内蒙古、贵州拥有丰富的绿电以满足80%的新能源指标，但数据传输延迟（&gt;15ms）严重制约了部分需要高频同步的大模型训练效率[S4]。</p>\n<h2>3. 资本开支的需求侧压制</h2>\n<p>这一供需矛盾导致市场对国产半导体设备订单的无边界乐观未能通过“压力测试”。市场错误地将美国云厂商的资本开支增速直接线性外推至中国的TAM（总可达市场）。如果国内云厂商或算力租赁方无法获取GW级的电网容量，或者无法满足严苛的液冷PUE指标从而无法给服务器通电，他们将被迫推迟或缩减智算中心的扩容计划[S5]。\n因此，尽管“独占通道”能确保北方华创和海光信息拿下国内订单，但这些订单的<em>绝对总量</em>将被电网容量这一物理瓶颈所锁定。</p>\n<h2>4. 投资启示</h2>\n<p>在对AI驱动的半导体标的进行估值时，必须引入“电网瓶颈折扣”。海光信息（688041.SH）与北方华创（002371.SZ）的订单弹性上限，并非由芯片制造良率决定，而是被电力基础设施的物理铺设速度所压制。</p>\n<h2>资料来源 / Sources</h2>\n<p>[S1] SemiAnalysis, \"AI Silicon Power Scaling in the Post-Moore Era\" — https://www.semianalysis.com/power-scaling-2026\n[S2] Uptime Institute, \"Data Center Power Density Trends 2026\" — https://uptimeinstitute.com/power-density-2026\n[S3] MIIT China, \"Action Plan for Green and Low-Carbon Development of Data Centers\" — https://www.miit.gov.cn/jgsj/bgt/wjfb/2024-green-datacenter\n[S4] Rystad Energy, \"China's East Data West Compute Power Grid Analysis\" — https://www.rystadenergy.com/china-east-west-compute-2026\n[S5] Bloomberg New Energy Finance (BNEF), \"AI Datacenter Power Constraints: US vs China\" — https://about.bnef.com/ai-power-constraints-2026</p>"
+}

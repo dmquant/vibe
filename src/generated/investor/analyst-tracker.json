@@ -1,48 +1,88 @@
 {
-  "generatedAt": "2026-06-12T23:32:28.258946+00:00",
-  "date": "2026-06-13",
+  "generatedAt": "2026-06-14T03:36:10.401329+00:00",
+  "date": "2026-06-14",
   "coverage": {
     "recentDates": [
+      "2026-06-14",
       "2026-06-13",
       "2026-06-12",
       "2026-06-11",
       "2026-06-10",
       "2026-06-09",
-      "2026-06-08",
-      "2026-06-07"
+      "2026-06-08"
     ],
-    "latestDate": "2026-06-13",
+    "latestDate": "2026-06-14",
     "source": "AI Institute report archive + derived analyst view registry"
   },
   "stats": {
     "trackedAnalysts": 41,
-    "activeToday": 1,
-    "reportsToday": 62,
-    "recentReports": 1677,
-    "viewChanges": 1,
+    "activeToday": 6,
+    "reportsToday": 141,
+    "recentReports": 1711,
+    "viewChanges": 6,
     "cautious": 31,
     "positive": 1,
     "analysts": 40
   },
   "changes": [
     {
-      "analystId": "research-editor",
-      "analyst": "深研主编",
+      "analystId": "daily-report-editor",
+      "analyst": "日报总编",
       "avatar": "",
       "category": "综合编审",
       "stance": "偏谨慎",
-      "evidenceAdded": 8,
-      "changeZh": "新增 8 条证据，集中在 ai-infrastructure、macro-inflation。",
-      "changeEn": "Added 8 evidence items, concentrated in ai-infrastructure, macro-inflation.",
+      "evidenceAdded": 6,
+      "changeZh": "新增 6 条证据，集中在 macro-inflation、ai-infrastructure。",
+      "changeEn": "Added 6 evidence items, concentrated in macro-inflation, ai-infrastructure.",
       "linkedReports": [
         {
-          "id": "archive-113df24c60ab",
-          "title": "ADR 目标价与投资评级",
-          "summary": "本步骤已读取工作区内 01 公司概况.md 、 02 财务数据.md 、 03 行业定位.md 、 04 催化剂.md 、 05 三表模型.md 、 06 盈利预测.md 、 07 估值分析.md 、 08 风...",
-          "href": "/investor/reports/archive-113df24c60ab/",
-          "analyst": "深研主编",
-          "analyst_id": "research-editor",
-          "date": "2026-06-13",
+          "id": "archive-65a7e5598fba",
+          "title": "研究院周度综合报告 QA 审阅",
+          "summary": "审阅人：qa-manager - 日期锚点：2026-06-14（周日 SGT，shell 校准） - 覆盖周：2026-06-08（周一）→ 2026-06-12（周五） - 被审文件： 06 周报.md v1.0.0（作...",
+          "href": "/investor/reports/archive-65a7e5598fba/",
+          "analyst": "日报总编",
+          "analyst_id": "daily-report-editor",
+          "date": "2026-06-14",
+          "category": "综合编审",
+          "tags": [
+            "AI",
+            "通胀",
+            "A股",
+            "港美股",
+            "能源"
+          ],
+          "chain": "宏观通胀传导",
+          "score": 39,
+          "source": "AI Institute report archive"
+        },
+        {
+          "id": "archive-5312ebd1bf9b",
+          "title": "Active research-project theses",
+          "summary": "Scope : daily-report-editor (editorial — sees all fleet projects) Active : 8 · Recently closed (last 30d) : 5",
+          "href": "/investor/reports/archive-5312ebd1bf9b/",
+          "analyst": "日报总编",
+          "analyst_id": "daily-report-editor",
+          "date": "2026-06-14",
+          "category": "综合编审",
+          "tags": [
+            "AI",
+            "通胀",
+            "A股",
+            "能源",
+            "风险"
+          ],
+          "chain": "宏观通胀传导",
+          "score": 40.1,
+          "source": "AI Institute report archive"
+        },
+        {
+          "id": "archive-54c37456dc08",
+          "title": "§1 THESIS",
+          "summary": "author: daily-report-editor as of: 2026-06-14 market window: weekly market: AH week range: 2026-06-08 → 2026-06-12 tickers: [600900.SH, 002003.SZ, 60...",
+          "href": "/investor/reports/archive-54c37456dc08/",
+          "analyst": "日报总编",
+          "analyst_id": "daily-report-editor",
+          "date": "2026-06-14",
           "category": "综合编审",
           "tags": [
             "AI",
@@ -52,38 +92,50 @@
             "港美股"
           ],
           "chain": "AI 基础设施",
-          "score": 40.8,
+          "score": 38.3,
           "source": "AI Institute report archive"
-        },
+        }
+      ]
+    },
+    {
+      "analystId": "industrials-analyst",
+      "analyst": "工业制造分析师",
+      "avatar": "/investor-assets/avatars/industrials-analyst.png",
+      "category": "行业研究",
+      "stance": "偏谨慎",
+      "evidenceAdded": 3,
+      "changeZh": "新增 3 条证据，集中在 ai-infrastructure、macro-inflation。",
+      "changeEn": "Added 3 evidence items, concentrated in ai-infrastructure, macro-inflation.",
+      "linkedReports": [
         {
-          "id": "archive-1800b893952c",
-          "title": "ADR 深度报告交叉验证",
-          "summary": "本次已读取工作区内 01 公司概况.md 、 02 财务数据.md 、 03 行业定位.md 、 04 催化剂.md 、 05 三表模型.md 、 06 盈利预测.md 、 07 估值分析.md 、 08 风险...",
-          "href": "/investor/reports/archive-1800b893952c/",
-          "analyst": "深研主编",
-          "analyst_id": "research-editor",
-          "date": "2026-06-13",
-          "category": "综合编审",
+          "id": "archive-fa0e3c011964",
+          "title": "QA review.md — 工业制造周报研究包质量复核",
+          "summary": "复核日期： 2026-06-14 本机日期锚点： 系统日期锚 输出为 2026-06-14 总体判断： 当前研究包不能进入 PM 阅读环节。 01 weekly plan.md 是工业制造周报计划...",
+          "href": "/investor/reports/archive-fa0e3c011964/",
+          "analyst": "工业制造分析师",
+          "analyst_id": "industrials-analyst",
+          "date": "2026-06-14",
+          "category": "行业研究",
           "tags": [
             "AI",
             "通胀",
-            "A股",
-            "港美股",
-            "风险"
+            "宏观",
+            "能源",
+            "行业研究"
           ],
-          "chain": "AI 基础设施",
-          "score": 40.8,
+          "chain": "宏观通胀传导",
+          "score": 41.5,
           "source": "AI Institute report archive"
         },
         {
-          "id": "archive-eea606182188",
-          "title": "ADR 近端催化剂梳理",
-          "summary": "截至 2026-06-13，ADR 的近端催化剂集中在三条主线：第一，RPM 订阅收入和患者激活的季度验证；第二，iCARE、ATS 2026 和 EAC 数据能否转化为美国 Value-Based C...",
-          "href": "/investor/reports/archive-eea606182188/",
-          "analyst": "深研主编",
-          "analyst_id": "research-editor",
-          "date": "2026-06-13",
-          "category": "综合编审",
+          "id": "archive-9913f8fa5978",
+          "title": "工业制造周报研究计划",
+          "summary": "本周覆盖范围 / Coverage window: 2026-06-08 (周一) → 2026-06-12 (周五)",
+          "href": "/investor/reports/archive-9913f8fa5978/",
+          "analyst": "工业制造分析师",
+          "analyst_id": "industrials-analyst",
+          "date": "2026-06-14",
+          "category": "行业研究",
           "tags": [
             "AI",
             "通胀",
@@ -94,11 +146,1395 @@
           "chain": "AI 基础设施",
           "score": 36.3,
           "source": "AI Institute report archive"
+        },
+        {
+          "id": "archive-514560c75b42",
+          "title": "02 weekly research.md — 新兴科技主题研究周报：端侧AI芯片革命、量子2029路线图、ASCO创新药出...",
+          "summary": "02 weekly research.md — 新兴科技主题研究周报：端侧AI芯片革命、量子2029路线图、ASCO创新药出海与太空/Web3流动性重置",
+          "href": "/investor/reports/archive-514560c75b42/",
+          "analyst": "工业制造分析师",
+          "analyst_id": "industrials-analyst",
+          "date": "2026-06-14",
+          "category": "行业研究",
+          "tags": [
+            "AI",
+            "宏观",
+            "A股",
+            "港美股",
+            "风险"
+          ],
+          "chain": "AI 基础设施",
+          "score": 32.5,
+          "source": "AI Institute report archive"
+        }
+      ]
+    },
+    {
+      "analystId": "realestate-analyst",
+      "analyst": "房地产分析师",
+      "avatar": "/investor-assets/avatars/realestate-analyst.png",
+      "category": "行业研究",
+      "stance": "偏谨慎",
+      "evidenceAdded": 3,
+      "changeZh": "新增 3 条证据，集中在 macro-inflation、ai-infrastructure。",
+      "changeEn": "Added 3 evidence items, concentrated in macro-inflation, ai-infrastructure.",
+      "linkedReports": [
+        {
+          "id": "archive-6d1a86b0d5df",
+          "title": "房地产行业周报研究与规划方案：城市更新资金链拆解、深圳地王测算、5月销售筑底分化与商业不动产R...",
+          "summary": "房地产行业周报研究与规划方案：城市更新资金链拆解、深圳地王测算、5月销售筑底分化与商业不动产REITs上市压测",
+          "href": "/investor/reports/archive-6d1a86b0d5df/",
+          "analyst": "房地产分析师",
+          "analyst_id": "realestate-analyst",
+          "date": "2026-06-14",
+          "category": "行业研究",
+          "tags": [
+            "AI",
+            "通胀",
+            "宏观",
+            "A股",
+            "能源"
+          ],
+          "chain": "宏观通胀传导",
+          "score": 36.2,
+          "source": "AI Institute report archive"
+        },
+        {
+          "id": "archive-f84b91fd44d7",
+          "title": "房地产行业周报研究稿：核心资产抢地、销售 K 型修复、城市更新资金与商业 REITs 扩容",
+          "summary": "房地产行业周报研究稿：核心资产抢地、销售 K 型修复、城市更新资金与商业 REITs 扩容",
+          "href": "/investor/reports/archive-f84b91fd44d7/",
+          "analyst": "房地产分析师",
+          "analyst_id": "realestate-analyst",
+          "date": "2026-06-14",
+          "category": "行业研究",
+          "tags": [
+            "AI",
+            "通胀",
+            "宏观",
+            "A股",
+            "行业研究"
+          ],
+          "chain": "AI 基础设施",
+          "score": 33.4,
+          "source": "AI Institute report archive"
+        },
+        {
+          "id": "archive-fb8cda54099b",
+          "title": "房地产周报 QA 审阅",
+          "summary": "锚定日期：本地 系统日期锚 返回 2026-06-14。本 QA 覆盖上游文件 01 weekly plan.md 、 01 weekly plan.en.md 、 02 weekly research.md 、 02 weekl...",
+          "href": "/investor/reports/archive-fb8cda54099b/",
+          "analyst": "房地产分析师",
+          "analyst_id": "realestate-analyst",
+          "date": "2026-06-14",
+          "category": "行业研究",
+          "tags": [
+            "AI",
+            "通胀",
+            "宏观",
+            "A股",
+            "风险"
+          ],
+          "chain": "AI 基础设施",
+          "score": 39,
+          "source": "AI Institute report archive"
+        }
+      ]
+    },
+    {
+      "analystId": "thematic-researcher",
+      "analyst": "主题研究员",
+      "avatar": "/investor-assets/avatars/thematic-researcher.png",
+      "category": "ESG与主题",
+      "stance": "偏谨慎",
+      "evidenceAdded": 1,
+      "changeZh": "新增 1 条证据，集中在 macro-inflation、ai-infrastructure。",
+      "changeEn": "Added 1 evidence items, concentrated in macro-inflation, ai-infrastructure.",
+      "linkedReports": [
+        {
+          "id": "archive-89c17f9f1b48",
+          "title": "周末深度主题扫描 - 2026-06-14",
+          "summary": "锚定日期：本报告先以 shell 输出 2026-06-14 为“今天”。“过去5个交易日”定义为 2026-06-08 至 2026-06-12，价格表现使用 2026-06-05 收盘至 2026-06-12 收...",
+          "href": "/investor/reports/archive-89c17f9f1b48/",
+          "analyst": "主题研究员",
+          "analyst_id": "thematic-researcher",
+          "date": "2026-06-14",
+          "category": "ESG与主题",
+          "tags": [
+            "AI",
+            "通胀",
+            "A股",
+            "能源",
+            "ESG与主题"
+          ],
+          "chain": "宏观通胀传导",
+          "score": 41.4,
+          "source": "AI Institute report archive"
+        }
+      ]
+    },
+    {
+      "analystId": "credit-analyst",
+      "analyst": "信用分析师",
+      "avatar": "/investor-assets/avatars/credit-analyst.png",
+      "category": "风控与合规",
+      "stance": "偏谨慎",
+      "evidenceAdded": 1,
+      "changeZh": "新增 1 条证据，集中在 ai-infrastructure、macro-inflation。",
+      "changeEn": "Added 1 evidence items, concentrated in ai-infrastructure, macro-inflation.",
+      "linkedReports": [
+        {
+          "id": "archive-4901c4cb855a",
+          "title": "招商蛇口商业REIT落地与开发商投资性房地产估值的信用传导分析",
+          "summary": "致：全球宏观分析师（analyst:global-macro:weekly report） 自：信用分析师 日期：2026-06-14 主题：CMSK（招商蛇口）商业不动产REIT于6月11日注册，4.75%类债...",
+          "href": "/investor/reports/archive-4901c4cb855a/",
+          "analyst": "信用分析师",
+          "analyst_id": "credit-analyst",
+          "date": "2026-06-14",
+          "category": "风控与合规",
+          "tags": [
+            "AI",
+            "通胀",
+            "宏观",
+            "A股",
+            "港美股"
+          ],
+          "chain": "AI 基础设施",
+          "score": 36.2,
+          "source": "AI Institute report archive"
         }
       ]
     }
   ],
   "analysts": [
+    {
+      "id": "daily-report-editor",
+      "name": "日报总编",
+      "nameEn": "Daily Report Editor",
+      "avatar": "",
+      "color": "#475569",
+      "category": "综合编审",
+      "specialty": "统筹多分析师收盘输出，产出结构化每日日报与行动地图",
+      "reportCount": 106,
+      "latestDate": "2026-06-14",
+      "reportsToday": 6,
+      "recentReports": 25,
+      "stance": {
+        "label": "偏谨慎",
+        "bullish": 0,
+        "cautious": 5,
+        "balance": -5,
+        "tone": "cautious"
+      },
+      "themeCounts": [
+        {
+          "id": "AI",
+          "label": "AI",
+          "value": 104
+        },
+        {
+          "id": "A股",
+          "label": "A股",
+          "value": 92
+        },
+        {
+          "id": "通胀",
+          "label": "通胀",
+          "value": 83
+        },
+        {
+          "id": "宏观",
+          "label": "宏观",
+          "value": 66
+        },
+        {
+          "id": "能源",
+          "label": "能源",
+          "value": 61
+        },
+        {
+          "id": "风险",
+          "label": "风险",
+          "value": 49
+        }
+      ],
+      "chainCounts": [
+        {
+          "id": "ai-infrastructure",
+          "label": "AI 基础设施",
+          "value": 104
+        },
+        {
+          "id": "macro-inflation",
+          "label": "宏观通胀传导",
+          "value": 94
+        },
+        {
+          "id": "semiconductors",
+          "label": "半导体与存储",
+          "value": 2
+        },
+        {
+          "id": "industrial-supply",
+          "label": "工业供给瓶颈",
+          "value": 2
+        }
+      ],
+      "recentViews": [
+        {
+          "title": "研究院周度综合报告 QA 审阅",
+          "summary": "审阅人：qa-manager - 日期锚点：2026-06-14（周日 SGT，shell 校准） - 覆盖周：2026-06-08（周一）→ 2026-06-12（周五） - 被审文件： 06 周报.md v1.0.0（作者：daily-report-editor）",
+          "date": "2026-06-14",
+          "href": "/investor/reports/archive-65a7e5598fba/",
+          "importance": 45.4
+        },
+        {
+          "title": "Active research-project theses",
+          "summary": "Scope : daily-report-editor (editorial — sees all fleet projects) Active : 8 · Recently closed (last 30d) : 5",
+          "date": "2026-06-14",
+          "href": "/investor/reports/archive-5312ebd1bf9b/",
+          "importance": 44
+        },
+        {
+          "title": "§1 THESIS",
+          "summary": "author: daily-report-editor as of: 2026-06-14 market window: weekly market: AH week range: 2026-06-08 → 2026-06-12 tickers: [600900.SH, 002003.SZ, 603558.SH, 300502.SZ, 002463.SZ...",
+          "date": "2026-06-14",
+          "href": "/investor/reports/archive-54c37456dc08/",
+          "importance": 43
+        },
+        {
+          "title": "Your own recent reports — daily-report-editor",
+          "summary": "Your own recent reports — daily-report-editor",
+          "date": "2026-06-14",
+          "href": "/investor/reports/archive-50faaaafcbf4/",
+          "importance": 43
+        },
+        {
+          "title": "Recent analyst reports",
+          "summary": "Window anchor: 2026-06-14 (Asia/Singapore) · since hours=72 · lang=zh Files included: 25 of 25 candidate(s) · ~42439 chars Analyst filter: (none — all analysts)",
+          "date": "2026-06-14",
+          "href": "/investor/reports/archive-9b2705023961/",
+          "importance": 43
+        }
+      ],
+      "latestReports": [
+        {
+          "id": "archive-65a7e5598fba",
+          "title": "研究院周度综合报告 QA 审阅",
+          "summary": "审阅人：qa-manager - 日期锚点：2026-06-14（周日 SGT，shell 校准） - 覆盖周：2026-06-08（周一）→ 2026-06-12（周五） - 被审文件： 06 周报.md v1.0.0（作...",
+          "href": "/investor/reports/archive-65a7e5598fba/",
+          "analyst": "日报总编",
+          "analyst_id": "daily-report-editor",
+          "date": "2026-06-14",
+          "category": "综合编审",
+          "tags": [
+            "AI",
+            "通胀",
+            "A股",
+            "港美股",
+            "能源"
+          ],
+          "chain": "宏观通胀传导",
+          "score": 39,
+          "source": "AI Institute report archive"
+        },
+        {
+          "id": "archive-54c37456dc08",
+          "title": "§1 THESIS",
+          "summary": "author: daily-report-editor as of: 2026-06-14 market window: weekly market: AH week range: 2026-06-08 → 2026-06-12 tickers: [600900.SH, 002003.SZ, 60...",
+          "href": "/investor/reports/archive-54c37456dc08/",
+          "analyst": "日报总编",
+          "analyst_id": "daily-report-editor",
+          "date": "2026-06-14",
+          "category": "综合编审",
+          "tags": [
+            "AI",
+            "通胀",
+            "宏观",
+            "A股",
+            "港美股"
+          ],
+          "chain": "AI 基础设施",
+          "score": 38.3,
+          "source": "AI Institute report archive"
+        },
+        {
+          "id": "archive-50faaaafcbf4",
+          "title": "Your own recent reports — daily-report-editor",
+          "summary": "Your own recent reports — daily-report-editor",
+          "href": "/investor/reports/archive-50faaaafcbf4/",
+          "analyst": "日报总编",
+          "analyst_id": "daily-report-editor",
+          "date": "2026-06-14",
+          "category": "综合编审",
+          "tags": [
+            "AI",
+            "通胀",
+            "宏观",
+            "A股",
+            "港美股"
+          ],
+          "chain": "AI 基础设施",
+          "score": 33.4,
+          "source": "AI Institute report archive"
+        }
+      ],
+      "change": {
+        "analystId": "daily-report-editor",
+        "analyst": "日报总编",
+        "avatar": "",
+        "category": "综合编审",
+        "stance": "偏谨慎",
+        "evidenceAdded": 6,
+        "changeZh": "新增 6 条证据，集中在 macro-inflation、ai-infrastructure。",
+        "changeEn": "Added 6 evidence items, concentrated in macro-inflation, ai-infrastructure.",
+        "linkedReports": [
+          {
+            "id": "archive-65a7e5598fba",
+            "title": "研究院周度综合报告 QA 审阅",
+            "summary": "审阅人：qa-manager - 日期锚点：2026-06-14（周日 SGT，shell 校准） - 覆盖周：2026-06-08（周一）→ 2026-06-12（周五） - 被审文件： 06 周报.md v1.0.0（作...",
+            "href": "/investor/reports/archive-65a7e5598fba/",
+            "analyst": "日报总编",
+            "analyst_id": "daily-report-editor",
+            "date": "2026-06-14",
+            "category": "综合编审",
+            "tags": [
+              "AI",
+              "通胀",
+              "A股",
+              "港美股",
+              "能源"
+            ],
+            "chain": "宏观通胀传导",
+            "score": 39,
+            "source": "AI Institute report archive"
+          },
+          {
+            "id": "archive-5312ebd1bf9b",
+            "title": "Active research-project theses",
+            "summary": "Scope : daily-report-editor (editorial — sees all fleet projects) Active : 8 · Recently closed (last 30d) : 5",
+            "href": "/investor/reports/archive-5312ebd1bf9b/",
+            "analyst": "日报总编",
+            "analyst_id": "daily-report-editor",
+            "date": "2026-06-14",
+            "category": "综合编审",
+            "tags": [
+              "AI",
+              "通胀",
+              "A股",
+              "能源",
+              "风险"
+            ],
+            "chain": "宏观通胀传导",
+            "score": 40.1,
+            "source": "AI Institute report archive"
+          },
+          {
+            "id": "archive-54c37456dc08",
+            "title": "§1 THESIS",
+            "summary": "author: daily-report-editor as of: 2026-06-14 market window: weekly market: AH week range: 2026-06-08 → 2026-06-12 tickers: [600900.SH, 002003.SZ, 60...",
+            "href": "/investor/reports/archive-54c37456dc08/",
+            "analyst": "日报总编",
+            "analyst_id": "daily-report-editor",
+            "date": "2026-06-14",
+            "category": "综合编审",
+            "tags": [
+              "AI",
+              "通胀",
+              "宏观",
+              "A股",
+              "港美股"
+            ],
+            "chain": "AI 基础设施",
+            "score": 38.3,
+            "source": "AI Institute report archive"
+          }
+        ]
+      }
+    },
+    {
+      "id": "industrials-analyst",
+      "name": "工业制造分析师",
+      "nameEn": "Industrials Analyst",
+      "avatar": "/investor-assets/avatars/industrials-analyst.png",
+      "color": "#237a5b",
+      "category": "行业研究",
+      "specialty": "高端制造/军工/机械/航空航天",
+      "reportCount": 46,
+      "latestDate": "2026-06-14",
+      "reportsToday": 3,
+      "recentReports": 5,
+      "stance": {
+        "label": "偏谨慎",
+        "bullish": 0,
+        "cautious": 15,
+        "balance": -15,
+        "tone": "cautious"
+      },
+      "themeCounts": [
+        {
+          "id": "AI",
+          "label": "AI",
+          "value": 44
+        },
+        {
+          "id": "通胀",
+          "label": "通胀",
+          "value": 42
+        },
+        {
+          "id": "能源",
+          "label": "能源",
+          "value": 36
+        },
+        {
+          "id": "宏观",
+          "label": "宏观",
+          "value": 30
+        },
+        {
+          "id": "风险",
+          "label": "风险",
+          "value": 23
+        },
+        {
+          "id": "A股",
+          "label": "A股",
+          "value": 20
+        }
+      ],
+      "chainCounts": [
+        {
+          "id": "ai-infrastructure",
+          "label": "AI 基础设施",
+          "value": 44
+        },
+        {
+          "id": "macro-inflation",
+          "label": "宏观通胀传导",
+          "value": 42
+        },
+        {
+          "id": "industrial-supply",
+          "label": "工业供给瓶颈",
+          "value": 32
+        },
+        {
+          "id": "power-grid",
+          "label": "电力与电网",
+          "value": 14
+        },
+        {
+          "id": "semiconductors",
+          "label": "半导体与存储",
+          "value": 4
+        }
+      ],
+      "recentViews": [
+        {
+          "title": "QA review.md — 工业制造周报研究包质量复核",
+          "summary": "复核日期： 2026-06-14 本机日期锚点： 系统日期锚 输出为 2026-06-14 总体判断： 当前研究包不能进入 PM 阅读环节。 01 weekly plan.md 是工业制造周报计划，覆盖 2026-06-08 至 2026-06-1...",
+          "date": "2026-06-14",
+          "href": "/investor/reports/archive-fa0e3c011964/",
+          "importance": 55.4
+        },
+        {
+          "title": "工业制造周报研究计划",
+          "summary": "本周覆盖范围 / Coverage window: 2026-06-08 (周一) → 2026-06-12 (周五)",
+          "date": "2026-06-14",
+          "href": "/investor/reports/archive-9913f8fa5978/",
+          "importance": 45.4
+        },
+        {
+          "title": "02 weekly research.md — 新兴科技主题研究周报：端侧AI芯片革命、量子2029路线图、ASCO创新药出...",
+          "summary": "02 weekly research.md — 新兴科技主题研究周报：端侧AI芯片革命、量子2029路线图、ASCO创新药出海与太空/Web3流动性重置",
+          "date": "2026-06-14",
+          "href": "/investor/reports/archive-514560c75b42/",
+          "importance": 45.4
+        },
+        {
+          "title": "2026年5月中国新能源汽车市场销量深度分析报告",
+          "summary": "日期： 2026年06月10日 数据口径： 乘联分会 (CPCA)、中汽协 (CAAM) 核心结论： 2026年5月是中国汽车工业的里程碑时刻。新能源汽车零售渗透率历史性突破 62.9%，且国内市场零售销量前十榜单首次...",
+          "date": "2026-06-10",
+          "href": "/investor/reports/archive-47e874f1df7a/",
+          "importance": 46.4
+        },
+        {
+          "title": "2026年1-5月中国汽车出口深度分析报告",
+          "summary": "发布日期： 2026年6月10日 报告摘要： 2026年1-5月，中国汽车出口延续强劲增长，乘用车累计出口337.3万辆（同比增长68.1%）。巴西首次超越俄罗斯成为最大出口目的地，新能源汽车（NEV）渗透率在...",
+          "date": "2026-06-10",
+          "href": "/investor/reports/archive-8913f3229feb/",
+          "importance": 40.6
+        }
+      ],
+      "latestReports": [
+        {
+          "id": "archive-9913f8fa5978",
+          "title": "工业制造周报研究计划",
+          "summary": "本周覆盖范围 / Coverage window: 2026-06-08 (周一) → 2026-06-12 (周五)",
+          "href": "/investor/reports/archive-9913f8fa5978/",
+          "analyst": "工业制造分析师",
+          "analyst_id": "industrials-analyst",
+          "date": "2026-06-14",
+          "category": "行业研究",
+          "tags": [
+            "AI",
+            "通胀",
+            "宏观",
+            "A股",
+            "港美股"
+          ],
+          "chain": "AI 基础设施",
+          "score": 36.3,
+          "source": "AI Institute report archive"
+        },
+        {
+          "id": "archive-fa0e3c011964",
+          "title": "QA review.md — 工业制造周报研究包质量复核",
+          "summary": "复核日期： 2026-06-14 本机日期锚点： 系统日期锚 输出为 2026-06-14 总体判断： 当前研究包不能进入 PM 阅读环节。 01 weekly plan.md 是工业制造周报计划...",
+          "href": "/investor/reports/archive-fa0e3c011964/",
+          "analyst": "工业制造分析师",
+          "analyst_id": "industrials-analyst",
+          "date": "2026-06-14",
+          "category": "行业研究",
+          "tags": [
+            "AI",
+            "通胀",
+            "宏观",
+            "能源",
+            "行业研究"
+          ],
+          "chain": "宏观通胀传导",
+          "score": 41.5,
+          "source": "AI Institute report archive"
+        },
+        {
+          "id": "archive-514560c75b42",
+          "title": "02 weekly research.md — 新兴科技主题研究周报：端侧AI芯片革命、量子2029路线图、ASCO创新药出...",
+          "summary": "02 weekly research.md — 新兴科技主题研究周报：端侧AI芯片革命、量子2029路线图、ASCO创新药出海与太空/Web3流动性重置",
+          "href": "/investor/reports/archive-514560c75b42/",
+          "analyst": "工业制造分析师",
+          "analyst_id": "industrials-analyst",
+          "date": "2026-06-14",
+          "category": "行业研究",
+          "tags": [
+            "AI",
+            "宏观",
+            "A股",
+            "港美股",
+            "风险"
+          ],
+          "chain": "AI 基础设施",
+          "score": 32.5,
+          "source": "AI Institute report archive"
+        },
+        {
+          "id": "archive-47e874f1df7a",
+          "title": "2026年5月中国新能源汽车市场销量深度分析报告",
+          "summary": "日期： 2026年06月10日 数据口径： 乘联分会 (CPCA)、中汽协 (CAAM) 核心结论： 2026年5月是中国汽车工业的里程碑时刻。新能源汽车零售渗透率历史性突破 62.9%...",
+          "href": "/investor/reports/archive-47e874f1df7a/",
+          "analyst": "工业制造分析师",
+          "analyst_id": "industrials-analyst",
+          "date": "2026-06-10",
+          "category": "行业研究",
+          "tags": [
+            "AI",
+            "通胀",
+            "宏观",
+            "能源",
+            "风险"
+          ],
+          "chain": "宏观通胀传导",
+          "score": 42.6,
+          "source": "AI Institute report archive"
+        }
+      ],
+      "change": {
+        "analystId": "industrials-analyst",
+        "analyst": "工业制造分析师",
+        "avatar": "/investor-assets/avatars/industrials-analyst.png",
+        "category": "行业研究",
+        "stance": "偏谨慎",
+        "evidenceAdded": 3,
+        "changeZh": "新增 3 条证据，集中在 ai-infrastructure、macro-inflation。",
+        "changeEn": "Added 3 evidence items, concentrated in ai-infrastructure, macro-inflation.",
+        "linkedReports": [
+          {
+            "id": "archive-fa0e3c011964",
+            "title": "QA review.md — 工业制造周报研究包质量复核",
+            "summary": "复核日期： 2026-06-14 本机日期锚点： 系统日期锚 输出为 2026-06-14 总体判断： 当前研究包不能进入 PM 阅读环节。 01 weekly plan.md 是工业制造周报计划...",
+            "href": "/investor/reports/archive-fa0e3c011964/",
+            "analyst": "工业制造分析师",
+            "analyst_id": "industrials-analyst",
+            "date": "2026-06-14",
+            "category": "行业研究",
+            "tags": [
+              "AI",
+              "通胀",
+              "宏观",
+              "能源",
+              "行业研究"
+            ],
+            "chain": "宏观通胀传导",
+            "score": 41.5,
+            "source": "AI Institute report archive"
+          },
+          {
+            "id": "archive-9913f8fa5978",
+            "title": "工业制造周报研究计划",
+            "summary": "本周覆盖范围 / Coverage window: 2026-06-08 (周一) → 2026-06-12 (周五)",
+            "href": "/investor/reports/archive-9913f8fa5978/",
+            "analyst": "工业制造分析师",
+            "analyst_id": "industrials-analyst",
+            "date": "2026-06-14",
+            "category": "行业研究",
+            "tags": [
+              "AI",
+              "通胀",
+              "宏观",
+              "A股",
+              "港美股"
+            ],
+            "chain": "AI 基础设施",
+            "score": 36.3,
+            "source": "AI Institute report archive"
+          },
+          {
+            "id": "archive-514560c75b42",
+            "title": "02 weekly research.md — 新兴科技主题研究周报：端侧AI芯片革命、量子2029路线图、ASCO创新药出...",
+            "summary": "02 weekly research.md — 新兴科技主题研究周报：端侧AI芯片革命、量子2029路线图、ASCO创新药出海与太空/Web3流动性重置",
+            "href": "/investor/reports/archive-514560c75b42/",
+            "analyst": "工业制造分析师",
+            "analyst_id": "industrials-analyst",
+            "date": "2026-06-14",
+            "category": "行业研究",
+            "tags": [
+              "AI",
+              "宏观",
+              "A股",
+              "港美股",
+              "风险"
+            ],
+            "chain": "AI 基础设施",
+            "score": 32.5,
+            "source": "AI Institute report archive"
+          }
+        ]
+      }
+    },
+    {
+      "id": "realestate-analyst",
+      "name": "房地产分析师",
+      "nameEn": "Real Estate Analyst",
+      "avatar": "/investor-assets/avatars/realestate-analyst.png",
+      "color": "#237a5b",
+      "category": "行业研究",
+      "specialty": "房地产销售/土拍/政策/REITs",
+      "reportCount": 21,
+      "latestDate": "2026-06-14",
+      "reportsToday": 3,
+      "recentReports": 8,
+      "stance": {
+        "label": "偏谨慎",
+        "bullish": 0,
+        "cautious": 6,
+        "balance": -6,
+        "tone": "cautious"
+      },
+      "themeCounts": [
+        {
+          "id": "AI",
+          "label": "AI",
+          "value": 19
+        },
+        {
+          "id": "通胀",
+          "label": "通胀",
+          "value": 18
+        },
+        {
+          "id": "A股",
+          "label": "A股",
+          "value": 18
+        },
+        {
+          "id": "宏观",
+          "label": "宏观",
+          "value": 15
+        },
+        {
+          "id": "风险",
+          "label": "风险",
+          "value": 9
+        },
+        {
+          "id": "行业研究",
+          "label": "行业研究",
+          "value": 8
+        }
+      ],
+      "chainCounts": [
+        {
+          "id": "ai-infrastructure",
+          "label": "AI 基础设施",
+          "value": 19
+        },
+        {
+          "id": "macro-inflation",
+          "label": "宏观通胀传导",
+          "value": 18
+        }
+      ],
+      "recentViews": [
+        {
+          "title": "房地产行业周报研究与规划方案：城市更新资金链拆解、深圳地王测算、5月销售筑底分化与商业不动产R...",
+          "summary": "房地产行业周报研究与规划方案：城市更新资金链拆解、深圳地王测算、5月销售筑底分化与商业不动产REITs上市压测",
+          "date": "2026-06-14",
+          "href": "/investor/reports/archive-6d1a86b0d5df/",
+          "importance": 44
+        },
+        {
+          "title": "房地产行业周报研究稿：核心资产抢地、销售 K 型修复、城市更新资金与商业 REITs 扩容",
+          "summary": "房地产行业周报研究稿：核心资产抢地、销售 K 型修复、城市更新资金与商业 REITs 扩容",
+          "date": "2026-06-14",
+          "href": "/investor/reports/archive-f84b91fd44d7/",
+          "importance": 41.6
+        },
+        {
+          "title": "房地产周报 QA 审阅",
+          "summary": "锚定日期：本地 系统日期锚 返回 2026-06-14。本 QA 覆盖上游文件 01 weekly plan.md 、 01 weekly plan.en.md 、 02 weekly research.md 、 02 weekly research.en.md。",
+          "date": "2026-06-14",
+          "href": "/investor/reports/archive-fb8cda54099b/",
+          "importance": 41.6
+        },
+        {
+          "title": "Recent analyst reports",
+          "summary": "Window anchor: 2026-06-10 (Asia/Singapore) · since hours=6 · lang=zh Files included: 25 of 25 candidate(s) · ~40380 chars Analyst filter: (none — all analysts)",
+          "date": "2026-06-10",
+          "href": "/investor/reports/archive-34a2c3ea1079/",
+          "importance": 43
+        },
+        {
+          "title": "房地产分析师午间同步简报",
+          "summary": "日期锚点： 2026-06-10 分析师： realestate-analyst 数据原则： 本简报所有“今日 / 昨日 / 本周 / 上周 / 上一交易日”均按 shell 输出 2026-06-10 解释。[I1] 今日未使用 web search；内部资...",
+          "date": "2026-06-10",
+          "href": "/investor/reports/archive-ec8b0be8cdb9/",
+          "importance": 40.2
+        }
+      ],
+      "latestReports": [
+        {
+          "id": "archive-f84b91fd44d7",
+          "title": "房地产行业周报研究稿：核心资产抢地、销售 K 型修复、城市更新资金与商业 REITs 扩容",
+          "summary": "房地产行业周报研究稿：核心资产抢地、销售 K 型修复、城市更新资金与商业 REITs 扩容",
+          "href": "/investor/reports/archive-f84b91fd44d7/",
+          "analyst": "房地产分析师",
+          "analyst_id": "realestate-analyst",
+          "date": "2026-06-14",
+          "category": "行业研究",
+          "tags": [
+            "AI",
+            "通胀",
+            "宏观",
+            "A股",
+            "行业研究"
+          ],
+          "chain": "AI 基础设施",
+          "score": 33.4,
+          "source": "AI Institute report archive"
+        },
+        {
+          "id": "archive-6d1a86b0d5df",
+          "title": "房地产行业周报研究与规划方案：城市更新资金链拆解、深圳地王测算、5月销售筑底分化与商业不动产R...",
+          "summary": "房地产行业周报研究与规划方案：城市更新资金链拆解、深圳地王测算、5月销售筑底分化与商业不动产REITs上市压测",
+          "href": "/investor/reports/archive-6d1a86b0d5df/",
+          "analyst": "房地产分析师",
+          "analyst_id": "realestate-analyst",
+          "date": "2026-06-14",
+          "category": "行业研究",
+          "tags": [
+            "AI",
+            "通胀",
+            "宏观",
+            "A股",
+            "能源"
+          ],
+          "chain": "宏观通胀传导",
+          "score": 36.2,
+          "source": "AI Institute report archive"
+        },
+        {
+          "id": "archive-fb8cda54099b",
+          "title": "房地产周报 QA 审阅",
+          "summary": "锚定日期：本地 系统日期锚 返回 2026-06-14。本 QA 覆盖上游文件 01 weekly plan.md 、 01 weekly plan.en.md 、 02 weekly research.md 、 02 weekl...",
+          "href": "/investor/reports/archive-fb8cda54099b/",
+          "analyst": "房地产分析师",
+          "analyst_id": "realestate-analyst",
+          "date": "2026-06-14",
+          "category": "行业研究",
+          "tags": [
+            "AI",
+            "通胀",
+            "宏观",
+            "A股",
+            "风险"
+          ],
+          "chain": "AI 基础设施",
+          "score": 39,
+          "source": "AI Institute report archive"
+        },
+        {
+          "id": "archive-ec8b0be8cdb9",
+          "title": "房地产分析师午间同步简报",
+          "summary": "日期锚点： 2026-06-10 分析师： realestate-analyst 数据原则： 本简报所有“今日 / 昨日 / 本周 / 上周 / 上一交易日”均按 shell 输出 2026-06-10 解释。[I1]...",
+          "href": "/investor/reports/archive-ec8b0be8cdb9/",
+          "analyst": "房地产分析师",
+          "analyst_id": "realestate-analyst",
+          "date": "2026-06-10",
+          "category": "行业研究",
+          "tags": [
+            "AI",
+            "通胀",
+            "宏观",
+            "风险",
+            "行业研究"
+          ],
+          "chain": "AI 基础设施",
+          "score": 38.5,
+          "source": "AI Institute report archive"
+        }
+      ],
+      "change": {
+        "analystId": "realestate-analyst",
+        "analyst": "房地产分析师",
+        "avatar": "/investor-assets/avatars/realestate-analyst.png",
+        "category": "行业研究",
+        "stance": "偏谨慎",
+        "evidenceAdded": 3,
+        "changeZh": "新增 3 条证据，集中在 macro-inflation、ai-infrastructure。",
+        "changeEn": "Added 3 evidence items, concentrated in macro-inflation, ai-infrastructure.",
+        "linkedReports": [
+          {
+            "id": "archive-6d1a86b0d5df",
+            "title": "房地产行业周报研究与规划方案：城市更新资金链拆解、深圳地王测算、5月销售筑底分化与商业不动产R...",
+            "summary": "房地产行业周报研究与规划方案：城市更新资金链拆解、深圳地王测算、5月销售筑底分化与商业不动产REITs上市压测",
+            "href": "/investor/reports/archive-6d1a86b0d5df/",
+            "analyst": "房地产分析师",
+            "analyst_id": "realestate-analyst",
+            "date": "2026-06-14",
+            "category": "行业研究",
+            "tags": [
+              "AI",
+              "通胀",
+              "宏观",
+              "A股",
+              "能源"
+            ],
+            "chain": "宏观通胀传导",
+            "score": 36.2,
+            "source": "AI Institute report archive"
+          },
+          {
+            "id": "archive-f84b91fd44d7",
+            "title": "房地产行业周报研究稿：核心资产抢地、销售 K 型修复、城市更新资金与商业 REITs 扩容",
+            "summary": "房地产行业周报研究稿：核心资产抢地、销售 K 型修复、城市更新资金与商业 REITs 扩容",
+            "href": "/investor/reports/archive-f84b91fd44d7/",
+            "analyst": "房地产分析师",
+            "analyst_id": "realestate-analyst",
+            "date": "2026-06-14",
+            "category": "行业研究",
+            "tags": [
+              "AI",
+              "通胀",
+              "宏观",
+              "A股",
+              "行业研究"
+            ],
+            "chain": "AI 基础设施",
+            "score": 33.4,
+            "source": "AI Institute report archive"
+          },
+          {
+            "id": "archive-fb8cda54099b",
+            "title": "房地产周报 QA 审阅",
+            "summary": "锚定日期：本地 系统日期锚 返回 2026-06-14。本 QA 覆盖上游文件 01 weekly plan.md 、 01 weekly plan.en.md 、 02 weekly research.md 、 02 weekl...",
+            "href": "/investor/reports/archive-fb8cda54099b/",
+            "analyst": "房地产分析师",
+            "analyst_id": "realestate-analyst",
+            "date": "2026-06-14",
+            "category": "行业研究",
+            "tags": [
+              "AI",
+              "通胀",
+              "宏观",
+              "A股",
+              "风险"
+            ],
+            "chain": "AI 基础设施",
+            "score": 39,
+            "source": "AI Institute report archive"
+          }
+        ]
+      }
+    },
+    {
+      "id": "thematic-researcher",
+      "name": "主题研究员",
+      "nameEn": "Thematic Researcher",
+      "avatar": "/investor-assets/avatars/thematic-researcher.png",
+      "color": "#6f7e2d",
+      "category": "ESG与主题",
+      "specialty": "AI/量子计算/生物科技/太空经济/Web3 【合并扩展 2026-06-11】纳入监管政策、碳中和/绿色金融、地缘政治、制裁与出口管制、关税框架。原 policy-analyst 职能并入。",
+      "reportCount": 53,
+      "latestDate": "2026-06-14",
+      "reportsToday": 1,
+      "recentReports": 13,
+      "stance": {
+        "label": "偏谨慎",
+        "bullish": 1,
+        "cautious": 4,
+        "balance": -3,
+        "tone": "cautious"
+      },
+      "themeCounts": [
+        {
+          "id": "AI",
+          "label": "AI",
+          "value": 51
+        },
+        {
+          "id": "通胀",
+          "label": "通胀",
+          "value": 43
+        },
+        {
+          "id": "宏观",
+          "label": "宏观",
+          "value": 42
+        },
+        {
+          "id": "A股",
+          "label": "A股",
+          "value": 28
+        },
+        {
+          "id": "能源",
+          "label": "能源",
+          "value": 26
+        },
+        {
+          "id": "港美股",
+          "label": "港美股",
+          "value": 26
+        }
+      ],
+      "chainCounts": [
+        {
+          "id": "ai-infrastructure",
+          "label": "AI 基础设施",
+          "value": 51
+        },
+        {
+          "id": "macro-inflation",
+          "label": "宏观通胀传导",
+          "value": 44
+        },
+        {
+          "id": "power-grid",
+          "label": "电力与电网",
+          "value": 6
+        },
+        {
+          "id": "semiconductors",
+          "label": "半导体与存储",
+          "value": 4
+        },
+        {
+          "id": "industrial-supply",
+          "label": "工业供给瓶颈",
+          "value": 4
+        }
+      ],
+      "recentViews": [
+        {
+          "title": "周末深度主题扫描 - 2026-06-14",
+          "summary": "锚定日期：本报告先以 shell 输出 2026-06-14 为“今天”。“过去5个交易日”定义为 2026-06-08 至 2026-06-12，价格表现使用 2026-06-05 收盘至 2026-06-12 收盘的 close-to-close 口径。市场...",
+          "date": "2026-06-14",
+          "href": "/investor/reports/archive-89c17f9f1b48/",
+          "importance": 56.8
+        },
+        {
+          "title": "主题轮动晨扫：跨行业制度性切换",
+          "summary": "运行锚点： 系统日期锚 = 2026-06-12。本文中的“昨日 / overnight / 本周 / 上一交易日”均指向美股 2026-06-11 收盘窗口。工作区未发现上游参考文件，本报告直接基于本轮检索与市场数据写...",
+          "date": "2026-06-12",
+          "href": "/investor/reports/archive-3571a2f168fe/",
+          "importance": 43
+        },
+        {
+          "title": "早间主题轮动扫描：从“算力”向“电力”的范式转移",
+          "summary": "早间主题轮动扫描：从“算力”向“电力”的范式转移 日期： 2026-06-11 分析师： 主题研究员",
+          "date": "2026-06-11",
+          "href": "/investor/reports/archive-2ed99484dedd/",
+          "importance": 48.8
+        },
+        {
+          "title": "午间工作对接与晨间要闻纪要 (2026-06-10)",
+          "summary": "1. 宏观利率与金融市场 - 美国非农与工资增长过热：5月非农就业数据实际新增 263K （远超市场共识的 175K），失业率录得 3.9%，平均时薪同比上涨 4.2%，环比上涨 0.42%。时薪上涨年化超 5%，展...",
+          "date": "2026-06-10",
+          "href": "/investor/reports/archive-902c2c1f73f8/",
+          "importance": 52.6
+        },
+        {
+          "title": "Your own recent reports — thematic-researcher",
+          "summary": "Your own recent reports — thematic-researcher",
+          "date": "2026-06-10",
+          "href": "/investor/reports/archive-eb9b79292305/",
+          "importance": 44
+        }
+      ],
+      "latestReports": [
+        {
+          "id": "archive-89c17f9f1b48",
+          "title": "周末深度主题扫描 - 2026-06-14",
+          "summary": "锚定日期：本报告先以 shell 输出 2026-06-14 为“今天”。“过去5个交易日”定义为 2026-06-08 至 2026-06-12，价格表现使用 2026-06-05 收盘至 2026-06-12 收...",
+          "href": "/investor/reports/archive-89c17f9f1b48/",
+          "analyst": "主题研究员",
+          "analyst_id": "thematic-researcher",
+          "date": "2026-06-14",
+          "category": "ESG与主题",
+          "tags": [
+            "AI",
+            "通胀",
+            "A股",
+            "能源",
+            "ESG与主题"
+          ],
+          "chain": "宏观通胀传导",
+          "score": 41.4,
+          "source": "AI Institute report archive"
+        },
+        {
+          "id": "archive-3571a2f168fe",
+          "title": "主题轮动晨扫：跨行业制度性切换",
+          "summary": "运行锚点： 系统日期锚 = 2026-06-12。本文中的“昨日 / overnight / 本周 / 上一交易日”均指向美股 2026-06-11 收盘窗口。工作区未发现上游参考文件，本报...",
+          "href": "/investor/reports/archive-3571a2f168fe/",
+          "analyst": "主题研究员",
+          "analyst_id": "thematic-researcher",
+          "date": "2026-06-12",
+          "category": "ESG与主题",
+          "tags": [
+            "AI",
+            "通胀",
+            "宏观",
+            "A股",
+            "港美股"
+          ],
+          "chain": "AI 基础设施",
+          "score": 36.2,
+          "source": "AI Institute report archive"
+        },
+        {
+          "id": "archive-2ed99484dedd",
+          "title": "早间主题轮动扫描：从“算力”向“电力”的范式转移",
+          "summary": "早间主题轮动扫描：从“算力”向“电力”的范式转移 日期： 2026-06-11 分析师： 主题研究员",
+          "href": "/investor/reports/archive-2ed99484dedd/",
+          "analyst": "主题研究员",
+          "analyst_id": "thematic-researcher",
+          "date": "2026-06-11",
+          "category": "ESG与主题",
+          "tags": [
+            "AI",
+            "通胀",
+            "宏观",
+            "A股",
+            "能源"
+          ],
+          "chain": "AI 基础设施",
+          "score": 40.8,
+          "source": "AI Institute report archive"
+        },
+        {
+          "id": "archive-3bd0a085401b",
+          "title": "新兴技术突破扫描",
+          "summary": "锚定日期：2026-06-10（来自系统日期锚 ）。扫描窗口以 2026-06-10 为截止；论文和产业化信号重点覆盖 2026 年 5 月至 6 月，专利数据采用公开可得的最...",
+          "href": "/investor/reports/archive-3bd0a085401b/",
+          "analyst": "主题研究员",
+          "analyst_id": "thematic-researcher",
+          "date": "2026-06-10",
+          "category": "ESG与主题",
+          "tags": [
+            "AI",
+            "宏观",
+            "风险",
+            "ESG与主题"
+          ],
+          "chain": "AI 基础设施",
+          "score": 29.8,
+          "source": "AI Institute report archive"
+        }
+      ],
+      "change": {
+        "analystId": "thematic-researcher",
+        "analyst": "主题研究员",
+        "avatar": "/investor-assets/avatars/thematic-researcher.png",
+        "category": "ESG与主题",
+        "stance": "偏谨慎",
+        "evidenceAdded": 1,
+        "changeZh": "新增 1 条证据，集中在 macro-inflation、ai-infrastructure。",
+        "changeEn": "Added 1 evidence items, concentrated in macro-inflation, ai-infrastructure.",
+        "linkedReports": [
+          {
+            "id": "archive-89c17f9f1b48",
+            "title": "周末深度主题扫描 - 2026-06-14",
+            "summary": "锚定日期：本报告先以 shell 输出 2026-06-14 为“今天”。“过去5个交易日”定义为 2026-06-08 至 2026-06-12，价格表现使用 2026-06-05 收盘至 2026-06-12 收...",
+            "href": "/investor/reports/archive-89c17f9f1b48/",
+            "analyst": "主题研究员",
+            "analyst_id": "thematic-researcher",
+            "date": "2026-06-14",
+            "category": "ESG与主题",
+            "tags": [
+              "AI",
+              "通胀",
+              "A股",
+              "能源",
+              "ESG与主题"
+            ],
+            "chain": "宏观通胀传导",
+            "score": 41.4,
+            "source": "AI Institute report archive"
+          }
+        ]
+      }
+    },
+    {
+      "id": "credit-analyst",
+      "name": "信用分析师",
+      "nameEn": "Credit Analyst",
+      "avatar": "/investor-assets/avatars/credit-analyst.png",
+      "color": "#b43d49",
+      "category": "风控与合规",
+      "specialty": "信用评级/违约预警/城投债/地产债",
+      "reportCount": 31,
+      "latestDate": "2026-06-14",
+      "reportsToday": 1,
+      "recentReports": 11,
+      "stance": {
+        "label": "偏谨慎",
+        "bullish": 0,
+        "cautious": 18,
+        "balance": -18,
+        "tone": "cautious"
+      },
+      "themeCounts": [
+        {
+          "id": "通胀",
+          "label": "通胀",
+          "value": 28
+        },
+        {
+          "id": "风险",
+          "label": "风险",
+          "value": 26
+        },
+        {
+          "id": "AI",
+          "label": "AI",
+          "value": 25
+        },
+        {
+          "id": "A股",
+          "label": "A股",
+          "value": 24
+        },
+        {
+          "id": "宏观",
+          "label": "宏观",
+          "value": 20
+        },
+        {
+          "id": "风控与合规",
+          "label": "风控与合规",
+          "value": 15
+        }
+      ],
+      "chainCounts": [
+        {
+          "id": "macro-inflation",
+          "label": "宏观通胀传导",
+          "value": 28
+        },
+        {
+          "id": "ai-infrastructure",
+          "label": "AI 基础设施",
+          "value": 25
+        },
+        {
+          "id": "semiconductors",
+          "label": "半导体与存储",
+          "value": 4
+        },
+        {
+          "id": "trade-policy",
+          "label": "trade-policy",
+          "value": 1
+        },
+        {
+          "id": "industrial-supply",
+          "label": "工业供给瓶颈",
+          "value": 1
+        }
+      ],
+      "recentViews": [
+        {
+          "title": "招商蛇口商业REIT落地与开发商投资性房地产估值的信用传导分析",
+          "summary": "致：全球宏观分析师（analyst:global-macro:weekly report） 自：信用分析师 日期：2026-06-14 主题：CMSK（招商蛇口）商业不动产REIT于6月11日注册，4.75%类债收益率与商办空置率走弱，是否会...",
+          "date": "2026-06-14",
+          "href": "/investor/reports/archive-4901c4cb855a/",
+          "importance": 43
+        },
+        {
+          "title": "信用分析师 · 午间团队同步简报（2026-06-10）",
+          "summary": "日期锚点： 2026-06-10 （星期三），由系统日期锚 确认。所有\"今日 / 昨日 / 上一交易日 / 上周\"均以此为准。 分析师：信用分析师（Credit Analyst · analyst:credit-analyst ） 覆盖...",
+          "date": "2026-06-10",
+          "href": "/investor/reports/archive-d9044b1f844a/",
+          "importance": 41.6
+        },
+        {
+          "title": "Recent analyst reports",
+          "summary": "Window anchor: 2026-06-10 (Asia/Singapore) · since hours=6 · lang=zh Files included: 25 of 25 candidate(s) · ~45876 chars Analyst filter: (none — all analysts)",
+          "date": "2026-06-10",
+          "href": "/investor/reports/archive-74347f83f8bb/",
+          "importance": 41.6
+        },
+        {
+          "title": "Active research-project theses",
+          "summary": "Scope : credit-analyst (slice: own + notes you contributed to) Active : 0 (no current long-running threads in scope) · Recently closed (last 14d) : 1",
+          "date": "2026-06-10",
+          "href": "/investor/reports/archive-6584d33419fa/",
+          "importance": 37.2
+        },
+        {
+          "title": "转股溢价率快速压缩转债预警分析报告",
+          "summary": "日期： 2026年6月9日 分析师： 信用分析师 (Convertible Bond Analyst)",
+          "date": "2026-06-09",
+          "href": "/investor/reports/archive-a975cc7073e8/",
+          "importance": 44
+        }
+      ],
+      "latestReports": [
+        {
+          "id": "archive-4901c4cb855a",
+          "title": "招商蛇口商业REIT落地与开发商投资性房地产估值的信用传导分析",
+          "summary": "致：全球宏观分析师（analyst:global-macro:weekly report） 自：信用分析师 日期：2026-06-14 主题：CMSK（招商蛇口）商业不动产REIT于6月11日注册，4.75%类债...",
+          "href": "/investor/reports/archive-4901c4cb855a/",
+          "analyst": "信用分析师",
+          "analyst_id": "credit-analyst",
+          "date": "2026-06-14",
+          "category": "风控与合规",
+          "tags": [
+            "AI",
+            "通胀",
+            "宏观",
+            "A股",
+            "港美股"
+          ],
+          "chain": "AI 基础设施",
+          "score": 36.2,
+          "source": "AI Institute report archive"
+        },
+        {
+          "id": "archive-d9044b1f844a",
+          "title": "信用分析师 · 午间团队同步简报（2026-06-10）",
+          "summary": "日期锚点： 2026-06-10 （星期三），由系统日期锚 确认。所有\"今日 / 昨日 / 上一交易日 / 上周\"均以此为准。 分析师：信用分析师（Credit Analyst ·...",
+          "href": "/investor/reports/archive-d9044b1f844a/",
+          "analyst": "信用分析师",
+          "analyst_id": "credit-analyst",
+          "date": "2026-06-10",
+          "category": "风控与合规",
+          "tags": [
+            "AI",
+            "通胀",
+            "宏观",
+            "A股",
+            "风险"
+          ],
+          "chain": "AI 基础设施",
+          "score": 38.5,
+          "source": "AI Institute report archive"
+        },
+        {
+          "id": "archive-74347f83f8bb",
+          "title": "Recent analyst reports",
+          "summary": "Window anchor: 2026-06-10 (Asia/Singapore) · since hours=6 · lang=zh Files included: 25 of 25 candidate(s) · ~45876 chars Analyst filter: (none —...",
+          "href": "/investor/reports/archive-74347f83f8bb/",
+          "analyst": "信用分析师",
+          "analyst_id": "credit-analyst",
+          "date": "2026-06-10",
+          "category": "风控与合规",
+          "tags": [
+            "AI",
+            "通胀",
+            "宏观",
+            "A股",
+            "风险"
+          ],
+          "chain": "AI 基础设施",
+          "score": 39.5,
+          "source": "AI Institute report archive"
+        },
+        {
+          "id": "archive-6584d33419fa",
+          "title": "Active research-project theses",
+          "summary": "Scope : credit-analyst (slice: own + notes you contributed to) Active : 0 (no current long-running threads in scope) · Recently closed (last 14d) : 1",
+          "href": "/investor/reports/archive-6584d33419fa/",
+          "analyst": "信用分析师",
+          "analyst_id": "credit-analyst",
+          "date": "2026-06-10",
+          "category": "风控与合规",
+          "tags": [
+            "AI",
+            "宏观",
+            "A股",
+            "风控与合规"
+          ],
+          "chain": "AI 基础设施",
+          "score": 28.9,
+          "source": "AI Institute report archive"
+        }
+      ],
+      "change": {
+        "analystId": "credit-analyst",
+        "analyst": "信用分析师",
+        "avatar": "/investor-assets/avatars/credit-analyst.png",
+        "category": "风控与合规",
+        "stance": "偏谨慎",
+        "evidenceAdded": 1,
+        "changeZh": "新增 1 条证据，集中在 ai-infrastructure、macro-inflation。",
+        "changeEn": "Added 1 evidence items, concentrated in ai-infrastructure, macro-inflation.",
+        "linkedReports": [
+          {
+            "id": "archive-4901c4cb855a",
+            "title": "招商蛇口商业REIT落地与开发商投资性房地产估值的信用传导分析",
+            "summary": "致：全球宏观分析师（analyst:global-macro:weekly report） 自：信用分析师 日期：2026-06-14 主题：CMSK（招商蛇口）商业不动产REIT于6月11日注册，4.75%类债...",
+            "href": "/investor/reports/archive-4901c4cb855a/",
+            "analyst": "信用分析师",
+            "analyst_id": "credit-analyst",
+            "date": "2026-06-14",
+            "category": "风控与合规",
+            "tags": [
+              "AI",
+              "通胀",
+              "宏观",
+              "A股",
+              "港美股"
+            ],
+            "chain": "AI 基础设施",
+            "score": 36.2,
+            "source": "AI Institute report archive"
+          }
+        ]
+      }
+    },
     {
       "id": "research-editor",
       "name": "深研主编",
@@ -109,8 +1545,8 @@
       "specialty": "整合深度研究多阶段结论，输出高质量研报与审校意见 【聚焦 2026-06-12】深度研报编辑：整合多分析师深度研究（research workflow）输出，去重、高密度。晨会简报与每日日报由 morning-brief-editor / daily-report-editor 各自负责（2026-06-12 恢复其编辑席位）。",
       "reportCount": 229,
       "latestDate": "2026-06-13",
-      "reportsToday": 8,
-      "recentReports": 66,
+      "reportsToday": 0,
+      "recentReports": 54,
       "stance": {
         "label": "偏谨慎",
         "bullish": 0,
@@ -183,35 +1619,35 @@
           "summary": "本步骤已读取工作区内 01 公司概况.md 、 02 财务数据.md 、 03 行业定位.md 、 04 催化剂.md 、 05 三表模型.md 、 06 盈利预测.md 、 07 估值分析.md 、 08 风险评估.md 、 09 投资论点.md 共...",
           "date": "2026-06-13",
           "href": "/investor/reports/archive-113df24c60ab/",
-          "importance": 57.6
+          "importance": 47.4
         },
         {
           "title": "ADR 深度报告交叉验证",
           "summary": "本次已读取工作区内 01 公司概况.md 、 02 财务数据.md 、 03 行业定位.md 、 04 催化剂.md 、 05 三表模型.md 、 06 盈利预测.md 、 07 估值分析.md 、 08 风险评估.md 、 09 投资论点.md 、 1...",
           "date": "2026-06-13",
           "href": "/investor/reports/archive-1800b893952c/",
-          "importance": 57.6
+          "importance": 47.4
         },
         {
           "title": "ADR 近端催化剂梳理",
           "summary": "截至 2026-06-13，ADR 的近端催化剂集中在三条主线：第一，RPM 订阅收入和患者激活的季度验证；第二，iCARE、ATS 2026 和 EAC 数据能否转化为美国 Value-Based Care（VBC）合同；第三，2026-06-...",
           "date": "2026-06-13",
           "href": "/investor/reports/archive-eea606182188/",
-          "importance": 55.9
-        },
-        {
-          "title": "ADR 三表预测模型",
-          "summary": "项目 口径 --- --- 研究对象 ADR，即 ASX 上市的 Adherium Limited；公司财年截至 30 June。[S1] 基准年 FY2025 使用公司 2025 年报实际数；FY2026-FY2028 为三年预测。[S1][自测算] 货币单位...",
-          "date": "2026-06-13",
-          "href": "/investor/reports/archive-41cae2365f61/",
-          "importance": 55.2
+          "importance": 46.8
         },
         {
           "title": "ADR 盈利预测",
           "summary": "项目 口径 --- --- 研究对象 ADR，即 ASX 上市的 Adherium Limited；公司财年截至 30 June。[S1] 基准资料 FY2025 使用公司年报实际数；FY2026E-FY2028E 使用 05 三表模型.md 的三表预测口径...",
           "date": "2026-06-13",
           "href": "/investor/reports/archive-e4db2369c6c1/",
-          "importance": 55.1
+          "importance": 45.4
+        },
+        {
+          "title": "ADR 三表预测模型",
+          "summary": "项目 口径 --- --- 研究对象 ADR，即 ASX 上市的 Adherium Limited；公司财年截至 30 June。[S1] 基准年 FY2025 使用公司 2025 年报实际数；FY2026-FY2028 为三年预测。[S1][自测算] 货币单位...",
+          "date": "2026-06-13",
+          "href": "/investor/reports/archive-41cae2365f61/",
+          "importance": 45.4
         }
       ],
       "latestReports": [
@@ -294,78 +1730,7 @@
           "source": "AI Institute report archive"
         }
       ],
-      "change": {
-        "analystId": "research-editor",
-        "analyst": "深研主编",
-        "avatar": "",
-        "category": "综合编审",
-        "stance": "偏谨慎",
-        "evidenceAdded": 8,
-        "changeZh": "新增 8 条证据，集中在 ai-infrastructure、macro-inflation。",
-        "changeEn": "Added 8 evidence items, concentrated in ai-infrastructure, macro-inflation.",
-        "linkedReports": [
-          {
-            "id": "archive-113df24c60ab",
-            "title": "ADR 目标价与投资评级",
-            "summary": "本步骤已读取工作区内 01 公司概况.md 、 02 财务数据.md 、 03 行业定位.md 、 04 催化剂.md 、 05 三表模型.md 、 06 盈利预测.md 、 07 估值分析.md 、 08 风...",
-            "href": "/investor/reports/archive-113df24c60ab/",
-            "analyst": "深研主编",
-            "analyst_id": "research-editor",
-            "date": "2026-06-13",
-            "category": "综合编审",
-            "tags": [
-              "AI",
-              "通胀",
-              "宏观",
-              "A股",
-              "港美股"
-            ],
-            "chain": "AI 基础设施",
-            "score": 40.8,
-            "source": "AI Institute report archive"
-          },
-          {
-            "id": "archive-1800b893952c",
-            "title": "ADR 深度报告交叉验证",
-            "summary": "本次已读取工作区内 01 公司概况.md 、 02 财务数据.md 、 03 行业定位.md 、 04 催化剂.md 、 05 三表模型.md 、 06 盈利预测.md 、 07 估值分析.md 、 08 风险...",
-            "href": "/investor/reports/archive-1800b893952c/",
-            "analyst": "深研主编",
-            "analyst_id": "research-editor",
-            "date": "2026-06-13",
-            "category": "综合编审",
-            "tags": [
-              "AI",
-              "通胀",
-              "A股",
-              "港美股",
-              "风险"
-            ],
-            "chain": "AI 基础设施",
-            "score": 40.8,
-            "source": "AI Institute report archive"
-          },
-          {
-            "id": "archive-eea606182188",
-            "title": "ADR 近端催化剂梳理",
-            "summary": "截至 2026-06-13，ADR 的近端催化剂集中在三条主线：第一，RPM 订阅收入和患者激活的季度验证；第二，iCARE、ATS 2026 和 EAC 数据能否转化为美国 Value-Based C...",
-            "href": "/investor/reports/archive-eea606182188/",
-            "analyst": "深研主编",
-            "analyst_id": "research-editor",
-            "date": "2026-06-13",
-            "category": "综合编审",
-            "tags": [
-              "AI",
-              "通胀",
-              "宏观",
-              "A股",
-              "港美股"
-            ],
-            "chain": "AI 基础设施",
-            "score": 36.3,
-            "source": "AI Institute report archive"
-          }
-        ]
-      }
+      "change": null
     },
     {
       "id": "chief-strategist",
@@ -960,204 +2325,6 @@
       "change": null
     },
     {
-      "id": "thematic-researcher",
-      "name": "主题研究员",
-      "nameEn": "Thematic Researcher",
-      "avatar": "/investor-assets/avatars/thematic-researcher.png",
-      "color": "#6f7e2d",
-      "category": "ESG与主题",
-      "specialty": "AI/量子计算/生物科技/太空经济/Web3 【合并扩展 2026-06-11】纳入监管政策、碳中和/绿色金融、地缘政治、制裁与出口管制、关税框架。原 policy-analyst 职能并入。",
-      "reportCount": 52,
-      "latestDate": "2026-06-12",
-      "reportsToday": 0,
-      "recentReports": 12,
-      "stance": {
-        "label": "偏谨慎",
-        "bullish": 1,
-        "cautious": 4,
-        "balance": -3,
-        "tone": "cautious"
-      },
-      "themeCounts": [
-        {
-          "id": "AI",
-          "label": "AI",
-          "value": 50
-        },
-        {
-          "id": "通胀",
-          "label": "通胀",
-          "value": 42
-        },
-        {
-          "id": "宏观",
-          "label": "宏观",
-          "value": 42
-        },
-        {
-          "id": "A股",
-          "label": "A股",
-          "value": 27
-        },
-        {
-          "id": "港美股",
-          "label": "港美股",
-          "value": 26
-        },
-        {
-          "id": "能源",
-          "label": "能源",
-          "value": 25
-        }
-      ],
-      "chainCounts": [
-        {
-          "id": "ai-infrastructure",
-          "label": "AI 基础设施",
-          "value": 50
-        },
-        {
-          "id": "macro-inflation",
-          "label": "宏观通胀传导",
-          "value": 43
-        },
-        {
-          "id": "power-grid",
-          "label": "电力与电网",
-          "value": 6
-        },
-        {
-          "id": "semiconductors",
-          "label": "半导体与存储",
-          "value": 4
-        },
-        {
-          "id": "industrial-supply",
-          "label": "工业供给瓶颈",
-          "value": 4
-        }
-      ],
-      "recentViews": [
-        {
-          "title": "主题轮动晨扫：跨行业制度性切换",
-          "summary": "运行锚点： 系统日期锚 = 2026-06-12。本文中的“昨日 / overnight / 本周 / 上一交易日”均指向美股 2026-06-11 收盘窗口。工作区未发现上游参考文件，本报告直接基于本轮检索与市场数据写...",
-          "date": "2026-06-12",
-          "href": "/investor/reports/archive-3571a2f168fe/",
-          "importance": 43
-        },
-        {
-          "title": "早间主题轮动扫描：从“算力”向“电力”的范式转移",
-          "summary": "早间主题轮动扫描：从“算力”向“电力”的范式转移 日期： 2026-06-11 分析师： 主题研究员",
-          "date": "2026-06-11",
-          "href": "/investor/reports/archive-2ed99484dedd/",
-          "importance": 48.8
-        },
-        {
-          "title": "午间工作对接与晨间要闻纪要 (2026-06-10)",
-          "summary": "1. 宏观利率与金融市场 - 美国非农与工资增长过热：5月非农就业数据实际新增 263K （远超市场共识的 175K），失业率录得 3.9%，平均时薪同比上涨 4.2%，环比上涨 0.42%。时薪上涨年化超 5%，展...",
-          "date": "2026-06-10",
-          "href": "/investor/reports/archive-902c2c1f73f8/",
-          "importance": 52.6
-        },
-        {
-          "title": "Your own recent reports — thematic-researcher",
-          "summary": "Your own recent reports — thematic-researcher",
-          "date": "2026-06-10",
-          "href": "/investor/reports/archive-eb9b79292305/",
-          "importance": 44
-        },
-        {
-          "title": "主题研究 · 盘前主题结构扫描",
-          "summary": "主题研究 · 盘前主题结构扫描 日期: 2026-06-10(周三) · 研究员: 主题研究员(Thematic Researcher) · 覆盖: AI / 量子 / 生物科技 / 太空经济 / Web3",
-          "date": "2026-06-10",
-          "href": "/investor/reports/archive-de9faaeee573/",
-          "importance": 42.6
-        }
-      ],
-      "latestReports": [
-        {
-          "id": "archive-3571a2f168fe",
-          "title": "主题轮动晨扫：跨行业制度性切换",
-          "summary": "运行锚点： 系统日期锚 = 2026-06-12。本文中的“昨日 / overnight / 本周 / 上一交易日”均指向美股 2026-06-11 收盘窗口。工作区未发现上游参考文件，本报...",
-          "href": "/investor/reports/archive-3571a2f168fe/",
-          "analyst": "主题研究员",
-          "analyst_id": "thematic-researcher",
-          "date": "2026-06-12",
-          "category": "ESG与主题",
-          "tags": [
-            "AI",
-            "通胀",
-            "宏观",
-            "A股",
-            "港美股"
-          ],
-          "chain": "AI 基础设施",
-          "score": 36.2,
-          "source": "AI Institute report archive"
-        },
-        {
-          "id": "archive-2ed99484dedd",
-          "title": "早间主题轮动扫描：从“算力”向“电力”的范式转移",
-          "summary": "早间主题轮动扫描：从“算力”向“电力”的范式转移 日期： 2026-06-11 分析师： 主题研究员",
-          "href": "/investor/reports/archive-2ed99484dedd/",
-          "analyst": "主题研究员",
-          "analyst_id": "thematic-researcher",
-          "date": "2026-06-11",
-          "category": "ESG与主题",
-          "tags": [
-            "AI",
-            "通胀",
-            "宏观",
-            "A股",
-            "能源"
-          ],
-          "chain": "AI 基础设施",
-          "score": 40.8,
-          "source": "AI Institute report archive"
-        },
-        {
-          "id": "archive-3bd0a085401b",
-          "title": "新兴技术突破扫描",
-          "summary": "锚定日期：2026-06-10（来自系统日期锚 ）。扫描窗口以 2026-06-10 为截止；论文和产业化信号重点覆盖 2026 年 5 月至 6 月，专利数据采用公开可得的最...",
-          "href": "/investor/reports/archive-3bd0a085401b/",
-          "analyst": "主题研究员",
-          "analyst_id": "thematic-researcher",
-          "date": "2026-06-10",
-          "category": "ESG与主题",
-          "tags": [
-            "AI",
-            "宏观",
-            "风险",
-            "ESG与主题"
-          ],
-          "chain": "AI 基础设施",
-          "score": 29.8,
-          "source": "AI Institute report archive"
-        },
-        {
-          "id": "archive-902c2c1f73f8",
-          "title": "午间工作对接与晨间要闻纪要 (2026-06-10)",
-          "summary": "1. 宏观利率与金融市场 - 美国非农与工资增长过热：5月非农就业数据实际新增 263K （远超市场共识的 175K），失业率录得 3.9%，平均时薪同比上涨 4.2%，环比上涨...",
-          "href": "/investor/reports/archive-902c2c1f73f8/",
-          "analyst": "主题研究员",
-          "analyst_id": "thematic-researcher",
-          "date": "2026-06-10",
-          "category": "ESG与主题",
-          "tags": [
-            "AI",
-            "通胀",
-            "宏观",
-            "A股",
-            "能源"
-          ],
-          "chain": "宏观通胀传导",
-          "score": 43,
-          "source": "AI Institute report archive"
-        }
-      ],
-      "change": null
-    },
-    {
       "id": "data-scientist",
       "name": "数据科学家",
       "nameEn": "Data Scientist",
@@ -1338,7 +2505,7 @@
       "reportCount": 140,
       "latestDate": "2026-06-11",
       "reportsToday": 0,
-      "recentReports": 42,
+      "recentReports": 41,
       "stance": {
         "label": "偏谨慎",
         "bullish": 1,
@@ -1527,200 +2694,6 @@
       "change": null
     },
     {
-      "id": "daily-report-editor",
-      "name": "日报总编",
-      "nameEn": "Daily Report Editor",
-      "avatar": "",
-      "color": "#475569",
-      "category": "综合编审",
-      "specialty": "统筹多分析师收盘输出，产出结构化每日日报与行动地图",
-      "reportCount": 99,
-      "latestDate": "2026-06-11",
-      "reportsToday": 0,
-      "recentReports": 18,
-      "stance": {
-        "label": "偏谨慎",
-        "bullish": 0,
-        "cautious": 5,
-        "balance": -5,
-        "tone": "cautious"
-      },
-      "themeCounts": [
-        {
-          "id": "AI",
-          "label": "AI",
-          "value": 97
-        },
-        {
-          "id": "A股",
-          "label": "A股",
-          "value": 86
-        },
-        {
-          "id": "通胀",
-          "label": "通胀",
-          "value": 77
-        },
-        {
-          "id": "宏观",
-          "label": "宏观",
-          "value": 62
-        },
-        {
-          "id": "能源",
-          "label": "能源",
-          "value": 59
-        },
-        {
-          "id": "风险",
-          "label": "风险",
-          "value": 47
-        }
-      ],
-      "chainCounts": [
-        {
-          "id": "ai-infrastructure",
-          "label": "AI 基础设施",
-          "value": 97
-        },
-        {
-          "id": "macro-inflation",
-          "label": "宏观通胀传导",
-          "value": 88
-        },
-        {
-          "id": "semiconductors",
-          "label": "半导体与存储",
-          "value": 2
-        },
-        {
-          "id": "industrial-supply",
-          "label": "工业供给瓶颈",
-          "value": 2
-        }
-      ],
-      "recentViews": [
-        {
-          "title": "Recent analyst reports",
-          "summary": "Window anchor: 2026-06-11 (Asia/Singapore) · since hours=14 · lang=zh Files included: 25 of 25 candidate(s) · ~42722 chars Analyst filter: (none — all analysts)",
-          "date": "2026-06-11",
-          "href": "/investor/reports/archive-1afb27b48012/",
-          "importance": 44
-        },
-        {
-          "title": "晨间头条复核与研究候选",
-          "summary": "锚定日期：2026-06-11（来自本地 系统日期锚 ）。本报告把“今日 / 昨日 / 隔夜 / 本周 / 上一交易日”全部按此日期解释。 recent reports.md 已成功拉取并通读；该文件是判断“研究...",
-          "date": "2026-06-11",
-          "href": "/investor/reports/archive-e5e11540d9bb/",
-          "importance": 43
-        },
-        {
-          "title": "日内分析师对齐扫描（2026-06-10）",
-          "summary": "日期锚：系统日期锚 返回 2026-06-10。本文所有“今日 / 午间 / 上一交易日 / 下午”均以 2026-06-10 解释。 - 其他分析师输出：已按要求拉取并通读 recent reports.md；文件含 1039...",
-          "date": "2026-06-10",
-          "href": "/investor/reports/archive-671e30a81a57/",
-          "importance": 43
-        },
-        {
-          "title": "Recent analyst reports",
-          "summary": "Window anchor: 2026-06-10 (Asia/Singapore) · since hours=10 · lang=zh Files included: 25 of 25 candidate(s) · ~38788 chars Analyst filter: (none — all analysts)",
-          "date": "2026-06-10",
-          "href": "/investor/reports/archive-fdb970a290b3/",
-          "importance": 43
-        },
-        {
-          "title": "资金流与市场情绪日报：2026-06-09 [来源：系统日期锚 2026-06-09]",
-          "summary": "资金流与市场情绪日报：2026-06-09 [来源：系统日期锚 2026-06-09]",
-          "date": "2026-06-09",
-          "href": "/investor/reports/archive-1d9bf9c6b759/",
-          "importance": 44
-        }
-      ],
-      "latestReports": [
-        {
-          "id": "archive-e5e11540d9bb",
-          "title": "晨间头条复核与研究候选",
-          "summary": "锚定日期：2026-06-11（来自本地 系统日期锚 ）。本报告把“今日 / 昨日 / 隔夜 / 本周 / 上一交易日”全部按此日期解释。 recent reports.md 已成功...",
-          "href": "/investor/reports/archive-e5e11540d9bb/",
-          "analyst": "日报总编",
-          "analyst_id": "daily-report-editor",
-          "date": "2026-06-11",
-          "category": "综合编审",
-          "tags": [
-            "AI",
-            "通胀",
-            "宏观",
-            "A股",
-            "港美股"
-          ],
-          "chain": "AI 基础设施",
-          "score": 36.2,
-          "source": "AI Institute report archive"
-        },
-        {
-          "id": "archive-1afb27b48012",
-          "title": "Recent analyst reports",
-          "summary": "Window anchor: 2026-06-11 (Asia/Singapore) · since hours=14 · lang=zh Files included: 25 of 25 candidate(s) · ~42722 chars Analyst filter: (none —...",
-          "href": "/investor/reports/archive-1afb27b48012/",
-          "analyst": "日报总编",
-          "analyst_id": "daily-report-editor",
-          "date": "2026-06-11",
-          "category": "综合编审",
-          "tags": [
-            "AI",
-            "通胀",
-            "宏观",
-            "A股",
-            "能源"
-          ],
-          "chain": "宏观通胀传导",
-          "score": 39.9,
-          "source": "AI Institute report archive"
-        },
-        {
-          "id": "archive-671e30a81a57",
-          "title": "日内分析师对齐扫描（2026-06-10）",
-          "summary": "日期锚：系统日期锚 返回 2026-06-10。本文所有“今日 / 午间 / 上一交易日 / 下午”均以 2026-06-10 解释。 - 其他分析师输出：已按要求拉取并通读 r...",
-          "href": "/investor/reports/archive-671e30a81a57/",
-          "analyst": "日报总编",
-          "analyst_id": "daily-report-editor",
-          "date": "2026-06-10",
-          "category": "综合编审",
-          "tags": [
-            "AI",
-            "通胀",
-            "宏观",
-            "A股",
-            "港美股"
-          ],
-          "chain": "AI 基础设施",
-          "score": 36.5,
-          "source": "AI Institute report archive"
-        },
-        {
-          "id": "archive-fdb970a290b3",
-          "title": "Recent analyst reports",
-          "summary": "Window anchor: 2026-06-10 (Asia/Singapore) · since hours=10 · lang=zh Files included: 25 of 25 candidate(s) · ~38788 chars Analyst filter: (none —...",
-          "href": "/investor/reports/archive-fdb970a290b3/",
-          "analyst": "日报总编",
-          "analyst_id": "daily-report-editor",
-          "date": "2026-06-10",
-          "category": "综合编审",
-          "tags": [
-            "AI",
-            "通胀",
-            "宏观",
-            "A股",
-            "港美股"
-          ],
-          "chain": "AI 基础设施",
-          "score": 37.5,
-          "source": "AI Institute report archive"
-        }
-      ],
-      "change": null
-    },
-    {
       "id": "tmt-analyst",
       "name": "TMT行业分析师",
       "nameEn": "TMT Analyst",
@@ -1731,7 +2704,7 @@
       "reportCount": 81,
       "latestDate": "2026-06-11",
       "reportsToday": 0,
-      "recentReports": 7,
+      "recentReports": 5,
       "stance": {
         "label": "偏谨慎",
         "bullish": 0,
@@ -2714,7 +3687,7 @@
       "reportCount": 48,
       "latestDate": "2026-06-11",
       "reportsToday": 0,
-      "recentReports": 5,
+      "recentReports": 4,
       "stance": {
         "label": "偏谨慎",
         "bullish": 0,
@@ -3111,7 +4084,7 @@
       "reportCount": 45,
       "latestDate": "2026-06-11",
       "reportsToday": 0,
-      "recentReports": 12,
+      "recentReports": 10,
       "stance": {
         "label": "均衡",
         "bullish": 0,
@@ -3692,7 +4665,7 @@
       "reportCount": 74,
       "latestDate": "2026-06-10",
       "reportsToday": 0,
-      "recentReports": 10,
+      "recentReports": 9,
       "stance": {
         "label": "偏谨慎",
         "bullish": 0,
@@ -3888,7 +4861,7 @@
       "reportCount": 54,
       "latestDate": "2026-06-10",
       "reportsToday": 0,
-      "recentReports": 14,
+      "recentReports": 11,
       "stance": {
         "label": "偏谨慎",
         "bullish": 0,
@@ -4273,204 +5246,6 @@
       "change": null
     },
     {
-      "id": "industrials-analyst",
-      "name": "工业制造分析师",
-      "nameEn": "Industrials Analyst",
-      "avatar": "/investor-assets/avatars/industrials-analyst.png",
-      "color": "#237a5b",
-      "category": "行业研究",
-      "specialty": "高端制造/军工/机械/航空航天",
-      "reportCount": 43,
-      "latestDate": "2026-06-10",
-      "reportsToday": 0,
-      "recentReports": 4,
-      "stance": {
-        "label": "偏谨慎",
-        "bullish": 0,
-        "cautious": 17,
-        "balance": -17,
-        "tone": "cautious"
-      },
-      "themeCounts": [
-        {
-          "id": "AI",
-          "label": "AI",
-          "value": 41
-        },
-        {
-          "id": "通胀",
-          "label": "通胀",
-          "value": 40
-        },
-        {
-          "id": "能源",
-          "label": "能源",
-          "value": 35
-        },
-        {
-          "id": "宏观",
-          "label": "宏观",
-          "value": 27
-        },
-        {
-          "id": "风险",
-          "label": "风险",
-          "value": 22
-        },
-        {
-          "id": "A股",
-          "label": "A股",
-          "value": 18
-        }
-      ],
-      "chainCounts": [
-        {
-          "id": "ai-infrastructure",
-          "label": "AI 基础设施",
-          "value": 41
-        },
-        {
-          "id": "macro-inflation",
-          "label": "宏观通胀传导",
-          "value": 40
-        },
-        {
-          "id": "industrial-supply",
-          "label": "工业供给瓶颈",
-          "value": 30
-        },
-        {
-          "id": "power-grid",
-          "label": "电力与电网",
-          "value": 14
-        },
-        {
-          "id": "semiconductors",
-          "label": "半导体与存储",
-          "value": 3
-        }
-      ],
-      "recentViews": [
-        {
-          "title": "2026年5月中国新能源汽车市场销量深度分析报告",
-          "summary": "日期： 2026年06月10日 数据口径： 乘联分会 (CPCA)、中汽协 (CAAM) 核心结论： 2026年5月是中国汽车工业的里程碑时刻。新能源汽车零售渗透率历史性突破 62.9%，且国内市场零售销量前十榜单首次...",
-          "date": "2026-06-10",
-          "href": "/investor/reports/archive-47e874f1df7a/",
-          "importance": 46.4
-        },
-        {
-          "title": "2026年1-5月中国汽车出口深度分析报告",
-          "summary": "发布日期： 2026年6月10日 报告摘要： 2026年1-5月，中国汽车出口延续强劲增长，乘用车累计出口337.3万辆（同比增长68.1%）。巴西首次超越俄罗斯成为最大出口目的地，新能源汽车（NEV）渗透率在...",
-          "date": "2026-06-10",
-          "href": "/investor/reports/archive-8913f3229feb/",
-          "importance": 40.6
-        },
-        {
-          "title": "02 weekly research.md — 工业制造与航空防务板块周度研究报告（2026-06-05周度收盘）",
-          "summary": "02 weekly research.md — 工业制造与航空防务板块周度研究报告（2026-06-05周度收盘）",
-          "date": "2026-06-07",
-          "href": "/investor/reports/archive-66b3651bdbcb/",
-          "importance": 46.4
-        },
-        {
-          "title": "QA 质量审查报告 — W23 工业制造与航空防务周报（2026-06-01 → 2026-06-05）",
-          "summary": "QA 质量审查报告 — W23 工业制造与航空防务周报（2026-06-01 → 2026-06-05）",
-          "date": "2026-06-07",
-          "href": "/investor/reports/archive-bb464a6f1f7f/",
-          "importance": 41.2
-        },
-        {
-          "title": "工业组答复 · 高压变压器交付缺口对德州 AI 园区与 H2 2026 GPU 订单的挤出评估",
-          "summary": "工业组答复 · 高压变压器交付缺口对德州 AI 园区与 H2 2026 GPU 订单的挤出评估",
-          "date": "2026-06-04",
-          "href": "/investor/reports/archive-e784b4fe409f/",
-          "importance": 54.4
-        }
-      ],
-      "latestReports": [
-        {
-          "id": "archive-47e874f1df7a",
-          "title": "2026年5月中国新能源汽车市场销量深度分析报告",
-          "summary": "日期： 2026年06月10日 数据口径： 乘联分会 (CPCA)、中汽协 (CAAM) 核心结论： 2026年5月是中国汽车工业的里程碑时刻。新能源汽车零售渗透率历史性突破 62.9%...",
-          "href": "/investor/reports/archive-47e874f1df7a/",
-          "analyst": "工业制造分析师",
-          "analyst_id": "industrials-analyst",
-          "date": "2026-06-10",
-          "category": "行业研究",
-          "tags": [
-            "AI",
-            "通胀",
-            "宏观",
-            "能源",
-            "风险"
-          ],
-          "chain": "宏观通胀传导",
-          "score": 42.6,
-          "source": "AI Institute report archive"
-        },
-        {
-          "id": "archive-8913f3229feb",
-          "title": "2026年1-5月中国汽车出口深度分析报告",
-          "summary": "发布日期： 2026年6月10日 报告摘要： 2026年1-5月，中国汽车出口延续强劲增长，乘用车累计出口337.3万辆（同比增长68.1%）。巴西首次超越俄罗斯成为最大出口目...",
-          "href": "/investor/reports/archive-8913f3229feb/",
-          "analyst": "工业制造分析师",
-          "analyst_id": "industrials-analyst",
-          "date": "2026-06-10",
-          "category": "行业研究",
-          "tags": [
-            "通胀",
-            "能源",
-            "风险",
-            "行业研究"
-          ],
-          "chain": "宏观通胀传导",
-          "score": 31.9,
-          "source": "AI Institute report archive"
-        },
-        {
-          "id": "archive-bb464a6f1f7f",
-          "title": "QA 质量审查报告 — W23 工业制造与航空防务周报（2026-06-01 → 2026-06-05）",
-          "summary": "QA 质量审查报告 — W23 工业制造与航空防务周报（2026-06-01 → 2026-06-05）",
-          "href": "/investor/reports/archive-bb464a6f1f7f/",
-          "analyst": "工业制造分析师",
-          "analyst_id": "industrials-analyst",
-          "date": "2026-06-07",
-          "category": "行业研究",
-          "tags": [
-            "通胀",
-            "宏观",
-            "能源",
-            "风险",
-            "行业研究"
-          ],
-          "chain": "宏观通胀传导",
-          "score": 34.1,
-          "source": "AI Institute report archive"
-        },
-        {
-          "id": "archive-66b3651bdbcb",
-          "title": "02 weekly research.md — 工业制造与航空防务板块周度研究报告（2026-06-05周度收盘）",
-          "summary": "02 weekly research.md — 工业制造与航空防务板块周度研究报告（2026-06-05周度收盘）",
-          "href": "/investor/reports/archive-66b3651bdbcb/",
-          "analyst": "工业制造分析师",
-          "analyst_id": "industrials-analyst",
-          "date": "2026-06-07",
-          "category": "行业研究",
-          "tags": [
-            "AI",
-            "通胀",
-            "宏观",
-            "A股",
-            "能源"
-          ],
-          "chain": "宏观通胀传导",
-          "score": 38.6,
-          "source": "AI Institute report archive"
-        }
-      ],
-      "change": null
-    },
-    {
       "id": "policy-analyst",
       "name": "政策分析师",
       "nameEn": "Policy Analyst",
@@ -4481,7 +5256,7 @@
       "reportCount": 42,
       "latestDate": "2026-06-10",
       "reportsToday": 0,
-      "recentReports": 9,
+      "recentReports": 6,
       "stance": {
         "label": "偏谨慎",
         "bullish": 0,
@@ -4865,204 +5640,6 @@
       "change": null
     },
     {
-      "id": "credit-analyst",
-      "name": "信用分析师",
-      "nameEn": "Credit Analyst",
-      "avatar": "/investor-assets/avatars/credit-analyst.png",
-      "color": "#b43d49",
-      "category": "风控与合规",
-      "specialty": "信用评级/违约预警/城投债/地产债",
-      "reportCount": 30,
-      "latestDate": "2026-06-10",
-      "reportsToday": 0,
-      "recentReports": 10,
-      "stance": {
-        "label": "偏谨慎",
-        "bullish": 0,
-        "cautious": 18,
-        "balance": -18,
-        "tone": "cautious"
-      },
-      "themeCounts": [
-        {
-          "id": "通胀",
-          "label": "通胀",
-          "value": 27
-        },
-        {
-          "id": "风险",
-          "label": "风险",
-          "value": 26
-        },
-        {
-          "id": "AI",
-          "label": "AI",
-          "value": 24
-        },
-        {
-          "id": "A股",
-          "label": "A股",
-          "value": 23
-        },
-        {
-          "id": "宏观",
-          "label": "宏观",
-          "value": 19
-        },
-        {
-          "id": "风控与合规",
-          "label": "风控与合规",
-          "value": 15
-        }
-      ],
-      "chainCounts": [
-        {
-          "id": "macro-inflation",
-          "label": "宏观通胀传导",
-          "value": 27
-        },
-        {
-          "id": "ai-infrastructure",
-          "label": "AI 基础设施",
-          "value": 24
-        },
-        {
-          "id": "semiconductors",
-          "label": "半导体与存储",
-          "value": 4
-        },
-        {
-          "id": "trade-policy",
-          "label": "trade-policy",
-          "value": 1
-        },
-        {
-          "id": "industrial-supply",
-          "label": "工业供给瓶颈",
-          "value": 1
-        }
-      ],
-      "recentViews": [
-        {
-          "title": "信用分析师 · 午间团队同步简报（2026-06-10）",
-          "summary": "日期锚点： 2026-06-10 （星期三），由系统日期锚 确认。所有\"今日 / 昨日 / 上一交易日 / 上周\"均以此为准。 分析师：信用分析师（Credit Analyst · analyst:credit-analyst ） 覆盖...",
-          "date": "2026-06-10",
-          "href": "/investor/reports/archive-d9044b1f844a/",
-          "importance": 41.6
-        },
-        {
-          "title": "Recent analyst reports",
-          "summary": "Window anchor: 2026-06-10 (Asia/Singapore) · since hours=6 · lang=zh Files included: 25 of 25 candidate(s) · ~45876 chars Analyst filter: (none — all analysts)",
-          "date": "2026-06-10",
-          "href": "/investor/reports/archive-74347f83f8bb/",
-          "importance": 41.6
-        },
-        {
-          "title": "Active research-project theses",
-          "summary": "Scope : credit-analyst (slice: own + notes you contributed to) Active : 0 (no current long-running threads in scope) · Recently closed (last 14d) : 1",
-          "date": "2026-06-10",
-          "href": "/investor/reports/archive-6584d33419fa/",
-          "importance": 37.2
-        },
-        {
-          "title": "转股溢价率快速压缩转债预警分析报告",
-          "summary": "日期： 2026年6月9日 分析师： 信用分析师 (Convertible Bond Analyst)",
-          "date": "2026-06-09",
-          "href": "/investor/reports/archive-a975cc7073e8/",
-          "importance": 44
-        },
-        {
-          "title": "2026年中国信用债利差监测与趋势研判：极度压缩、结构分化与信用重定价警报",
-          "summary": "2026年中国信用债利差监测与趋势研判：极度压缩、结构分化与信用重定价警报",
-          "date": "2026-06-09",
-          "href": "/investor/reports/archive-654ef83fe66f/",
-          "importance": 43
-        }
-      ],
-      "latestReports": [
-        {
-          "id": "archive-d9044b1f844a",
-          "title": "信用分析师 · 午间团队同步简报（2026-06-10）",
-          "summary": "日期锚点： 2026-06-10 （星期三），由系统日期锚 确认。所有\"今日 / 昨日 / 上一交易日 / 上周\"均以此为准。 分析师：信用分析师（Credit Analyst ·...",
-          "href": "/investor/reports/archive-d9044b1f844a/",
-          "analyst": "信用分析师",
-          "analyst_id": "credit-analyst",
-          "date": "2026-06-10",
-          "category": "风控与合规",
-          "tags": [
-            "AI",
-            "通胀",
-            "宏观",
-            "A股",
-            "风险"
-          ],
-          "chain": "AI 基础设施",
-          "score": 38.5,
-          "source": "AI Institute report archive"
-        },
-        {
-          "id": "archive-74347f83f8bb",
-          "title": "Recent analyst reports",
-          "summary": "Window anchor: 2026-06-10 (Asia/Singapore) · since hours=6 · lang=zh Files included: 25 of 25 candidate(s) · ~45876 chars Analyst filter: (none —...",
-          "href": "/investor/reports/archive-74347f83f8bb/",
-          "analyst": "信用分析师",
-          "analyst_id": "credit-analyst",
-          "date": "2026-06-10",
-          "category": "风控与合规",
-          "tags": [
-            "AI",
-            "通胀",
-            "宏观",
-            "A股",
-            "风险"
-          ],
-          "chain": "AI 基础设施",
-          "score": 39.5,
-          "source": "AI Institute report archive"
-        },
-        {
-          "id": "archive-6584d33419fa",
-          "title": "Active research-project theses",
-          "summary": "Scope : credit-analyst (slice: own + notes you contributed to) Active : 0 (no current long-running threads in scope) · Recently closed (last 14d) : 1",
-          "href": "/investor/reports/archive-6584d33419fa/",
-          "analyst": "信用分析师",
-          "analyst_id": "credit-analyst",
-          "date": "2026-06-10",
-          "category": "风控与合规",
-          "tags": [
-            "AI",
-            "宏观",
-            "A股",
-            "风控与合规"
-          ],
-          "chain": "AI 基础设施",
-          "score": 28.9,
-          "source": "AI Institute report archive"
-        },
-        {
-          "id": "archive-a975cc7073e8",
-          "title": "转股溢价率快速压缩转债预警分析报告",
-          "summary": "日期： 2026年6月9日 分析师： 信用分析师 (Convertible Bond Analyst)",
-          "href": "/investor/reports/archive-a975cc7073e8/",
-          "analyst": "信用分析师",
-          "analyst_id": "credit-analyst",
-          "date": "2026-06-09",
-          "category": "风控与合规",
-          "tags": [
-            "AI",
-            "通胀",
-            "A股",
-            "能源",
-            "风险"
-          ],
-          "chain": "宏观通胀传导",
-          "score": 38,
-          "source": "AI Institute report archive"
-        }
-      ],
-      "change": null
-    },
-    {
       "id": "qa-manager",
       "name": "研究质量主管",
       "nameEn": "QA Manager",
@@ -5250,189 +5827,6 @@
           ],
           "chain": "宏观通胀传导",
           "score": 39.8,
-          "source": "AI Institute report archive"
-        }
-      ],
-      "change": null
-    },
-    {
-      "id": "realestate-analyst",
-      "name": "房地产分析师",
-      "nameEn": "Real Estate Analyst",
-      "avatar": "/investor-assets/avatars/realestate-analyst.png",
-      "color": "#237a5b",
-      "category": "行业研究",
-      "specialty": "房地产销售/土拍/政策/REITs",
-      "reportCount": 18,
-      "latestDate": "2026-06-10",
-      "reportsToday": 0,
-      "recentReports": 8,
-      "stance": {
-        "label": "偏谨慎",
-        "bullish": 0,
-        "cautious": 6,
-        "balance": -6,
-        "tone": "cautious"
-      },
-      "themeCounts": [
-        {
-          "id": "AI",
-          "label": "AI",
-          "value": 16
-        },
-        {
-          "id": "通胀",
-          "label": "通胀",
-          "value": 15
-        },
-        {
-          "id": "A股",
-          "label": "A股",
-          "value": 15
-        },
-        {
-          "id": "宏观",
-          "label": "宏观",
-          "value": 12
-        },
-        {
-          "id": "风险",
-          "label": "风险",
-          "value": 8
-        },
-        {
-          "id": "港美股",
-          "label": "港美股",
-          "value": 7
-        }
-      ],
-      "chainCounts": [
-        {
-          "id": "ai-infrastructure",
-          "label": "AI 基础设施",
-          "value": 16
-        },
-        {
-          "id": "macro-inflation",
-          "label": "宏观通胀传导",
-          "value": 15
-        }
-      ],
-      "recentViews": [
-        {
-          "title": "Recent analyst reports",
-          "summary": "Window anchor: 2026-06-10 (Asia/Singapore) · since hours=6 · lang=zh Files included: 25 of 25 candidate(s) · ~40380 chars Analyst filter: (none — all analysts)",
-          "date": "2026-06-10",
-          "href": "/investor/reports/archive-34a2c3ea1079/",
-          "importance": 43
-        },
-        {
-          "title": "房地产分析师午间同步简报",
-          "summary": "日期锚点： 2026-06-10 分析师： realestate-analyst 数据原则： 本简报所有“今日 / 昨日 / 本周 / 上周 / 上一交易日”均按 shell 输出 2026-06-10 解释。[I1] 今日未使用 web search；内部资...",
-          "date": "2026-06-10",
-          "href": "/investor/reports/archive-ec8b0be8cdb9/",
-          "importance": 40.2
-        },
-        {
-          "title": "Your own recent reports — realestate-analyst",
-          "summary": "Your own recent reports — realestate-analyst",
-          "date": "2026-06-10",
-          "href": "/investor/reports/archive-f44dd92a8d24/",
-          "importance": 37.2
-        },
-        {
-          "title": "Active research-project theses",
-          "summary": "Scope : realestate-analyst (slice: own + notes you contributed to) Active : 1 · Recently closed (last 14d) : 0",
-          "date": "2026-06-09",
-          "href": "/investor/reports/archive-3c9be7658f84/",
-          "importance": 42.6
-        },
-        {
-          "title": "万科境内债展期被境外评级机构下调至 RD —— 是否会加速国内评级机构对其他混合所有制/民营房企的...",
-          "summary": "万科境内债展期被境外评级机构下调至 RD —— 是否会加速国内评级机构对其他混合所有制/民营房企的跟踪下调？",
-          "date": "2026-06-09",
-          "href": "/investor/reports/archive-ec12e59262f5/",
-          "importance": 41.6
-        }
-      ],
-      "latestReports": [
-        {
-          "id": "archive-ec8b0be8cdb9",
-          "title": "房地产分析师午间同步简报",
-          "summary": "日期锚点： 2026-06-10 分析师： realestate-analyst 数据原则： 本简报所有“今日 / 昨日 / 本周 / 上周 / 上一交易日”均按 shell 输出 2026-06-10 解释。[I1]...",
-          "href": "/investor/reports/archive-ec8b0be8cdb9/",
-          "analyst": "房地产分析师",
-          "analyst_id": "realestate-analyst",
-          "date": "2026-06-10",
-          "category": "行业研究",
-          "tags": [
-            "AI",
-            "通胀",
-            "宏观",
-            "风险",
-            "行业研究"
-          ],
-          "chain": "AI 基础设施",
-          "score": 38.5,
-          "source": "AI Institute report archive"
-        },
-        {
-          "id": "archive-f44dd92a8d24",
-          "title": "Your own recent reports — realestate-analyst",
-          "summary": "Your own recent reports — realestate-analyst",
-          "href": "/investor/reports/archive-f44dd92a8d24/",
-          "analyst": "房地产分析师",
-          "analyst_id": "realestate-analyst",
-          "date": "2026-06-10",
-          "category": "行业研究",
-          "tags": [
-            "AI",
-            "A股",
-            "风险",
-            "行业研究"
-          ],
-          "chain": "AI 基础设施",
-          "score": 27.2,
-          "source": "AI Institute report archive"
-        },
-        {
-          "id": "archive-34a2c3ea1079",
-          "title": "Recent analyst reports",
-          "summary": "Window anchor: 2026-06-10 (Asia/Singapore) · since hours=6 · lang=zh Files included: 25 of 25 candidate(s) · ~40380 chars Analyst filter: (none —...",
-          "href": "/investor/reports/archive-34a2c3ea1079/",
-          "analyst": "房地产分析师",
-          "analyst_id": "realestate-analyst",
-          "date": "2026-06-10",
-          "category": "行业研究",
-          "tags": [
-            "AI",
-            "通胀",
-            "宏观",
-            "A股",
-            "港美股"
-          ],
-          "chain": "AI 基础设施",
-          "score": 37.5,
-          "source": "AI Institute report archive"
-        },
-        {
-          "id": "archive-ec12e59262f5",
-          "title": "万科境内债展期被境外评级机构下调至 RD —— 是否会加速国内评级机构对其他混合所有制/民营房企的...",
-          "summary": "万科境内债展期被境外评级机构下调至 RD —— 是否会加速国内评级机构对其他混合所有制/民营房企的跟踪下调？",
-          "href": "/investor/reports/archive-ec12e59262f5/",
-          "analyst": "房地产分析师",
-          "analyst_id": "realestate-analyst",
-          "date": "2026-06-09",
-          "category": "行业研究",
-          "tags": [
-            "AI",
-            "通胀",
-            "A股",
-            "风险",
-            "行业研究"
-          ],
-          "chain": "AI 基础设施",
-          "score": 35.7,
           "source": "AI Institute report archive"
         }
       ],
@@ -5646,7 +6040,7 @@
       "reportCount": 28,
       "latestDate": "2026-06-09",
       "reportsToday": 0,
-      "recentReports": 7,
+      "recentReports": 4,
       "stance": {
         "label": "偏谨慎",
         "bullish": 0,
@@ -6217,7 +6611,7 @@
       "reportCount": 15,
       "latestDate": "2026-06-09",
       "reportsToday": 0,
-      "recentReports": 2,
+      "recentReports": 1,
       "stance": {
         "label": "偏谨慎",
         "bullish": 0,
@@ -6598,7 +6992,7 @@
       "reportCount": 20,
       "latestDate": "2026-06-07",
       "reportsToday": 0,
-      "recentReports": 3,
+      "recentReports": 0,
       "stance": {
         "label": "均衡",
         "bullish": 0,
@@ -6792,7 +7186,7 @@
       "reportCount": 2,
       "latestDate": "2026-06-07",
       "reportsToday": 0,
-      "recentReports": 1,
+      "recentReports": 0,
       "stance": {
         "label": "均衡",
         "bullish": 0,
