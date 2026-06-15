@@ -1,0 +1,234 @@
+---
+import BaseHead from "../../../components/BaseHead.astro";
+import Header from "../../../components/Header.astro";
+import { readResearchNetwork } from "../../../lib/investor-generated.js";
+import "../../../styles/research-network.css";
+
+const network = readResearchNetwork();
+const stats = network.stats || {};
+const theses = network.theses || [];
+const graph = network.graph || { nodes: [], edges: [] };
+const recaps = network.livingRecaps || [];
+
+const nodeGroups = new Map();
+for (const node of graph.nodes || []) {
+  const group = nodeGroups.get(node.type) || [];
+  group.push(node);
+  nodeGroups.set(node.type, group);
+}
+const width = 980;
+const height = 600;
+const centerX = width / 2;
+const centerY = height / 2;
+const rings = { thesis: 145, term: 255, event: 320 };
+const nodePositions = new Map();
+for (const [type, nodes] of nodeGroups.entries()) {
+  nodes.forEach((node, index) => {
+    const count = Math.max(1, nodes.length);
+    const angle = (Math.PI * 2 * index) / count - Math.PI / 2 + (type === "term" ? 0.08 : type === "event" ? 0.16 : 0);
+    const ring = rings[type] || 280;
+    nodePositions.set(node.id, {
+      ...node,
+      x: centerX + Math.cos(angle) * ring,
+      y: centerY + Math.sin(angle) * ring,
+    });
+  });
+}
+const visibleEdges = (graph.edges || []).filter((edge) => nodePositions.has(edge.source) && nodePositions.has(edge.target)).slice(0, 320);
+const visibleNodes = [...nodePositions.values()].slice(0, 180);
+const formatDate = (value) => String(value || "").replace(/^2026-/, "");
+const pct = (value) => `${Math.max(6, Math.min(100, Number(value || 0)))}%`;
+const sourceMix = theses
+  .flatMap((thesis) => Object.entries(thesis.sourceTypeCounts || {}))
+  .reduce((acc, [label, count]) => {
+    acc.set(label, (acc.get(label) || 0) + Number(count || 0));
+    return acc;
+  }, new Map());
+const sourceRows = [...sourceMix.entries()].sort((a, b) => b[1] - a[1]).slice(0, 8);
+const maxSource = Math.max(1, ...sourceRows.map((row) => row[1]));
+---
+
+<!doctype html>
+<html lang="zh-CN" data-lang="zh">
+  <head>
+    <BaseHead
+      title="研究主线网络 · AI Institute 投资研究台"
+      description="AI Institute public thesis network with living thesis timelines, evidence graph, and auto-generated recap dashboards."
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="research-network" data-thesis-count={theses.length}>
+      <section class="network-hero">
+        <div>
+          <div class="network-kicker">AI Institute · Thesis Network</div>
+          <h1>研究主线网络</h1>
+          <p>{network.summary?.lead || "把研究结果按主线、证据、风险和复盘重新组织，供人类读者快速进入关键问题。"}</p>
+          <div class="network-actions">
+            <a href="/investor/">返回研究台</a>
+            <a href="/investor/timeline/">研究时间线</a>
+            <a href="/investor/recaps/">复盘仪表盘</a>
+          </div>
+        </div>
+        <aside class="network-privacy">
+          <span>Public Contract</span>
+          <p>{network.summary?.privacyNote}</p>
+        </aside>
+      </section>
+
+      <section class="network-stat-grid" aria-label="Research network stats">
+        <div><span>Theses</span><strong>{stats.thesisCount || theses.length}</strong><em>公开主线</em></div>
+        <div><span>Nodes</span><strong>{stats.publicGraphNodes || graph.nodes?.length || 0}</strong><em>Vibe 图谱节点</em></div>
+        <div><span>Edges</span><strong>{stats.publicGraphEdges || graph.edges?.length || 0}</strong><em>主线关系</em></div>
+        <div><span>Recaps</span><strong>{stats.autoRecaps || recaps.length}</strong><em>自动复盘</em></div>
+      </section>
+
+      <section class="network-controls">
+        <label for="networkSearch">Search</label>
+        <input id="networkSearch" type="search" placeholder="搜索主线、公司、资产、链条、风险..." />
+        <a href="/investor-data/research-network.json">JSON 数据</a>
+      </section>
+
+      <section class="network-layout">
+        <div class="network-stage" aria-label="Public research network graph">
+          <svg viewBox={`0 0 ${width} ${height}`} role="img" aria-label="研究主线、关键词和证据事件网络">
+            <g class="network-edges">
+              {visibleEdges.map((edge) => {
+                const source = nodePositions.get(edge.source);
+                const target = nodePositions.get(edge.target);
+                return <line x1={source.x} y1={source.y} x2={target.x} y2={target.y} class={`edge ${edge.type}`} />;
+              })}
+            </g>
+            <g class="network-center">
+              <circle cx={centerX} cy={centerY} r="54"></circle>
+              <text x={centerX} y={centerY - 3} text-anchor="middle">AI Institute</text>
+              <text x={centerX} y={centerY + 16} text-anchor="middle">ResearchOS</text>
+            </g>
+            <g class="network-nodes">
+              {visibleNodes.map((node) => (
+                <a href={node.href || "#"} class={`node node-${node.type}`} data-search={`${node.label} ${node.type}`}>
+                  <circle cx={node.x} cy={node.y} r={node.type === "thesis" ? 13 : node.type === "term" ? 8 : 5}></circle>
+                  <text x={node.x} y={node.y - (node.type === "thesis" ? 18 : 11)} text-anchor="middle">{node.label}</text>
+                </a>
+              ))}
+            </g>
+          </svg>
+        </div>
+
+        <aside class="network-side">
+          <section>
+            <h2>来源构成</h2>
+            <div class="source-bars">
+              {sourceRows.map(([label, count]) => (
+                <div class="source-row">
+                  <span>{label}</span>
+                  <strong>{count}</strong>
+                  <i><b style={`width:${pct((count / maxSource) * 100)}`}></b></i>
+                </div>
+              ))}
+            </div>
+          </section>
+          <section>
+            <h2>最新主线</h2>
+            <div class="mini-thesis-list">
+              {theses.slice(0, 6).map((thesis) => (
+                <a href={`#${thesis.id}`}>
+                  <span>{thesis.directionLabel} · {thesis.eventCount} events</span>
+                  <strong>{thesis.title}</strong>
+                  <em>{formatDate(thesis.lastSeen)}</em>
+                </a>
+              ))}
+            </div>
+          </section>
+        </aside>
+      </section>
+
+      <section class="thesis-section" id="theses">
+        <div class="section-headline">
+          <span>Living Theses</span>
+          <h2>主题级主线追踪</h2>
+          <p>主线以研究问题命名，链条和资产只作为证据标签，避免把图谱退化成实体共现表。</p>
+        </div>
+        <div class="thesis-grid">
+          {theses.slice(0, 36).map((thesis) => (
+            <article class="thesis-card" id={thesis.id} data-search={`${thesis.title} ${thesis.coreView} ${(thesis.topTerms || []).join(" ")}`}>
+              <div class="thesis-top">
+                <span>{thesis.directionLabel}</span>
+                <span>{formatDate(thesis.firstSeen)} → {formatDate(thesis.lastSeen)}</span>
+              </div>
+              <h3>{thesis.title}</h3>
+              <p>{thesis.coreView}</p>
+              <div class="thesis-meter" aria-label="Conviction">
+                <i style={`width:${pct(thesis.conviction)}`}></i>
+                <strong>{thesis.conviction}</strong>
+              </div>
+              <div class="thesis-counters">
+                <span>支持 {thesis.supports}</span>
+                <span>风险 {thesis.risks}</span>
+                <span>观察 {thesis.neutral}</span>
+                <span>分析师 {thesis.analystCount}</span>
+              </div>
+              <div class="term-row">
+                {(thesis.topTerms || []).slice(0, 8).map((term) => <a href={`?q=${encodeURIComponent(term)}`}>{term}</a>)}
+              </div>
+              <div class="timeline-strip">
+                {(thesis.timeline || []).slice(-14).map((point) => (
+                  <span title={`${point.date}: 支持 ${point.supports} / 风险 ${point.risks}`} style={`height:${Math.max(12, Math.min(52, Number(point.value || 20)))}px`} class={point.risks > point.supports ? "risk" : point.supports ? "support" : "neutral"}></span>
+                ))}
+              </div>
+              <div class="event-stack">
+                {(thesis.events || []).slice(0, 3).map((event) => (
+                  <a href={event.href || `#${thesis.id}`}>
+                    <span>{formatDate(event.date)} · {event.sourceLabel} · {event.supportLabel}</span>
+                    <strong>{event.title}</strong>
+                  </a>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="recap-section" id="living-recaps">
+        <div class="section-headline">
+          <span>Auto Recaps</span>
+          <h2>自动更新复盘</h2>
+          <p>由主线时间线生成，和手工关键复盘合并发布。点击可进入现有复盘仪表盘模板。</p>
+        </div>
+        <div class="recap-grid">
+          {recaps.slice(0, 16).map((recap) => (
+            <article class="recap-card" data-search={`${recap.title} ${recap.subtitle}`}>
+              <div class="thesis-top">
+                <span>{recap.badge}</span>
+                <span>{recap.date}</span>
+              </div>
+              <h3><a href={`/investor/recaps/${recap.slug}/`}>{recap.title}</a></h3>
+              <p>{recap.subtitle}</p>
+              <div class="recap-metrics">
+                {(recap.metrics || []).slice(0, 4).map((metric) => (
+                  <span class={`accent-${metric.accent || "blue"}`}><strong>{metric.value}</strong>{metric.label}</span>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const input = document.getElementById("networkSearch");
+      const cards = [...document.querySelectorAll("[data-search]")];
+      function syncSearch() {
+        const query = String(input?.value || new URLSearchParams(location.search).get("q") || "").toLowerCase().trim();
+        if (input && !input.value && query) input.value = query;
+        cards.forEach((card) => {
+          const match = !query || String(card.dataset.search || "").toLowerCase().includes(query);
+          card.classList.toggle("is-muted", !match);
+          card.classList.toggle("is-hidden", !match && card.classList.contains("thesis-card"));
+        });
+      }
+      input?.addEventListener("input", syncSearch);
+      syncSearch();
+    </script>
+  </body>
+</html>

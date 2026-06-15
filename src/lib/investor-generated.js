@@ -114,6 +114,10 @@ export function readDailyDashboard() {
   return rewriteInvestorPaths(readJson("daily-dashboard.json"));
 }
 
+export function readResearchNetwork() {
+  return rewriteInvestorPaths(readJson("research-network.json"));
+}
+
 export function readDeepIndex() {
   return rewriteInvestorPaths(readJson("deep-research/index.json"));
 }
