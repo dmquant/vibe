@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T13:27:53.828Z",
+  "generatedAt": "2026-06-16T13:50:18.794Z",
   "date": "2026-06-16",
   "source": "outputs/morning-brief-images/manifest.json",
   "investorDailyDate": "2026-06-16",
@@ -328,41 +328,40 @@
     "investorTableReports": 60
   },
   "readerReport": {
-    "id": "reader-daily-reader-2026-06-14",
-    "title": "2026-06-14 AI Institute 每日读者报告",
-    "date": "2026-06-14",
-    "href": "/investor/reports/reader-daily-reader-2026-06-14/",
-    "summary": "6 月 14 日的主线不是 AI 需求降温，而是 AI 基础设施从芯片供给问题进一步变成电力、电网设备、并网队列、能源价格和项目 ROI 的硬约束问题。",
+    "id": "reader-daily-reader-2026-06-16",
+    "title": "2026-06-16 AI Institute 每日读者报告",
+    "date": "2026-06-16",
+    "href": "/investor/reports/reader-daily-reader-2026-06-16/",
+    "summary": "6 月 16 日的主线不是简单的 risk-on，而是 AI 算力需求继续上行与电力、基荷、融资、通胀、交易拥挤同时变硬之间的再定价。",
     "priorityViews": [
       {
-        "title": "AI capex 的边际约束转向通电能力",
-        "view": "今日 141 篇中文研究结果中，宏观通胀传导和 AI 基础设施仍是最高 heat 链；关键证据集中在大型电力变压器、发电机升压变压器、变电站节点和并网队列。",
-        "whyItMatters": "AI 资本开支是否有效，不再只看预算和 GPU 供应，而要看可通电容量能否按期转化为云收入。",
+        "title": "AI-to-Power 已从主题交易变成组合约束",
+        "view": "今日 231 篇中文研究结果中，宏观通胀传导和 AI 基础设施仍是最高 heat 链；首席策略师把组合拆成算力核心、电力设备和受监管公用事业三段，同时强调久期、融资和监管费率回收风险。",
+        "whyItMatters": "AI 资本开支能否兑现，不再只由芯片需求决定，还取决于电力设备订单、受监管回报、融资成本和对冲安排。",
         "provenance": [
           "daily-dashboard:chainRadar",
-          "/investor/reports/archive-6984a39e382c/",
-          "/investor/reports/archive-6921ecb4fc86/",
-          "claim_0614_power_delivery_constraint"
+          "/investor/reports/archive-322c52992e18/",
+          "claim_0616_ai_to_power_portfolio_constraint"
         ]
       },
       {
-        "title": "时间错配比设备涨价更危险",
-        "view": "变压器及供配电包的成本冲击对 1 GW 项目总 capex 占比有限，但 8-12 周延迟会造成可用容量延后，并把 2026-2027 年计划投产节点推入更晚周期。",
-        "whyItMatters": "云厂商的 GPU 折旧、融资成本、服务器采购和收入确认会出现时间错配，改变 AI 投资回报曲线。",
+        "title": "能源约束是本地 24/7 MW 交付问题",
+        "view": "能源压力测试认为，全球年度 MWh 并非唯一瓶颈；北弗吉尼亚、Texas、Dublin、London/Slough、Frankfurt、Singapore、Johor 等集群需要确定性、可并网、可调度的本地电力。",
+        "whyItMatters": "AI 园区是否可投产，取决于并网、输电、变电站、储能、基荷和可调度运行能否同步到位。",
         "provenance": [
-          "/investor/reports/archive-a5e5d053e839/",
-          "/investor/reports/archive-d5fc605305fe/",
-          "claim_0614_timing_mismatch"
+          "/investor/reports/archive-4b430df7396a/",
+          "/investor/reports/archive-f081e7c3522f/",
+          "claim_0616_local_firm_power_bottleneck"
         ]
       },
       {
-        "title": "半导体链转向每瓦算力和封装效率",
-        "view": "电网瓶颈会带来短期需求空气袋，但也会提高 Chiplet、异构集成、先进封装、HBM、CPO 和低功耗互连的重要性。",
-        "whyItMatters": "半导体机会仍在，但需要证明能效投入可以被装机量和云收入摊销，否则会形成资本陷阱。",
+        "title": "公用事业通胀压制降息交易",
+        "view": "天然气、电力、容量价格和 AI 数据中心用电需求进入同一条通胀传导链；风险平价报告也提示股债相关性转正后，长久期美债不再天然提供组合保护。",
+        "whyItMatters": "如果能源服务成本中枢上移，科技 risk-on 与降息交易会被更高的名义利率和更脆弱的对冲框架同时约束。",
         "provenance": [
-          "/investor/reports/archive-fcf2d9b5ea42/",
-          "/investor/reports/archive-e379c7baa445/",
-          "claim_0614_semiconductor_efficiency_trap"
+          "/investor/reports/archive-df969e1e04c6/",
+          "/investor/reports/archive-a840e0796068/",
+          "claim_0616_utility_inflation_macro_constraint"
         ]
       }
     ],
