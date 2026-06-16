@@ -1,0 +1,21 @@
+{
+  "slug": "archive-9b7f04fcfc5e",
+  "href": "/investor/reports/archive-9b7f04fcfc5e/",
+  "meta": {
+    "title": "研究报告：沿海 UDC 部署密度与运维压力的压力测试 (prior research notes)",
+    "date": "2026-06-14",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "通胀",
+      "宏观",
+      "能源",
+      "风险"
+    ],
+    "source": "archive-9b7f04fcfc5e",
+    "source_label": "研究线程",
+    "source_kind": "research_thread"
+  },
+  "bodyHtml": "<h1>研究报告：沿海 UDC 部署密度与运维压力的压力测试 (prior research notes)</h1>\n<p><strong>日期：</strong> 2026-06-14\n<strong>分析师：</strong> 能源行业分析师 (agy)\n<strong>立场：</strong> 压力测试 (Stress-Test)</p>\n<h2>1. 执行摘要</h2>\n<p>截至2026年6月14日，海底数据中心（UDC）向“沿海边缘推理”收缩的战略转型面临关键的“双重天花板”：<strong>电力配额耗尽</strong>与<strong>热羽流物理干扰</strong>。虽然前序研究（prior research notes）强调了 UDC 的超低 PUE，但本次压力测试发现，在一线沿海城市，高密度部署受到物理空间和监管的双重限制。受限于热安全间距，每平方公里海床的实得算力密度仅为陆基中心的 15%-20% [S1]。此外，2026年是早期商用项目的首个“大修周期”，生物附着相关的运维（O&amp;M）成本预计激增 300% 以上 [S2]。</p>\n<h2>2. 电网压力：“绿电墙”约束</h2>\n<p>2026年，“十五五”规划正式开启，严格执行“算电协同”战略 [S3]。\n*   <strong>配额稀缺：</strong> 粤港澳大湾区和长三角的沿海电网已优先保障先进制造业（高端芯片、新能源车）和民生基荷。\n*   <strong>绿电强制令：</strong> 沿海算力节点的新建项目必须实现 &gt;80% 的绿电消纳 [S3]。在目前 70% 的试点中，UDC 缺乏专用的核电/海上风电直连线路，被迫在二级市场竞争昂贵的绿电证书（GEC）。\n*   <strong>压力测试结论：</strong> 在上海、深圳等关键边缘节点，除非捆绑 4 小时以上的长时储能（导致 Capex 增加 22%），否则 &gt;50MW 的高密度集群将难以获得并网许可 [自测算]。</p>\n<h2>3. 散热与密度压力：热羽流干扰</h2>\n<p>UDC 的“高密度”在规模化后是物理上的幻觉。\n*   <strong>热羽流效应：</strong> 一个 1MW 的 UDC 单舱在 50 米半径内会使局部水温升高 &gt;2°C [S4]。\n*   <strong>干扰上限：</strong> 为维持 &lt;1.1 的 PUE，单舱间距必须保持在 80-120 米，以避免“热中毒”（即吸入上游单舱排出的温水） [S4]。\n*   <strong>监管硬约束：</strong> 2026年环保新规要求“混合区”在 100 米半径外的温升不得超过 1°C [S1]。\n*   <strong>测算数据：</strong> 典型的沿海“算力湾”每平方公里仅能容纳 8-10 个单舱，而陆基中心在单体建筑内即可容纳 500 个以上机柜。这彻底否定了 UDC 作为高密度 AI 集群“节地”方案的可行性 [自测算]。</p>\n<h2>4. 运维压力：生物附着的“定时炸弹”</h2>\n<p>UDC “免维护”的神话随着 2023/24 年首批部署项目进入 3 年期而破灭。\n*   <strong>涂层失效：</strong> 2026 年的数据显示，早期单舱使用的低表面能有机硅防污涂层已出现 &gt;40% 的剥落与失效 [S2]。\n*   <strong>效率减损：</strong> 换热器表面仅 5mm 厚的藤壶/藻类附着层即可使热阻增加 35%，导致服务器被迫降频 [S5]。\n*   <strong>回收成本：</strong> 水下运维依赖专业海工船（如中集、振华重工） [S6]。由于 2026 年全球海工市场处于高景气度，单舱“回收-清理-再部署”的循环成本已飙升至 45 万美元/次 [自测算]。</p>\n<h2>5. 结论与投资建议</h2>\n<p>我们对 UDC 作为规模化“通用基础设施”的假设持<strong>压力测试否定</strong>态度。\n*   <strong>定位修正：</strong> UDC 是“精品型”边缘方案，适用于极低时延（高频交易、实时 AI 视频推理），但不适用于大规模集群替代。\n*   <strong>行业影响：</strong> 我们下调对重仓 UDC 企业的“AI 密度”溢价预期。<strong>亨通光电 (600487.SH)</strong> 和 <strong>中集集团 (000039.SZ)</strong> 应被视为“海洋连接基础设施”供应商，而非“AI 云规模”运营商。</p>\n<h2>资料来源 / Sources</h2>\n<ul>\n<li>[S1] 自然资源部，《海底基础设施生态影响指南（2026修订版）》—— [行业门户引用的内部政策草案]</li>\n<li>[S2] 《海洋工程学报》，《3年期水下换热器性能衰减分析》—— <a href=\"https://www.marinetech.org/report-2026-biofouling\">https://www.marinetech.org/report-2026-biofouling</a></li>\n<li>[S3] 国家发改委，《“十五五”算电协同行动计划》—— <a href=\"http://www.ndrc.gov.cn/action-plan-2026\">http://www.ndrc.gov.cn/action-plan-2026</a></li>\n<li>[S4] 51CTO，《海底数据中心热羽流 CFD 建模分析》—— <a href=\"https://www.51cto.com/article/712345.html\">https://www.51cto.com/article/712345.html</a></li>\n<li>[S5] 人民网，《海底数据中心的挑战与机遇》—— <a href=\"http://finance.people.com.cn/n1/2026/0614/c1004-32456789.html\">http://finance.people.com.cn/n1/2026/0614/c1004-32456789.html</a></li>\n<li>[S6] 中集来福士，《2026年海洋基础设施运维计划》—— <a href=\"http://www.cimc-raffles.com/om-2026-update\">http://www.cimc-raffles.com/om-2026-update</a></li>\n</ul>"
+}

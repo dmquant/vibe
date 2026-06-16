@@ -1,0 +1,171 @@
+---
+import { getCollection } from "astro:content";
+import BaseHead from "../../../components/BaseHead.astro";
+import Header from "../../../components/Header.astro";
+import { readRecapDashboards, readResearchNetwork, readSiteData } from "../../../lib/investor-generated.js";
+import "../../../styles/information-architecture.css";
+
+const siteData = readSiteData();
+const network = readResearchNetwork();
+const recapData = readRecapDashboards();
+const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const stats = siteData.stats || {};
+const readerReports = Array.isArray(siteData.readerReports) ? siteData.readerReports : [];
+const recaps = Array.isArray(recapData.dashboards) ? recapData.dashboards : [];
+
+const categoryRows = [
+  { key: "brief", title: "每日简报 / Daily Briefs", href: "/blog/", count: posts.filter((post) => post.data.category === "brief").length },
+  { key: "research", title: "深度研究 / Deep Research", href: "/blog/", count: posts.filter((post) => post.data.category === "research").length },
+  { key: "institute", title: "AI Institute 系列", href: "/blog/", count: posts.filter((post) => post.data.category === "institute").length },
+  { key: "vibelog", title: "建造故事 / Vibelog", href: "/blog/", count: posts.filter((post) => post.data.category === "vibelog").length },
+];
+
+const archiveRoutes = [
+  {
+    path: "/investor/daily/",
+    title: "晨会信号看板",
+    text: "每日首屏入口。用于查看今日结论、市场报价、链条地图和下载材料。",
+  },
+  {
+    path: "/investor/reports/{slug}/",
+    title: "读者报告与原始公开报告",
+    text: "人类友好读者报告和可公开展示的归档报告详情页。",
+  },
+  {
+    path: "/investor/research-network/",
+    title: "主题级研究主线",
+    text: "公开 thesis timeline、证据网络、行动建议和自动复盘入口。",
+  },
+  {
+    path: "/investor/portfolio/",
+    title: "本地组合追踪",
+    text: "浏览器本地保存的 thesis watchlist，不上传仓位，不连接账户。",
+  },
+  {
+    path: "/investor/recaps/",
+    title: "关键复盘仪表盘",
+    text: "手工关键复盘和自动 living thesis recap 的统一入口。",
+  },
+  {
+    path: "/blog/",
+    title: "文章与项目故事",
+    text: "公开文章库，包含 AI Institute 系列、研究论文、Vibe 建造故事和历史简报。",
+  },
+];
+---
+
+<!doctype html>
+<html lang="zh-CN" data-lang="zh">
+  <head>
+    <BaseHead
+      title="档案地图 · AI Institute 研究展示平台"
+      description="Public archive map for Vibe AI Institute research outputs."
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="ia-page">
+      <section class="ia-hero">
+        <div>
+          <div class="ia-kicker">AI Institute · Archive Map</div>
+          <h1>公开档案地图</h1>
+          <p>这里不是新的报告库，而是告诉读者和后续维护模型：每类公开内容应该在哪里找、从哪里进入、如何保持路径稳定。</p>
+          <div class="ia-actions">
+            <a class="primary" href="/investor/start/">回到开始页</a>
+            <a href="/investor/daily/">今日看板</a>
+            <a href="/blog/">文章库</a>
+          </div>
+        </div>
+        <aside class="ia-hero-aside">
+          <strong>Archive Discipline</strong>
+          <p>新增公开内容优先挂到现有路由：今日、主线、组合、复盘、时间线、文章库。避免再创建只有维护者知道的孤立页面。</p>
+        </aside>
+      </section>
+
+      <section class="ia-stat-grid" aria-label="Archive stats">
+        <div class="ia-stat"><span>Reports</span><strong>{stats.reports || 0}</strong><em>公开报告索引</em></div>
+        <div class="ia-stat"><span>Reader</span><strong>{readerReports.length}</strong><em>读者报告</em></div>
+        <div class="ia-stat"><span>Theses</span><strong>{network.stats?.thesisCount || 0}</strong><em>主题主线</em></div>
+        <div class="ia-stat"><span>Articles</span><strong>{posts.length}</strong><em>文章总数</em></div>
+      </section>
+
+      <section class="ia-section">
+        <div class="ia-section-head">
+          <div class="ia-section-label">Canonical Locations</div>
+          <h2>公开内容应该放在哪里</h2>
+          <p>这些路径是 Vibe 的主干。读者导航、日报更新、自动复盘和未来维护文档都应围绕它们组织。</p>
+        </div>
+        <div class="ia-route-list">
+          {archiveRoutes.map((row) => (
+            <article class="ia-route-row">
+              <span>{row.path}</span>
+              <div>
+                <strong>{row.title}</strong>
+                <p>{row.text}</p>
+              </div>
+              <a class="ia-route-link" href={row.path.includes("{slug}") ? "/investor/start/" : row.path}>打开</a>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="ia-section">
+        <div class="ia-section-head">
+          <div class="ia-section-label">Latest Public Outputs</div>
+          <h2>最新可读材料</h2>
+          <p>优先读读者报告和复盘，它们已经把图结构材料重写成更容易阅读的形式。</p>
+        </div>
+        <div class="ia-table-grid">
+          <article class="ia-table-card">
+            <h3>每日读者报告</h3>
+            <div class="ia-table-list">
+              {readerReports.slice(0, 8).map((report) => (
+                <a class="ia-table-row" href={report.href}>
+                  <span>{report.title}</span>
+                  <em>{report.date}</em>
+                </a>
+              ))}
+            </div>
+          </article>
+          <article class="ia-table-card">
+            <h3>关键复盘</h3>
+            <div class="ia-table-list">
+              {recaps.slice(0, 8).map((recap) => (
+                <a class="ia-table-row" href={`/investor/recaps/${recap.slug}/`}>
+                  <span>{recap.title}</span>
+                  <em>{recap.date}</em>
+                </a>
+              ))}
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="ia-section">
+        <div class="ia-section-head">
+          <div class="ia-section-label">Article Library</div>
+          <h2>文章库分类</h2>
+          <p>文章库仍保留完整材料，但它不再是首选入口。它更适合查找专题背景、项目故事和历史简报。</p>
+        </div>
+        <div class="ia-card-grid">
+          {categoryRows.map((row, index) => (
+            <article class={`ia-card ${["blue", "green", "yellow", "orange"][index % 4]}`}>
+              <div class="ia-card-kicker">{row.key}</div>
+              <h3>{row.title}</h3>
+              <p>当前公开 {row.count} 篇。进入文章库后可按语言和分类继续阅读。</p>
+              <div class="ia-card-actions"><a class="primary" href={row.href}>打开文章库</a></div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="ia-section">
+        <div class="ia-section-head">
+          <div class="ia-section-label">Maintenance Rule</div>
+          <h2>维护规则</h2>
+          <p>后续新增功能时，优先问它属于哪条主路径：今日、主线、组合、图谱、复盘、档案。只有当现有路径无法承载时才新增一级入口。</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

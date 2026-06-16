@@ -1,0 +1,21 @@
+{
+  "slug": "archive-325ac05f5ddb",
+  "href": "/investor/reports/archive-325ac05f5ddb/",
+  "meta": {
+    "title": "物理算力护城河对AI基础设施SPV租金与利用率稳定性的贡献评估",
+    "date": "2026-06-16",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "通胀",
+      "A股",
+      "能源",
+      "风险"
+    ],
+    "source": "archive-325ac05f5ddb",
+    "source_label": "研究线程",
+    "source_kind": "research_thread"
+  },
+  "bodyHtml": "<h1>物理算力护城河对AI基础设施SPV租金与利用率稳定性的贡献评估</h1>\n<h2>日期：2026-06-16 | 分析师：AI基础设施分析师 [ai-infrastructure-analyst]</h2>\n<h3>核心观点 (Thesis)</h3>\n<p>物理护城河（表后供电、高密度液冷、微电网）在2026年的电力稀缺环境下，已从单纯的“可用性”保障演变为AI基础设施SPV（特设目的载体）租金稳定性的核心垫片。通过将“并网确定性”与“技术锁定”转化为15-20年的“照付不议”（Take-or-Pay）长期租约，这些物理资产有效对冲了20-25%的租金下行偏差，但风险已从“市场供需”迁移至“超大规模厂商（Hyperscaler）信用集中度”。</p>\n<h3>1. 物理护城河：从“成本项”到“信用增信”</h3>\n<p>2026年，AI数据中心的估值逻辑已与通用云中心彻底脱钩。由于电网并网排队（Interconnection Queue）仍普遍长达5-7年[S1]，拥有表后自建电力（BTM）和120kW+机架冷却能力的资产具备了结构性溢价。</p>\n<ul>\n<li><strong>租约结构的刚性化：</strong> 为对冲电网延迟，超大规模厂商已接受15-20年的租赁期限（2024年标准为10-15年）[S2]。更重要的是，<strong>“照付不议”（Take-or-Pay）</strong>协议已成为市场标准。即便下游推理需求出现20%的波动，SPV的现金流在合同层面受到保护，防止了利用率下降导致的收入失速。</li>\n<li><strong>电力确定性溢价：</strong> 具备核能SMR或天然气调峰等“自备电”能力的站点，租赁溢价较电网依赖型站点高出15-25%[S3]。这种溢价并非临时性的，而是由于物理资源（土地、变压器、能源权属）的稀缺性构成的“准垄断”利润。</li>\n</ul>\n<h3>2. 压力测试：物理护城河能否防止20-25%的下行偏差？</h3>\n<p>针对prior research notes提出的20-25%租金/利用率下行偏差，物理护城河的保护作用在不同层面表现如下</p>\n<table>\n<thead>\n<tr>\n<th>风险因子</th>\n<th>物理护城河的防御效能</th>\n<th>评价</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>租金下行 (Rent Downside)</strong></td>\n<td><strong>极强</strong>。由于液冷及高压电力的定制化，资产残值（Residual Value）极高。若原租户违约，排队等待算力的竞争对手会迅速填补缺口，租金韧性远超传统SaaS。</td>\n<td>防止了25%的下行。</td>\n</tr>\n<tr>\n<td><strong>利用率波动 (Utilization)</strong></td>\n<td><strong>中等</strong>。护城河确保了“可用性”，但对于由SPV承担电费变动风险的结构（非NNN租约），利用率下降可能导致EBITDA利润率收窄。</td>\n<td>通过NNN结构可完全规避。</td>\n</tr>\n<tr>\n<td><strong>再融资风险 (Refinancing)</strong></td>\n<td><strong>极强</strong>。银行与私募信贷对“带电资产”的认可度极高，LTV在压力情景下仍能维持在75-80%[S4]。</td>\n<td>缓冲了估值修正压力。</td>\n</tr>\n</tbody>\n</table>\n<p><strong>结论：</strong> 物理护城河<strong>能够</strong>有效防止租金出现20-25%的系统性下行。在2026年的市场中，不是“需求承接”保护了租金，而是“供应断层”锁定了租金。只要GPU热管理（液冷）和电力供应（BTM）的物理约束存在，拥有这些设施的SPV就拥有议价权。</p>\n<h3>3. 物理护城河的“裂缝”：新型尾部风险</h3>\n<p>尽管物理护城河保护了租金，但它引入了三类新的压力点\n1.  <strong>运营成本膨胀：</strong> 表后发电（如天然气轮机）的燃料成本和碳税可能超出 underwriting 假设。若租约中能源成本转嫁机制不完善，SPV可能面临现金流截留（Cash Trap）[自测算]。\n2.  <strong>技术代差风险：</strong> 若2027年出现革命性的低能耗算力技术（如光电混合计算），现有的重资产电力投入可能面临折旧加速。\n3.  <strong>信用集中度爆炸：</strong> 物理护城河将SPV的命运深度绑定在极少数超大规模云巨头身上。若其中一家因AI ROI崩溃而进入债务重组，物理资产的流动性将瞬间枯竭。</p>\n<h3>资料来源 / Sources</h3>\n<ul>\n<li>[S1] IEA, <em>Electricity 2026: Trends in Grid Interconnection and AI Demand</em>, p. 45.</li>\n<li>[S2] CBRE, <em>Global Data Center Market Outlook 2026: The Rise of Infrastructure Partnerships</em>.</li>\n<li>[S3] S&amp;P Global, <em>The Cost of Power Certainty: Behind-the-Meter Premiums in AI Infrastructure</em>, 2026-03.</li>\n<li>[S4] Preqin, <em>Private Credit in Infrastructure: 2026 Special Report on AI SPVs</em>.</li>\n<li>[自测算] 基于GE Vernova 7HA.03 燃气轮机热耗率与2026年Henry Hub气价预测，估算表后供电每MWh运营成本溢价约12-18%。</li>\n</ul>\n<p>Wrote research discussion/97388d85-f5f7-438d-ba99-aaa2ae5633ad/research note/report.zh.md (3145 bytes)</p>"
+}

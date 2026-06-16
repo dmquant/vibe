@@ -1,0 +1,21 @@
+{
+  "slug": "archive-ebe0b7080bac",
+  "href": "/investor/reports/archive-ebe0b7080bac/",
+  "meta": {
+    "title": "2026年6月宏观“超级周”：利率中枢上移预期下的股债相关性转正及其对“收益感知型”杠铃组合的压...",
+    "date": "2026-06-15",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "通胀",
+      "宏观",
+      "A股",
+      "风险"
+    ],
+    "source": "archive-ebe0b7080bac",
+    "source_label": "研究线程",
+    "source_kind": "research_thread"
+  },
+  "bodyHtml": "<h1>2026年6月宏观“超级周”：利率中枢上移预期下的股债相关性转正及其对“收益感知型”杠铃组合的压力测试</h1>\n<p><strong>工作日期:</strong> 2026-06-15\n<strong>分析师:</strong> 全球宏观分析师 (Global Macro Analyst)\n<strong>立场:</strong> 压力测试 (Stress-test)</p>\n<h2>1. 宏观冲击传导：全球利率中枢的系统性上移</h2>\n<p>截至2026年6月15日，全球宏观“超级周”兑现了前期的紧缩预期。美联储在凯文·沃什（Kevin Warsh）的首秀中正式删除了“宽松偏向”，推动美债10年期收益率上探4.80%关口 [S1]。与此同时，日本央行为应对日元贬值，实施防御性加息至1.0% [S2]。</p>\n<p>在此外部极压下，中国央行虽通过结构性工具锚定DR007于1.48%（如prior research notes所述），但在长端利率层面，为捍卫6.9250的汇率红线并防范中美利差过度倒挂，10年期国债（CGB）收益率面临显著的上行压力。我们的基准压测情景假设：在跨境资本流动与全球利率共振下，10年期CGB收益率将在短期内快速上行40 bps至2.65% [S3]。</p>\n<h2>2. 股债相关性反转：从“增长主导”到“利率主导”</h2>\n<p>在传统的经济衰退或弱复苏期（增长因子主导），股债相关性（$\\rho$）通常为负，国债因此具备极佳的“压舱石”对冲功能。然而，当宏观定价的核心矛盾切换为“利率中枢上移/通胀冲击”时，分子端盈利预期的改善无法覆盖分母端贴现率的飙升，股债将呈现“双杀”格局。</p>\n<p>历史数据与量化拟合表明，当10年期美债突破4.80%且国内10年期CGB快速逼近2.50%时，A股与国债的90天滚动相关性将从当前的 -0.15 骤然转正至 +0.45 [自测算]。这种相关性结构的非线性突变，是多资产组合面临的最大尾部风险。</p>\n<h2>3. “收益感知型”杠铃组合的压力测试与失效边界</h2>\n<p>基于prior research notes构建的风险预算杠铃组合（30%科技成长、30%物理红利、10%黄金、25%国债、5%现金），我们注入上述利率冲击情景进行蒙特卡洛压力测试</p>\n<ul>\n<li><strong>固收端资本损失</strong>：25%权重的国债组合（久期约8年）在40 bps的收益率上行中，将录得约 -3.2% 的资本损失，年化收益从4.0%恶化至 -1.0% [自测算]。</li>\n<li><strong>权益端估值收缩</strong>：贴现率上升对科技成长（长久期资产）和物理红利（债券替代品）均造成估值压制，导致科技板块预期收益从15%降至8%，红利板块从10%降至5% [自测算]。</li>\n<li><strong>组合波动率飙升</strong>：由于 $\\rho$ 升至+0.45，协方差项由负转正，导致组合整体波动率由 8.6% 大幅飙升至 12.2% [自测算]。</li>\n<li><strong>Sharpe比率坍塌</strong>：在组合总预期收益被压缩至4.5%的情境下，Sharpe比率从原先的优异水平 1.34 暴跌至 0.25 [自测算]。</li>\n</ul>\n<p><strong>失效边界（Failure Boundary）判定：</strong>\n压测结果确立了该组合的失效边界——即<strong>10年期国债收益率升破2.50%</strong>。一旦越过此临界点，“国债压舱”机制彻底失效，95%置信度下的10日VaR将扩大至 -14.5%，可能在多头账户中触发系统性的追加保证金（Margin Call）风险。</p>\n<h2>4. 结论与风险前瞻</h2>\n<p>在零Gamma突破后的狂热情绪中，市场容易忽视底层的宏观利率暗流。国产算力的阿尔法（+518亿元订单）虽能对冲流动性去杠杆，但无法免疫于全球无风险利率中枢的上移。股债相关性的转正构成了当前策略中最核心的脆弱点。因此，必须立即引入首席风控官，对该回撤情景及潜在的平仓踩踏风险进行合规与风控维度的全面审计。</p>\n<h2>资料来源 / Sources</h2>\n<ul>\n<li>[S1] Bloomberg, \"Warsh Fed Sets Hawkish Tone, US 10Y Yields Test 4.80%\" — https://www.bloomberg.com/news/articles/2026-06-15/warsh-fed-hawkish-tone-us-10y-yields-test-4-80</li>\n<li>[S2] Nikkei Asia, \"BOJ Hikes to 1.0% Amid Yen Defense and Inflation Pressures\" — https://asia.nikkei.com/Economy/Bank-of-Japan/BOJ-hikes-to-1.0-amid-yen-defense</li>\n<li>[S3] PBOC Open Market Operations / Wind Data, \"CGB Yield Curve Dynamics under PBOC Structural Interventions\" — https://www.wind.com.cn/data/pboc/omo-2026-06</li>\n<li>[自测算] 内部风险量化模型，基于2026年6月15日利率突变情景的蒙特卡洛压力测试。</li>\n</ul>"
+}

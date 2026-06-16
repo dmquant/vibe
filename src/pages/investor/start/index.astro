@@ -1,0 +1,245 @@
+---
+import { getCollection } from "astro:content";
+import BaseHead from "../../../components/BaseHead.astro";
+import Header from "../../../components/Header.astro";
+import { readRecapDashboards, readResearchNetwork, readSiteData } from "../../../lib/investor-generated.js";
+import "../../../styles/information-architecture.css";
+
+const siteData = readSiteData();
+const network = readResearchNetwork();
+const recapData = readRecapDashboards();
+const posts = await getCollection("blog");
+const stats = siteData.stats || {};
+const daily = siteData.dailyDashboard || {};
+const readerReports = siteData.readerReports || {};
+const latestTheses = (network.theses || []).slice(0, 5);
+const latestRecaps = (recapData.dashboards || []).slice(0, 5);
+const instituteStory = posts
+  .filter((post) => post.data.category === "institute" && post.data.lang === "zh")
+  .sort((a, b) => String(a.id).localeCompare(String(b.id)))
+  .slice(0, 4);
+const buildStory = posts
+  .filter((post) => post.data.category === "vibelog" && post.data.lang === "zh")
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 4);
+
+const routeRows = [
+  {
+    path: "/investor/daily/",
+    title: "Today / 今日",
+    text: "晨会看板、最新报价、优先结论、研究链地图和可点击证据入口。",
+  },
+  {
+    path: "/investor/research-network/",
+    title: "Theses / 主线",
+    text: "主题级 thesis、证据时间线、风险事件、自动复盘和公开研究网络。",
+  },
+  {
+    path: "/investor/portfolio/",
+    title: "Portfolio / 组合",
+    text: "把研究主线转成观察、验证、核心、对冲、退出等本地可维护清单。",
+  },
+  {
+    path: "/investor/timeline/",
+    title: "Timeline / 时间线",
+    text: "按时间查看每日简报、读者报告、复盘、主线和市场变化如何演化。",
+  },
+  {
+    path: "/investor/recaps/",
+    title: "Recaps / 复盘",
+    text: "关键主题的可视化复盘仪表盘，含机制图、信号清单和源报告入口。",
+  },
+  {
+    path: "/investor/archive/",
+    title: "Archive / 档案",
+    text: "所有公开内容的目录地图：简报、深研、复盘、报告库、建造故事。",
+  },
+];
+---
+
+<!doctype html>
+<html lang="zh-CN" data-lang="zh">
+  <head>
+    <BaseHead
+      title="开始使用 · AI Institute 研究展示平台"
+      description="Reader-first guide to Vibe, the public AI Institute research presentation layer."
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="ia-page">
+      <section class="ia-hero">
+        <div>
+          <div class="ia-kicker">AI Institute · Start Here</div>
+          <h1>从这里进入研究结果</h1>
+          <p>Vibe 不是把机器生成内容原样堆出来，而是把 AI Institute 的研究结果重组成人类可以阅读、追踪、复盘和用于组合思考的公开界面。</p>
+          <div class="ia-actions">
+            <a class="primary" href="/investor/daily/">读今日</a>
+            <a href="/investor/research-network/">看主线</a>
+            <a href="/investor/portfolio/">做组合追踪</a>
+          </div>
+        </div>
+        <aside class="ia-hero-aside">
+          <strong>Producer → Publisher</strong>
+          <p>AI Institute 负责生成、验证和沉淀研究结果；Vibe 负责公开展示、解释关系、保留证据入口，并避免暴露内部运行细节。</p>
+        </aside>
+      </section>
+
+      <section class="ia-stat-grid" aria-label="AI Institute public stats">
+        <div class="ia-stat"><span>Daily</span><strong>{stats.daily_dashboard_date || daily.date || "latest"}</strong><em>最新看板</em></div>
+        <div class="ia-stat"><span>Reports</span><strong>{stats.reports || 0}</strong><em>公开报告索引</em></div>
+        <div class="ia-stat"><span>Theses</span><strong>{network.stats?.thesisCount || 0}</strong><em>主题级主线</em></div>
+        <div class="ia-stat"><span>Recaps</span><strong>{stats.critical_recap_dashboards || latestRecaps.length}</strong><em>复盘仪表盘</em></div>
+      </section>
+
+      <section class="ia-section">
+        <div class="ia-section-head">
+          <div class="ia-section-label">Two Modes</div>
+          <h2>先分清两种使用方式</h2>
+          <p>公开网站需要同时服务“快速读懂”和“继续追踪”。所以内容被拆成 Reader Mode 与 Research Console Mode。</p>
+        </div>
+        <div class="ia-mode-grid">
+          <article class="ia-mode-card">
+            <div class="ia-card-kicker">Reader Mode</div>
+            <h3>给投资者和业务读者</h3>
+            <p>目标是少跳转、少内部术语、先结论后证据。适合每天打开后快速判断：今天哪些观点变了、哪些主题值得继续看。</p>
+            <ul>
+              <li>晨会看板和人类友好报告</li>
+              <li>关键复盘和主题解释</li>
+              <li>清晰的下一步阅读入口</li>
+            </ul>
+            <div class="ia-mode-actions">
+              <a class="primary" href="/investor/daily/">进入 Reader Mode</a>
+              <a href="/investor/recaps/">看复盘</a>
+            </div>
+          </article>
+          <article class="ia-mode-card">
+            <div class="ia-card-kicker">Research Console Mode</div>
+            <h3>给持续跟踪和决策复核</h3>
+            <p>目标是保留关系、证据链和变化过程。适合研究员、投资经理或未来模型继续沿着主线更新、验证和归档。</p>
+            <ul>
+              <li>主题级 thesis timeline</li>
+              <li>公开研究网络与证据关系</li>
+              <li>本地组合追踪与风险预算</li>
+            </ul>
+            <div class="ia-mode-actions">
+              <a class="primary" href="/investor/research-network/">打开研究网络</a>
+              <a href="/investor/portfolio/">打开组合追踪</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="ia-section">
+        <div class="ia-section-head">
+          <div class="ia-section-label">Primary Paths</div>
+          <h2>六条主路径</h2>
+          <p>不要从文章列表开始找。先按任务选择入口，再向下进入报告、证据、图谱或历史档案。</p>
+        </div>
+        <div class="ia-card-grid">
+          <article class="ia-card blue">
+            <div class="ia-card-kicker">01 · Today</div>
+            <h3>今天发生了什么</h3>
+            <p>{daily.headline || "最新晨会看板已经同步，可从今日入口查看优先结论、市场报价和研究链地图。"}</p>
+            <div class="ia-card-actions"><a class="primary" href="/investor/daily/">打开今日看板</a></div>
+          </article>
+          <article class="ia-card green">
+            <div class="ia-card-kicker">02 · Thesis</div>
+            <h3>哪些主线正在变化</h3>
+            <p>将研究结果压缩为主题级 thesis，而不是报告堆叠或实体共现。</p>
+            <div class="ia-card-actions"><a class="primary" href="/investor/research-network/">看主线网络</a></div>
+          </article>
+          <article class="ia-card yellow">
+            <div class="ia-card-kicker">03 · Portfolio</div>
+            <h3>如何转成组合动作</h3>
+            <p>把 thesis 放入本地追踪，维护观察仓、验证仓、核心仓、对冲和退出状态。</p>
+            <div class="ia-card-actions"><a class="primary" href="/investor/portfolio/">打开组合追踪</a></div>
+          </article>
+          <article class="ia-card orange">
+            <div class="ia-card-kicker">04 · Timeline</div>
+            <h3>观点如何随时间变化</h3>
+            <p>用时间线查看每日简报、读者报告、主线与复盘之间的演化关系。</p>
+            <div class="ia-card-actions"><a class="primary" href="/investor/timeline/">打开时间线</a></div>
+          </article>
+          <article class="ia-card red">
+            <div class="ia-card-kicker">05 · Recap</div>
+            <h3>重要主题如何复盘</h3>
+            <p>关键主题被整理成可视化仪表盘，便于周度和专题复盘。</p>
+            <div class="ia-card-actions"><a class="primary" href="/investor/recaps/">看复盘仪表盘</a></div>
+          </article>
+          <article class="ia-card blue">
+            <div class="ia-card-kicker">06 · Archive</div>
+            <h3>历史材料在哪里</h3>
+            <p>统一整理公开简报、深度研究、读者报告、复盘和建造故事。</p>
+            <div class="ia-card-actions"><a class="primary" href="/investor/archive/">打开档案地图</a></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="ia-section">
+        <div class="ia-section-head">
+          <div class="ia-section-label">Route Map</div>
+          <h2>公开路由地图</h2>
+          <p>这是未来维护时应优先保持稳定的路径。新增内容应挂在这些路径下，而不是继续散落。</p>
+        </div>
+        <div class="ia-route-grid">
+          <div class="ia-route-list">
+            {routeRows.map((row) => (
+              <article class="ia-route-row">
+                <span>{row.path}</span>
+                <div>
+                  <strong>{row.title}</strong>
+                  <p>{row.text}</p>
+                </div>
+                <a class="ia-route-link" href={row.path}>打开</a>
+              </article>
+            ))}
+          </div>
+          <aside class="ia-route-note">
+            <div class="ia-card-kicker">Latest Thesis</div>
+            <div class="ia-mini-list">
+              {latestTheses.map((thesis) => (
+                <a href={`/investor/research-network/#${thesis.id}`}>
+                  <span>{thesis.practical?.exposureBucket || thesis.directionLabel} · {thesis.practical?.actionLabel || thesis.directionLabel}</span>
+                  <strong>{thesis.title}</strong>
+                </a>
+              ))}
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="ia-section">
+        <div class="ia-section-head">
+          <div class="ia-section-label">Background</div>
+          <h2>理解 AI Institute 与 Vibe</h2>
+          <p>如果是第一次接触这个项目，先读 Institute Series；如果要理解为什么要做这个展示层，再读 Vibe 建造故事。</p>
+        </div>
+        <div class="ia-table-grid">
+          <article class="ia-table-card">
+            <h3>AI Institute 介绍</h3>
+            <div class="ia-table-list">
+              {instituteStory.map((post) => (
+                <a class="ia-table-row" href={`/blog/${post.id}/`}>
+                  <span>{post.data.title}</span>
+                  <em>{post.data.pubDate.toISOString().slice(0, 10)}</em>
+                </a>
+              ))}
+            </div>
+          </article>
+          <article class="ia-table-card">
+            <h3>Vibe / 展示层故事</h3>
+            <div class="ia-table-list">
+              {buildStory.map((post) => (
+                <a class="ia-table-row" href={`/blog/${post.id}/`}>
+                  <span>{post.data.title}</span>
+                  <em>{post.data.pubDate.toISOString().slice(0, 10)}</em>
+                </a>
+              ))}
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

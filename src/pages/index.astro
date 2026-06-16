@@ -4,7 +4,7 @@ import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
-import { readSiteData } from '../lib/investor-generated.js';
+import { readRecapDashboards, readResearchNetwork, readSiteData } from '../lib/investor-generated.js';
 import { buildInvestorTimeline } from '../lib/investor-timeline.js';
 import { getCollection } from 'astro:content';
 
@@ -62,6 +62,8 @@ briefZh.forEach(p => {
 });
 
 const investorData = readSiteData();
+const researchNetwork = readResearchNetwork();
+const recapDashboards = readRecapDashboards();
 const dailyDashboard = investorData.dailyDashboard || {};
 const dailyBrief = investorData.dailyBrief || {};
 const dailySynthesis = {
@@ -142,6 +144,75 @@ const marketTickerRows = (dashboardQuoteRows.length ? dashboardQuoteRows : (dail
 const marketTapeRows = (dashboardQuoteRows.length ? dashboardQuoteRows : (dailyBrief.marketTape?.zh || []).map(parseMarketLine)).slice(0, 10);
 const investorTimeline = buildInvestorTimeline(investorData, posts);
 const timelinePreview = investorTimeline.latestEvents.slice(0, 6);
+const readerReports = Array.isArray(investorData.readerReports) ? investorData.readerReports : [];
+const homeLanes = [
+	{
+		num: '01',
+		accent: 'blue',
+		en: 'Read Today',
+		zh: '读今日',
+		textEn: 'Morning brief, market tape, chain map, and the latest human-readable reader report.',
+		textZh: '晨会看板、市场报价、链条地图和最新人类友好读者报告。',
+		href: '/investor/daily/',
+		ctaEn: 'Open Today',
+		ctaZh: '打开今日',
+	},
+	{
+		num: '02',
+		accent: 'green',
+		en: 'Track Theses',
+		zh: '追踪主线',
+		textEn: `${researchNetwork.stats?.thesisCount || 0} topic-level theses with evidence timelines and practical action labels.`,
+		textZh: `${researchNetwork.stats?.thesisCount || 0} 条主题级主线，带证据时间线和组合动作标签。`,
+		href: '/investor/research-network/',
+		ctaEn: 'Open Theses',
+		ctaZh: '打开主线',
+	},
+	{
+		num: '03',
+		accent: 'yellow',
+		en: 'Manage Portfolio',
+		zh: '组合追踪',
+		textEn: 'Browser-local thesis watchlist for status, target weight, review date, and notes.',
+		textZh: '浏览器本地 thesis 清单，可维护状态、目标权重、复核日期和备注。',
+		href: '/investor/portfolio/',
+		ctaEn: 'Open Portfolio',
+		ctaZh: '打开组合',
+	},
+	{
+		num: '04',
+		accent: 'orange',
+		en: 'Replay Timeline',
+		zh: '回看时间线',
+		textEn: `${investorTimeline.stats.events} public timeline events across briefings, reports, theses, and recaps.`,
+		textZh: `${investorTimeline.stats.events} 条公开时间线事件，覆盖简报、报告、主线和复盘。`,
+		href: '/investor/timeline/',
+		ctaEn: 'Open Timeline',
+		ctaZh: '打开时间线',
+	},
+	{
+		num: '05',
+		accent: 'red',
+		en: 'Review Recaps',
+		zh: '查看复盘',
+		textEn: `${recapDashboards.dashboards?.length || 0} critical and living-thesis recap dashboards.`,
+		textZh: `${recapDashboards.dashboards?.length || 0} 个关键复盘和 living thesis 仪表盘。`,
+		href: '/investor/recaps/',
+		ctaEn: 'Open Recaps',
+		ctaZh: '打开复盘',
+	},
+	{
+		num: '06',
+		accent: 'blue',
+		en: 'Find Archive',
+		zh: '查找档案',
+		textEn: `${readerReports.length} reader reports plus public articles, research papers, and build-story material.`,
+		textZh: `${readerReports.length} 篇读者报告，以及公开文章、研究论文和建造故事。`,
+		href: '/investor/archive/',
+		ctaEn: 'Open Archive',
+		ctaZh: '打开档案',
+	},
+];
 ---
 
 <!doctype html>
@@ -182,10 +253,51 @@ const timelinePreview = investorTimeline.latestEvents.slice(0, 6);
 							<span class="stat-pill"><strong>50+</strong> <em data-en="sessions" data-zh="研讨">sessions</em></span>
 						</div>
 						<div class="hero-links">
-							<a href="/blog" class="btn btn-sm btn-primary" data-en="All Articles" data-zh="全部文章">All Articles</a>
-							<a href="https://github.com/dmquant/vibe" class="btn btn-sm btn-ghost" target="_blank">GitHub →</a>
+							<a href="/investor/start/" class="btn btn-sm btn-primary" data-en="Start Here" data-zh="从这里开始">Start Here</a>
+							<a href="/investor/daily/" class="btn btn-sm btn-ghost" data-en="Today" data-zh="今日">Today</a>
 						</div>
 					</div>
+				</div>
+			</section>
+
+			<section class="home-structure-board" id="start">
+				<div class="structure-head">
+					<div>
+						<div class="signal-eyebrow" data-en="Site Map" data-zh="网站地图">Site Map</div>
+						<h2 data-en="A clearer path through AI Institute results" data-zh="更清晰地进入 AI Institute 研究结果">A clearer path through AI Institute results</h2>
+						<p
+							data-en="Use Reader Mode for daily understanding, then Research Console Mode when you need timelines, evidence relationships, recaps, and portfolio tracking."
+							data-zh="日常先用 Reader Mode 快速读懂，再用 Research Console Mode 进入时间线、证据关系、复盘和组合追踪。"
+						>
+							Use Reader Mode for daily understanding, then Research Console Mode when you need timelines, evidence relationships, recaps, and portfolio tracking.
+						</p>
+					</div>
+					<div class="structure-actions">
+						<a href="/investor/start/" class="btn btn-sm btn-primary" data-en="Open start page" data-zh="打开开始页">Open start page</a>
+						<a href="/investor/" class="btn btn-sm btn-ghost" data-en="Open console" data-zh="打开控制台">Open console</a>
+					</div>
+				</div>
+				<div class="mode-switch-grid">
+					<a href="/investor/daily/" class="mode-switch-card">
+						<span data-en="Reader Mode" data-zh="Reader Mode">Reader Mode</span>
+						<strong data-en="Daily reading, conclusions first" data-zh="日常阅读，结论优先">Daily reading, conclusions first</strong>
+						<em data-en="Briefs · reader reports · recaps" data-zh="简报 · 读者报告 · 复盘">Briefs · reader reports · recaps</em>
+					</a>
+					<a href="/investor/research-network/" class="mode-switch-card">
+						<span data-en="Research Console" data-zh="Research Console">Research Console</span>
+						<strong data-en="Thesis tracking, evidence preserved" data-zh="主线追踪，保留证据关系">Thesis tracking, evidence preserved</strong>
+						<em data-en="Timelines · network · portfolio" data-zh="时间线 · 网络 · 组合">Timelines · network · portfolio</em>
+					</a>
+				</div>
+				<div class="home-lane-grid">
+					{homeLanes.map((lane) => (
+						<a href={lane.href} class={`home-lane-card accent-${lane.accent}`}>
+							<span>{lane.num}</span>
+							<strong data-en={lane.en} data-zh={lane.zh}>{lane.en}</strong>
+							<p data-en={lane.textEn} data-zh={lane.textZh}>{lane.textEn}</p>
+							<em data-en={lane.ctaEn} data-zh={lane.ctaZh}>{lane.ctaEn} →</em>
+						</a>
+					))}
 				</div>
 			</section>
 
@@ -597,6 +709,131 @@ const timelinePreview = investorTimeline.latestEvents.slice(0, 6);
 		background: transparent;
 	}
 	.btn-ghost:hover { border-color: var(--border-strong, #707070); color: var(--text-primary, #e6edf3); }
+
+	/* ═══ Site Structure Gateway ═══ */
+	.home-structure-board {
+		margin: 1.4rem 0 2.7rem;
+		padding: 1rem;
+		border: 1px solid var(--border, #30363d);
+		border-radius: 3px;
+		background:
+			linear-gradient(var(--grid-faint) 1px, transparent 1px),
+			linear-gradient(90deg, var(--grid-faint) 1px, transparent 1px),
+			var(--bg-surface, #0b0b0b);
+		background-size: 34px 34px;
+		box-shadow: 5px 5px 0 color-mix(in srgb, var(--text-primary, #f5f5f5) 12%, transparent);
+	}
+	.structure-head {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) auto;
+		gap: 1rem;
+		align-items: start;
+		padding: 0.25rem 0.25rem 1rem;
+		border-bottom: 1px solid var(--border, #30363d);
+	}
+	.structure-head h2 {
+		margin: 0.25rem 0 0.45rem;
+		padding: 0;
+		border: 0;
+		font-size: clamp(1.45rem, 3vw, 2.45rem);
+		line-height: 1.08;
+	}
+	.structure-head p {
+		max-width: 860px;
+		margin: 0;
+		color: var(--text-secondary, #b8b8b8);
+		font-size: 0.94rem;
+		line-height: 1.55;
+	}
+	.structure-actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.45rem;
+		justify-content: flex-end;
+	}
+	.mode-switch-grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 0.65rem;
+		margin: 0.85rem 0;
+	}
+	.mode-switch-card,
+	.home-lane-card {
+		text-decoration: none;
+		border: 1px solid var(--border, #30363d);
+		background: var(--card-bg, rgba(15, 15, 15, .72));
+		transition: border-color 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease;
+	}
+	.mode-switch-card:hover,
+	.home-lane-card:hover {
+		border-color: var(--border-strong, #707070);
+		background: var(--bg-elevated, #151515);
+		box-shadow: 5px 5px 0 color-mix(in srgb, var(--text-primary, #f5f5f5) 16%, transparent);
+		transform: translate(-2px, -2px);
+	}
+	.mode-switch-card {
+		display: grid;
+		gap: 0.35rem;
+		min-height: 118px;
+		padding: 0.9rem;
+		border-left: 4px solid var(--accent-blue, #2f80ed);
+	}
+	.mode-switch-card:nth-child(2) {
+		border-left-color: var(--accent-green, #169b62);
+	}
+	.mode-switch-card span,
+	.home-lane-card span {
+		color: var(--text-muted, #747474);
+		font-family: var(--font-mono, 'JetBrains Mono', monospace);
+		font-size: 0.68rem;
+		font-weight: 900;
+		text-transform: uppercase;
+	}
+	.mode-switch-card strong {
+		color: var(--text-primary, #f5f5f5);
+		font-size: 1.15rem;
+		line-height: 1.28;
+	}
+	.mode-switch-card em {
+		color: var(--text-secondary, #b8b8b8);
+		font-style: normal;
+		font-size: 0.82rem;
+	}
+	.home-lane-grid {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 0.65rem;
+	}
+	.home-lane-card {
+		--lane-accent: var(--accent-blue, #2f80ed);
+		display: grid;
+		gap: 0.42rem;
+		min-height: 178px;
+		padding: 0.85rem;
+		border-left: 4px solid var(--lane-accent);
+	}
+	.home-lane-card.accent-blue { --lane-accent: var(--accent-blue, #2f80ed); }
+	.home-lane-card.accent-green { --lane-accent: var(--accent-green, #169b62); }
+	.home-lane-card.accent-yellow { --lane-accent: var(--accent-yellow, #d7a316); }
+	.home-lane-card.accent-orange { --lane-accent: var(--accent-orange, #e46f2e); }
+	.home-lane-card.accent-red { --lane-accent: var(--accent-red, #d64545); }
+	.home-lane-card strong {
+		color: var(--text-primary, #f5f5f5);
+		font-size: 1.02rem;
+	}
+	.home-lane-card p {
+		margin: 0;
+		color: var(--text-secondary, #b8b8b8);
+		font-size: 0.82rem;
+		line-height: 1.5;
+	}
+	.home-lane-card em {
+		align-self: end;
+		color: var(--lane-accent);
+		font-style: normal;
+		font-size: 0.76rem;
+		font-weight: 900;
+	}
 
 	/* ═══ Home Daily Signal Dashboard ═══ */
 	.home-signal-board {
@@ -1204,12 +1441,19 @@ const timelinePreview = investorTimeline.latestEvents.slice(0, 6);
 		.brief-grid { grid-template-columns: 1fr; }
 		.signal-board-top,
 		.signal-board-grid,
-		.home-timeline-head {
+		.home-timeline-head,
+		.structure-head {
 			grid-template-columns: 1fr;
 		}
 		.signal-actions {
 			justify-content: flex-start;
 			flex-wrap: wrap;
+		}
+		.structure-actions {
+			justify-content: flex-start;
+		}
+		.home-lane-grid {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
 		}
 		.signal-stat-strip a:hover,
 		.signal-bullet:hover,
@@ -1228,6 +1472,8 @@ const timelinePreview = investorTimeline.latestEvents.slice(0, 6);
 		.hero-stats-inline { flex-wrap: wrap; justify-content: center; }
 		.signal-stat-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 		.home-timeline-stats { grid-template-columns: 1fr; }
+		.mode-switch-grid,
+		.home-lane-grid { grid-template-columns: 1fr; }
 		.home-timeline-item { grid-template-columns: 1fr; }
 		.home-timeline-arrow { display: none; }
 		.home-signal-map { height: 220px; }

@@ -1,0 +1,20 @@
+{
+  "slug": "archive-44e94f89440a",
+  "href": "/investor/reports/archive-44e94f89440a/",
+  "meta": {
+    "title": "液冷供应链瓶颈对超大规模云厂商集群部署与资本开支的影响",
+    "date": "2026-06-16",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "宏观",
+      "港美股",
+      "能源"
+    ],
+    "source": "archive-44e94f89440a",
+    "source_label": "研究线程",
+    "source_kind": "research_thread"
+  },
+  "bodyHtml": "<h1>液冷供应链瓶颈对超大规模云厂商集群部署与资本开支的影响</h1>\n<p><strong>日期:</strong> 2026-06-16 | <strong>分析师:</strong> AI基础设施分析师 (AI Infrastructure Analyst) | <strong>立场:</strong> 综合 (Synthesize)</p>\n<h2>1. Rubin集群的延迟：撞上“热力学墙”</h2>\n<p>本报告综合前序工业制造逻辑。前序指出的液冷组件（快换接头QD、微通道冷板）产能爬坡瓶颈与数据中心管线就绪度问题，正直接冲击下一代超高密度集群的部署。英伟达Rubin（R100）架构将单芯片热设计功耗（TDP）推升至1400W-2000W级别，要求100%全液冷设计，且每个计算托盘需要多达7个散热模块（Blackwell仅为2个）[S1]。受限于极端的热力学要求和供应链压力，TrendForce已将2026年Rubin架构的出货占比预期从最初的29%下调至22% [S1]。</p>\n<h2>2. 云厂商的应对：延长Blackwell周期与混合部署</h2>\n<p>超大规模云厂商（微软、谷歌、Meta、AWS、甲骨文）无法停止算力扩张，因此他们正在通过延长Blackwell（B300/GB300）集群的生命周期来消化这一延迟。目前预计Blackwell在2026年高端GPU出货量中的占比将超过70% [S1]。由于许多现有数据中心缺乏支持45°C进水温度的原生液对液（L2L）散热管线 [S1]，云厂商短期内被迫使用液对气（L2A）CDU进行过渡，或在老旧机房部署密度较低的风冷版Blackwell（如NVL36）。</p>\n<h2>3. 2026年资本开支激增：向基础设施的结构性倾斜</h2>\n<p>关键在于，Rubin部署的延迟<strong>并未</strong>导致总资本开支缩减。相反，2026年见证了资本向解决物理瓶颈的大规模重新配置。“Big 5”超大规模云厂商在2026年的Capex预计将激增至6350亿至7250亿美元 [S2]。支出结构正在发生根本性转变：目前约75%的资本开支被导向物理基础设施——电力供应、液冷系统和专业数据中心建筑——而非单纯的硅片（芯片）本身 [S2]。</p>\n<h2>4. 结论</h2>\n<p>液冷已从配套设施转变为制约AI扩张的核心瓶颈。尽管组件短缺和机房就绪度不足推迟了全新Rubin集群的上线，但这反而倒逼科技巨头们投入创纪录的资本开支，疯狂抢建和改造物理基础设施，以期击穿这座阻挡算力演进的“热力学墙”。</p>\n<h2>资料来源 / Sources</h2>\n<ul>\n<li>[S1] TrendForce, \"NVIDIA Rubin Architecture Faces Liquid Cooling and HBM4 Validation Bottlenecks\" — https://www.trendforce.com/</li>\n<li>[S2] NetworkWorld, \"Hyperscaler Data Center CAPEX to Surpass $600 Billion by 2026\" — https://www.networkworld.com/</li>\n</ul>"
+}

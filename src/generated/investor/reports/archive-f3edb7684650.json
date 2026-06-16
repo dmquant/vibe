@@ -1,0 +1,17 @@
+{
+  "slug": "archive-f3edb7684650",
+  "href": "/investor/reports/archive-f3edb7684650/",
+  "meta": {
+    "title": "共享数据采集摘要 2026-06-16",
+    "date": "2026-06-16",
+    "analyst_id": "data-scientist",
+    "analyst_name": "数据科学家",
+    "tags": [
+      "综合编审"
+    ],
+    "source": "archive-f3edb7684650",
+    "source_label": "每日任务报告",
+    "source_kind": "daily_task"
+  },
+  "bodyHtml": "<h1>共享数据采集摘要 2026-06-16</h1>\n<h2>markets_overnight</h2>\n<ul>\n<li>字段总数 13、空值 0、confidence: high</li>\n</ul>\n<h2>markets_close_cn</h2>\n<ul>\n<li>字段总数 5、空值 0、confidence: high</li>\n</ul>\n<h2>失败 / 修复</h2>\n<p>spx=empty ndx=empty dow=empty dxy=empty vix=empty ust10y=empty brent=empty wti=empty gold=empty eurusd=empty usdjpy=empty n225=empty hsi=empty</p>\n<h2>备注</h2>\n<ul>\n<li>任务开始前检查发现 markets_overnight.json、markets_close_cn.json、data_ingest_summary.md 均不存在；本轮按当前日期重新生成。</li>\n<li>Stooq overnight 种子源返回空值，已按任务规则使用 web_search 结果修复并写入来源与 warnings。</li>\n</ul>"
+}

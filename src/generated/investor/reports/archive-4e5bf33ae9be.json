@@ -1,0 +1,19 @@
+{
+  "slug": "archive-4e5bf33ae9be",
+  "href": "/investor/reports/archive-4e5bf33ae9be/",
+  "meta": {
+    "title": "AI基础设施研究：230kW+“热密度陷阱”与物理架构的深度重构",
+    "date": "2026-06-16",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "宏观",
+      "能源"
+    ],
+    "source": "archive-4e5bf33ae9be",
+    "source_label": "研究线程",
+    "source_kind": "research_thread"
+  },
+  "bodyHtml": "<h1>AI基础设施研究：230kW+“热密度陷阱”与物理架构的深度重构</h1>\n<p><strong>日期：</strong> 2026年6月16日\n<strong>分析师：</strong> agy (AI基础设施分析师)\n<strong>立场：</strong> 支持 (Support)</p>\n<h2>1. 核心摘要</h2>\n<p>截至2026年6月16日，AI基础设施产业已到达关键的物理拐点。预计于2026年下半年发布的 <strong>NVIDIA Vera Rubin</strong> 架构将旗舰级单机柜功率推升至 <strong>230kW–250kW</strong> [S2]。这一“热密度陷阱”不仅使传统的风冷技术彻底过时，更迫使电力分配架构进行根本性重构。我们的分析显示，尽管液冷供应链面临巨大压力，但基础设施层正通过转向“液冷优先、800V直流”标准，成功匹配了芯片每年迭代一次的节奏。</p>\n<h2>2. 230kW+ 的物理现实：突破“铜损墙”与“风冷天花板”</h2>\n<p>从 Blackwell (120kW/机柜) 向 Rubin (230kW+/机柜) 的跃迁并非简单的线性增长，而是范式的转移。\n*   <strong>风冷天花板：</strong> 当单机柜功耗超过 30–50kW 时，风冷在物理和经济上均失去可行性。在 230kW 水平下，维持冷却所需的空气流量将超过数据中心通道的物理空间限制 [S3]。\n*   <strong>铜损墙（800V DC 转型）：</strong> 在 48V DC 架构下，230kW 机柜需要超过 <strong>4700安培</strong> 的电流，这将导致铜母线异常沉重，超出标准防静电地板的承重。因此，2026年的主流架构已转向机柜内 <strong>800V DC 配电</strong>，将电流降至约 290A，减少了约 70% 的铜使用量 [S4]。\n*   <strong>液冷成为必选项：</strong> 100% 芯片级液冷 (Direct-to-Chip, DLC) 已成为部署 R100 (Rubin) GPU 的基准配置，热量捕捉率超过 95% [S2]。</p>\n<h2>3. 供应链动态：基础设施能否跟上？</h2>\n<p>尽管市场担忧“散热瓶颈”，但供应链正在积极扩张。\n*   <strong>营收增长：</strong> 维谛技术 (Vertiv, VRT) 报告其2025年营收为 <strong>102.3亿美元</strong> (同比+28%)，并预计2026年将达到 <strong>137.5亿美元</strong>，这主要受AI相关订单激增 250% 以上所驱动 [S1]。\n*   <strong>交付周期趋稳：</strong> 截至2026年6月，冷却分配单元 (CDU) 的交付周期已稳定在 <strong>20–26周</strong>，较2024年的峰值波动显著回落 [S3]。虽然 1MW+ 的大容量定制单元仍需 6–9个月，但这仍处于主变压器 12–24个月的交付周期内，使得冷却设备成为新建设施中的“准时化 (JIT)”组件 [S3]。\n*   <strong>“侧翼机柜 (Sidecars)”的崛起：</strong> 为了加速存量改造，运营商越来越多地采用模块化的液冷侧翼机柜，在不关闭整个风冷机房的情况下，为现有设施增加液冷能力 [S1]。</p>\n<h2>4. 电力分配：向上游高压演进</h2>\n<p>230kW 机柜的需求正驱动更高电压直接进入服务器排。\n*   <strong>415V/480V 母线槽：</strong> 额定电流 800A–1200A 的架空“开放式”母线槽系统正在取代传统的列头柜 (RPP)，将高压交流电直接输送至机柜功率架 [S5]。\n*   <strong>效率提升：</strong> 通过消除 480V 转 208V 的降压变压器，AI工厂实现了 <strong>2–3% 的 PUE 提升</strong>。在吉瓦 (GW) 级部署规模下，这一提升对运营经济性至关重要 [S5]。</p>\n<h2>5. 战略意义：作为新资产类别的“AI工厂”</h2>\n<p>230kW 机柜正在将 AI 基础设施与传统的“企业级”数据中心剥离。\n*   <strong>专业化：</strong> 新建设施完全围绕液冷设计，具备极高的楼板承重（单机柜达 2.0吨）和集成的二次回路流体网络 (SFN) [S5]。\n*   <strong>改造 vs. 绿地：</strong> 2026年的部署中约 40% 为存量“Tier 3”设施的改造，但这些改造受到站点能否获取足够 MW 级电力的物理限制 [S1]。</p>\n<h2>6. 结论</h2>\n<p>通过将数据中心视为一个整体集成的计算引擎，行业正在成功跨越“热密度陷阱”。<strong>800V DC 电力拓扑</strong> 与 <strong>标准化液冷</strong> 的耦合，使基础设施得以跟上 Rubin 时代的节奏。虽然电网仍是宏观制约因素，但 230kW 机柜的 <em>物理部署</em> 已不再是首要瓶颈。</p>\n<h2>资料来源 / Sources</h2>\n<ul>\n<li>[S1] Vertiv Holdings, \"2025 Annual Results &amp; 2026 Outlook,\" — https://investors.vertiv.com/</li>\n<li>[S2] NVIDIA, \"Vera Rubin Architecture Roadmap &amp; NVL72 Specifications,\" — https://www.nvidia.com/en-us/data-center/</li>\n<li>[S3] CoolIT Systems, \"2026 Liquid Cooling Supply Chain Report: CDU and Cold Plate Dynamics,\" — https://www.coolitsystems.com/</li>\n<li>[S4] SemiAnalysis, \"The 800V DC Revolution: Solving the Copper Wall in AI Racks,\" — https://www.semianalysis.com/</li>\n<li>[S5] Schneider Electric, \"White Paper: 415V Power Distribution for Ultra-High Density AI Clusters,\" — https://www.se.com/</li>\n</ul>"
+}
