@@ -170,6 +170,222 @@
   padding: 0 12px;
 }
 
+.practical-overview,
+.portfolio-workbench {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, .8fr) minmax(320px, 1.3fr);
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.portfolio-workbench {
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  align-items: start;
+  margin-top: 20px;
+}
+
+.practical-panel,
+.portfolio-panel {
+  border: 1px solid var(--network-line);
+  border-radius: 8px;
+  background: var(--network-panel);
+  box-shadow: var(--shadow);
+  padding: 14px;
+}
+
+.portfolio-panel.is-large {
+  min-height: 320px;
+}
+
+.section-mini-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  border-bottom: 1px solid var(--network-line);
+  padding-bottom: 10px;
+}
+
+.section-mini-head span {
+  color: var(--blue);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.section-mini-head strong {
+  font-size: 15px;
+}
+
+.bucket-stack,
+.action-stack,
+.portfolio-list,
+.allocation-board {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.bucket-row,
+.bucket-stack button,
+.action-stack button {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  gap: 8px;
+  align-items: center;
+  border: 1px solid var(--network-line);
+  border-radius: 4px;
+  background: var(--network-surface);
+  padding: 8px;
+  color: var(--network-ink);
+  text-align: left;
+  font-weight: 800;
+}
+
+.bucket-stack button,
+.action-stack button {
+  cursor: pointer;
+  font: inherit;
+}
+
+.bucket-stack.compact button,
+.action-stack.compact button {
+  grid-template-columns: minmax(0, 1fr) auto;
+  font-size: 12px;
+}
+
+.bucket-row em {
+  color: var(--network-muted);
+  font-style: normal;
+  font-family: var(--font-mono);
+}
+
+.tone-blue { --tone: var(--blue); }
+.tone-green { --tone: var(--green); }
+.tone-red { --tone: var(--red); }
+.tone-yellow { --tone: var(--yellow); }
+.tone-orange { --tone: var(--orange); }
+
+.bucket-row,
+.practical-callout,
+.candidate-row {
+  border-left: 4px solid var(--tone, var(--blue));
+}
+
+.action-stack button.is-active,
+.bucket-stack button.is-active,
+.graph-toolbar button.is-active {
+  background: var(--network-ink);
+  color: var(--network-bg);
+}
+
+.portfolio-panel p {
+  color: var(--network-muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.portfolio-toolbar,
+.graph-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.portfolio-toolbar button,
+.portfolio-toolbar a,
+.graph-toolbar button,
+.compact-actions button,
+.track-thesis {
+  min-height: 34px;
+  border: 1px solid var(--network-strong);
+  border-radius: 4px;
+  background: var(--network-surface);
+  color: var(--network-ink);
+  padding: 0 10px;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.portfolio-summary {
+  border: 1px dashed var(--network-line);
+  border-radius: 4px;
+  margin-top: 12px;
+  padding: 10px;
+  color: var(--network-muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.portfolio-item {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) 92px 86px 132px minmax(160px, .8fr) auto;
+  gap: 8px;
+  align-items: end;
+  border: 1px solid var(--network-line);
+  border-radius: 6px;
+  background: var(--network-surface);
+  padding: 10px;
+}
+
+.portfolio-item div {
+  display: grid;
+  gap: 4px;
+}
+
+.portfolio-item span,
+.portfolio-item em,
+.candidate-row aside span {
+  color: var(--network-muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.portfolio-item strong a {
+  color: var(--network-ink);
+}
+
+.portfolio-item label,
+.filter-control {
+  display: grid;
+  gap: 4px;
+  color: var(--network-muted);
+  font-size: 11px;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.portfolio-item input,
+.portfolio-item select,
+.filter-control input {
+  min-height: 34px;
+  min-width: 0;
+  border: 1px solid var(--network-line);
+  border-radius: 4px;
+  background: var(--network-panel);
+  color: var(--network-ink);
+  padding: 0 8px;
+}
+
+.portfolio-item button {
+  min-height: 34px;
+  border: 1px solid var(--red);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--red);
+  font-weight: 900;
+  cursor: pointer;
+}
+
 .network-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
@@ -180,17 +396,45 @@
 .network-stage {
   min-height: 560px;
   overflow: hidden;
+  position: relative;
 }
 
 .network-stage svg {
   display: block;
   width: 100%;
   min-height: 560px;
+  cursor: grab;
+  touch-action: none;
+}
+
+.network-stage svg:active {
+  cursor: grabbing;
+}
+
+.graph-toolbar {
+  position: absolute;
+  z-index: 2;
+  top: 12px;
+  left: 12px;
+  margin: 0;
+}
+
+.graph-hint {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  border: 1px solid var(--network-line);
+  border-radius: 4px;
+  background: var(--network-panel);
+  padding: 6px 8px;
+  color: var(--network-muted);
+  font-size: 12px;
 }
 
 .network-edges line {
   stroke: color-mix(in srgb, var(--network-ink) 18%, transparent);
   stroke-width: 1.1;
+  transition: opacity .18s ease, stroke-width .18s ease;
 }
 
 .network-edges .challenged_by {
@@ -215,6 +459,7 @@
 .node circle {
   stroke: var(--network-bg);
   stroke-width: 2;
+  transition: r .18s ease, stroke-width .18s ease, filter .18s ease;
 }
 
 .node-thesis circle { fill: var(--yellow); }
@@ -238,6 +483,45 @@
 .node.is-muted,
 .is-muted {
   opacity: .24;
+}
+
+.node.is-selected circle,
+.node.is-related circle {
+  stroke: var(--network-ink);
+  stroke-width: 4;
+  filter: drop-shadow(0 0 7px var(--yellow));
+}
+
+.edge.is-related,
+.edge.is-selected {
+  opacity: 1;
+  stroke-width: 2.6;
+}
+
+.selection-panel p {
+  color: var(--network-muted);
+  line-height: 1.55;
+}
+
+.selection-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0 10px;
+}
+
+.selection-tags span {
+  border: 1px solid var(--network-line);
+  border-radius: 4px;
+  background: var(--network-surface);
+  padding: 5px 7px;
+  color: var(--network-muted);
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.compact-actions {
+  margin-top: 10px;
 }
 
 .network-side {
@@ -371,6 +655,57 @@
   line-height: 1.55;
 }
 
+.practical-callout {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  border-top: 1px solid var(--network-line);
+  border-right: 1px solid var(--network-line);
+  border-bottom: 1px solid var(--network-line);
+  border-radius: 4px;
+  background: var(--network-surface);
+  margin: 12px 0 8px;
+  padding: 9px;
+}
+
+.practical-callout div {
+  display: grid;
+  gap: 3px;
+}
+
+.practical-callout span,
+.practical-copy span {
+  color: var(--network-muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.practical-callout strong {
+  color: var(--tone, var(--blue));
+  font-size: 14px;
+}
+
+.practical-copy {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.practical-copy p {
+  flex-basis: 100%;
+  margin: 0;
+}
+
+.practical-copy span {
+  border: 1px solid var(--network-line);
+  border-radius: 4px;
+  padding: 4px 6px;
+}
+
 .thesis-meter {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -425,6 +760,115 @@
   margin: 10px 0;
 }
 
+.term-row span {
+  border: 1px solid var(--network-line);
+  border-radius: 4px;
+  background: var(--network-surface);
+  padding: 5px 7px;
+  color: var(--network-muted);
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.portfolio-candidate-list {
+  display: grid;
+  gap: 12px;
+}
+
+.candidate-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(160px, 210px);
+  gap: 16px;
+  border: 1px solid var(--network-line);
+  border-radius: 8px;
+  background: var(--network-panel);
+  box-shadow: var(--shadow);
+  padding: 14px;
+}
+
+.candidate-row.is-hidden {
+  display: none;
+}
+
+.candidate-row h3 {
+  margin: 5px 0 6px;
+  font-size: 19px;
+}
+
+.candidate-row p {
+  color: var(--network-muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.candidate-row aside {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+}
+
+.candidate-row details {
+  border-top: 1px dashed var(--network-line);
+  margin-top: 10px;
+  padding-top: 8px;
+}
+
+.candidate-row summary {
+  cursor: pointer;
+  color: var(--network-ink);
+  font-weight: 900;
+}
+
+.signal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.signal-grid div {
+  border: 1px solid var(--network-line);
+  border-radius: 6px;
+  background: var(--network-surface);
+  padding: 10px;
+}
+
+.signal-grid strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.signal-grid p {
+  margin: 0 0 6px;
+  font-size: 13px;
+}
+
+.allocation-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 58px;
+  gap: 8px;
+  align-items: center;
+}
+
+.allocation-row span,
+.allocation-row strong {
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.allocation-row i {
+  grid-column: 1 / -1;
+  display: block;
+  height: 8px;
+  background: var(--network-surface);
+}
+
+.allocation-row b {
+  display: block;
+  height: 100%;
+  background: var(--green);
+}
+
 .timeline-strip {
   display: flex;
   align-items: end;
@@ -446,12 +890,17 @@
 
 @media (max-width: 1120px) {
   .network-hero,
-  .network-layout {
+  .network-layout,
+  .practical-overview,
+  .portfolio-workbench {
     grid-template-columns: 1fr;
   }
   .thesis-grid,
   .recap-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .portfolio-item {
+    grid-template-columns: minmax(0, 1fr) repeat(2, minmax(92px, .35fr));
   }
 }
 
@@ -470,5 +919,22 @@
   }
   .network-stage svg {
     min-height: 420px;
+  }
+  .graph-toolbar {
+    position: static;
+    border-bottom: 1px solid var(--network-line);
+    padding: 10px;
+  }
+  .graph-hint {
+    display: none;
+  }
+  .portfolio-item,
+  .candidate-row,
+  .signal-grid {
+    grid-template-columns: 1fr;
+  }
+  .portfolio-workbench,
+  .practical-overview {
+    gap: 10px;
   }
 }

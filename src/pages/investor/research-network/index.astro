@@ -46,6 +46,27 @@ const sourceMix = theses
   }, new Map());
 const sourceRows = [...sourceMix.entries()].sort((a, b) => b[1] - a[1]).slice(0, 8);
 const maxSource = Math.max(1, ...sourceRows.map((row) => row[1]));
+const bucketRows = [...theses
+  .reduce((acc, thesis) => {
+    const bucket = thesis.practical?.exposureBucket || "主题机会";
+    const row = acc.get(bucket) || { bucket, count: 0, score: 0, tone: thesis.practical?.tone || "blue" };
+    row.count += 1;
+    row.score += Number(thesis.practical?.score || thesis.conviction || 0);
+    acc.set(bucket, row);
+    return acc;
+  }, new Map())
+  .values()];
+const practicalBuckets = [...bucketRows]
+  .map((row) => ({ ...row, avgScore: Math.round(row.score / Math.max(1, row.count)) }))
+  .sort((a, b) => b.count - a.count || b.avgScore - a.avgScore)
+  .slice(0, 8);
+const actionRows = [...theses
+  .reduce((acc, thesis) => {
+    const label = thesis.practical?.actionLabel || "观察等待";
+    acc.set(label, (acc.get(label) || 0) + 1);
+    return acc;
+  }, new Map())
+  .entries()].sort((a, b) => b[1] - a[1]);
 ---
 
 <!doctype html>
@@ -68,6 +89,7 @@ const maxSource = Math.max(1, ...sourceRows.map((row) => row[1]));
             <a href="/investor/">返回研究台</a>
             <a href="/investor/timeline/">研究时间线</a>
             <a href="/investor/recaps/">复盘仪表盘</a>
+            <a href="/investor/portfolio/">组合追踪</a>
           </div>
         </div>
         <aside class="network-privacy">
@@ -89,33 +111,103 @@ const maxSource = Math.max(1, ...sourceRows.map((row) => row[1]));
         <a href="/investor-data/research-network.json">JSON 数据</a>
       </section>
 
+      <section class="practical-overview" aria-label="Practical thesis summary">
+        <div class="practical-panel">
+          <div class="section-mini-head">
+            <span>Exposure Buckets</span>
+            <strong>可配置主线</strong>
+          </div>
+          <div class="bucket-stack">
+            {practicalBuckets.map((row) => (
+              <a href={`?q=${encodeURIComponent(row.bucket)}`} class={`bucket-row tone-${row.tone}`}>
+                <span>{row.bucket}</span>
+                <strong>{row.count}</strong>
+                <em>{row.avgScore}</em>
+              </a>
+            ))}
+          </div>
+        </div>
+        <div class="practical-panel">
+          <div class="section-mini-head">
+            <span>Action Map</span>
+            <strong>组合动作分布</strong>
+          </div>
+          <div class="action-stack">
+            {actionRows.map(([label, count]) => (
+              <button type="button" data-action-filter={label}>
+                <span>{label}</span>
+                <strong>{count}</strong>
+              </button>
+            ))}
+          </div>
+        </div>
+        <div class="portfolio-panel" id="portfolio-tracker">
+          <div class="section-mini-head">
+            <span>Local Portfolio</span>
+            <strong>本地 thesis 追踪</strong>
+          </div>
+          <p>只保存在当前浏览器，用于跟踪主题权重、状态、复核日期和备注。</p>
+          <div class="portfolio-toolbar">
+            <a href="/investor/portfolio/">打开组合台</a>
+            <button type="button" id="exportPortfolio">导出 JSON</button>
+            <button type="button" id="clearPortfolio">清空</button>
+          </div>
+          <div class="portfolio-summary" id="portfolioSummary">尚未添加主线。</div>
+          <div class="portfolio-list" id="portfolioList" aria-live="polite"></div>
+        </div>
+      </section>
+
       <section class="network-layout">
         <div class="network-stage" aria-label="Public research network graph">
-          <svg viewBox={`0 0 ${width} ${height}`} role="img" aria-label="研究主线、关键词和证据事件网络">
-            <g class="network-edges">
-              {visibleEdges.map((edge) => {
-                const source = nodePositions.get(edge.source);
-                const target = nodePositions.get(edge.target);
-                return <line x1={source.x} y1={source.y} x2={target.x} y2={target.y} class={`edge ${edge.type}`} />;
-              })}
-            </g>
-            <g class="network-center">
-              <circle cx={centerX} cy={centerY} r="54"></circle>
-              <text x={centerX} y={centerY - 3} text-anchor="middle">AI Institute</text>
-              <text x={centerX} y={centerY + 16} text-anchor="middle">ResearchOS</text>
-            </g>
-            <g class="network-nodes">
-              {visibleNodes.map((node) => (
-                <a href={node.href || "#"} class={`node node-${node.type}`} data-search={`${node.label} ${node.type}`}>
-                  <circle cx={node.x} cy={node.y} r={node.type === "thesis" ? 13 : node.type === "term" ? 8 : 5}></circle>
-                  <text x={node.x} y={node.y - (node.type === "thesis" ? 18 : 11)} text-anchor="middle">{node.label}</text>
-                </a>
-              ))}
+          <div class="graph-toolbar">
+            <button type="button" data-graph-filter="all" class="is-active">All</button>
+            <button type="button" data-graph-filter="thesis">Thesis</button>
+            <button type="button" data-graph-filter="term">Terms</button>
+            <button type="button" data-graph-filter="event">Events</button>
+            <button type="button" id="resetGraph">Reset</button>
+          </div>
+          <svg id="networkSvg" viewBox={`0 0 ${width} ${height}`} role="img" aria-label="研究主线、关键词和证据事件网络">
+            <g id="networkViewport">
+              <g class="network-edges">
+                {visibleEdges.map((edge) => {
+                  const source = nodePositions.get(edge.source);
+                  const target = nodePositions.get(edge.target);
+                  return <line x1={source.x} y1={source.y} x2={target.x} y2={target.y} class={`edge ${edge.type}`} data-source={edge.source} data-target={edge.target} />;
+                })}
+              </g>
+              <g class="network-center">
+                <circle cx={centerX} cy={centerY} r="54"></circle>
+                <text x={centerX} y={centerY - 3} text-anchor="middle">AI Institute</text>
+                <text x={centerX} y={centerY + 16} text-anchor="middle">ResearchOS</text>
+              </g>
+              <g class="network-nodes">
+                {visibleNodes.map((node) => (
+                  <a
+                    href={node.href || "#"}
+                    class={`node node-${node.type}`}
+                    data-node-id={node.id}
+                    data-node-type={node.type}
+                    data-node-label={node.label}
+                    data-node-bucket={node.bucket || ""}
+                    data-node-action={node.actionLabel || ""}
+                    data-node-score={node.practicalScore || node.conviction || ""}
+                    data-search={`${node.label} ${node.type} ${node.bucket || ""} ${node.actionLabel || ""}`}
+                  >
+                    <circle cx={node.x} cy={node.y} r={node.type === "thesis" ? 13 : node.type === "term" ? 8 : 5}></circle>
+                    <text x={node.x} y={node.y - (node.type === "thesis" ? 18 : 11)} text-anchor="middle">{node.label}</text>
+                  </a>
+                ))}
+              </g>
             </g>
           </svg>
+          <div class="graph-hint">滚轮缩放，拖动画布平移，点击节点查看关系。</div>
         </div>
 
         <aside class="network-side">
+          <section class="selection-panel" id="networkSelection">
+            <h2>节点详情</h2>
+            <p>点击图谱节点后，这里会显示主线、行动建议和关联关系。</p>
+          </section>
           <section>
             <h2>来源构成</h2>
             <div class="source-bars">
@@ -151,13 +243,46 @@ const maxSource = Math.max(1, ...sourceRows.map((row) => row[1]));
         </div>
         <div class="thesis-grid">
           {theses.slice(0, 36).map((thesis) => (
-            <article class="thesis-card" id={thesis.id} data-search={`${thesis.title} ${thesis.coreView} ${(thesis.topTerms || []).join(" ")}`}>
+            <article
+              class="thesis-card"
+              id={thesis.id}
+              data-thesis-id={thesis.id}
+              data-title={thesis.title}
+              data-bucket={thesis.practical?.exposureBucket || "主题机会"}
+              data-action={thesis.practical?.actionLabel || "观察等待"}
+              data-score={thesis.practical?.score || thesis.conviction || 0}
+              data-risk-budget={thesis.practical?.riskBudget || ""}
+              data-search={`${thesis.title} ${thesis.coreView} ${(thesis.topTerms || []).join(" ")} ${thesis.practical?.exposureBucket || ""} ${thesis.practical?.actionLabel || ""}`}
+            >
               <div class="thesis-top">
                 <span>{thesis.directionLabel}</span>
                 <span>{formatDate(thesis.firstSeen)} → {formatDate(thesis.lastSeen)}</span>
               </div>
               <h3>{thesis.title}</h3>
               <p>{thesis.coreView}</p>
+              <div class={`practical-callout tone-${thesis.practical?.actionTone || thesis.practical?.tone || "blue"}`}>
+                <div>
+                  <span>{thesis.practical?.exposureBucket || "主题机会"}</span>
+                  <strong>{thesis.practical?.actionLabel || "观察等待"}</strong>
+                </div>
+                <button
+                  type="button"
+                  class="track-thesis"
+                  data-track-id={thesis.id}
+                  data-track-title={thesis.title}
+                  data-track-bucket={thesis.practical?.exposureBucket || "主题机会"}
+                  data-track-action={thesis.practical?.actionLabel || "观察等待"}
+                  data-track-score={thesis.practical?.score || thesis.conviction || 0}
+                  data-track-risk={thesis.practical?.riskBudget || ""}
+                >
+                  追踪
+                </button>
+              </div>
+              <div class="practical-copy">
+                <p>{thesis.practical?.portfolioUse}</p>
+                <span>{thesis.practical?.riskBudget}</span>
+                <span>{thesis.practical?.reviewCadence}</span>
+              </div>
               <div class="thesis-meter" aria-label="Conviction">
                 <i style={`width:${pct(thesis.conviction)}`}></i>
                 <strong>{thesis.conviction}</strong>
@@ -217,18 +342,263 @@ const maxSource = Math.max(1, ...sourceRows.map((row) => row[1]));
 
     <script>
       const input = document.getElementById("networkSearch");
-      const cards = [...document.querySelectorAll("[data-search]")];
+      const searchable = [...document.querySelectorAll("[data-search]")];
+      const actionButtons = [...document.querySelectorAll("[data-action-filter]")];
+      const graphButtons = [...document.querySelectorAll("[data-graph-filter]")];
+      const nodes = [...document.querySelectorAll(".node[data-node-id]")];
+      const edges = [...document.querySelectorAll(".edge[data-source][data-target]")];
+      const selection = document.getElementById("networkSelection");
+      const svg = document.getElementById("networkSvg");
+      const viewport = document.getElementById("networkViewport");
+      const portfolioKey = "vibe.researchNetwork.portfolio.v1";
+      let graphFilter = "all";
+      let actionFilter = "";
+      let panX = 0;
+      let panY = 0;
+      let zoom = 1;
+      let dragging = false;
+      let lastPoint = null;
+
+      function readPortfolio() {
+        try {
+          return JSON.parse(localStorage.getItem(portfolioKey) || "[]");
+        } catch {
+          return [];
+        }
+      }
+
+      function writePortfolio(items) {
+        localStorage.setItem(portfolioKey, JSON.stringify(items));
+        renderPortfolio();
+      }
+
+      function upsertPortfolio(item) {
+        const items = readPortfolio();
+        const index = items.findIndex((entry) => entry.id === item.id);
+        const next = {
+          ...item,
+          status: item.status || "观察",
+          weight: item.weight || "0",
+          reviewDate: item.reviewDate || "",
+          note: item.note || "",
+          updatedAt: new Date().toISOString(),
+        };
+        if (index >= 0) items[index] = { ...items[index], ...next };
+        else items.unshift(next);
+        writePortfolio(items);
+      }
+
+      function renderPortfolio() {
+        const items = readPortfolio();
+        const list = document.getElementById("portfolioList");
+        const summary = document.getElementById("portfolioSummary");
+        if (!list || !summary) return;
+        const totalWeight = items.reduce((sum, item) => sum + Number(item.weight || 0), 0);
+        summary.textContent = items.length
+          ? `${items.length} 条主线 · 目标权重 ${totalWeight.toFixed(1)}% · 本地浏览器保存`
+          : "尚未添加主线。";
+        list.innerHTML = items
+          .map((item) => `
+            <article class="portfolio-item" data-id="${item.id}">
+              <div>
+                <span>${item.bucket || "主题机会"} · ${item.action || "观察等待"} · ${item.score || ""}</span>
+                <strong><a href="#${item.id}">${item.title}</a></strong>
+                <em>${item.risk || ""}</em>
+              </div>
+              <label>状态
+                <select data-field="status">
+                  ${["观察", "验证仓", "核心仓", "对冲", "退出"].map((status) => `<option ${status === item.status ? "selected" : ""}>${status}</option>`).join("")}
+                </select>
+              </label>
+              <label>权重
+                <input data-field="weight" type="number" min="0" max="100" step="0.5" value="${item.weight || "0"}" />
+              </label>
+              <label>复核
+                <input data-field="reviewDate" type="date" value="${item.reviewDate || ""}" />
+              </label>
+              <label>备注
+                <input data-field="note" type="text" value="${String(item.note || "").replaceAll('"', "&quot;")}" />
+              </label>
+              <button type="button" data-remove="${item.id}">移除</button>
+            </article>
+          `)
+          .join("");
+      }
+
       function syncSearch() {
         const query = String(input?.value || new URLSearchParams(location.search).get("q") || "").toLowerCase().trim();
         if (input && !input.value && query) input.value = query;
-        cards.forEach((card) => {
-          const match = !query || String(card.dataset.search || "").toLowerCase().includes(query);
-          card.classList.toggle("is-muted", !match);
-          card.classList.toggle("is-hidden", !match && card.classList.contains("thesis-card"));
+        searchable.forEach((item) => {
+          const text = String(item.dataset.search || "").toLowerCase();
+          const action = String(item.dataset.action || "");
+          const type = String(item.dataset.nodeType || "");
+          const matchQuery = !query || text.includes(query);
+          const matchAction = !actionFilter || action === actionFilter || !item.classList.contains("thesis-card");
+          const matchGraph = graphFilter === "all" || !item.classList.contains("node") || type === graphFilter;
+          const match = matchQuery && matchAction && matchGraph;
+          item.classList.toggle("is-muted", !match);
+          item.classList.toggle("is-hidden", !match && item.classList.contains("thesis-card"));
         });
       }
+
+      function resetGraphFocus() {
+        nodes.forEach((node) => node.classList.remove("is-selected", "is-related"));
+        edges.forEach((edge) => edge.classList.remove("is-selected", "is-related"));
+        if (selection) {
+          selection.innerHTML = "<h2>节点详情</h2><p>点击图谱节点后，这里会显示主线、行动建议和关联关系。</p>";
+        }
+      }
+
+      function selectNode(node) {
+        const id = node.dataset.nodeId;
+        const relatedIds = new Set([id]);
+        nodes.forEach((item) => item.classList.toggle("is-selected", item === node));
+        edges.forEach((edge) => {
+          const related = edge.dataset.source === id || edge.dataset.target === id;
+          edge.classList.toggle("is-related", related);
+          edge.classList.toggle("is-selected", related);
+          if (related) {
+            relatedIds.add(edge.dataset.source);
+            relatedIds.add(edge.dataset.target);
+          }
+        });
+        nodes.forEach((item) => item.classList.toggle("is-related", relatedIds.has(item.dataset.nodeId)));
+        if (selection) {
+          const href = node.getAttribute("href") || "#";
+          const isThesis = node.dataset.nodeType === "thesis";
+          selection.innerHTML = `
+            <h2>${node.dataset.nodeLabel || "节点"}</h2>
+            <div class="selection-tags">
+              <span>${node.dataset.nodeType || "node"}</span>
+              ${node.dataset.nodeBucket ? `<span>${node.dataset.nodeBucket}</span>` : ""}
+              ${node.dataset.nodeAction ? `<span>${node.dataset.nodeAction}</span>` : ""}
+              ${node.dataset.nodeScore ? `<span>Score ${node.dataset.nodeScore}</span>` : ""}
+            </div>
+            <p>${isThesis ? "这是一条可加入组合追踪的研究主线。关联线显示它的关键词和最新证据。" : "点击关联主线可以进入具体 thesis，或使用搜索收窄关系。"}</p>
+            <div class="network-actions compact-actions">
+              <a href="${href}">打开节点</a>
+              ${isThesis ? `<button type="button" data-select-track="${id}">加入追踪</button>` : ""}
+            </div>
+          `;
+        }
+      }
+
+      function setTransform() {
+        if (viewport) viewport.setAttribute("transform", `translate(${panX} ${panY}) scale(${zoom})`);
+      }
+
+      function svgPoint(event) {
+        const rect = svg.getBoundingClientRect();
+        return { x: event.clientX - rect.left, y: event.clientY - rect.top };
+      }
+
       input?.addEventListener("input", syncSearch);
+      actionButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          actionFilter = actionFilter === button.dataset.actionFilter ? "" : button.dataset.actionFilter;
+          actionButtons.forEach((item) => item.classList.toggle("is-active", item === button && Boolean(actionFilter)));
+          syncSearch();
+        });
+      });
+      graphButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          graphFilter = button.dataset.graphFilter || "all";
+          graphButtons.forEach((item) => item.classList.toggle("is-active", item === button));
+          resetGraphFocus();
+          syncSearch();
+        });
+      });
+      nodes.forEach((node) => {
+        node.addEventListener("click", (event) => {
+          event.preventDefault();
+          selectNode(node);
+        });
+      });
+      svg?.addEventListener("wheel", (event) => {
+        event.preventDefault();
+        const direction = event.deltaY > 0 ? -0.08 : 0.08;
+        zoom = Math.max(0.65, Math.min(2.2, zoom + direction));
+        setTransform();
+      }, { passive: false });
+      svg?.addEventListener("pointerdown", (event) => {
+        if (event.target.closest?.(".node")) return;
+        dragging = true;
+        lastPoint = svgPoint(event);
+        svg.setPointerCapture?.(event.pointerId);
+      });
+      svg?.addEventListener("pointermove", (event) => {
+        if (!dragging || !lastPoint) return;
+        const point = svgPoint(event);
+        panX += (point.x - lastPoint.x) / zoom;
+        panY += (point.y - lastPoint.y) / zoom;
+        lastPoint = point;
+        setTransform();
+      });
+      svg?.addEventListener("pointerup", () => {
+        dragging = false;
+        lastPoint = null;
+      });
+      document.getElementById("resetGraph")?.addEventListener("click", () => {
+        panX = 0;
+        panY = 0;
+        zoom = 1;
+        setTransform();
+        resetGraphFocus();
+      });
+      document.addEventListener("click", (event) => {
+        const track = event.target.closest?.(".track-thesis");
+        const selectTrack = event.target.closest?.("[data-select-track]");
+        if (track) {
+          upsertPortfolio({
+            id: track.dataset.trackId,
+            title: track.dataset.trackTitle,
+            bucket: track.dataset.trackBucket,
+            action: track.dataset.trackAction,
+            score: track.dataset.trackScore,
+            risk: track.dataset.trackRisk,
+          });
+        }
+        if (selectTrack) {
+          const card = document.querySelector(`[data-thesis-id="${selectTrack.dataset.selectTrack}"]`);
+          if (card) {
+            upsertPortfolio({
+              id: card.dataset.thesisId,
+              title: card.dataset.title,
+              bucket: card.dataset.bucket,
+              action: card.dataset.action,
+              score: card.dataset.score,
+              risk: card.dataset.riskBudget,
+            });
+          }
+        }
+        const remove = event.target.closest?.("[data-remove]");
+        if (remove) writePortfolio(readPortfolio().filter((item) => item.id !== remove.dataset.remove));
+      });
+      document.addEventListener("change", (event) => {
+        const field = event.target.closest?.("[data-field]");
+        const itemEl = event.target.closest?.(".portfolio-item");
+        if (!field || !itemEl) return;
+        const items = readPortfolio();
+        const item = items.find((entry) => entry.id === itemEl.dataset.id);
+        if (!item) return;
+        item[field.dataset.field] = field.value;
+        localStorage.setItem(portfolioKey, JSON.stringify(items));
+        renderPortfolio();
+      });
+      document.getElementById("exportPortfolio")?.addEventListener("click", () => {
+        const blob = new Blob([JSON.stringify(readPortfolio(), null, 2)], { type: "application/json" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = `vibe-thesis-portfolio-${new Date().toISOString().slice(0, 10)}.json`;
+        link.click();
+        URL.revokeObjectURL(url);
+      });
+      document.getElementById("clearPortfolio")?.addEventListener("click", () => {
+        if (confirm("清空本地 thesis 追踪列表？")) writePortfolio([]);
+      });
       syncSearch();
+      renderPortfolio();
     </script>
   </body>
 </html>

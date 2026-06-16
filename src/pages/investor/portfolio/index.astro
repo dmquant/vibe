@@ -1,0 +1,301 @@
+---
+import BaseHead from "../../../components/BaseHead.astro";
+import Header from "../../../components/Header.astro";
+import { readResearchNetwork } from "../../../lib/investor-generated.js";
+import "../../../styles/research-network.css";
+
+const network = readResearchNetwork();
+const theses = (network.theses || []).slice(0, 56);
+const buckets = [...theses
+  .reduce((acc, thesis) => {
+    const bucket = thesis.practical?.exposureBucket || "主题机会";
+    acc.set(bucket, (acc.get(bucket) || 0) + 1);
+    return acc;
+  }, new Map())
+  .entries()].sort((a, b) => b[1] - a[1]);
+const actions = [...theses
+  .reduce((acc, thesis) => {
+    const action = thesis.practical?.actionLabel || "观察等待";
+    acc.set(action, (acc.get(action) || 0) + 1);
+    return acc;
+  }, new Map())
+  .entries()].sort((a, b) => b[1] - a[1]);
+---
+
+<!doctype html>
+<html lang="zh-CN" data-lang="zh">
+  <head>
+    <BaseHead
+      title="组合追踪 · AI Institute 投资研究台"
+      description="Browser-local thesis portfolio tracker for AI Institute public research network."
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="research-network portfolio-page">
+      <section class="network-hero">
+        <div>
+          <div class="network-kicker">AI Institute · Portfolio Tracker</div>
+          <h1>组合追踪</h1>
+          <p>把研究主线转化为可复核的组合动作：观察、验证、核心、对冲、退出。所有权重、备注和复核日期只保存在当前浏览器。</p>
+          <div class="network-actions">
+            <a href="/investor/">返回研究台</a>
+            <a href="/investor/research-network/">研究网络</a>
+            <a href="/investor/recaps/">复盘仪表盘</a>
+          </div>
+        </div>
+        <aside class="network-privacy">
+          <span>Static Site Mode</span>
+          <p>该功能不接入交易账户、不上传仓位、不构成投资建议，只把 AI Institute 研究主线变成可跟踪的决策清单。</p>
+        </aside>
+      </section>
+
+      <section class="network-stat-grid" aria-label="Portfolio tracker stats">
+        <div><span>Theses</span><strong>{theses.length}</strong><em>可选主线</em></div>
+        <div><span>Buckets</span><strong>{buckets.length}</strong><em>风险暴露</em></div>
+        <div><span>Actions</span><strong>{actions.length}</strong><em>组合动作</em></div>
+        <div><span>Storage</span><strong>Local</strong><em>浏览器保存</em></div>
+      </section>
+
+      <section class="portfolio-workbench">
+        <div class="portfolio-panel is-large">
+          <div class="section-mini-head">
+            <span>Current Book</span>
+            <strong>本地组合视图</strong>
+          </div>
+          <div class="portfolio-toolbar">
+            <button type="button" id="exportPortfolio">导出 JSON</button>
+            <button type="button" id="clearPortfolio">清空本地组合</button>
+          </div>
+          <div class="portfolio-summary" id="portfolioSummary">尚未添加主线。</div>
+          <div class="allocation-board" id="allocationBoard"></div>
+          <div class="portfolio-list full" id="portfolioList" aria-live="polite"></div>
+        </div>
+
+        <aside class="portfolio-panel">
+          <div class="section-mini-head">
+            <span>Filters</span>
+            <strong>筛选候选</strong>
+          </div>
+          <label class="filter-control">搜索
+            <input id="portfolioSearch" type="search" placeholder="主线、资产、风险、行动..." />
+          </label>
+          <div class="bucket-stack compact">
+            <button type="button" data-filter-bucket="">全部暴露</button>
+            {buckets.map(([bucket, count]) => <button type="button" data-filter-bucket={bucket}>{bucket}<strong>{count}</strong></button>)}
+          </div>
+          <div class="action-stack compact">
+            <button type="button" data-filter-action="">全部动作</button>
+            {actions.map(([action, count]) => <button type="button" data-filter-action={action}>{action}<strong>{count}</strong></button>)}
+          </div>
+        </aside>
+      </section>
+
+      <section class="thesis-section">
+        <div class="section-headline">
+          <span>Candidate Thesis Pool</span>
+          <h2>可加入组合的研究主线</h2>
+          <p>每条主线都带有风险暴露、建议动作、风险预算、确认信号和证伪信号。点击“加入组合”后可维护权重和复核日期。</p>
+        </div>
+        <div class="portfolio-candidate-list">
+          {theses.map((thesis) => (
+            <article
+              class="candidate-row"
+              data-search={`${thesis.title} ${thesis.coreView} ${(thesis.topTerms || []).join(" ")} ${thesis.practical?.exposureBucket || ""} ${thesis.practical?.actionLabel || ""}`}
+              data-bucket={thesis.practical?.exposureBucket || "主题机会"}
+              data-action={thesis.practical?.actionLabel || "观察等待"}
+            >
+              <div>
+                <span>{thesis.practical?.exposureBucket || "主题机会"} · {thesis.practical?.actionLabel || "观察等待"} · Score {thesis.practical?.score || thesis.conviction}</span>
+                <h3><a href={`/investor/research-network/#${thesis.id}`}>{thesis.title}</a></h3>
+                <p>{thesis.practical?.portfolioUse || thesis.coreView}</p>
+                <div class="term-row">
+                  {(thesis.practical?.instrumentTags || thesis.topTerms || []).slice(0, 8).map((term) => <span>{term}</span>)}
+                </div>
+                <details>
+                  <summary>确认 / 证伪信号</summary>
+                  <div class="signal-grid">
+                    <div>
+                      <strong>确认</strong>
+                      {(thesis.practical?.confirmationSignals || []).slice(0, 3).map((item) => <p>{item}</p>)}
+                    </div>
+                    <div>
+                      <strong>证伪</strong>
+                      {(thesis.practical?.invalidationSignals || []).slice(0, 3).map((item) => <p>{item}</p>)}
+                    </div>
+                  </div>
+                </details>
+              </div>
+              <aside>
+                <span>{thesis.practical?.riskBudget}</span>
+                <span>{thesis.practical?.reviewCadence}</span>
+                <button
+                  type="button"
+                  class="track-thesis"
+                  data-track-id={thesis.id}
+                  data-track-title={thesis.title}
+                  data-track-bucket={thesis.practical?.exposureBucket || "主题机会"}
+                  data-track-action={thesis.practical?.actionLabel || "观察等待"}
+                  data-track-score={thesis.practical?.score || thesis.conviction || 0}
+                  data-track-risk={thesis.practical?.riskBudget || ""}
+                >
+                  加入组合
+                </button>
+              </aside>
+            </article>
+          ))}
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const portfolioKey = "vibe.researchNetwork.portfolio.v1";
+      const candidates = [...document.querySelectorAll(".candidate-row")];
+      const search = document.getElementById("portfolioSearch");
+      let bucketFilter = "";
+      let actionFilter = "";
+
+      function readPortfolio() {
+        try {
+          return JSON.parse(localStorage.getItem(portfolioKey) || "[]");
+        } catch {
+          return [];
+        }
+      }
+
+      function writePortfolio(items) {
+        localStorage.setItem(portfolioKey, JSON.stringify(items));
+        renderPortfolio();
+      }
+
+      function upsertPortfolio(item) {
+        const items = readPortfolio();
+        const index = items.findIndex((entry) => entry.id === item.id);
+        const next = {
+          ...item,
+          status: item.status || "观察",
+          weight: item.weight || "0",
+          reviewDate: item.reviewDate || "",
+          note: item.note || "",
+          updatedAt: new Date().toISOString(),
+        };
+        if (index >= 0) items[index] = { ...items[index], ...next };
+        else items.unshift(next);
+        writePortfolio(items);
+      }
+
+      function renderPortfolio() {
+        const items = readPortfolio();
+        const list = document.getElementById("portfolioList");
+        const summary = document.getElementById("portfolioSummary");
+        const allocation = document.getElementById("allocationBoard");
+        const totalWeight = items.reduce((sum, item) => sum + Number(item.weight || 0), 0);
+        if (summary) {
+          summary.textContent = items.length
+            ? `${items.length} 条主线 · 目标权重 ${totalWeight.toFixed(1)}% · 本地浏览器保存`
+            : "尚未添加主线。";
+        }
+        if (allocation) {
+          const byBucket = items.reduce((acc, item) => {
+            const bucket = item.bucket || "主题机会";
+            acc.set(bucket, (acc.get(bucket) || 0) + Number(item.weight || 0));
+            return acc;
+          }, new Map());
+          allocation.innerHTML = [...byBucket.entries()].map(([bucket, weight]) => `
+            <div class="allocation-row">
+              <span>${bucket}</span>
+              <strong>${weight.toFixed(1)}%</strong>
+              <i><b style="width:${Math.min(100, Math.max(4, weight))}%"></b></i>
+            </div>
+          `).join("");
+        }
+        if (!list) return;
+        list.innerHTML = items.map((item) => `
+          <article class="portfolio-item" data-id="${item.id}">
+            <div>
+              <span>${item.bucket || "主题机会"} · ${item.action || "观察等待"} · ${item.score || ""}</span>
+              <strong><a href="/investor/research-network/#${item.id}">${item.title}</a></strong>
+              <em>${item.risk || ""}</em>
+            </div>
+            <label>状态
+              <select data-field="status">${["观察", "验证仓", "核心仓", "对冲", "退出"].map((status) => `<option ${status === item.status ? "selected" : ""}>${status}</option>`).join("")}</select>
+            </label>
+            <label>权重
+              <input data-field="weight" type="number" min="0" max="100" step="0.5" value="${item.weight || "0"}" />
+            </label>
+            <label>复核
+              <input data-field="reviewDate" type="date" value="${item.reviewDate || ""}" />
+            </label>
+            <label>备注
+              <input data-field="note" type="text" value="${String(item.note || "").replaceAll('"', "&quot;")}" />
+            </label>
+            <button type="button" data-remove="${item.id}">移除</button>
+          </article>
+        `).join("");
+      }
+
+      function syncFilters() {
+        const query = String(search?.value || "").toLowerCase().trim();
+        candidates.forEach((row) => {
+          const matchQuery = !query || String(row.dataset.search || "").toLowerCase().includes(query);
+          const matchBucket = !bucketFilter || row.dataset.bucket === bucketFilter;
+          const matchAction = !actionFilter || row.dataset.action === actionFilter;
+          row.classList.toggle("is-hidden", !(matchQuery && matchBucket && matchAction));
+        });
+      }
+
+      document.addEventListener("click", (event) => {
+        const track = event.target.closest?.(".track-thesis");
+        if (track) {
+          upsertPortfolio({
+            id: track.dataset.trackId,
+            title: track.dataset.trackTitle,
+            bucket: track.dataset.trackBucket,
+            action: track.dataset.trackAction,
+            score: track.dataset.trackScore,
+            risk: track.dataset.trackRisk,
+          });
+        }
+        const remove = event.target.closest?.("[data-remove]");
+        if (remove) writePortfolio(readPortfolio().filter((item) => item.id !== remove.dataset.remove));
+        const bucket = event.target.closest?.("[data-filter-bucket]");
+        if (bucket) {
+          bucketFilter = bucket.dataset.filterBucket || "";
+          document.querySelectorAll("[data-filter-bucket]").forEach((item) => item.classList.toggle("is-active", item === bucket && Boolean(bucketFilter)));
+          syncFilters();
+        }
+        const action = event.target.closest?.("[data-filter-action]");
+        if (action) {
+          actionFilter = action.dataset.filterAction || "";
+          document.querySelectorAll("[data-filter-action]").forEach((item) => item.classList.toggle("is-active", item === action && Boolean(actionFilter)));
+          syncFilters();
+        }
+      });
+      document.addEventListener("change", (event) => {
+        const field = event.target.closest?.("[data-field]");
+        const itemEl = event.target.closest?.(".portfolio-item");
+        if (!field || !itemEl) return;
+        const items = readPortfolio();
+        const item = items.find((entry) => entry.id === itemEl.dataset.id);
+        if (!item) return;
+        item[field.dataset.field] = field.value;
+        localStorage.setItem(portfolioKey, JSON.stringify(items));
+        renderPortfolio();
+      });
+      search?.addEventListener("input", syncFilters);
+      document.getElementById("exportPortfolio")?.addEventListener("click", () => {
+        const blob = new Blob([JSON.stringify(readPortfolio(), null, 2)], { type: "application/json" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = `vibe-thesis-portfolio-${new Date().toISOString().slice(0, 10)}.json`;
+        link.click();
+        URL.revokeObjectURL(url);
+      });
+      document.getElementById("clearPortfolio")?.addEventListener("click", () => {
+        if (confirm("清空本地 thesis 追踪列表？")) writePortfolio([]);
+      });
+      renderPortfolio();
+    </script>
+  </body>
+</html>
