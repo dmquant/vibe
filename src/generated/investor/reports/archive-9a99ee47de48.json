@@ -1,0 +1,21 @@
+{
+  "slug": "archive-9a99ee47de48",
+  "href": "/investor/reports/archive-9a99ee47de48/",
+  "meta": {
+    "title": "AI 效率奇点：DeepSeek V4 是否终结了“暴力美学”大基建？",
+    "date": "2026-06-16",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "通胀",
+      "宏观",
+      "能源",
+      "风险"
+    ],
+    "source": "archive-9a99ee47de48",
+    "source_label": "研究线程",
+    "source_kind": "research_thread"
+  },
+  "bodyHtml": "<h1>AI 效率奇点：DeepSeek V4 是否终结了“暴力美学”大基建？</h1>\n<p><strong>日期:</strong> 2026-06-16 | <strong>分析师:</strong> 主题研究员 (Thematic Researcher)</p>\n<h2>核心摘要</h2>\n<p>AI 行业的估值核心已从“拥有多少 GPU”明显转向“能以多低的成本交付智能”。2026 年初 DeepSeek V4 的发布，是这一转折点的终极催化剂。通过引入 Engram 内存技术——一种利用确定性 O(1) 查找表的条件内存模块——DeepSeek V4 成功将静态知识与主动推理剥离 [S1]。这极大地降低了大模型推理的算力门槛，将内存需求从昂贵的 GPU 显存 (VRAM) 转移到了标准的系统内存 (DRAM) 上 [S2]。因此，如果算法架构的进步持续快于硬件摩尔定律，当前全球范围内庞大的算力基础设施将面临成为“搁置资产”（Stranded Assets）的现实风险。</p>\n<h2>DeepSeek V4 与 Engram 内存：范式转移</h2>\n<p>始于 2025 年的“DeepSeek 冲击”在 V4 架构的突破上达到了高潮。Engram 内存取代了传统、高度依赖显存带宽的 KV Cache，扮演了事实与模式“百科全书”的角色，而 MoE 层则作为“大脑”负责推理 [S3]。\n- <strong>硬件效率：</strong> Engram 技术使模型在极低的 GPU 显存开销下实现了百万 Token 的上下文窗口，让 1.6 万亿参数的 DeepSeek-V4-Pro 能够仅用 490 亿激活参数就达到前沿水平 [S4]。\n- <strong>稀疏分布法则：</strong> 该架构将大约 20–25% 的稀疏参数分配给 Engram 内存，剩余 75–80% 用于计算，从而有效绕过了内存墙瓶颈 [S2]。</p>\n<h2>算力基础设施的“搁置资产”风险</h2>\n<p>在过去三年中，西方科技巨头和企业参与了一场“暴力美学”般的军备竞赛，将数万亿美元投入到庞大的数据中心和类似 Nvidia H100/B200 的高端 GPU 中。随着模型效率的飙升，这些基础设施面临三个主要风险\n1. <strong>GPU 产能过剩：</strong> 如果 Engram 技术使模型效率提高 10 倍，全球对顶级云端算力的总需求将疲软。过去需要 8 张 H100 才能运行的任务，现在能在成本低得多的硬件配置上完成 [自测算]。\n2. <strong>加速折旧：</strong> 预计未来十年 2.5 万亿美元的 AI 资本支出（Capex）可能无法如期兑现。那些未能针对高度稀疏、依赖 DRAM 卸载的模型进行优化的旧计算集群，可能会经历超预期的经济性淘汰 [S5]。\n3. <strong>能源基建错配：</strong> 如果单位 AI 输出消耗的能源因算法优化而持续骤降，基于指数级 AI 电力需求预测而投资的长达 30 年生命周期的能源资产（如核能 SMR 或新建天然气电厂），可能也会被迫“搁置” [S5]。</p>\n<h2>结论</h2>\n<p>DeepSeek V4 标志着一个“效率奇点”。暴力的 Scaling Laws（缩放定律）正在向架构的优雅性让步，证明了智能价格的下降速度远快于硬件成本的下降。投资者必须转变思路，不再基于原始算力资本支出来对 AI 公司进行估值，而是评估其算法效率。行业的权力正在从拥有“铲子”（基础设施）的人转移到拥有“图纸”（算法）的人手中。</p>\n<h2>资料来源 / Sources</h2>\n<p>[S1] remio.ai, \"The Brain vs. Encyclopedia Split in DeepSeek V4\" — https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHdbBXhLa5xAzVrZROmbmuLENtt9kxbL74cwbEQCD9oOzMkc9QHeZZe2OjeGBxV32fhWePF2SSpTzhKw18figu1iUDOwF6ut7YIOaI4PMtHCKriVFgvVGy-n7qMdNzKQCl3xX8s_ZeOUfy1xhg3fGjdmHiijstyRCKzdsQdA47OFABe6w6O9h0WEGm777WgYs3x\n[S2] digitalapplied.com, \"Engram Memory: Offloading to System DRAM\" — https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHvrPod4OpCWoVVk0hFpWgWZuJYFH09EYfzPg-OYTySw0zpCvY-8TMA8DEm50fLE5RNWfL8X3dOJUw74zs0OU0fh-X2ljtFYuFv4NW_TXqM3fi0nRK6_tCHRseupbmDqbMe5puj_t8aHls2Toi2F4rcz_ne5MQpzlF7hcvhDdQFuqJtj7LIESXkkSrWqEqao5xL\n[S3] reddit.com, \"DeepSeek V4 Engram and O(1) Retrieval\" — https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGcDs0_-Ssi2Sm3_U9eiOMx9MX69VM7AESwB_IIM3mbn_4ZuCxjGwI-6I66m-u9FwfRXsUXyhtp_CiAWG4_GNagkVdPaBsp4bTdsdOM_sE1tWZk1xB-QncY2_YAjGs3iCBuW7W-7vUFShueFgeR-vN4_ETvZAFvJH--rhvmmv49nXtjn_YkLGqJxmtSxFnzZ83uTXa5WRI0QPr_epEyQV5pUQ==\n[S4] deepseek.com, \"DeepSeek-V4-Pro Specs\" — https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH9mcnCEL3uzK7lbD3YjruqW6xUwFRAH-FVpM61kXECx3dnrNNJR6gXxb8Nm469tyBcXN3hgolzq2xPRP0UG7EgWIt2Z0FXiG74SVV1ybb-gu_pxbECy6pXbEMWAHItuJH5ttLLG-8N6A==\n[S5] infrastructureinvestor.com, \"The DeepSeek Shock and Stranded Assets\" — https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAvagplWcQZhl4GjbuDJ6LyBMHi5toOsNNHscIxqcIr8A2JVsdLzr8zPOo_ZRnjazFhI58MLfOmoa8v3IijaOcuuNlBOyelag_oBG40f_XLusJsB5UFTd8PSYvhPiS6iJRVqWPSx0lJqxlxEtgoYcPs2Xu5dlHOAV2HLBYAN4M6MUVDUVFXStPf1phjCUj3zr-Rc0pXg==\n[自测算] Internal Institute Estimate: Hardware capacity shift based on 10x efficiency multiplier of MLA/Engram vs dense architectures.</p>"
+}
