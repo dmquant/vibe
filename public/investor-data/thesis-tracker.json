@@ -1,253 +1,50 @@
 {
-  "generatedAt": "2026-06-18T00:31:05.587616+00:00",
+  "generatedAt": "2026-06-18T08:34:35.909381+00:00",
   "stats": {
     "total": 32,
-    "avgConviction": 50.6,
-    "highConviction": 2,
+    "avgConviction": 51,
+    "highConviction": 1,
     "riskPressure": 19,
-    "conflicting": 26,
-    "sourceEvidence": 456,
+    "conflicting": 25,
+    "sourceEvidence": 455,
     "sourceReports": 400,
     "sourceAnalysts": 25
   },
   "directionCounts": {
-    "strengthening": 3,
-    "conflicting": 25,
+    "conflicting": 24,
     "weakening": 1,
-    "stable": 3
+    "stable": 3,
+    "strengthening": 4
   },
   "statusCounts": {
-    "常规跟踪": 2,
-    "审慎验证": 30
+    "审慎验证": 31,
+    "常规跟踪": 1
   },
   "committeeQuestions": [
-    "加密资产仍是全球流动性和散户风险偏好的高频回声：当前证据质量是否足以转化为组合表达？",
     "MSCI 调整窗口是被动资金与主动减仓相互博弈的流动性事件：是否需要降级、等待证伪指标，还是补充新的支持证据？",
     "A 股红利与硬科技杠铃仍是政策、利率和风险偏好的组合表达：是否需要降级、等待证伪指标，还是补充新的支持证据？",
     "期权伽马、ETF 与尾盘流动性正在放大主题交易的微观结构风险：是否需要降级、等待证伪指标，还是补充新的支持证据？",
-    "散户情绪与北向资金背离是 A 股风险偏好的关键温度计：是否需要降级、等待证伪指标，还是补充新的支持证据？",
-    "美联储路径仍是全球资产再定价的总阀门：是否需要降级、等待证伪指标，还是补充新的支持证据？"
+    "消费降级、健康刚需与银发经济正在重塑防御型增长：当前证据质量是否足以转化为组合表达？",
+    "加密资产仍是全球流动性和散户风险偏好的高频回声：是否需要降级、等待证伪指标，还是补充新的支持证据？",
+    "GPU、HBM 与先进封装决定 AI 资本开支供给节奏：是否需要降级、等待证伪指标，还是补充新的支持证据？"
   ],
   "theses": [
-    {
-      "id": "thesis_crypto_liquidity_risk_appetite",
-      "title": "加密资产仍是全球流动性和散户风险偏好的高频回声",
-      "titleEn": "Crypto remains a high-frequency echo of global liquidity and retail risk appetite",
-      "coreView": "当前共有 40 条证据、6 位分析师和 1 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
-      "direction": "strengthening",
-      "conviction": 69,
-      "status": "常规跟踪",
-      "priority": 100.7,
-      "evidenceQuality": 94,
-      "riskPressure": 52,
-      "supportBalance": -4,
-      "score": {
-        "for": 4,
-        "against": 8,
-        "analysts": 6,
-        "recent": 4,
-        "risks": 1
-      },
-      "sourceLedger": {
-        "evidence": 12,
-        "reports": 12,
-        "analysts": 4,
-        "latestDate": "2026-06-18",
-        "topReports": [
-          {
-            "id": "ev_102469d02d",
-            "title": "今日美股板块轮动日报",
-            "summary": "锚定日期：2026-06-18（系统日期锚 ）。对应美股交易时段：2026-06-17。 数据优先级：11 个 SPDR 板块 ETF 收盘价全部来自机构数据源校验 sector etf cl...",
-            "href": "/investor/reports/archive-6de0ddc31ba2/",
-            "analyst": "首席策略师",
-            "date": "2026-06-18",
-            "chain": "宏观通胀传导",
-            "supportType": "supports",
-            "importance": 55.2,
-            "confidence": 0.9
-          },
-          {
-            "id": "ev_4f5ab4dbe3",
-            "title": "SPDR 行业 ETF 前收与日收益交接",
-            "summary": "可以补，而且应当补：对 11 只 Select Sector SPDR ETF，数据层应每日写入 previous close 、 close 、 close return pct，并可同步写入 excess vs spy pct，避...",
-            "href": "/investor/reports/archive-4026f93e87dc/",
-            "analyst": "数据科学家",
-            "date": "2026-06-18",
-            "chain": "宏观通胀传导",
-            "supportType": "supports",
-            "importance": 55.2,
-            "confidence": 0.9
-          },
-          {
-            "id": "ev_fc17a8bd08",
-            "title": "STAR 50 极端回撤下的融资融券与股权质押次生冲击评估",
-            "summary": "日期： 2026-06-13 分析师： A股策略师 (ashare-strategist) 立场： 支持 (Support) — 本次压力测试确认，科创50在25%极端回撤下将触发“流动性黑洞”，其余波...",
-            "href": "/investor/reports/archive-5fcb9a7da92e/",
-            "analyst": "未识别",
-            "date": "2026-06-13",
-            "chain": "AI 基础设施",
-            "supportType": "risk",
-            "importance": 45.6,
-            "confidence": 0.83
-          },
-          {
-            "id": "ev_f0923c5beb",
-            "title": "创新药与CXO的流动性分化：结构性T+0双轨制下的医药板块重估",
-            "summary": "1. 背景与前置推演重构 前序研究指出，为应对美股无摩擦日内交易（2026年6月4日取消PDT规则）带来的资金分流压力，A股或加速推行核心蓝筹和宽基ETF的T+0双轨制 [...",
-            "href": "/investor/reports/archive-5d5d486ec98a/",
-            "analyst": "未识别",
-            "date": "2026-06-05",
-            "chain": "AI 基础设施",
-            "supportType": "risk",
-            "importance": 43,
-            "confidence": 0.808
-          },
-          {
-            "id": "ev_b2b8386c94",
-            "title": "隔夜宏观报告：美债收益率与油价双升压制风险偏好，亚洲市场面临流动性防守考验",
-            "summary": "隔夜宏观报告：美债收益率与油价双升压制风险偏好，亚洲市场面临流动性防守考验",
-            "href": "/investor/reports/archive-0d07fcd6390c/",
-            "analyst": "晨会主编",
-            "date": "2026-06-04",
-            "chain": "AI 基础设施",
-            "supportType": "risk",
-            "importance": 45,
-            "confidence": 0.825
-          }
-        ]
-      },
-      "lastUpdated": "2026-06-18",
-      "evidenceFor": [
-        {
-          "id": "ev_102469d02d",
-          "title": "今日美股板块轮动日报",
-          "summary": "锚定日期：2026-06-18（系统日期锚 ）。对应美股交易时段：2026-06-17。 数据优先级：11 个 SPDR 板块 ETF 收盘价全部来自机构数据源校验 sector etf cl...",
-          "href": "/investor/reports/archive-6de0ddc31ba2/",
-          "analyst": "首席策略师",
-          "date": "2026-06-18",
-          "chain": "宏观通胀传导",
-          "supportType": "supports",
-          "importance": 55.2,
-          "confidence": 0.9
-        },
-        {
-          "id": "ev_4f5ab4dbe3",
-          "title": "SPDR 行业 ETF 前收与日收益交接",
-          "summary": "可以补，而且应当补：对 11 只 Select Sector SPDR ETF，数据层应每日写入 previous close 、 close 、 close return pct，并可同步写入 excess vs spy pct，避...",
-          "href": "/investor/reports/archive-4026f93e87dc/",
-          "analyst": "数据科学家",
-          "date": "2026-06-18",
-          "chain": "宏观通胀传导",
-          "supportType": "supports",
-          "importance": 55.2,
-          "confidence": 0.9
-        },
-        {
-          "id": "ev_5f203f269f",
-          "title": "沃什时代首发冲击：高油价下美联储『更长更久』利率路径对全球流动性的紧缩投影",
-          "summary": "沃什时代首发冲击：高油价下美联储『更长更久』利率路径对全球流动性的紧缩投影 日期 : 2026-05-25 分析师 : chief-economist (首席经济学家) 任务 : 央行观察 (...",
-          "href": "/investor/reports/archive-c45508f71784/",
-          "analyst": "未识别",
-          "date": "2026-05-25",
-          "chain": "宏观通胀传导",
-          "supportType": "supports",
-          "importance": 52.6,
-          "confidence": 0.888
-        },
-        {
-          "id": "ev_9d91ef23b1",
-          "title": "美联储终端利率上行下的全球流动性与非美央行外溢",
-          "summary": "日期（机构工作日，亚洲/新加坡时区）： 2026-05-24 - 分析师： 全球宏观分析师 (global-macro) - 立场： 支持（延伸研究记录01\"R\\ 上移至 3.50–3.75%、长端美...",
-          "href": "/investor/reports/archive-652522f38f6f/",
-          "analyst": "未识别",
-          "date": "2026-05-24",
-          "chain": "宏观通胀传导",
-          "supportType": "supports",
-          "importance": 52.6,
-          "confidence": 0.888
-        }
-      ],
-      "evidenceAgainst": [
-        {
-          "id": "ev_1caa8974c6",
-          "title": "风险评估",
-          "summary": "本报告仅覆盖 SPY,QQQ,IWM,NVDA。 SPY 、 QQQ 、 IWM 按 ETF 风险口径评估，核心风险来自底层组合估值、指数集中度、申赎与二级市场流动性、利率和宏观政策； NV...",
-          "href": "/investor/reports/archive-48a86aaab82d/",
-          "analyst": "深研主编",
-          "date": "2026-03-31",
-          "chain": "宏观通胀传导",
-          "supportType": "risk",
-          "importance": 48.4,
-          "confidence": 0.853
-        },
-        {
-          "id": "ev_ab651ff74a",
-          "title": "A股两融杠杆重构、ETF申赎分化与微观流动性压力测试",
-          "summary": "分析师：A股策略师 (ashare-strategist) - 工作日期：2026-05-31（亚洲/新加坡） - 立场：stress-test（对哑铃策略的\"红利防御腿\"在微观流动性层面进行二次压力...",
-          "href": "/investor/reports/archive-7ccba2daf7b0/",
-          "analyst": "未识别",
-          "date": "2026-05-31",
-          "chain": "宏观通胀传导",
-          "supportType": "risk",
-          "importance": 48,
-          "confidence": 0.85
-        },
-        {
-          "id": "ev_bf029f1cf6",
-          "title": "行业定位",
-          "summary": "本报告唯一研究对象为 SPY,QQQ,IWM,NVDA。 SPY 、 QQQ 、 IWM 是 ETF 产品，行业定位采用 ETF 行业的资产规模、费率、流动性、指数授权和跟踪能力口径； NVDA 是...",
-          "href": "/investor/reports/archive-8d81cf1e5607/",
-          "analyst": "深研主编",
-          "date": "2026-05-21",
-          "chain": "AI 基础设施",
-          "supportType": "risk",
-          "importance": 47.8,
-          "confidence": 0.848
-        }
-      ],
-      "risks": [
-        {
-          "id": "risk_e1a0ebdb9d",
-          "title": "电网设备供应链瓶颈：变压器及核心部件交期压力测试",
-          "summary": "工作日期：2026-06-14。本报告片对上一张能源侧结论做压力测试：增量电力可以建设，但 AI 产能能否通电，取决于变压器、开关柜、断路器、电缆和调试人力能否按同...",
-          "href": "/investor/reports/archive-6921ecb4fc86/",
-          "chain": "工业供给瓶颈",
-          "impact": 5,
-          "probability": 5,
-          "trend": "rising"
-        }
-      ],
-      "falsifiers": [
-        "ETF 流入持续恢复",
-        "稳定币供给扩张",
-        "链上杠杆下降",
-        "科技股风险偏好同步恢复"
-      ],
-      "monitors": [
-        "BTC/ETH",
-        "现货 ETF 流量",
-        "稳定币供给",
-        "链上杠杆",
-        "科技股相关性"
-      ],
-      "linkedReports": []
-    },
     {
       "id": "thesis_msci_rebalance_active_exit_window",
       "title": "MSCI 调整窗口是被动资金与主动减仓相互博弈的流动性事件",
       "titleEn": "MSCI rebalance windows are liquidity events where passive demand meets active exits",
-      "coreView": "当前共有 40 条证据、5 位分析师和 1 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
+      "coreView": "当前共有 40 条证据、6 位分析师和 1 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
       "direction": "conflicting",
-      "conviction": 67,
+      "conviction": 70,
       "status": "审慎验证",
-      "priority": 87.2,
-      "evidenceQuality": 77,
+      "priority": 93.8,
+      "evidenceQuality": 88,
       "riskPressure": 52,
       "supportBalance": -2,
       "score": {
         "for": 6,
         "against": 8,
-        "analysts": 5,
+        "analysts": 6,
         "recent": 2,
         "risks": 1
       },
@@ -858,27 +655,663 @@
       "linkedReports": []
     },
     {
+      "id": "thesis_consumer_downgrade_health_silver_economy",
+      "title": "消费降级、健康刚需与银发经济正在重塑防御型增长",
+      "titleEn": "Consumer downgrade, healthcare necessities, and the silver economy are reshaping defensive growth",
+      "coreView": "当前共有 40 条证据、1 位分析师和 2 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
+      "direction": "stable",
+      "conviction": 63,
+      "status": "常规跟踪",
+      "priority": 70.4,
+      "evidenceQuality": 50,
+      "riskPressure": 57.8,
+      "supportBalance": 3,
+      "score": {
+        "for": 11,
+        "against": 8,
+        "analysts": 1,
+        "recent": 1,
+        "risks": 2
+      },
+      "sourceLedger": {
+        "evidence": 19,
+        "reports": 19,
+        "analysts": 1,
+        "latestDate": "2026-06-18",
+        "topReports": [
+          {
+            "id": "ev_2bb4ba454e",
+            "title": "消费行业午间同步简报（2026-06-18）",
+            "summary": "日期锚点： 2026-06-18 （本地 系统日期锚 确认；“上一交易日”为 2026-06-17） 席位：消费行业分析师（ consumer-analyst ） 覆盖范围：白酒、食品...",
+            "href": "/investor/reports/archive-ec90fc8cc9dd/",
+            "analyst": "消费行业分析师",
+            "date": "2026-06-18",
+            "chain": "宏观通胀传导",
+            "supportType": "supports",
+            "importance": 42.6,
+            "confidence": 0.805
+          },
+          {
+            "id": "ev_7d3438fa68",
+            "title": "AI医疗创新的算力瓶颈与基础设施承载力评估",
+            "summary": "日期：2026-06-17（亚洲/新加坡） - 分析师：AI基础设施分析师 - 研究记录 — 立场： 压力测试 (stress-test) - 上游研究记录：research note（医药行业分析师）...",
+            "href": "/investor/reports/archive-2702c239d821/",
+            "analyst": "未识别",
+            "date": "2026-06-17",
+            "chain": "AI 基础设施",
+            "supportType": "risk",
+            "importance": 52.4,
+            "confidence": 0.887
+          },
+          {
+            "id": "ev_a4402025c1",
+            "title": "工业制造与供应链专题合成报告：自动化装备、模块化建造与航空链瓶颈对酒店、餐饮与休闲产业链的重...",
+            "summary": "工业制造与供应链专题合成报告：自动化装备、模块化建造与航空链瓶颈对酒店、餐饮与休闲产业链的重塑",
+            "href": "/investor/reports/archive-bae871b44f2f/",
+            "analyst": "未识别",
+            "date": "2026-06-17",
+            "chain": "工业供给瓶颈",
+            "supportType": "risk",
+            "importance": 52.2,
+            "confidence": 0.885
+          },
+          {
+            "id": "ev_0749851745",
+            "title": "供应链降本预期下，餐饮与酒店业的消费端价格敏感度与消费频次变化调研",
+            "summary": "工作日期：2026-06-17（Asia/Singapore） - 分析师：消费行业分析师（consumer-analyst） - 立场：support（在受限范围内支持） - 上游研究记录：research note...",
+            "href": "/investor/reports/archive-25cc3b969b72/",
+            "analyst": "未识别",
+            "date": "2026-06-17",
+            "chain": "工业供给瓶颈",
+            "supportType": "risk",
+            "importance": 51.2,
+            "confidence": 0.877
+          },
+          {
+            "id": "ev_526d36e58b",
+            "title": "“政策性口粮+非餐饮型红利”哑铃组合压力测试：尾部暴露与回撤边界",
+            "summary": "报告作者： 首席风控官 (Chief Risk Officer) 权威工作日期： 2026-06-15（北京/新加坡时间） 共享会话主题： 即时零售折扣化与理性平替下的消费红利防御重构 研...",
+            "href": "/investor/reports/archive-0f5a249c24d5/",
+            "analyst": "未识别",
+            "date": "2026-06-15",
+            "chain": "宏观通胀传导",
+            "supportType": "risk",
+            "importance": 50,
+            "confidence": 0.867
+          }
+        ]
+      },
+      "lastUpdated": "2026-06-18",
+      "evidenceFor": [
+        {
+          "id": "ev_6e59fcb3f9",
+          "title": "餐饮降本背景下，标准化B端食品对下游餐饮链及消费端需求的影响",
+          "summary": "作者：消费行业分析师 (consumer-analyst) - 工作日期：2026-05-28（亚洲/新加坡） - 研究记录： - 立场：support（在 research note 农业分析师的判断基础上...",
+          "href": "/investor/reports/archive-a248a1a386f5/",
+          "analyst": "未识别",
+          "date": "2026-05-28",
+          "chain": "宏观通胀传导",
+          "supportType": "supports",
+          "importance": 46.4,
+          "confidence": 0.837
+        },
+        {
+          "id": "ev_086fe6f60e",
+          "title": "大健康产业链低覆盖筛选 - 工作日 2026-05-21",
+          "summary": "截至研究院工作日 2026-05-21，我支持把中国大健康产业链纳入后续研究队列，但应定位为自下而上的精选线索，而不是简单的行业贝塔判断。最值得跟踪的机会集中在...",
+          "href": "/investor/reports/archive-b65ef96426cf/",
+          "analyst": "未识别",
+          "date": "2026-05-21",
+          "chain": "AI 基础设施",
+          "supportType": "supports",
+          "importance": 46.8,
+          "confidence": 0.84
+        },
+        {
+          "id": "ev_de159366f6",
+          "title": "截至2026-06-05：中国餐饮数字化私域、SaaS与后厨自动化如何在“量增价缩”中平补利润",
+          "summary": "截至2026-06-05：中国餐饮数字化私域、SaaS与后厨自动化如何在“量增价缩”中平补利润",
+          "href": "/investor/reports/archive-5e7ae5ad7d9c/",
+          "analyst": "未识别",
+          "date": "2026-06-05",
+          "chain": "AI 基础设施",
+          "supportType": "supports",
+          "importance": 43.4,
+          "confidence": 0.812
+        },
+        {
+          "id": "ev_a9fb9c645c",
+          "title": "高质量服务消费估值溢价与风格配置 - 2026-06-15",
+          "summary": "截至研究所工作日 2026-06-15，我支持前序研究结论，但需要把它收束成组合规则：华住、同程旅行、特海国际不能作为酒店餐饮休闲的宽基 beta 买入，而应作为高质...",
+          "href": "/investor/reports/archive-a420b8b96a62/",
+          "analyst": "未识别",
+          "date": "2026-06-15",
+          "chain": "AI 基础设施",
+          "supportType": "supports",
+          "importance": 43,
+          "confidence": 0.808
+        }
+      ],
+      "evidenceAgainst": [
+        {
+          "id": "ev_e328d7aea8",
+          "title": "研究记录04｜养老金体系转型与银发消费底座（压力测试）",
+          "summary": "工作日期：2026-05-18（Asia/Singapore） - 分析师：首席经济学家（chief-economist） - 立场：stress-test（对研究记录03\"养老金+长护险+设备更新可支撑十五五...",
+          "href": "/investor/reports/archive-d1a519e59bbc/",
+          "analyst": "未识别",
+          "date": "2026-05-18",
+          "chain": "工业供给瓶颈",
+          "supportType": "risk",
+          "importance": 38.8,
+          "confidence": 0.773
+        },
+        {
+          "id": "ev_f8e07f9b39",
+          "title": "研究报告：食品加工利润修复的驱动力——标准化与健康化升级",
+          "summary": "研究报告：食品加工利润修复的驱动力——标准化与健康化升级 日期： 2026-05-17 分析师： 消费行业分析师 主题： 餐饮标准化与健康化升级对食品加工企业利润修复...",
+          "href": "/investor/reports/archive-0121cf5dcd6b/",
+          "analyst": "未识别",
+          "date": "2026-05-17",
+          "chain": "宏观通胀传导",
+          "supportType": "risk",
+          "importance": 32.4,
+          "confidence": 0.72
+        },
+        {
+          "id": "ev_7d3438fa68",
+          "title": "AI医疗创新的算力瓶颈与基础设施承载力评估",
+          "summary": "日期：2026-06-17（亚洲/新加坡） - 分析师：AI基础设施分析师 - 研究记录 — 立场： 压力测试 (stress-test) - 上游研究记录：research note（医药行业分析师）...",
+          "href": "/investor/reports/archive-2702c239d821/",
+          "analyst": "未识别",
+          "date": "2026-06-17",
+          "chain": "AI 基础设施",
+          "supportType": "risk",
+          "importance": 52.4,
+          "confidence": 0.887
+        }
+      ],
+      "risks": [
+        {
+          "id": "risk_e1a0ebdb9d",
+          "title": "电网设备供应链瓶颈：变压器及核心部件交期压力测试",
+          "summary": "工作日期：2026-06-14。本报告片对上一张能源侧结论做压力测试：增量电力可以建设，但 AI 产能能否通电，取决于变压器、开关柜、断路器、电缆和调试人力能否按同...",
+          "href": "/investor/reports/archive-6921ecb4fc86/",
+          "chain": "工业供给瓶颈",
+          "impact": 5,
+          "probability": 5,
+          "trend": "rising"
+        },
+        {
+          "id": "risk_a5501fad62",
+          "title": "研究报告：电力之墙——变压器与 GOES 瓶颈对超大规模云厂商 Capex 效率的压力测试 (2026-2028)",
+          "summary": "研究报告：电力之墙——变压器与 GOES 瓶颈对超大规模云厂商 Capex 效率的压力测试 (2026-2028) 日期： 2026-06-17 分析师 ID： ai-infrastructure-analyst 状态...",
+          "href": "/investor/reports/archive-8e63fb0421da/",
+          "chain": "AI 基础设施",
+          "impact": 5,
+          "probability": 3,
+          "trend": "rising"
+        }
+      ],
+      "falsifiers": [
+        "居民收入预期明显改善",
+        "高端消费重新扩散",
+        "医保控费压力下降",
+        "品牌溢价恢复"
+      ],
+      "monitors": [
+        "社零结构",
+        "医保支付",
+        "银发服务订单",
+        "品牌折扣率",
+        "食品餐饮毛利"
+      ],
+      "linkedReports": [
+        {
+          "id": "consumer-downgrade-health-silver-economy-78a2530a",
+          "href": "/investor/deep-research/consumer-downgrade-health-silver-economy-78a2530a/",
+          "label": "consumer downgrade health silver economy 78a2530"
+        }
+      ]
+    },
+    {
+      "id": "thesis_crypto_liquidity_risk_appetite",
+      "title": "加密资产仍是全球流动性和散户风险偏好的高频回声",
+      "titleEn": "Crypto remains a high-frequency echo of global liquidity and retail risk appetite",
+      "coreView": "当前共有 40 条证据、5 位分析师和 1 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
+      "direction": "conflicting",
+      "conviction": 56,
+      "status": "审慎验证",
+      "priority": 69.8,
+      "evidenceQuality": 57,
+      "riskPressure": 52,
+      "supportBalance": -6,
+      "score": {
+        "for": 2,
+        "against": 8,
+        "analysts": 5,
+        "recent": 2,
+        "risks": 1
+      },
+      "sourceLedger": {
+        "evidence": 10,
+        "reports": 10,
+        "analysts": 2,
+        "latestDate": "2026-06-13",
+        "topReports": [
+          {
+            "id": "ev_fc17a8bd08",
+            "title": "STAR 50 极端回撤下的融资融券与股权质押次生冲击评估",
+            "summary": "日期： 2026-06-13 分析师： A股策略师 (ashare-strategist) 立场： 支持 (Support) — 本次压力测试确认，科创50在25%极端回撤下将触发“流动性黑洞”，其余波...",
+            "href": "/investor/reports/archive-5fcb9a7da92e/",
+            "analyst": "未识别",
+            "date": "2026-06-13",
+            "chain": "AI 基础设施",
+            "supportType": "risk",
+            "importance": 45.6,
+            "confidence": 0.83
+          },
+          {
+            "id": "ev_f0923c5beb",
+            "title": "创新药与CXO的流动性分化：结构性T+0双轨制下的医药板块重估",
+            "summary": "1. 背景与前置推演重构 前序研究指出，为应对美股无摩擦日内交易（2026年6月4日取消PDT规则）带来的资金分流压力，A股或加速推行核心蓝筹和宽基ETF的T+0双轨制 [...",
+            "href": "/investor/reports/archive-5d5d486ec98a/",
+            "analyst": "未识别",
+            "date": "2026-06-05",
+            "chain": "AI 基础设施",
+            "supportType": "risk",
+            "importance": 43,
+            "confidence": 0.808
+          },
+          {
+            "id": "ev_b2b8386c94",
+            "title": "隔夜宏观报告：美债收益率与油价双升压制风险偏好，亚洲市场面临流动性防守考验",
+            "summary": "隔夜宏观报告：美债收益率与油价双升压制风险偏好，亚洲市场面临流动性防守考验",
+            "href": "/investor/reports/archive-0d07fcd6390c/",
+            "analyst": "晨会主编",
+            "date": "2026-06-04",
+            "chain": "AI 基础设施",
+            "supportType": "risk",
+            "importance": 45,
+            "confidence": 0.825
+          },
+          {
+            "id": "ev_ab651ff74a",
+            "title": "A股两融杠杆重构、ETF申赎分化与微观流动性压力测试",
+            "summary": "分析师：A股策略师 (ashare-strategist) - 工作日期：2026-05-31（亚洲/新加坡） - 立场：stress-test（对哑铃策略的\"红利防御腿\"在微观流动性层面进行二次压力...",
+            "href": "/investor/reports/archive-7ccba2daf7b0/",
+            "analyst": "未识别",
+            "date": "2026-05-31",
+            "chain": "宏观通胀传导",
+            "supportType": "risk",
+            "importance": 48,
+            "confidence": 0.85
+          },
+          {
+            "id": "ev_5f203f269f",
+            "title": "沃什时代首发冲击：高油价下美联储『更长更久』利率路径对全球流动性的紧缩投影",
+            "summary": "沃什时代首发冲击：高油价下美联储『更长更久』利率路径对全球流动性的紧缩投影 日期 : 2026-05-25 分析师 : chief-economist (首席经济学家) 任务 : 央行观察 (...",
+            "href": "/investor/reports/archive-c45508f71784/",
+            "analyst": "未识别",
+            "date": "2026-05-25",
+            "chain": "宏观通胀传导",
+            "supportType": "supports",
+            "importance": 52.6,
+            "confidence": 0.888
+          }
+        ]
+      },
+      "lastUpdated": "2026-06-18",
+      "evidenceFor": [
+        {
+          "id": "ev_5f203f269f",
+          "title": "沃什时代首发冲击：高油价下美联储『更长更久』利率路径对全球流动性的紧缩投影",
+          "summary": "沃什时代首发冲击：高油价下美联储『更长更久』利率路径对全球流动性的紧缩投影 日期 : 2026-05-25 分析师 : chief-economist (首席经济学家) 任务 : 央行观察 (...",
+          "href": "/investor/reports/archive-c45508f71784/",
+          "analyst": "未识别",
+          "date": "2026-05-25",
+          "chain": "宏观通胀传导",
+          "supportType": "supports",
+          "importance": 52.6,
+          "confidence": 0.888
+        },
+        {
+          "id": "ev_9d91ef23b1",
+          "title": "美联储终端利率上行下的全球流动性与非美央行外溢",
+          "summary": "日期（机构工作日，亚洲/新加坡时区）： 2026-05-24 - 分析师： 全球宏观分析师 (global-macro) - 立场： 支持（延伸研究记录01\"R\\ 上移至 3.50–3.75%、长端美...",
+          "href": "/investor/reports/archive-652522f38f6f/",
+          "analyst": "未识别",
+          "date": "2026-05-24",
+          "chain": "宏观通胀传导",
+          "supportType": "supports",
+          "importance": 52.6,
+          "confidence": 0.888
+        }
+      ],
+      "evidenceAgainst": [
+        {
+          "id": "ev_1caa8974c6",
+          "title": "风险评估",
+          "summary": "本报告仅覆盖 SPY,QQQ,IWM,NVDA。 SPY 、 QQQ 、 IWM 按 ETF 风险口径评估，核心风险来自底层组合估值、指数集中度、申赎与二级市场流动性、利率和宏观政策； NV...",
+          "href": "/investor/reports/archive-48a86aaab82d/",
+          "analyst": "深研主编",
+          "date": "2026-03-31",
+          "chain": "宏观通胀传导",
+          "supportType": "risk",
+          "importance": 48.4,
+          "confidence": 0.853
+        },
+        {
+          "id": "ev_ab651ff74a",
+          "title": "A股两融杠杆重构、ETF申赎分化与微观流动性压力测试",
+          "summary": "分析师：A股策略师 (ashare-strategist) - 工作日期：2026-05-31（亚洲/新加坡） - 立场：stress-test（对哑铃策略的\"红利防御腿\"在微观流动性层面进行二次压力...",
+          "href": "/investor/reports/archive-7ccba2daf7b0/",
+          "analyst": "未识别",
+          "date": "2026-05-31",
+          "chain": "宏观通胀传导",
+          "supportType": "risk",
+          "importance": 48,
+          "confidence": 0.85
+        },
+        {
+          "id": "ev_bf029f1cf6",
+          "title": "行业定位",
+          "summary": "本报告唯一研究对象为 SPY,QQQ,IWM,NVDA。 SPY 、 QQQ 、 IWM 是 ETF 产品，行业定位采用 ETF 行业的资产规模、费率、流动性、指数授权和跟踪能力口径； NVDA 是...",
+          "href": "/investor/reports/archive-8d81cf1e5607/",
+          "analyst": "深研主编",
+          "date": "2026-05-21",
+          "chain": "AI 基础设施",
+          "supportType": "risk",
+          "importance": 47.8,
+          "confidence": 0.848
+        }
+      ],
+      "risks": [
+        {
+          "id": "risk_e1a0ebdb9d",
+          "title": "电网设备供应链瓶颈：变压器及核心部件交期压力测试",
+          "summary": "工作日期：2026-06-14。本报告片对上一张能源侧结论做压力测试：增量电力可以建设，但 AI 产能能否通电，取决于变压器、开关柜、断路器、电缆和调试人力能否按同...",
+          "href": "/investor/reports/archive-6921ecb4fc86/",
+          "chain": "工业供给瓶颈",
+          "impact": 5,
+          "probability": 5,
+          "trend": "rising"
+        }
+      ],
+      "falsifiers": [
+        "ETF 流入持续恢复",
+        "稳定币供给扩张",
+        "链上杠杆下降",
+        "科技股风险偏好同步恢复"
+      ],
+      "monitors": [
+        "BTC/ETH",
+        "现货 ETF 流量",
+        "稳定币供给",
+        "链上杠杆",
+        "科技股相关性"
+      ],
+      "linkedReports": []
+    },
+    {
+      "id": "thesis_semiconductor_ai_capex_cycle",
+      "title": "GPU、HBM 与先进封装决定 AI 资本开支供给节奏",
+      "titleEn": "GPUs, HBM, and advanced packaging shape the AI capex supply cycle",
+      "coreView": "当前共有 40 条证据、2 位分析师和 8 条风险信号指向该判断；主导链条为 半导体与存储。该主题应作为可跟踪投资假设，而不是孤立结论。",
+      "direction": "strengthening",
+      "conviction": 55,
+      "status": "审慎验证",
+      "priority": 67.8,
+      "evidenceQuality": 65,
+      "riskPressure": 100,
+      "supportBalance": -1,
+      "score": {
+        "for": 7,
+        "against": 8,
+        "analysts": 2,
+        "recent": 4,
+        "risks": 8
+      },
+      "sourceLedger": {
+        "evidence": 15,
+        "reports": 15,
+        "analysts": 0,
+        "latestDate": "2026-06-18",
+        "topReports": [
+          {
+            "id": "ev_9c1dd71590",
+            "title": "终审质量审计：AI至电网基础设施白皮书 — 2026-06-18",
+            "summary": "工作日期：2026-06-18（Asia/Singapore）。本终审 QA 对已完成的 9 张研究记录进行综合审计，覆盖 AIDD 算力需求、GPU/HBM 与机柜功率密度、电网设备稀缺、GOES...",
+            "href": "/investor/reports/archive-9906cc6fde45/",
+            "analyst": "未识别",
+            "date": "2026-06-18",
+            "chain": "AI 基础设施",
+            "supportType": "supports",
+            "importance": 86.8,
+            "confidence": 0.9
+          },
+          {
+            "id": "ev_56793c8fa5",
+            "title": "prior research notes· 半导体分析师研究报告",
+            "summary": "工作日期：2026-06-18（Asia/Singapore） - 板块：半导体（设计 / 制造 / 设备 / 材料 / 先进封装） - 立场： Support（支持） — 在AI算力强需求与出口管制持续...",
+            "href": "/investor/reports/archive-8c9df85b29e8/",
+            "analyst": "未识别",
+            "date": "2026-06-18",
+            "chain": "AI 基础设施",
+            "supportType": "supports",
+            "importance": 68.6,
+            "confidence": 0.9
+          },
+          {
+            "id": "ev_161f134c2c",
+            "title": "AIDD 需求驱动下的先进封装与 HBM 硬件规格演进",
+            "summary": "AIDD 需求驱动下的先进封装与 HBM 硬件规格演进 - 分析师: 半导体分析师 (semiconductors-analyst) - 立场: support（支持 prior research notes的硬件外延思路...",
+            "href": "/investor/reports/archive-055460301258/",
+            "analyst": "未识别",
+            "date": "2026-06-18",
+            "chain": "半导体与存储",
+            "supportType": "risk",
+            "importance": 67.1,
+            "confidence": 0.9
+          },
+          {
+            "id": "ev_c29a2c9239",
+            "title": "半导体压力测试：芯片能效与先进封装能否突破“通电围墙”？— 2026-06-18",
+            "summary": "半导体压力测试：芯片能效与先进封装能否突破“通电围墙”？— 2026-06-18",
+            "href": "/investor/reports/archive-43b8e1d7aa04/",
+            "analyst": "未识别",
+            "date": "2026-06-18",
+            "chain": "半导体与存储",
+            "supportType": "risk",
+            "importance": 64.9,
+            "confidence": 0.9
+          },
+          {
+            "id": "ev_706230126e",
+            "title": "大基金三期与\"东数西算\"框架下国产HBM/先进封装产能爬坡的资本配置路径及对战略算力供应链安全的宏...",
+            "summary": "大基金三期与\"东数西算\"框架下国产HBM/先进封装产能爬坡的资本配置路径及对战略算力供应链安全的宏观催化",
+            "href": "/investor/reports/archive-0d0c2df986c3/",
+            "analyst": "未识别",
+            "date": "2026-06-17",
+            "chain": "AI 基础设施",
+            "supportType": "supports",
+            "importance": 58.8,
+            "confidence": 0.9
+          }
+        ]
+      },
+      "lastUpdated": "2026-06-18",
+      "evidenceFor": [
+        {
+          "id": "ev_34777a89ae",
+          "title": "核心结论 / Core Thesis",
+          "summary": "核心结论 / Core Thesis 在全球AI半导体估值锚由“NVDA-TSMC双寡头溢价”向“增长+多元化第二供应源”切换的背景下，全球配置需从纯GPU倍数扩张交易转向ASIC、先...",
+          "href": "/investor/reports/archive-d493aaecd9c3/",
+          "analyst": "未识别",
+          "date": "2026-06-09",
+          "chain": "半导体与存储",
+          "supportType": "supports",
+          "importance": 62.6,
+          "confidence": 0.9
+        },
+        {
+          "id": "ev_17337dc6f1",
+          "title": "AI 硬件供应链深度分析：聚焦 HBM 与先进封装的 A 股机会",
+          "summary": "日期： 2026-05-25 主题： HBM 产能缺口及先进封装技术趋势下的 A 股半导体材料与设备环节评估 分析师： TMT行业分析师 (TMT Analyst) 立场： 支持 (支持“硬件...",
+          "href": "/investor/reports/archive-2f04ba0a3319/",
+          "analyst": "未识别",
+          "date": "2026-05-25",
+          "chain": "工业供给瓶颈",
+          "supportType": "supports",
+          "importance": 60.2,
+          "confidence": 0.9
+        },
+        {
+          "id": "ev_abed801277",
+          "title": "芯片与封装能否交付三层算力织物所需的\"电力波动友好\"架构？",
+          "summary": "研究记录 · 半导体分析师 · 工作日期：2026-06-12（亚洲/新加坡） 根主题： AI基础设施从\"算力中心\"转向\"能源中心\" 立场： synthesize（综合）——把研究记录0...",
+          "href": "/investor/reports/archive-598dc7b39be8/",
+          "analyst": "未识别",
+          "date": "2026-06-12",
+          "chain": "半导体与存储",
+          "supportType": "supports",
+          "importance": 57.4,
+          "confidence": 0.9
+        },
+        {
+          "id": "ev_9c1dd71590",
+          "title": "终审质量审计：AI至电网基础设施白皮书 — 2026-06-18",
+          "summary": "工作日期：2026-06-18（Asia/Singapore）。本终审 QA 对已完成的 9 张研究记录进行综合审计，覆盖 AIDD 算力需求、GPU/HBM 与机柜功率密度、电网设备稀缺、GOES...",
+          "href": "/investor/reports/archive-9906cc6fde45/",
+          "analyst": "未识别",
+          "date": "2026-06-18",
+          "chain": "AI 基础设施",
+          "supportType": "supports",
+          "importance": 86.8,
+          "confidence": 0.9
+        }
+      ],
+      "evidenceAgainst": [
+        {
+          "id": "ev_57eadc2caa",
+          "title": "AI芯片先进封装与HBM供需瓶颈分析：算力扩张的物理极限",
+          "summary": "AI芯片先进封装与HBM供需瓶颈分析：算力扩张的物理极限 作者 : 半导体行业分析师 ( semiconductors-analyst ) 分析日期 : 2026年6月15日 (June 15, 2026) 研究讨...",
+          "href": "/investor/reports/archive-d84e690d609a/",
+          "analyst": "未识别",
+          "date": "2026-06-15",
+          "chain": "半导体与存储",
+          "supportType": "risk",
+          "importance": 55.4,
+          "confidence": 0.9
+        },
+        {
+          "id": "ev_161f134c2c",
+          "title": "AIDD 需求驱动下的先进封装与 HBM 硬件规格演进",
+          "summary": "AIDD 需求驱动下的先进封装与 HBM 硬件规格演进 - 分析师: 半导体分析师 (semiconductors-analyst) - 立场: support（支持 prior research notes的硬件外延思路...",
+          "href": "/investor/reports/archive-055460301258/",
+          "analyst": "未识别",
+          "date": "2026-06-18",
+          "chain": "半导体与存储",
+          "supportType": "risk",
+          "importance": 67.1,
+          "confidence": 0.9
+        },
+        {
+          "id": "ev_0a5bbef5fe",
+          "title": "2026年6月16日半导体压力测试：芯片能效能否补上AI电力缺口？",
+          "summary": "截至研究所工作日2026年6月16日，我的压力测试结论是 不能：先进封装与定制ASIC能够显著降低每token能耗，但不足以单独对冲上一张能源研究提出的电网延迟问题...",
+          "href": "/investor/reports/archive-dad89f76226d/",
+          "analyst": "未识别",
+          "date": "2026-06-16",
+          "chain": "半导体与存储",
+          "supportType": "risk",
+          "importance": 65.2,
+          "confidence": 0.9
+        }
+      ],
+      "risks": [
+        {
+          "id": "risk_24e57c0310",
+          "title": "跨越电力约束：AI基础设施瓶颈向全球权益市场的配置与估值映射",
+          "summary": "截至 2026-06-14，经过九个阶段的结构性压力测试，我们确认了一个关键的相位转换：限制 AI 规模化扩张的边际约束已从 GPU 与芯片产能，实质性地迁移至电力与电网...",
+          "href": "/investor/reports/archive-6984a39e382c/",
+          "chain": "AI 基础设施",
+          "impact": 5,
+          "probability": 5,
+          "trend": "rising"
+        },
+        {
+          "id": "risk_e1a0ebdb9d",
+          "title": "电网设备供应链瓶颈：变压器及核心部件交期压力测试",
+          "summary": "工作日期：2026-06-14。本报告片对上一张能源侧结论做压力测试：增量电力可以建设，但 AI 产能能否通电，取决于变压器、开关柜、断路器、电缆和调试人力能否按同...",
+          "href": "/investor/reports/archive-6921ecb4fc86/",
+          "chain": "工业供给瓶颈",
+          "impact": 5,
+          "probability": 5,
+          "trend": "rising"
+        },
+        {
+          "id": "risk_61ebe06164",
+          "title": "电力配电设备产能扩张与供应链瓶颈：AI算力建设的硬约束",
+          "summary": "分析师：工业制造分析师（industrials-analyst） - 立场：support（强化 prior research notes的\"电力设备瓶颈是AI算力部署真正天花板\"判断） - 工作日期：2026-...",
+          "href": "/investor/reports/archive-43f32e01de75/",
+          "chain": "工业供给瓶颈",
+          "impact": 5,
+          "probability": 5,
+          "trend": "rising"
+        },
+        {
+          "id": "risk_e925c5b564",
+          "title": "AI电力效率的宽禁带材料瓶颈压力测试",
+          "summary": "研究记录 - 分析师: materials-analyst（材料行业分析师） - 工作日期: 2026-06-13（Asia/Singapore） - 立场: stress-test — 支持研究记录04提出的宽禁带功率...",
+          "href": "/investor/reports/archive-beefa2e833c1/",
+          "chain": "半导体与存储",
+          "impact": 5,
+          "probability": 5,
+          "trend": "rising"
+        }
+      ],
+      "falsifiers": [
+        "GPU 供给快速宽松",
+        "HBM 价格回落",
+        "云厂商订单削减",
+        "先进封装瓶颈缓解"
+      ],
+      "monitors": [
+        "GPU 交期",
+        "HBM 价格",
+        "云厂商 capex",
+        "先进封装产能"
+      ],
+      "linkedReports": [
+        {
+          "id": "mag7-next-era-losers-6f2a8c9d",
+          "href": "/investor/deep-research/mag7-next-era-losers-6f2a8c9d/",
+          "label": "mag7 next era losers 6f2a8c9d"
+        }
+      ]
+    },
+    {
       "id": "thesis_retail_northbound_divergence",
       "title": "散户情绪与北向资金背离是 A 股风险偏好的关键温度计",
       "titleEn": "Retail sentiment versus northbound flow divergence is the key A-share risk thermometer",
       "coreView": "当前共有 40 条证据、4 位分析师和 2 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
       "direction": "conflicting",
-      "conviction": 62,
+      "conviction": 60,
       "status": "审慎验证",
-      "priority": 69.6,
-      "evidenceQuality": 60,
+      "priority": 66,
+      "evidenceQuality": 55,
       "riskPressure": 57.8,
-      "supportBalance": 0,
+      "supportBalance": -1,
       "score": {
-        "for": 8,
+        "for": 7,
         "against": 8,
         "analysts": 4,
         "recent": 0,
         "risks": 2
       },
       "sourceLedger": {
-        "evidence": 16,
-        "reports": 16,
+        "evidence": 15,
+        "reports": 15,
         "analysts": 2,
         "latestDate": "2026-06-14",
         "topReports": [
@@ -931,20 +1364,20 @@
             "confidence": 0.82
           },
           {
-            "id": "ev_af0b0ce561",
-            "title": "北向资金去杠杆对A股市场情绪及行业资金流向的后续冲击",
-            "summary": "报告日期：2026-06-10 [来源：研究院权威工作日锚定 2026-06-10] - 数据基准：2026-06-10（星期三） [来源：研究院权威工作日锚定 2026-06-10] - 分析师：市场情...",
-            "href": "/investor/reports/archive-58e64b0a18e1/",
-            "analyst": "未识别",
-            "date": "2026-06-10",
-            "chain": "宏观通胀传导",
+            "id": "ev_c04c8df661",
+            "title": "互联互通资金流向日报 (2026-06-09)",
+            "summary": "日期： 2026年6月9日 (周二) 分析师： Global Strategy Team 核心观点： 北向资金聚焦AI算力高频博弈；南向资金通过ETF大幅“扫货”，权重股分歧显著。",
+            "href": "/investor/reports/archive-a82c0bcbdfe4/",
+            "analyst": "全球宏观分析师",
+            "date": "2026-06-09",
+            "chain": "AI 基础设施",
             "supportType": "supports",
-            "importance": 44,
-            "confidence": 0.817
+            "importance": 45.4,
+            "confidence": 0.828
           }
         ]
       },
-      "lastUpdated": "2026-06-14",
+      "lastUpdated": "2026-06-15",
       "evidenceFor": [
         {
           "id": "ev_e65136272e",
@@ -1078,20 +1511,20 @@
       "direction": "stable",
       "conviction": 61,
       "status": "审慎验证",
-      "priority": 67,
-      "evidenceQuality": 72,
+      "priority": 63.1,
+      "evidenceQuality": 69,
       "riskPressure": 100,
-      "supportBalance": 3,
+      "supportBalance": 4,
       "score": {
-        "for": 11,
+        "for": 12,
         "against": 8,
         "analysts": 3,
-        "recent": 1,
+        "recent": 0,
         "risks": 8
       },
       "sourceLedger": {
-        "evidence": 19,
-        "reports": 19,
+        "evidence": 20,
+        "reports": 20,
         "analysts": 3,
         "latestDate": "2026-06-16",
         "topReports": [
@@ -1157,7 +1590,7 @@
           }
         ]
       },
-      "lastUpdated": "2026-06-18",
+      "lastUpdated": "2026-06-17",
       "evidenceFor": [
         {
           "id": "ev_c09fd7bc1c",
@@ -1313,6 +1746,209 @@
           "label": "consumer downgrade health silver economy 78a2530"
         }
       ]
+    },
+    {
+      "id": "thesis_food_agri_inflation_cycle",
+      "title": "猪周期、粮食与农产品价格决定中国低通胀修复的弹性",
+      "titleEn": "Hog cycle, grain, and agricultural prices define the elasticity of China's low-inflation repair",
+      "coreView": "当前共有 40 条证据、3 位分析师和 1 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
+      "direction": "conflicting",
+      "conviction": 55,
+      "status": "审慎验证",
+      "priority": 61,
+      "evidenceQuality": 42,
+      "riskPressure": 52,
+      "supportBalance": -3,
+      "score": {
+        "for": 5,
+        "against": 8,
+        "analysts": 3,
+        "recent": 1,
+        "risks": 1
+      },
+      "sourceLedger": {
+        "evidence": 13,
+        "reports": 13,
+        "analysts": 3,
+        "latestDate": "2026-06-14",
+        "topReports": [
+          {
+            "id": "ev_db85e3f381",
+            "title": "化肥出口限制政策下的国内储备效能与粮食安全保障评估",
+            "summary": "化肥出口限制政策下的国内储备效能与粮食安全保障评估 报告日期： 2026年6月14日 [S1] 作者： agri-analyst （农业行业分析师） （研究记录）",
+            "href": "/investor/reports/archive-c16503ddf9d3/",
+            "analyst": "未识别",
+            "date": "2026-06-14",
+            "chain": "宏观通胀传导",
+            "supportType": "supports",
+            "importance": 46.4,
+            "confidence": 0.837
+          },
+          {
+            "id": "ev_3023af0a5d",
+            "title": "主要粮食品种价格走势监控与分析报告",
+            "summary": "分析日期： 2026-06-11 分析师： 农业行业分析师 ( agri-analyst ) 报告周期： 2026年6月中旬（以2026-06-11为基准日） 研究领域： 种植业、饲料原料、粮食安全...",
+            "href": "/investor/reports/archive-a17bd8d3957b/",
+            "analyst": "农业行业分析师",
+            "date": "2026-06-11",
+            "chain": "宏观通胀传导",
+            "supportType": "risk",
+            "importance": 46.4,
+            "confidence": 0.837
+          },
+          {
+            "id": "ev_8cc231f977",
+            "title": "白糖及输入性农产品通胀：对食品饮料利润率的传导，2026-06-10",
+            "summary": "报告日期：2026-06-10 [S0] 分析师：中国宏观分析师 ( china-macro ) 本期立场：综合研判 (Synthesize) 本期问题：在国际原糖价格震荡与国内进口白糖政策严控的...",
+            "href": "/investor/reports/archive-afa9944b961e/",
+            "analyst": "未识别",
+            "date": "2026-06-10",
+            "chain": "宏观通胀传导",
+            "supportType": "supports",
+            "importance": 46.8,
+            "confidence": 0.84
+          },
+          {
+            "id": "ev_ac0689392c",
+            "title": "主要粮食品种价格走势监控与分析报告",
+            "summary": "分析日期： 2026-06-05 分析师： 农业行业分析师 ( agri-analyst ) 报告周期： 2026年6月上旬（以2026-06-05为基准日） 研究领域： 种植业、饲料原料、粮食安全...",
+            "href": "/investor/reports/archive-92b9e8aaed10/",
+            "analyst": "农业行业分析师",
+            "date": "2026-06-05",
+            "chain": "宏观通胀传导",
+            "supportType": "risk",
+            "importance": 42.6,
+            "confidence": 0.805
+          },
+          {
+            "id": "ev_fb95d544f5",
+            "title": "2026年5月华北芽麦替代效应对三季度养殖、饲料及CPI的定量传导评估报告",
+            "summary": "2026年5月华北芽麦替代效应对三季度养殖、饲料及CPI的定量传导评估报告",
+            "href": "/investor/reports/archive-c2db18f25cb0/",
+            "analyst": "中国宏观分析师",
+            "date": "2026-06-05",
+            "chain": "宏观通胀传导",
+            "supportType": "supports",
+            "importance": 42,
+            "confidence": 0.8
+          }
+        ]
+      },
+      "lastUpdated": "2026-06-18",
+      "evidenceFor": [
+        {
+          "id": "ev_fb95d544f5",
+          "title": "2026年5月华北芽麦替代效应对三季度养殖、饲料及CPI的定量传导评估报告",
+          "summary": "2026年5月华北芽麦替代效应对三季度养殖、饲料及CPI的定量传导评估报告",
+          "href": "/investor/reports/archive-c2db18f25cb0/",
+          "analyst": "中国宏观分析师",
+          "date": "2026-06-05",
+          "chain": "宏观通胀传导",
+          "supportType": "supports",
+          "importance": 42,
+          "confidence": 0.8
+        },
+        {
+          "id": "ev_e7f347bbcf",
+          "title": "农业与粮食安全视角的战略否决：被低估的核心PCE传导与防御盲区 (2026-05-22)",
+          "summary": "农业与粮食安全视角的战略否决：被低估的核心PCE传导与防御盲区 (2026-05-22)",
+          "href": "/investor/reports/archive-a4c8d4ac1a79/",
+          "analyst": "未识别",
+          "date": "2026-05-22",
+          "chain": "宏观通胀传导",
+          "supportType": "supports",
+          "importance": 47.8,
+          "confidence": 0.848
+        },
+        {
+          "id": "ev_8cc231f977",
+          "title": "白糖及输入性农产品通胀：对食品饮料利润率的传导，2026-06-10",
+          "summary": "报告日期：2026-06-10 [S0] 分析师：中国宏观分析师 ( china-macro ) 本期立场：综合研判 (Synthesize) 本期问题：在国际原糖价格震荡与国内进口白糖政策严控的...",
+          "href": "/investor/reports/archive-afa9944b961e/",
+          "analyst": "未识别",
+          "date": "2026-06-10",
+          "chain": "宏观通胀传导",
+          "supportType": "supports",
+          "importance": 46.8,
+          "confidence": 0.84
+        },
+        {
+          "id": "ev_db85e3f381",
+          "title": "化肥出口限制政策下的国内储备效能与粮食安全保障评估",
+          "summary": "化肥出口限制政策下的国内储备效能与粮食安全保障评估 报告日期： 2026年6月14日 [S1] 作者： agri-analyst （农业行业分析师） （研究记录）",
+          "href": "/investor/reports/archive-c16503ddf9d3/",
+          "analyst": "未识别",
+          "date": "2026-06-14",
+          "chain": "宏观通胀传导",
+          "supportType": "supports",
+          "importance": 46.4,
+          "confidence": 0.837
+        }
+      ],
+      "evidenceAgainst": [
+        {
+          "id": "ev_a59514a0d6",
+          "title": "主要粮食品种价格走势监测",
+          "summary": "报告日期：2026-05-28（数据截至 2026-05-27 收盘） 分析师：Agriculture Analyst（农业行业分析师） 覆盖品种：玉米 / 大豆 / 小麦 / 稻米（CBOT、DCE、黑海 FO...",
+          "href": "/investor/reports/archive-c56e5e44c08b/",
+          "analyst": "农业行业分析师",
+          "date": "2026-05-27",
+          "chain": "宏观通胀传导",
+          "supportType": "risk",
+          "importance": 44,
+          "confidence": 0.817
+        },
+        {
+          "id": "ev_5ec28b4d8f",
+          "title": "主要粮食品种价格走势监控",
+          "summary": "日期：2026-06-04（基于公开行情与官方周度监测口径整理的分析快报） 作者：农业行业分析师（agri-analyst） 覆盖品种：小麦、玉米、稻谷/大米、大豆 说明：本报...",
+          "href": "/investor/reports/archive-2621c7f4a2b7/",
+          "analyst": "农业行业分析师",
+          "date": "2026-06-04",
+          "chain": "宏观通胀传导",
+          "supportType": "risk",
+          "importance": 36.8,
+          "confidence": 0.757
+        },
+        {
+          "id": "ev_481a49b333",
+          "title": "2026年Q2–Q3 中国CPI食品项趋势及宏观中枢研判",
+          "summary": "报告编号： MACRO-2026-0520 分析师： 中国宏观分析师 日期： 2026年5月20日 关联任务： 农业行业分析师 · 粮食价格监控 (f5bfb4a9)",
+          "href": "/investor/reports/archive-f80257ee4744/",
+          "analyst": "中国宏观分析师",
+          "date": "2026-05-20",
+          "chain": "宏观通胀传导",
+          "supportType": "risk",
+          "importance": 47.8,
+          "confidence": 0.848
+        }
+      ],
+      "risks": [
+        {
+          "id": "risk_e1a0ebdb9d",
+          "title": "电网设备供应链瓶颈：变压器及核心部件交期压力测试",
+          "summary": "工作日期：2026-06-14。本报告片对上一张能源侧结论做压力测试：增量电力可以建设，但 AI 产能能否通电，取决于变压器、开关柜、断路器、电缆和调试人力能否按同...",
+          "href": "/investor/reports/archive-6921ecb4fc86/",
+          "chain": "工业供给瓶颈",
+          "impact": 5,
+          "probability": 5,
+          "trend": "rising"
+        }
+      ],
+      "falsifiers": [
+        "能繁母猪去化不足",
+        "食品价格继续下行",
+        "粮价库存压力加大",
+        "消费需求恢复慢于供给"
+      ],
+      "monitors": [
+        "猪价",
+        "能繁母猪",
+        "饲料成本",
+        "粮食库存",
+        "食品 CPI"
+      ],
+      "linkedReports": []
     },
     {
       "id": "thesis_optical_copper_interconnect_rent_shift",
@@ -1548,10 +2184,462 @@
       "linkedReports": []
     },
     {
-      "id": "thesis_semiconductor_ai_capex_cycle",
-      "title": "GPU、HBM 与先进封装决定 AI 资本开支供给节奏",
-      "titleEn": "GPUs, HBM, and advanced packaging shape the AI capex supply cycle",
-      "coreView": "当前共有 40 条证据、2 位分析师和 8 条风险信号指向该判断；主导链条为 半导体与存储。该主题应作为可跟踪投资假设，而不是孤立结论。",
+      "id": "thesis_oil_geopolitical_disinflation_floor",
+      "title": "油价地缘底线决定再通胀与降息交易的安全边际",
+      "titleEn": "The geopolitical oil floor defines the margin of safety for disinflation and rate-cut trades",
+      "coreView": "当前共有 40 条证据、2 位分析师和 2 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
+      "direction": "conflicting",
+      "conviction": 56,
+      "status": "审慎验证",
+      "priority": 60.6,
+      "evidenceQuality": 41,
+      "riskPressure": 57.8,
+      "supportBalance": -1,
+      "score": {
+        "for": 7,
+        "against": 8,
+        "analysts": 2,
+        "recent": 1,
+        "risks": 2
+      },
+      "sourceLedger": {
+        "evidence": 15,
+        "reports": 15,
+        "analysts": 2,
+        "latestDate": "2026-06-18",
+        "topReports": [
+          {
+            "id": "ev_76d6cbfbd7",
+            "title": "WTI/Brent原油价格分歧澄清及中枢回落对全球二次通胀与央行降息概率的修正评估",
+            "summary": "WTI/Brent原油价格分歧澄清及中枢回落对全球二次通胀与央行降息概率的修正评估",
+            "href": "/investor/reports/archive-e83835e06ce7/",
+            "analyst": "全球宏观分析师",
+            "date": "2026-06-18",
+            "chain": "宏观通胀传导",
+            "supportType": "supports",
+            "importance": 58.9,
+            "confidence": 0.9
+          },
+          {
+            "id": "ev_9ac75af5ec",
+            "title": "A股“实物红利/电网出海”超配权重再校准与印度“油价-汇率-信用”左尾对冲报告",
+            "summary": "A股“实物红利/电网出海”超配权重再校准与印度“油价-汇率-信用”左尾对冲报告",
+            "href": "/investor/reports/archive-8f5417c0df82/",
+            "analyst": "未识别",
+            "date": "2026-06-14",
+            "chain": "宏观通胀传导",
+            "supportType": "supports",
+            "importance": 50.2,
+            "confidence": 0.868
+          },
+          {
+            "id": "ev_447457ba76",
+            "title": "能源供应风险与油价通胀传导 - 2026-06-14",
+            "summary": "分析师: energy-analyst（能源行业分析师） · 研究记录 · 立场: stress-test 工作日期: 2026-06-14（Asia/Singapore） · 主题: 伊朗冲突下的能源供应风险与原...",
+            "href": "/investor/reports/archive-43b15dd66515/",
+            "analyst": "未识别",
+            "date": "2026-06-14",
+            "chain": "宏观通胀传导",
+            "supportType": "risk",
+            "importance": 49,
+            "confidence": 0.858
+          },
+          {
+            "id": "ev_aacd4c3ef5",
+            "title": "今日海外市场过夜情况速览",
+            "summary": "基准日期：2026-06-12（Asia/Singapore，来自 系统日期锚 ）。隔夜美股收盘对应美国时间 2026-06-11。指数、外汇和利率优先采用数据源校验 ；油价 endpoi...",
+            "href": "/investor/reports/archive-efb99df35708/",
+            "analyst": "全球宏观分析师",
+            "date": "2026-06-12",
+            "chain": "宏观通胀传导",
+            "supportType": "supports",
+            "importance": 50.2,
+            "confidence": 0.868
+          },
+          {
+            "id": "ev_ec3f7d1279",
+            "title": "霍尔木兹海峡封锁危机下原油价格中枢及亚洲化工产业链成本冲击压力测试报告",
+            "summary": "报告日期：2026年06月11日 - 来函协同：全球宏观分析师 · 晨会海外市场速览 (数据中心化) ( analyst:global-macro:overnight macro api ) - 关联 Run：ab293f9c...",
+            "href": "/investor/reports/archive-3b4a7b82ef4e/",
+            "analyst": "能源行业分析师",
+            "date": "2026-06-10",
+            "chain": "宏观通胀传导",
+            "supportType": "risk",
+            "importance": 50.8,
+            "confidence": 0.873
+          }
+        ]
+      },
+      "lastUpdated": "2026-06-18",
+      "evidenceFor": [
+        {
+          "id": "ev_802ee4cfe8",
+          "title": "研究报告：130美元油价下的美股科技估值压缩与港股高股息轮动",
+          "summary": "1. 宏观背景：“滞胀锁死”体制 正如研究记录 03 所确立的，原油价格受霍尔木兹海峡关闭及阿联酋退出 OPEC 驱动飙升至 130 美元/桶，这使全球经济陷入滞胀。美联...",
+          "href": "/investor/reports/archive-f38fe6867a72/",
+          "analyst": "未识别",
+          "date": "",
+          "chain": "宏观通胀传导",
+          "supportType": "supports",
+          "importance": 46.2,
+          "confidence": 0.835
+        },
+        {
+          "id": "ev_56f5bcb449",
+          "title": "原油市场每日监测报告 (2026-05-19)",
+          "summary": "核心摘要 今日原油市场呈现分化走势。布伦特原油（Brent）小幅回调至 109.10 美元/桶，而 WTI 原油受美国库存持续下降预期支撑，上涨 1.40% 至 102.32 美元/桶...",
+          "href": "/investor/reports/archive-d43a330fd4c2/",
+          "analyst": "能源行业分析师",
+          "date": "2026-05-19",
+          "chain": "AI 基础设施",
+          "supportType": "supports",
+          "importance": 42,
+          "confidence": 0.8
+        },
+        {
+          "id": "ev_968970cd70",
+          "title": "评估油价在$92-$94/桶区间内对下游石化利润及产能利用率的影响",
+          "summary": "1. 执行摘要 / Executive Summary 在美伊达成重新开放霍尔木兹海峡备忘录草案地缘政治缓和的背景下，前两张研究记录分别探讨了全球宏观资产配置及原油价格中枢的...",
+          "href": "/investor/reports/archive-866a419d5d99/",
+          "analyst": "未识别",
+          "date": "2026-05-25",
+          "chain": "宏观通胀传导",
+          "supportType": "supports",
+          "importance": 39.6,
+          "confidence": 0.78
+        },
+        {
+          "id": "ev_0556945bf0",
+          "title": "能源市场监测报告：原油价格走势与OPEC+动态",
+          "summary": "能源市场监测报告：原油价格走势与OPEC+动态 报告日期： 2026年5月19日 分析师： 能源分析师 (Energy Analyst)",
+          "href": "/investor/reports/archive-803fec1b8c0f/",
+          "analyst": "能源行业分析师",
+          "date": "2026-05-19",
+          "chain": "宏观通胀传导",
+          "supportType": "supports",
+          "importance": 39.2,
+          "confidence": 0.777
+        }
+      ],
+      "evidenceAgainst": [
+        {
+          "id": "ev_76d6cbfbd7",
+          "title": "WTI/Brent原油价格分歧澄清及中枢回落对全球二次通胀与央行降息概率的修正评估",
+          "summary": "WTI/Brent原油价格分歧澄清及中枢回落对全球二次通胀与央行降息概率的修正评估",
+          "href": "/investor/reports/archive-e83835e06ce7/",
+          "analyst": "全球宏观分析师",
+          "date": "2026-06-18",
+          "chain": "宏观通胀传导",
+          "supportType": "supports",
+          "importance": 58.9,
+          "confidence": 0.9
+        },
+        {
+          "id": "ev_a49a1d3e19",
+          "title": "原油市场每日监测报告 (2026-05-22)",
+          "summary": "核心摘要 今日国际油价呈现反弹态势，收复了前一交易日的大部分失地。截至今日 API 数据监测，布伦特 (Brent) 原油收报 104.78 USD/bbl，较上一交易日结算价上涨...",
+          "href": "/investor/reports/archive-f0cf10473c2f/",
+          "analyst": "能源行业分析师",
+          "date": "2026-05-22",
+          "chain": "宏观通胀传导",
+          "supportType": "risk",
+          "importance": 44,
+          "confidence": 0.817
+        },
+        {
+          "id": "ev_23cb0b412e",
+          "title": "研究报告：OPEC+备用产能策略与Brent风险溢价分解",
+          "summary": "1. 执行摘要 截至2026年5月，Brent原油市场已不再受传统供需周期的单纯驱动，而是进入了“地缘风险底部”模式。随着霍尔木兹海峡的摩擦从尾部风险转变为结构性成...",
+          "href": "/investor/reports/archive-2518a80d6161/",
+          "analyst": "未识别",
+          "date": "",
+          "chain": "宏观通胀传导",
+          "supportType": "risk",
+          "importance": 39.6,
+          "confidence": 0.78
+        }
+      ],
+      "risks": [
+        {
+          "id": "risk_e1a0ebdb9d",
+          "title": "电网设备供应链瓶颈：变压器及核心部件交期压力测试",
+          "summary": "工作日期：2026-06-14。本报告片对上一张能源侧结论做压力测试：增量电力可以建设，但 AI 产能能否通电，取决于变压器、开关柜、断路器、电缆和调试人力能否按同...",
+          "href": "/investor/reports/archive-6921ecb4fc86/",
+          "chain": "工业供给瓶颈",
+          "impact": 5,
+          "probability": 5,
+          "trend": "rising"
+        },
+        {
+          "id": "risk_ba7f13bb42",
+          "title": "全球宏观研究：关税壁垒与电网现代化税",
+          "summary": "全球宏观研究：关税壁垒与电网现代化税 非晶变压器短缺背景下对美国公用事业资本开支（Rate Base）及数据中心PPA电价与延期风险的影响 工作日期： 2026-06-12 分...",
+          "href": "/investor/reports/archive-238563e1b622/",
+          "chain": "电力与电网",
+          "impact": 5,
+          "probability": 3,
+          "trend": "rising"
+        }
+      ],
+      "falsifiers": [
+        "霍尔木兹风险实质缓和",
+        "OPEC 增产压低远期曲线",
+        "美国页岩供给弹性恢复",
+        "油价跌破页岩成本区间"
+      ],
+      "monitors": [
+        "Brent/WTI",
+        "霍尔木兹新闻流",
+        "OPEC 会议",
+        "美国钻机数",
+        "能源股信用利差"
+      ],
+      "linkedReports": [
+        {
+          "id": "ai-productivity-disinflation-timing-af09345c",
+          "href": "/investor/deep-research/ai-productivity-disinflation-timing-af09345c/",
+          "label": "ai productivity disinflation timing af09345c"
+        }
+      ]
+    },
+    {
+      "id": "thesis_datacenter_reit_cooling_water",
+      "title": "数据中心地产、液冷与水资源正在决定 AI 容量的区域迁移",
+      "titleEn": "Data-center real estate, liquid cooling, and water resources are deciding regional migration of AI capacity",
+      "coreView": "当前共有 40 条证据、2 位分析师和 8 条风险信号指向该判断；主导链条为 AI 基础设施。该主题应作为可跟踪投资假设，而不是孤立结论。",
+      "direction": "conflicting",
+      "conviction": 55,
+      "status": "审慎验证",
+      "priority": 59.9,
+      "evidenceQuality": 59,
+      "riskPressure": 100,
+      "supportBalance": 1,
+      "score": {
+        "for": 9,
+        "against": 8,
+        "analysts": 2,
+        "recent": 2,
+        "risks": 8
+      },
+      "sourceLedger": {
+        "evidence": 17,
+        "reports": 17,
+        "analysts": 1,
+        "latestDate": "2026-06-18",
+        "topReports": [
+          {
+            "id": "ev_b1de282e42",
+            "title": "变压器与电网瓶颈压力下，超大规模云厂商（Hyperscalers）的资本开支重心与数据中心部署策略演变",
+            "summary": "变压器与电网瓶颈压力下，超大规模云厂商（Hyperscalers）的资本开支重心与数据中心部署策略演变",
+            "href": "/investor/reports/archive-930c5266da9d/",
+            "analyst": "未识别",
+            "date": "2026-06-18",
+            "chain": "AI 基础设施",
+            "supportType": "risk",
+            "importance": 71.7,
+            "confidence": 0.9
+          },
+          {
+            "id": "ev_0798f5bf2a",
+            "title": "量化AI算力集群对数据中心配电、液冷散热与电网侧增容的连锁需求",
+            "summary": "报告日期： 2026-06-18（Asia/Singapore） 分析师： AI基础设施分析师（ ai-infrastructure-analyst ） 研究线程标识：已归档研究...",
+            "href": "/investor/reports/archive-88f163e39b42/",
+            "analyst": "未识别",
+            "date": "2026-06-18",
+            "chain": "AI 基础设施",
+            "supportType": "supports",
+            "importance": 63.1,
+            "confidence": 0.9
+          },
+          {
+            "id": "ev_336b171d5f",
+            "title": "液冷压力测试：电力与水务基础设施极限",
+            "summary": "研究记录 — 公用事业分析师 - 立场: 压力测试 (stress-test) - 工作日期 (Asia/Singapore): 2026-06-17 - 当前问题: 随着液冷技术提升 GPU 密度，数据中心对冷...",
+            "href": "/investor/reports/archive-4630e600c36d/",
+            "analyst": "未识别",
+            "date": "2026-06-17",
+            "chain": "AI 基础设施",
+            "supportType": "risk",
+            "importance": 62.8,
+            "confidence": 0.9
+          },
+          {
+            "id": "ev_2081d12cda",
+            "title": "电网设备交付周期：AI数据中心部署节奏的刚性约束",
+            "summary": "研究记录 · 分析师： AI基础设施分析师（ ai-infrastructure-analyst ） 工作日期： 2026-06-15（亚洲/新加坡） · 立场： stress-test（压力测试） 主题： 电...",
+            "href": "/investor/reports/archive-dbc56f5062cb/",
+            "analyst": "未识别",
+            "date": "2026-06-15",
+            "chain": "工业供给瓶颈",
+            "supportType": "risk",
+            "importance": 66.8,
+            "confidence": 0.9
+          },
+          {
+            "id": "ev_0907c86ca6",
+            "title": "电力设备供应链与电网并网压力研究：变压器产能扩张与2027年后数据中心并网瓶颈分析",
+            "summary": "电力设备供应链与电网并网压力研究：变压器产能扩张与2027年后数据中心并网瓶颈分析",
+            "href": "/investor/reports/archive-ac04d2c9cf48/",
+            "analyst": "未识别",
+            "date": "2026-06-14",
+            "chain": "电力与电网",
+            "supportType": "risk",
+            "importance": 71.8,
+            "confidence": 0.9
+          }
+        ]
+      },
+      "lastUpdated": "2026-06-18",
+      "evidenceFor": [
+        {
+          "id": "ev_847c86825c",
+          "title": "TMT行业研究：AI基础设施成为工业“硬资产”的新定价锚 (2026)",
+          "summary": "执行摘要 截至2026年第二季度，全球供应链已达到结构性拐点：以AI服务器、数据中心供电系统和专用冷却技术为核心的AI基础设施，已正式取代汽车和传统消费电子...",
+          "href": "/investor/reports/archive-a410558a639d/",
+          "analyst": "未识别",
+          "date": "",
+          "chain": "工业供给瓶颈",
+          "supportType": "supports",
+          "importance": 54.8,
+          "confidence": 0.9
+        },
+        {
+          "id": "ev_f6b3d2a28c",
+          "title": "电气化工业周期的核心资产：电网重装备、变压器供应链与数据中心电源链的产能与订单兑现分析 (2026...",
+          "summary": "电气化工业周期的核心资产：电网重装备、变压器供应链与数据中心电源链的产能与订单兑现分析 (2026–2028)",
+          "href": "/investor/reports/archive-a14d11c9335b/",
+          "analyst": "未识别",
+          "date": "2026-05-24",
+          "chain": "工业供给瓶颈",
+          "supportType": "supports",
+          "importance": 65,
+          "confidence": 0.9
+        },
+        {
+          "id": "ev_0798f5bf2a",
+          "title": "量化AI算力集群对数据中心配电、液冷散热与电网侧增容的连锁需求",
+          "summary": "报告日期： 2026-06-18（Asia/Singapore） 分析师： AI基础设施分析师（ ai-infrastructure-analyst ） 研究线程标识：已归档研究...",
+          "href": "/investor/reports/archive-88f163e39b42/",
+          "analyst": "未识别",
+          "date": "2026-06-18",
+          "chain": "AI 基础设施",
+          "supportType": "supports",
+          "importance": 63.1,
+          "confidence": 0.9
+        },
+        {
+          "id": "ev_61d5e1becd",
+          "title": "prior research notes— AI算力集群建设的“交付墙”：变压器缺口如何影响超大规模数据中心的部署...",
+          "summary": "prior research notes— AI算力集群建设的“交付墙”：变压器缺口如何影响超大规模数据中心的部署规划与Capex路径？",
+          "href": "/investor/reports/archive-f7529eb8be98/",
+          "analyst": "未识别",
+          "date": "2026-06-14",
+          "chain": "AI 基础设施",
+          "supportType": "supports",
+          "importance": 61.2,
+          "confidence": 0.9
+        }
+      ],
+      "evidenceAgainst": [
+        {
+          "id": "ev_336b171d5f",
+          "title": "液冷压力测试：电力与水务基础设施极限",
+          "summary": "研究记录 — 公用事业分析师 - 立场: 压力测试 (stress-test) - 工作日期 (Asia/Singapore): 2026-06-17 - 当前问题: 随着液冷技术提升 GPU 密度，数据中心对冷...",
+          "href": "/investor/reports/archive-4630e600c36d/",
+          "analyst": "未识别",
+          "date": "2026-06-17",
+          "chain": "AI 基础设施",
+          "supportType": "risk",
+          "importance": 62.8,
+          "confidence": 0.9
+        },
+        {
+          "id": "ev_cac5165fc2",
+          "title": "电力、水资源和环保许可是AI数据中心落地的硬性物理天花板",
+          "summary": "电力、水资源和环保许可是AI数据中心落地的硬性物理天花板 日期： 2026-05-13 分析师： utilities-analyst（公用事业分析师） 立场： 压力测试 (stress-test) 研...",
+          "href": "/investor/reports/archive-45fbef5a2392/",
+          "analyst": "未识别",
+          "date": "2026-05-13",
+          "chain": "AI 基础设施",
+          "supportType": "risk",
+          "importance": 54.2,
+          "confidence": 0.9
+        },
+        {
+          "id": "ev_38b006b4b8",
+          "title": "商业地产与数据中心REITs的“带电土地”（Powered Land）估值溢价重估",
+          "summary": "商业地产与数据中心REITs的“带电土地”（Powered Land）估值溢价重估",
+          "href": "/investor/reports/archive-82b1ab077348/",
+          "analyst": "未识别",
+          "date": "2026-06-08",
+          "chain": "AI 基础设施",
+          "supportType": "risk",
+          "importance": 46.4,
+          "confidence": 0.837
+        }
+      ],
+      "risks": [
+        {
+          "id": "risk_24e57c0310",
+          "title": "跨越电力约束：AI基础设施瓶颈向全球权益市场的配置与估值映射",
+          "summary": "截至 2026-06-14，经过九个阶段的结构性压力测试，我们确认了一个关键的相位转换：限制 AI 规模化扩张的边际约束已从 GPU 与芯片产能，实质性地迁移至电力与电网...",
+          "href": "/investor/reports/archive-6984a39e382c/",
+          "chain": "AI 基础设施",
+          "impact": 5,
+          "probability": 5,
+          "trend": "rising"
+        },
+        {
+          "id": "risk_e1a0ebdb9d",
+          "title": "电网设备供应链瓶颈：变压器及核心部件交期压力测试",
+          "summary": "工作日期：2026-06-14。本报告片对上一张能源侧结论做压力测试：增量电力可以建设，但 AI 产能能否通电，取决于变压器、开关柜、断路器、电缆和调试人力能否按同...",
+          "href": "/investor/reports/archive-6921ecb4fc86/",
+          "chain": "工业供给瓶颈",
+          "impact": 5,
+          "probability": 5,
+          "trend": "rising"
+        },
+        {
+          "id": "risk_61ebe06164",
+          "title": "电力配电设备产能扩张与供应链瓶颈：AI算力建设的硬约束",
+          "summary": "分析师：工业制造分析师（industrials-analyst） - 立场：support（强化 prior research notes的\"电力设备瓶颈是AI算力部署真正天花板\"判断） - 工作日期：2026-...",
+          "href": "/investor/reports/archive-43f32e01de75/",
+          "chain": "工业供给瓶颈",
+          "impact": 5,
+          "probability": 5,
+          "trend": "rising"
+        },
+        {
+          "id": "risk_d54879c18e",
+          "title": "取向硅钢产能扩张与地缘供应风险 - 2026-06-15",
+          "summary": "截至研究所工作日2026-06-15，本报告片对prior research notes“变压器短缺是硬性材料约束”的判断做 压力测试。我的结论是：GOES扩产确实存在，尤其体现在中国...",
+          "href": "/investor/reports/archive-105c4c6a9317/",
+          "chain": "工业供给瓶颈",
+          "impact": 5,
+          "probability": 5,
+          "trend": "rising"
+        }
+      ],
+      "falsifiers": [
+        "数据中心空置率上升",
+        "液冷渗透慢于预期",
+        "水电土地约束缓和",
+        "租金与签约价格回落"
+      ],
+      "monitors": [
+        "数据中心空置率",
+        "液冷订单",
+        "水资源许可",
+        "租金",
+        "并网进度"
+      ],
+      "linkedReports": []
+    },
+    {
+      "id": "thesis_ashare_hardtech_star50_rotation",
+      "title": "A 股硬科技与科创50的复苏需要订单、融资盘和指数结构共振",
+      "titleEn": "A-share hard tech and STAR50 recovery needs orders, margin positioning, and index structure to align",
+      "coreView": "当前共有 40 条证据、2 位分析师和 8 条风险信号指向该判断；主导链条为 AI 基础设施。该主题应作为可跟踪投资假设，而不是孤立结论。",
       "direction": "strengthening",
       "conviction": 52,
       "status": "审慎验证",
@@ -1569,21 +2657,9 @@
       "sourceLedger": {
         "evidence": 15,
         "reports": 15,
-        "analysts": 0,
+        "analysts": 1,
         "latestDate": "2026-06-18",
         "topReports": [
-          {
-            "id": "ev_9c1dd71590",
-            "title": "终审质量审计：AI至电网基础设施白皮书 — 2026-06-18",
-            "summary": "工作日期：2026-06-18（Asia/Singapore）。本终审 QA 对已完成的 9 张研究记录进行综合审计，覆盖 AIDD 算力需求、GPU/HBM 与机柜功率密度、电网设备稀缺、GOES...",
-            "href": "/investor/reports/archive-9906cc6fde45/",
-            "analyst": "未识别",
-            "date": "2026-06-18",
-            "chain": "AI 基础设施",
-            "supportType": "supports",
-            "importance": 86.8,
-            "confidence": 0.9
-          },
           {
             "id": "ev_56793c8fa5",
             "title": "prior research notes· 半导体分析师研究报告",
@@ -1597,39 +2673,51 @@
             "confidence": 0.9
           },
           {
-            "id": "ev_161f134c2c",
-            "title": "AIDD 需求驱动下的先进封装与 HBM 硬件规格演进",
-            "summary": "AIDD 需求驱动下的先进封装与 HBM 硬件规格演进 - 分析师: 半导体分析师 (semiconductors-analyst) - 立场: support（支持 prior research notes的硬件外延思路...",
-            "href": "/investor/reports/archive-055460301258/",
+            "id": "ev_34777a89ae",
+            "title": "核心结论 / Core Thesis",
+            "summary": "核心结论 / Core Thesis 在全球AI半导体估值锚由“NVDA-TSMC双寡头溢价”向“增长+多元化第二供应源”切换的背景下，全球配置需从纯GPU倍数扩张交易转向ASIC、先...",
+            "href": "/investor/reports/archive-d493aaecd9c3/",
             "analyst": "未识别",
-            "date": "2026-06-18",
+            "date": "2026-06-09",
             "chain": "半导体与存储",
-            "supportType": "risk",
-            "importance": 67.1,
-            "confidence": 0.9
-          },
-          {
-            "id": "ev_706230126e",
-            "title": "大基金三期与\"东数西算\"框架下国产HBM/先进封装产能爬坡的资本配置路径及对战略算力供应链安全的宏...",
-            "summary": "大基金三期与\"东数西算\"框架下国产HBM/先进封装产能爬坡的资本配置路径及对战略算力供应链安全的宏观催化",
-            "href": "/investor/reports/archive-0d0c2df986c3/",
-            "analyst": "未识别",
-            "date": "2026-06-17",
-            "chain": "AI 基础设施",
             "supportType": "supports",
-            "importance": 58.8,
+            "importance": 62.6,
             "confidence": 0.9
           },
           {
-            "id": "ev_0a5bbef5fe",
-            "title": "2026年6月16日半导体压力测试：芯片能效能否补上AI电力缺口？",
-            "summary": "截至研究所工作日2026年6月16日，我的压力测试结论是 不能：先进封装与定制ASIC能够显著降低每token能耗，但不足以单独对冲上一张能源研究提出的电网延迟问题...",
-            "href": "/investor/reports/archive-dad89f76226d/",
+            "id": "ev_1ba1a2d375",
+            "title": "前序研究 — AI 硬件供应链的宏观经济影响",
+            "summary": "工作日期(亚洲/新加坡): 2026-06-08 - 分析师: 首席经济学家 - 立场: support(在前序研究的硅光 / CPO 供应链命题之上,向宏观层级延伸) - 议题: 全球半导体周期...",
+            "href": "/investor/reports/archive-67f8302de610/",
             "analyst": "未识别",
-            "date": "2026-06-16",
+            "date": "2026-06-08",
+            "chain": "半导体与存储",
+            "supportType": "supports",
+            "importance": 51.2,
+            "confidence": 0.877
+          },
+          {
+            "id": "ev_be5e73fc2b",
+            "title": "中游材料产能缺口对先进封装与AI算力硬件供应链的传导风险",
+            "summary": "分析师：TMT行业分析师 - 立场：stress-test（压力测试） - 工作日期：2026-06-05（亚洲/新加坡） - 线程：8/8 — 收尾研究记录，闭合\"镓→重稀土→石墨\"级联线...",
+            "href": "/investor/reports/archive-2c749d1148f9/",
+            "analyst": "未识别",
+            "date": "2026-06-05",
+            "chain": "工业供给瓶颈",
+            "supportType": "risk",
+            "importance": 62,
+            "confidence": 0.9
+          },
+          {
+            "id": "ev_6eaceadf71",
+            "title": "先进封装与半导体设备/材料环节在HBM需求波动下的基本面确定性验证 (2026-06-03)",
+            "summary": "先进封装与半导体设备/材料环节在HBM需求波动下的基本面确定性验证 (2026-06-03)",
+            "href": "/investor/reports/archive-850ab9fbc43b/",
+            "analyst": "未识别",
+            "date": "2026-06-03",
             "chain": "半导体与存储",
             "supportType": "risk",
-            "importance": 65.2,
+            "importance": 57.4,
             "confidence": 0.9
           }
         ]
@@ -1637,15 +2725,15 @@
       "lastUpdated": "2026-06-18",
       "evidenceFor": [
         {
-          "id": "ev_34777a89ae",
-          "title": "核心结论 / Core Thesis",
-          "summary": "核心结论 / Core Thesis 在全球AI半导体估值锚由“NVDA-TSMC双寡头溢价”向“增长+多元化第二供应源”切换的背景下，全球配置需从纯GPU倍数扩张交易转向ASIC、先...",
-          "href": "/investor/reports/archive-d493aaecd9c3/",
+          "id": "ev_56793c8fa5",
+          "title": "prior research notes· 半导体分析师研究报告",
+          "summary": "工作日期：2026-06-18（Asia/Singapore） - 板块：半导体（设计 / 制造 / 设备 / 材料 / 先进封装） - 立场： Support（支持） — 在AI算力强需求与出口管制持续...",
+          "href": "/investor/reports/archive-8c9df85b29e8/",
           "analyst": "未识别",
-          "date": "2026-06-09",
-          "chain": "半导体与存储",
+          "date": "2026-06-18",
+          "chain": "AI 基础设施",
           "supportType": "supports",
-          "importance": 62.6,
+          "importance": 68.6,
           "confidence": 0.9
         },
         {
@@ -1661,65 +2749,65 @@
           "confidence": 0.9
         },
         {
-          "id": "ev_abed801277",
-          "title": "芯片与封装能否交付三层算力织物所需的\"电力波动友好\"架构？",
-          "summary": "研究记录 · 半导体分析师 · 工作日期：2026-06-12（亚洲/新加坡） 根主题： AI基础设施从\"算力中心\"转向\"能源中心\" 立场： synthesize（综合）——把研究记录0...",
-          "href": "/investor/reports/archive-598dc7b39be8/",
+          "id": "ev_1ba1a2d375",
+          "title": "前序研究 — AI 硬件供应链的宏观经济影响",
+          "summary": "工作日期(亚洲/新加坡): 2026-06-08 - 分析师: 首席经济学家 - 立场: support(在前序研究的硅光 / CPO 供应链命题之上,向宏观层级延伸) - 议题: 全球半导体周期...",
+          "href": "/investor/reports/archive-67f8302de610/",
           "analyst": "未识别",
-          "date": "2026-06-12",
+          "date": "2026-06-08",
           "chain": "半导体与存储",
           "supportType": "supports",
-          "importance": 57.4,
-          "confidence": 0.9
+          "importance": 51.2,
+          "confidence": 0.877
         },
         {
-          "id": "ev_9c1dd71590",
-          "title": "终审质量审计：AI至电网基础设施白皮书 — 2026-06-18",
-          "summary": "工作日期：2026-06-18（Asia/Singapore）。本终审 QA 对已完成的 9 张研究记录进行综合审计，覆盖 AIDD 算力需求、GPU/HBM 与机柜功率密度、电网设备稀缺、GOES...",
-          "href": "/investor/reports/archive-9906cc6fde45/",
+          "id": "ev_65afe4e97c",
+          "title": "2026-06-02 TMT 卡：用 CPO / 1.6T 光模块 / 先进 PCB 的订单与产能验证“可交付物理层”",
+          "summary": "2026-06-02 TMT 卡：用 CPO / 1.6T 光模块 / 先进 PCB 的订单与产能验证“可交付物理层”",
+          "href": "/investor/reports/archive-89a5c0fca6bf/",
           "analyst": "未识别",
-          "date": "2026-06-18",
-          "chain": "AI 基础设施",
+          "date": "2026-06-02",
+          "chain": "工业供给瓶颈",
           "supportType": "supports",
-          "importance": 86.8,
-          "confidence": 0.9
+          "importance": 51.2,
+          "confidence": 0.877
         }
       ],
       "evidenceAgainst": [
         {
-          "id": "ev_57eadc2caa",
-          "title": "AI芯片先进封装与HBM供需瓶颈分析：算力扩张的物理极限",
-          "summary": "AI芯片先进封装与HBM供需瓶颈分析：算力扩张的物理极限 作者 : 半导体行业分析师 ( semiconductors-analyst ) 分析日期 : 2026年6月15日 (June 15, 2026) 研究讨...",
-          "href": "/investor/reports/archive-d84e690d609a/",
+          "id": "ev_56c5c1d19c",
+          "title": "AI 算力硬件供应链：关键材料供应扰动对 CPO 及先进封装技术的成本传导",
+          "summary": "AI 算力硬件供应链：关键材料供应扰动对 CPO 及先进封装技术的成本传导",
+          "href": "/investor/reports/archive-9ec13fcd8154/",
           "analyst": "未识别",
-          "date": "2026-06-15",
-          "chain": "半导体与存储",
+          "date": "",
+          "chain": "AI 基础设施",
           "supportType": "risk",
-          "importance": 55.4,
-          "confidence": 0.9
+          "importance": 49.6,
+          "confidence": 0.863
         },
         {
-          "id": "ev_161f134c2c",
-          "title": "AIDD 需求驱动下的先进封装与 HBM 硬件规格演进",
-          "summary": "AIDD 需求驱动下的先进封装与 HBM 硬件规格演进 - 分析师: 半导体分析师 (semiconductors-analyst) - 立场: support（支持 prior research notes的硬件外延思路...",
-          "href": "/investor/reports/archive-055460301258/",
+          "id": "ev_595b3d7cde",
+          "title": "科创50半导体产业链补涨逻辑研判：设备国产化与先进封装两条主线",
+          "summary": "报告日期：2026年06月03日 分析员：TMT行业分析师 (TMT Analyst) 时钟锚定：2026-06-03（亚洲/新加坡） 态度立场： 支持（Support） — 支持研究记录关于\"开盘承...",
+          "href": "/investor/reports/archive-11c2f3753fd6/",
           "analyst": "未识别",
-          "date": "2026-06-18",
+          "date": "2026-06-03",
           "chain": "半导体与存储",
           "supportType": "risk",
-          "importance": 67.1,
-          "confidence": 0.9
+          "importance": 47.8,
+          "confidence": 0.848
         },
         {
-          "id": "ev_0a5bbef5fe",
-          "title": "2026年6月16日半导体压力测试：芯片能效能否补上AI电力缺口？",
-          "summary": "截至研究所工作日2026年6月16日，我的压力测试结论是 不能：先进封装与定制ASIC能够显著降低每token能耗，但不足以单独对冲上一张能源研究提出的电网延迟问题...",
-          "href": "/investor/reports/archive-dad89f76226d/",
+          "id": "ev_be5e73fc2b",
+          "title": "中游材料产能缺口对先进封装与AI算力硬件供应链的传导风险",
+          "summary": "分析师：TMT行业分析师 - 立场：stress-test（压力测试） - 工作日期：2026-06-05（亚洲/新加坡） - 线程：8/8 — 收尾研究记录，闭合\"镓→重稀土→石墨\"级联线...",
+          "href": "/investor/reports/archive-2c749d1148f9/",
           "analyst": "未识别",
-          "date": "2026-06-16",
-          "chain": "半导体与存储",
+          "date": "2026-06-05",
+          "chain": "工业供给瓶颈",
           "supportType": "risk",
-          "importance": 65.2,
+          "importance": 62,
           "confidence": 0.9
         }
       ],
@@ -1755,27 +2843,28 @@
           "trend": "rising"
         },
         {
-          "id": "risk_e925c5b564",
-          "title": "AI电力效率的宽禁带材料瓶颈压力测试",
-          "summary": "研究记录 - 分析师: materials-analyst（材料行业分析师） - 工作日期: 2026-06-13（Asia/Singapore） - 立场: stress-test — 支持研究记录04提出的宽禁带功率...",
-          "href": "/investor/reports/archive-beefa2e833c1/",
-          "chain": "半导体与存储",
+          "id": "risk_d54879c18e",
+          "title": "取向硅钢产能扩张与地缘供应风险 - 2026-06-15",
+          "summary": "截至研究所工作日2026-06-15，本报告片对prior research notes“变压器短缺是硬性材料约束”的判断做 压力测试。我的结论是：GOES扩产确实存在，尤其体现在中国...",
+          "href": "/investor/reports/archive-105c4c6a9317/",
+          "chain": "工业供给瓶颈",
           "impact": 5,
           "probability": 5,
           "trend": "rising"
         }
       ],
       "falsifiers": [
-        "GPU 供给快速宽松",
-        "HBM 价格回落",
-        "云厂商订单削减",
-        "先进封装瓶颈缓解"
+        "融资盘踩踏扩大",
+        "订单兑现慢于估值扩张",
+        "指数权重股无法确认业绩",
+        "国产芯片供给瓶颈恶化"
       ],
       "monitors": [
-        "GPU 交期",
-        "HBM 价格",
-        "云厂商 capex",
-        "先进封装产能"
+        "科创50成交",
+        "融资余额",
+        "CPO/PCB订单",
+        "国产芯片交付",
+        "指数权重表现"
       ],
       "linkedReports": [
         {
@@ -2035,225 +3124,6 @@
           "id": "china-power-equipment-export-policy-8678db7f",
           "href": "/investor/deep-research/china-power-equipment-export-policy-8678db7f/",
           "label": "china power equipment export policy 8678db7f"
-        }
-      ]
-    },
-    {
-      "id": "thesis_consumer_downgrade_health_silver_economy",
-      "title": "消费降级、健康刚需与银发经济正在重塑防御型增长",
-      "titleEn": "Consumer downgrade, healthcare necessities, and the silver economy are reshaping defensive growth",
-      "coreView": "当前共有 40 条证据、1 位分析师和 2 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
-      "direction": "stable",
-      "conviction": 58,
-      "status": "常规跟踪",
-      "priority": 58.3,
-      "evidenceQuality": 37,
-      "riskPressure": 57.8,
-      "supportBalance": 2,
-      "score": {
-        "for": 10,
-        "against": 8,
-        "analysts": 1,
-        "recent": 0,
-        "risks": 2
-      },
-      "sourceLedger": {
-        "evidence": 18,
-        "reports": 18,
-        "analysts": 0,
-        "latestDate": "2026-06-17",
-        "topReports": [
-          {
-            "id": "ev_7d3438fa68",
-            "title": "AI医疗创新的算力瓶颈与基础设施承载力评估",
-            "summary": "日期：2026-06-17（亚洲/新加坡） - 分析师：AI基础设施分析师 - 研究记录 — 立场： 压力测试 (stress-test) - 上游研究记录：research note（医药行业分析师）...",
-            "href": "/investor/reports/archive-2702c239d821/",
-            "analyst": "未识别",
-            "date": "2026-06-17",
-            "chain": "AI 基础设施",
-            "supportType": "risk",
-            "importance": 52.4,
-            "confidence": 0.887
-          },
-          {
-            "id": "ev_a4402025c1",
-            "title": "工业制造与供应链专题合成报告：自动化装备、模块化建造与航空链瓶颈对酒店、餐饮与休闲产业链的重...",
-            "summary": "工业制造与供应链专题合成报告：自动化装备、模块化建造与航空链瓶颈对酒店、餐饮与休闲产业链的重塑",
-            "href": "/investor/reports/archive-bae871b44f2f/",
-            "analyst": "未识别",
-            "date": "2026-06-17",
-            "chain": "工业供给瓶颈",
-            "supportType": "risk",
-            "importance": 52.2,
-            "confidence": 0.885
-          },
-          {
-            "id": "ev_0749851745",
-            "title": "供应链降本预期下，餐饮与酒店业的消费端价格敏感度与消费频次变化调研",
-            "summary": "工作日期：2026-06-17（Asia/Singapore） - 分析师：消费行业分析师（consumer-analyst） - 立场：support（在受限范围内支持） - 上游研究记录：research note...",
-            "href": "/investor/reports/archive-25cc3b969b72/",
-            "analyst": "未识别",
-            "date": "2026-06-17",
-            "chain": "工业供给瓶颈",
-            "supportType": "risk",
-            "importance": 51.2,
-            "confidence": 0.877
-          },
-          {
-            "id": "ev_526d36e58b",
-            "title": "“政策性口粮+非餐饮型红利”哑铃组合压力测试：尾部暴露与回撤边界",
-            "summary": "报告作者： 首席风控官 (Chief Risk Officer) 权威工作日期： 2026-06-15（北京/新加坡时间） 共享会话主题： 即时零售折扣化与理性平替下的消费红利防御重构 研...",
-            "href": "/investor/reports/archive-0f5a249c24d5/",
-            "analyst": "未识别",
-            "date": "2026-06-15",
-            "chain": "宏观通胀传导",
-            "supportType": "risk",
-            "importance": 50,
-            "confidence": 0.867
-          },
-          {
-            "id": "ev_a9fb9c645c",
-            "title": "高质量服务消费估值溢价与风格配置 - 2026-06-15",
-            "summary": "截至研究所工作日 2026-06-15，我支持前序研究结论，但需要把它收束成组合规则：华住、同程旅行、特海国际不能作为酒店餐饮休闲的宽基 beta 买入，而应作为高质...",
-            "href": "/investor/reports/archive-a420b8b96a62/",
-            "analyst": "未识别",
-            "date": "2026-06-15",
-            "chain": "AI 基础设施",
-            "supportType": "supports",
-            "importance": 43,
-            "confidence": 0.808
-          }
-        ]
-      },
-      "lastUpdated": "2026-06-17",
-      "evidenceFor": [
-        {
-          "id": "ev_6e59fcb3f9",
-          "title": "餐饮降本背景下，标准化B端食品对下游餐饮链及消费端需求的影响",
-          "summary": "作者：消费行业分析师 (consumer-analyst) - 工作日期：2026-05-28（亚洲/新加坡） - 研究记录： - 立场：support（在 research note 农业分析师的判断基础上...",
-          "href": "/investor/reports/archive-a248a1a386f5/",
-          "analyst": "未识别",
-          "date": "2026-05-28",
-          "chain": "宏观通胀传导",
-          "supportType": "supports",
-          "importance": 46.4,
-          "confidence": 0.837
-        },
-        {
-          "id": "ev_086fe6f60e",
-          "title": "大健康产业链低覆盖筛选 - 工作日 2026-05-21",
-          "summary": "截至研究院工作日 2026-05-21，我支持把中国大健康产业链纳入后续研究队列，但应定位为自下而上的精选线索，而不是简单的行业贝塔判断。最值得跟踪的机会集中在...",
-          "href": "/investor/reports/archive-b65ef96426cf/",
-          "analyst": "未识别",
-          "date": "2026-05-21",
-          "chain": "AI 基础设施",
-          "supportType": "supports",
-          "importance": 46.8,
-          "confidence": 0.84
-        },
-        {
-          "id": "ev_de159366f6",
-          "title": "截至2026-06-05：中国餐饮数字化私域、SaaS与后厨自动化如何在“量增价缩”中平补利润",
-          "summary": "截至2026-06-05：中国餐饮数字化私域、SaaS与后厨自动化如何在“量增价缩”中平补利润",
-          "href": "/investor/reports/archive-5e7ae5ad7d9c/",
-          "analyst": "未识别",
-          "date": "2026-06-05",
-          "chain": "AI 基础设施",
-          "supportType": "supports",
-          "importance": 43.4,
-          "confidence": 0.812
-        },
-        {
-          "id": "ev_a9fb9c645c",
-          "title": "高质量服务消费估值溢价与风格配置 - 2026-06-15",
-          "summary": "截至研究所工作日 2026-06-15，我支持前序研究结论，但需要把它收束成组合规则：华住、同程旅行、特海国际不能作为酒店餐饮休闲的宽基 beta 买入，而应作为高质...",
-          "href": "/investor/reports/archive-a420b8b96a62/",
-          "analyst": "未识别",
-          "date": "2026-06-15",
-          "chain": "AI 基础设施",
-          "supportType": "supports",
-          "importance": 43,
-          "confidence": 0.808
-        }
-      ],
-      "evidenceAgainst": [
-        {
-          "id": "ev_e328d7aea8",
-          "title": "研究记录04｜养老金体系转型与银发消费底座（压力测试）",
-          "summary": "工作日期：2026-05-18（Asia/Singapore） - 分析师：首席经济学家（chief-economist） - 立场：stress-test（对研究记录03\"养老金+长护险+设备更新可支撑十五五...",
-          "href": "/investor/reports/archive-d1a519e59bbc/",
-          "analyst": "未识别",
-          "date": "2026-05-18",
-          "chain": "工业供给瓶颈",
-          "supportType": "risk",
-          "importance": 38.8,
-          "confidence": 0.773
-        },
-        {
-          "id": "ev_f8e07f9b39",
-          "title": "研究报告：食品加工利润修复的驱动力——标准化与健康化升级",
-          "summary": "研究报告：食品加工利润修复的驱动力——标准化与健康化升级 日期： 2026-05-17 分析师： 消费行业分析师 主题： 餐饮标准化与健康化升级对食品加工企业利润修复...",
-          "href": "/investor/reports/archive-0121cf5dcd6b/",
-          "analyst": "未识别",
-          "date": "2026-05-17",
-          "chain": "宏观通胀传导",
-          "supportType": "risk",
-          "importance": 32.4,
-          "confidence": 0.72
-        },
-        {
-          "id": "ev_7d3438fa68",
-          "title": "AI医疗创新的算力瓶颈与基础设施承载力评估",
-          "summary": "日期：2026-06-17（亚洲/新加坡） - 分析师：AI基础设施分析师 - 研究记录 — 立场： 压力测试 (stress-test) - 上游研究记录：research note（医药行业分析师）...",
-          "href": "/investor/reports/archive-2702c239d821/",
-          "analyst": "未识别",
-          "date": "2026-06-17",
-          "chain": "AI 基础设施",
-          "supportType": "risk",
-          "importance": 52.4,
-          "confidence": 0.887
-        }
-      ],
-      "risks": [
-        {
-          "id": "risk_e1a0ebdb9d",
-          "title": "电网设备供应链瓶颈：变压器及核心部件交期压力测试",
-          "summary": "工作日期：2026-06-14。本报告片对上一张能源侧结论做压力测试：增量电力可以建设，但 AI 产能能否通电，取决于变压器、开关柜、断路器、电缆和调试人力能否按同...",
-          "href": "/investor/reports/archive-6921ecb4fc86/",
-          "chain": "工业供给瓶颈",
-          "impact": 5,
-          "probability": 5,
-          "trend": "rising"
-        },
-        {
-          "id": "risk_a5501fad62",
-          "title": "研究报告：电力之墙——变压器与 GOES 瓶颈对超大规模云厂商 Capex 效率的压力测试 (2026-2028)",
-          "summary": "研究报告：电力之墙——变压器与 GOES 瓶颈对超大规模云厂商 Capex 效率的压力测试 (2026-2028) 日期： 2026-06-17 分析师 ID： ai-infrastructure-analyst 状态...",
-          "href": "/investor/reports/archive-8e63fb0421da/",
-          "chain": "AI 基础设施",
-          "impact": 5,
-          "probability": 3,
-          "trend": "rising"
-        }
-      ],
-      "falsifiers": [
-        "居民收入预期明显改善",
-        "高端消费重新扩散",
-        "医保控费压力下降",
-        "品牌溢价恢复"
-      ],
-      "monitors": [
-        "社零结构",
-        "医保支付",
-        "银发服务订单",
-        "品牌折扣率",
-        "食品餐饮毛利"
-      ],
-      "linkedReports": [
-        {
-          "id": "consumer-downgrade-health-silver-economy-78a2530a",
-          "href": "/investor/deep-research/consumer-downgrade-health-silver-economy-78a2530a/",
-          "label": "consumer downgrade health silver economy 78a2530"
         }
       ]
     },
@@ -2939,743 +3809,88 @@
       ]
     },
     {
-      "id": "thesis_datacenter_reit_cooling_water",
-      "title": "数据中心地产、液冷与水资源正在决定 AI 容量的区域迁移",
-      "titleEn": "Data-center real estate, liquid cooling, and water resources are deciding regional migration of AI capacity",
-      "coreView": "当前共有 40 条证据、2 位分析师和 8 条风险信号指向该判断；主导链条为 AI 基础设施。该主题应作为可跟踪投资假设，而不是孤立结论。",
+      "id": "thesis_rare_earth_materials_supply_chain",
+      "title": "稀土、铜铝与关键材料正在成为 AI 与新能源共用的供给约束",
+      "titleEn": "Rare earths, copper, aluminum, and key materials are becoming shared supply constraints for AI and energy transition",
+      "coreView": "当前共有 40 条证据、3 位分析师和 8 条风险信号指向该判断；主导链条为 工业供给瓶颈。该主题应作为可跟踪投资假设，而不是孤立结论。",
       "direction": "conflicting",
-      "conviction": 55,
+      "conviction": 48,
       "status": "审慎验证",
-      "priority": 55.9,
-      "evidenceQuality": 56,
+      "priority": 50,
+      "evidenceQuality": 50,
       "riskPressure": 100,
-      "supportBalance": 2,
-      "score": {
-        "for": 10,
-        "against": 8,
-        "analysts": 2,
-        "recent": 1,
-        "risks": 8
-      },
-      "sourceLedger": {
-        "evidence": 18,
-        "reports": 18,
-        "analysts": 1,
-        "latestDate": "2026-06-18",
-        "topReports": [
-          {
-            "id": "ev_0798f5bf2a",
-            "title": "量化AI算力集群对数据中心配电、液冷散热与电网侧增容的连锁需求",
-            "summary": "报告日期： 2026-06-18（Asia/Singapore） 分析师： AI基础设施分析师（ ai-infrastructure-analyst ） 研究线程标识：已归档研究...",
-            "href": "/investor/reports/archive-88f163e39b42/",
-            "analyst": "未识别",
-            "date": "2026-06-18",
-            "chain": "AI 基础设施",
-            "supportType": "supports",
-            "importance": 63.1,
-            "confidence": 0.9
-          },
-          {
-            "id": "ev_336b171d5f",
-            "title": "液冷压力测试：电力与水务基础设施极限",
-            "summary": "研究记录 — 公用事业分析师 - 立场: 压力测试 (stress-test) - 工作日期 (Asia/Singapore): 2026-06-17 - 当前问题: 随着液冷技术提升 GPU 密度，数据中心对冷...",
-            "href": "/investor/reports/archive-4630e600c36d/",
-            "analyst": "未识别",
-            "date": "2026-06-17",
-            "chain": "AI 基础设施",
-            "supportType": "risk",
-            "importance": 62.8,
-            "confidence": 0.9
-          },
-          {
-            "id": "ev_2081d12cda",
-            "title": "电网设备交付周期：AI数据中心部署节奏的刚性约束",
-            "summary": "研究记录 · 分析师： AI基础设施分析师（ ai-infrastructure-analyst ） 工作日期： 2026-06-15（亚洲/新加坡） · 立场： stress-test（压力测试） 主题： 电...",
-            "href": "/investor/reports/archive-dbc56f5062cb/",
-            "analyst": "未识别",
-            "date": "2026-06-15",
-            "chain": "工业供给瓶颈",
-            "supportType": "risk",
-            "importance": 66.8,
-            "confidence": 0.9
-          },
-          {
-            "id": "ev_0907c86ca6",
-            "title": "电力设备供应链与电网并网压力研究：变压器产能扩张与2027年后数据中心并网瓶颈分析",
-            "summary": "电力设备供应链与电网并网压力研究：变压器产能扩张与2027年后数据中心并网瓶颈分析",
-            "href": "/investor/reports/archive-ac04d2c9cf48/",
-            "analyst": "未识别",
-            "date": "2026-06-14",
-            "chain": "电力与电网",
-            "supportType": "risk",
-            "importance": 71.8,
-            "confidence": 0.9
-          },
-          {
-            "id": "ev_61d5e1becd",
-            "title": "prior research notes— AI算力集群建设的“交付墙”：变压器缺口如何影响超大规模数据中心的部署...",
-            "summary": "prior research notes— AI算力集群建设的“交付墙”：变压器缺口如何影响超大规模数据中心的部署规划与Capex路径？",
-            "href": "/investor/reports/archive-f7529eb8be98/",
-            "analyst": "未识别",
-            "date": "2026-06-14",
-            "chain": "AI 基础设施",
-            "supportType": "supports",
-            "importance": 61.2,
-            "confidence": 0.9
-          }
-        ]
-      },
-      "lastUpdated": "2026-06-18",
-      "evidenceFor": [
-        {
-          "id": "ev_847c86825c",
-          "title": "TMT行业研究：AI基础设施成为工业“硬资产”的新定价锚 (2026)",
-          "summary": "执行摘要 截至2026年第二季度，全球供应链已达到结构性拐点：以AI服务器、数据中心供电系统和专用冷却技术为核心的AI基础设施，已正式取代汽车和传统消费电子...",
-          "href": "/investor/reports/archive-a410558a639d/",
-          "analyst": "未识别",
-          "date": "",
-          "chain": "工业供给瓶颈",
-          "supportType": "supports",
-          "importance": 54.8,
-          "confidence": 0.9
-        },
-        {
-          "id": "ev_f6b3d2a28c",
-          "title": "电气化工业周期的核心资产：电网重装备、变压器供应链与数据中心电源链的产能与订单兑现分析 (2026...",
-          "summary": "电气化工业周期的核心资产：电网重装备、变压器供应链与数据中心电源链的产能与订单兑现分析 (2026–2028)",
-          "href": "/investor/reports/archive-a14d11c9335b/",
-          "analyst": "未识别",
-          "date": "2026-05-24",
-          "chain": "工业供给瓶颈",
-          "supportType": "supports",
-          "importance": 65,
-          "confidence": 0.9
-        },
-        {
-          "id": "ev_0798f5bf2a",
-          "title": "量化AI算力集群对数据中心配电、液冷散热与电网侧增容的连锁需求",
-          "summary": "报告日期： 2026-06-18（Asia/Singapore） 分析师： AI基础设施分析师（ ai-infrastructure-analyst ） 研究线程标识：已归档研究...",
-          "href": "/investor/reports/archive-88f163e39b42/",
-          "analyst": "未识别",
-          "date": "2026-06-18",
-          "chain": "AI 基础设施",
-          "supportType": "supports",
-          "importance": 63.1,
-          "confidence": 0.9
-        },
-        {
-          "id": "ev_61d5e1becd",
-          "title": "prior research notes— AI算力集群建设的“交付墙”：变压器缺口如何影响超大规模数据中心的部署...",
-          "summary": "prior research notes— AI算力集群建设的“交付墙”：变压器缺口如何影响超大规模数据中心的部署规划与Capex路径？",
-          "href": "/investor/reports/archive-f7529eb8be98/",
-          "analyst": "未识别",
-          "date": "2026-06-14",
-          "chain": "AI 基础设施",
-          "supportType": "supports",
-          "importance": 61.2,
-          "confidence": 0.9
-        }
-      ],
-      "evidenceAgainst": [
-        {
-          "id": "ev_336b171d5f",
-          "title": "液冷压力测试：电力与水务基础设施极限",
-          "summary": "研究记录 — 公用事业分析师 - 立场: 压力测试 (stress-test) - 工作日期 (Asia/Singapore): 2026-06-17 - 当前问题: 随着液冷技术提升 GPU 密度，数据中心对冷...",
-          "href": "/investor/reports/archive-4630e600c36d/",
-          "analyst": "未识别",
-          "date": "2026-06-17",
-          "chain": "AI 基础设施",
-          "supportType": "risk",
-          "importance": 62.8,
-          "confidence": 0.9
-        },
-        {
-          "id": "ev_cac5165fc2",
-          "title": "电力、水资源和环保许可是AI数据中心落地的硬性物理天花板",
-          "summary": "电力、水资源和环保许可是AI数据中心落地的硬性物理天花板 日期： 2026-05-13 分析师： utilities-analyst（公用事业分析师） 立场： 压力测试 (stress-test) 研...",
-          "href": "/investor/reports/archive-45fbef5a2392/",
-          "analyst": "未识别",
-          "date": "2026-05-13",
-          "chain": "AI 基础设施",
-          "supportType": "risk",
-          "importance": 54.2,
-          "confidence": 0.9
-        },
-        {
-          "id": "ev_38b006b4b8",
-          "title": "商业地产与数据中心REITs的“带电土地”（Powered Land）估值溢价重估",
-          "summary": "商业地产与数据中心REITs的“带电土地”（Powered Land）估值溢价重估",
-          "href": "/investor/reports/archive-82b1ab077348/",
-          "analyst": "未识别",
-          "date": "2026-06-08",
-          "chain": "AI 基础设施",
-          "supportType": "risk",
-          "importance": 46.4,
-          "confidence": 0.837
-        }
-      ],
-      "risks": [
-        {
-          "id": "risk_24e57c0310",
-          "title": "跨越电力约束：AI基础设施瓶颈向全球权益市场的配置与估值映射",
-          "summary": "截至 2026-06-14，经过九个阶段的结构性压力测试，我们确认了一个关键的相位转换：限制 AI 规模化扩张的边际约束已从 GPU 与芯片产能，实质性地迁移至电力与电网...",
-          "href": "/investor/reports/archive-6984a39e382c/",
-          "chain": "AI 基础设施",
-          "impact": 5,
-          "probability": 5,
-          "trend": "rising"
-        },
-        {
-          "id": "risk_e1a0ebdb9d",
-          "title": "电网设备供应链瓶颈：变压器及核心部件交期压力测试",
-          "summary": "工作日期：2026-06-14。本报告片对上一张能源侧结论做压力测试：增量电力可以建设，但 AI 产能能否通电，取决于变压器、开关柜、断路器、电缆和调试人力能否按同...",
-          "href": "/investor/reports/archive-6921ecb4fc86/",
-          "chain": "工业供给瓶颈",
-          "impact": 5,
-          "probability": 5,
-          "trend": "rising"
-        },
-        {
-          "id": "risk_61ebe06164",
-          "title": "电力配电设备产能扩张与供应链瓶颈：AI算力建设的硬约束",
-          "summary": "分析师：工业制造分析师（industrials-analyst） - 立场：support（强化 prior research notes的\"电力设备瓶颈是AI算力部署真正天花板\"判断） - 工作日期：2026-...",
-          "href": "/investor/reports/archive-43f32e01de75/",
-          "chain": "工业供给瓶颈",
-          "impact": 5,
-          "probability": 5,
-          "trend": "rising"
-        },
-        {
-          "id": "risk_d54879c18e",
-          "title": "取向硅钢产能扩张与地缘供应风险 - 2026-06-15",
-          "summary": "截至研究所工作日2026-06-15，本报告片对prior research notes“变压器短缺是硬性材料约束”的判断做 压力测试。我的结论是：GOES扩产确实存在，尤其体现在中国...",
-          "href": "/investor/reports/archive-105c4c6a9317/",
-          "chain": "工业供给瓶颈",
-          "impact": 5,
-          "probability": 5,
-          "trend": "rising"
-        }
-      ],
-      "falsifiers": [
-        "数据中心空置率上升",
-        "液冷渗透慢于预期",
-        "水电土地约束缓和",
-        "租金与签约价格回落"
-      ],
-      "monitors": [
-        "数据中心空置率",
-        "液冷订单",
-        "水资源许可",
-        "租金",
-        "并网进度"
-      ],
-      "linkedReports": []
-    },
-    {
-      "id": "thesis_food_agri_inflation_cycle",
-      "title": "猪周期、粮食与农产品价格决定中国低通胀修复的弹性",
-      "titleEn": "Hog cycle, grain, and agricultural prices define the elasticity of China's low-inflation repair",
-      "coreView": "当前共有 40 条证据、3 位分析师和 1 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
-      "direction": "conflicting",
-      "conviction": 53,
-      "status": "审慎验证",
-      "priority": 53.5,
-      "evidenceQuality": 34,
-      "riskPressure": 52,
       "supportBalance": -3,
       "score": {
         "for": 5,
         "against": 8,
         "analysts": 3,
-        "recent": 0,
-        "risks": 1
+        "recent": 2,
+        "risks": 8
       },
       "sourceLedger": {
         "evidence": 13,
         "reports": 13,
         "analysts": 3,
-        "latestDate": "2026-06-14",
-        "topReports": [
-          {
-            "id": "ev_db85e3f381",
-            "title": "化肥出口限制政策下的国内储备效能与粮食安全保障评估",
-            "summary": "化肥出口限制政策下的国内储备效能与粮食安全保障评估 报告日期： 2026年6月14日 [S1] 作者： agri-analyst （农业行业分析师） （研究记录）",
-            "href": "/investor/reports/archive-c16503ddf9d3/",
-            "analyst": "未识别",
-            "date": "2026-06-14",
-            "chain": "宏观通胀传导",
-            "supportType": "supports",
-            "importance": 46.4,
-            "confidence": 0.837
-          },
-          {
-            "id": "ev_3023af0a5d",
-            "title": "主要粮食品种价格走势监控与分析报告",
-            "summary": "分析日期： 2026-06-11 分析师： 农业行业分析师 ( agri-analyst ) 报告周期： 2026年6月中旬（以2026-06-11为基准日） 研究领域： 种植业、饲料原料、粮食安全...",
-            "href": "/investor/reports/archive-a17bd8d3957b/",
-            "analyst": "农业行业分析师",
-            "date": "2026-06-11",
-            "chain": "宏观通胀传导",
-            "supportType": "risk",
-            "importance": 46.4,
-            "confidence": 0.837
-          },
-          {
-            "id": "ev_8cc231f977",
-            "title": "白糖及输入性农产品通胀：对食品饮料利润率的传导，2026-06-10",
-            "summary": "报告日期：2026-06-10 [S0] 分析师：中国宏观分析师 ( china-macro ) 本期立场：综合研判 (Synthesize) 本期问题：在国际原糖价格震荡与国内进口白糖政策严控的...",
-            "href": "/investor/reports/archive-afa9944b961e/",
-            "analyst": "未识别",
-            "date": "2026-06-10",
-            "chain": "宏观通胀传导",
-            "supportType": "supports",
-            "importance": 46.8,
-            "confidence": 0.84
-          },
-          {
-            "id": "ev_ac0689392c",
-            "title": "主要粮食品种价格走势监控与分析报告",
-            "summary": "分析日期： 2026-06-05 分析师： 农业行业分析师 ( agri-analyst ) 报告周期： 2026年6月上旬（以2026-06-05为基准日） 研究领域： 种植业、饲料原料、粮食安全...",
-            "href": "/investor/reports/archive-92b9e8aaed10/",
-            "analyst": "农业行业分析师",
-            "date": "2026-06-05",
-            "chain": "宏观通胀传导",
-            "supportType": "risk",
-            "importance": 42.6,
-            "confidence": 0.805
-          },
-          {
-            "id": "ev_fb95d544f5",
-            "title": "2026年5月华北芽麦替代效应对三季度养殖、饲料及CPI的定量传导评估报告",
-            "summary": "2026年5月华北芽麦替代效应对三季度养殖、饲料及CPI的定量传导评估报告",
-            "href": "/investor/reports/archive-c2db18f25cb0/",
-            "analyst": "中国宏观分析师",
-            "date": "2026-06-05",
-            "chain": "宏观通胀传导",
-            "supportType": "supports",
-            "importance": 42,
-            "confidence": 0.8
-          }
-        ]
-      },
-      "lastUpdated": "2026-06-15",
-      "evidenceFor": [
-        {
-          "id": "ev_fb95d544f5",
-          "title": "2026年5月华北芽麦替代效应对三季度养殖、饲料及CPI的定量传导评估报告",
-          "summary": "2026年5月华北芽麦替代效应对三季度养殖、饲料及CPI的定量传导评估报告",
-          "href": "/investor/reports/archive-c2db18f25cb0/",
-          "analyst": "中国宏观分析师",
-          "date": "2026-06-05",
-          "chain": "宏观通胀传导",
-          "supportType": "supports",
-          "importance": 42,
-          "confidence": 0.8
-        },
-        {
-          "id": "ev_e7f347bbcf",
-          "title": "农业与粮食安全视角的战略否决：被低估的核心PCE传导与防御盲区 (2026-05-22)",
-          "summary": "农业与粮食安全视角的战略否决：被低估的核心PCE传导与防御盲区 (2026-05-22)",
-          "href": "/investor/reports/archive-a4c8d4ac1a79/",
-          "analyst": "未识别",
-          "date": "2026-05-22",
-          "chain": "宏观通胀传导",
-          "supportType": "supports",
-          "importance": 47.8,
-          "confidence": 0.848
-        },
-        {
-          "id": "ev_8cc231f977",
-          "title": "白糖及输入性农产品通胀：对食品饮料利润率的传导，2026-06-10",
-          "summary": "报告日期：2026-06-10 [S0] 分析师：中国宏观分析师 ( china-macro ) 本期立场：综合研判 (Synthesize) 本期问题：在国际原糖价格震荡与国内进口白糖政策严控的...",
-          "href": "/investor/reports/archive-afa9944b961e/",
-          "analyst": "未识别",
-          "date": "2026-06-10",
-          "chain": "宏观通胀传导",
-          "supportType": "supports",
-          "importance": 46.8,
-          "confidence": 0.84
-        },
-        {
-          "id": "ev_db85e3f381",
-          "title": "化肥出口限制政策下的国内储备效能与粮食安全保障评估",
-          "summary": "化肥出口限制政策下的国内储备效能与粮食安全保障评估 报告日期： 2026年6月14日 [S1] 作者： agri-analyst （农业行业分析师） （研究记录）",
-          "href": "/investor/reports/archive-c16503ddf9d3/",
-          "analyst": "未识别",
-          "date": "2026-06-14",
-          "chain": "宏观通胀传导",
-          "supportType": "supports",
-          "importance": 46.4,
-          "confidence": 0.837
-        }
-      ],
-      "evidenceAgainst": [
-        {
-          "id": "ev_a59514a0d6",
-          "title": "主要粮食品种价格走势监测",
-          "summary": "报告日期：2026-05-28（数据截至 2026-05-27 收盘） 分析师：Agriculture Analyst（农业行业分析师） 覆盖品种：玉米 / 大豆 / 小麦 / 稻米（CBOT、DCE、黑海 FO...",
-          "href": "/investor/reports/archive-c56e5e44c08b/",
-          "analyst": "农业行业分析师",
-          "date": "2026-05-27",
-          "chain": "宏观通胀传导",
-          "supportType": "risk",
-          "importance": 44,
-          "confidence": 0.817
-        },
-        {
-          "id": "ev_5ec28b4d8f",
-          "title": "主要粮食品种价格走势监控",
-          "summary": "日期：2026-06-04（基于公开行情与官方周度监测口径整理的分析快报） 作者：农业行业分析师（agri-analyst） 覆盖品种：小麦、玉米、稻谷/大米、大豆 说明：本报...",
-          "href": "/investor/reports/archive-2621c7f4a2b7/",
-          "analyst": "农业行业分析师",
-          "date": "2026-06-04",
-          "chain": "宏观通胀传导",
-          "supportType": "risk",
-          "importance": 36.8,
-          "confidence": 0.757
-        },
-        {
-          "id": "ev_481a49b333",
-          "title": "2026年Q2–Q3 中国CPI食品项趋势及宏观中枢研判",
-          "summary": "报告编号： MACRO-2026-0520 分析师： 中国宏观分析师 日期： 2026年5月20日 关联任务： 农业行业分析师 · 粮食价格监控 (f5bfb4a9)",
-          "href": "/investor/reports/archive-f80257ee4744/",
-          "analyst": "中国宏观分析师",
-          "date": "2026-05-20",
-          "chain": "宏观通胀传导",
-          "supportType": "risk",
-          "importance": 47.8,
-          "confidence": 0.848
-        }
-      ],
-      "risks": [
-        {
-          "id": "risk_e1a0ebdb9d",
-          "title": "电网设备供应链瓶颈：变压器及核心部件交期压力测试",
-          "summary": "工作日期：2026-06-14。本报告片对上一张能源侧结论做压力测试：增量电力可以建设，但 AI 产能能否通电，取决于变压器、开关柜、断路器、电缆和调试人力能否按同...",
-          "href": "/investor/reports/archive-6921ecb4fc86/",
-          "chain": "工业供给瓶颈",
-          "impact": 5,
-          "probability": 5,
-          "trend": "rising"
-        }
-      ],
-      "falsifiers": [
-        "能繁母猪去化不足",
-        "食品价格继续下行",
-        "粮价库存压力加大",
-        "消费需求恢复慢于供给"
-      ],
-      "monitors": [
-        "猪价",
-        "能繁母猪",
-        "饲料成本",
-        "粮食库存",
-        "食品 CPI"
-      ],
-      "linkedReports": []
-    },
-    {
-      "id": "thesis_oil_geopolitical_disinflation_floor",
-      "title": "油价地缘底线决定再通胀与降息交易的安全边际",
-      "titleEn": "The geopolitical oil floor defines the margin of safety for disinflation and rate-cut trades",
-      "coreView": "当前共有 40 条证据、2 位分析师和 2 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
-      "direction": "conflicting",
-      "conviction": 53,
-      "status": "审慎验证",
-      "priority": 52,
-      "evidenceQuality": 33,
-      "riskPressure": 57.8,
-      "supportBalance": -1,
-      "score": {
-        "for": 7,
-        "against": 8,
-        "analysts": 2,
-        "recent": 0,
-        "risks": 2
-      },
-      "sourceLedger": {
-        "evidence": 15,
-        "reports": 15,
-        "analysts": 2,
-        "latestDate": "2026-06-14",
-        "topReports": [
-          {
-            "id": "ev_9ac75af5ec",
-            "title": "A股“实物红利/电网出海”超配权重再校准与印度“油价-汇率-信用”左尾对冲报告",
-            "summary": "A股“实物红利/电网出海”超配权重再校准与印度“油价-汇率-信用”左尾对冲报告",
-            "href": "/investor/reports/archive-8f5417c0df82/",
-            "analyst": "未识别",
-            "date": "2026-06-14",
-            "chain": "宏观通胀传导",
-            "supportType": "supports",
-            "importance": 50.2,
-            "confidence": 0.868
-          },
-          {
-            "id": "ev_447457ba76",
-            "title": "能源供应风险与油价通胀传导 - 2026-06-14",
-            "summary": "分析师: energy-analyst（能源行业分析师） · 研究记录 · 立场: stress-test 工作日期: 2026-06-14（Asia/Singapore） · 主题: 伊朗冲突下的能源供应风险与原...",
-            "href": "/investor/reports/archive-43b15dd66515/",
-            "analyst": "未识别",
-            "date": "2026-06-14",
-            "chain": "宏观通胀传导",
-            "supportType": "risk",
-            "importance": 49,
-            "confidence": 0.858
-          },
-          {
-            "id": "ev_aacd4c3ef5",
-            "title": "今日海外市场过夜情况速览",
-            "summary": "基准日期：2026-06-12（Asia/Singapore，来自 系统日期锚 ）。隔夜美股收盘对应美国时间 2026-06-11。指数、外汇和利率优先采用数据源校验 ；油价 endpoi...",
-            "href": "/investor/reports/archive-efb99df35708/",
-            "analyst": "全球宏观分析师",
-            "date": "2026-06-12",
-            "chain": "宏观通胀传导",
-            "supportType": "supports",
-            "importance": 50.2,
-            "confidence": 0.868
-          },
-          {
-            "id": "ev_ec3f7d1279",
-            "title": "霍尔木兹海峡封锁危机下原油价格中枢及亚洲化工产业链成本冲击压力测试报告",
-            "summary": "报告日期：2026年06月11日 - 来函协同：全球宏观分析师 · 晨会海外市场速览 (数据中心化) ( analyst:global-macro:overnight macro api ) - 关联 Run：ab293f9c...",
-            "href": "/investor/reports/archive-3b4a7b82ef4e/",
-            "analyst": "能源行业分析师",
-            "date": "2026-06-10",
-            "chain": "宏观通胀传导",
-            "supportType": "risk",
-            "importance": 50.8,
-            "confidence": 0.873
-          },
-          {
-            "id": "ev_615a686d40",
-            "title": "今日海外市场过夜情况速览（2026-06-02）",
-            "summary": "核心一句 昨晚海外市场是“偏 risk-on、但受能源通胀风险约束”的组合：AI 相关消息和美国制造业扩张支撑风险资产叙事，VIX 收于 16.05；但 WTI 92.31 美元、Bre...",
-            "href": "/investor/reports/archive-c08b09143c6d/",
-            "analyst": "全球宏观分析师",
-            "date": "2026-06-02",
-            "chain": "宏观通胀传导",
-            "supportType": "risk",
-            "importance": 53.8,
-            "confidence": 0.898
-          }
-        ]
-      },
-      "lastUpdated": "2026-06-16",
-      "evidenceFor": [
-        {
-          "id": "ev_802ee4cfe8",
-          "title": "研究报告：130美元油价下的美股科技估值压缩与港股高股息轮动",
-          "summary": "1. 宏观背景：“滞胀锁死”体制 正如研究记录 03 所确立的，原油价格受霍尔木兹海峡关闭及阿联酋退出 OPEC 驱动飙升至 130 美元/桶，这使全球经济陷入滞胀。美联...",
-          "href": "/investor/reports/archive-f38fe6867a72/",
-          "analyst": "未识别",
-          "date": "",
-          "chain": "宏观通胀传导",
-          "supportType": "supports",
-          "importance": 46.2,
-          "confidence": 0.835
-        },
-        {
-          "id": "ev_56f5bcb449",
-          "title": "原油市场每日监测报告 (2026-05-19)",
-          "summary": "核心摘要 今日原油市场呈现分化走势。布伦特原油（Brent）小幅回调至 109.10 美元/桶，而 WTI 原油受美国库存持续下降预期支撑，上涨 1.40% 至 102.32 美元/桶...",
-          "href": "/investor/reports/archive-d43a330fd4c2/",
-          "analyst": "能源行业分析师",
-          "date": "2026-05-19",
-          "chain": "AI 基础设施",
-          "supportType": "supports",
-          "importance": 42,
-          "confidence": 0.8
-        },
-        {
-          "id": "ev_968970cd70",
-          "title": "评估油价在$92-$94/桶区间内对下游石化利润及产能利用率的影响",
-          "summary": "1. 执行摘要 / Executive Summary 在美伊达成重新开放霍尔木兹海峡备忘录草案地缘政治缓和的背景下，前两张研究记录分别探讨了全球宏观资产配置及原油价格中枢的...",
-          "href": "/investor/reports/archive-866a419d5d99/",
-          "analyst": "未识别",
-          "date": "2026-05-25",
-          "chain": "宏观通胀传导",
-          "supportType": "supports",
-          "importance": 39.6,
-          "confidence": 0.78
-        },
-        {
-          "id": "ev_0556945bf0",
-          "title": "能源市场监测报告：原油价格走势与OPEC+动态",
-          "summary": "能源市场监测报告：原油价格走势与OPEC+动态 报告日期： 2026年5月19日 分析师： 能源分析师 (Energy Analyst)",
-          "href": "/investor/reports/archive-803fec1b8c0f/",
-          "analyst": "能源行业分析师",
-          "date": "2026-05-19",
-          "chain": "宏观通胀传导",
-          "supportType": "supports",
-          "importance": 39.2,
-          "confidence": 0.777
-        }
-      ],
-      "evidenceAgainst": [
-        {
-          "id": "ev_a49a1d3e19",
-          "title": "原油市场每日监测报告 (2026-05-22)",
-          "summary": "核心摘要 今日国际油价呈现反弹态势，收复了前一交易日的大部分失地。截至今日 API 数据监测，布伦特 (Brent) 原油收报 104.78 USD/bbl，较上一交易日结算价上涨...",
-          "href": "/investor/reports/archive-f0cf10473c2f/",
-          "analyst": "能源行业分析师",
-          "date": "2026-05-22",
-          "chain": "宏观通胀传导",
-          "supportType": "risk",
-          "importance": 44,
-          "confidence": 0.817
-        },
-        {
-          "id": "ev_23cb0b412e",
-          "title": "研究报告：OPEC+备用产能策略与Brent风险溢价分解",
-          "summary": "1. 执行摘要 截至2026年5月，Brent原油市场已不再受传统供需周期的单纯驱动，而是进入了“地缘风险底部”模式。随着霍尔木兹海峡的摩擦从尾部风险转变为结构性成...",
-          "href": "/investor/reports/archive-2518a80d6161/",
-          "analyst": "未识别",
-          "date": "",
-          "chain": "宏观通胀传导",
-          "supportType": "risk",
-          "importance": 39.6,
-          "confidence": 0.78
-        },
-        {
-          "id": "ev_80812e74d3",
-          "title": "能源行业分析：特朗普“协议”预期下的油价走势评估",
-          "summary": "分析师： 能源行业分析师 (Energy Analyst) 基准日期： 2026年6月2日 核心关注点： 特朗普政府在俄乌及中东冲突中的外交旋涡如何重塑全球油价底线。",
-          "href": "/investor/reports/archive-683fe296f381/",
-          "analyst": "能源行业分析师",
-          "date": "2026-06-02",
-          "chain": "宏观通胀传导",
-          "supportType": "risk",
-          "importance": 38.8,
-          "confidence": 0.773
-        }
-      ],
-      "risks": [
-        {
-          "id": "risk_e1a0ebdb9d",
-          "title": "电网设备供应链瓶颈：变压器及核心部件交期压力测试",
-          "summary": "工作日期：2026-06-14。本报告片对上一张能源侧结论做压力测试：增量电力可以建设，但 AI 产能能否通电，取决于变压器、开关柜、断路器、电缆和调试人力能否按同...",
-          "href": "/investor/reports/archive-6921ecb4fc86/",
-          "chain": "工业供给瓶颈",
-          "impact": 5,
-          "probability": 5,
-          "trend": "rising"
-        },
-        {
-          "id": "risk_ba7f13bb42",
-          "title": "全球宏观研究：关税壁垒与电网现代化税",
-          "summary": "全球宏观研究：关税壁垒与电网现代化税 非晶变压器短缺背景下对美国公用事业资本开支（Rate Base）及数据中心PPA电价与延期风险的影响 工作日期： 2026-06-12 分...",
-          "href": "/investor/reports/archive-238563e1b622/",
-          "chain": "电力与电网",
-          "impact": 5,
-          "probability": 3,
-          "trend": "rising"
-        }
-      ],
-      "falsifiers": [
-        "霍尔木兹风险实质缓和",
-        "OPEC 增产压低远期曲线",
-        "美国页岩供给弹性恢复",
-        "油价跌破页岩成本区间"
-      ],
-      "monitors": [
-        "Brent/WTI",
-        "霍尔木兹新闻流",
-        "OPEC 会议",
-        "美国钻机数",
-        "能源股信用利差"
-      ],
-      "linkedReports": [
-        {
-          "id": "ai-productivity-disinflation-timing-af09345c",
-          "href": "/investor/deep-research/ai-productivity-disinflation-timing-af09345c/",
-          "label": "ai productivity disinflation timing af09345c"
-        }
-      ]
-    },
-    {
-      "id": "thesis_ashare_hardtech_star50_rotation",
-      "title": "A 股硬科技与科创50的复苏需要订单、融资盘和指数结构共振",
-      "titleEn": "A-share hard tech and STAR50 recovery needs orders, margin positioning, and index structure to align",
-      "coreView": "当前共有 40 条证据、2 位分析师和 8 条风险信号指向该判断；主导链条为 AI 基础设施。该主题应作为可跟踪投资假设，而不是孤立结论。",
-      "direction": "conflicting",
-      "conviction": 50,
-      "status": "审慎验证",
-      "priority": 51.7,
-      "evidenceQuality": 49,
-      "riskPressure": 100,
-      "supportBalance": -1,
-      "score": {
-        "for": 7,
-        "against": 8,
-        "analysts": 2,
-        "recent": 2,
-        "risks": 8
-      },
-      "sourceLedger": {
-        "evidence": 15,
-        "reports": 15,
-        "analysts": 1,
         "latestDate": "2026-06-18",
         "topReports": [
           {
-            "id": "ev_56793c8fa5",
-            "title": "prior research notes· 半导体分析师研究报告",
-            "summary": "工作日期：2026-06-18（Asia/Singapore） - 板块：半导体（设计 / 制造 / 设备 / 材料 / 先进封装） - 立场： Support（支持） — 在AI算力强需求与出口管制持续...",
-            "href": "/investor/reports/archive-8c9df85b29e8/",
-            "analyst": "未识别",
+            "id": "ev_c4d6b17657",
+            "title": "主要大宗商品价格走势及供需变化报告 (2026-06-18)",
+            "summary": "报告日期：2026年6月18日 分析师席位：材料行业分析师 (materials-analyst) 覆盖品种：铜（Cu）、铝（Al）、锂（Li，碳酸锂）、钢（螺纹钢） 数据截止：2026年6...",
+            "href": "/investor/reports/archive-5e3efbde09e4/",
+            "analyst": "材料行业分析师",
             "date": "2026-06-18",
-            "chain": "AI 基础设施",
+            "chain": "工业供给瓶颈",
             "supportType": "supports",
-            "importance": 68.6,
+            "importance": 67.1,
             "confidence": 0.9
           },
           {
-            "id": "ev_34777a89ae",
-            "title": "核心结论 / Core Thesis",
-            "summary": "核心结论 / Core Thesis 在全球AI半导体估值锚由“NVDA-TSMC双寡头溢价”向“增长+多元化第二供应源”切换的背景下，全球配置需从纯GPU倍数扩张交易转向ASIC、先...",
-            "href": "/investor/reports/archive-d493aaecd9c3/",
+            "id": "ev_b28f684e86",
+            "title": "变压器与电缆短缺引发的铜、硅钢等大宗商品价格压力与供应瓶颈分析报告 (2026-06-12)",
+            "summary": "变压器与电缆短缺引发的铜、硅钢等大宗商品价格压力与供应瓶颈分析报告 (2026-06-12)",
+            "href": "/investor/reports/archive-b97dd38599b1/",
             "analyst": "未识别",
-            "date": "2026-06-09",
-            "chain": "半导体与存储",
-            "supportType": "supports",
-            "importance": 62.6,
+            "date": "2026-06-12",
+            "chain": "宏观通胀传导",
+            "supportType": "risk",
+            "importance": 60.4,
             "confidence": 0.9
           },
           {
-            "id": "ev_1ba1a2d375",
-            "title": "前序研究 — AI 硬件供应链的宏观经济影响",
-            "summary": "工作日期(亚洲/新加坡): 2026-06-08 - 分析师: 首席经济学家 - 立场: support(在前序研究的硅光 / CPO 供应链命题之上,向宏观层级延伸) - 议题: 全球半导体周期...",
-            "href": "/investor/reports/archive-67f8302de610/",
-            "analyst": "未识别",
-            "date": "2026-06-08",
-            "chain": "半导体与存储",
-            "supportType": "supports",
-            "importance": 51.2,
-            "confidence": 0.877
-          },
-          {
-            "id": "ev_be5e73fc2b",
-            "title": "中游材料产能缺口对先进封装与AI算力硬件供应链的传导风险",
-            "summary": "分析师：TMT行业分析师 - 立场：stress-test（压力测试） - 工作日期：2026-06-05（亚洲/新加坡） - 线程：8/8 — 收尾研究记录，闭合\"镓→重稀土→石墨\"级联线...",
-            "href": "/investor/reports/archive-2c749d1148f9/",
-            "analyst": "未识别",
-            "date": "2026-06-05",
+            "id": "ev_db7a961485",
+            "title": "大宗商品市场分析报告 (2026年6月)",
+            "summary": "核心结论 2026年6月，全球大宗商品市场呈现显著的两极分化：“能源转型”金属（铜、铝、锂）因结构性供应短缺和战略性需求而维持高位；而传统“工业支柱”材料（...",
+            "href": "/investor/reports/archive-012707a37edc/",
+            "analyst": "材料行业分析师",
+            "date": "2026-06-11",
             "chain": "工业供给瓶颈",
             "supportType": "risk",
-            "importance": 62,
+            "importance": 57,
             "confidence": 0.9
           },
           {
-            "id": "ev_6eaceadf71",
-            "title": "先进封装与半导体设备/材料环节在HBM需求波动下的基本面确定性验证 (2026-06-03)",
-            "summary": "先进封装与半导体设备/材料环节在HBM需求波动下的基本面确定性验证 (2026-06-03)",
-            "href": "/investor/reports/archive-850ab9fbc43b/",
-            "analyst": "未识别",
-            "date": "2026-06-03",
-            "chain": "半导体与存储",
-            "supportType": "risk",
-            "importance": 57.4,
+            "id": "ev_a917e1d506",
+            "title": "大宗商品价格分析报告 (2026年6月9日)",
+            "summary": "核心结论 2026年6月，大宗商品市场呈现显著分化：“绿色能源”相关金属（铜、铝、锂）受电气化需求和地缘政治供应冲击驱动，价格处于多年高位或创历史新高；而传...",
+            "href": "/investor/reports/archive-6ca8cbe9ff87/",
+            "analyst": "材料行业分析师",
+            "date": "2026-06-09",
+            "chain": "工业供给瓶颈",
+            "supportType": "supports",
+            "importance": 56.4,
+            "confidence": 0.9
+          },
+          {
+            "id": "ev_83f2816381",
+            "title": "主要大宗商品（铜/铝/锂/钢）价格走势及供需格局深度报告",
+            "summary": "[!NOTE] 报告基准日： 2026-06-08 分析师： 材料行业分析师 (materials-analyst)",
+            "href": "/investor/reports/archive-209085d5b75d/",
+            "analyst": "材料行业分析师",
+            "date": "2026-06-05",
+            "chain": "工业供给瓶颈",
+            "supportType": "supports",
+            "importance": 56.4,
             "confidence": 0.9
           }
         ]
@@ -3683,89 +3898,89 @@
       "lastUpdated": "2026-06-18",
       "evidenceFor": [
         {
-          "id": "ev_56793c8fa5",
-          "title": "prior research notes· 半导体分析师研究报告",
-          "summary": "工作日期：2026-06-18（Asia/Singapore） - 板块：半导体（设计 / 制造 / 设备 / 材料 / 先进封装） - 立场： Support（支持） — 在AI算力强需求与出口管制持续...",
-          "href": "/investor/reports/archive-8c9df85b29e8/",
-          "analyst": "未识别",
+          "id": "ev_a917e1d506",
+          "title": "大宗商品价格分析报告 (2026年6月9日)",
+          "summary": "核心结论 2026年6月，大宗商品市场呈现显著分化：“绿色能源”相关金属（铜、铝、锂）受电气化需求和地缘政治供应冲击驱动，价格处于多年高位或创历史新高；而传...",
+          "href": "/investor/reports/archive-6ca8cbe9ff87/",
+          "analyst": "材料行业分析师",
+          "date": "2026-06-09",
+          "chain": "工业供给瓶颈",
+          "supportType": "supports",
+          "importance": 56.4,
+          "confidence": 0.9
+        },
+        {
+          "id": "ev_c4d6b17657",
+          "title": "主要大宗商品价格走势及供需变化报告 (2026-06-18)",
+          "summary": "报告日期：2026年6月18日 分析师席位：材料行业分析师 (materials-analyst) 覆盖品种：铜（Cu）、铝（Al）、锂（Li，碳酸锂）、钢（螺纹钢） 数据截止：2026年6...",
+          "href": "/investor/reports/archive-5e3efbde09e4/",
+          "analyst": "材料行业分析师",
           "date": "2026-06-18",
-          "chain": "AI 基础设施",
+          "chain": "工业供给瓶颈",
           "supportType": "supports",
-          "importance": 68.6,
+          "importance": 67.1,
           "confidence": 0.9
         },
         {
-          "id": "ev_17337dc6f1",
-          "title": "AI 硬件供应链深度分析：聚焦 HBM 与先进封装的 A 股机会",
-          "summary": "日期： 2026-05-25 主题： HBM 产能缺口及先进封装技术趋势下的 A 股半导体材料与设备环节评估 分析师： TMT行业分析师 (TMT Analyst) 立场： 支持 (支持“硬件...",
-          "href": "/investor/reports/archive-2f04ba0a3319/",
-          "analyst": "未识别",
-          "date": "2026-05-25",
+          "id": "ev_83f2816381",
+          "title": "主要大宗商品（铜/铝/锂/钢）价格走势及供需格局深度报告",
+          "summary": "[!NOTE] 报告基准日： 2026-06-08 分析师： 材料行业分析师 (materials-analyst)",
+          "href": "/investor/reports/archive-209085d5b75d/",
+          "analyst": "材料行业分析师",
+          "date": "2026-06-05",
           "chain": "工业供给瓶颈",
           "supportType": "supports",
-          "importance": 60.2,
+          "importance": 56.4,
           "confidence": 0.9
         },
         {
-          "id": "ev_1ba1a2d375",
-          "title": "前序研究 — AI 硬件供应链的宏观经济影响",
-          "summary": "工作日期(亚洲/新加坡): 2026-06-08 - 分析师: 首席经济学家 - 立场: support(在前序研究的硅光 / CPO 供应链命题之上,向宏观层级延伸) - 议题: 全球半导体周期...",
-          "href": "/investor/reports/archive-67f8302de610/",
-          "analyst": "未识别",
-          "date": "2026-06-08",
-          "chain": "半导体与存储",
+          "id": "ev_d507a62012",
+          "title": "大宗商品价格及供需月度报告 (2026年5月)",
+          "summary": "核心观点 截至2026年5月，全球大宗商品市场呈现显著分化。有色金属（铜、铝）受地缘政治及能源转型驱动维持高位；锂价因储能需求激增而由盈转亏；钢铁则因建筑及...",
+          "href": "/investor/reports/archive-0a1aa0c09a79/",
+          "analyst": "材料行业分析师",
+          "date": "2026-05-20",
+          "chain": "宏观通胀传导",
           "supportType": "supports",
-          "importance": 51.2,
-          "confidence": 0.877
-        },
-        {
-          "id": "ev_65afe4e97c",
-          "title": "2026-06-02 TMT 卡：用 CPO / 1.6T 光模块 / 先进 PCB 的订单与产能验证“可交付物理层”",
-          "summary": "2026-06-02 TMT 卡：用 CPO / 1.6T 光模块 / 先进 PCB 的订单与产能验证“可交付物理层”",
-          "href": "/investor/reports/archive-89a5c0fca6bf/",
-          "analyst": "未识别",
-          "date": "2026-06-02",
-          "chain": "工业供给瓶颈",
-          "supportType": "supports",
-          "importance": 51.2,
-          "confidence": 0.877
+          "importance": 52.6,
+          "confidence": 0.888
         }
       ],
       "evidenceAgainst": [
         {
-          "id": "ev_56c5c1d19c",
-          "title": "AI 算力硬件供应链：关键材料供应扰动对 CPO 及先进封装技术的成本传导",
-          "summary": "AI 算力硬件供应链：关键材料供应扰动对 CPO 及先进封装技术的成本传导",
-          "href": "/investor/reports/archive-9ec13fcd8154/",
-          "analyst": "未识别",
-          "date": "",
-          "chain": "AI 基础设施",
-          "supportType": "risk",
-          "importance": 49.6,
-          "confidence": 0.863
-        },
-        {
-          "id": "ev_595b3d7cde",
-          "title": "科创50半导体产业链补涨逻辑研判：设备国产化与先进封装两条主线",
-          "summary": "报告日期：2026年06月03日 分析员：TMT行业分析师 (TMT Analyst) 时钟锚定：2026-06-03（亚洲/新加坡） 态度立场： 支持（Support） — 支持研究记录关于\"开盘承...",
-          "href": "/investor/reports/archive-11c2f3753fd6/",
-          "analyst": "未识别",
-          "date": "2026-06-03",
-          "chain": "半导体与存储",
-          "supportType": "risk",
-          "importance": 47.8,
-          "confidence": 0.848
-        },
-        {
-          "id": "ev_be5e73fc2b",
-          "title": "中游材料产能缺口对先进封装与AI算力硬件供应链的传导风险",
-          "summary": "分析师：TMT行业分析师 - 立场：stress-test（压力测试） - 工作日期：2026-06-05（亚洲/新加坡） - 线程：8/8 — 收尾研究记录，闭合\"镓→重稀土→石墨\"级联线...",
-          "href": "/investor/reports/archive-2c749d1148f9/",
-          "analyst": "未识别",
-          "date": "2026-06-05",
+          "id": "ev_db7a961485",
+          "title": "大宗商品市场分析报告 (2026年6月)",
+          "summary": "核心结论 2026年6月，全球大宗商品市场呈现显著的两极分化：“能源转型”金属（铜、铝、锂）因结构性供应短缺和战略性需求而维持高位；而传统“工业支柱”材料（...",
+          "href": "/investor/reports/archive-012707a37edc/",
+          "analyst": "材料行业分析师",
+          "date": "2026-06-11",
           "chain": "工业供给瓶颈",
           "supportType": "risk",
-          "importance": 62,
+          "importance": 57,
+          "confidence": 0.9
+        },
+        {
+          "id": "ev_a11d380c67",
+          "title": "材料行业分析：公用事业“超额收益”的物理天花板",
+          "summary": "日期： 2026年6月11日 分析师： 材料行业分析师（钢铁、有色金属、化工） 主题： 材料瓶颈（铜、取向硅钢 GOES、变压器）与 GW 级数据中心交付周期的博弈",
+          "href": "/investor/reports/archive-c64cfc5730fa/",
+          "analyst": "未识别",
+          "date": "",
+          "chain": "工业供给瓶颈",
+          "supportType": "risk",
+          "importance": 64.4,
+          "confidence": 0.9
+        },
+        {
+          "id": "ev_9a07f659e9",
+          "title": "材料端压力测试：2026–2028 年取向硅钢、铜、铝的供应弹性",
+          "summary": "工作日期：2026-05-27（亚洲/新加坡） 分析师：materials-analyst 立场：stress-test 主题：变压器上游原材料：取向硅钢、铜、铝",
+          "href": "/investor/reports/archive-28f4ca7c693d/",
+          "analyst": "未识别",
+          "date": "2026-05-27",
+          "chain": "工业供给瓶颈",
+          "supportType": "risk",
+          "importance": 64.2,
           "confidence": 0.9
         }
       ],
@@ -3812,23 +4027,33 @@
         }
       ],
       "falsifiers": [
-        "融资盘踩踏扩大",
-        "订单兑现慢于估值扩张",
-        "指数权重股无法确认业绩",
-        "国产芯片供给瓶颈恶化"
+        "金属库存快速累积",
+        "出口限制缓和",
+        "下游订单放缓",
+        "替代材料路线成熟"
       ],
       "monitors": [
-        "科创50成交",
-        "融资余额",
-        "CPO/PCB订单",
-        "国产芯片交付",
-        "指数权重表现"
+        "铜铝库存",
+        "稀土价格",
+        "出口政策",
+        "下游订单",
+        "GOES 价格"
       ],
       "linkedReports": [
         {
-          "id": "mag7-next-era-losers-6f2a8c9d",
-          "href": "/investor/deep-research/mag7-next-era-losers-6f2a8c9d/",
-          "label": "mag7 next era losers 6f2a8c9d"
+          "id": "transformer-goes-copper-bottleneck-fe892901",
+          "href": "/investor/deep-research/transformer-goes-copper-bottleneck-fe892901/",
+          "label": "transformer goes copper bottleneck fe892901"
+        },
+        {
+          "id": "china-power-equipment-export-policy-8678db7f",
+          "href": "/investor/deep-research/china-power-equipment-export-policy-8678db7f/",
+          "label": "china power equipment export policy 8678db7f"
+        },
+        {
+          "id": "ai-power-inflation-transmission-0c9ba15c",
+          "href": "/investor/deep-research/ai-power-inflation-transmission-0c9ba15c/",
+          "label": "ai power inflation transmission 0c9ba15c"
         }
       ]
     },
@@ -4914,255 +5139,6 @@
       ]
     },
     {
-      "id": "thesis_rare_earth_materials_supply_chain",
-      "title": "稀土、铜铝与关键材料正在成为 AI 与新能源共用的供给约束",
-      "titleEn": "Rare earths, copper, aluminum, and key materials are becoming shared supply constraints for AI and energy transition",
-      "coreView": "当前共有 40 条证据、3 位分析师和 8 条风险信号指向该判断；主导链条为 工业供给瓶颈。该主题应作为可跟踪投资假设，而不是孤立结论。",
-      "direction": "conflicting",
-      "conviction": 43,
-      "status": "审慎验证",
-      "priority": 37.8,
-      "evidenceQuality": 37,
-      "riskPressure": 100,
-      "supportBalance": -4,
-      "score": {
-        "for": 4,
-        "against": 8,
-        "analysts": 3,
-        "recent": 1,
-        "risks": 8
-      },
-      "sourceLedger": {
-        "evidence": 12,
-        "reports": 12,
-        "analysts": 3,
-        "latestDate": "2026-06-12",
-        "topReports": [
-          {
-            "id": "ev_b28f684e86",
-            "title": "变压器与电缆短缺引发的铜、硅钢等大宗商品价格压力与供应瓶颈分析报告 (2026-06-12)",
-            "summary": "变压器与电缆短缺引发的铜、硅钢等大宗商品价格压力与供应瓶颈分析报告 (2026-06-12)",
-            "href": "/investor/reports/archive-b97dd38599b1/",
-            "analyst": "未识别",
-            "date": "2026-06-12",
-            "chain": "宏观通胀传导",
-            "supportType": "risk",
-            "importance": 60.4,
-            "confidence": 0.9
-          },
-          {
-            "id": "ev_db7a961485",
-            "title": "大宗商品市场分析报告 (2026年6月)",
-            "summary": "核心结论 2026年6月，全球大宗商品市场呈现显著的两极分化：“能源转型”金属（铜、铝、锂）因结构性供应短缺和战略性需求而维持高位；而传统“工业支柱”材料（...",
-            "href": "/investor/reports/archive-012707a37edc/",
-            "analyst": "材料行业分析师",
-            "date": "2026-06-11",
-            "chain": "工业供给瓶颈",
-            "supportType": "risk",
-            "importance": 57,
-            "confidence": 0.9
-          },
-          {
-            "id": "ev_a917e1d506",
-            "title": "大宗商品价格分析报告 (2026年6月9日)",
-            "summary": "核心结论 2026年6月，大宗商品市场呈现显著分化：“绿色能源”相关金属（铜、铝、锂）受电气化需求和地缘政治供应冲击驱动，价格处于多年高位或创历史新高；而传...",
-            "href": "/investor/reports/archive-6ca8cbe9ff87/",
-            "analyst": "材料行业分析师",
-            "date": "2026-06-09",
-            "chain": "工业供给瓶颈",
-            "supportType": "supports",
-            "importance": 56.4,
-            "confidence": 0.9
-          },
-          {
-            "id": "ev_83f2816381",
-            "title": "主要大宗商品（铜/铝/锂/钢）价格走势及供需格局深度报告",
-            "summary": "[!NOTE] 报告基准日： 2026-06-08 分析师： 材料行业分析师 (materials-analyst)",
-            "href": "/investor/reports/archive-209085d5b75d/",
-            "analyst": "材料行业分析师",
-            "date": "2026-06-05",
-            "chain": "工业供给瓶颈",
-            "supportType": "supports",
-            "importance": 56.4,
-            "confidence": 0.9
-          },
-          {
-            "id": "ev_c2e35d2c2e",
-            "title": "2026-06-02 材料压力测试：铜、铝与硅钢成本能否吞噬电网设备规模效益？",
-            "summary": "2026-06-02 材料压力测试：铜、铝与硅钢成本能否吞噬电网设备规模效益？",
-            "href": "/investor/reports/archive-f921a97de6b8/",
-            "analyst": "未识别",
-            "date": "2026-06-02",
-            "chain": "工业供给瓶颈",
-            "supportType": "risk",
-            "importance": 62.6,
-            "confidence": 0.9
-          }
-        ]
-      },
-      "lastUpdated": "2026-06-18",
-      "evidenceFor": [
-        {
-          "id": "ev_a917e1d506",
-          "title": "大宗商品价格分析报告 (2026年6月9日)",
-          "summary": "核心结论 2026年6月，大宗商品市场呈现显著分化：“绿色能源”相关金属（铜、铝、锂）受电气化需求和地缘政治供应冲击驱动，价格处于多年高位或创历史新高；而传...",
-          "href": "/investor/reports/archive-6ca8cbe9ff87/",
-          "analyst": "材料行业分析师",
-          "date": "2026-06-09",
-          "chain": "工业供给瓶颈",
-          "supportType": "supports",
-          "importance": 56.4,
-          "confidence": 0.9
-        },
-        {
-          "id": "ev_83f2816381",
-          "title": "主要大宗商品（铜/铝/锂/钢）价格走势及供需格局深度报告",
-          "summary": "[!NOTE] 报告基准日： 2026-06-08 分析师： 材料行业分析师 (materials-analyst)",
-          "href": "/investor/reports/archive-209085d5b75d/",
-          "analyst": "材料行业分析师",
-          "date": "2026-06-05",
-          "chain": "工业供给瓶颈",
-          "supportType": "supports",
-          "importance": 56.4,
-          "confidence": 0.9
-        },
-        {
-          "id": "ev_d507a62012",
-          "title": "大宗商品价格及供需月度报告 (2026年5月)",
-          "summary": "核心观点 截至2026年5月，全球大宗商品市场呈现显著分化。有色金属（铜、铝）受地缘政治及能源转型驱动维持高位；锂价因储能需求激增而由盈转亏；钢铁则因建筑及...",
-          "href": "/investor/reports/archive-0a1aa0c09a79/",
-          "analyst": "材料行业分析师",
-          "date": "2026-05-20",
-          "chain": "宏观通胀传导",
-          "supportType": "supports",
-          "importance": 52.6,
-          "confidence": 0.888
-        },
-        {
-          "id": "ev_e2fba7d195",
-          "title": "AI 电力基础设施 2026–2027 铜需求增量测算",
-          "summary": "接收方：材料行业分析师 / 大宗商品价格追踪线（run 1a843cfa-4745-4334-bee6-8453fd87c191 ） 作者：工业制造分析师（advanced manufacturing / defense / mach...",
-          "href": "/investor/reports/archive-adf450bd8e1b/",
-          "analyst": "工业制造分析师",
-          "date": "2026-05-20",
-          "chain": "工业供给瓶颈",
-          "supportType": "supports",
-          "importance": 57.4,
-          "confidence": 0.9
-        }
-      ],
-      "evidenceAgainst": [
-        {
-          "id": "ev_db7a961485",
-          "title": "大宗商品市场分析报告 (2026年6月)",
-          "summary": "核心结论 2026年6月，全球大宗商品市场呈现显著的两极分化：“能源转型”金属（铜、铝、锂）因结构性供应短缺和战略性需求而维持高位；而传统“工业支柱”材料（...",
-          "href": "/investor/reports/archive-012707a37edc/",
-          "analyst": "材料行业分析师",
-          "date": "2026-06-11",
-          "chain": "工业供给瓶颈",
-          "supportType": "risk",
-          "importance": 57,
-          "confidence": 0.9
-        },
-        {
-          "id": "ev_a11d380c67",
-          "title": "材料行业分析：公用事业“超额收益”的物理天花板",
-          "summary": "日期： 2026年6月11日 分析师： 材料行业分析师（钢铁、有色金属、化工） 主题： 材料瓶颈（铜、取向硅钢 GOES、变压器）与 GW 级数据中心交付周期的博弈",
-          "href": "/investor/reports/archive-c64cfc5730fa/",
-          "analyst": "未识别",
-          "date": "",
-          "chain": "工业供给瓶颈",
-          "supportType": "risk",
-          "importance": 64.4,
-          "confidence": 0.9
-        },
-        {
-          "id": "ev_9a07f659e9",
-          "title": "材料端压力测试：2026–2028 年取向硅钢、铜、铝的供应弹性",
-          "summary": "工作日期：2026-05-27（亚洲/新加坡） 分析师：materials-analyst 立场：stress-test 主题：变压器上游原材料：取向硅钢、铜、铝",
-          "href": "/investor/reports/archive-28f4ca7c693d/",
-          "analyst": "未识别",
-          "date": "2026-05-27",
-          "chain": "工业供给瓶颈",
-          "supportType": "risk",
-          "importance": 64.2,
-          "confidence": 0.9
-        }
-      ],
-      "risks": [
-        {
-          "id": "risk_24e57c0310",
-          "title": "跨越电力约束：AI基础设施瓶颈向全球权益市场的配置与估值映射",
-          "summary": "截至 2026-06-14，经过九个阶段的结构性压力测试，我们确认了一个关键的相位转换：限制 AI 规模化扩张的边际约束已从 GPU 与芯片产能，实质性地迁移至电力与电网...",
-          "href": "/investor/reports/archive-6984a39e382c/",
-          "chain": "AI 基础设施",
-          "impact": 5,
-          "probability": 5,
-          "trend": "rising"
-        },
-        {
-          "id": "risk_e1a0ebdb9d",
-          "title": "电网设备供应链瓶颈：变压器及核心部件交期压力测试",
-          "summary": "工作日期：2026-06-14。本报告片对上一张能源侧结论做压力测试：增量电力可以建设，但 AI 产能能否通电，取决于变压器、开关柜、断路器、电缆和调试人力能否按同...",
-          "href": "/investor/reports/archive-6921ecb4fc86/",
-          "chain": "工业供给瓶颈",
-          "impact": 5,
-          "probability": 5,
-          "trend": "rising"
-        },
-        {
-          "id": "risk_61ebe06164",
-          "title": "电力配电设备产能扩张与供应链瓶颈：AI算力建设的硬约束",
-          "summary": "分析师：工业制造分析师（industrials-analyst） - 立场：support（强化 prior research notes的\"电力设备瓶颈是AI算力部署真正天花板\"判断） - 工作日期：2026-...",
-          "href": "/investor/reports/archive-43f32e01de75/",
-          "chain": "工业供给瓶颈",
-          "impact": 5,
-          "probability": 5,
-          "trend": "rising"
-        },
-        {
-          "id": "risk_d54879c18e",
-          "title": "取向硅钢产能扩张与地缘供应风险 - 2026-06-15",
-          "summary": "截至研究所工作日2026-06-15，本报告片对prior research notes“变压器短缺是硬性材料约束”的判断做 压力测试。我的结论是：GOES扩产确实存在，尤其体现在中国...",
-          "href": "/investor/reports/archive-105c4c6a9317/",
-          "chain": "工业供给瓶颈",
-          "impact": 5,
-          "probability": 5,
-          "trend": "rising"
-        }
-      ],
-      "falsifiers": [
-        "金属库存快速累积",
-        "出口限制缓和",
-        "下游订单放缓",
-        "替代材料路线成熟"
-      ],
-      "monitors": [
-        "铜铝库存",
-        "稀土价格",
-        "出口政策",
-        "下游订单",
-        "GOES 价格"
-      ],
-      "linkedReports": [
-        {
-          "id": "transformer-goes-copper-bottleneck-fe892901",
-          "href": "/investor/deep-research/transformer-goes-copper-bottleneck-fe892901/",
-          "label": "transformer goes copper bottleneck fe892901"
-        },
-        {
-          "id": "china-power-equipment-export-policy-8678db7f",
-          "href": "/investor/deep-research/china-power-equipment-export-policy-8678db7f/",
-          "label": "china power equipment export policy 8678db7f"
-        },
-        {
-          "id": "ai-power-inflation-transmission-0c9ba15c",
-          "href": "/investor/deep-research/ai-power-inflation-transmission-0c9ba15c/",
-          "label": "ai power inflation transmission 0c9ba15c"
-        }
-      ]
-    },
-    {
       "id": "thesis_rmb_dollar_fx_liquidity",
       "title": "人民币、美元与套息交易决定跨境风险资产的流动性折价",
       "titleEn": "RMB, USD, and carry trades define the liquidity discount across cross-border risk assets",
@@ -5862,6 +5838,260 @@
       "linkedReports": []
     },
     {
+      "id": "thesis_carbon_energy_transition_capex",
+      "title": "碳价、可再生能源与储能 CapEx 正在重塑电力资产回报",
+      "titleEn": "Carbon pricing, renewables, and storage capex are reshaping power-asset returns",
+      "coreView": "当前共有 40 条证据、2 位分析师和 8 条风险信号指向该判断；主导链条为 电力与电网。该主题应作为可跟踪投资假设，而不是孤立结论。",
+      "direction": "conflicting",
+      "conviction": 40,
+      "status": "审慎验证",
+      "priority": 31.3,
+      "evidenceQuality": 26,
+      "riskPressure": 100,
+      "supportBalance": -4,
+      "score": {
+        "for": 4,
+        "against": 8,
+        "analysts": 2,
+        "recent": 1,
+        "risks": 8
+      },
+      "sourceLedger": {
+        "evidence": 12,
+        "reports": 12,
+        "analysts": 0,
+        "latestDate": "2026-06-16",
+        "topReports": [
+          {
+            "id": "ev_36a25e0303",
+            "title": "风电/绿电直供海底数据中心并网机制、电力稳定性与碳信用核算研究",
+            "summary": "日期：2026-06-16 分析师：utilities-analyst (公用事业分析师) 立场：支持 (Support) 主题：海上风电直供海底数据中心（UDC）的并网机制、电力稳定性与碳信用核...",
+            "href": "/investor/reports/archive-d53593343e25/",
+            "analyst": "未识别",
+            "date": "2026-06-16",
+            "chain": "AI 基础设施",
+            "supportType": "supports",
+            "importance": 52,
+            "confidence": 0.883
+          },
+          {
+            "id": "ev_406bdb2421",
+            "title": "电力基础设施与配电网容量 → 变压器交付周期与并网审批延迟如何约束超大规模厂商AI算力交付规模",
+            "summary": "电力基础设施与配电网容量 → 变压器交付周期与并网审批延迟如何约束超大规模厂商AI算力交付规模",
+            "href": "/investor/reports/archive-e89563218c33/",
+            "analyst": "未识别",
+            "date": "2026-06-15",
+            "chain": "电力与电网",
+            "supportType": "risk",
+            "importance": 64.2,
+            "confidence": 0.9
+          },
+          {
+            "id": "ev_021c52065d",
+            "title": "2026-06-15 能源行业分析师报告：AI电力缺口、电网设备与绿电投资逻辑",
+            "summary": "2026-06-15 能源行业分析师报告：AI电力缺口、电网设备与绿电投资逻辑",
+            "href": "/investor/reports/archive-0cb98533eb1e/",
+            "analyst": "未识别",
+            "date": "2026-06-15",
+            "chain": "电力与电网",
+            "supportType": "supports",
+            "importance": 52.6,
+            "confidence": 0.888
+          },
+          {
+            "id": "ev_0907c86ca6",
+            "title": "电力设备供应链与电网并网压力研究：变压器产能扩张与2027年后数据中心并网瓶颈分析",
+            "summary": "电力设备供应链与电网并网压力研究：变压器产能扩张与2027年后数据中心并网瓶颈分析",
+            "href": "/investor/reports/archive-ac04d2c9cf48/",
+            "analyst": "未识别",
+            "date": "2026-06-14",
+            "chain": "电力与电网",
+            "supportType": "risk",
+            "importance": 71.8,
+            "confidence": 0.9
+          },
+          {
+            "id": "ev_53027cfb19",
+            "title": "电力并网瓶颈：电价波动与资产定价风险",
+            "summary": "分析师：公用事业分析师 (Utilities Analyst) - 日期（机构工作日）：2026-06-12（亚洲/新加坡） - 立场： 压力测试 （针对研究记录01–02\"做多变压器 / EPC /...",
+            "href": "/investor/reports/archive-4e14c1d3cb03/",
+            "analyst": "未识别",
+            "date": "2026-06-12",
+            "chain": "电力与电网",
+            "supportType": "risk",
+            "importance": 64.8,
+            "confidence": 0.9
+          }
+        ]
+      },
+      "lastUpdated": "2026-06-18",
+      "evidenceFor": [
+        {
+          "id": "ev_36a25e0303",
+          "title": "风电/绿电直供海底数据中心并网机制、电力稳定性与碳信用核算研究",
+          "summary": "日期：2026-06-16 分析师：utilities-analyst (公用事业分析师) 立场：支持 (Support) 主题：海上风电直供海底数据中心（UDC）的并网机制、电力稳定性与碳信用核...",
+          "href": "/investor/reports/archive-d53593343e25/",
+          "analyst": "未识别",
+          "date": "2026-06-16",
+          "chain": "AI 基础设施",
+          "supportType": "supports",
+          "importance": 52,
+          "confidence": 0.883
+        },
+        {
+          "id": "ev_45365ea9b1",
+          "title": "变压器及电力设备产业链：全球产能弹性、毛利率水平与出海竞争格局",
+          "summary": "变压器及电力设备产业链：全球产能弹性、毛利率水平与出海竞争格局 发布日期：2026-05-23 行业板块：工业制造 / 电力设备与新能源 分析师：工业制造分析师 (indu...",
+          "href": "/investor/reports/archive-c48f4f6ca286/",
+          "analyst": "未识别",
+          "date": "2026-05-23",
+          "chain": "工业供给瓶颈",
+          "supportType": "supports",
+          "importance": 65,
+          "confidence": 0.9
+        },
+        {
+          "id": "ev_4968fcd893",
+          "title": "2026-05-17 电网电气化与新能源并网：铜铝需求的一阶支撑",
+          "summary": "研究记录 - 分析师: 公用事业分析师 (utilities-analyst) - 立场: support - 日期: 2026-05-17 (Asia/Singapore) - 主题: 配电网升级、特高压建设与大规模新能源...",
+          "href": "/investor/reports/archive-ce7822db55e6/",
+          "analyst": "未识别",
+          "date": "2026-05-17",
+          "chain": "电力与电网",
+          "supportType": "supports",
+          "importance": 59.2,
+          "confidence": 0.9
+        },
+        {
+          "id": "ev_021c52065d",
+          "title": "2026-06-15 能源行业分析师报告：AI电力缺口、电网设备与绿电投资逻辑",
+          "summary": "2026-06-15 能源行业分析师报告：AI电力缺口、电网设备与绿电投资逻辑",
+          "href": "/investor/reports/archive-0cb98533eb1e/",
+          "analyst": "未识别",
+          "date": "2026-06-15",
+          "chain": "电力与电网",
+          "supportType": "supports",
+          "importance": 52.6,
+          "confidence": 0.888
+        }
+      ],
+      "evidenceAgainst": [
+        {
+          "id": "ev_19f035e7e6",
+          "title": "AI数据中心的公用事业资本开支与电网并网瓶颈",
+          "summary": "日期（亚洲/新加坡工作日）： 2026-06-08 - 分析师： 公用事业分析师（电力、水务、环保、碳交易） - 立场： 压力测试 (Stress-test) —— 基于 prior research...",
+          "href": "/investor/reports/archive-33008c8f3e46/",
+          "analyst": "未识别",
+          "date": "2026-06-08",
+          "chain": "电力与电网",
+          "supportType": "risk",
+          "importance": 65.4,
+          "confidence": 0.9
+        },
+        {
+          "id": "ev_042c2ed3f2",
+          "title": "AI算力扩张的电力基础设施压力测试 - 2026-05-29",
+          "summary": "截至研究所工作日 2026-05-29，我从能源与电力基础设施侧对上一张 TMT 结论做压力测试：AI算力需求已经足以改变并网排队、变压器采购和新能源消纳格局，但真正的...",
+          "href": "/investor/reports/archive-8664b76c4305/",
+          "analyst": "未识别",
+          "date": "2026-05-29",
+          "chain": "电力与电网",
+          "supportType": "risk",
+          "importance": 60.8,
+          "confidence": 0.9
+        },
+        {
+          "id": "ev_8068303677",
+          "title": "东部AI算力可交付绿电压力测试 - 2026-06-11",
+          "summary": "截至研究所工作日2026-06-11，本报告对上一张卡的判断做压力测试：东部AI算力的约束不是全国电量总量，而是本地获批、冗余、低碳且可交付的电力容量。我的结论是...",
+          "href": "/investor/reports/archive-83693723eec6/",
+          "analyst": "未识别",
+          "date": "2026-06-11",
+          "chain": "AI 基础设施",
+          "supportType": "risk",
+          "importance": 53.2,
+          "confidence": 0.893
+        }
+      ],
+      "risks": [
+        {
+          "id": "risk_24e57c0310",
+          "title": "跨越电力约束：AI基础设施瓶颈向全球权益市场的配置与估值映射",
+          "summary": "截至 2026-06-14，经过九个阶段的结构性压力测试，我们确认了一个关键的相位转换：限制 AI 规模化扩张的边际约束已从 GPU 与芯片产能，实质性地迁移至电力与电网...",
+          "href": "/investor/reports/archive-6984a39e382c/",
+          "chain": "AI 基础设施",
+          "impact": 5,
+          "probability": 5,
+          "trend": "rising"
+        },
+        {
+          "id": "risk_e1a0ebdb9d",
+          "title": "电网设备供应链瓶颈：变压器及核心部件交期压力测试",
+          "summary": "工作日期：2026-06-14。本报告片对上一张能源侧结论做压力测试：增量电力可以建设，但 AI 产能能否通电，取决于变压器、开关柜、断路器、电缆和调试人力能否按同...",
+          "href": "/investor/reports/archive-6921ecb4fc86/",
+          "chain": "工业供给瓶颈",
+          "impact": 5,
+          "probability": 5,
+          "trend": "rising"
+        },
+        {
+          "id": "risk_61ebe06164",
+          "title": "电力配电设备产能扩张与供应链瓶颈：AI算力建设的硬约束",
+          "summary": "分析师：工业制造分析师（industrials-analyst） - 立场：support（强化 prior research notes的\"电力设备瓶颈是AI算力部署真正天花板\"判断） - 工作日期：2026-...",
+          "href": "/investor/reports/archive-43f32e01de75/",
+          "chain": "工业供给瓶颈",
+          "impact": 5,
+          "probability": 5,
+          "trend": "rising"
+        },
+        {
+          "id": "risk_d54879c18e",
+          "title": "取向硅钢产能扩张与地缘供应风险 - 2026-06-15",
+          "summary": "截至研究所工作日2026-06-15，本报告片对prior research notes“变压器短缺是硬性材料约束”的判断做 压力测试。我的结论是：GOES扩产确实存在，尤其体现在中国...",
+          "href": "/investor/reports/archive-105c4c6a9317/",
+          "chain": "工业供给瓶颈",
+          "impact": 5,
+          "probability": 5,
+          "trend": "rising"
+        }
+      ],
+      "falsifiers": [
+        "碳价长期低迷",
+        "新能源消纳恶化",
+        "储能收益率下滑",
+        "补贴和电价机制弱化"
+      ],
+      "monitors": [
+        "碳价",
+        "新能源装机",
+        "弃风弃光",
+        "储能收益率",
+        "绿电 PPA"
+      ],
+      "linkedReports": [
+        {
+          "id": "mag7-next-era-losers-6f2a8c9d",
+          "href": "/investor/deep-research/mag7-next-era-losers-6f2a8c9d/",
+          "label": "mag7 next era losers 6f2a8c9d"
+        },
+        {
+          "id": "transformer-goes-copper-bottleneck-fe892901",
+          "href": "/investor/deep-research/transformer-goes-copper-bottleneck-fe892901/",
+          "label": "transformer goes copper bottleneck fe892901"
+        },
+        {
+          "id": "china-power-equipment-export-policy-8678db7f",
+          "href": "/investor/deep-research/china-power-equipment-export-policy-8678db7f/",
+          "label": "china power equipment export policy 8678db7f"
+        },
+        {
+          "id": "ai-power-inflation-transmission-0c9ba15c",
+          "href": "/investor/deep-research/ai-power-inflation-transmission-0c9ba15c/",
+          "label": "ai power inflation transmission 0c9ba15c"
+        }
+      ]
+    },
+    {
       "id": "thesis_space_satellite_infra_cycle",
       "title": "卫星直连与商业航天从概念弹性进入部署兑现期",
       "titleEn": "Direct-to-device satellite and commercial space are moving from concept beta to deployment proof",
@@ -6093,6 +6323,235 @@
         "融资需求"
       ],
       "linkedReports": []
+    },
+    {
+      "id": "thesis_ai_power_grid_bottleneck",
+      "title": "AI 电力与电网瓶颈仍是基础设施主线",
+      "titleEn": "AI power and grid bottlenecks remain the infrastructure core",
+      "coreView": "当前共有 40 条证据、2 位分析师和 8 条风险信号指向该判断；主导链条为 电力与电网。该主题应作为可跟踪投资假设，而不是孤立结论。",
+      "direction": "conflicting",
+      "conviction": 37,
+      "status": "审慎验证",
+      "priority": 30.7,
+      "evidenceQuality": 24,
+      "riskPressure": 100,
+      "supportBalance": -6,
+      "score": {
+        "for": 2,
+        "against": 8,
+        "analysts": 2,
+        "recent": 2,
+        "risks": 8
+      },
+      "sourceLedger": {
+        "evidence": 10,
+        "reports": 10,
+        "analysts": 0,
+        "latestDate": "2026-06-18",
+        "topReports": [
+          {
+            "id": "ev_b1de282e42",
+            "title": "变压器与电网瓶颈压力下，超大规模云厂商（Hyperscalers）的资本开支重心与数据中心部署策略演变",
+            "summary": "变压器与电网瓶颈压力下，超大规模云厂商（Hyperscalers）的资本开支重心与数据中心部署策略演变",
+            "href": "/investor/reports/archive-930c5266da9d/",
+            "analyst": "未识别",
+            "date": "2026-06-18",
+            "chain": "AI 基础设施",
+            "supportType": "risk",
+            "importance": 71.7,
+            "confidence": 0.9
+          },
+          {
+            "id": "ev_0907c86ca6",
+            "title": "电力设备供应链与电网并网压力研究：变压器产能扩张与2027年后数据中心并网瓶颈分析",
+            "summary": "电力设备供应链与电网并网压力研究：变压器产能扩张与2027年后数据中心并网瓶颈分析",
+            "href": "/investor/reports/archive-ac04d2c9cf48/",
+            "analyst": "未识别",
+            "date": "2026-06-14",
+            "chain": "电力与电网",
+            "supportType": "risk",
+            "importance": 71.8,
+            "confidence": 0.9
+          },
+          {
+            "id": "ev_83fea59b99",
+            "title": "全球宏观研究：关税壁垒与电网现代化税",
+            "summary": "全球宏观研究：关税壁垒与电网现代化税 非晶变压器短缺背景下对美国公用事业资本开支（Rate Base）及数据中心PPA电价与延期风险的影响 工作日期： 2026-06-12 分...",
+            "href": "/investor/reports/archive-238563e1b622/",
+            "analyst": "未识别",
+            "date": "2026-06-12",
+            "chain": "电力与电网",
+            "supportType": "risk",
+            "importance": 73.8,
+            "confidence": 0.9
+          },
+          {
+            "id": "ev_313bd4463c",
+            "title": "公用事业深度分析：电力设备供应链瓶颈与电网并网对 AI 数据中心的风险评估",
+            "summary": "公用事业深度分析：电力设备供应链瓶颈与电网并网对 AI 数据中心的风险评估 日期： 2026-06-09 分析师 ID： utilities-analyst 主题： 针对 PJM/ERCOT 区域 20-2...",
+            "href": "/investor/reports/archive-1541cdac5ad4/",
+            "analyst": "未识别",
+            "date": "2026-06-09",
+            "chain": "电力与电网",
+            "supportType": "risk",
+            "importance": 63.8,
+            "confidence": 0.9
+          },
+          {
+            "id": "ev_19f035e7e6",
+            "title": "AI数据中心的公用事业资本开支与电网并网瓶颈",
+            "summary": "日期（亚洲/新加坡工作日）： 2026-06-08 - 分析师： 公用事业分析师（电力、水务、环保、碳交易） - 立场： 压力测试 (Stress-test) —— 基于 prior research...",
+            "href": "/investor/reports/archive-33008c8f3e46/",
+            "analyst": "未识别",
+            "date": "2026-06-08",
+            "chain": "电力与电网",
+            "supportType": "risk",
+            "importance": 65.4,
+            "confidence": 0.9
+          }
+        ]
+      },
+      "lastUpdated": "2026-06-18",
+      "evidenceFor": [
+        {
+          "id": "ev_f6b3d2a28c",
+          "title": "电气化工业周期的核心资产：电网重装备、变压器供应链与数据中心电源链的产能与订单兑现分析 (2026...",
+          "summary": "电气化工业周期的核心资产：电网重装备、变压器供应链与数据中心电源链的产能与订单兑现分析 (2026–2028)",
+          "href": "/investor/reports/archive-a14d11c9335b/",
+          "analyst": "未识别",
+          "date": "2026-05-24",
+          "chain": "工业供给瓶颈",
+          "supportType": "supports",
+          "importance": 65,
+          "confidence": 0.9
+        },
+        {
+          "id": "ev_d435b56e6c",
+          "title": "AI数据中心并网容量、大负荷电价与电网设备交期（2026-05-30）",
+          "summary": "分析师： 公用事业分析师 日期： 2026-05-30 研究/研究记录： b7230bd9-89c6-4b22-98ae-b7547288bb20 / prior research notes立场： synthesize",
+          "href": "/investor/reports/archive-374c1f8518ea/",
+          "analyst": "未识别",
+          "date": "2026-05-30",
+          "chain": "电力与电网",
+          "supportType": "supports",
+          "importance": 58.8,
+          "confidence": 0.9
+        }
+      ],
+      "evidenceAgainst": [
+        {
+          "id": "ev_0907c86ca6",
+          "title": "电力设备供应链与电网并网压力研究：变压器产能扩张与2027年后数据中心并网瓶颈分析",
+          "summary": "电力设备供应链与电网并网压力研究：变压器产能扩张与2027年后数据中心并网瓶颈分析",
+          "href": "/investor/reports/archive-ac04d2c9cf48/",
+          "analyst": "未识别",
+          "date": "2026-06-14",
+          "chain": "电力与电网",
+          "supportType": "risk",
+          "importance": 71.8,
+          "confidence": 0.9
+        },
+        {
+          "id": "ev_19f035e7e6",
+          "title": "AI数据中心的公用事业资本开支与电网并网瓶颈",
+          "summary": "日期（亚洲/新加坡工作日）： 2026-06-08 - 分析师： 公用事业分析师（电力、水务、环保、碳交易） - 立场： 压力测试 (Stress-test) —— 基于 prior research...",
+          "href": "/investor/reports/archive-33008c8f3e46/",
+          "analyst": "未识别",
+          "date": "2026-06-08",
+          "chain": "电力与电网",
+          "supportType": "risk",
+          "importance": 65.4,
+          "confidence": 0.9
+        },
+        {
+          "id": "ev_313bd4463c",
+          "title": "公用事业深度分析：电力设备供应链瓶颈与电网并网对 AI 数据中心的风险评估",
+          "summary": "公用事业深度分析：电力设备供应链瓶颈与电网并网对 AI 数据中心的风险评估 日期： 2026-06-09 分析师 ID： utilities-analyst 主题： 针对 PJM/ERCOT 区域 20-2...",
+          "href": "/investor/reports/archive-1541cdac5ad4/",
+          "analyst": "未识别",
+          "date": "2026-06-09",
+          "chain": "电力与电网",
+          "supportType": "risk",
+          "importance": 63.8,
+          "confidence": 0.9
+        }
+      ],
+      "risks": [
+        {
+          "id": "risk_24e57c0310",
+          "title": "跨越电力约束：AI基础设施瓶颈向全球权益市场的配置与估值映射",
+          "summary": "截至 2026-06-14，经过九个阶段的结构性压力测试，我们确认了一个关键的相位转换：限制 AI 规模化扩张的边际约束已从 GPU 与芯片产能，实质性地迁移至电力与电网...",
+          "href": "/investor/reports/archive-6984a39e382c/",
+          "chain": "AI 基础设施",
+          "impact": 5,
+          "probability": 5,
+          "trend": "rising"
+        },
+        {
+          "id": "risk_e1a0ebdb9d",
+          "title": "电网设备供应链瓶颈：变压器及核心部件交期压力测试",
+          "summary": "工作日期：2026-06-14。本报告片对上一张能源侧结论做压力测试：增量电力可以建设，但 AI 产能能否通电，取决于变压器、开关柜、断路器、电缆和调试人力能否按同...",
+          "href": "/investor/reports/archive-6921ecb4fc86/",
+          "chain": "工业供给瓶颈",
+          "impact": 5,
+          "probability": 5,
+          "trend": "rising"
+        },
+        {
+          "id": "risk_61ebe06164",
+          "title": "电力配电设备产能扩张与供应链瓶颈：AI算力建设的硬约束",
+          "summary": "分析师：工业制造分析师（industrials-analyst） - 立场：support（强化 prior research notes的\"电力设备瓶颈是AI算力部署真正天花板\"判断） - 工作日期：2026-...",
+          "href": "/investor/reports/archive-43f32e01de75/",
+          "chain": "工业供给瓶颈",
+          "impact": 5,
+          "probability": 5,
+          "trend": "rising"
+        },
+        {
+          "id": "risk_d54879c18e",
+          "title": "取向硅钢产能扩张与地缘供应风险 - 2026-06-15",
+          "summary": "截至研究所工作日2026-06-15，本报告片对prior research notes“变压器短缺是硬性材料约束”的判断做 压力测试。我的结论是：GOES扩产确实存在，尤其体现在中国...",
+          "href": "/investor/reports/archive-105c4c6a9317/",
+          "chain": "工业供给瓶颈",
+          "impact": 5,
+          "probability": 5,
+          "trend": "rising"
+        }
+      ],
+      "falsifiers": [
+        "并网队列明显缩短",
+        "PPA 价格回落",
+        "设备交期快速恢复",
+        "客户资本开支下修"
+      ],
+      "monitors": [
+        "AIDC 并网队列",
+        "PPA 报价",
+        "变压器交期",
+        "公用事业资本开支"
+      ],
+      "linkedReports": [
+        {
+          "id": "mag7-next-era-losers-6f2a8c9d",
+          "href": "/investor/deep-research/mag7-next-era-losers-6f2a8c9d/",
+          "label": "mag7 next era losers 6f2a8c9d"
+        },
+        {
+          "id": "transformer-goes-copper-bottleneck-fe892901",
+          "href": "/investor/deep-research/transformer-goes-copper-bottleneck-fe892901/",
+          "label": "transformer goes copper bottleneck fe892901"
+        },
+        {
+          "id": "china-power-equipment-export-policy-8678db7f",
+          "href": "/investor/deep-research/china-power-equipment-export-policy-8678db7f/",
+          "label": "china power equipment export policy 8678db7f"
+        },
+        {
+          "id": "ai-power-inflation-transmission-0c9ba15c",
+          "href": "/investor/deep-research/ai-power-inflation-transmission-0c9ba15c/",
+          "label": "ai power inflation transmission 0c9ba15c"
+        }
+      ]
     },
     {
       "id": "thesis_china_export_manufacturing_margin",
@@ -6339,260 +6798,6 @@
       ]
     },
     {
-      "id": "thesis_carbon_energy_transition_capex",
-      "title": "碳价、可再生能源与储能 CapEx 正在重塑电力资产回报",
-      "titleEn": "Carbon pricing, renewables, and storage capex are reshaping power-asset returns",
-      "coreView": "当前共有 40 条证据、3 位分析师和 8 条风险信号指向该判断；主导链条为 电力与电网。该主题应作为可跟踪投资假设，而不是孤立结论。",
-      "direction": "conflicting",
-      "conviction": 40,
-      "status": "审慎验证",
-      "priority": 29.3,
-      "evidenceQuality": 29,
-      "riskPressure": 100,
-      "supportBalance": -4,
-      "score": {
-        "for": 4,
-        "against": 8,
-        "analysts": 3,
-        "recent": 0,
-        "risks": 8
-      },
-      "sourceLedger": {
-        "evidence": 12,
-        "reports": 12,
-        "analysts": 0,
-        "latestDate": "2026-06-16",
-        "topReports": [
-          {
-            "id": "ev_36a25e0303",
-            "title": "风电/绿电直供海底数据中心并网机制、电力稳定性与碳信用核算研究",
-            "summary": "日期：2026-06-16 分析师：utilities-analyst (公用事业分析师) 立场：支持 (Support) 主题：海上风电直供海底数据中心（UDC）的并网机制、电力稳定性与碳信用核...",
-            "href": "/investor/reports/archive-d53593343e25/",
-            "analyst": "未识别",
-            "date": "2026-06-16",
-            "chain": "AI 基础设施",
-            "supportType": "supports",
-            "importance": 52,
-            "confidence": 0.883
-          },
-          {
-            "id": "ev_406bdb2421",
-            "title": "电力基础设施与配电网容量 → 变压器交付周期与并网审批延迟如何约束超大规模厂商AI算力交付规模",
-            "summary": "电力基础设施与配电网容量 → 变压器交付周期与并网审批延迟如何约束超大规模厂商AI算力交付规模",
-            "href": "/investor/reports/archive-e89563218c33/",
-            "analyst": "未识别",
-            "date": "2026-06-15",
-            "chain": "电力与电网",
-            "supportType": "risk",
-            "importance": 64.2,
-            "confidence": 0.9
-          },
-          {
-            "id": "ev_021c52065d",
-            "title": "2026-06-15 能源行业分析师报告：AI电力缺口、电网设备与绿电投资逻辑",
-            "summary": "2026-06-15 能源行业分析师报告：AI电力缺口、电网设备与绿电投资逻辑",
-            "href": "/investor/reports/archive-0cb98533eb1e/",
-            "analyst": "未识别",
-            "date": "2026-06-15",
-            "chain": "电力与电网",
-            "supportType": "supports",
-            "importance": 52.6,
-            "confidence": 0.888
-          },
-          {
-            "id": "ev_0907c86ca6",
-            "title": "电力设备供应链与电网并网压力研究：变压器产能扩张与2027年后数据中心并网瓶颈分析",
-            "summary": "电力设备供应链与电网并网压力研究：变压器产能扩张与2027年后数据中心并网瓶颈分析",
-            "href": "/investor/reports/archive-ac04d2c9cf48/",
-            "analyst": "未识别",
-            "date": "2026-06-14",
-            "chain": "电力与电网",
-            "supportType": "risk",
-            "importance": 71.8,
-            "confidence": 0.9
-          },
-          {
-            "id": "ev_53027cfb19",
-            "title": "电力并网瓶颈：电价波动与资产定价风险",
-            "summary": "分析师：公用事业分析师 (Utilities Analyst) - 日期（机构工作日）：2026-06-12（亚洲/新加坡） - 立场： 压力测试 （针对研究记录01–02\"做多变压器 / EPC /...",
-            "href": "/investor/reports/archive-4e14c1d3cb03/",
-            "analyst": "未识别",
-            "date": "2026-06-12",
-            "chain": "电力与电网",
-            "supportType": "risk",
-            "importance": 64.8,
-            "confidence": 0.9
-          }
-        ]
-      },
-      "lastUpdated": "2026-06-16",
-      "evidenceFor": [
-        {
-          "id": "ev_36a25e0303",
-          "title": "风电/绿电直供海底数据中心并网机制、电力稳定性与碳信用核算研究",
-          "summary": "日期：2026-06-16 分析师：utilities-analyst (公用事业分析师) 立场：支持 (Support) 主题：海上风电直供海底数据中心（UDC）的并网机制、电力稳定性与碳信用核...",
-          "href": "/investor/reports/archive-d53593343e25/",
-          "analyst": "未识别",
-          "date": "2026-06-16",
-          "chain": "AI 基础设施",
-          "supportType": "supports",
-          "importance": 52,
-          "confidence": 0.883
-        },
-        {
-          "id": "ev_45365ea9b1",
-          "title": "变压器及电力设备产业链：全球产能弹性、毛利率水平与出海竞争格局",
-          "summary": "变压器及电力设备产业链：全球产能弹性、毛利率水平与出海竞争格局 发布日期：2026-05-23 行业板块：工业制造 / 电力设备与新能源 分析师：工业制造分析师 (indu...",
-          "href": "/investor/reports/archive-c48f4f6ca286/",
-          "analyst": "未识别",
-          "date": "2026-05-23",
-          "chain": "工业供给瓶颈",
-          "supportType": "supports",
-          "importance": 65,
-          "confidence": 0.9
-        },
-        {
-          "id": "ev_4968fcd893",
-          "title": "2026-05-17 电网电气化与新能源并网：铜铝需求的一阶支撑",
-          "summary": "研究记录 - 分析师: 公用事业分析师 (utilities-analyst) - 立场: support - 日期: 2026-05-17 (Asia/Singapore) - 主题: 配电网升级、特高压建设与大规模新能源...",
-          "href": "/investor/reports/archive-ce7822db55e6/",
-          "analyst": "未识别",
-          "date": "2026-05-17",
-          "chain": "电力与电网",
-          "supportType": "supports",
-          "importance": 59.2,
-          "confidence": 0.9
-        },
-        {
-          "id": "ev_021c52065d",
-          "title": "2026-06-15 能源行业分析师报告：AI电力缺口、电网设备与绿电投资逻辑",
-          "summary": "2026-06-15 能源行业分析师报告：AI电力缺口、电网设备与绿电投资逻辑",
-          "href": "/investor/reports/archive-0cb98533eb1e/",
-          "analyst": "未识别",
-          "date": "2026-06-15",
-          "chain": "电力与电网",
-          "supportType": "supports",
-          "importance": 52.6,
-          "confidence": 0.888
-        }
-      ],
-      "evidenceAgainst": [
-        {
-          "id": "ev_19f035e7e6",
-          "title": "AI数据中心的公用事业资本开支与电网并网瓶颈",
-          "summary": "日期（亚洲/新加坡工作日）： 2026-06-08 - 分析师： 公用事业分析师（电力、水务、环保、碳交易） - 立场： 压力测试 (Stress-test) —— 基于 prior research...",
-          "href": "/investor/reports/archive-33008c8f3e46/",
-          "analyst": "未识别",
-          "date": "2026-06-08",
-          "chain": "电力与电网",
-          "supportType": "risk",
-          "importance": 65.4,
-          "confidence": 0.9
-        },
-        {
-          "id": "ev_042c2ed3f2",
-          "title": "AI算力扩张的电力基础设施压力测试 - 2026-05-29",
-          "summary": "截至研究所工作日 2026-05-29，我从能源与电力基础设施侧对上一张 TMT 结论做压力测试：AI算力需求已经足以改变并网排队、变压器采购和新能源消纳格局，但真正的...",
-          "href": "/investor/reports/archive-8664b76c4305/",
-          "analyst": "未识别",
-          "date": "2026-05-29",
-          "chain": "电力与电网",
-          "supportType": "risk",
-          "importance": 60.8,
-          "confidence": 0.9
-        },
-        {
-          "id": "ev_8068303677",
-          "title": "东部AI算力可交付绿电压力测试 - 2026-06-11",
-          "summary": "截至研究所工作日2026-06-11，本报告对上一张卡的判断做压力测试：东部AI算力的约束不是全国电量总量，而是本地获批、冗余、低碳且可交付的电力容量。我的结论是...",
-          "href": "/investor/reports/archive-83693723eec6/",
-          "analyst": "未识别",
-          "date": "2026-06-11",
-          "chain": "AI 基础设施",
-          "supportType": "risk",
-          "importance": 53.2,
-          "confidence": 0.893
-        }
-      ],
-      "risks": [
-        {
-          "id": "risk_24e57c0310",
-          "title": "跨越电力约束：AI基础设施瓶颈向全球权益市场的配置与估值映射",
-          "summary": "截至 2026-06-14，经过九个阶段的结构性压力测试，我们确认了一个关键的相位转换：限制 AI 规模化扩张的边际约束已从 GPU 与芯片产能，实质性地迁移至电力与电网...",
-          "href": "/investor/reports/archive-6984a39e382c/",
-          "chain": "AI 基础设施",
-          "impact": 5,
-          "probability": 5,
-          "trend": "rising"
-        },
-        {
-          "id": "risk_e1a0ebdb9d",
-          "title": "电网设备供应链瓶颈：变压器及核心部件交期压力测试",
-          "summary": "工作日期：2026-06-14。本报告片对上一张能源侧结论做压力测试：增量电力可以建设，但 AI 产能能否通电，取决于变压器、开关柜、断路器、电缆和调试人力能否按同...",
-          "href": "/investor/reports/archive-6921ecb4fc86/",
-          "chain": "工业供给瓶颈",
-          "impact": 5,
-          "probability": 5,
-          "trend": "rising"
-        },
-        {
-          "id": "risk_61ebe06164",
-          "title": "电力配电设备产能扩张与供应链瓶颈：AI算力建设的硬约束",
-          "summary": "分析师：工业制造分析师（industrials-analyst） - 立场：support（强化 prior research notes的\"电力设备瓶颈是AI算力部署真正天花板\"判断） - 工作日期：2026-...",
-          "href": "/investor/reports/archive-43f32e01de75/",
-          "chain": "工业供给瓶颈",
-          "impact": 5,
-          "probability": 5,
-          "trend": "rising"
-        },
-        {
-          "id": "risk_d54879c18e",
-          "title": "取向硅钢产能扩张与地缘供应风险 - 2026-06-15",
-          "summary": "截至研究所工作日2026-06-15，本报告片对prior research notes“变压器短缺是硬性材料约束”的判断做 压力测试。我的结论是：GOES扩产确实存在，尤其体现在中国...",
-          "href": "/investor/reports/archive-105c4c6a9317/",
-          "chain": "工业供给瓶颈",
-          "impact": 5,
-          "probability": 5,
-          "trend": "rising"
-        }
-      ],
-      "falsifiers": [
-        "碳价长期低迷",
-        "新能源消纳恶化",
-        "储能收益率下滑",
-        "补贴和电价机制弱化"
-      ],
-      "monitors": [
-        "碳价",
-        "新能源装机",
-        "弃风弃光",
-        "储能收益率",
-        "绿电 PPA"
-      ],
-      "linkedReports": [
-        {
-          "id": "mag7-next-era-losers-6f2a8c9d",
-          "href": "/investor/deep-research/mag7-next-era-losers-6f2a8c9d/",
-          "label": "mag7 next era losers 6f2a8c9d"
-        },
-        {
-          "id": "transformer-goes-copper-bottleneck-fe892901",
-          "href": "/investor/deep-research/transformer-goes-copper-bottleneck-fe892901/",
-          "label": "transformer goes copper bottleneck fe892901"
-        },
-        {
-          "id": "china-power-equipment-export-policy-8678db7f",
-          "href": "/investor/deep-research/china-power-equipment-export-policy-8678db7f/",
-          "label": "china power equipment export policy 8678db7f"
-        },
-        {
-          "id": "ai-power-inflation-transmission-0c9ba15c",
-          "href": "/investor/deep-research/ai-power-inflation-transmission-0c9ba15c/",
-          "label": "ai power inflation transmission 0c9ba15c"
-        }
-      ]
-    },
-    {
       "id": "thesis_defense_aerospace_supply_chain",
       "title": "航空航天与国防供应链错配正在形成政策驱动的制造业弹性",
       "titleEn": "Aerospace and defense supply-chain mismatch is creating policy-driven manufacturing beta",
@@ -6826,240 +7031,11 @@
       "linkedReports": []
     },
     {
-      "id": "thesis_ai_power_grid_bottleneck",
-      "title": "AI 电力与电网瓶颈仍是基础设施主线",
-      "titleEn": "AI power and grid bottlenecks remain the infrastructure core",
-      "coreView": "当前共有 40 条证据、2 位分析师和 8 条风险信号指向该判断；主导链条为 电力与电网。该主题应作为可跟踪投资假设，而不是孤立结论。",
-      "direction": "conflicting",
-      "conviction": 32,
-      "status": "审慎验证",
-      "priority": 14.6,
-      "evidenceQuality": 8,
-      "riskPressure": 100,
-      "supportBalance": -6,
-      "score": {
-        "for": 2,
-        "against": 8,
-        "analysts": 2,
-        "recent": 0,
-        "risks": 8
-      },
-      "sourceLedger": {
-        "evidence": 10,
-        "reports": 10,
-        "analysts": 1,
-        "latestDate": "2026-06-14",
-        "topReports": [
-          {
-            "id": "ev_0907c86ca6",
-            "title": "电力设备供应链与电网并网压力研究：变压器产能扩张与2027年后数据中心并网瓶颈分析",
-            "summary": "电力设备供应链与电网并网压力研究：变压器产能扩张与2027年后数据中心并网瓶颈分析",
-            "href": "/investor/reports/archive-ac04d2c9cf48/",
-            "analyst": "未识别",
-            "date": "2026-06-14",
-            "chain": "电力与电网",
-            "supportType": "risk",
-            "importance": 71.8,
-            "confidence": 0.9
-          },
-          {
-            "id": "ev_83fea59b99",
-            "title": "全球宏观研究：关税壁垒与电网现代化税",
-            "summary": "全球宏观研究：关税壁垒与电网现代化税 非晶变压器短缺背景下对美国公用事业资本开支（Rate Base）及数据中心PPA电价与延期风险的影响 工作日期： 2026-06-12 分...",
-            "href": "/investor/reports/archive-238563e1b622/",
-            "analyst": "未识别",
-            "date": "2026-06-12",
-            "chain": "电力与电网",
-            "supportType": "risk",
-            "importance": 73.8,
-            "confidence": 0.9
-          },
-          {
-            "id": "ev_313bd4463c",
-            "title": "公用事业深度分析：电力设备供应链瓶颈与电网并网对 AI 数据中心的风险评估",
-            "summary": "公用事业深度分析：电力设备供应链瓶颈与电网并网对 AI 数据中心的风险评估 日期： 2026-06-09 分析师 ID： utilities-analyst 主题： 针对 PJM/ERCOT 区域 20-2...",
-            "href": "/investor/reports/archive-1541cdac5ad4/",
-            "analyst": "未识别",
-            "date": "2026-06-09",
-            "chain": "电力与电网",
-            "supportType": "risk",
-            "importance": 63.8,
-            "confidence": 0.9
-          },
-          {
-            "id": "ev_19f035e7e6",
-            "title": "AI数据中心的公用事业资本开支与电网并网瓶颈",
-            "summary": "日期（亚洲/新加坡工作日）： 2026-06-08 - 分析师： 公用事业分析师（电力、水务、环保、碳交易） - 立场： 压力测试 (Stress-test) —— 基于 prior research...",
-            "href": "/investor/reports/archive-33008c8f3e46/",
-            "analyst": "未识别",
-            "date": "2026-06-08",
-            "chain": "电力与电网",
-            "supportType": "risk",
-            "importance": 65.4,
-            "confidence": 0.9
-          },
-          {
-            "id": "ev_d435b56e6c",
-            "title": "AI数据中心并网容量、大负荷电价与电网设备交期（2026-05-30）",
-            "summary": "分析师： 公用事业分析师 日期： 2026-05-30 研究/研究记录： b7230bd9-89c6-4b22-98ae-b7547288bb20 / prior research notes立场： synthesize",
-            "href": "/investor/reports/archive-374c1f8518ea/",
-            "analyst": "未识别",
-            "date": "2026-05-30",
-            "chain": "电力与电网",
-            "supportType": "supports",
-            "importance": 58.8,
-            "confidence": 0.9
-          }
-        ]
-      },
-      "lastUpdated": "2026-06-17",
-      "evidenceFor": [
-        {
-          "id": "ev_f6b3d2a28c",
-          "title": "电气化工业周期的核心资产：电网重装备、变压器供应链与数据中心电源链的产能与订单兑现分析 (2026...",
-          "summary": "电气化工业周期的核心资产：电网重装备、变压器供应链与数据中心电源链的产能与订单兑现分析 (2026–2028)",
-          "href": "/investor/reports/archive-a14d11c9335b/",
-          "analyst": "未识别",
-          "date": "2026-05-24",
-          "chain": "工业供给瓶颈",
-          "supportType": "supports",
-          "importance": 65,
-          "confidence": 0.9
-        },
-        {
-          "id": "ev_d435b56e6c",
-          "title": "AI数据中心并网容量、大负荷电价与电网设备交期（2026-05-30）",
-          "summary": "分析师： 公用事业分析师 日期： 2026-05-30 研究/研究记录： b7230bd9-89c6-4b22-98ae-b7547288bb20 / prior research notes立场： synthesize",
-          "href": "/investor/reports/archive-374c1f8518ea/",
-          "analyst": "未识别",
-          "date": "2026-05-30",
-          "chain": "电力与电网",
-          "supportType": "supports",
-          "importance": 58.8,
-          "confidence": 0.9
-        }
-      ],
-      "evidenceAgainst": [
-        {
-          "id": "ev_0907c86ca6",
-          "title": "电力设备供应链与电网并网压力研究：变压器产能扩张与2027年后数据中心并网瓶颈分析",
-          "summary": "电力设备供应链与电网并网压力研究：变压器产能扩张与2027年后数据中心并网瓶颈分析",
-          "href": "/investor/reports/archive-ac04d2c9cf48/",
-          "analyst": "未识别",
-          "date": "2026-06-14",
-          "chain": "电力与电网",
-          "supportType": "risk",
-          "importance": 71.8,
-          "confidence": 0.9
-        },
-        {
-          "id": "ev_19f035e7e6",
-          "title": "AI数据中心的公用事业资本开支与电网并网瓶颈",
-          "summary": "日期（亚洲/新加坡工作日）： 2026-06-08 - 分析师： 公用事业分析师（电力、水务、环保、碳交易） - 立场： 压力测试 (Stress-test) —— 基于 prior research...",
-          "href": "/investor/reports/archive-33008c8f3e46/",
-          "analyst": "未识别",
-          "date": "2026-06-08",
-          "chain": "电力与电网",
-          "supportType": "risk",
-          "importance": 65.4,
-          "confidence": 0.9
-        },
-        {
-          "id": "ev_313bd4463c",
-          "title": "公用事业深度分析：电力设备供应链瓶颈与电网并网对 AI 数据中心的风险评估",
-          "summary": "公用事业深度分析：电力设备供应链瓶颈与电网并网对 AI 数据中心的风险评估 日期： 2026-06-09 分析师 ID： utilities-analyst 主题： 针对 PJM/ERCOT 区域 20-2...",
-          "href": "/investor/reports/archive-1541cdac5ad4/",
-          "analyst": "未识别",
-          "date": "2026-06-09",
-          "chain": "电力与电网",
-          "supportType": "risk",
-          "importance": 63.8,
-          "confidence": 0.9
-        }
-      ],
-      "risks": [
-        {
-          "id": "risk_24e57c0310",
-          "title": "跨越电力约束：AI基础设施瓶颈向全球权益市场的配置与估值映射",
-          "summary": "截至 2026-06-14，经过九个阶段的结构性压力测试，我们确认了一个关键的相位转换：限制 AI 规模化扩张的边际约束已从 GPU 与芯片产能，实质性地迁移至电力与电网...",
-          "href": "/investor/reports/archive-6984a39e382c/",
-          "chain": "AI 基础设施",
-          "impact": 5,
-          "probability": 5,
-          "trend": "rising"
-        },
-        {
-          "id": "risk_e1a0ebdb9d",
-          "title": "电网设备供应链瓶颈：变压器及核心部件交期压力测试",
-          "summary": "工作日期：2026-06-14。本报告片对上一张能源侧结论做压力测试：增量电力可以建设，但 AI 产能能否通电，取决于变压器、开关柜、断路器、电缆和调试人力能否按同...",
-          "href": "/investor/reports/archive-6921ecb4fc86/",
-          "chain": "工业供给瓶颈",
-          "impact": 5,
-          "probability": 5,
-          "trend": "rising"
-        },
-        {
-          "id": "risk_61ebe06164",
-          "title": "电力配电设备产能扩张与供应链瓶颈：AI算力建设的硬约束",
-          "summary": "分析师：工业制造分析师（industrials-analyst） - 立场：support（强化 prior research notes的\"电力设备瓶颈是AI算力部署真正天花板\"判断） - 工作日期：2026-...",
-          "href": "/investor/reports/archive-43f32e01de75/",
-          "chain": "工业供给瓶颈",
-          "impact": 5,
-          "probability": 5,
-          "trend": "rising"
-        },
-        {
-          "id": "risk_d54879c18e",
-          "title": "取向硅钢产能扩张与地缘供应风险 - 2026-06-15",
-          "summary": "截至研究所工作日2026-06-15，本报告片对prior research notes“变压器短缺是硬性材料约束”的判断做 压力测试。我的结论是：GOES扩产确实存在，尤其体现在中国...",
-          "href": "/investor/reports/archive-105c4c6a9317/",
-          "chain": "工业供给瓶颈",
-          "impact": 5,
-          "probability": 5,
-          "trend": "rising"
-        }
-      ],
-      "falsifiers": [
-        "并网队列明显缩短",
-        "PPA 价格回落",
-        "设备交期快速恢复",
-        "客户资本开支下修"
-      ],
-      "monitors": [
-        "AIDC 并网队列",
-        "PPA 报价",
-        "变压器交期",
-        "公用事业资本开支"
-      ],
-      "linkedReports": [
-        {
-          "id": "mag7-next-era-losers-6f2a8c9d",
-          "href": "/investor/deep-research/mag7-next-era-losers-6f2a8c9d/",
-          "label": "mag7 next era losers 6f2a8c9d"
-        },
-        {
-          "id": "transformer-goes-copper-bottleneck-fe892901",
-          "href": "/investor/deep-research/transformer-goes-copper-bottleneck-fe892901/",
-          "label": "transformer goes copper bottleneck fe892901"
-        },
-        {
-          "id": "china-power-equipment-export-policy-8678db7f",
-          "href": "/investor/deep-research/china-power-equipment-export-policy-8678db7f/",
-          "label": "china power equipment export policy 8678db7f"
-        },
-        {
-          "id": "ai-power-inflation-transmission-0c9ba15c",
-          "href": "/investor/deep-research/ai-power-inflation-transmission-0c9ba15c/",
-          "label": "ai power inflation transmission 0c9ba15c"
-        }
-      ]
-    },
-    {
       "id": "thesis_research_risk_quality",
       "title": "风险核查与证据质量是主题交易的必要过滤器",
       "titleEn": "Risk verification and evidence quality are necessary filters for theme trades",
       "coreView": "当前共有 40 条证据、1 位分析师和 8 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
-      "direction": "conflicting",
+      "direction": "strengthening",
       "conviction": 26,
       "status": "审慎验证",
       "priority": 7.4,
