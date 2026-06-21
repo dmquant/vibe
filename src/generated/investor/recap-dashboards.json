@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-19T08:05:14.362Z",
+  "generatedAt": "2026-06-21T12:26:24.930Z",
   "dashboards": [
     {
-      "slug": "living-msci-029ce03d-2026-06-18",
+      "slug": "living-msci-029ce03d-2026-06-21",
       "title": "MSCI 调整窗口是被动资金与主动减仓相互博弈的流动性事件：动态复盘",
       "subtitle": "当前共有 40 条证据、5 位分析师和 1 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
-      "date": "2026-06-18",
+      "date": "2026-06-21",
       "badge": "LIVING THESIS RECAP",
       "reportHref": "/investor/research-network/#thesis-029ce03da1",
       "chartTitle": "主线证据强度演化",
@@ -13,28 +13,28 @@
       "chartUnit": "证据强度",
       "chart": {
         "labels": [
-          "06-09",
-          "06-10",
-          "06-11",
           "06-12",
           "06-13",
           "06-14",
           "06-15",
           "06-16",
           "06-17",
-          "06-18"
+          "06-18",
+          "06-19",
+          "06-20",
+          "06-21"
         ],
         "values": [
-          33,
-          37.4,
-          12,
-          27.2,
-          12,
-          12,
+          39,
+          22.4,
+          20.8,
+          31.2,
           12,
           12,
           12,
-          12
+          12,
+          12,
+          12.6
         ]
       },
       "metrics": [
@@ -45,12 +45,12 @@
         },
         {
           "label": "风险事件",
-          "value": "136",
+          "value": "135",
           "accent": "red"
         },
         {
           "label": "分析师",
-          "value": "17",
+          "value": "15",
           "accent": "green"
         },
         {
@@ -66,17 +66,17 @@
         },
         {
           "title": "最新变化",
-          "text": "2026-06-18: 超大规模云厂商正通过将资本开支直接投向核电PPA、表后燃气轮机及主动式电池储能（BESS），从单纯的算力采购者向“能源开发与系统集成商”转变，以解除“通电围墙”物理并网瓶颈，防止高价购入的算力资产沦为闲置搁浅损失。"
+          "text": "2026-06-21: AI算力对电网密度的压力测试：高壁垒HVDC与特高压能否满足数据中心极端负载需求？"
         },
         {
           "title": "证据纪律",
-          "text": "当前以 6 条支持、136 条风险和 18 条观察证据进行动态跟踪。"
+          "text": "当前以 8 条支持、135 条风险和 17 条观察证据进行动态跟踪。"
         }
       ],
       "checklist": [
         {
           "label": "支持证据",
-          "status": "6 条",
+          "status": "8 条",
           "detail": "继续观察是否出现跨来源、跨分析师的同向验证。",
           "bull": "支持证据集中出现在最新日期且源报告可追溯",
           "bear": "支持证据停留在旧报告或单一来源",
@@ -84,7 +84,7 @@
         },
         {
           "label": "风险证据",
-          "status": "136 条",
+          "status": "135 条",
           "detail": "风险证据用于判断主线是否变成拥挤交易或证伪样本。",
           "bull": "风险被新证据消化",
           "bear": "风险事件数量超过支持事件",
@@ -93,7 +93,7 @@
         {
           "label": "监控词",
           "status": "HBM / GPU / CPI",
-          "detail": "HBM / GPU / CPI / 电力 / MSCI / rebalance / windows / liquidity",
+          "detail": "HBM / GPU / CPI / MSCI / rebalance / windows / liquidity / events",
           "bull": "监控词在新报告中被反复验证",
           "bear": "监控词热度上升但价格或基本面未兑现",
           "active": "bull"
@@ -101,66 +101,39 @@
       ],
       "timeline": [
         {
-          "date": "2026-06-09",
-          "value": 33,
-          "label": "观察",
-          "title": "先进封装设备封锁将物理锁定中国2027年AI算力供给至基线的50%左右，但大基金三期、算法效率与存量优化的三重对冲使宏观GDP冲击可控在0.2pp内，代价主要体现…",
-          "view": "2026-06-09评估：H2 2026若先进封装设备(TCB/混合键合/HBM堆叠)被纳入FDPR并叠加穿透式所有权审查，中国本土CoWoS等价产能将被锁定在18-22万片/年(12寸等效)，相比无封锁基线缺口45-50%，2027年高端AI加速器交付仅22-28万张(基线45-55万)，等效训…",
-          "check": "支持 0 / 风险 2 / 观察 1",
-          "href": "/investor/research-network/#thesis-029ce03da1"
-        },
-        {
-          "date": "2026-06-10",
-          "value": 37.4,
-          "label": "风险",
-          "title": "AI需求到2026年底足以兑现HBM锁定的供给，但A股的真正约束是份额捕获与财政融资通量，因此应超配云挂钩供应商与一体化国产替代栈、把端侧AI作期权、低配离岸GP…",
-          "view": "锚定2026-06-10，本卡综合第01卡（首席策略师）与第02卡（政策分析师）。中国宏观叠加三条修正：(1) A股AI capex由大基金三期+省级算力券+头部云自融政策配给，民营信贷通道薄，是财政题非周期题；(2) 5月PMI 49.6 / Caixin 50.4 / 社融~8.4% / CP…",
-          "check": "支持 0 / 风险 1 / 观察 0",
-          "href": "/investor/research-network/#thesis-029ce03da1"
-        },
-        {
-          "date": "2026-06-11",
-          "value": 12,
-          "label": "风险",
-          "title": "SpaceX IPO的流动性效应只能压估值与挤压长尾neocloud，无法动摇已被OCF、合同预付款与物理瓶颈三重焊死的Hyperscaler CY26 5000…",
-          "view": "压力测试结论：SpaceX 750–1000亿美元IPO在2–6周内会通过被动指数再平衡和AI主题ETF轮动压制Mag-7估值5–9%，但不会动摇Hyperscaler的CY26资本开支底座。Top-5 CY26资本开支5000–5600亿美元已被OCF（合并约6050亿）覆盖85–90%，并通过…",
-          "check": "支持 0 / 风险 9 / 观察 1",
-          "href": "/investor/research-network/#thesis-029ce03da1"
-        },
-        {
           "date": "2026-06-12",
-          "value": 27.2,
-          "label": "风险",
-          "title": "为支撑三层算力织物，AI芯片与先进封装如何演进以匹配电力波动与边缘推理的功率包络",
-          "view": "综合并支持卡片04的三层算力织物，下沉到硅基与封装层。关键洞见：'电力波动友好'主要是电力电子＋调度固件问题，而非新晶圆问题。NVIDIA GB300靠电源货架（65 J/GPU储能＋功率封顶斜率＋功率烧除）把Megatron训练电网峰值砍约30% [S1]，DVFS早是标配 [S2]；同步功率摆…",
-          "check": "支持 1 / 风险 5 / 观察 1",
+          "value": 39,
+          "label": "观察",
+          "title": "Your Role: AI基础设施分析师 (AI Infrastructure Analyst) Expertise: AI compute/datacenter…",
+          "view": "Your Role: AI基础设施分析师 (AI Infrastructure Analyst) Expertise: AI compute/datacenter/GPU clusters, power & grid bottleneck, hyperscaler capex Step −1 — …",
+          "check": "支持 0 / 风险 1 / 观察 1",
           "href": "/investor/research-network/#thesis-029ce03da1"
         },
         {
           "date": "2026-06-13",
-          "value": 12,
+          "value": 22.4,
           "label": "风险",
           "title": "GB200 级效率提升改善 AI factory 经济性，但 2026-2028 年真正限制部署节奏的是站点电力、并网、变压器、稳定电源和电网运行能力，而不是 C…",
           "view": "2026-06-13：本卡对 NVIDIA 护城河做电力压力测试。GB200 NVL72 单机柜约 120 kW，1 GW IT 功率约支持 8,333 个机柜、约 600,000 颗 GPU。IEA、DOE/LBNL 与 NERC 显示，数据中心用电、并网队列、变压器和燃机交期都在拉长，大型计算…",
-          "check": "支持 0 / 风险 10 / 观察 1",
+          "check": "支持 0 / 风险 4 / 观察 1",
           "href": "/investor/research-network/#thesis-029ce03da1"
         },
         {
           "date": "2026-06-14",
-          "value": 12,
+          "value": 20.8,
           "label": "风险",
           "title": "AI先进封装与HBM产能瓶颈对算力基础设施扩张及超大规模厂商资本开支的影响",
           "view": "支持半导体分析师Research note 01的论点并向下游延伸：CoWoS/HBM确为算力的关键约束，2026年部署受封装与内存所限（CoWoS扩至约13万片/月仍订满；SK Hynix与Micron 2026年HBM售罄；HBM4验证延迟使NVIDIA将Rubin目标由200万下调至150万…",
-          "check": "支持 1 / 风险 13 / 观察 0",
+          "check": "支持 0 / 风险 4 / 观察 0",
           "href": "/investor/research-network/#thesis-029ce03da1"
         },
         {
           "date": "2026-06-15",
-          "value": 12,
+          "value": 31.2,
           "label": "风险",
-          "title": "数据中心的物理功耗墙迫使超大厂将有限的电力配额向具有3-5倍能效优势的ASIC倾斜，实质性加速了算力硬件市场从“通用高溢价”向“定制化能效套利”的重塑。",
-          "view": "2026年，电力配给成为AI基础设施的核心硬约束。四大超大厂高达6300亿美元的资本开支正大规模向功耗更低、每瓦特产出更高的定制化ASIC倾斜。通用GPU飙升至2300W的单卡功耗和超120kW的机柜密度让电网不堪重负，促使ASIC以近45%的增速抢占推理市场，从而实质性削弱了英伟达的算力溢价。",
-          "check": "支持 0 / 风险 8 / 观察 2",
+          "title": "验证AI算力硬件链的估值承压：流动性虹吸下的先进封装与GPU产业链韧性评估",
+          "view": "本卡对AI算力硬件链做压力测试，得出'分化韧性'结论。资金流层面确认虹吸：2026-06-08半导体−219.33亿、通信−98.35亿、消费电子−69.92亿元净流出居前[S6]，年内93家半导体公司减持[S7]，叠加CXMT约295亿IPO锚定[S9]。但估值下移是资金流/轮动驱动、非盈利驱动…",
+          "check": "支持 0 / 风险 3 / 观察 1",
           "href": "/investor/research-network/#thesis-029ce03da1"
         },
         {
@@ -169,7 +142,7 @@
           "label": "风险",
           "title": "通胀和高利率提高了AI硬件基础设施的质量门槛，但没有削弱其配置价值；应买入瓶颈供应商而非泛AI叙事。",
           "view": "截至2026-06-16，本卡支持“硬科技配置中保留AI基础设施”的上一轮判断，但建议从广义AI beta收窄到有订单、定价权和瓶颈属性的硬件基础设施。高利率会压缩投机型数据中心开发商和远期AI应用估值，却未削弱GPU、定制AI芯片、HBM、配电、冷却、变压器、开关设备和已锁定电力的数据中心容量的…",
-          "check": "支持 1 / 风险 14 / 观察 2",
+          "check": "支持 1 / 风险 12 / 观察 1",
           "href": "/investor/research-network/#thesis-029ce03da1"
         },
         {
@@ -178,7 +151,7 @@
           "label": "支持",
           "title": "AIDD是AI基础设施需求的高质量增量因子：规模小于通用大模型，但持续性、数据壁垒和监管/IP属性更强。",
           "view": "截至2026-06-18，本卡片支持上一张卡片的方向：AIDD不会单独决定hyperscaler capex，但会把高价值、持续性的生命科学工作负载接入GPU、网络、存储、液冷和电力保障型数据中心。Recursion BioHive-2、DCAI Gefion、Novo Nordisk、Isomo…",
-          "check": "支持 1 / 风险 10 / 观察 0",
+          "check": "支持 1 / 风险 11 / 观察 0",
           "href": "/investor/research-network/#thesis-029ce03da1"
         },
         {
@@ -187,7 +160,34 @@
           "label": "风险",
           "title": "电力/电网瓶颈真实且已在容量价格中显形,但2027年前仅推迟部分美国新增集群、不封顶全球GPU部署,Research note 01的BOM组合在2026至202…",
           "view": "AI算力电力瓶颈真实存在但属于'延后+置换'而非'封顶':PJM 2026/27容量价已跳11倍至$329.17/MW-日,2027/28预测缺口6.6 GW,新接入等待40个月;ERCOT 2026 Q1单季198 GW申请,累计大负荷队列约410 GW;全球电网接入等待5-10年,变压器交期1…",
-          "check": "支持 1 / 风险 10 / 观察 1",
+          "check": "支持 1 / 风险 12 / 观察 2",
+          "href": "/investor/research-network/#thesis-029ce03da1"
+        },
+        {
+          "date": "2026-06-19",
+          "value": 12,
+          "label": "风险",
+          "title": "电力与封装成本上升会触发AI基础设施技术路线调整，但截至2026-06-20仍不足以触发超大规模云厂商AI芯片采购总量的全面回撤。",
+          "view": "工作日2026-06-20：本卡压力测试认为，电力和先进封装成本上升不会在2026年触发超大规模云厂商全面削减AI芯片采购，但会提高单位弹性，推动技术路线从“更多GPU插槽”转向“每瓦性能、液冷机架、自研ASIC、提前锁定CoWoS/HBM和电力站点”。真正风险是并网、变电站、CoWoS或HBM配…",
+          "check": "支持 0 / 风险 14 / 观察 1",
+          "href": "/investor/research-network/#thesis-029ce03da1"
+        },
+        {
+          "date": "2026-06-20",
+          "value": 12,
+          "label": "风险",
+          "title": "虽然HBM国产化良率崩塌会将集群 CapEx 推升 98%，但中国互联网巨头通过异构分级部署与算法优化（缩减30%GPU需求）并结合西部绿电直连套利（LCOE降至…",
+          "view": "评估HBM成本压力对AI集群TCO及扩容策略的传导。100%国产材料导致HBM3封装良率崩塌至4.11%，推升10000颗GPU集群CapEx至8.17亿美元，东部煤电下3年TCO达10.17亿美元（+66.13%）。建议协同优化：架构上采取60% HBM3与40% HBM2E的分级部署，结合算法…",
+          "check": "支持 1 / 风险 19 / 观察 0",
+          "href": "/investor/research-network/#thesis-029ce03da1"
+        },
+        {
+          "date": "2026-06-21",
+          "value": 12.6,
+          "label": "风险",
+          "title": "Hyperscaler资本开支正从算力优先转向电力协同：总量仍大，但边际一美元先购买电力、进度和并网确定性，再购买下一组加速器。",
+          "view": "截至2026-06-21，本卡压力测试认为：Hyperscaler资本开支不会因电力瓶颈在2026-2027年崩塌，但边际规则已从“买更多GPU”转向“按确定日期拿到可通电MW”。核电购电、表后自发电、并网权、长交期电气设备和区域边缘部署正在获得更高资本权重。核电是长期稀缺性对冲，不是近端解决方案…",
+          "check": "支持 0 / 风险 7 / 观察 0",
           "href": "/investor/research-network/#thesis-029ce03da1"
         }
       ],
@@ -202,13 +202,13 @@
           "label": "维度二",
           "title": "证据",
           "front": "证据是否可追溯？",
-          "back": "覆盖 17 位分析师和 5 类公开来源。"
+          "back": "覆盖 15 位分析师和 6 类公开来源。"
         },
         {
           "label": "维度三",
           "title": "证伪",
           "front": "风险是否上升？",
-          "back": "风险事件 136 条，方向为 分歧。"
+          "back": "风险事件 135 条，方向为 分歧。"
         }
       ],
       "sources": [
@@ -222,39 +222,39 @@
       "kind": "living_thesis_recap"
     },
     {
-      "slug": "living-a-70daf872-2026-06-18",
-      "title": "A 股红利与硬科技杠铃仍是政策、利率和风险偏好的组合表达：动态复盘",
-      "subtitle": "当前共有 40 条证据、2 位分析师和 1 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
-      "date": "2026-06-18",
+      "slug": "living-a803fa3312-a803fa33-2026-06-21",
+      "title": "美联储路径仍是全球资产再定价的总阀门：动态复盘",
+      "subtitle": "当前共有 40 条证据、3 位分析师和 8 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
+      "date": "2026-06-21",
       "badge": "LIVING THESIS RECAP",
-      "reportHref": "/investor/research-network/#thesis-70daf87262",
+      "reportHref": "/investor/research-network/#thesis-a803fa3312",
       "chartTitle": "主线证据强度演化",
       "chartDescription": "由公开研究事件按日期聚合，显示支持、风险和观察证据如何改变主线强度。",
       "chartUnit": "证据强度",
       "chart": {
         "labels": [
-          "06-07",
-          "06-08",
-          "06-09",
-          "06-10",
-          "06-11",
           "06-12",
+          "06-13",
+          "06-14",
           "06-15",
           "06-16",
           "06-17",
-          "06-18"
+          "06-18",
+          "06-19",
+          "06-20",
+          "06-21"
         ],
         "values": [
-          24,
-          18.4,
-          26.8,
-          34.2,
-          41.6,
-          43,
-          47.4,
-          57.8,
-          56.2,
-          36.6
+          36,
+          36.4,
+          12,
+          31.2,
+          29.6,
+          37,
+          44.4,
+          15.8,
+          12,
+          18.6
         ]
       },
       "metrics": [
@@ -265,12 +265,12 @@
         },
         {
           "label": "风险事件",
-          "value": "114",
+          "value": "125",
           "accent": "red"
         },
         {
           "label": "分析师",
-          "value": "10",
+          "value": "11",
           "accent": "green"
         },
         {
@@ -282,21 +282,21 @@
       "conclusions": [
         {
           "title": "主线定义",
-          "text": "当前共有 40 条证据、2 位分析师和 1 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。"
+          "text": "当前共有 40 条证据、3 位分析师和 8 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。"
         },
         {
           "title": "最新变化",
-          "text": "2026-06-18: [auto-handoff] A股电子行业两融极值维保比例与负Gamma强平压力测试"
+          "text": "2026-06-21: 2026-06-21：6月FOMC把“更高更久”重新定价为加息风险"
         },
         {
           "title": "证据纪律",
-          "text": "当前以 9 条支持、114 条风险和 37 条观察证据进行动态跟踪。"
+          "text": "当前以 8 条支持、125 条风险和 27 条观察证据进行动态跟踪。"
         }
       ],
       "checklist": [
         {
           "label": "支持证据",
-          "status": "9 条",
+          "status": "8 条",
           "detail": "继续观察是否出现跨来源、跨分析师的同向验证。",
           "bull": "支持证据集中出现在最新日期且源报告可追溯",
           "bear": "支持证据停留在旧报告或单一来源",
@@ -304,7 +304,7 @@
         },
         {
           "label": "风险证据",
-          "status": "114 条",
+          "status": "125 条",
           "detail": "风险证据用于判断主线是否变成拥挤交易或证伪样本。",
           "bull": "风险被新证据消化",
           "bear": "风险事件数量超过支持事件",
@@ -312,8 +312,8 @@
         },
         {
           "label": "监控词",
-          "status": "CPI / 融资余额 / A-share",
-          "detail": "CPI / 融资余额 / A-share / dividend / hard-tech / barbell / remains / portfolio",
+          "status": "美联储 / CPI / PCE",
+          "detail": "美联储 / CPI / PCE / 美元 / path / remains / master / valve",
           "bull": "监控词在新报告中被反复验证",
           "bear": "监控词热度上升但价格或基本面未兑现",
           "active": "bull"
@@ -321,94 +321,94 @@
       ],
       "timeline": [
         {
-          "date": "2026-06-07",
-          "value": 24,
-          "label": "风险",
-          "title": "在M1及社融等硬数据证伪“信用脉冲”后，流动性受限与解禁压力迫使A股向具备325bp高股息利差的防御性红利板块（公用事业、银行）全面切换。",
-          "view": "基于信用脉冲被证伪及流动性维稳环境，我们测算A股增量资金见顶（融资余额约1.48万亿）且Q3面临科技股6000亿解禁压力。中证红利指数5.5%的股息率相较2.25%的10年期国债收益率提供高达325bp的安全垫，确认策略重心向公用事业及国有大行等红利资产切换的逻辑成立。",
-          "check": "支持 0 / 风险 3 / 观察 0",
-          "href": "/investor/research-network/#thesis-70daf87262"
-        },
-        {
-          "date": "2026-06-08",
-          "value": 18.4,
-          "label": "风险",
-          "title": "[auto-handoff] 5月CPI/PPI对A股风格切换的影响",
-          "view": "致 A股策略师： 协同任务已完成。执行方为 中国宏观分析师。 模式: adhoc 会话: a88724c5-4840-4393-aed7-8e65af049aa2 结果摘要: Wrote handoff_response.md (3203 bytes); wrote handoff_respons…",
-          "check": "支持 1 / 风险 6 / 观察 1",
-          "href": "/investor/research-network/#thesis-70daf87262"
-        },
-        {
-          "date": "2026-06-09",
-          "value": 26.8,
-          "label": "风险",
-          "title": "[auto-handoff] SFISF工具与国家队资金在因子崩塌情景下的微观对冲与流动性承接机制协查",
-          "view": "致 因子研究员： 协同任务已完成。执行方为 中国宏观分析师。 模式: adhoc 会话: 4ad9a2bb-ab24-4df5-8bde-aecb8f7564ca 结果摘要: Wrote handoff_response.md (12087 bytes); wrote handoff_respon…",
-          "check": "支持 0 / 风险 3 / 观察 0",
-          "href": "/investor/research-network/#thesis-70daf87262"
-        },
-        {
-          "date": "2026-06-10",
-          "value": 34.2,
-          "label": "风险",
-          "title": "整合负Gamma脆弱性、VaR超限与对冲缺口后，自营成长/科创敞口的战略定位",
-          "view": "综合Research note 01–05：阿特斯63.01%解禁后科创量缩价升，反弹实为负Gamma对冲+空头回补，杠杆单边（融资余额3792.73亿 vs 融券13亿）。今日美国5月CPI、6月12日SpaceX上市与科创50样本调整三事件叠加，99% VaR超限1.9–3.3倍，且期货对冲尾…",
-          "check": "支持 0 / 风险 5 / 观察 6",
-          "href": "/investor/research-network/#thesis-70daf87262"
-        },
-        {
-          "date": "2026-06-11",
-          "value": 41.6,
-          "label": "风险",
-          "title": "具身智能主题仍可投，但 2026-06-11 的 A 股市场结构要求降低总仓位，把高两融、高成交且缺乏外汇对冲的内需链标的放入严格止损桶。",
-          "view": "2026-06-11：本卡对具身智能 A 股篮子做两融、成交与外资可得数据压力测试。结论是：短线拥挤度确实主要集中在“人民币收入 / 硬通货成本”或近似分组，尤其是柯力传感、绿的谐波、奥比中光、拓斯达；但若只看融资余额绝对值，三花智控、汇川技术等更全球化大市值标的会稀释结论。国内杠杆拥挤已验证，外…",
-          "check": "支持 0 / 风险 1 / 观察 0",
-          "href": "/investor/research-network/#thesis-70daf87262"
-        },
-        {
           "date": "2026-06-12",
-          "value": 43,
+          "value": 36,
           "label": "风险",
-          "title": "Work Summary For Research note 09, we conducted a macro and micro market stress t…",
-          "view": "Work Summary For Research note 09, we conducted a macro and micro market stress test on the proposed 30% nominal put option hedging strategy for the …",
+          "title": "贸易壁垒倒逼海外布局对国别经常账户的冲击远小于市场叙事，真正可观测的重塑发生在服务与初次收入账户、以及欧洲电价通胀渠道，特种海运对全球CPI的传导被高估。",
+          "view": "截至2026-06-12，本卡对'贸易壁垒倒逼本地化将快速重塑中欧/中美经常账户、并通过特种海运推升全球通胀'的线性叙事进行压力测试。结论：货物贸易顺差塌缩论被证伪——年化影响仅占中国货物顺差0.6%–0.8%；服务出口(EPC+租赁)与FDI利润汇回反向贡献中国经常账户。中欧合计经常账户净变化-…",
           "check": "支持 0 / 风险 1 / 观察 0",
-          "href": "/investor/research-network/#thesis-70daf87262"
+          "href": "/investor/research-network/#thesis-a803fa3312"
+        },
+        {
+          "date": "2026-06-13",
+          "value": 36.4,
+          "label": "支持",
+          "title": "结构性金属供给紧缩对全球通胀及美联储政策路径的影响",
+          "view": "支持（有界定）：铜/铝结构性缺口驱动的二次通胀足以硬化美联储终端利率逻辑，但机制是抬高底部、消除2026年降息期权，而非单独迫使加息。LME铜2026年6月初约13,800美元/吨、1月29日创14,527.50美元/吨历史高位，高盛上调年底预测至13,735；铝突破3,015.50美元/吨、对应…",
+          "check": "支持 1 / 风险 4 / 观察 3",
+          "href": "/investor/research-network/#thesis-a803fa3312"
+        },
+        {
+          "date": "2026-06-14",
+          "value": 12,
+          "label": "风险",
+          "title": "能源CPI与核心CPI背离下，美联储应上调通胀预测并取消2026年降息，但6月仍以鹰派按兵不动为基准。",
+          "view": "截至2026-06-14，能源冲击要求美联储显著上调2026年总体PCE预测，但核心上修应更温和。5月CPI同比4.2%、核心2.9%，加上4月PCE 3.8%、核心PCE 3.3%，说明压力真实但尚未全面扩散。基准建议是6月维持3.50%-3.75%，把2026年点阵图从一次降息改为不降息；若布…",
+          "check": "支持 1 / 风险 13 / 观察 4",
+          "href": "/investor/research-network/#thesis-a803fa3312"
         },
         {
           "date": "2026-06-15",
-          "value": 47.4,
+          "value": 31.2,
           "label": "风险",
-          "title": "[auto-handoff] 美国CPI/PPI背离对大类资产风险溢价及下半年美股板块轮动影响研判",
-          "view": "致 全球宏观分析师： 协同任务已完成。执行方为 首席策略师。 模式: adhoc 会话: f4668e4f-748a-467a-bfe5-e36469d590db 结果摘要: Wrote handoff_response.md (10465 bytes); wrote handoff_respon…",
-          "check": "支持 0 / 风险 1 / 观察 1",
-          "href": "/investor/research-network/#thesis-70daf87262"
+          "title": "美联储'更高更久'+油价冲击向中国的传导：政策分化、人民币与A股配置",
+          "view": "我部分推翻Research note 01的设定。中美政策分化在2026年年中不仅可持续、且已无压力地发生——但机制不同。5月中国PPI同比+3.9%（2022年7月来最高，受同一伊朗战争大宗冲击+AI资本开支推升），CPI仅+1.2%，故'通缩给人民银行空间'被削弱[S1][S2]；人民银行5月…",
+          "check": "支持 0 / 风险 4 / 观察 3",
+          "href": "/investor/research-network/#thesis-a803fa3312"
         },
         {
           "date": "2026-06-16",
-          "value": 57.8,
-          "label": "观察",
-          "title": "[auto-handoff] 霍尔木兹海峡复航预期下的全球供应链通胀及运费重估",
-          "view": "致 能源行业分析师： 协同任务已完成。执行方为 全球宏观分析师。 模式: adhoc 会话: 1dff2613-6f22-4648-a9bf-6fe630974650 结果摘要: Wrote handoff_response.md (10216 bytes); wrote handoff_resp…",
-          "check": "支持 0 / 风险 0 / 观察 2",
-          "href": "/investor/research-network/#thesis-70daf87262"
+          "value": 29.6,
+          "label": "风险",
+          "title": "美国5月通胀反弹与6月FOMC前的全球宏观交易含义",
+          "view": "截至2026-06-15，本卡选择global-macro视角。结论是：6月FOMC大概率维持利率不变，但声明会让近期降息门槛更高。5月通胀主要由能源拉动，核心CPI环比仍温和；但4月核心PCE仍高、5月就业不弱、居民通胀预期仍偏高，使美联储很难快速转鸽。对市场而言，关键不是单纯押注利率上行，而是…",
+          "check": "支持 0 / 风险 3 / 观察 0",
+          "href": "/investor/research-network/#thesis-a803fa3312"
         },
         {
           "date": "2026-06-17",
-          "value": 56.2,
-          "label": "观察",
-          "title": "I have conducted a quantitative factor and trading crowding stress test on the gr…",
-          "view": "I have conducted a quantitative factor and trading crowding stress test on the growth sleeve of the barbell portfolio (STAR 50, Electronics, and Batt…",
-          "check": "支持 0 / 风险 0 / 观察 1",
-          "href": "/investor/research-network/#thesis-70daf87262"
+          "value": 37,
+          "label": "风险",
+          "title": "2026 能源地缘政治风险对 AI 算力成本与全球通胀的传导评估",
+          "view": "支持卡片03：霍尔木兹封锁（卡塔尔3-4不可抗力，约20%全球LNG受阻[S1]）使全球气价飙升而美国Henry Hub脱钩走低——TTF +35%至14.8、JKM +51%至16.0美元/MMBtu，Henry Hub自2-28跌约9%[S1]，2026均价仅约3.5美元[S3]。我把它延伸到…",
+          "check": "支持 0 / 风险 2 / 观察 0",
+          "href": "/investor/research-network/#thesis-a803fa3312"
         },
         {
           "date": "2026-06-18",
-          "value": 36.6,
+          "value": 44.4,
           "label": "风险",
-          "title": "[auto-handoff] 融资余额逼近3万亿关口下，硬科技龙头个股两融拥挤度与强平敏感性测算",
-          "view": "致 市场情绪师： 协同任务已完成。执行方为 A股策略师。 模式: adhoc 会话: 1fa75627-3c96-483c-b9d8-1f4f7728a2f2 结果摘要: Wrote handoff_response.md (13425 bytes); wrote handoff_response…",
-          "check": "支持 0 / 风险 3 / 观察 0",
-          "href": "/investor/research-network/#thesis-70daf87262"
+          "title": "Research note 07 的三层对冲在当前宏观体制下结构性合理且效率达 ~2.7x，1.5–2% SPX 看跌价差预算处性价比拐点，但应使预算与结构随 V…",
+          "view": "宏观维度对 Research note 07 的三层对冲设计做压力测试。在 10Y 4.50%、核心 PCE 2.7%、VIX≈16 的'约束但走软'体制下，1.5–2% 预算的 3M SPX 5%/10% 看跌价差处于性价比最优区间：在 SPX –7% 到 –12% 中等回撤窗口贡献最大（每 1…",
+          "check": "支持 0 / 风险 1 / 观察 0",
+          "href": "/investor/research-network/#thesis-a803fa3312"
+        },
+        {
+          "date": "2026-06-19",
+          "value": 15.8,
+          "label": "风险",
+          "title": "电网公用事业资产费率基数扩张对宏观通胀与货币政策的传导效应",
+          "view": "压力测试卡片01–05的宏观结论。直接渠道被夸大：电力属能源、按构造排除于核心PCE之外，达拉斯联储测算数据中心对总体PCE的拉动2026仅+0.05pp、2030升至+0.13pp[S1]；电力仅占CPI约2.5%[S11]，自测算直接总体贡献约0.10pp。但费率基数是30–40年价格水平锁定…",
+          "check": "支持 0 / 风险 6 / 观察 0",
+          "href": "/investor/research-network/#thesis-a803fa3312"
+        },
+        {
+          "date": "2026-06-20",
+          "value": 12,
+          "label": "风险",
+          "title": "美联储6月会议后的“降息交易”出清与再通胀风险",
+          "view": "工作日期2026-06-20。本卡选择global-macro，结论是美联储尚未承诺加息，但6月FOMC已把市场基线从自动降息转向higher-for-longer和加息风险。3.50%-3.75%的政策区间、2026年SEP中3.8%的年底利率中位数、5月CPI同比4.2%、5月非农+172,0…",
+          "check": "支持 1 / 风险 16 / 观察 0",
+          "href": "/investor/research-network/#thesis-a803fa3312"
+        },
+        {
+          "date": "2026-06-21",
+          "value": 18.6,
+          "label": "观察",
+          "title": "伊朗战争后的全球宏观转折：能源冲击消退，但美联储与日本央行维持鹰派带来的滞胀宿醉",
+          "view": "2026年伊朗战争（2/28美以空袭、3/4霍尔木兹关闭）将布伦特推至逾120美元，6/17美伊谅解备忘录使油价回落至约80美元。但通胀已从能源迁至核心：5月美国CPI总体同比4.2%（三年新高），核心升至2.9%，居住与食品双双加速。央行反应函数已上移——美联储6/17维持3.50–3.75%但…",
+          "check": "支持 0 / 风险 7 / 观察 2",
+          "href": "/investor/research-network/#thesis-a803fa3312"
         }
       ],
       "dimensions": [
@@ -416,24 +416,24 @@
           "label": "维度一",
           "title": "论点",
           "front": "研究问题是否清晰？",
-          "back": "A 股红利与硬科技杠铃仍是政策、利率和风险偏好的组合表达"
+          "back": "美联储路径仍是全球资产再定价的总阀门"
         },
         {
           "label": "维度二",
           "title": "证据",
           "front": "证据是否可追溯？",
-          "back": "覆盖 10 位分析师和 5 类公开来源。"
+          "back": "覆盖 11 位分析师和 4 类公开来源。"
         },
         {
           "label": "维度三",
           "title": "证伪",
           "front": "风险是否上升？",
-          "back": "风险事件 114 条，方向为 分歧。"
+          "back": "风险事件 125 条，方向为 分歧。"
         }
       ],
       "sources": [
         {
-          "href": "/investor/research-network/#thesis-70daf87262",
+          "href": "/investor/research-network/#thesis-a803fa3312",
           "label": "研究网络主线",
           "tag": "网络"
         }
@@ -442,39 +442,39 @@
       "kind": "living_thesis_recap"
     },
     {
-      "slug": "living-3d421524cd-3d421524-2026-06-18",
-      "title": "油价地缘底线决定再通胀与降息交易的安全边际：动态复盘",
-      "subtitle": "当前共有 40 条证据、3 位分析师和 1 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
-      "date": "2026-06-18",
+      "slug": "living-etf-89c14497-2026-06-21",
+      "title": "期权伽马、ETF 与尾盘流动性正在放大主题交易的微观结构风险：动态复盘",
+      "subtitle": "当前共有 40 条证据、6 位分析师和 1 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
+      "date": "2026-06-21",
       "badge": "LIVING THESIS RECAP",
-      "reportHref": "/investor/research-network/#thesis-3d421524cd",
+      "reportHref": "/investor/research-network/#thesis-89c14497ac",
       "chartTitle": "主线证据强度演化",
       "chartDescription": "由公开研究事件按日期聚合，显示支持、风险和观察证据如何改变主线强度。",
       "chartUnit": "证据强度",
       "chart": {
         "labels": [
-          "06-07",
-          "06-08",
           "06-10",
           "06-11",
-          "06-12",
           "06-13",
           "06-14",
           "06-15",
           "06-16",
-          "06-18"
+          "06-18",
+          "06-19",
+          "06-20",
+          "06-21"
         ],
         "values": [
-          20,
-          34.4,
-          40.8,
+          24,
+          43.4,
+          54.8,
           28.2,
           44.6,
-          33,
-          12,
-          48.8,
-          35.2,
-          24.6
+          31,
+          26.4,
+          36.8,
+          37.2,
+          39.6
         ]
       },
       "metrics": [
@@ -490,7 +490,7 @@
         },
         {
           "label": "分析师",
-          "value": "17",
+          "value": "25",
           "accent": "green"
         },
         {
@@ -502,11 +502,11 @@
       "conclusions": [
         {
           "title": "主线定义",
-          "text": "当前共有 40 条证据、3 位分析师和 1 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。"
+          "text": "当前共有 40 条证据、6 位分析师和 1 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。"
         },
         {
           "title": "最新变化",
-          "text": "2026-06-18: I have completed the analysis on how advanced packaging (Chiplets, HBM4) and optical interconnects (Silicon Photonics, CPO) mitigate U.S.…"
+          "text": "2026-06-21: 美联储政策中枢上修对能源通胀预期及原油需求的影响"
         },
         {
           "title": "证据纪律",
@@ -532,226 +532,6 @@
         },
         {
           "label": "监控词",
-          "status": "PCE / 原油 / geopolitical",
-          "detail": "PCE / 原油 / geopolitical / floor / defines / margin / safety / disinflation",
-          "bull": "监控词在新报告中被反复验证",
-          "bear": "监控词热度上升但价格或基本面未兑现",
-          "active": "bull"
-        }
-      ],
-      "timeline": [
-        {
-          "date": "2026-06-07",
-          "value": 20,
-          "label": "观察",
-          "title": "Executive Summary of Analysis (Energy Analyst Perspective) In this stress test ca…",
-          "view": "Executive Summary of Analysis (Energy Analyst Perspective) In this stress test card, we analyzed the macroeconomic transmission mechanism and Federal…",
-          "check": "支持 1 / 风险 6 / 观察 2",
-          "href": "/investor/research-network/#thesis-3d421524cd"
-        },
-        {
-          "date": "2026-06-08",
-          "value": 34.4,
-          "label": "风险",
-          "title": "在2026-06-08的宏观高大宗商品价格与地缘冲突背景下，“资源对冲与出口链成本冲突”的边际测试被否定：高壁垒出海龙头凭借超强供应链消纳能力（家电核心降本可省3…",
-          "view": "截至2026-06-08，本报告对“资源通胀对冲+双护城河出口链”的利润冲突进行了定量压力测试。测试显示，原油和铜等商品价格上涨虽推高了中下游制造业输入成本，但以家电和叉车为代表的“双护城河”出海龙头表现出极强的毛利抗压能力。家电龙头凭借50%套期保值、铜铝替代、垂直整合及芯片国产化，可在铜价飙升…",
-          "check": "支持 0 / 风险 2 / 观察 1",
-          "href": "/investor/research-network/#thesis-3d421524cd"
-        },
-        {
-          "date": "2026-06-10",
-          "value": 40.8,
-          "label": "风险",
-          "title": "全球海运重置回苏伊士通道将释放大规模运力供给（集装箱+18.94%、油轮+4.54%[自测算]），配合油价回落至$89/桶，将直接平移欧美通胀中枢并消除ECB加息…",
-          "view": "截至2026-06-11，本评估探讨复航后运力重分布对欧美通胀的通缩效力。油轮与集装箱从好望角切换回苏伊士将分别释放全球有效供给+4.54%及+18.94%[自测算]。若Brent由 geopolitical 高点$105/桶跌至$89/桶[S2]，将通过间接与直接渠道，平均每月拉低美国核心PCE…",
-          "check": "支持 1 / 风险 3 / 观察 2",
-          "href": "/investor/research-network/#thesis-3d421524cd"
-        },
-        {
-          "date": "2026-06-11",
-          "value": 28.2,
-          "label": "风险",
-          "title": "原油断供、美元与通胀基线统一",
-          "view": "原油断供、美元与通胀基线统一 Unify the oil-disruption, dollar and inflation baseline 今日报告应把 Brent 94.71 附近的库存去化视为基线，还是把霍尔木兹封锁和 10.8M-13.5M bpd 缺口视为基线？若是后者，如何解释 DXY…",
-          "check": "支持 0 / 风险 4 / 观察 2",
-          "href": "/investor/research-network/#thesis-3d421524cd"
-        },
-        {
-          "date": "2026-06-12",
-          "value": 44.6,
-          "label": "风险",
-          "title": "10.03% 的能源权重在兼顾 VaR 合规的同时，配合金、债组合构建了极高效率的抗通胀堡垒，且物理减仓带来的向上凸性在极端通胀场景下优于带期权收益上限的大仓位。",
-          "view": "本报告评估了能源权重降至 10.03% 后的供应端冲击与通胀防御力。尽管面临 2026年6月10日 霍尔木兹海峡封锁升级引发的 Brent 原油快速跳升至 $108.50，由于组合协同配置了 15% TIPS 和 17.5% 黄金，整体通胀 Beta 仍高达 0.71。压力测试显示，在 Brent…",
-          "check": "支持 0 / 风险 1 / 观察 1",
-          "href": "/investor/research-network/#thesis-3d421524cd"
-        },
-        {
-          "date": "2026-06-13",
-          "value": 33,
-          "label": "风险",
-          "title": "霍尔木兹封锁的持续性已触发从能源价格向基础工业原材料的全面传导，确认了第二轮供给侧通胀的开启，迫使美联储在即将到来的FOMC会议上必须重新校准其中期通胀预期中枢。",
-          "view": "截至2026年6月13日，霍尔木兹海峡封锁已持续四个月，导致全球约1300-1400万桶/日的供应中断。布伦特原油稳定在110-117美元/桶。研究确认了能源价格向基础工业材料的高传导弹性（化工0.65-0.85，铝0.40-0.55），乙烯等中间品价格已飙升超80%。随着OECD库存降至20年低…",
-          "check": "支持 1 / 风险 4 / 观察 0",
-          "href": "/investor/research-network/#thesis-3d421524cd"
-        },
-        {
-          "date": "2026-06-14",
-          "value": 12,
-          "label": "风险",
-          "title": "下半年95美元/桶的Brent油价与4美元/加仑以上的汽油价格将通过交运物流和二次预期传导，拉高核心通胀并阻碍通胀降温，促使美联储在6月会议将年内降息预期清零，推…",
-          "view": "本卡综合评估了2026年下半年Brent原油（95.06美元/桶）与美国零售汽柴油价格对通胀传导及美联储反应函数的影响。测算表明，油价上行将通过交运物流和工业原料渠道向核心PCE传导约20BP，并使1年期通胀预期重回3.2%-3.5%的高位，增加二次通胀风险。新任主席Warsh的首秀将展露鹰派立场…",
-          "check": "支持 0 / 风险 11 / 观察 1",
-          "href": "/investor/research-network/#thesis-3d421524cd"
-        },
-        {
-          "date": "2026-06-15",
-          "value": 48.8,
-          "label": "观察",
-          "title": "I have analyzed the transmission of macro credit tightening and financing \"short …",
-          "view": "I have analyzed the transmission of macro credit tightening and financing \"short termization\" to the AI infrastructure expansion cycle as the AI Infr…",
-          "check": "支持 0 / 风险 1 / 观察 1",
-          "href": "/investor/research-network/#thesis-3d421524cd"
-        },
-        {
-          "date": "2026-06-16",
-          "value": 35.2,
-          "label": "风险",
-          "title": "All three deliverables are written and verified. Research note 02 summary — Stanc…",
-          "view": "All three deliverables are written and verified. Research note 02 summary — Stance: SUPPORT (with one relative value refinement). I confirm Research …",
-          "check": "支持 0 / 风险 3 / 观察 0",
-          "href": "/investor/research-network/#thesis-3d421524cd"
-        },
-        {
-          "date": "2026-06-18",
-          "value": 24.6,
-          "label": "风险",
-          "title": "[auto-handoff] 澄清原油价格数据分歧并调整宏观通胀传导路径",
-          "view": "致 日报总编： 协同任务已完成。执行方为 全球宏观分析师。 模式: adhoc 会话: f846db4c-3154-4feb-a5c0-423522062fd7 结果摘要: Wrote handoff_response.md (7369 bytes); wrote handoff_response…",
-          "check": "支持 0 / 风险 6 / 观察 2",
-          "href": "/investor/research-network/#thesis-3d421524cd"
-        }
-      ],
-      "dimensions": [
-        {
-          "label": "维度一",
-          "title": "论点",
-          "front": "研究问题是否清晰？",
-          "back": "油价地缘底线决定再通胀与降息交易的安全边际"
-        },
-        {
-          "label": "维度二",
-          "title": "证据",
-          "front": "证据是否可追溯？",
-          "back": "覆盖 17 位分析师和 5 类公开来源。"
-        },
-        {
-          "label": "维度三",
-          "title": "证伪",
-          "front": "风险是否上升？",
-          "back": "风险事件 105 条，方向为 分歧。"
-        }
-      ],
-      "sources": [
-        {
-          "href": "/investor/research-network/#thesis-3d421524cd",
-          "label": "研究网络主线",
-          "tag": "网络"
-        }
-      ],
-      "autoGenerated": true,
-      "kind": "living_thesis_recap"
-    },
-    {
-      "slug": "living-etf-89c14497-2026-06-18",
-      "title": "期权伽马、ETF 与尾盘流动性正在放大主题交易的微观结构风险：动态复盘",
-      "subtitle": "当前共有 40 条证据、6 位分析师和 1 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
-      "date": "2026-06-18",
-      "badge": "LIVING THESIS RECAP",
-      "reportHref": "/investor/research-network/#thesis-89c14497ac",
-      "chartTitle": "主线证据强度演化",
-      "chartDescription": "由公开研究事件按日期聚合，显示支持、风险和观察证据如何改变主线强度。",
-      "chartUnit": "证据强度",
-      "chart": {
-        "labels": [
-          "06-07",
-          "06-08",
-          "06-09",
-          "06-10",
-          "06-11",
-          "06-13",
-          "06-14",
-          "06-15",
-          "06-16",
-          "06-18"
-        ],
-        "values": [
-          39,
-          49.4,
-          38.8,
-          28.2,
-          47.6,
-          59,
-          32.4,
-          48.8,
-          35.2,
-          30.6
-        ]
-      },
-      "metrics": [
-        {
-          "label": "证据事件",
-          "value": "160",
-          "accent": "blue"
-        },
-        {
-          "label": "风险事件",
-          "value": "100",
-          "accent": "red"
-        },
-        {
-          "label": "分析师",
-          "value": "25",
-          "accent": "green"
-        },
-        {
-          "label": "方向",
-          "value": "分歧",
-          "accent": "orange"
-        }
-      ],
-      "conclusions": [
-        {
-          "title": "主线定义",
-          "text": "当前共有 40 条证据、6 位分析师和 1 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。"
-        },
-        {
-          "title": "最新变化",
-          "text": "2026-06-18: [auto-handoff] 澄清原油价格数据分歧并调整宏观通胀传导路径"
-        },
-        {
-          "title": "证据纪律",
-          "text": "当前以 10 条支持、100 条风险和 50 条观察证据进行动态跟踪。"
-        }
-      ],
-      "checklist": [
-        {
-          "label": "支持证据",
-          "status": "10 条",
-          "detail": "继续观察是否出现跨来源、跨分析师的同向验证。",
-          "bull": "支持证据集中出现在最新日期且源报告可追溯",
-          "bear": "支持证据停留在旧报告或单一来源",
-          "active": "bear"
-        },
-        {
-          "label": "风险证据",
-          "status": "100 条",
-          "detail": "风险证据用于判断主线是否变成拥挤交易或证伪样本。",
-          "bull": "风险被新证据消化",
-          "bear": "风险事件数量超过支持事件",
-          "active": "bear"
-        },
-        {
-          "label": "监控词",
           "status": "PCE / Options / gamma",
           "detail": "PCE / Options / gamma / ETFs / closing / liquidity / amplifying / microstructure",
           "bull": "监控词在新报告中被反复验证",
@@ -761,35 +541,8 @@
       ],
       "timeline": [
         {
-          "date": "2026-06-07",
-          "value": 39,
-          "label": "风险",
-          "title": "通胀对冲组合压力测试与跨板块配置的合规性与叙事一致性终审",
-          "view": "对前9卡链条的终审：分析主线扎实——内部自洽、引用规范、概率树（48/22/25/5）谱系清晰、布伦特中枢95-98美元与80美元地板、关税14%→9.6%、7月USTR §301（07-06评论/07-07听证）、11-10稀土悬崖等关键数字跨卡一致。但有两项阻断级缺陷：card-07与card…",
-          "check": "支持 0 / 风险 1 / 观察 1",
-          "href": "/investor/research-network/#thesis-89c14497ac"
-        },
-        {
-          "date": "2026-06-08",
-          "value": 49.4,
-          "label": "观察",
-          "title": "The upstream files session brief.md , analyst catalog.json , and the Research not…",
-          "view": "The upstream files session brief.md , analyst catalog.json , and the Research note 01 reports ( report.en.md , report.zh.md , meta.json ) were missin…",
-          "check": "支持 0 / 风险 0 / 观察 2",
-          "href": "/investor/research-network/#thesis-89c14497ac"
-        },
-        {
-          "date": "2026-06-09",
-          "value": 38.8,
-          "label": "风险",
-          "title": "2026-06-09 研究更新",
-          "view": "0 条支持、1 条风险、0 条观察。",
-          "check": "支持 0 / 风险 1 / 观察 0",
-          "href": "/investor/research-network/#thesis-89c14497ac"
-        },
-        {
           "date": "2026-06-10",
-          "value": 28.2,
+          "value": 24,
           "label": "风险",
           "title": "Research Summary Under my role as the Chief Risk Officer ( chief risk ), I have c…",
           "view": "Research Summary Under my role as the Chief Risk Officer ( chief risk ), I have conducted a comprehensive risk stress test on the biotechnology sub b…",
@@ -798,7 +551,7 @@
         },
         {
           "date": "2026-06-11",
-          "value": 47.6,
+          "value": 43.4,
           "label": "观察",
           "title": "医药'去中国化'是一股结构性、慢释放的供给侧通胀力量，每年向美国核心医疗CPI注入25–40bp，并已迫使美联储将生物科技融资环境纳入金融稳定框架。",
           "view": "截至2026-06-12，《生物安全法案》及1260H清单升级已将中美医药脱钩转化为可测量的供给侧成本冲击。按模态加权，非中替代溢价合计抬升受影响SKU零售价4.5–6.5%，对应美国核心医疗服务CPI每年额外+25–40bp、Medicare Part B支出增速每年高出基线60–90bp，20…",
@@ -807,7 +560,7 @@
         },
         {
           "date": "2026-06-13",
-          "value": 59,
+          "value": 54.8,
           "label": "支持",
           "title": "结构性金属供给紧缩对全球通胀及美联储政策路径的影响",
           "view": "支持（有界定）：铜/铝结构性缺口驱动的二次通胀足以硬化美联储终端利率逻辑，但机制是抬高底部、消除2026年降息期权，而非单独迫使加息。LME铜2026年6月初约13,800美元/吨、1月29日创14,527.50美元/吨历史高位，高盛上调年底预测至13,735；铝突破3,015.50美元/吨、对应…",
@@ -816,7 +569,7 @@
         },
         {
           "date": "2026-06-14",
-          "value": 32.4,
+          "value": 28.2,
           "label": "风险",
           "title": "能源CPI与核心CPI背离下，美联储应上调通胀预测并取消2026年降息，但6月仍以鹰派按兵不动为基准。",
           "view": "截至2026-06-14，能源冲击要求美联储显著上调2026年总体PCE预测，但核心上修应更温和。5月CPI同比4.2%、核心2.9%，加上4月PCE 3.8%、核心PCE 3.3%，说明压力真实但尚未全面扩散。基准建议是6月维持3.50%-3.75%，把2026年点阵图从一次降息改为不降息；若布…",
@@ -825,7 +578,7 @@
         },
         {
           "date": "2026-06-15",
-          "value": 48.8,
+          "value": 44.6,
           "label": "观察",
           "title": "I have analyzed the transmission of macro credit tightening and financing \"short …",
           "view": "I have analyzed the transmission of macro credit tightening and financing \"short termization\" to the AI infrastructure expansion cycle as the AI Infr…",
@@ -834,7 +587,7 @@
         },
         {
           "date": "2026-06-16",
-          "value": 35.2,
+          "value": 31,
           "label": "风险",
           "title": "宏观三因子共振情景4.3在2026 H2实现的概率不足15%，但温和的宏观顺风恰好证明当前基于物理约束的轮动策略具有不依赖流动性爆发的极高安全边际。",
           "view": "截至2026-06-17，基于美国核心PCE粘性与非农就业温和降温，美联储2026 H2大概率仅进行1-2次预防性降息，无法驱使DXY<96和TIPS<1.5%；同时中国政策定力决定了信贷脉冲H2极难跃升至+2pct。三因子共振至情景4.3的概率极低（<15%）。但这反而确立了组合极高的安全边际：…",
@@ -843,11 +596,38 @@
         },
         {
           "date": "2026-06-18",
-          "value": 30.6,
+          "value": 26.4,
           "label": "风险",
           "title": "Research note 07 的三层对冲在当前宏观体制下结构性合理且效率达 ~2.7x，1.5–2% SPX 看跌价差预算处性价比拐点，但应使预算与结构随 V…",
           "view": "宏观维度对 Research note 07 的三层对冲设计做压力测试。在 10Y 4.50%、核心 PCE 2.7%、VIX≈16 的'约束但走软'体制下，1.5–2% 预算的 3M SPX 5%/10% 看跌价差处于性价比最优区间：在 SPX –7% 到 –12% 中等回撤窗口贡献最大（每 1…",
           "check": "支持 0 / 风险 4 / 观察 0",
+          "href": "/investor/research-network/#thesis-89c14497ac"
+        },
+        {
+          "date": "2026-06-19",
+          "value": 36.8,
+          "label": "观察",
+          "title": "I have performed a rigorous quantitative stress test using Black Scholes (for the…",
+          "view": "I have performed a rigorous quantitative stress test using Black Scholes (for the XBI equity leg) and Black 76 (for the 5 Year Treasury futures leg) …",
+          "check": "支持 0 / 风险 3 / 观察 1",
+          "href": "/investor/research-network/#thesis-89c14497ac"
+        },
+        {
+          "date": "2026-06-20",
+          "value": 37.2,
+          "label": "支持",
+          "title": "先进封装5.3倍成本溢价不再是末端事件，而是通过代工ASP、设计公司毛利和超大规模capex三条路径，向全球科技产业链注入一次政策驱动的结构性通胀脉冲，并使估值在…",
+          "view": "2026-06-20：本卡支持上一卡结论并向上游延伸。先进封装的5.3倍本土化成本溢价正通过三条路径系统性外溢：(1) 代工ASP——TSMC亚利桑那wafer溢价约30%、CoWoS产能2026翻倍；(2) 设计公司毛利——NVIDIA毛利指引由75%回落至71-73%、AMD MI350毛利低…",
+          "check": "支持 1 / 风险 4 / 观察 0",
+          "href": "/investor/research-network/#thesis-89c14497ac"
+        },
+        {
+          "date": "2026-06-21",
+          "value": 39.6,
+          "label": "观察",
+          "title": "伊朗战争后的全球宏观转折：能源冲击消退，但美联储与日本央行维持鹰派带来的滞胀宿醉",
+          "view": "2026年伊朗战争（2/28美以空袭、3/4霍尔木兹关闭）将布伦特推至逾120美元，6/17美伊谅解备忘录使油价回落至约80美元。但通胀已从能源迁至核心：5月美国CPI总体同比4.2%（三年新高），核心升至2.9%，居住与食品双双加速。央行反应函数已上移——美联储6/17维持3.50–3.75%但…",
+          "check": "支持 0 / 风险 3 / 观察 1",
           "href": "/investor/research-network/#thesis-89c14497ac"
         }
       ],
@@ -868,7 +648,7 @@
           "label": "维度三",
           "title": "证伪",
           "front": "风险是否上升？",
-          "back": "风险事件 100 条，方向为 分歧。"
+          "back": "风险事件 105 条，方向为 分歧。"
         }
       ],
       "sources": [
@@ -882,39 +662,39 @@
       "kind": "living_thesis_recap"
     },
     {
-      "slug": "living-a803fa3312-a803fa33-2026-06-18",
-      "title": "美联储路径仍是全球资产再定价的总阀门：动态复盘",
+      "slug": "living-ai-07501700-2026-06-21",
+      "title": "AI 资本开支通过能源、设备和利率进入通胀定价：动态复盘",
       "subtitle": "当前共有 40 条证据、3 位分析师和 8 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
-      "date": "2026-06-18",
+      "date": "2026-06-21",
       "badge": "LIVING THESIS RECAP",
-      "reportHref": "/investor/research-network/#thesis-a803fa3312",
+      "reportHref": "/investor/research-network/#thesis-075017003b",
       "chartTitle": "主线证据强度演化",
       "chartDescription": "由公开研究事件按日期聚合，显示支持、风险和观察证据如何改变主线强度。",
       "chartUnit": "证据强度",
       "chart": {
         "labels": [
-          "06-08",
-          "06-10",
-          "06-11",
           "06-12",
           "06-13",
           "06-14",
           "06-15",
           "06-16",
           "06-17",
-          "06-18"
+          "06-18",
+          "06-19",
+          "06-20",
+          "06-21"
         ],
         "values": [
-          20,
-          16.4,
-          29.8,
-          40.2,
-          31.6,
+          12,
+          12,
+          12,
+          13.2,
+          12,
           12,
           26.4,
-          33.8,
-          41.2,
-          48.6
+          21.8,
+          12,
+          15.6
         ]
       },
       "metrics": [
@@ -925,12 +705,12 @@
         },
         {
           "label": "风险事件",
-          "value": "123",
+          "value": "140",
           "accent": "red"
         },
         {
           "label": "分析师",
-          "value": "11",
+          "value": "14",
           "accent": "green"
         },
         {
@@ -946,17 +726,17 @@
         },
         {
           "title": "最新变化",
-          "text": "2026-06-18: Research note 07 的三层对冲在当前宏观体制下结构性合理且效率达 ~2.7x，1.5–2% SPX 看跌价差预算处性价比拐点，但应使预算与结构随 VIX 体制状态依赖切换，并对黄金腿设置再通胀触发的减仓规则。"
+          "text": "2026-06-21: 评估新配置组合（长久期主权债+防御性红利+AI电力瓶颈资产）在利率波动与通胀粘性场景下的波动率与回撤风险"
         },
         {
           "title": "证据纪律",
-          "text": "当前以 7 条支持、123 条风险和 30 条观察证据进行动态跟踪。"
+          "text": "当前以 4 条支持、140 条风险和 16 条观察证据进行动态跟踪。"
         }
       ],
       "checklist": [
         {
           "label": "支持证据",
-          "status": "7 条",
+          "status": "4 条",
           "detail": "继续观察是否出现跨来源、跨分析师的同向验证。",
           "bull": "支持证据集中出现在最新日期且源报告可追溯",
           "bear": "支持证据停留在旧报告或单一来源",
@@ -964,7 +744,7 @@
         },
         {
           "label": "风险证据",
-          "status": "123 条",
+          "status": "140 条",
           "detail": "风险证据用于判断主线是否变成拥挤交易或证伪样本。",
           "bull": "风险被新证据消化",
           "bear": "风险事件数量超过支持事件",
@@ -972,8 +752,8 @@
         },
         {
           "label": "监控词",
-          "status": "美联储 / CPI / PCE",
-          "detail": "美联储 / CPI / PCE / 美元 / path / remains / master / valve",
+          "status": "AI基础设施 / 电网 / CPI",
+          "detail": "AI基础设施 / 电网 / CPI / PCE / 公用事业 / 能源 / capex / enters",
           "bull": "监控词在新报告中被反复验证",
           "bear": "监控词热度上升但价格或基本面未兑现",
           "active": "bull"
@@ -981,94 +761,94 @@
       ],
       "timeline": [
         {
-          "date": "2026-06-08",
-          "value": 20,
-          "label": "支持",
-          "title": "美联储2026年加息概率重估与全球流动性拐点",
-          "view": "支持卡片01。我把分析推至上游的美联储反应函数:5月CPI(2026-06-10发布)若证实再加速(核心环比≥0.4%、整体同比≥3.9%),美联储不会在6月或7月加息,但会把市场隐含的2026年加息概率从约28%重估至40–45%,并将点阵图叙事从'两次降息'翻转为'按兵乃至加息'。正是这一重定…",
-          "check": "支持 1 / 风险 5 / 观察 0",
-          "href": "/investor/research-network/#thesis-a803fa3312"
-        },
-        {
-          "date": "2026-06-10",
-          "value": 16.4,
-          "label": "风险",
-          "title": "全球输入型滞胀与美联储加息概率高企，加剧国内原油‘需求出清’与工业通缩，不支持将成长-价值杠铃的摆动腿升级为周期轮动，应坚守防御红利。",
-          "view": "截至2026-06-10，首席经济学家认为宏观周期确认了‘守优于攻’倾向。中东地缘冲突与Strait of Hormuz关闭导致原油高悬于92美元/桶，美国4月PPI暴增6.0%、5月CPI预期4.2%，美联储加息概率升至56%–80%。在此背景下，国内需求疲软导致原油进口骤降32.76%，PPI…",
-          "check": "支持 0 / 风险 5 / 观察 1",
-          "href": "/investor/research-network/#thesis-a803fa3312"
-        },
-        {
-          "date": "2026-06-11",
-          "value": 29.8,
-          "label": "观察",
-          "title": "医药'去中国化'是一股结构性、慢释放的供给侧通胀力量，每年向美国核心医疗CPI注入25–40bp，并已迫使美联储将生物科技融资环境纳入金融稳定框架。",
-          "view": "截至2026-06-12，《生物安全法案》及1260H清单升级已将中美医药脱钩转化为可测量的供给侧成本冲击。按模态加权，非中替代溢价合计抬升受影响SKU零售价4.5–6.5%，对应美国核心医疗服务CPI每年额外+25–40bp、Medicare Part B支出增速每年高出基线60–90bp，20…",
-          "check": "支持 0 / 风险 3 / 观察 1",
-          "href": "/investor/research-network/#thesis-a803fa3312"
-        },
-        {
           "date": "2026-06-12",
-          "value": 40.2,
+          "value": 12,
           "label": "风险",
-          "title": "贸易壁垒倒逼海外布局对国别经常账户的冲击远小于市场叙事，真正可观测的重塑发生在服务与初次收入账户、以及欧洲电价通胀渠道，特种海运对全球CPI的传导被高估。",
-          "view": "截至2026-06-12，本卡对'贸易壁垒倒逼本地化将快速重塑中欧/中美经常账户、并通过特种海运推升全球通胀'的线性叙事进行压力测试。结论：货物贸易顺差塌缩论被证伪——年化影响仅占中国货物顺差0.6%–0.8%；服务出口(EPC+租赁)与FDI利润汇回反向贡献中国经常账户。中欧合计经常账户净变化-…",
-          "check": "支持 0 / 风险 1 / 观察 0",
-          "href": "/investor/research-network/#thesis-a803fa3312"
+          "title": "边缘AI无法缓解集中式数据中心的电网和能源瓶颈，超大规模云厂商的Capex将加速转向基于Blackwell/Rubin的就地硬件密度升级，从而加剧局部电网和绿电公…",
+          "view": "截至2026年6月13日，端侧算力下沉（MCU/NPU）无法缓解集中式数据中心的能源瓶颈。大模型训练及云端推理仍是耗电核心。在电网排队和容量电费（PJM触及上限$329.17/MW-day）约束下，超大云厂商将Capex聚焦于就地算力密度升级（H100升至B200/Rubin，密度升至4.57x）…",
+          "check": "支持 0 / 风险 7 / 观察 0",
+          "href": "/investor/research-network/#thesis-075017003b"
         },
         {
           "date": "2026-06-13",
-          "value": 31.6,
-          "label": "支持",
-          "title": "结构性金属供给紧缩对全球通胀及美联储政策路径的影响",
-          "view": "支持（有界定）：铜/铝结构性缺口驱动的二次通胀足以硬化美联储终端利率逻辑，但机制是抬高底部、消除2026年降息期权，而非单独迫使加息。LME铜2026年6月初约13,800美元/吨、1月29日创14,527.50美元/吨历史高位，高盛上调年底预测至13,735；铝突破3,015.50美元/吨、对应…",
-          "check": "支持 1 / 风险 6 / 观察 4",
-          "href": "/investor/research-network/#thesis-a803fa3312"
+          "value": 12,
+          "label": "风险",
+          "title": "‘双碳’目标与算力暴涨下，东部沿海省份电力规划弹性与能耗双控政策的调整空间评估 报告发布日期 ：2026 06 13 [S1] 分析师 ：全球宏观分析师 (Glo…",
+          "view": "‘双碳’目标与算力暴涨下，东部沿海省份电力规划弹性与能耗双控政策的调整空间评估 报告发布日期 ：2026 06 13 [S1] 分析师 ：全球宏观分析师 (Global Macro Analyst) 研究立场 ：支持 (Support) 白板会话ID ：52586378 2fbf 450b 9f7…",
+          "check": "支持 0 / 风险 6 / 观察 0",
+          "href": "/investor/research-network/#thesis-075017003b"
         },
         {
           "date": "2026-06-14",
           "value": 12,
           "label": "风险",
-          "title": "能源CPI与核心CPI背离下，美联储应上调通胀预测并取消2026年降息，但6月仍以鹰派按兵不动为基准。",
-          "view": "截至2026-06-14，能源冲击要求美联储显著上调2026年总体PCE预测，但核心上修应更温和。5月CPI同比4.2%、核心2.9%，加上4月PCE 3.8%、核心PCE 3.3%，说明压力真实但尚未全面扩散。基准建议是6月维持3.50%-3.75%，把2026年点阵图从一次降息改为不降息；若布…",
-          "check": "支持 1 / 风险 15 / 观察 4",
-          "href": "/investor/research-network/#thesis-a803fa3312"
+          "title": "虽然先进封装产能逐步释放，但物理电网并网延迟与容量电费暴涨构成了AI基础设施扩张的实质性新边界，其引起的电力成本增加与部署延期将击穿高杠杆算力运营效率，引发科技板…",
+          "view": "截至2026-06-14，先进封装瓶颈逐步缓解，但电网容量与电力供应成为限制AI算力部署的新边界。美国数据中心面临3-4年并网延迟，变压器交期长达4年且价格涨80%[S7, S8]。PJM容量价暴涨至$329.17/MW-day[S2]，推动数据中心电费升至$80.24/MWh[自测算]。在$0.…",
+          "check": "支持 0 / 风险 9 / 观察 0",
+          "href": "/investor/research-network/#thesis-075017003b"
         },
         {
           "date": "2026-06-15",
-          "value": 26.4,
-          "label": "观察",
-          "title": "Warsh首场FOMC：油价驱动型滞胀下的鹰派转向与全球外溢",
-          "view": "2026年6月16-17日是Warsh就任美联储主席后的首场FOMC，利率维持3.50%-3.75%已近乎确定（约97-99%）。他接手的是1979年沃尔克以来最难开局：5月整体CPI同比4.2%（2023年4月来最高），但核心仅2.9%——缺口几乎全来自伊朗战争引发的油价冲击（汽油+40.5%、…",
-          "check": "支持 0 / 风险 5 / 观察 2",
-          "href": "/investor/research-network/#thesis-a803fa3312"
+          "value": 13.2,
+          "label": "风险",
+          "title": "AI基础设施的“芯-电”双重供应瓶颈为科技股底仓提供了超越宏观周期的确定性溢价，足以抵御6月CPI/FOMC带来的估值扰动。",
+          "view": "AI基础设施基本面韧性分析确认，2026年全球Hyperscaler Capex预计达7000-7250亿美元，形成稳固的估值底座。尽管6月CPI与FOMC带来宏观扰动，但先进封装（CoWoS）10%的供需缺口以及电力电网的物理约束，为现有领军企业创造了结构性的稀缺溢价。算力需求已从研发转向推理（…",
+          "check": "支持 0 / 风险 6 / 观察 1",
+          "href": "/investor/research-network/#thesis-075017003b"
         },
         {
           "date": "2026-06-16",
-          "value": 33.8,
+          "value": 12,
           "label": "风险",
-          "title": "美国5月通胀反弹与6月FOMC前的全球宏观交易含义",
-          "view": "截至2026-06-15，本卡选择global-macro视角。结论是：6月FOMC大概率维持利率不变，但声明会让近期降息门槛更高。5月通胀主要由能源拉动，核心CPI环比仍温和；但4月核心PCE仍高、5月就业不弱、居民通胀预期仍偏高，使美联储很难快速转鸽。对市场而言，关键不是单纯押注利率上行，而是…",
-          "check": "支持 0 / 风险 3 / 观察 0",
-          "href": "/investor/research-network/#thesis-a803fa3312"
+          "title": "AI 估值模型已进入‘物理约束’阶段，能源获取能力与转化效率取代芯片数量成为 2026 年最核心的溢价锚点。",
+          "view": "2026年AI基础设施的核心瓶颈已从芯片转向电力。市场估值逻辑正从单纯的‘算力倍数’（EV/GPU）转向‘电力溢价’（EV/MW）和能源效率（Tokens-per-Watt）。全球数据中心用电量激增导致电网排队时间延长至4-10年，促使超大规模厂商通过核电直连和自备能源寻求‘能源主权’。中国则通过…",
+          "check": "支持 1 / 风险 14 / 观察 0",
+          "href": "/investor/research-network/#thesis-075017003b"
         },
         {
           "date": "2026-06-17",
-          "value": 41.2,
+          "value": 12,
           "label": "风险",
-          "title": "2026 能源地缘政治风险对 AI 算力成本与全球通胀的传导评估",
-          "view": "支持卡片03：霍尔木兹封锁（卡塔尔3-4不可抗力，约20%全球LNG受阻[S1]）使全球气价飙升而美国Henry Hub脱钩走低——TTF +35%至14.8、JKM +51%至16.0美元/MMBtu，Henry Hub自2-28跌约9%[S1]，2026均价仅约3.5美元[S3]。我把它延伸到…",
-          "check": "支持 0 / 风险 2 / 观察 0",
-          "href": "/investor/research-network/#thesis-a803fa3312"
+          "title": "AI算力向电力设备的资本开支传导扩大了实体“流动性黑洞”，高企的无风险利率与公用事业“成长化”转型持续挤出长久期资产的配置资金。",
+          "view": "本报告支持AI基础设施分析师的判断，量化了AI电力需求向能源基建的传导。2026年全球数据中心用电预计达565 TWh，中国“十五五”电网投资将达5万亿元，且全球面临30%的变压器结构性缺口。这种大规模实体CapEx形成巨大的“流动性黑洞”，虹吸市场资金，推高资本成本，对医药等长久期板块估值维持持…",
+          "check": "支持 0 / 风险 7 / 观察 0",
+          "href": "/investor/research-network/#thesis-075017003b"
         },
         {
           "date": "2026-06-18",
-          "value": 48.6,
+          "value": 26.4,
           "label": "风险",
-          "title": "Research note 07 的三层对冲在当前宏观体制下结构性合理且效率达 ~2.7x，1.5–2% SPX 看跌价差预算处性价比拐点，但应使预算与结构随 V…",
-          "view": "宏观维度对 Research note 07 的三层对冲设计做压力测试。在 10Y 4.50%、核心 PCE 2.7%、VIX≈16 的'约束但走软'体制下，1.5–2% 预算的 3M SPX 5%/10% 看跌价差处于性价比最优区间：在 SPX –7% 到 –12% 中等回撤窗口贡献最大（每 1…",
-          "check": "支持 0 / 风险 1 / 观察 0",
-          "href": "/investor/research-network/#thesis-a803fa3312"
+          "title": "AI基础设施交易的跨行业风险预算与风格轮动框架",
+          "view": "综合并落地 Card-01 的方向判断。核心洞见：电力稀缺链条看似分散（公用事业+工业+材料+核能），实则是同一个 hyperscaler capex 因子，回撤时内部相关性飙向1。故按风险贡献而非名义权重预算，拆成四个子篮子：A电网输配电（压舱石）、B现场发电（核心-卫星）、C核燃料/SMR（高…",
+          "check": "支持 0 / 风险 4 / 观察 0",
+          "href": "/investor/research-network/#thesis-075017003b"
+        },
+        {
+          "date": "2026-06-19",
+          "value": 21.8,
+          "label": "风险",
+          "title": "电网公用事业资产费率基数扩张对宏观通胀与货币政策的传导效应",
+          "view": "压力测试卡片01–05的宏观结论。直接渠道被夸大：电力属能源、按构造排除于核心PCE之外，达拉斯联储测算数据中心对总体PCE的拉动2026仅+0.05pp、2030升至+0.13pp[S1]；电力仅占CPI约2.5%[S11]，自测算直接总体贡献约0.10pp。但费率基数是30–40年价格水平锁定…",
+          "check": "支持 0 / 风险 5 / 观察 0",
+          "href": "/investor/research-network/#thesis-075017003b"
+        },
+        {
+          "date": "2026-06-20",
+          "value": 12,
+          "label": "风险",
+          "title": "能源右尾风险会重估和重配AI基础设施capex，但不会在基准情形下让资产负债表最强的hyperscalers停止扩建。",
+          "view": "截至2026-06-21，本卡片对能源右尾风险的结论是：它不足以阻止最大型hyperscalers扩建AI智算中心，但会显著改变长期电力预算和电网容量布局。IEA预计全球数据中心用电从2025年约485 TWh升至2030年约950 TWh；LBNL预计美国数据中心到2028年可能占总用电6.7-…",
+          "check": "支持 0 / 风险 9 / 观察 0",
+          "href": "/investor/research-network/#thesis-075017003b"
+        },
+        {
+          "date": "2026-06-21",
+          "value": 15.6,
+          "label": "风险",
+          "title": "AI基础设施的真正能源约束是确定性电力和电网capex，而不是单一Brent价格；油价上行会放大成本与进度风险，但更可能造成扩建分化而非需求坍塌。",
+          "view": "截至2026-06-21，本卡压力测试Research note 5结论：原油赤字和Brent上行风险会约束AI算力扩建，但主要不是通过原油直接消耗，而是通过天然气边际电价、柴油/成品油施工和备用电源成本、电网并网排队以及自备燃气电源capex。1 GW IT负载、PUE 1.10的园区年用电约9…",
+          "check": "支持 0 / 风险 7 / 观察 1",
+          "href": "/investor/research-network/#thesis-075017003b"
         }
       ],
       "dimensions": [
@@ -1076,24 +856,24 @@
           "label": "维度一",
           "title": "论点",
           "front": "研究问题是否清晰？",
-          "back": "美联储路径仍是全球资产再定价的总阀门"
+          "back": "AI 资本开支通过能源、设备和利率进入通胀定价"
         },
         {
           "label": "维度二",
           "title": "证据",
           "front": "证据是否可追溯？",
-          "back": "覆盖 11 位分析师和 4 类公开来源。"
+          "back": "覆盖 14 位分析师和 4 类公开来源。"
         },
         {
           "label": "维度三",
           "title": "证伪",
           "front": "风险是否上升？",
-          "back": "风险事件 123 条，方向为 分歧。"
+          "back": "风险事件 140 条，方向为 分歧。"
         }
       ],
       "sources": [
         {
-          "href": "/investor/research-network/#thesis-a803fa3312",
+          "href": "/investor/research-network/#thesis-075017003b",
           "label": "研究网络主线",
           "tag": "网络"
         }
@@ -1102,19 +882,17 @@
       "kind": "living_thesis_recap"
     },
     {
-      "slug": "living-8b8ede3135-8b8ede31-2026-06-18",
-      "title": "消费降级、健康刚需与银发经济正在重塑防御型增长：动态复盘",
-      "subtitle": "当前共有 40 条证据、1 位分析师和 3 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
-      "date": "2026-06-18",
+      "slug": "living-a-70daf872-2026-06-20",
+      "title": "A 股红利与硬科技杠铃仍是政策、利率和风险偏好的组合表达：动态复盘",
+      "subtitle": "当前共有 40 条证据、2 位分析师和 2 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
+      "date": "2026-06-20",
       "badge": "LIVING THESIS RECAP",
-      "reportHref": "/investor/research-network/#thesis-8b8ede3135",
+      "reportHref": "/investor/research-network/#thesis-70daf87262",
       "chartTitle": "主线证据强度演化",
       "chartDescription": "由公开研究事件按日期聚合，显示支持、风险和观察证据如何改变主线强度。",
       "chartUnit": "证据强度",
       "chart": {
         "labels": [
-          "06-09",
-          "06-10",
           "06-11",
           "06-12",
           "06-13",
@@ -1122,19 +900,21 @@
           "06-15",
           "06-16",
           "06-17",
-          "06-18"
+          "06-18",
+          "06-19",
+          "06-20"
         ],
         "values": [
-          33,
-          13.4,
-          32.8,
-          66.2,
-          46.6,
-          51,
-          53.4,
-          54.8,
-          50.2,
-          45.6
+          36,
+          31.4,
+          46.8,
+          43.2,
+          41.6,
+          46,
+          47.4,
+          48.8,
+          35.2,
+          57.6
         ]
       },
       "metrics": [
@@ -1145,7 +925,227 @@
         },
         {
           "label": "风险事件",
-          "value": "81",
+          "value": "115",
+          "accent": "red"
+        },
+        {
+          "label": "分析师",
+          "value": "14",
+          "accent": "green"
+        },
+        {
+          "label": "方向",
+          "value": "分歧",
+          "accent": "orange"
+        }
+      ],
+      "conclusions": [
+        {
+          "title": "主线定义",
+          "text": "当前共有 40 条证据、2 位分析师和 2 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。"
+        },
+        {
+          "title": "最新变化",
+          "text": "2026-06-20: I have completed the synthesising analysis for Research note 5 of the research thread session 8922aacc c848 49ce 82db 8eb97dc5d50d as the…"
+        },
+        {
+          "title": "证据纪律",
+          "text": "当前以 10 条支持、115 条风险和 35 条观察证据进行动态跟踪。"
+        }
+      ],
+      "checklist": [
+        {
+          "label": "支持证据",
+          "status": "10 条",
+          "detail": "继续观察是否出现跨来源、跨分析师的同向验证。",
+          "bull": "支持证据集中出现在最新日期且源报告可追溯",
+          "bear": "支持证据停留在旧报告或单一来源",
+          "active": "bear"
+        },
+        {
+          "label": "风险证据",
+          "status": "115 条",
+          "detail": "风险证据用于判断主线是否变成拥挤交易或证伪样本。",
+          "bull": "风险被新证据消化",
+          "bear": "风险事件数量超过支持事件",
+          "active": "bear"
+        },
+        {
+          "label": "监控词",
+          "status": "CPI / 融资余额 / 银行",
+          "detail": "CPI / 融资余额 / 银行 / A-share / dividend / hard-tech / barbell / remains",
+          "bull": "监控词在新报告中被反复验证",
+          "bear": "监控词热度上升但价格或基本面未兑现",
+          "active": "bull"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-06-11",
+          "value": 36,
+          "label": "风险",
+          "title": "具身智能主题仍可投，但 2026-06-11 的 A 股市场结构要求降低总仓位，把高两融、高成交且缺乏外汇对冲的内需链标的放入严格止损桶。",
+          "view": "2026-06-11：本卡对具身智能 A 股篮子做两融、成交与外资可得数据压力测试。结论是：短线拥挤度确实主要集中在“人民币收入 / 硬通货成本”或近似分组，尤其是柯力传感、绿的谐波、奥比中光、拓斯达；但若只看融资余额绝对值，三花智控、汇川技术等更全球化大市值标的会稀释结论。国内杠杆拥挤已验证，外…",
+          "check": "支持 0 / 风险 1 / 观察 0",
+          "href": "/investor/research-network/#thesis-70daf87262"
+        },
+        {
+          "date": "2026-06-12",
+          "value": 31.4,
+          "label": "风险",
+          "title": "能源与金属投入型通胀不会再“推迟PPI转正”，因为PPI已转正；它会推迟中下游利润修复并压缩人民银行全面降息空间。",
+          "view": "截至2026-06-12，本卡支持前序能源/材料成本地板约束判断，但修正为：PPI已经转正，5月为同比+3.9%、环比+0.5%；真正风险是购进价格同比+5.8%高于出厂价格，延缓Q2/Q3利润修复质量。CPI同比+1.2%、核心CPI同比+1.1%说明居民端通胀仍温和，但燃料动力、化工和有色购进…",
+          "check": "支持 0 / 风险 2 / 观察 0",
+          "href": "/investor/research-network/#thesis-70daf87262"
+        },
+        {
+          "date": "2026-06-13",
+          "value": 46.8,
+          "label": "风险",
+          "title": "实际利率上限超1.90%–1.97%导致的GDP失速与债务压力，叠加银行息差逼近1.35%极限，是2026年6月14日下迫使央行打破7.40防线降息并接受贬值的主…",
+          "view": "截至2026年6月14日，本报告压力测试了中美利差持续倒挂下，人民币坚守7.40汇率红线所面临的国内宏观约束。测算表明，央行对实际利率存在1.90%–1.97%的硬上限。当GDP增速降至4.8%且核心CPI跌破1.044%（或在GDP 4.2%且CPI跌破1.121%时），实际紧缩和地方债压迫将越…",
+          "check": "支持 1 / 风险 1 / 观察 0",
+          "href": "/investor/research-network/#thesis-70daf87262"
+        },
+        {
+          "date": "2026-06-14",
+          "value": 43.2,
+          "label": "观察",
+          "title": "本期10卡报告主线严密、数据一致、配置可执行，评级为‘通过附小修订’；下期必须把内联[S?]引用与缺失card-09三件套补齐。",
+          "view": "对card-01至card-09的终审显示：主线数据贯穿一致（CPI 4.2%、FFR 3.50-3.75%、中美利差≥200bp、10Y CGB 2.50-2.75%、30Y 2.80-3.05%、二永+30-40bp、弱城投+65-120bp、TLAC 16/18%），立场链合规（4 supp…",
+          "check": "支持 0 / 风险 1 / 观察 1",
+          "href": "/investor/research-network/#thesis-70daf87262"
+        },
+        {
+          "date": "2026-06-15",
+          "value": 41.6,
+          "label": "风险",
+          "title": "美联储'更高更久'+油价冲击向中国的传导：政策分化、人民币与A股配置",
+          "view": "我部分推翻Research note 01的设定。中美政策分化在2026年年中不仅可持续、且已无压力地发生——但机制不同。5月中国PPI同比+3.9%（2022年7月来最高，受同一伊朗战争大宗冲击+AI资本开支推升），CPI仅+1.2%，故'通缩给人民银行空间'被削弱[S1][S2]；人民银行5月…",
+          "check": "支持 0 / 风险 2 / 观察 2",
+          "href": "/investor/research-network/#thesis-70daf87262"
+        },
+        {
+          "date": "2026-06-16",
+          "value": 46,
+          "label": "风险",
+          "title": "Research note 08的杠铃方向成立，但中国权益实施必须从“宽泛受益”改为“成本转嫁能力、出口政策韧性和人民币压力三重筛选后的选择性超配”。",
+          "view": "截至2026-06-16，本卡对Research note 08的全球与A股杠铃配置进行中国宏观压力测试。结论是方向可保留，但中国不是美国滞胀的纯受益方：5月CPI仅+1.2%、PPI达+3.9%，2.7个百分点剪刀差显示外部冲击首先压缩下游利润。人民币强势和1.75%的10年期国债收益率给人民银…",
+          "check": "支持 0 / 风险 1 / 观察 1",
+          "href": "/investor/research-network/#thesis-70daf87262"
+        },
+        {
+          "date": "2026-06-17",
+          "value": 47.4,
+          "label": "观察",
+          "title": "I have conducted a quantitative factor and trading crowding stress test on the gr…",
+          "view": "I have conducted a quantitative factor and trading crowding stress test on the growth sleeve of the barbell portfolio (STAR 50, Electronics, and Batt…",
+          "check": "支持 0 / 风险 1 / 观察 1",
+          "href": "/investor/research-network/#thesis-70daf87262"
+        },
+        {
+          "date": "2026-06-18",
+          "value": 48.8,
+          "label": "观察",
+          "title": "[auto-handoff] 中小银行NIM跌破1.40%引发的信用收缩对大型公用事业二级债配置意愿的传导",
+          "view": "致 首席策略师： 协同任务已完成。执行方为 金融行业分析师。 模式: adhoc 会话: 9260bd6a-eb3c-44f2-bb64-3074089878bd 结果摘要: Wrote handoff_response.md (11016 bytes); wrote handoff_respon…",
+          "check": "支持 0 / 风险 1 / 观察 1",
+          "href": "/investor/research-network/#thesis-70daf87262"
+        },
+        {
+          "date": "2026-06-19",
+          "value": 35.2,
+          "label": "观察",
+          "title": "[auto-handoff] 商业银行资产荒配置对收益率曲线及大类资产风格轮动的影响评估",
+          "view": "致 市场情绪师： 协同任务已完成。执行方为 中国宏观分析师。 模式: adhoc 会话: 5fcf9b8f-49e0-4ca8-bea2-ca739e00cae6 结果摘要: Wrote handoff_response.md (10160 bytes); wrote handoff_respon…",
+          "check": "支持 0 / 风险 4 / 观察 2",
+          "href": "/investor/research-network/#thesis-70daf87262"
+        },
+        {
+          "date": "2026-06-20",
+          "value": 57.6,
+          "label": "观察",
+          "title": "I have completed the synthesising analysis for Research note 5 of the research th…",
+          "view": "I have completed the synthesising analysis for Research note 5 of the research thread session 8922aacc c848 49ce 82db 8eb97dc5d50d as the Chief Strat…",
+          "check": "支持 0 / 风险 0 / 观察 1",
+          "href": "/investor/research-network/#thesis-70daf87262"
+        }
+      ],
+      "dimensions": [
+        {
+          "label": "维度一",
+          "title": "论点",
+          "front": "研究问题是否清晰？",
+          "back": "A 股红利与硬科技杠铃仍是政策、利率和风险偏好的组合表达"
+        },
+        {
+          "label": "维度二",
+          "title": "证据",
+          "front": "证据是否可追溯？",
+          "back": "覆盖 14 位分析师和 4 类公开来源。"
+        },
+        {
+          "label": "维度三",
+          "title": "证伪",
+          "front": "风险是否上升？",
+          "back": "风险事件 115 条，方向为 分歧。"
+        }
+      ],
+      "sources": [
+        {
+          "href": "/investor/research-network/#thesis-70daf87262",
+          "label": "研究网络主线",
+          "tag": "网络"
+        }
+      ],
+      "autoGenerated": true,
+      "kind": "living_thesis_recap"
+    },
+    {
+      "slug": "living-8b8ede3135-8b8ede31-2026-06-21",
+      "title": "消费降级、健康刚需与银发经济正在重塑防御型增长：动态复盘",
+      "subtitle": "当前共有 40 条证据、1 位分析师和 4 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
+      "date": "2026-06-21",
+      "badge": "LIVING THESIS RECAP",
+      "reportHref": "/investor/research-network/#thesis-8b8ede3135",
+      "chartTitle": "主线证据强度演化",
+      "chartDescription": "由公开研究事件按日期聚合，显示支持、风险和观察证据如何改变主线强度。",
+      "chartUnit": "证据强度",
+      "chart": {
+        "labels": [
+          "06-12",
+          "06-13",
+          "06-14",
+          "06-15",
+          "06-16",
+          "06-17",
+          "06-18",
+          "06-19",
+          "06-20",
+          "06-21"
+        ],
+        "values": [
+          65,
+          39.4,
+          46.8,
+          41.2,
+          50.6,
+          46,
+          41.4,
+          45.8,
+          35.2,
+          39.6
+        ]
+      },
+      "metrics": [
+        {
+          "label": "证据事件",
+          "value": "160",
+          "accent": "blue"
+        },
+        {
+          "label": "风险事件",
+          "value": "85",
           "accent": "red"
         },
         {
@@ -1162,21 +1162,21 @@
       "conclusions": [
         {
           "title": "主线定义",
-          "text": "当前共有 40 条证据、1 位分析师和 3 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。"
+          "text": "当前共有 40 条证据、1 位分析师和 4 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。"
         },
         {
           "title": "最新变化",
-          "text": "2026-06-18: 下沉高频消费的UE可持续性呈模型分化：场景零售与餐饮供应链能依靠集中履约和网点高密度抵御物流压力，而数字平台在低ASP下承受非线性的履约费率反弹风险。"
+          "text": "2026-06-21: 电气化资本开支周期通过物理瓶颈、长交期和投入品价格黏性，结构性强化“更高更久”，但其作用是压低2027年降息空间，而非单独制造广义CPI螺旋。"
         },
         {
           "title": "证据纪律",
-          "text": "当前以 25 条支持、81 条风险和 54 条观察证据进行动态跟踪。"
+          "text": "当前以 23 条支持、85 条风险和 52 条观察证据进行动态跟踪。"
         }
       ],
       "checklist": [
         {
           "label": "支持证据",
-          "status": "25 条",
+          "status": "23 条",
           "detail": "继续观察是否出现跨来源、跨分析师的同向验证。",
           "bull": "支持证据集中出现在最新日期且源报告可追溯",
           "bear": "支持证据停留在旧报告或单一来源",
@@ -1184,7 +1184,7 @@
         },
         {
           "label": "风险证据",
-          "status": "81 条",
+          "status": "85 条",
           "detail": "风险证据用于判断主线是否变成拥挤交易或证伪样本。",
           "bull": "风险被新证据消化",
           "bear": "风险事件数量超过支持事件",
@@ -1201,53 +1201,26 @@
       ],
       "timeline": [
         {
-          "date": "2026-06-09",
-          "value": 33,
-          "label": "风险",
-          "title": "白糖进口严控会抬高下游用糖成本底部，但在食品PPI偏弱和主要农产品价格受调控的环境下，它更可能压缩糖果、饮料、烘焙利润率，而不是显著推升食品CPI。",
-          "view": "截至2026-06-10，本卡综合前序糖业供给压力测试，判断白糖输入性压力更像食品饮料企业的利润率冲击，而不是食品CPI的主驱动。国际原糖约14美分/磅、广西现货约5290-5350元/吨，叠加配额和糖浆/预混粉监管，使国内糖价有政策底但上行受库存压制。糖果、全糖饮料和大众烘焙的毛利敏感度依次递减…",
-          "check": "支持 0 / 风险 2 / 观察 1",
-          "href": "/investor/research-network/#thesis-8b8ede3135"
-        },
-        {
-          "date": "2026-06-10",
-          "value": 13.4,
-          "label": "风险",
-          "title": "B50引发的‘输入型再通胀’将通过餐饮渠道放大传导，使2026年H2货币政策宽松空间受限，降息预期需从‘全面’转向‘结构性’。",
-          "view": "截至2026-06-11，评估显示印尼B50政策引发的油脂成本冲击将对2026年H2中国CPI贡献约0.35-0.45个百分点。由于2026年新版CPI篮子提高了餐饮服务权重（9.8%），油脂价格波动的传导效应被放大。虽然整体通胀风险可控，但此输入型压力形成的‘成本底’将有效关闭年内进一步降息的窗…",
-          "check": "支持 0 / 风险 7 / 观察 4",
-          "href": "/investor/research-network/#thesis-8b8ede3135"
-        },
-        {
-          "date": "2026-06-11",
-          "value": 32.8,
-          "label": "风险",
-          "title": "公用事业成本会加剧弱壁垒消费供应链的利润阻断，但除非电价、大宗商品和终端需求同步恶化，否则不足以推翻高定价权消费龙头的防御逻辑。",
-          "view": "截至2026-06-11，本卡综合支持前序“高定价权防御”主线，但将能源与大宗商品压力收窄为公用事业传导边界。2026年5月PPI上行和燃料动力购进价格上涨说明成本压力真实存在；但CPI和餐饮收入显示终端传导仍弱。电价、水价和碳价更多是消费内部排序变量：低壁垒B端配料、耗电耗水和包装依赖高的供应商…",
-          "check": "支持 0 / 风险 4 / 观察 4",
-          "href": "/investor/research-network/#thesis-8b8ede3135"
-        },
-        {
           "date": "2026-06-12",
-          "value": 66.2,
+          "value": 65,
           "label": "支持",
           "title": "宏观政策与收入预期有限地、结构性地支撑Research note 02判断：功能性食品10-20%溢价更可承接（高收入30%+银发+备案制三因子对齐），预制菜5-…",
           "view": "锚定2026-06-13，中国2026Q1居民可支配收入实际增速+5.0%、4月CPI+0.3%但食品CPI-1.0%、城镇失业率5.1%。政策面以旧换新和服务消费补贴未直接落到食品大类，但保健食品备案扩围、预制菜国标与服务消费意见同向支撑功能化转型。借鉴日本FOSHU与机能性表示食品在1995-…",
-          "check": "支持 4 / 风险 2 / 观察 0",
+          "check": "支持 4 / 风险 2 / 观察 1",
           "href": "/investor/research-network/#thesis-8b8ede3135"
         },
         {
           "date": "2026-06-13",
-          "value": 46.6,
+          "value": 39.4,
           "label": "风险",
           "title": "能源价格上涨引发国内工业呈现非对称的输入型通胀与利润挤压，促使宏观政策转向“动态价格调控与结构性补贴并重”的行政与财政干预模式以稳定产业链。",
           "view": "2026年6月中东危机导致原油高企至105美元/桶，煤炭升至1300元/吨，推升中国5月PPI至3.9%。在CPI仅1.2%、转嫁率仅15%的背景下，中下游制造业利润空间平均压缩13.3%。宏观政策通过发改委3月23日成品油临时价格调控及“两新”结构性财政补贴积极干预，防范实体经济失速风险。",
-          "check": "支持 1 / 风险 2 / 观察 1",
+          "check": "支持 1 / 风险 2 / 观察 0",
           "href": "/investor/research-network/#thesis-8b8ede3135"
         },
         {
           "date": "2026-06-14",
-          "value": 51,
+          "value": 46.8,
           "label": "支持",
           "title": "“电力本位”人民币是结算和交叉盘再定价变量，不是2026-2027年立即改写全球储备秩序的变量。",
           "view": "截至2026-06-15，本卡片综合判断：电力设备顺差与CIPS扩张会强化人民币在贸易结算、营运余额和CNH交叉盘中的地位，但尚不足以改写全球储备秩序。IMF 2025Q4数据显示人民币仅占官方储备1.95%，远低于美元56.77%。美联储因美国2026年5月CPI 4.2%而难以重启降息，PBO…",
@@ -1256,16 +1229,16 @@
         },
         {
           "date": "2026-06-15",
-          "value": 53.4,
+          "value": 41.2,
           "label": "风险",
           "title": "[auto-handoff] 美国CPI/PPI背离对大类资产风险溢价及下半年美股板块轮动影响研判",
           "view": "致 全球宏观分析师： 协同任务已完成。执行方为 首席策略师。 模式: adhoc 会话: f4668e4f-748a-467a-bfe5-e36469d590db 结果摘要: Wrote handoff_response.md (10465 bytes); wrote handoff_respon…",
-          "check": "支持 3 / 风险 4 / 观察 1",
+          "check": "支持 2 / 风险 4 / 观察 1",
           "href": "/investor/research-network/#thesis-8b8ede3135"
         },
         {
           "date": "2026-06-16",
-          "value": 54.8,
+          "value": 50.6,
           "label": "观察",
           "title": "[auto-handoff] 霍尔木兹海峡复航预期下的全球供应链通胀及运费重估",
           "view": "致 能源行业分析师： 协同任务已完成。执行方为 全球宏观分析师。 模式: adhoc 会话: 1dff2613-6f22-4648-a9bf-6fe630974650 结果摘要: Wrote handoff_response.md (10216 bytes); wrote handoff_resp…",
@@ -1274,7 +1247,7 @@
         },
         {
           "date": "2026-06-17",
-          "value": 50.2,
+          "value": 46,
           "label": "观察",
           "title": "模块化的降本红利无法显著降低终端售价，但通过CAPEX杠杆与单店模型重塑驱动门店密度扩张，间接催化'高频低客单'消费模式的规模化。",
           "view": "截至2026-06-17，模块化建造在酒店与连锁餐饮端确实把单房/单店CAPEX压缩15–25%、工期压缩30–50%，但红利绝大部分被加盟商回收期缩短、品牌方加盟费抽成和租金/人工通胀吸收，传导到终端ADR/客单价的弹性<0.2[自测算]。亚朵2025年ADR -3.1%、OCC +2.4ppt…",
@@ -1283,11 +1256,38 @@
         },
         {
           "date": "2026-06-18",
-          "value": 45.6,
+          "value": 41.4,
           "label": "观察",
           "title": "[auto-handoff] 油价回落与headline CPI缓和对国内消费需求的净传导",
           "view": "致 消费行业分析师： 协同任务已完成。执行方为 中国宏观分析师。 模式: adhoc 会话: d5d23e30-7f8c-4941-90b4-d0523c113c1f 结果摘要: Wrote handoff_response.md (13103 bytes); wrote handoff_resp…",
           "check": "支持 0 / 风险 2 / 观察 1",
+          "href": "/investor/research-network/#thesis-8b8ede3135"
+        },
+        {
+          "date": "2026-06-19",
+          "value": 45.8,
+          "label": "风险",
+          "title": "电网公用事业资产费率基数扩张对宏观通胀与货币政策的传导效应",
+          "view": "压力测试卡片01–05的宏观结论。直接渠道被夸大：电力属能源、按构造排除于核心PCE之外，达拉斯联储测算数据中心对总体PCE的拉动2026仅+0.05pp、2030升至+0.13pp[S1]；电力仅占CPI约2.5%[S11]，自测算直接总体贡献约0.10pp。但费率基数是30–40年价格水平锁定…",
+          "check": "支持 0 / 风险 1 / 观察 0",
+          "href": "/investor/research-network/#thesis-8b8ede3135"
+        },
+        {
+          "date": "2026-06-20",
+          "value": 35.2,
+          "label": "风险",
+          "title": "能源成本压力对AI算力基础设施运营经济性与扩容节奏的影响",
+          "view": "压力测试并在核心机制上否定使命链条（油价×汇率→工业电价→AI经济性→扩容放缓）。链条两处断裂：(1)选错杠杆——电力是AI算力经济性的二阶变量，1GW数据中心年化TCO约85亿美元中能源仅约6亿（≈7%），服务器约60%；电价+20%仅抬升总算力成本约1.4%，不构成扩容开关，资本开支（GPU）…",
+          "check": "支持 0 / 风险 3 / 观察 0",
+          "href": "/investor/research-network/#thesis-8b8ede3135"
+        },
+        {
+          "date": "2026-06-21",
+          "value": 39.6,
+          "label": "风险",
+          "title": "I have completed the analysis on AI compute infrastructure transmission paths und…",
+          "view": "I have completed the analysis on AI compute infrastructure transmission paths under power and transformer constraints , focusing on the concrete impa…",
+          "check": "支持 0 / 风险 3 / 观察 1",
           "href": "/investor/research-network/#thesis-8b8ede3135"
         }
       ],
@@ -1308,7 +1308,7 @@
           "label": "维度三",
           "title": "证伪",
           "front": "风险是否上升？",
-          "back": "风险事件 81 条，方向为 分歧。"
+          "back": "风险事件 85 条，方向为 分歧。"
         }
       ],
       "sources": [
@@ -1327,10 +1327,670 @@
       "kind": "living_thesis_recap"
     },
     {
-      "slug": "living-a-4b3b37e2-2026-06-18",
+      "slug": "living-mag7-ai-8c5a9690-2026-06-21",
+      "title": "Mag7 在 AI 时代从平台垄断转向基础设施再分层：动态复盘",
+      "subtitle": "当前共有 40 条证据、4 位分析师和 8 条风险信号指向该判断；主导链条为 AI 基础设施。该主题应作为可跟踪投资假设，而不是孤立结论。",
+      "date": "2026-06-21",
+      "badge": "LIVING THESIS RECAP",
+      "reportHref": "/investor/research-network/#thesis-8c5a9690a0",
+      "chartTitle": "主线证据强度演化",
+      "chartDescription": "由公开研究事件按日期聚合，显示支持、风险和观察证据如何改变主线强度。",
+      "chartUnit": "证据强度",
+      "chart": {
+        "labels": [
+          "06-12",
+          "06-13",
+          "06-14",
+          "06-15",
+          "06-16",
+          "06-17",
+          "06-18",
+          "06-19",
+          "06-20",
+          "06-21"
+        ],
+        "values": [
+          12,
+          12,
+          12,
+          19.2,
+          12,
+          12,
+          12,
+          12,
+          12,
+          42.6
+        ]
+      },
+      "metrics": [
+        {
+          "label": "证据事件",
+          "value": "160",
+          "accent": "blue"
+        },
+        {
+          "label": "风险事件",
+          "value": "135",
+          "accent": "red"
+        },
+        {
+          "label": "分析师",
+          "value": "14",
+          "accent": "green"
+        },
+        {
+          "label": "方向",
+          "value": "分歧",
+          "accent": "orange"
+        }
+      ],
+      "conclusions": [
+        {
+          "title": "主线定义",
+          "text": "当前共有 40 条证据、4 位分析师和 8 条风险信号指向该判断；主导链条为 AI 基础设施。该主题应作为可跟踪投资假设，而不是孤立结论。"
+        },
+        {
+          "title": "最新变化",
+          "text": "2026-06-21: AI 基础设施建设中的电力供应与电网容量瓶颈分析"
+        },
+        {
+          "title": "证据纪律",
+          "text": "当前以 10 条支持、135 条风险和 15 条观察证据进行动态跟踪。"
+        }
+      ],
+      "checklist": [
+        {
+          "label": "支持证据",
+          "status": "10 条",
+          "detail": "继续观察是否出现跨来源、跨分析师的同向验证。",
+          "bull": "支持证据集中出现在最新日期且源报告可追溯",
+          "bear": "支持证据停留在旧报告或单一来源",
+          "active": "bear"
+        },
+        {
+          "label": "风险证据",
+          "status": "135 条",
+          "detail": "风险证据用于判断主线是否变成拥挤交易或证伪样本。",
+          "bull": "风险被新证据消化",
+          "bear": "风险事件数量超过支持事件",
+          "active": "bear"
+        },
+        {
+          "label": "监控词",
+          "status": "AI 基础设施 / 云厂商 / HBM",
+          "detail": "AI 基础设施 / 云厂商 / HBM / 先进封装 / GPU / ASIC / Mag7 / 超大规模云厂商",
+          "bull": "监控词在新报告中被反复验证",
+          "bear": "监控词热度上升但价格或基本面未兑现",
+          "active": "bull"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-06-12",
+          "value": 12,
+          "label": "风险",
+          "title": "先进封装与HBM4代工瓶颈导致的芯片交付延迟将通过容量电费和空置折旧对数据中心项目NPV造成毁灭性打击，而低能效的单片芯片fallback则是更具破坏性的财务陷阱。",
+          "view": "电网瓶颈倒逼云厂商转向高能效Chiplet芯片。压力测试表明，若因先进封装与HBM4代工瓶颈导致交付延迟12至24个月，数据中心将因闲置运维和电网容量电费遭受0.59亿至2.37亿美元的NPV损失。若退回低效单片芯片，将因能效受限导致算力折损，NPV暴跌2.71亿美元。因此，云厂商被锁定在Chip…",
+          "check": "支持 1 / 风险 9 / 观察 0",
+          "href": "/investor/research-network/#thesis-8c5a9690a0"
+        },
+        {
+          "date": "2026-06-13",
+          "value": 12,
+          "label": "风险",
+          "title": "高能耗GPU集群的大规模部署导致超大规模云厂商的资本支出全面向电力基建倾斜，在设备端过度拥挤的背景下，公用事业运营资产提供了更优的风险收益比。",
+          "view": "截至2026年中，全球电网物理极限已成为AI扩张的核心瓶颈。超高密度GPU（如GB200 NVL72，120kW+/机柜）推动云厂商2026年Capex升至6600亿-7250亿美元，其中逾60%投向电力与基建。美国数据中心电力需求年底将达41 GW。数据证实，拥挤度极高的电网设备已透支预期，而处…",
+          "check": "支持 0 / 风险 12 / 观察 3",
+          "href": "/investor/research-network/#thesis-8c5a9690a0"
+        },
+        {
+          "date": "2026-06-14",
+          "value": 12,
+          "label": "风险",
+          "title": "GPU抵押贷款收缩会削弱边际Neocloud订单可见度，但先进封装与先进制程需求更可能从融资套利订单转向信用更硬的超大规模厂商和ASIC路线，而非进入全面下行。",
+          "view": "截至2026-06-15，本卡压力测试GPU抵押融资收缩对半导体订单的影响：冲击不是AI芯片需求消失，而是订单可见度从Neocloud融资驱动采购转向超大规模厂商、ASIC、主权项目和带预付款的硬合同。NVIDIA Data Center在FY2027 Q1仍达752亿美元，TSMC先进节点和HP…",
+          "check": "支持 0 / 风险 13 / 观察 0",
+          "href": "/investor/research-network/#thesis-8c5a9690a0"
+        },
+        {
+          "date": "2026-06-15",
+          "value": 19.2,
+          "label": "风险",
+          "title": "验证AI算力硬件链的估值承压：流动性虹吸下的先进封装与GPU产业链韧性评估",
+          "view": "本卡对AI算力硬件链做压力测试，得出'分化韧性'结论。资金流层面确认虹吸：2026-06-08半导体−219.33亿、通信−98.35亿、消费电子−69.92亿元净流出居前[S6]，年内93家半导体公司减持[S7]，叠加CXMT约295亿IPO锚定[S9]。但估值下移是资金流/轮动驱动、非盈利驱动…",
+          "check": "支持 0 / 风险 5 / 观察 1",
+          "href": "/investor/research-network/#thesis-8c5a9690a0"
+        },
+        {
+          "date": "2026-06-16",
+          "value": 12,
+          "label": "风险",
+          "title": "电力供给限制驱动的半导体能效转型主要表现为通用GPU的系统与精度级优化，而非ASIC/NPU的大规模替代；自研定制芯片的爆发反而加剧了全球先进制程与封装供应链对T…",
+          "view": "截至2026-06-17，电力瓶颈确在倒逼算力能效转型，但并非单纯的通用GPU向专用ASIC切换。算法多变性（如MoE与动态推理）使自研ASIC面临极高的“代差失效”风险，通用GPU（如NVIDIA Blackwell）凭借软件与架构灵活性仍占据70%以上份额。能效提升主要通过系统精度（FP4/F…",
+          "check": "支持 1 / 风险 17 / 观察 0",
+          "href": "/investor/research-network/#thesis-8c5a9690a0"
+        },
+        {
+          "date": "2026-06-17",
+          "value": 12,
+          "label": "风险",
+          "title": "2027 能源重定价压的是超大规模厂商 ROIC 而非芯片 capex 效率——硅片主导 TCO、能源占比单位数，且性能/瓦溢价+杰文斯回弹反而净支撑前沿逻辑/先…",
+          "view": "2026-06-18 压力测试：能源是证伪芯片逻辑的错误杠杆。Epoch 1GW 机房年化 TCO 约 $8.5B，服务器占 ~59%、能源仅 ~7%；交付电价 +30% 仅抬升 TCO 约 +2.1%，翻倍也仅 +7%（自测算），而 IT 寿命 5→3 年使 TCO +41%——刷新节奏的影响是…",
+          "check": "支持 1 / 风险 9 / 观察 0",
+          "href": "/investor/research-network/#thesis-8c5a9690a0"
+        },
+        {
+          "date": "2026-06-18",
+          "value": 12,
+          "label": "风险",
+          "title": "大模型价格战引发的推理流量爆量，导致国产GPU设计龙头呈现“营收高增、毛利率承压”的量价背离，定价权向制造端瓶颈与TCO优化环节倾斜。",
+          "view": "在大模型极低价格战（DeepSeek-V4-Flash降至$0.14/1M tokens）推动下，云厂商Q1 AI基础设施收入大增79%（GPU云激增184%）。但因先进制程及封装产能受限导致BOM成本上涨10%-15%，加之云厂商降本压价，国产GPU（如海光一季度毛利率降至55.6%，同比下滑5…",
+          "check": "支持 0 / 风险 9 / 观察 0",
+          "href": "/investor/research-network/#thesis-8c5a9690a0"
+        },
+        {
+          "date": "2026-06-19",
+          "value": 12,
+          "label": "风险",
+          "title": "电力与封装成本上升会触发AI基础设施技术路线调整，但截至2026-06-20仍不足以触发超大规模云厂商AI芯片采购总量的全面回撤。",
+          "view": "工作日2026-06-20：本卡压力测试认为，电力和先进封装成本上升不会在2026年触发超大规模云厂商全面削减AI芯片采购，但会提高单位弹性，推动技术路线从“更多GPU插槽”转向“每瓦性能、液冷机架、自研ASIC、提前锁定CoWoS/HBM和电力站点”。真正风险是并网、变电站、CoWoS或HBM配…",
+          "check": "支持 0 / 风险 8 / 观察 0",
+          "href": "/investor/research-network/#thesis-8c5a9690a0"
+        },
+        {
+          "date": "2026-06-20",
+          "value": 12,
+          "label": "风险",
+          "title": "在2026-06-20，受大型变压器48-60个月与液冷关键零部件CDU/QD产能物理受限的强约束，超大规模云厂商的AI Capex落地将被迫延迟2至3年，100…",
+          "view": "本卡片对超大规模云厂商在2026年锁定的3,750亿美元AI资本开支扩张进行了物理压力测试。结论表明，先进封装引发的高密度芯片集成正面临电网容量、变压器和液冷链的物理限制。新建100 MW GB200 NVL72数据中心包含25亿美元算力CAPEX和13亿美元液冷设施CAPEX。在即时（JIT）采…",
+          "check": "支持 1 / 风险 13 / 观察 0",
+          "href": "/investor/research-network/#thesis-8c5a9690a0"
+        },
+        {
+          "date": "2026-06-21",
+          "value": 42.6,
+          "label": "风险",
+          "title": "在2026-06-21，受2nm GAA先进制程 wafer 溢价与先进封装 80% 初期装配良率的限制，下一代高密度 AI 芯片的制造 BOM 将翻倍至8,15…",
+          "view": "截至2026-06-21，本卡片评估了AI机架密度120kW+下，先进封装良率及散热材料研发对AI芯片成本与供应链的重塑。下一代2nm GAA+HBM4+液冷芯片BOM成本较3nm基准大涨77.2%至6,780.97美元，在初期封装装配良率降至80%的重度压力下更暴增113.1%至8,153.59…",
+          "check": "支持 0 / 风险 2 / 观察 0",
+          "href": "/investor/research-network/#thesis-8c5a9690a0"
+        }
+      ],
+      "dimensions": [
+        {
+          "label": "维度一",
+          "title": "论点",
+          "front": "研究问题是否清晰？",
+          "back": "Mag7 在 AI 时代从平台垄断转向基础设施再分层"
+        },
+        {
+          "label": "维度二",
+          "title": "证据",
+          "front": "证据是否可追溯？",
+          "back": "覆盖 14 位分析师和 5 类公开来源。"
+        },
+        {
+          "label": "维度三",
+          "title": "证伪",
+          "front": "风险是否上升？",
+          "back": "风险事件 135 条，方向为 分歧。"
+        }
+      ],
+      "sources": [
+        {
+          "href": "/investor/research-network/#thesis-8c5a9690a0",
+          "label": "研究网络主线",
+          "tag": "网络"
+        }
+      ],
+      "autoGenerated": true,
+      "kind": "living_thesis_recap"
+    },
+    {
+      "slug": "living-deepseek-ai-ab1fb6a4-2026-06-21",
+      "title": "DeepSeek 式低价模型正在重塑 AI 定价权与软件利润池：动态复盘",
+      "subtitle": "当前共有 40 条证据、2 位分析师和 8 条风险信号指向该判断；主导链条为 AI 基础设施。该主题应作为可跟踪投资假设，而不是孤立结论。",
+      "date": "2026-06-21",
+      "badge": "LIVING THESIS RECAP",
+      "reportHref": "/investor/research-network/#thesis-ab1fb6a453",
+      "chartTitle": "主线证据强度演化",
+      "chartDescription": "由公开研究事件按日期聚合，显示支持、风险和观察证据如何改变主线强度。",
+      "chartUnit": "证据强度",
+      "chart": {
+        "labels": [
+          "06-12",
+          "06-13",
+          "06-14",
+          "06-15",
+          "06-16",
+          "06-17",
+          "06-18",
+          "06-19",
+          "06-20",
+          "06-21"
+        ],
+        "values": [
+          47,
+          39.4,
+          12,
+          33.2,
+          12,
+          31,
+          50.4,
+          12,
+          23.2,
+          30.6
+        ]
+      },
+      "metrics": [
+        {
+          "label": "证据事件",
+          "value": "160",
+          "accent": "blue"
+        },
+        {
+          "label": "风险事件",
+          "value": "107",
+          "accent": "red"
+        },
+        {
+          "label": "分析师",
+          "value": "14",
+          "accent": "green"
+        },
+        {
+          "label": "方向",
+          "value": "分歧",
+          "accent": "orange"
+        }
+      ],
+      "conclusions": [
+        {
+          "title": "主线定义",
+          "text": "当前共有 40 条证据、2 位分析师和 8 条风险信号指向该判断；主导链条为 AI 基础设施。该主题应作为可跟踪投资假设，而不是孤立结论。"
+        },
+        {
+          "title": "最新变化",
+          "text": "2026-06-21: I have completed the analysis on AI compute infrastructure transmission paths under power and transformer constraints , focusing on the c…"
+        },
+        {
+          "title": "证据纪律",
+          "text": "当前以 12 条支持、107 条风险和 41 条观察证据进行动态跟踪。"
+        }
+      ],
+      "checklist": [
+        {
+          "label": "支持证据",
+          "status": "12 条",
+          "detail": "继续观察是否出现跨来源、跨分析师的同向验证。",
+          "bull": "支持证据集中出现在最新日期且源报告可追溯",
+          "bear": "支持证据停留在旧报告或单一来源",
+          "active": "bear"
+        },
+        {
+          "label": "风险证据",
+          "status": "107 条",
+          "detail": "风险证据用于判断主线是否变成拥挤交易或证伪样本。",
+          "bull": "风险被新证据消化",
+          "bear": "风险事件数量超过支持事件",
+          "active": "bear"
+        },
+        {
+          "label": "监控词",
+          "status": "AI 基础设施 / GPU / ASIC",
+          "detail": "AI 基础设施 / GPU / ASIC / DeepSeek / DeepSeek-style / low-cost / models / reshaping",
+          "bull": "监控词在新报告中被反复验证",
+          "bear": "监控词热度上升但价格或基本面未兑现",
+          "active": "bull"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-06-12",
+          "value": 47,
+          "label": "风险",
+          "title": "AI 基础设施从‘算力’向‘电力’的范式转移",
+          "view": "PJM 容量价格三年连涨约10倍（28.92→333.44 美元/兆瓦·日，连续两年顶死 FERC 上限），是结构性稀缺信号而非周期尖峰。但「必须从 GPU 摩尔定律切换到公用事业资产底座」是错误的二选一。真相是瓶颈迁移：边际稀缺租金从硅片下移到可按期交付的确定性电力。估值应改为双因子模型——保留…",
+          "check": "支持 1 / 风险 2 / 观察 3",
+          "href": "/investor/research-network/#thesis-ab1fb6a453"
+        },
+        {
+          "date": "2026-06-13",
+          "value": 39.4,
+          "label": "观察",
+          "title": "红皇后竞速并未彻底抹去自研ASIC的成本优势，而是将其集中至Google与AWS两家、使其他云厂商回到对NVIDIA的依赖，从而部分推翻了Research not…",
+          "view": "在'红皇后竞速'下，自研ASIC单世代有效寿命已压缩至12–15个月，2nm节点全口径NRE攀升至USD 0.9–1.4B、N2晶圆约USD 30,000/片、CoWoS-L售罄至2027。我们测算自研ASIC在TCO上跑赢商用GPU的年部署门槛从5nm节点的约20万颗升至现实情景下的15万–25…",
+          "check": "支持 1 / 风险 4 / 观察 4",
+          "href": "/investor/research-network/#thesis-ab1fb6a453"
+        },
+        {
+          "date": "2026-06-14",
+          "value": 12,
+          "label": "风险",
+          "title": "物理电网瓶颈正迫使 AI 基础设施从‘暴力规模扩张’转向‘受约束的能效优化’，电力并网速度已取代芯片供应成为核心估值护城河。",
+          "view": "本报告通过压力测试确认了物理电网并网排队（7-10年）与变压器交期（4-5年）已成为 AI 基础设施扩张的硬约束。定量模型显示，1年的并网延迟将导致 100MW 数据中心损失 5.5% 的生命周期价值，且快速的 GPU 迭代周期（12-18个月效用减半）加剧了闲置产能的 ROI 损耗。这种物理瓶颈…",
+          "check": "支持 0 / 风险 6 / 观察 0",
+          "href": "/investor/research-network/#thesis-ab1fb6a453"
+        },
+        {
+          "date": "2026-06-15",
+          "value": 33.2,
+          "label": "支持",
+          "title": "卡片 02 — AI 芯片供应链：DeepSeek V4 后的\"架构定制化\"趋势 白板：1f5523fe c230 4de9 bcab 6fc3d7edec87 …",
+          "view": "卡片 02 — AI 芯片供应链：DeepSeek V4 后的\"架构定制化\"趋势 白板：1f5523fe c230 4de9 bcab 6fc3d7edec87 ｜ 卡片 2/8 ｜ 日期：2026 06 15 分析师：TMT 行业分析师 ｜ 立场： 支持（support） 核心问题：DeepSe…",
+          "check": "支持 1 / 风险 4 / 观察 1",
+          "href": "/investor/research-network/#thesis-ab1fb6a453"
+        },
+        {
+          "date": "2026-06-16",
+          "value": 12,
+          "label": "风险",
+          "title": "单纯的电力价格上涨无法动摇SaaS效果付费的推理成本通缩基础，但物理电网容量限制与变压器交期导致的GPU集群部署瓶颈才是核心威胁，其引发的算力稀缺溢价（如代币价格…",
+          "view": "针对2026年6月17日算力侧电力约束，本报告对SaaS效果付费模式的财务稳定性进行了压力测试。测算表明，即便面临0.450美元/kWh的极端电价冲击，B200单卡百万Token的电力TCO成本仅从0.007890美元上升至0.010218美元，远低于DeepSeek V4-Pro的0.15美元市…",
+          "check": "支持 0 / 风险 9 / 观察 1",
+          "href": "/investor/research-network/#thesis-ab1fb6a453"
+        },
+        {
+          "date": "2026-06-17",
+          "value": 31,
+          "label": "风险",
+          "title": "2027 能源重定价压的是超大规模厂商 ROIC 而非芯片 capex 效率——硅片主导 TCO、能源占比单位数，且性能/瓦溢价+杰文斯回弹反而净支撑前沿逻辑/先…",
+          "view": "2026-06-18 压力测试：能源是证伪芯片逻辑的错误杠杆。Epoch 1GW 机房年化 TCO 约 $8.5B，服务器占 ~59%、能源仅 ~7%；交付电价 +30% 仅抬升 TCO 约 +2.1%，翻倍也仅 +7%（自测算），而 IT 寿命 5→3 年使 TCO +41%——刷新节奏的影响是…",
+          "check": "支持 0 / 风险 3 / 观察 0",
+          "href": "/investor/research-network/#thesis-ab1fb6a453"
+        },
+        {
+          "date": "2026-06-18",
+          "value": 50.4,
+          "label": "观察",
+          "title": "[auto-handoff] SOX 广度 vs NVDA 背离是否动摇'AI=大盘集中'基准情形",
+          "view": "致 主题研究员： 协同任务已完成。执行方为 首席策略师。 模式: adhoc 会话: dbb2f82e-e4eb-42af-8b94-dad607615615 结果摘要: Wrote handoff_response.md (8965 bytes); wrote handoff_response.…",
+          "check": "支持 0 / 风险 2 / 观察 4",
+          "href": "/investor/research-network/#thesis-ab1fb6a453"
+        },
+        {
+          "date": "2026-06-19",
+          "value": 12,
+          "label": "风险",
+          "title": "A-share de-leveraging to 1550 points triggers secondary market liquidity locking …",
+          "view": "若市场下探至1550点，中际旭创股价将跌至714.16元，击穿融资预警与平仓线，带来日均31.2亿元平仓抛压（占ADV 17.36%），锁定二级流动性。但公司持有125亿现金及45亿海外客户预付款，可提供151.5亿净营运资金，供应链运营违约风险极低。海外订单真正风险在于电网并网排队达36-60个…",
+          "check": "支持 0 / 风险 8 / 观察 1",
+          "href": "/investor/research-network/#thesis-ab1fb6a453"
+        },
+        {
+          "date": "2026-06-20",
+          "value": 23.2,
+          "label": "风险",
+          "title": "变压器与GOES瓶颈将Hyperscaler从“无限速扩张”推向“按电力排序扩张”，长期capex仍高，但未绑定已锁定电力和近期接入的capex应获得更高风险折价。",
+          "view": "截至2026-06-21，本卡对前序“电力与电网是AI算力硬约束”的主线作压力测试：变压器、开关设备与GOES供应瓶颈不会终结Hyperscaler AI资本开支周期，但会把部署节奏从按GPU/ASIC到货扩张，改造成按已送电MW、接入权和负荷灵活性分阶段扩容。Microsoft、Amazon、A…",
+          "check": "支持 0 / 风险 5 / 观察 0",
+          "href": "/investor/research-network/#thesis-ab1fb6a453"
+        },
+        {
+          "date": "2026-06-21",
+          "value": 30.6,
+          "label": "风险",
+          "title": "AI 基础设施建设中的电力供应与电网容量瓶颈分析",
+          "view": "本卡压力测试 Research note 02 的隐含假设「资本开支≈算力」。证据显示约束已从芯片迁移到电力：微软披露约800亿美元 Azure 订单因电力受限无法交付，Nadella 称芯片堆库存却无「暖壳」可插[S5][S4]。转化在三处漏损：(1)并网排队约2,600 GW、中位等待约5年、…",
+          "check": "支持 0 / 风险 4 / 观察 0",
+          "href": "/investor/research-network/#thesis-ab1fb6a453"
+        }
+      ],
+      "dimensions": [
+        {
+          "label": "维度一",
+          "title": "论点",
+          "front": "研究问题是否清晰？",
+          "back": "DeepSeek 式低价模型正在重塑 AI 定价权与软件利润池"
+        },
+        {
+          "label": "维度二",
+          "title": "证据",
+          "front": "证据是否可追溯？",
+          "back": "覆盖 14 位分析师和 6 类公开来源。"
+        },
+        {
+          "label": "维度三",
+          "title": "证伪",
+          "front": "风险是否上升？",
+          "back": "风险事件 107 条，方向为 分歧。"
+        }
+      ],
+      "sources": [
+        {
+          "href": "/investor/research-network/#thesis-ab1fb6a453",
+          "label": "研究网络主线",
+          "tag": "网络"
+        }
+      ],
+      "autoGenerated": true,
+      "kind": "living_thesis_recap"
+    },
+    {
+      "slug": "living-gpu-hbm-ai-8bbbcdf5-2026-06-21",
+      "title": "GPU、HBM 与先进封装决定 AI 资本开支供给节奏：动态复盘",
+      "subtitle": "当前共有 40 条证据、2 位分析师和 8 条风险信号指向该判断；主导链条为 半导体与存储。该主题应作为可跟踪投资假设，而不是孤立结论。",
+      "date": "2026-06-21",
+      "badge": "LIVING THESIS RECAP",
+      "reportHref": "/investor/research-network/#thesis-8bbbcdf5a4",
+      "chartTitle": "主线证据强度演化",
+      "chartDescription": "由公开研究事件按日期聚合，显示支持、风险和观察证据如何改变主线强度。",
+      "chartUnit": "证据强度",
+      "chart": {
+        "labels": [
+          "06-12",
+          "06-13",
+          "06-14",
+          "06-15",
+          "06-16",
+          "06-17",
+          "06-18",
+          "06-19",
+          "06-20",
+          "06-21"
+        ],
+        "values": [
+          12,
+          12,
+          12,
+          22.2,
+          12,
+          12,
+          16.4,
+          12,
+          12,
+          24.6
+        ]
+      },
+      "metrics": [
+        {
+          "label": "证据事件",
+          "value": "160",
+          "accent": "blue"
+        },
+        {
+          "label": "风险事件",
+          "value": "142",
+          "accent": "red"
+        },
+        {
+          "label": "分析师",
+          "value": "12",
+          "accent": "green"
+        },
+        {
+          "label": "方向",
+          "value": "分歧",
+          "accent": "orange"
+        }
+      ],
+      "conclusions": [
+        {
+          "title": "主线定义",
+          "text": "当前共有 40 条证据、2 位分析师和 8 条风险信号指向该判断；主导链条为 半导体与存储。该主题应作为可跟踪投资假设，而不是孤立结论。"
+        },
+        {
+          "title": "最新变化",
+          "text": "2026-06-21: AI基础设施资本开支仍具韧性，但USD/JPY清算若把美国10年期收益率推向5.0%以上，半导体设备龙头的高远期市盈率会先于订单下修而承受显著分母端压力。"
+        },
+        {
+          "title": "证据纪律",
+          "text": "当前以 9 条支持、142 条风险和 9 条观察证据进行动态跟踪。"
+        }
+      ],
+      "checklist": [
+        {
+          "label": "支持证据",
+          "status": "9 条",
+          "detail": "继续观察是否出现跨来源、跨分析师的同向验证。",
+          "bull": "支持证据集中出现在最新日期且源报告可追溯",
+          "bear": "支持证据停留在旧报告或单一来源",
+          "active": "bear"
+        },
+        {
+          "label": "风险证据",
+          "status": "142 条",
+          "detail": "风险证据用于判断主线是否变成拥挤交易或证伪样本。",
+          "bull": "风险被新证据消化",
+          "bear": "风险事件数量超过支持事件",
+          "active": "bear"
+        },
+        {
+          "label": "监控词",
+          "status": "云厂商 / HBM / 先进封装",
+          "detail": "云厂商 / HBM / 先进封装 / GPU / ASIC / TSMC / 半导体设备 / 电力",
+          "bull": "监控词在新报告中被反复验证",
+          "bear": "监控词热度上升但价格或基本面未兑现",
+          "active": "bull"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-06-12",
+          "value": 12,
+          "label": "风险",
+          "title": "电力刚性约束已把AI加速器竞争维度切换为每瓦Token，Chiplet+先进封装是2027-2028电网窗口内唯一可规模化兑现的算力密度救援方案，对NPV的杠杆是…",
+          "view": "电网刚性约束把AI加速器的KPI从峰值FLOPS切换为每瓦Token吞吐。Blackwell B200单卡1000W、GB200 NVL72机柜120kW已触顶，下一代Rubin/MI400无法继续抬TDP，必须靠能效换性能。TPU v5p、Trainium2较H100能效提升30-40%；同10…",
+          "check": "支持 1 / 风险 7 / 观察 1",
+          "href": "/investor/research-network/#thesis-8bbbcdf5a4"
+        },
+        {
+          "date": "2026-06-13",
+          "value": 12,
+          "label": "风险",
+          "title": "CoWoS绝对产能正在改善，但GPU与自研ASIC需求吸收速度更快，因此2026年AI集群交付仍受先进封装、HBM和关键设备交期的结构性约束。",
+          "view": "截至2026-06-13，本卡支持上一张AI基建卡的判断：硬件交付风险不只来自并网，还来自CoWoS/HBM/设备交期的半导体转换链。TSMC仍称先进封装非常紧，TrendForce口径显示CoWoS-L/S满载且2026年底目标120,000-130,000片/月；DIGITIMES虽更乐观，预…",
+          "check": "支持 0 / 风险 10 / 观察 1",
+          "href": "/investor/research-network/#thesis-8bbbcdf5a4"
+        },
+        {
+          "date": "2026-06-14",
+          "value": 12,
+          "label": "风险",
+          "title": "GPU抵押贷款收缩会削弱边际Neocloud订单可见度，但先进封装与先进制程需求更可能从融资套利订单转向信用更硬的超大规模厂商和ASIC路线，而非进入全面下行。",
+          "view": "截至2026-06-15，本卡压力测试GPU抵押融资收缩对半导体订单的影响：冲击不是AI芯片需求消失，而是订单可见度从Neocloud融资驱动采购转向超大规模厂商、ASIC、主权项目和带预付款的硬合同。NVIDIA Data Center在FY2027 Q1仍达752亿美元，TSMC先进节点和HP…",
+          "check": "支持 0 / 风险 13 / 观察 0",
+          "href": "/investor/research-network/#thesis-8bbbcdf5a4"
+        },
+        {
+          "date": "2026-06-15",
+          "value": 22.2,
+          "label": "风险",
+          "title": "卡片 08 — AI芯片竞争格局：ASIC侵蚀风险与商用GPU基本面评估 日期（机构工作日）： 2026 06 15 （亚洲/新加坡） 分析师：半导体分析师 立场…",
+          "view": "卡片 08 — AI芯片竞争格局：ASIC侵蚀风险与商用GPU基本面评估 日期（机构工作日）： 2026 06 15 （亚洲/新加坡） 分析师：半导体分析师 立场： 压力测试（stress test） 主题：商用GPU面临的ASIC份额侵蚀，及主要超大规模云商（Hyperscalers）定制ASI…",
+          "check": "支持 0 / 风险 4 / 观察 0",
+          "href": "/investor/research-network/#thesis-8bbbcdf5a4"
+        },
+        {
+          "date": "2026-06-16",
+          "value": 12,
+          "label": "风险",
+          "title": "电力供给限制驱动的半导体能效转型主要表现为通用GPU的系统与精度级优化，而非ASIC/NPU的大规模替代；自研定制芯片的爆发反而加剧了全球先进制程与封装供应链对T…",
+          "view": "截至2026-06-17，电力瓶颈确在倒逼算力能效转型，但并非单纯的通用GPU向专用ASIC切换。算法多变性（如MoE与动态推理）使自研ASIC面临极高的“代差失效”风险，通用GPU（如NVIDIA Blackwell）凭借软件与架构灵活性仍占据70%以上份额。能效提升主要通过系统精度（FP4/F…",
+          "check": "支持 0 / 风险 9 / 观察 0",
+          "href": "/investor/research-network/#thesis-8bbbcdf5a4"
+        },
+        {
+          "date": "2026-06-17",
+          "value": 12,
+          "label": "风险",
+          "title": "2027 能源重定价压的是超大规模厂商 ROIC 而非芯片 capex 效率——硅片主导 TCO、能源占比单位数，且性能/瓦溢价+杰文斯回弹反而净支撑前沿逻辑/先…",
+          "view": "2026-06-18 压力测试：能源是证伪芯片逻辑的错误杠杆。Epoch 1GW 机房年化 TCO 约 $8.5B，服务器占 ~59%、能源仅 ~7%；交付电价 +30% 仅抬升 TCO 约 +2.1%，翻倍也仅 +7%（自测算），而 IT 寿命 5→3 年使 TCO +41%——刷新节奏的影响是…",
+          "check": "支持 1 / 风险 9 / 观察 0",
+          "href": "/investor/research-network/#thesis-8bbbcdf5a4"
+        },
+        {
+          "date": "2026-06-18",
+          "value": 16.4,
+          "label": "风险",
+          "title": "半导体设备资本开支韧性对中国AI算力集群与数据中心建设周期的支撑作用分析",
+          "view": "本卡支持上游设备/材料资本开支韧性论点并向下游延伸：设备资本开支→晶圆产能→国产AI加速器→AI服务器→智算中心的传导链在2025–26年数据中真实可见。中国智能算力由2025年中约788 EFLOPS走向2025年末1037 EFLOPS、2026年约1460 EFLOPS；加速服务器市场202…",
+          "check": "支持 1 / 风险 7 / 观察 0",
+          "href": "/investor/research-network/#thesis-8bbbcdf5a4"
+        },
+        {
+          "date": "2026-06-19",
+          "value": 12,
+          "label": "风险",
+          "title": "AI 算力产业链在 2026 下半年正撞上先进封装、电力电网与液冷温控的刚性物理瓶颈，将导致数百亿美元的 GPU 资产因无法及时上电冷却而沦为‘搁浅硅算力’，从而…",
+          "view": "本报告对 2026 下半年 AI 算力在先进封装、HBM 内存、电网并网与温控 CDU 约束下的 capex 兑现进行了压力测试。测算表明，液冷 CDU 产能缺口将导致约 2.5 万台 Blackwell 机架无法运行，面临 625.4 亿美元的‘搁浅硅算力’风险。全美电网排队（平均 53 个月）…",
+          "check": "支持 0 / 风险 7 / 观察 0",
+          "href": "/investor/research-network/#thesis-8bbbcdf5a4"
+        },
+        {
+          "date": "2026-06-20",
+          "value": 12,
+          "label": "风险",
+          "title": "2026-2028年AI芯片扩容的材料次生瓶颈主要是高端基板合格输出和翘曲受控良率，TIM重要但更像可靠性与性能折让瓶颈。",
+          "view": "截至2026-06-21，本卡支持但收窄Research note 05：先进封装材料会成为AI芯片扩容的次生瓶颈，但真正硬约束更偏向高端基板/ABF/SAP良率，而非TIM原材料短缺。TSMC确认2026年先进封装仍“非常紧”，IBIDEN投入FY2026-FY2028约JPY 5000亿扩AI…",
+          "check": "支持 0 / 风险 9 / 观察 0",
+          "href": "/investor/research-network/#thesis-8bbbcdf5a4"
+        },
+        {
+          "date": "2026-06-21",
+          "value": 24.6,
+          "label": "风险",
+          "title": "在2026-06-21，受2nm GAA先进制程 wafer 溢价与先进封装 80% 初期装配良率的限制，下一代高密度 AI 芯片的制造 BOM 将翻倍至8,15…",
+          "view": "截至2026-06-21，本卡片评估了AI机架密度120kW+下，先进封装良率及散热材料研发对AI芯片成本与供应链的重塑。下一代2nm GAA+HBM4+液冷芯片BOM成本较3nm基准大涨77.2%至6,780.97美元，在初期封装装配良率降至80%的重度压力下更暴增113.1%至8,153.59…",
+          "check": "支持 0 / 风险 5 / 观察 0",
+          "href": "/investor/research-network/#thesis-8bbbcdf5a4"
+        }
+      ],
+      "dimensions": [
+        {
+          "label": "维度一",
+          "title": "论点",
+          "front": "研究问题是否清晰？",
+          "back": "GPU、HBM 与先进封装决定 AI 资本开支供给节奏"
+        },
+        {
+          "label": "维度二",
+          "title": "证据",
+          "front": "证据是否可追溯？",
+          "back": "覆盖 12 位分析师和 4 类公开来源。"
+        },
+        {
+          "label": "维度三",
+          "title": "证伪",
+          "front": "风险是否上升？",
+          "back": "风险事件 142 条，方向为 分歧。"
+        }
+      ],
+      "sources": [
+        {
+          "href": "/investor/research-network/#thesis-8bbbcdf5a4",
+          "label": "研究网络主线",
+          "tag": "网络"
+        }
+      ],
+      "autoGenerated": true,
+      "kind": "living_thesis_recap"
+    },
+    {
+      "slug": "living-a-4b3b37e2-2026-06-21",
       "title": "散户情绪与北向资金背离是 A 股风险偏好的关键温度计：动态复盘",
-      "subtitle": "当前共有 40 条证据、4 位分析师和 1 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
-      "date": "2026-06-18",
+      "subtitle": "当前共有 40 条证据、4 位分析师和 2 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
+      "date": "2026-06-21",
       "badge": "LIVING THESIS RECAP",
       "reportHref": "/investor/research-network/#thesis-4b3b37e207",
       "chartTitle": "主线证据强度演化",
@@ -1338,8 +1998,6 @@
       "chartUnit": "证据强度",
       "chart": {
         "labels": [
-          "06-08",
-          "06-09",
           "06-10",
           "06-11",
           "06-12",
@@ -1347,19 +2005,21 @@
           "06-15",
           "06-16",
           "06-17",
-          "06-18"
+          "06-18",
+          "06-19",
+          "06-21"
         ],
         "values": [
-          26,
-          37.4,
-          32.8,
-          34.2,
-          50.6,
-          43,
-          59.4,
-          54.8,
-          49.2,
-          45.6
+          36,
+          31.4,
+          47.8,
+          40.2,
+          56.6,
+          52,
+          46.4,
+          36.8,
+          47.2,
+          48.6
         ]
       },
       "metrics": [
@@ -1387,21 +2047,21 @@
       "conclusions": [
         {
           "title": "主线定义",
-          "text": "当前共有 40 条证据、4 位分析师和 1 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。"
+          "text": "当前共有 40 条证据、4 位分析师和 2 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。"
         },
         {
           "title": "最新变化",
-          "text": "2026-06-18: [auto-handoff] Tactical allocation under institutional-retail sentiment divergence"
+          "text": "2026-06-21: 截至2026-06-21，资金底先于政策SKU确认，科顺是高热但脆弱的战术期权，坚朗等待融资确认，兔宝宝仍是更干净的核心仓。"
         },
         {
           "title": "证据纪律",
-          "text": "当前以 12 条支持、116 条风险和 32 条观察证据进行动态跟踪。"
+          "text": "当前以 11 条支持、116 条风险和 33 条观察证据进行动态跟踪。"
         }
       ],
       "checklist": [
         {
           "label": "支持证据",
-          "status": "12 条",
+          "status": "11 条",
           "detail": "继续观察是否出现跨来源、跨分析师的同向验证。",
           "bull": "支持证据集中出现在最新日期且源报告可追溯",
           "bear": "支持证据停留在旧报告或单一来源",
@@ -1426,35 +2086,17 @@
       ],
       "timeline": [
         {
-          "date": "2026-06-08",
-          "value": 26,
-          "label": "支持",
-          "title": "2026Q3 机器人主题应保留但上移价值链，超配算力/传感/控制，低配二线执行器/减速器，并用融资余额、换手和北向季度持股三因子验证是否过热。",
-          "view": "截至2026-06-08，本卡综合支持前序判断：机器人主题仍可投，但2026Q3应从泛执行器/减速器 beta 转向算力、传感、模拟/电源/控制 IC。建议55-60%配置算力/传感/控制核心，25-30%配置一线执行器/减速器，10-15%用ETF或整机作流动性桥，5-10%留作现金或对冲。拥挤…",
-          "check": "支持 1 / 风险 4 / 观察 0",
-          "href": "/investor/research-network/#thesis-4b3b37e207"
-        },
-        {
-          "date": "2026-06-09",
-          "value": 37.4,
-          "label": "风险",
-          "title": "聪明钱（北向）已前置买入上游油气、电网、铜铝，但融资盘与低波 ETF 仍在为防御板块支付第二次溢价——Card-04 行业-风格再分配蓝图的执行窗口约剩 2–4 …",
-          "view": "截至 2026-06-09，A 股资金面部分确认 Card-04 的再分配方向但尚未走完：北向已连续 5 日净流入并集中在中石油、中海油、紫金、长江电力、国电南瑞、特变电工等篮子 A/B 标的，融资余额却仍在缓慢加白酒、火电、银行等防御板块，红利低波 ETF 净申购仍大于能源 ETF——拥挤防御的…",
-          "check": "支持 0 / 风险 1 / 观察 0",
-          "href": "/investor/research-network/#thesis-4b3b37e207"
-        },
-        {
           "date": "2026-06-10",
-          "value": 32.8,
+          "value": 36,
           "label": "风险",
           "title": "不应单凭北向净流入触发电子额外+300bp，条件释放应改为电子行业融资日增>50亿元与半导体ETF折溢价转正的双确认。",
           "view": "截至2026-06-10，本卡压力测试card-04的电子+700bp条件触发。结论：北向连续5日净流入>30亿元方向合理但公开可审计性不足，因2024年信披调整后北向公开接口净买入字段不可用。近4周两融更有解释力：最近20个交易日全市场融资净买入>50亿元有10次，但最近10日降至3次；电子行业…",
-          "check": "支持 0 / 风险 3 / 观察 2",
+          "check": "支持 0 / 风险 2 / 观察 2",
           "href": "/investor/research-network/#thesis-4b3b37e207"
         },
         {
           "date": "2026-06-11",
-          "value": 34.2,
+          "value": 31.4,
           "label": "风险",
           "title": "具身智能主题仍可投，但 2026-06-11 的 A 股市场结构要求降低总仓位，把高两融、高成交且缺乏外汇对冲的内需链标的放入严格止损桶。",
           "view": "2026-06-11：本卡对具身智能 A 股篮子做两融、成交与外资可得数据压力测试。结论是：短线拥挤度确实主要集中在“人民币收入 / 硬通货成本”或近似分组，尤其是柯力传感、绿的谐波、奥比中光、拓斯达；但若只看融资余额绝对值，三花智控、汇川技术等更全球化大市值标的会稀释结论。国内杠杆拥挤已验证，外…",
@@ -1463,7 +2105,7 @@
         },
         {
           "date": "2026-06-12",
-          "value": 50.6,
+          "value": 47.8,
           "label": "观察",
           "title": "[auto-handoff] Fill in 2026-06-12 A-share close data for STAR 50, ChiNext, CSI 30…",
           "view": "致 日报总编： 协同任务已完成。执行方为 首席策略师。 模式: adhoc 会话: ecf600ef-64e6-4946-bff2-6017d13e967b 结果摘要: Wrote handoff_response.md (2648 bytes); wrote handoff_response.e…",
@@ -1472,7 +2114,7 @@
         },
         {
           "date": "2026-06-13",
-          "value": 43,
+          "value": 40.2,
           "label": "风险",
           "title": "期权极端的波动率偏度源于宏观方差风险溢价，其Delta/Gamma对冲体量不足以独立引发1600点物理破位，维持24-29%的真实强平概率预期。",
           "view": "截至2026-06-14，本卡对期权隐含31.5%破位概率进行宏观与流动性压力测试。结论表明，极端的波动率偏度（Skew）主要反映全球宏观不确定性注入的方差风险溢价（VRP），而非物理强平的即期前兆。且588000期权的Delta等效敞口较科创板3757亿元融资余额与581亿元ETF规模而言体量过…",
@@ -1481,7 +2123,7 @@
         },
         {
           "date": "2026-06-15",
-          "value": 59.4,
+          "value": 56.6,
           "label": "观察",
           "title": "[auto-handoff] Tactical allocation under institutional-retail sentiment divergence",
           "view": "致 市场情绪师： 协同任务已完成。执行方为 大类资产配置师。 模式: adhoc 会话: df522a0a-ad63-497e-acd1-c06e34805230 结果摘要: Wrote handoff_response.md (8660 bytes); wrote handoff_respons…",
@@ -1490,7 +2132,7 @@
         },
         {
           "date": "2026-06-16",
-          "value": 54.8,
+          "value": 52,
           "label": "观察",
           "title": "[auto-handoff] 人民币走强（6.7687）与弱美元（99.54）通道下北向资金流入白酒与家电的敏感性校准",
           "view": "致 主题研究员： 协同任务已完成。执行方为 外汇策略师。 模式: adhoc 会话: 979b4eb1-f249-48ea-b78f-f4edcd93dc8a 结果摘要: Wrote handoff_response.md (12402 bytes); wrote handoff_response…",
@@ -1499,7 +2141,7 @@
         },
         {
           "date": "2026-06-17",
-          "value": 49.2,
+          "value": 46.4,
           "label": "风险",
           "title": "日元套利平仓风险与 BOJ 利率决议影响",
           "view": "日元套利平仓风险与 BOJ 利率决议影响 日元套利平仓如何引发全球科技基金去杠杆并冲击 A 股半导体？ Prior related institute work to acknowledge and BUILD ON (do not re-summarize): - 北向资金科技重仓与国内2.87…",
@@ -1508,11 +2150,29 @@
         },
         {
           "date": "2026-06-18",
-          "value": 45.6,
+          "value": 36.8,
           "label": "风险",
           "title": "[auto-handoff] 融资余额逼近3万亿关口下，硬科技龙头个股两融拥挤度与强平敏感性测算",
           "view": "致 市场情绪师： 协同任务已完成。执行方为 A股策略师。 模式: adhoc 会话: 1fa75627-3c96-483c-b9d8-1f4f7728a2f2 结果摘要: Wrote handoff_response.md (13425 bytes); wrote handoff_response…",
-          "check": "支持 0 / 风险 2 / 观察 1",
+          "check": "支持 0 / 风险 3 / 观察 1",
+          "href": "/investor/research-network/#thesis-4b3b37e207"
+        },
+        {
+          "date": "2026-06-19",
+          "value": 47.2,
+          "label": "风险",
+          "title": "美联储沃什新政鹰派暂停与A股科技天量融资盘去杠杆风险",
+          "view": "美联储沃什新政鹰派暂停与A股科技天量融资盘去杠杆风险 Fed Warsh Tilt vs. A-Share TMT Margin Debt Deleveraging Risk 在美联储主席沃什鹰派暂停、美债利率攀升的背景下，国内电子行业融资余额高达5608亿元，如何防范回撤突破8.4%强平警戒线后…",
+          "check": "支持 0 / 风险 1 / 观察 0",
+          "href": "/investor/research-network/#thesis-4b3b37e207"
+        },
+        {
+          "date": "2026-06-21",
+          "value": 48.6,
+          "label": "风险",
+          "title": "截至2026-06-21，资金底先于政策SKU确认，科顺是高热但脆弱的战术期权，坚朗等待融资确认，兔宝宝仍是更干净的核心仓。",
+          "view": "截至2026-06-21，本卡对“政策底+资金底”共振做压力测试：大盘风险偏好与科顺融资热度已经出现，科顺2026-06-17估算融资余额约3.167亿元并有3483.24万元融资净买入；但地方清单仍主要集中在智能家居和适老化产品，尚未验证防水、涂料、板材、地板或通用五金宽口径入围。坚朗政策匹配度…",
+          "check": "支持 0 / 风险 1 / 观察 0",
           "href": "/investor/research-network/#thesis-4b3b37e207"
         }
       ],
@@ -1547,39 +2207,39 @@
       "kind": "living_thesis_recap"
     },
     {
-      "slug": "living-deepseek-ai-ab1fb6a4-2026-06-18",
-      "title": "DeepSeek 式低价模型正在重塑 AI 定价权与软件利润池：动态复盘",
-      "subtitle": "当前共有 40 条证据、2 位分析师和 8 条风险信号指向该判断；主导链条为 AI 基础设施。该主题应作为可跟踪投资假设，而不是孤立结论。",
-      "date": "2026-06-18",
+      "slug": "living-3d421524cd-3d421524-2026-06-21",
+      "title": "油价地缘底线决定再通胀与降息交易的安全边际：动态复盘",
+      "subtitle": "当前共有 40 条证据、2 位分析师和 2 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
+      "date": "2026-06-21",
       "badge": "LIVING THESIS RECAP",
-      "reportHref": "/investor/research-network/#thesis-ab1fb6a453",
+      "reportHref": "/investor/research-network/#thesis-3d421524cd",
       "chartTitle": "主线证据强度演化",
       "chartDescription": "由公开研究事件按日期聚合，显示支持、风险和观察证据如何改变主线强度。",
       "chartUnit": "证据强度",
       "chart": {
         "labels": [
-          "06-09",
-          "06-10",
-          "06-11",
           "06-12",
           "06-13",
           "06-14",
           "06-15",
           "06-16",
           "06-17",
-          "06-18"
+          "06-18",
+          "06-19",
+          "06-20",
+          "06-21"
         ],
         "values": [
-          38,
-          37.4,
-          29.8,
-          45.2,
-          25.6,
-          13,
-          31.4,
           12,
-          23.2,
-          51.6
+          12,
+          12,
+          12,
+          12,
+          12,
+          14.4,
+          15.8,
+          12,
+          12
         ]
       },
       "metrics": [
@@ -1590,12 +2250,12 @@
         },
         {
           "label": "风险事件",
-          "value": "113",
+          "value": "145",
           "accent": "red"
         },
         {
           "label": "分析师",
-          "value": "16",
+          "value": "15",
           "accent": "green"
         },
         {
@@ -1607,21 +2267,21 @@
       "conclusions": [
         {
           "title": "主线定义",
-          "text": "当前共有 40 条证据、2 位分析师和 8 条风险信号指向该判断；主导链条为 AI 基础设施。该主题应作为可跟踪投资假设，而不是孤立结论。"
+          "text": "当前共有 40 条证据、2 位分析师和 2 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。"
         },
         {
           "title": "最新变化",
-          "text": "2026-06-18: 国内大模型降价潮对云基础设施消耗与国产GPU芯片链毛利的非对称传导"
+          "text": "2026-06-21: 美联储政策中枢上修对能源通胀预期及原油需求的影响"
         },
         {
           "title": "证据纪律",
-          "text": "当前以 13 条支持、113 条风险和 34 条观察证据进行动态跟踪。"
+          "text": "当前以 5 条支持、145 条风险和 10 条观察证据进行动态跟踪。"
         }
       ],
       "checklist": [
         {
           "label": "支持证据",
-          "status": "13 条",
+          "status": "5 条",
           "detail": "继续观察是否出现跨来源、跨分析师的同向验证。",
           "bull": "支持证据集中出现在最新日期且源报告可追溯",
           "bear": "支持证据停留在旧报告或单一来源",
@@ -1629,7 +2289,7 @@
         },
         {
           "label": "风险证据",
-          "status": "113 条",
+          "status": "145 条",
           "detail": "风险证据用于判断主线是否变成拥挤交易或证伪样本。",
           "bull": "风险被新证据消化",
           "bear": "风险事件数量超过支持事件",
@@ -1637,8 +2297,8 @@
         },
         {
           "label": "监控词",
-          "status": "AI 基础设施 / GPU / ASIC",
-          "detail": "AI 基础设施 / GPU / ASIC / DeepSeek / 软件 / DeepSeek-style / low-cost / models",
+          "status": "AI基础设施 / 电网 / PCE",
+          "detail": "AI基础设施 / 电网 / PCE / 能源 / geopolitical / floor / defines / margin",
           "bull": "监控词在新报告中被反复验证",
           "bear": "监控词热度上升但价格或基本面未兑现",
           "active": "bull"
@@ -1646,94 +2306,94 @@
       ],
       "timeline": [
         {
-          "date": "2026-06-09",
-          "value": 38,
-          "label": "观察",
-          "title": "在 API 成本骤降的红利期，优先配置具备工作流壁垒、掌握专有数据及成熟分发渠道的 B 端 SaaS 板块（如金山办公、福昕软件），精选向 RaaS 演进的行业 …",
-          "view": "基于 2026-06-09 的评估，在 DeepSeek V4-Pro 驱动的推理成本崩塌周期中，A股 AI 应用端配置应遵循“B端 SaaS（优先，30%） > AI Agent / RaaS（精选，14%） > C端爆款工具（低配，5%）”的排序。B端 SaaS 凭借极高的切换成本、成熟渠道和…",
-          "check": "支持 1 / 风险 4 / 观察 4",
-          "href": "/investor/research-network/#thesis-ab1fb6a453"
-        },
-        {
-          "date": "2026-06-10",
-          "value": 37.4,
-          "label": "风险",
-          "title": "超配拥有确定性全球订单的光电液冷龙头与昇腾-中芯先进封装/HBM自主垂直栈，回避被截断离岸通道的二线芯片设计与空壳算力租赁标的。",
-          "view": "截至2026-06-10，本研究深入A股TMT板块。建议超配：(1)挂钩中美头部云、订单已确认的光模块（中际旭创、新易盛、天孚通信）、液冷（英维克）与电源龙头（麦格米特），均处于1.6T/Blackwell订单放量期；(2)华为昇腾与中芯国际（SMIC）挂钩的HBM/先进封装国产替代垂直栈，长电科…",
-          "check": "支持 0 / 风险 1 / 观察 0",
-          "href": "/investor/research-network/#thesis-ab1fb6a453"
-        },
-        {
-          "date": "2026-06-11",
-          "value": 29.8,
-          "label": "风险",
-          "title": "电网与费率约束把 hyperscaler 新建 capex 中电力、散热与合同部分的占比从约 15% 推升至 35–45%，并迫使物理部署向表后燃气、核电/煤电棕…",
-          "view": "电网约束已成为 hyperscaler AI capex 的硬约束。结构由 2023 年约 85% GPU/15% 电力外壳，迁向 2026 年新建约 55–65% IT / 35–45% 电力、散热、变电、自备发电与长期 PPA。500 MW 园区全口径由约 $5.5B 升至 $12–16B，每…",
-          "check": "支持 0 / 风险 3 / 观察 1",
-          "href": "/investor/research-network/#thesis-ab1fb6a453"
-        },
-        {
           "date": "2026-06-12",
-          "value": 45.2,
+          "value": 12,
           "label": "风险",
-          "title": "AI 基础设施从‘算力’向‘电力’的范式转移",
-          "view": "PJM 容量价格三年连涨约10倍（28.92→333.44 美元/兆瓦·日，连续两年顶死 FERC 上限），是结构性稀缺信号而非周期尖峰。但「必须从 GPU 摩尔定律切换到公用事业资产底座」是错误的二选一。真相是瓶颈迁移：边际稀缺租金从硅片下移到可按期交付的确定性电力。估值应改为双因子模型——保留…",
-          "check": "支持 1 / 风险 3 / 观察 3",
-          "href": "/investor/research-network/#thesis-ab1fb6a453"
+          "title": "能源设备端的“无现金增长”风险正向二线及长交期环节集中，并网瓶颈将导致订单向现金流转化的效率降至历史低点，需警惕资本开支周期错配引发的流动性压力。",
+          "view": "2026-06-12：AI基础设施面临“电网天花板”，全球并网排队达2600GW。能源设备行业出现双峰分化：一线巨头（如伊顿、西门子能源）凭借垄断地位收取预付款，现金流极佳；而二线及A股厂商因变压器等长交期设备（24-48个月）囤货和项目并网延迟，陷入应收账款与库存激增的“无现金增长”陷阱，资产负…",
+          "check": "支持 0 / 风险 8 / 观察 0",
+          "href": "/investor/research-network/#thesis-3d421524cd"
         },
         {
           "date": "2026-06-13",
-          "value": 25.6,
-          "label": "观察",
-          "title": "算法效率不会终结暴力算力，只会让暴力算力转移到推理与 Agent 层；NVIDIA 溢价将边际压缩但不会系统性回归，因为护城河在网络/软件/供应链而非 FLOPs。",
-          "view": "DeepSeek V3→R1→V4 路径压缩了训练成本，但 Jevons 效应把算力需求推向推理与 Agent 层，NVIDIA 护城河主要沉淀在 NVLink/CUDA/CoWoS-HBM 锁定/主权 AI 需求四层，并非裸 FLOPs 租金。1 月 27 日单日蒸发 5,890 亿美元市值是一…",
-          "check": "支持 1 / 风险 6 / 观察 2",
-          "href": "/investor/research-network/#thesis-ab1fb6a453"
+          "value": 12,
+          "label": "风险",
+          "title": "‘双碳’目标与算力暴涨下，东部沿海省份电力规划弹性与能耗双控政策的调整空间评估 报告发布日期 ：2026 06 13 [S1] 分析师 ：全球宏观分析师 (Glo…",
+          "view": "‘双碳’目标与算力暴涨下，东部沿海省份电力规划弹性与能耗双控政策的调整空间评估 报告发布日期 ：2026 06 13 [S1] 分析师 ：全球宏观分析师 (Global Macro Analyst) 研究立场 ：支持 (Support) 白板会话ID ：52586378 2fbf 450b 9f7…",
+          "check": "支持 0 / 风险 10 / 观察 1",
+          "href": "/investor/research-network/#thesis-3d421524cd"
         },
         {
           "date": "2026-06-14",
-          "value": 13,
+          "value": 12,
           "label": "风险",
-          "title": "物理电网瓶颈正迫使 AI 基础设施从‘暴力规模扩张’转向‘受约束的能效优化’，电力并网速度已取代芯片供应成为核心估值护城河。",
-          "view": "本报告通过压力测试确认了物理电网并网排队（7-10年）与变压器交期（4-5年）已成为 AI 基础设施扩张的硬约束。定量模型显示，1年的并网延迟将导致 100MW 数据中心损失 5.5% 的生命周期价值，且快速的 GPU 迭代周期（12-18个月效用减半）加剧了闲置产能的 ROI 损耗。这种物理瓶颈…",
-          "check": "支持 0 / 风险 6 / 观察 0",
-          "href": "/investor/research-network/#thesis-ab1fb6a453"
+          "title": "能源阈值突破对AI基础设施主要是中国侧供应稳定性冲击与美国侧利润率冲击，而非Capex周期杀手——2H26扩容节奏滑落5–7%、IRR压缩1.5–2.0pp，真正…",
+          "view": "截至2026-06-15，本卡对能源阈值突破（Brent突破95美元、秦皇岛Q5500动力煤突破1,050元/吨）下AI算力中心的冲击进行压力测试。中国本土算力中心受发改委限价传导上限保护，电力成本仅承担约0.05–0.07元/kWh增量，IRR压缩0.8–1.2pp，但面临一阶供应稳定性冲击——…",
+          "check": "支持 0 / 风险 16 / 观察 0",
+          "href": "/investor/research-network/#thesis-3d421524cd"
         },
         {
           "date": "2026-06-15",
-          "value": 31.4,
-          "label": "支持",
-          "title": "卡片 02 — AI 芯片供应链：DeepSeek V4 后的\"架构定制化\"趋势 白板：1f5523fe c230 4de9 bcab 6fc3d7edec87 …",
-          "view": "卡片 02 — AI 芯片供应链：DeepSeek V4 后的\"架构定制化\"趋势 白板：1f5523fe c230 4de9 bcab 6fc3d7edec87 ｜ 卡片 2/8 ｜ 日期：2026 06 15 分析师：TMT 行业分析师 ｜ 立场： 支持（support） 核心问题：DeepSe…",
-          "check": "支持 1 / 风险 5 / 观察 1",
-          "href": "/investor/research-network/#thesis-ab1fb6a453"
+          "value": 12,
+          "label": "风险",
+          "title": "数据中心的物理功耗墙迫使超大厂将有限的电力配额向具有3-5倍能效优势的ASIC倾斜，实质性加速了算力硬件市场从“通用高溢价”向“定制化能效套利”的重塑。",
+          "view": "2026年，电力配给成为AI基础设施的核心硬约束。四大超大厂高达6300亿美元的资本开支正大规模向功耗更低、每瓦特产出更高的定制化ASIC倾斜。通用GPU飙升至2300W的单卡功耗和超120kW的机柜密度让电网不堪重负，促使ASIC以近45%的增速抢占推理市场，从而实质性削弱了英伟达的算力溢价。",
+          "check": "支持 0 / 风险 7 / 观察 1",
+          "href": "/investor/research-network/#thesis-3d421524cd"
         },
         {
           "date": "2026-06-16",
           "value": 12,
           "label": "风险",
-          "title": "单纯的电力价格上涨无法动摇SaaS效果付费的推理成本通缩基础，但物理电网容量限制与变压器交期导致的GPU集群部署瓶颈才是核心威胁，其引发的算力稀缺溢价（如代币价格…",
-          "view": "针对2026年6月17日算力侧电力约束，本报告对SaaS效果付费模式的财务稳定性进行了压力测试。测算表明，即便面临0.450美元/kWh的极端电价冲击，B200单卡百万Token的电力TCO成本仅从0.007890美元上升至0.010218美元，远低于DeepSeek V4-Pro的0.15美元市…",
-          "check": "支持 0 / 风险 8 / 观察 1",
-          "href": "/investor/research-network/#thesis-ab1fb6a453"
+          "title": "结构性的能源和电网并网限制已经取代GPU供应，成为2026-2027年AI扩张的首要瓶颈，迫使超大型云厂商通过重启核电和发展离网发电开启资本密集的“抢电竞赛”。",
+          "view": "截至2026年6月中旬，压力测试表明结构性的能源与电网互联瓶颈已取代GPU产能，成为AI基础设施的首要限制因素。数据中心建设（18-24个月）与电网扩容（7-12年）的时间错配，导致云厂商转向核电与离网供电。资本开支正从算力向电力基建外溢。",
+          "check": "支持 1 / 风险 23 / 观察 0",
+          "href": "/investor/research-network/#thesis-3d421524cd"
         },
         {
           "date": "2026-06-17",
-          "value": 23.2,
+          "value": 12,
           "label": "风险",
-          "title": "FOMC 后应以“选择性算力基础设施挤空”而非“无差别 AI 融涨”来交易：多稀缺、空低 ROIC，净多但对冲。",
-          "view": "2026-06-18 策略综合：前序链条成立，2027 风险是 ROIC 与结构分化而非 capex 悬崖。FOMC 后应做多稀缺算力资产而非泛 AI beta：前沿逻辑/设备/HBM/先进封装、自研 ASIC 与网络、电力与电网受益方应超配；商用 GPU 龙头保留但严控风险；低 ROIC 商用 …",
-          "check": "支持 0 / 风险 5 / 观察 0",
-          "href": "/investor/research-network/#thesis-ab1fb6a453"
+          "title": "AI算力向电力设备的资本开支传导扩大了实体“流动性黑洞”，高企的无风险利率与公用事业“成长化”转型持续挤出长久期资产的配置资金。",
+          "view": "本报告支持AI基础设施分析师的判断，量化了AI电力需求向能源基建的传导。2026年全球数据中心用电预计达565 TWh，中国“十五五”电网投资将达5万亿元，且全球面临30%的变压器结构性缺口。这种大规模实体CapEx形成巨大的“流动性黑洞”，虹吸市场资金，推高资本成本，对医药等长久期板块估值维持持…",
+          "check": "支持 0 / 风险 11 / 观察 0",
+          "href": "/investor/research-network/#thesis-3d421524cd"
         },
         {
           "date": "2026-06-18",
-          "value": 51.6,
+          "value": 14.4,
           "label": "风险",
-          "title": "大模型价格战引发的推理流量爆量，导致国产GPU设计龙头呈现“营收高增、毛利率承压”的量价背离，定价权向制造端瓶颈与TCO优化环节倾斜。",
-          "view": "在大模型极低价格战（DeepSeek-V4-Flash降至$0.14/1M tokens）推动下，云厂商Q1 AI基础设施收入大增79%（GPU云激增184%）。但因先进制程及封装产能受限导致BOM成本上涨10%-15%，加之云厂商降本压价，国产GPU（如海光一季度毛利率降至55.6%，同比下滑5…",
-          "check": "支持 0 / 风险 1 / 观察 1",
-          "href": "/investor/research-network/#thesis-ab1fb6a453"
+          "title": "InP/EML是2026年AI光互联的分配和毛利瓶颈，而非全球带宽扩展的绝对天花板；A股相关标的仍应按稀缺期权而非确定性订单定价。",
+          "view": "截至2026-06-18，本卡从AI基础设施角度压力测试InP/EML瓶颈：全球层面，InP/EML短缺确实影响800G/1.6T光模块分配和价格，但不构成2026年下半年全球AI集群带宽扩展的硬上限；LightCounting称2026年4月需求高于供给30%，但预计短缺在2026年底缓解。中国…",
+          "check": "支持 0 / 风险 6 / 观察 0",
+          "href": "/investor/research-network/#thesis-3d421524cd"
+        },
+        {
+          "date": "2026-06-19",
+          "value": 15.8,
+          "label": "风险",
+          "title": "电网公用事业资产费率基数扩张对宏观通胀与货币政策的传导效应",
+          "view": "压力测试卡片01–05的宏观结论。直接渠道被夸大：电力属能源、按构造排除于核心PCE之外，达拉斯联储测算数据中心对总体PCE的拉动2026仅+0.05pp、2030升至+0.13pp[S1]；电力仅占CPI约2.5%[S11]，自测算直接总体贡献约0.10pp。但费率基数是30–40年价格水平锁定…",
+          "check": "支持 0 / 风险 6 / 观察 0",
+          "href": "/investor/research-network/#thesis-3d421524cd"
+        },
+        {
+          "date": "2026-06-20",
+          "value": 12,
+          "label": "风险",
+          "title": "能源右尾风险会重估和重配AI基础设施capex，但不会在基准情形下让资产负债表最强的hyperscalers停止扩建。",
+          "view": "截至2026-06-21，本卡片对能源右尾风险的结论是：它不足以阻止最大型hyperscalers扩建AI智算中心，但会显著改变长期电力预算和电网容量布局。IEA预计全球数据中心用电从2025年约485 TWh升至2030年约950 TWh；LBNL预计美国数据中心到2028年可能占总用电6.7-…",
+          "check": "支持 1 / 风险 13 / 观察 0",
+          "href": "/investor/research-network/#thesis-3d421524cd"
+        },
+        {
+          "date": "2026-06-21",
+          "value": 12,
+          "label": "风险",
+          "title": "AI基础设施的真正能源约束是确定性电力和电网capex，而不是单一Brent价格；油价上行会放大成本与进度风险，但更可能造成扩建分化而非需求坍塌。",
+          "view": "截至2026-06-21，本卡压力测试Research note 5结论：原油赤字和Brent上行风险会约束AI算力扩建，但主要不是通过原油直接消耗，而是通过天然气边际电价、柴油/成品油施工和备用电源成本、电网并网排队以及自备燃气电源capex。1 GW IT负载、PUE 1.10的园区年用电约9…",
+          "check": "支持 0 / 风险 8 / 观察 1",
+          "href": "/investor/research-network/#thesis-3d421524cd"
         }
       ],
       "dimensions": [
@@ -1741,24 +2401,24 @@
           "label": "维度一",
           "title": "论点",
           "front": "研究问题是否清晰？",
-          "back": "DeepSeek 式低价模型正在重塑 AI 定价权与软件利润池"
+          "back": "油价地缘底线决定再通胀与降息交易的安全边际"
         },
         {
           "label": "维度二",
           "title": "证据",
           "front": "证据是否可追溯？",
-          "back": "覆盖 16 位分析师和 5 类公开来源。"
+          "back": "覆盖 15 位分析师和 5 类公开来源。"
         },
         {
           "label": "维度三",
           "title": "证伪",
           "front": "风险是否上升？",
-          "back": "风险事件 113 条，方向为 分歧。"
+          "back": "风险事件 145 条，方向为 分歧。"
         }
       ],
       "sources": [
         {
-          "href": "/investor/research-network/#thesis-ab1fb6a453",
+          "href": "/investor/research-network/#thesis-3d421524cd",
           "label": "研究网络主线",
           "tag": "网络"
         }
@@ -1767,39 +2427,39 @@
       "kind": "living_thesis_recap"
     },
     {
-      "slug": "living-mag7-ai-8c5a9690-2026-06-18",
-      "title": "Mag7 在 AI 时代从平台垄断转向基础设施再分层：动态复盘",
-      "subtitle": "当前共有 40 条证据、4 位分析师和 8 条风险信号指向该判断；主导链条为 AI 基础设施。该主题应作为可跟踪投资假设，而不是孤立结论。",
-      "date": "2026-06-18",
+      "slug": "living-reits-741d1d6f-2026-06-21",
+      "title": "地产、土地财政与 REITs 是中国信用底的慢变量：动态复盘",
+      "subtitle": "当前共有 40 条证据、3 位分析师和 1 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
+      "date": "2026-06-21",
       "badge": "LIVING THESIS RECAP",
-      "reportHref": "/investor/research-network/#thesis-8c5a9690a0",
+      "reportHref": "/investor/research-network/#thesis-741d1d6f34",
       "chartTitle": "主线证据强度演化",
       "chartDescription": "由公开研究事件按日期聚合，显示支持、风险和观察证据如何改变主线强度。",
       "chartUnit": "证据强度",
       "chart": {
         "labels": [
-          "06-09",
           "06-10",
-          "06-11",
           "06-12",
           "06-13",
           "06-14",
           "06-15",
           "06-16",
-          "06-17",
-          "06-18"
+          "06-18",
+          "06-19",
+          "06-20",
+          "06-21"
         ],
         "values": [
-          35,
-          25.4,
-          20.8,
-          48.2,
-          22.6,
-          13,
-          34.4,
-          21.8,
-          19.2,
-          54.6
+          44,
+          40.4,
+          41.8,
+          31.2,
+          32.6,
+          37,
+          35.4,
+          12,
+          12,
+          15.6
         ]
       },
       "metrics": [
@@ -1815,452 +2475,7 @@
         },
         {
           "label": "分析师",
-          "value": "16",
-          "accent": "green"
-        },
-        {
-          "label": "方向",
-          "value": "分歧",
-          "accent": "orange"
-        }
-      ],
-      "conclusions": [
-        {
-          "title": "主线定义",
-          "text": "当前共有 40 条证据、4 位分析师和 8 条风险信号指向该判断；主导链条为 AI 基础设施。该主题应作为可跟踪投资假设，而不是孤立结论。"
-        },
-        {
-          "title": "最新变化",
-          "text": "2026-06-18: I have completed the analysis on how advanced packaging (Chiplets, HBM4) and optical interconnects (Silicon Photonics, CPO) mitigate U.S.…"
-        },
-        {
-          "title": "证据纪律",
-          "text": "当前以 14 条支持、115 条风险和 31 条观察证据进行动态跟踪。"
-        }
-      ],
-      "checklist": [
-        {
-          "label": "支持证据",
-          "status": "14 条",
-          "detail": "继续观察是否出现跨来源、跨分析师的同向验证。",
-          "bull": "支持证据集中出现在最新日期且源报告可追溯",
-          "bear": "支持证据停留在旧报告或单一来源",
-          "active": "bear"
-        },
-        {
-          "label": "风险证据",
-          "status": "115 条",
-          "detail": "风险证据用于判断主线是否变成拥挤交易或证伪样本。",
-          "bull": "风险被新证据消化",
-          "bear": "风险事件数量超过支持事件",
-          "active": "bear"
-        },
-        {
-          "label": "监控词",
-          "status": "AI 基础设施 / HBM / GPU",
-          "detail": "AI 基础设施 / HBM / GPU / ASIC / Mag7 / 软件 / shifts / platform",
-          "bull": "监控词在新报告中被反复验证",
-          "bear": "监控词热度上升但价格或基本面未兑现",
-          "active": "bull"
-        }
-      ],
-      "timeline": [
-        {
-          "date": "2026-06-09",
-          "value": 35,
-          "label": "风险",
-          "title": "AI半导体利润池迁移真实但渐进，板块总EPS上行、估值锚从'NVDA-TSMC双寡头溢价'切向'增长+多元化第二供应源'，ASIC设计商、HBM、先进封装设备与I…",
-          "view": "2026-06-09综合：Google-Intel TPU订单确认AI硬件利润池迁移真实且渐进，2027-28年AI半导体合计EPS较冲击前共识更高，但分布坚定向ASIC设计商(AVGO/MRVL)、HBM、先进封装设备及Intel Foundry期权倾斜。新估值锚为'增长+多元化第二供应源'，而…",
-          "check": "支持 1 / 风险 4 / 观察 3",
-          "href": "/investor/research-network/#thesis-8c5a9690a0"
-        },
-        {
-          "date": "2026-06-10",
-          "value": 25.4,
-          "label": "风险",
-          "title": "超配拥有确定性全球订单的光电液冷龙头与昇腾-中芯先进封装/HBM自主垂直栈，回避被截断离岸通道的二线芯片设计与空壳算力租赁标的。",
-          "view": "截至2026-06-10，本研究深入A股TMT板块。建议超配：(1)挂钩中美头部云、订单已确认的光模块（中际旭创、新易盛、天孚通信）、液冷（英维克）与电源龙头（麦格米特），均处于1.6T/Blackwell订单放量期；(2)华为昇腾与中芯国际（SMIC）挂钩的HBM/先进封装国产替代垂直栈，长电科…",
-          "check": "支持 0 / 风险 3 / 观察 0",
-          "href": "/investor/research-network/#thesis-8c5a9690a0"
-        },
-        {
-          "date": "2026-06-11",
-          "value": 20.8,
-          "label": "风险",
-          "title": "电力交付滞后会迫使 Hyperscalers 调整 GPU 集群投产节奏，并通过更长现金回收期、更低早期利用率和更高电力保障成本压低 AI 基础设施 capex …",
-          "view": "截至2026-06-11，本卡支持上一卡：AI capex 不会因电网瓶颈消失，但 GPU 集群部署节奏会被“已通电 MW”重新排序。变压器、并网和输电延迟会把部分已宣布园区容量推迟到后续窗口，压低早期自由现金流和资产利用率。Hyperscalers 会通过已通电站点溢价、分阶段投产、区域重排和自…",
-          "check": "支持 0 / 风险 4 / 观察 0",
-          "href": "/investor/research-network/#thesis-8c5a9690a0"
-        },
-        {
-          "date": "2026-06-12",
-          "value": 48.2,
-          "label": "风险",
-          "title": "AI基础设施的扩展性：电力与芯片供应瓶颈对超大规模厂商CAPEX的影响分析",
-          "view": "截至2026-06-12，本卡压力测试卡片02（电力瓶颈）与卡片06（半导体多线挤压）。结论：双重约束不会削减超大规模厂商资本开支，而是将其重排。2026资本开支仍约$725-726B（Dell'Oro），资本开支/营收比约25-30%、指引2027约35%；变化在优先级——可靠电力升至栈顶，建设…",
-          "check": "支持 1 / 风险 2 / 观察 2",
-          "href": "/investor/research-network/#thesis-8c5a9690a0"
-        },
-        {
-          "date": "2026-06-13",
-          "value": 22.6,
-          "label": "观察",
-          "title": "红皇后竞速并未彻底抹去自研ASIC的成本优势，而是将其集中至Google与AWS两家、使其他云厂商回到对NVIDIA的依赖，从而部分推翻了Research not…",
-          "view": "在'红皇后竞速'下，自研ASIC单世代有效寿命已压缩至12–15个月，2nm节点全口径NRE攀升至USD 0.9–1.4B、N2晶圆约USD 30,000/片、CoWoS-L售罄至2027。我们测算自研ASIC在TCO上跑赢商用GPU的年部署门槛从5nm节点的约20万颗升至现实情景下的15万–25…",
-          "check": "支持 1 / 风险 7 / 观察 3",
-          "href": "/investor/research-network/#thesis-8c5a9690a0"
-        },
-        {
-          "date": "2026-06-14",
-          "value": 13,
-          "label": "风险",
-          "title": "在AI链内部按融资质量轮动：超配Tier-1平台与卖铲人(设备/HBM/封装/电力赢家)，低配靠GPU抵押融资循环的Neocloud股权与高收益债。",
-          "view": "综合前八卡推演，AI基础设施的约束已从硅到电力、再到融资可得性。本卡给出按融资质量过滤的五篮子相对配置框架：B1 Tier-1 AI平台(+300bp)、B2 设备/HBM/先进封装(+250bp)、B3 ASIC定制(+100bp)、B4 电力瓶颈赢家(+150bp)、B5 低质量AI基建(-2…",
-          "check": "支持 0 / 风险 6 / 观察 0",
-          "href": "/investor/research-network/#thesis-8c5a9690a0"
-        },
-        {
-          "date": "2026-06-15",
-          "value": 34.4,
-          "label": "风险",
-          "title": "验证AI算力硬件链的估值承压：流动性虹吸下的先进封装与GPU产业链韧性评估",
-          "view": "本卡对AI算力硬件链做压力测试，得出'分化韧性'结论。资金流层面确认虹吸：2026-06-08半导体−219.33亿、通信−98.35亿、消费电子−69.92亿元净流出居前[S6]，年内93家半导体公司减持[S7]，叠加CXMT约295亿IPO锚定[S9]。但估值下移是资金流/轮动驱动、非盈利驱动…",
-          "check": "支持 1 / 风险 4 / 观察 0",
-          "href": "/investor/research-network/#thesis-8c5a9690a0"
-        },
-        {
-          "date": "2026-06-16",
-          "value": 21.8,
-          "label": "风险",
-          "title": "电力供给限制驱动的半导体能效转型主要表现为通用GPU的系统与精度级优化，而非ASIC/NPU的大规模替代；自研定制芯片的爆发反而加剧了全球先进制程与封装供应链对T…",
-          "view": "截至2026-06-17，电力瓶颈确在倒逼算力能效转型，但并非单纯的通用GPU向专用ASIC切换。算法多变性（如MoE与动态推理）使自研ASIC面临极高的“代差失效”风险，通用GPU（如NVIDIA Blackwell）凭借软件与架构灵活性仍占据70%以上份额。能效提升主要通过系统精度（FP4/F…",
-          "check": "支持 0 / 风险 5 / 观察 0",
-          "href": "/investor/research-network/#thesis-8c5a9690a0"
-        },
-        {
-          "date": "2026-06-17",
-          "value": 19.2,
-          "label": "风险",
-          "title": "FOMC 后应以“选择性算力基础设施挤空”而非“无差别 AI 融涨”来交易：多稀缺、空低 ROIC，净多但对冲。",
-          "view": "2026-06-18 策略综合：前序链条成立，2027 风险是 ROIC 与结构分化而非 capex 悬崖。FOMC 后应做多稀缺算力资产而非泛 AI beta：前沿逻辑/设备/HBM/先进封装、自研 ASIC 与网络、电力与电网受益方应超配；商用 GPU 龙头保留但严控风险；低 ROIC 商用 …",
-          "check": "支持 1 / 风险 7 / 观察 0",
-          "href": "/investor/research-network/#thesis-8c5a9690a0"
-        },
-        {
-          "date": "2026-06-18",
-          "value": 54.6,
-          "label": "观察",
-          "title": "AI 基建领导权是否正从商用 GPU 迁向定制硅（ASIC）？",
-          "view": "AI 基建领导权是否正从商用 GPU 迁向定制硅（ASIC）？ Is AI-infra leadership rotating from merchant GPU to custom silicon (ASIC)? 6/17 红盘下 AVGO/MRVL 逆势 +4%、且 YTD SOX +88% …",
-          "check": "支持 0 / 风险 2 / 观察 4",
-          "href": "/investor/research-network/#thesis-8c5a9690a0"
-        }
-      ],
-      "dimensions": [
-        {
-          "label": "维度一",
-          "title": "论点",
-          "front": "研究问题是否清晰？",
-          "back": "Mag7 在 AI 时代从平台垄断转向基础设施再分层"
-        },
-        {
-          "label": "维度二",
-          "title": "证据",
-          "front": "证据是否可追溯？",
-          "back": "覆盖 16 位分析师和 7 类公开来源。"
-        },
-        {
-          "label": "维度三",
-          "title": "证伪",
-          "front": "风险是否上升？",
-          "back": "风险事件 115 条，方向为 分歧。"
-        }
-      ],
-      "sources": [
-        {
-          "href": "/investor/research-network/#thesis-8c5a9690a0",
-          "label": "研究网络主线",
-          "tag": "网络"
-        },
-        {
-          "href": "/investor/deep-research/mag7-next-era-losers-6f2a8c9d/",
-          "label": "下一代周期中，Mag7 谁会输？",
-          "tag": "研究记录"
-        }
-      ],
-      "autoGenerated": true,
-      "kind": "living_thesis_recap"
-    },
-    {
-      "slug": "living-ai-biology-5057edfa-2026-06-19",
-      "title": "AI-Biology 与医疗效率改善需要从科研突破走向支付和监管兑现：动态复盘",
-      "subtitle": "当前共有 40 条证据、3 位分析师和 8 条风险信号指向该判断；主导链条为 AI 基础设施。该主题应作为可跟踪投资假设，而不是孤立结论。",
-      "date": "2026-06-19",
-      "badge": "LIVING THESIS RECAP",
-      "reportHref": "/investor/research-network/#thesis-5057edfa79",
-      "chartTitle": "主线证据强度演化",
-      "chartDescription": "由公开研究事件按日期聚合，显示支持、风险和观察证据如何改变主线强度。",
-      "chartUnit": "证据强度",
-      "chart": {
-        "labels": [
-          "06-10",
-          "06-11",
-          "06-12",
-          "06-13",
-          "06-14",
-          "06-15",
-          "06-16",
-          "06-17",
-          "06-18",
-          "06-19"
-        ],
-        "values": [
-          24,
-          21.4,
-          38.8,
-          48.2,
-          37.6,
-          22,
-          12,
-          19.8,
-          12,
-          70.6
-        ]
-      },
-      "metrics": [
-        {
-          "label": "证据事件",
-          "value": "160",
-          "accent": "blue"
-        },
-        {
-          "label": "风险事件",
-          "value": "130",
-          "accent": "red"
-        },
-        {
-          "label": "分析师",
-          "value": "14",
-          "accent": "green"
-        },
-        {
-          "label": "方向",
-          "value": "分歧",
-          "accent": "orange"
-        }
-      ],
-      "conclusions": [
-        {
-          "title": "主线定义",
-          "text": "当前共有 40 条证据、3 位分析师和 8 条风险信号指向该判断；主导链条为 AI 基础设施。该主题应作为可跟踪投资假设，而不是孤立结论。"
-        },
-        {
-          "title": "最新变化",
-          "text": "2026-06-19: 医药内部切换正在发生于边际资金层面，最佳表达是超配 BD 能力强的创新药龙头、把 CDMO 降为估值修复仓位，而不是简单全面买医药。"
-        },
-        {
-          "title": "证据纪律",
-          "text": "当前以 19 条支持、130 条风险和 11 条观察证据进行动态跟踪。"
-        }
-      ],
-      "checklist": [
-        {
-          "label": "支持证据",
-          "status": "19 条",
-          "detail": "继续观察是否出现跨来源、跨分析师的同向验证。",
-          "bull": "支持证据集中出现在最新日期且源报告可追溯",
-          "bear": "支持证据停留在旧报告或单一来源",
-          "active": "bear"
-        },
-        {
-          "label": "风险证据",
-          "status": "130 条",
-          "detail": "风险证据用于判断主线是否变成拥挤交易或证伪样本。",
-          "bull": "风险被新证据消化",
-          "bear": "风险事件数量超过支持事件",
-          "active": "bear"
-        },
-        {
-          "label": "监控词",
-          "status": "AI 基础设施 / CPI / CXO",
-          "detail": "AI 基础设施 / CPI / CXO / 创新药 / AI-Biology / biology / healthcare / productivity",
-          "bull": "监控词在新报告中被反复验证",
-          "bear": "监控词热度上升但价格或基本面未兑现",
-          "active": "bull"
-        }
-      ],
-      "timeline": [
-        {
-          "date": "2026-06-10",
-          "value": 24,
-          "label": "风险",
-          "title": "产能迁移不是简单利润率问题，而是会把CMC可比性转化为临床时钟和BD条款的二阶估值风险。",
-          "view": "截至2026-06-10，本卡对前序医药超配做压力测试：非中产能迁移确实会通过CMC可比性、技术转移、稳定性和监管沟通拉长临床周期，并通过条件化首付款、生产转移里程碑和交易陈述保证增加BD摩擦。但风险集中在Phase III/注册期生物药、CGT、ADC、多肽、寡核苷酸、无菌制剂及商业化切换项目；…",
-          "check": "支持 0 / 风险 4 / 观察 2",
-          "href": "/investor/research-network/#thesis-5057edfa79"
-        },
-        {
-          "date": "2026-06-11",
-          "value": 21.4,
-          "label": "风险",
-          "title": "电力与GPU瓶颈通过抬高单位算力成本和延长产能交付周期，向生物医药研发征收一道结构性'算力税'，把卡片06的'算力转化成果'筛选逻辑从风格偏好升级为预算流程强制执…",
-          "view": "截至2026-06-12，本卡支持卡片06判断：电力与GPU瓶颈把云算力单位成本（H100按需租金升至$2.5–3.5/小时）与有效交付周期（>10 MW园区24–36+月）同时抬升，给生物医药研发加征一道成本税。单个AI驱动早期项目算力支出从2023年$1.0–6.0 mn升至2026年$1.4…",
-          "check": "支持 1 / 风险 5 / 观察 0",
-          "href": "/investor/research-network/#thesis-5057edfa79"
-        },
-        {
-          "date": "2026-06-12",
-          "value": 38.8,
-          "label": "风险",
-          "title": "截至2026-06-13，电力设备成本与交付风险已经实质性延后 AI 算力集群通电节奏，但它表现为 capex 效率恶化和项目重排，而不是最大型 hypersca…",
-          "view": "截至2026-06-13，本卡支持前序“电力约束正在惩罚 AI capex/融资假设”的方向，但精确化为：2026-2028 年已出现项目层面的通电延期与节奏重排，尚未出现头部 hyperscalers headline capex 的广泛下修。Sightline 显示 2026 年约 16 GW…",
-          "check": "支持 0 / 风险 1 / 观察 0",
-          "href": "/investor/research-network/#thesis-5057edfa79"
-        },
-        {
-          "date": "2026-06-13",
-          "value": 48.2,
-          "label": "支持",
-          "title": "AI算力基础设施报告：高密度芯片催化液冷放量，设备龙头迎温控出清与市占率跃升 发布日期 ：2026 06 13 (Asia/Singapore) 分析师 ：AI基…",
-          "view": "AI算力基础设施报告：高密度芯片催化液冷放量，设备龙头迎温控出清与市占率跃升 发布日期 ：2026 06 13 (Asia/Singapore) 分析师 ：AI基础设施分析师 (ai infrastructure analyst) 当前卡片定位 ：Research note 03 / 08 核心立…",
-          "check": "支持 1 / 风险 1 / 观察 0",
-          "href": "/investor/research-network/#thesis-5057edfa79"
-        },
-        {
-          "date": "2026-06-14",
-          "value": 37.6,
-          "label": "风险",
-          "title": "物理电网瓶颈正迫使 AI 基础设施从‘暴力规模扩张’转向‘受约束的能效优化’，电力并网速度已取代芯片供应成为核心估值护城河。",
-          "view": "本报告通过压力测试确认了物理电网并网排队（7-10年）与变压器交期（4-5年）已成为 AI 基础设施扩张的硬约束。定量模型显示，1年的并网延迟将导致 100MW 数据中心损失 5.5% 的生命周期价值，且快速的 GPU 迭代周期（12-18个月效用减半）加剧了闲置产能的 ROI 损耗。这种物理瓶颈…",
-          "check": "支持 1 / 风险 3 / 观察 0",
-          "href": "/investor/research-network/#thesis-5057edfa79"
-        },
-        {
-          "date": "2026-06-15",
-          "value": 22,
-          "label": "风险",
-          "title": "AI 基础设施的估值与投资回报已从‘算力拥有量’转向‘电力接入效率’，电力-计算一体化已成为 2026 年超大厂资本开支的核心逻辑。",
-          "view": "2026年，AI基础设施资本开支进入“电力重心偏移”阶段。超大厂支出从芯片采购转向电力-计算一体化架构，物理基础设施投入与芯片已达1:1。算力向美南和中东等电力充裕地区迁移，驱动了1.6T光互联的爆发式增长（需求达8.6M-20M只）以及先进封装的全球区域化布局。尽管解决了电力准入，但远距离传输延…",
-          "check": "支持 0 / 风险 5 / 观察 1",
-          "href": "/investor/research-network/#thesis-5057edfa79"
-        },
-        {
-          "date": "2026-06-16",
-          "value": 12,
-          "label": "风险",
-          "title": "创新药商业化兑现面临DRG/DIP支付限制与存量竞争的双重挤压，地缘政治风险导致的估值折价具有持久性，医药板块的估值重构逻辑尚未成立。",
-          "view": "本报告对首席策略师的乐观预期提出深度挑战。核心论点在于：2026年DRG/DIP的全面覆盖已成为创新药进院后的‘硬天花板’，导致营收增长与利润释放严重脱节；GLP-1与ADC赛道的激烈内卷引发价格战，削弱了BD价值重估的基础；地缘政治博弈对CXO板块的持久性压制导致海外订单缩减。我们认为医药板块的…",
-          "check": "支持 1 / 风险 23 / 观察 1",
-          "href": "/investor/research-network/#thesis-5057edfa79"
-        },
-        {
-          "date": "2026-06-17",
-          "value": 19.8,
-          "label": "风险",
-          "title": "Research note 03 · Hyperscaler 资本开支韧性与电力瓶颈对 AI 算力周期的约束 工作日期：2026 06 17（Asia/Singa…",
-          "view": "Research note 03 · Hyperscaler 资本开支韧性与电力瓶颈对 AI 算力周期的约束 工作日期：2026 06 17（Asia/Singapore） 分析师：AI 基础设施分析师 (ai infrastructure analyst) 立场：stress test（压力测试…",
-          "check": "支持 2 / 风险 8 / 观察 0",
-          "href": "/investor/research-network/#thesis-5057edfa79"
-        },
-        {
-          "date": "2026-06-18",
-          "value": 12,
-          "label": "风险",
-          "title": "大健康存在选择性重估标的，但 AI 跨链外溢不应按篮子买入；基础设施先捕获稀缺性，医疗需等临床、监管、支付和现金转化验证。",
-          "view": "截至 2026-06-18，本卡从 AI 基础设施视角否定“大健康低覆盖=系统性低估”的宽泛判断。15/280 的 5.4% 激活率只是内部关注度信号；真正稀缺、已被资本密集定价的环节在算力、电力、数据中心与云 capex。医疗 AI 采用真实，FDA 列表已达 1,525 个条目，但监管、临床验…",
-          "check": "支持 0 / 风险 17 / 观察 0",
-          "href": "/investor/research-network/#thesis-5057edfa79"
-        },
-        {
-          "date": "2026-06-19",
-          "value": 70.6,
-          "label": "支持",
-          "title": "跨国药企对中国CXO/CDMO订单依存度与美国监管清单脱钩周期",
-          "view": "跨国药企对中国CXO/CDMO订单依存度与美国监管清单脱钩周期 如何解构跨国药企对中国CXO/CDMO企业的订单依存度曲线，并评估美国监管清单的物理脱钩周期和转单流向？ Prior related institute work to acknowledge and BUILD ON (do not…",
-          "check": "支持 2 / 风险 0 / 观察 0",
-          "href": "/investor/research-network/#thesis-5057edfa79"
-        }
-      ],
-      "dimensions": [
-        {
-          "label": "维度一",
-          "title": "论点",
-          "front": "研究问题是否清晰？",
-          "back": "AI-Biology 与医疗效率改善需要从科研突破走向支付和监管兑现"
-        },
-        {
-          "label": "维度二",
-          "title": "证据",
-          "front": "证据是否可追溯？",
-          "back": "覆盖 14 位分析师和 4 类公开来源。"
-        },
-        {
-          "label": "维度三",
-          "title": "证伪",
-          "front": "风险是否上升？",
-          "back": "风险事件 130 条，方向为 分歧。"
-        }
-      ],
-      "sources": [
-        {
-          "href": "/investor/research-network/#thesis-5057edfa79",
-          "label": "研究网络主线",
-          "tag": "网络"
-        }
-      ],
-      "autoGenerated": true,
-      "kind": "living_thesis_recap"
-    },
-    {
-      "slug": "living-reits-741d1d6f-2026-06-19",
-      "title": "地产、土地财政与 REITs 是中国信用底的慢变量：动态复盘",
-      "subtitle": "当前共有 40 条证据、3 位分析师和 1 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
-      "date": "2026-06-19",
-      "badge": "LIVING THESIS RECAP",
-      "reportHref": "/investor/research-network/#thesis-741d1d6f34",
-      "chartTitle": "主线证据强度演化",
-      "chartDescription": "由公开研究事件按日期聚合，显示支持、风险和观察证据如何改变主线强度。",
-      "chartUnit": "证据强度",
-      "chart": {
-        "labels": [
-          "06-09",
-          "06-10",
-          "06-12",
-          "06-13",
-          "06-14",
-          "06-15",
-          "06-16",
-          "06-17",
-          "06-18",
-          "06-19"
-        ],
-        "values": [
-          27,
-          45.4,
-          38.8,
-          43.2,
-          32.6,
-          12,
-          12,
-          12,
-          12,
-          48.6
-        ]
-      },
-      "metrics": [
-        {
-          "label": "证据事件",
-          "value": "160",
-          "accent": "blue"
-        },
-        {
-          "label": "风险事件",
-          "value": "112",
-          "accent": "red"
-        },
-        {
-          "label": "分析师",
-          "value": "20",
+          "value": "21",
           "accent": "green"
         },
         {
@@ -2276,17 +2491,17 @@
         },
         {
           "title": "最新变化",
-          "text": "2026-06-19: 美联储偏鹰/熊平体制下高负债高CapEx算力租赁标的的融资瓶颈与估值压力"
+          "text": "2026-06-21: AI算力对电网密度的压力测试：高壁垒HVDC与特高压能否满足数据中心极端负载需求？"
         },
         {
           "title": "证据纪律",
-          "text": "当前以 6 条支持、112 条风险和 42 条观察证据进行动态跟踪。"
+          "text": "当前以 4 条支持、115 条风险和 41 条观察证据进行动态跟踪。"
         }
       ],
       "checklist": [
         {
           "label": "支持证据",
-          "status": "6 条",
+          "status": "4 条",
           "detail": "继续观察是否出现跨来源、跨分析师的同向验证。",
           "bull": "支持证据集中出现在最新日期且源报告可追溯",
           "bear": "支持证据停留在旧报告或单一来源",
@@ -2294,7 +2509,7 @@
         },
         {
           "label": "风险证据",
-          "status": "112 条",
+          "status": "115 条",
           "detail": "风险证据用于判断主线是否变成拥挤交易或证伪样本。",
           "bull": "风险被新证据消化",
           "bear": "风险事件数量超过支持事件",
@@ -2311,17 +2526,8 @@
       ],
       "timeline": [
         {
-          "date": "2026-06-09",
-          "value": 27,
-          "label": "风险",
-          "title": "在二线云商DSCR低于1.2x且混合GPU回收率降至54.5%的重度压力下，私人信贷组合将面临高达56.67%的本金尾部损失，必须通过5.5亿美元跨工具对冲组合将…",
-          "view": "截至2026年6月9日，本报告对持有多元化算力基建私人信贷组合在极端压力情景（GPU回收率降至54.5%、二线云商DSCR<1.2x、信用利差走阔至600bps）下的尾部损失进行了蒙特卡洛模拟。测算显示组合预期损失飙升至18.16%（1.8159亿美元），99% Credit VaR及Expect…",
-          "check": "支持 0 / 风险 3 / 观察 1",
-          "href": "/investor/research-network/#thesis-741d1d6f34"
-        },
-        {
           "date": "2026-06-10",
-          "value": 45.4,
+          "value": 44,
           "label": "风险",
           "title": "AI需求到2026年底足以兑现HBM锁定的供给，但A股的真正约束是份额捕获与财政融资通量，因此应超配云挂钩供应商与一体化国产替代栈、把端侧AI作期权、低配离岸GP…",
           "view": "锚定2026-06-10，本卡综合第01卡（首席策略师）与第02卡（政策分析师）。中国宏观叠加三条修正：(1) A股AI capex由大基金三期+省级算力券+头部云自融政策配给，民营信贷通道薄，是财政题非周期题；(2) 5月PMI 49.6 / Caixin 50.4 / 社融~8.4% / CP…",
@@ -2330,16 +2536,16 @@
         },
         {
           "date": "2026-06-12",
-          "value": 38.8,
+          "value": 40.4,
           "label": "观察",
           "title": "Your Role: AI基础设施分析师 (AI Infrastructure Analyst) Expertise: AI compute/datacenter…",
           "view": "Your Role: AI基础设施分析师 (AI Infrastructure Analyst) Expertise: AI compute/datacenter/GPU clusters, power & grid bottleneck, hyperscaler capex Step −1 — …",
-          "check": "支持 0 / 风险 2 / 观察 2",
+          "check": "支持 0 / 风险 2 / 观察 3",
           "href": "/investor/research-network/#thesis-741d1d6f34"
         },
         {
           "date": "2026-06-13",
-          "value": 43.2,
+          "value": 41.8,
           "label": "观察",
           "title": "[auto-handoff] Valuation Impairment Transmission of CMSK Commercial REIT Filing o…",
           "view": "致 全球宏观分析师： 协同任务已完成。执行方为 信用分析师。 模式: adhoc 会话: 174e7290-66d6-4aaa-b96d-31aa0aaa0098 结果摘要: Wrote handoff_response.md (10770 bytes); wrote handoff_respon…",
@@ -2348,7 +2554,7 @@
         },
         {
           "date": "2026-06-14",
-          "value": 32.6,
+          "value": 31.2,
           "label": "风险",
           "title": "评估 Tier-2/Neocloud 厂商在能源重资产化背景下的杠杆率与信用违约风险",
           "view": "本卡压力测试并部分否定 Research note 06「Tier-2 仅利润率压缩、退守利基即可存活」的乐观尾部。能源重资产资本开支并非通过电费、而是通过资本结构架构重新定价 Tier-2/Neocloud 的违约风险：拉长并固化资产久期、加深对顺周期回收的 GPU 抵押品依赖、并把客户预付款变…",
@@ -2357,47 +2563,56 @@
         },
         {
           "date": "2026-06-15",
-          "value": 12,
+          "value": 32.6,
           "label": "观察",
           "title": "I have analyzed the transmission of macro credit tightening and financing \"short …",
           "view": "I have analyzed the transmission of macro credit tightening and financing \"short termization\" to the AI infrastructure expansion cycle as the AI Infr…",
-          "check": "支持 0 / 风险 8 / 观察 2",
+          "check": "支持 0 / 风险 3 / 观察 1",
           "href": "/investor/research-network/#thesis-741d1d6f34"
         },
         {
           "date": "2026-06-16",
-          "value": 12,
+          "value": 37,
           "label": "风险",
           "title": "All three deliverables are written and verified. Research note 02 summary — Stanc…",
           "view": "All three deliverables are written and verified. Research note 02 summary — Stance: SUPPORT (with one relative value refinement). I confirm Research …",
-          "check": "支持 1 / 风险 20 / 观察 1",
-          "href": "/investor/research-network/#thesis-741d1d6f34"
-        },
-        {
-          "date": "2026-06-17",
-          "value": 12,
-          "label": "风险",
-          "title": "AI主题内部的定价权正从芯片端的硅片稀缺向电力、并网熟地和变压器等物理基础设施供应链迁移，电网并网延迟构成了对云巨头闲置算力资本的巨额惩罚，迫使价值向能源与硬件节…",
-          "view": "截至2026年6月18日，由于全美并网队列激增至2,600 GW且平均等待时间达5年，AI基础设施的核心瓶颈已从GPU芯片稀缺转移到电力、并网及电力设备。定价权正向控制熟地、独立发电和电网设备的物理环节迁移，以规避巨大的闲置算力沉没资金惩罚（10万张B200芯片闲置年资本占用成本达1.8亿美元）。",
-          "check": "支持 1 / 风险 9 / 观察 0",
+          "check": "支持 0 / 风险 2 / 观察 0",
           "href": "/investor/research-network/#thesis-741d1d6f34"
         },
         {
           "date": "2026-06-18",
-          "value": 12,
+          "value": 35.4,
           "label": "风险",
           "title": "AI算力资产的估值核心正在从“GPU x 利用率”转向“firm power rights x 利用率”，没有锁定电力的项目应接受公用事业化折价甚至搁浅风险折价。",
           "view": "截至2026-06-19，本卡对上一卡进行压力测试：AI算力基建的公用事业化方向成立，但PJM容量电价不能单独解释+$50/MWh电价冲击。PJM 2027/28容量价升至$333.44/MW-day，较2024/25等价约+$12.69/MWh；更大的NPV损伤来自容量、能量、拥塞、输配电、送电…",
-          "check": "支持 1 / 风险 15 / 观察 3",
+          "check": "支持 0 / 风险 3 / 观察 1",
           "href": "/investor/research-network/#thesis-741d1d6f34"
         },
         {
           "date": "2026-06-19",
-          "value": 48.6,
+          "value": 12,
+          "label": "观察",
+          "title": "[auto-handoff] 商业REITs定价对万科、龙湖等民企/混合所有制房企OPL评估值与信用利差的传导测算",
+          "view": "致 房地产分析师： 协同任务已完成。执行方为 信用分析师。 模式: adhoc 会话: 78d2d4a2-5f61-4e5c-9982-7b20d3fa9413 结果摘要: Wrote handoff_response.md (14228 bytes); wrote handoff_respons…",
+          "check": "支持 0 / 风险 13 / 观察 2",
+          "href": "/investor/research-network/#thesis-741d1d6f34"
+        },
+        {
+          "date": "2026-06-20",
+          "value": 12,
           "label": "风险",
-          "title": "美联储偏鹰/熊平体制下高负债高CapEx算力租赁标的的融资瓶颈与估值压力",
-          "view": "美联储偏鹰/熊平体制下高负债高CapEx算力租赁标的的融资瓶颈与估值压力 Tightening and Curve Bear-Flattening: Financing Bottlenecks for GPU Cloud Players 在凯文·沃什（Kevin Warsh）废除前瞻指引、美债2Y…",
-          "check": "支持 0 / 风险 1 / 观察 0",
+          "title": "电网通电限制不会立即终结 AI 需求，但会把 TMT 估值从“芯片稀缺溢价”重构为“确定电力、利用率和现金流转化溢价”。",
+          "view": "截至 2026-06-21，本卡压力测试电网通电限制对 TMT 的影响：AI 需求仍强，但估值核心从 GPU 可得性转向 time-to-power、容量变现和 FCF 久期。Microsoft 和 Amazon 的主要风险是 AI capex 先发生、通电和云收入后确认，导致利润率与自由现金流承…",
+          "check": "支持 1 / 风险 28 / 观察 0",
+          "href": "/investor/research-network/#thesis-741d1d6f34"
+        },
+        {
+          "date": "2026-06-21",
+          "value": 15.6,
+          "label": "风险",
+          "title": "I have completed the analysis on AI compute infrastructure transmission paths und…",
+          "view": "I have completed the analysis on AI compute infrastructure transmission paths under power and transformer constraints , focusing on the concrete impa…",
+          "check": "支持 0 / 风险 7 / 观察 1",
           "href": "/investor/research-network/#thesis-741d1d6f34"
         }
       ],
@@ -2412,13 +2627,13 @@
           "label": "维度二",
           "title": "证据",
           "front": "证据是否可追溯？",
-          "back": "覆盖 20 位分析师和 5 类公开来源。"
+          "back": "覆盖 21 位分析师和 6 类公开来源。"
         },
         {
           "label": "维度三",
           "title": "证伪",
           "front": "风险是否上升？",
-          "back": "风险事件 112 条，方向为 分歧。"
+          "back": "风险事件 115 条，方向为 分歧。"
         }
       ],
       "sources": [
@@ -2432,39 +2647,39 @@
       "kind": "living_thesis_recap"
     },
     {
-      "slug": "living-ai-7f0a75c5-2026-06-18",
-      "title": "数据中心地产、液冷与水资源正在决定 AI 容量的区域迁移：动态复盘",
-      "subtitle": "当前共有 40 条证据、2 位分析师和 8 条风险信号指向该判断；主导链条为 AI 基础设施。该主题应作为可跟踪投资假设，而不是孤立结论。",
-      "date": "2026-06-18",
+      "slug": "living-cpo-ai-42faeae6-2026-06-21",
+      "title": "CPO、光互联与铜连接决定 AI 集群内部租金迁移：动态复盘",
+      "subtitle": "当前共有 40 条证据、1 位分析师和 8 条风险信号指向该判断；主导链条为 AI 基础设施。该主题应作为可跟踪投资假设，而不是孤立结论。",
+      "date": "2026-06-21",
       "badge": "LIVING THESIS RECAP",
-      "reportHref": "/investor/research-network/#thesis-7f0a75c5f6",
+      "reportHref": "/investor/research-network/#thesis-42faeae623",
       "chartTitle": "主线证据强度演化",
       "chartDescription": "由公开研究事件按日期聚合，显示支持、风险和观察证据如何改变主线强度。",
       "chartUnit": "证据强度",
       "chart": {
         "labels": [
-          "06-09",
-          "06-10",
-          "06-11",
           "06-12",
           "06-13",
           "06-14",
           "06-15",
           "06-16",
           "06-17",
-          "06-18"
+          "06-18",
+          "06-19",
+          "06-20",
+          "06-21"
         ],
         "values": [
-          24,
-          31.4,
           12,
           12,
           12,
+          16.2,
+          12,
+          13,
           12,
           12,
-          12,
-          15.2,
-          12
+          25.2,
+          18.6
         ]
       },
       "metrics": [
@@ -2475,7 +2690,7 @@
         },
         {
           "label": "风险事件",
-          "value": "143",
+          "value": "146",
           "accent": "red"
         },
         {
@@ -2492,21 +2707,21 @@
       "conclusions": [
         {
           "title": "主线定义",
-          "text": "当前共有 40 条证据、2 位分析师和 8 条风险信号指向该判断；主导链条为 AI 基础设施。该主题应作为可跟踪投资假设，而不是孤立结论。"
+          "text": "当前共有 40 条证据、1 位分析师和 8 条风险信号指向该判断；主导链条为 AI 基础设施。该主题应作为可跟踪投资假设，而不是孤立结论。"
         },
         {
           "title": "最新变化",
-          "text": "2026-06-18: AI数据中心负荷对公用事业是有条件的长期盈利机会：电网和水务资本开支只有在大型负荷成本被合同化、监管准许及时回收时，才会从现金流压力转化为rate base增长。"
+          "text": "2026-06-21: 全球贸易壁垒（关税、能效标准与碳关税）不仅未能缓解变压器供应链紧张，反而通过72.68%的转运成本附加[自测算]及碳关税上升增加了‘二次约束’，使交付周期锁定在80-200周，导致1 GW智算集群延迟并网面临58.62%的沉没CapEx拖累[自测算]，成为限制全球AI算力扩…"
         },
         {
           "title": "证据纪律",
-          "text": "当前以 9 条支持、143 条风险和 8 条观察证据进行动态跟踪。"
+          "text": "当前以 6 条支持、146 条风险和 8 条观察证据进行动态跟踪。"
         }
       ],
       "checklist": [
         {
           "label": "支持证据",
-          "status": "9 条",
+          "status": "6 条",
           "detail": "继续观察是否出现跨来源、跨分析师的同向验证。",
           "bull": "支持证据集中出现在最新日期且源报告可追溯",
           "bear": "支持证据停留在旧报告或单一来源",
@@ -2514,7 +2729,7 @@
         },
         {
           "label": "风险证据",
-          "status": "143 条",
+          "status": "146 条",
           "detail": "风险证据用于判断主线是否变成拥挤交易或证伪样本。",
           "bull": "风险被新证据消化",
           "bear": "风险事件数量超过支持事件",
@@ -2522,8 +2737,8 @@
         },
         {
           "label": "监控词",
-          "status": "AI 基础设施 / 电网 / GOES",
-          "detail": "AI 基础设施 / 电网 / GOES / GPU / 数据中心 / 并网 / AI数据中心 / 水电",
+          "status": "AI 基础设施 / 电网 / 云厂商",
+          "detail": "AI 基础设施 / 电网 / 云厂商 / 变压器 / GOES / HBM / CPO / 先进封装",
           "bull": "监控词在新报告中被反复验证",
           "bear": "监控词热度上升但价格或基本面未兑现",
           "active": "bull"
@@ -2531,40 +2746,13 @@
       ],
       "timeline": [
         {
-          "date": "2026-06-09",
-          "value": 24,
-          "label": "风险",
-          "title": "AI 硬件的增长上限已由‘数字世界’转为‘物理世界’，电力缺口将迫使市场从纯算力 beta 转向通电效率与重型电力基础设施。",
-          "view": "2026-06-09：本卡对 AI 硬件估值进行压力测试，指出物理电力供应已取代芯片产量成为核心瓶颈。电网并网积压（36-84个月）与电力硬件（变压器）交期过长（24个月以上）导致 2026 年近半数数据中心容量面临延期。NVIDIA Rubin 架构功耗激增至 2.3kW/GPU，迫使架构全面转…",
-          "check": "支持 0 / 风险 3 / 观察 0",
-          "href": "/investor/research-network/#thesis-7f0a75c5f6"
-        },
-        {
-          "date": "2026-06-10",
-          "value": 31.4,
-          "label": "风险",
-          "title": "电网设备超长交付周期及原料紧缺导致大型电力项目面临商运推迟与债务违约风险，使AI数据中心容量扩张受到刚性的“瓶颈延迟”制约，佐证了“AI疲劳”本质上是物理并网与供…",
-          "view": "截至2026-06-11，电网变压器设备供应缺口及原材料（取向硅钢/GOES与铜）紧缺已对AI数据中心并网建设进度构成物理刚性约束。LPT与GSU变压器交付期已拉长至2.5-4年。由于DOE能效新规，美国GOES缺口扩大至19.6万吨/年，进口依赖度攀升至57.6%。即便采用以铝代铜，也会因线圈体…",
-          "check": "支持 0 / 风险 2 / 观察 0",
-          "href": "/investor/research-network/#thesis-7f0a75c5f6"
-        },
-        {
-          "date": "2026-06-11",
-          "value": 12,
-          "label": "风险",
-          "title": "电力交付滞后会迫使 Hyperscalers 调整 GPU 集群投产节奏，并通过更长现金回收期、更低早期利用率和更高电力保障成本压低 AI 基础设施 capex …",
-          "view": "截至2026-06-11，本卡支持上一卡：AI capex 不会因电网瓶颈消失，但 GPU 集群部署节奏会被“已通电 MW”重新排序。变压器、并网和输电延迟会把部分已宣布园区容量推迟到后续窗口，压低早期自由现金流和资产利用率。Hyperscalers 会通过已通电站点溢价、分阶段投产、区域重排和自…",
-          "check": "支持 1 / 风险 10 / 观察 2",
-          "href": "/investor/research-network/#thesis-7f0a75c5f6"
-        },
-        {
           "date": "2026-06-12",
           "value": 12,
           "label": "风险",
-          "title": "科技巨头直接注资电力资产因电网设备供应链瓶颈（变压器交期48-60个月）而演变成“资本陷阱”，导致高达40%的预承诺GPU硬件（$100亿）因并网滞后3年而遭遇6…",
-          "view": "截至2026-06-13，本报告对科技巨头直接注资电力资产的资本转移进行了压力测试。由于高压变压器（LPT）交期延长至48-60个月、取向硅钢（GOES）供应受限以及并网队列长达5年以上，资本转移正退化为“资本陷阱”。定量测试表明，在3年并网延迟与40%电网造价通胀下，一个2 GW的AI数据中心项…",
+          "title": "电力供给的物理并网瓶颈与高密算力液冷配套开支的刚性上升，正在对超大规模数据中心资本开支形成显著的“基建挤出效应”，迫使纯算力硬件开支占比向电网、变压器和温控冷却设…",
+          "view": "截至2026-06-13，电力供给的结构性稀缺（并网延迟达24-48个月，PJM容量价格飙升10倍）与Blackwell机柜高功耗（单柜132kW）倒逼超大规模厂商进行CAPEX结构重构。定量测算表明：在无约束情景下，设施基建占比从23.08%上升至34.07%，其中配电占比由5.54%升至9.3…",
           "check": "支持 1 / 风险 10 / 观察 1",
-          "href": "/investor/research-network/#thesis-7f0a75c5f6"
+          "href": "/investor/research-network/#thesis-42faeae623"
         },
         {
           "date": "2026-06-13",
@@ -2572,53 +2760,80 @@
           "label": "风险",
           "title": "地缘冲突带来的能源价格上行与物理并网延迟正在迫使云厂商将资本开支从纯算力硬件向电网、变压器和温控液冷基建倾斜，产生显著的“基建挤出效应”；在脱碳路径上面临自备燃气…",
           "view": "截至2026-06-13，本报告针对中东地缘能源冲击与电网瓶颈对AI算力基建的影响进行了压力测试。在$110/MWh高电费与$1364.40M配套基建（变压器GOES溢价及液冷）刚性支出下，超大云厂商为维持10%靶向ROIC必须调降GPU采购预算54.32%，挤压芯片商毛利至45.27%。在能源脱…",
-          "check": "支持 1 / 风险 12 / 观察 2",
-          "href": "/investor/research-network/#thesis-7f0a75c5f6"
+          "check": "支持 0 / 风险 8 / 观察 1",
+          "href": "/investor/research-network/#thesis-42faeae623"
         },
         {
           "date": "2026-06-14",
           "value": 12,
           "label": "风险",
-          "title": "AI硬件周期的约束正在从芯片可得性转向电力确定性，物理上限首先表现为区域部署延迟而非全球需求崩塌。",
-          "view": "截至2026-06-15，本卡压力测试认为：电力已成为AI算力部署的节奏阀，但2030年前不是全球统一硬上限。全球年度电量大体能承接IEA所示数据中心用电从2024年约415 TWh升至2030年约945 TWh的路径；真正瓶颈在PJM、Virginia、Ireland等局部电网，以及中国“东数西…",
-          "check": "支持 0 / 风险 17 / 观察 0",
-          "href": "/investor/research-network/#thesis-7f0a75c5f6"
+          "title": "物理电网瓶颈正迫使 AI 基础设施从‘暴力规模扩张’转向‘受约束的能效优化’，电力并网速度已取代芯片供应成为核心估值护城河。",
+          "view": "本报告通过压力测试确认了物理电网并网排队（7-10年）与变压器交期（4-5年）已成为 AI 基础设施扩张的硬约束。定量模型显示，1年的并网延迟将导致 100MW 数据中心损失 5.5% 的生命周期价值，且快速的 GPU 迭代周期（12-18个月效用减半）加剧了闲置产能的 ROI 损耗。这种物理瓶颈…",
+          "check": "支持 0 / 风险 16 / 观察 0",
+          "href": "/investor/research-network/#thesis-42faeae623"
         },
         {
           "date": "2026-06-15",
-          "value": 12,
+          "value": 16.2,
           "label": "风险",
-          "title": "海底零碳算力与深海数据中心：技术可行性与电力供应保障 白板编号：4157cf99 4f17 487d 9efd db740a1f0fbf · 第 02/10 张 …",
-          "view": "海底零碳算力与深海数据中心：技术可行性与电力供应保障 白板编号：4157cf99 4f17 487d 9efd db740a1f0fbf · 第 02/10 张 分析师：AI 基础设施分析师（ai infrastructure analyst） 日期：2026 06 15（亚洲/新加坡） 立场：支…",
-          "check": "支持 0 / 风险 14 / 观察 0",
-          "href": "/investor/research-network/#thesis-7f0a75c5f6"
+          "title": "卡片 08 — AI芯片竞争格局：ASIC侵蚀风险与商用GPU基本面评估 日期（机构工作日）： 2026 06 15 （亚洲/新加坡） 分析师：半导体分析师 立场…",
+          "view": "卡片 08 — AI芯片竞争格局：ASIC侵蚀风险与商用GPU基本面评估 日期（机构工作日）： 2026 06 15 （亚洲/新加坡） 分析师：半导体分析师 立场： 压力测试（stress test） 主题：商用GPU面临的ASIC份额侵蚀，及主要超大规模云商（Hyperscalers）定制ASI…",
+          "check": "支持 0 / 风险 5 / 观察 0",
+          "href": "/investor/research-network/#thesis-42faeae623"
         },
         {
           "date": "2026-06-16",
           "value": 12,
           "label": "风险",
-          "title": "物理算力护城河对AI基础设施SPV租金与利用率稳定性的贡献评估 日期：2026 06 16 | 分析师：AI基础设施分析师 [ai infrastructure …",
-          "view": "物理算力护城河对AI基础设施SPV租金与利用率稳定性的贡献评估 日期：2026 06 16 | 分析师：AI基础设施分析师 [ai infrastructure analyst] 核心观点 (Thesis) 物理护城河（表后供电、高密度液冷、微电网）在2026年的电力稀缺环境下，已从单纯的“可用性…",
-          "check": "支持 2 / 风险 24 / 观察 2",
-          "href": "/investor/research-network/#thesis-7f0a75c5f6"
+          "title": "芯片能效革命会改善AI单位经济性，但在2026-2028年的电网交付窗口内不足以单独解决AI电力生存危机。",
+          "view": "截至2026-06-16，本卡压力测试认为先进封装、Blackwell/TPU/ASIC会显著降低每token能耗，但无法单独化解AI电力缺口。IEA基准情景显示全球数据中心用电从2024年约415 TWh升至2030年约945 TWh[S1]，增量约530 TWh[自测算]；加速服务器用电仍以3…",
+          "check": "支持 1 / 风险 13 / 观察 2",
+          "href": "/investor/research-network/#thesis-42faeae623"
         },
         {
           "date": "2026-06-17",
-          "value": 15.2,
+          "value": 13,
           "label": "风险",
-          "title": "AI算力集群与电力能源基础设施的连锁需求",
-          "view": "支持前序主线：AI算力集群对配电、液冷与电网增容的连锁需求结构性且可量化，国产先进封装放量会放大而非缓解该拉动。功率密度台阶式跃迁是触发器（GB200 NVL72机柜120 kW、满载130-132 kW，>40 kW风冷失效），强制液冷（AI数据中心渗透率2024年14%→2025年33%）并触…",
-          "check": "支持 2 / 风险 9 / 观察 0",
-          "href": "/investor/research-network/#thesis-7f0a75c5f6"
+          "title": "AI主题内部的定价权正从芯片端的硅片稀缺向电力、并网熟地和变压器等物理基础设施供应链迁移，电网并网延迟构成了对云巨头闲置算力资本的巨额惩罚，迫使价值向能源与硬件节…",
+          "view": "截至2026年6月18日，由于全美并网队列激增至2,600 GW且平均等待时间达5年，AI基础设施的核心瓶颈已从GPU芯片稀缺转移到电力、并网及电力设备。定价权正向控制熟地、独立发电和电网设备的物理环节迁移，以规避巨大的闲置算力沉没资金惩罚（10万张B200芯片闲置年资本占用成本达1.8亿美元）。",
+          "check": "支持 0 / 风险 6 / 观察 0",
+          "href": "/investor/research-network/#thesis-42faeae623"
         },
         {
           "date": "2026-06-18",
           "value": 12,
           "label": "风险",
-          "title": "由于大型电力变压器与测试大厅产能严重受限，2027-2028年计划新增的AI数据中心有43%面临通电并网延期[自测算]，由此引发GPU订单推迟，对主要芯片制造商及…",
-          "view": "基于2026-06-19数据，本分析量化了电网变压器与并网延迟对2027-2028年AI硬件产业的影响。模型显示，原计划30GW数据中心管线因变压器交期拉长至120-210周而延期12-24个月，实际仅能交付17.1GW，缺口达43%[自测算]。这导致GPU出货量在2027年减少4.8M颗、202…",
-          "check": "支持 0 / 风险 15 / 观察 1",
-          "href": "/investor/research-network/#thesis-7f0a75c5f6"
+          "title": "半导体设备资本开支韧性对中国AI算力集群与数据中心建设周期的支撑作用分析",
+          "view": "本卡支持上游设备/材料资本开支韧性论点并向下游延伸：设备资本开支→晶圆产能→国产AI加速器→AI服务器→智算中心的传导链在2025–26年数据中真实可见。中国智能算力由2025年中约788 EFLOPS走向2025年末1037 EFLOPS、2026年约1460 EFLOPS；加速服务器市场202…",
+          "check": "支持 0 / 风险 10 / 观察 0",
+          "href": "/investor/research-network/#thesis-42faeae623"
+        },
+        {
+          "date": "2026-06-19",
+          "value": 12,
+          "label": "风险",
+          "title": "AI 算力产业链在 2026 下半年正撞上先进封装、电力电网与液冷温控的刚性物理瓶颈，将导致数百亿美元的 GPU 资产因无法及时上电冷却而沦为‘搁浅硅算力’，从而…",
+          "view": "本报告对 2026 下半年 AI 算力在先进封装、HBM 内存、电网并网与温控 CDU 约束下的 capex 兑现进行了压力测试。测算表明，液冷 CDU 产能缺口将导致约 2.5 万台 Blackwell 机架无法运行，面临 625.4 亿美元的‘搁浅硅算力’风险。全美电网排队（平均 53 个月）…",
+          "check": "支持 0 / 风险 13 / 观察 2",
+          "href": "/investor/research-network/#thesis-42faeae623"
+        },
+        {
+          "date": "2026-06-20",
+          "value": 25.2,
+          "label": "风险",
+          "title": "电网交付延迟不会终结高密度 AI 机柜，但会迫使下一代 AI 芯片与集群架构把 perf/W、可限功率和可分阶段并网能力置于峰值算力之上。",
+          "view": "2026-06-20：本卡对电网设备瓶颈约束 AI 芯片架构的说法进行压力测试。结论是，变压器和开关设备长交期不会让前沿训练集群普遍降密度；GB200 NVL72、Vera Rubin 和 AMD Helios 仍指向高密度机柜级设计。但电网交付延迟会把竞争指标从峰值 FLOPS 推向受限兆瓦下的…",
+          "check": "支持 1 / 风险 6 / 观察 0",
+          "href": "/investor/research-network/#thesis-42faeae623"
+        },
+        {
+          "date": "2026-06-21",
+          "value": 18.6,
+          "label": "风险",
+          "title": "AI 基础设施建设中的电力供应与电网容量瓶颈分析",
+          "view": "本卡压力测试 Research note 02 的隐含假设「资本开支≈算力」。证据显示约束已从芯片迁移到电力：微软披露约800亿美元 Azure 订单因电力受限无法交付，Nadella 称芯片堆库存却无「暖壳」可插[S5][S4]。转化在三处漏损：(1)并网排队约2,600 GW、中位等待约5年、…",
+          "check": "支持 0 / 风险 6 / 观察 0",
+          "href": "/investor/research-network/#thesis-42faeae623"
         }
       ],
       "dimensions": [
@@ -2626,64 +2841,69 @@
           "label": "维度一",
           "title": "论点",
           "front": "研究问题是否清晰？",
-          "back": "数据中心地产、液冷与水资源正在决定 AI 容量的区域迁移"
+          "back": "CPO、光互联与铜连接决定 AI 集群内部租金迁移"
         },
         {
           "label": "维度二",
           "title": "证据",
           "front": "证据是否可追溯？",
-          "back": "覆盖 11 位分析师和 3 类公开来源。"
+          "back": "覆盖 11 位分析师和 4 类公开来源。"
         },
         {
           "label": "维度三",
           "title": "证伪",
           "front": "风险是否上升？",
-          "back": "风险事件 143 条，方向为 分歧。"
+          "back": "风险事件 146 条，方向为 分歧。"
         }
       ],
       "sources": [
         {
-          "href": "/investor/research-network/#thesis-7f0a75c5f6",
+          "href": "/investor/research-network/#thesis-42faeae623",
           "label": "研究网络主线",
           "tag": "网络"
+        },
+        {
+          "href": "/investor/deep-research/transformer-goes-copper-bottleneck-fe892901/",
+          "label": "变压器、GOES 与铜：AI 电力硬件瓶颈的价格传导",
+          "tag": "研究记录"
         }
       ],
       "autoGenerated": true,
       "kind": "living_thesis_recap"
     },
     {
-      "slug": "living-ai-07501700-2026-06-18",
-      "title": "AI 资本开支通过能源、设备和利率进入通胀定价：动态复盘",
-      "subtitle": "当前共有 40 条证据、3 位分析师和 8 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
-      "date": "2026-06-18",
+      "slug": "living-9a860a8801-9a860a88-2026-06-21",
+      "title": "信用再融资压力正在把利率风险转化为资产负债表筛选：动态复盘",
+      "subtitle": "当前共有 40 条证据、3 位分析师和 2 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
+      "date": "2026-06-21",
       "badge": "LIVING THESIS RECAP",
-      "reportHref": "/investor/research-network/#thesis-075017003b",
+      "reportHref": "/investor/research-network/#thesis-9a860a8801",
       "chartTitle": "主线证据强度演化",
       "chartDescription": "由公开研究事件按日期聚合，显示支持、风险和观察证据如何改变主线强度。",
       "chartUnit": "证据强度",
       "chart": {
         "labels": [
-          "06-09",
-          "06-10",
-          "06-11",
           "06-12",
           "06-13",
           "06-14",
           "06-15",
           "06-16",
           "06-17",
-          "06-18"
+          "06-18",
+          "06-19",
+          "06-20",
+          "06-21"
         ],
         "values": [
-          36,
-          34.4,
-          29.8,
-          34.2,
-          40.6,
-          30,
-          25.4,
-          39.8,
-          47.2,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          20.4,
+          12,
+          12,
           42.6
         ]
       },
@@ -2695,12 +2915,12 @@
         },
         {
           "label": "风险事件",
-          "value": "100",
+          "value": "142",
           "accent": "red"
         },
         {
           "label": "分析师",
-          "value": "18",
+          "value": "15",
           "accent": "green"
         },
         {
@@ -2712,21 +2932,21 @@
       "conclusions": [
         {
           "title": "主线定义",
-          "text": "当前共有 40 条证据、3 位分析师和 8 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。"
+          "text": "当前共有 40 条证据、3 位分析师和 2 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。"
         },
         {
           "title": "最新变化",
-          "text": "2026-06-18: [auto-handoff] 油价回落与headline CPI缓和对国内消费需求的净传导"
+          "text": "2026-06-21: AI 基础设施建设中的电力供应与电网容量瓶颈分析"
         },
         {
           "title": "证据纪律",
-          "text": "当前以 10 条支持、100 条风险和 50 条观察证据进行动态跟踪。"
+          "text": "当前以 4 条支持、142 条风险和 14 条观察证据进行动态跟踪。"
         }
       ],
       "checklist": [
         {
           "label": "支持证据",
-          "status": "10 条",
+          "status": "4 条",
           "detail": "继续观察是否出现跨来源、跨分析师的同向验证。",
           "bull": "支持证据集中出现在最新日期且源报告可追溯",
           "bear": "支持证据停留在旧报告或单一来源",
@@ -2734,7 +2954,7 @@
         },
         {
           "label": "风险证据",
-          "status": "100 条",
+          "status": "142 条",
           "detail": "风险证据用于判断主线是否变成拥挤交易或证伪样本。",
           "bull": "风险被新证据消化",
           "bear": "风险事件数量超过支持事件",
@@ -2742,8 +2962,8 @@
         },
         {
           "label": "监控词",
-          "status": "CPI / PCE / capex",
-          "detail": "CPI / PCE / capex / enters / inflation / pricing / energy / equipment",
+          "status": "GPU / CPI / 电力",
+          "detail": "GPU / CPI / 电力 / 银行 / Credit / refinancing / pressure / turning",
           "bull": "监控词在新报告中被反复验证",
           "bear": "监控词热度上升但价格或基本面未兑现",
           "active": "bull"
@@ -2751,94 +2971,94 @@
       ],
       "timeline": [
         {
-          "date": "2026-06-09",
-          "value": 36,
-          "label": "风险",
-          "title": "2026-06-09 研究更新",
-          "view": "0 条支持、1 条风险、0 条观察。",
-          "check": "支持 0 / 风险 1 / 观察 0",
-          "href": "/investor/research-network/#thesis-075017003b"
-        },
-        {
-          "date": "2026-06-10",
-          "value": 34.4,
-          "label": "观察",
-          "title": "生猪产能去化路径及其对2027年通胀的非线性传导",
-          "view": "生猪产能去化路径及其对2027年通胀的非线性传导 Hog Capacity De-stocking Path and Nonlinear Inflation Transmission 当前猪价跌破现金成本是否会触发规模化猪企的恐慌性断崖式出清？这会否导致2027年H1出现大幅反弹并推高CPI通胀中…",
-          "check": "支持 0 / 风险 4 / 观察 5",
-          "href": "/investor/research-network/#thesis-075017003b"
-        },
-        {
-          "date": "2026-06-11",
-          "value": 29.8,
-          "label": "观察",
-          "title": "医药'去中国化'是一股结构性、慢释放的供给侧通胀力量，每年向美国核心医疗CPI注入25–40bp，并已迫使美联储将生物科技融资环境纳入金融稳定框架。",
-          "view": "截至2026-06-12，《生物安全法案》及1260H清单升级已将中美医药脱钩转化为可测量的供给侧成本冲击。按模态加权，非中替代溢价合计抬升受影响SKU零售价4.5–6.5%，对应美国核心医疗服务CPI每年额外+25–40bp、Medicare Part B支出增速每年高出基线60–90bp，20…",
-          "check": "支持 0 / 风险 3 / 观察 1",
-          "href": "/investor/research-network/#thesis-075017003b"
-        },
-        {
           "date": "2026-06-12",
-          "value": 34.2,
+          "value": 12,
           "label": "风险",
-          "title": "Work Summary For Research note 09, we conducted a macro and micro market stress t…",
-          "view": "Work Summary For Research note 09, we conducted a macro and micro market stress test on the proposed 30% nominal put option hedging strategy for the …",
-          "check": "支持 0 / 风险 2 / 观察 0",
-          "href": "/investor/research-network/#thesis-075017003b"
+          "title": "AI基础设施的扩展性：电力与芯片供应瓶颈对超大规模厂商CAPEX的影响分析",
+          "view": "截至2026-06-12，本卡压力测试卡片02（电力瓶颈）与卡片06（半导体多线挤压）。结论：双重约束不会削减超大规模厂商资本开支，而是将其重排。2026资本开支仍约$725-726B（Dell'Oro），资本开支/营收比约25-30%、指引2027约35%；变化在优先级——可靠电力升至栈顶，建设…",
+          "check": "支持 1 / 风险 8 / 观察 1",
+          "href": "/investor/research-network/#thesis-9a860a8801"
         },
         {
           "date": "2026-06-13",
-          "value": 40.6,
-          "label": "支持",
-          "title": "结构性金属供给紧缩对全球通胀及美联储政策路径的影响",
-          "view": "支持（有界定）：铜/铝结构性缺口驱动的二次通胀足以硬化美联储终端利率逻辑，但机制是抬高底部、消除2026年降息期权，而非单独迫使加息。LME铜2026年6月初约13,800美元/吨、1月29日创14,527.50美元/吨历史高位，高盛上调年底预测至13,735；铝突破3,015.50美元/吨、对应…",
-          "check": "支持 1 / 风险 3 / 观察 1",
-          "href": "/investor/research-network/#thesis-075017003b"
+          "value": 12,
+          "label": "风险",
+          "title": "高能耗GPU集群的大规模部署导致超大规模云厂商的资本支出全面向电力基建倾斜，在设备端过度拥挤的背景下，公用事业运营资产提供了更优的风险收益比。",
+          "view": "截至2026年中，全球电网物理极限已成为AI扩张的核心瓶颈。超高密度GPU（如GB200 NVL72，120kW+/机柜）推动云厂商2026年Capex升至6600亿-7250亿美元，其中逾60%投向电力与基建。美国数据中心电力需求年底将达41 GW。数据证实，拥挤度极高的电网设备已透支预期，而处…",
+          "check": "支持 0 / 风险 12 / 观察 1",
+          "href": "/investor/research-network/#thesis-9a860a8801"
         },
         {
           "date": "2026-06-14",
-          "value": 30,
+          "value": 12,
           "label": "风险",
-          "title": "能源CPI与核心CPI背离下，美联储应上调通胀预测并取消2026年降息，但6月仍以鹰派按兵不动为基准。",
-          "view": "截至2026-06-14，能源冲击要求美联储显著上调2026年总体PCE预测，但核心上修应更温和。5月CPI同比4.2%、核心2.9%，加上4月PCE 3.8%、核心PCE 3.3%，说明压力真实但尚未全面扩散。基准建议是6月维持3.50%-3.75%，把2026年点阵图从一次降息改为不降息；若布…",
-          "check": "支持 1 / 风险 5 / 观察 1",
-          "href": "/investor/research-network/#thesis-075017003b"
+          "title": "PJM天然气风险传导对AI数据中心电力成本及扩容CAPEX的压力测试",
+          "view": "本卡压力测试卡片07的天然气尾部风险向超大规模云厂商ROIC的传导。核心：电力仅占1 GW级AI数据中心TCO约7%（GPU占60%、厂房25%）[S5]，故+2美元/MMBtu气价尾部仅推高电费约9,640万美元、占TCO约1.1%、ROIC拖累约20个基点[自测算]，不构成ROIC杀手。真正风…",
+          "check": "支持 1 / 风险 12 / 观察 0",
+          "href": "/investor/research-network/#thesis-9a860a8801"
         },
         {
           "date": "2026-06-15",
-          "value": 25.4,
-          "label": "风险",
-          "title": "[auto-handoff] 美国CPI/PPI背离对大类资产风险溢价及下半年美股板块轮动影响研判",
-          "view": "致 全球宏观分析师： 协同任务已完成。执行方为 首席策略师。 模式: adhoc 会话: f4668e4f-748a-467a-bfe5-e36469d590db 结果摘要: Wrote handoff_response.md (10465 bytes); wrote handoff_respon…",
-          "check": "支持 1 / 风险 6 / 观察 1",
-          "href": "/investor/research-network/#thesis-075017003b"
+          "value": 12,
+          "label": "观察",
+          "title": "I have analyzed the transmission of macro credit tightening and financing \"short …",
+          "view": "I have analyzed the transmission of macro credit tightening and financing \"short termization\" to the AI infrastructure expansion cycle as the AI Infr…",
+          "check": "支持 0 / 风险 9 / 观察 2",
+          "href": "/investor/research-network/#thesis-9a860a8801"
         },
         {
           "date": "2026-06-16",
-          "value": 39.8,
-          "label": "风险",
-          "title": "美国5月通胀反弹与6月FOMC前的全球宏观交易含义",
-          "view": "截至2026-06-15，本卡选择global-macro视角。结论是：6月FOMC大概率维持利率不变，但声明会让近期降息门槛更高。5月通胀主要由能源拉动，核心CPI环比仍温和；但4月核心PCE仍高、5月就业不弱、居民通胀预期仍偏高，使美联储很难快速转鸽。对市场而言，关键不是单纯押注利率上行，而是…",
-          "check": "支持 0 / 风险 3 / 观察 2",
-          "href": "/investor/research-network/#thesis-075017003b"
+          "value": 12,
+          "label": "观察",
+          "title": "变压器与GOES的线性供给极限将强制AI基建进入‘受困Capex’周期，并网延迟对ROIC的损害远超电价波动，‘确定性电力’将成为2028年前唯一的估值溢价来源。",
+          "view": "截至2026-06-17，变压器（交期36-60个月）与取向硅钢（GOES）的结构性缺口已成为Hyperscaler AI扩张的核心制约。30%-50%的2026年计划产能将推迟至2028年，导致海量‘受困算力’与折旧前置，压制ROIC。厂商通过核电直连、‘表后’发电及提前4年预定生产槽位进行对冲…",
+          "check": "支持 0 / 风险 12 / 观察 2",
+          "href": "/investor/research-network/#thesis-9a860a8801"
         },
         {
           "date": "2026-06-17",
-          "value": 47.2,
+          "value": 12,
           "label": "风险",
-          "title": "2026 能源地缘政治风险对 AI 算力成本与全球通胀的传导评估",
-          "view": "支持卡片03：霍尔木兹封锁（卡塔尔3-4不可抗力，约20%全球LNG受阻[S1]）使全球气价飙升而美国Henry Hub脱钩走低——TTF +35%至14.8、JKM +51%至16.0美元/MMBtu，Henry Hub自2-28跌约9%[S1]，2026均价仅约3.5美元[S3]。我把它延伸到…",
-          "check": "支持 0 / 风险 1 / 观察 0",
-          "href": "/investor/research-network/#thesis-075017003b"
+          "title": "电力供应缺口已成为AI算力交付的绝对瓶颈，2年的供电延迟将直接摧毁10万卡Blackwell GPU集群约58%的初始投资价值，倒逼云厂商向电力基建与开发商融资注…",
+          "view": "评估了电力缺口（SMR真空与BTM滞后）对Hyperscaler GPU集群交付及CapEx的具体影响。电力延迟使交付期拉长至3-5年，导致10万卡Blackwell集群2年内产生27.67亿美元折旧价值减损；WAN分布式训练因15-30%效率损耗使NPV转负。云厂商被迫将CapEx向电力资产与开…",
+          "check": "支持 1 / 风险 8 / 观察 0",
+          "href": "/investor/research-network/#thesis-9a860a8801"
         },
         {
           "date": "2026-06-18",
+          "value": 20.4,
+          "label": "风险",
+          "title": "AI算力基建正面临与生物医药CDMO类似的‘公用事业化’风险：由GPU折旧、冷却系统与高空载能耗构成的刚性固定成本地板，在电力价格上涨与资本成本上升的双重挤压下，…",
+          "view": "截至2026-06-19，本报告深入评估了AI算力基建面临的公用事业化与利润压力风险。正如生物医药CDMO因洁净室HVAC能耗（占50-70%）与折旧形成刚性固定成本地板、在低利用率下毛利坍塌（和元生物2025H1毛利为-14.28%），AI数据中心同样受制于高额的GPU折旧、冷却能耗（占PUE超…",
+          "check": "支持 0 / 风险 5 / 观察 0",
+          "href": "/investor/research-network/#thesis-9a860a8801"
+        },
+        {
+          "date": "2026-06-19",
+          "value": 12,
+          "label": "风险",
+          "title": "16.18%的硬件Capex下修会压低AI基础设施整体估值，但订单传导不是线性的：液冷最敏感，电网设备和BTM发电更受长期电力容量瓶颈支撑。",
+          "view": "截至2026-06-19，本卡把H2 AI硬件Capex下修16.18%作为未外部确认的压力测试输入。结论是分层传导：GPU/服务器采购最先受冲击；液冷因绑定高密度机柜节奏，订单和估值敏感度较高；电网设备因并网稀缺、变压器长交期和backlog，订单不应按同等比例下修；BTM自备发电估值会先压缩，…",
+          "check": "支持 0 / 风险 9 / 观察 0",
+          "href": "/investor/research-network/#thesis-9a860a8801"
+        },
+        {
+          "date": "2026-06-20",
+          "value": 12,
+          "label": "风险",
+          "title": "能源成本压力对AI算力基础设施运营经济性与扩容节奏的影响",
+          "view": "压力测试并在核心机制上否定使命链条（油价×汇率→工业电价→AI经济性→扩容放缓）。链条两处断裂：(1)选错杠杆——电力是AI算力经济性的二阶变量，1GW数据中心年化TCO约85亿美元中能源仅约6亿（≈7%），服务器约60%；电价+20%仅抬升总算力成本约1.4%，不构成扩容开关，资本开支（GPU）…",
+          "check": "支持 0 / 风险 13 / 观察 0",
+          "href": "/investor/research-network/#thesis-9a860a8801"
+        },
+        {
+          "date": "2026-06-21",
           "value": 42.6,
           "label": "风险",
-          "title": "[auto-handoff] 澄清原油价格数据分歧并调整宏观通胀传导路径",
-          "view": "致 日报总编： 协同任务已完成。执行方为 全球宏观分析师。 模式: adhoc 会话: f846db4c-3154-4feb-a5c0-423522062fd7 结果摘要: Wrote handoff_response.md (7369 bytes); wrote handoff_response…",
-          "check": "支持 0 / 风险 3 / 观察 2",
-          "href": "/investor/research-network/#thesis-075017003b"
+          "title": "Hyperscaler资本开支正从算力优先转向电力协同：总量仍大，但边际一美元先购买电力、进度和并网确定性，再购买下一组加速器。",
+          "view": "截至2026-06-21，本卡压力测试认为：Hyperscaler资本开支不会因电力瓶颈在2026-2027年崩塌，但边际规则已从“买更多GPU”转向“按确定日期拿到可通电MW”。核电购电、表后自发电、并网权、长交期电气设备和区域边缘部署正在获得更高资本权重。核电是长期稀缺性对冲，不是近端解决方案…",
+          "check": "支持 0 / 风险 2 / 观察 0",
+          "href": "/investor/research-network/#thesis-9a860a8801"
         }
       ],
       "dimensions": [
@@ -2846,24 +3066,24 @@
           "label": "维度一",
           "title": "论点",
           "front": "研究问题是否清晰？",
-          "back": "AI 资本开支通过能源、设备和利率进入通胀定价"
+          "back": "信用再融资压力正在把利率风险转化为资产负债表筛选"
         },
         {
           "label": "维度二",
           "title": "证据",
           "front": "证据是否可追溯？",
-          "back": "覆盖 18 位分析师和 5 类公开来源。"
+          "back": "覆盖 15 位分析师和 4 类公开来源。"
         },
         {
           "label": "维度三",
           "title": "证伪",
           "front": "风险是否上升？",
-          "back": "风险事件 100 条，方向为 分歧。"
+          "back": "风险事件 142 条，方向为 分歧。"
         }
       ],
       "sources": [
         {
-          "href": "/investor/research-network/#thesis-075017003b",
+          "href": "/investor/research-network/#thesis-9a860a8801",
           "label": "研究网络主线",
           "tag": "网络"
         }
@@ -2872,10 +3092,10 @@
       "kind": "living_thesis_recap"
     },
     {
-      "slug": "living-d4473d35e5-d4473d35-2026-06-18",
+      "slug": "living-d4473d35e5-d4473d35-2026-06-21",
       "title": "猪周期、粮食与农产品价格决定中国低通胀修复的弹性：动态复盘",
       "subtitle": "当前共有 40 条证据、3 位分析师和 1 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
-      "date": "2026-06-18",
+      "date": "2026-06-21",
       "badge": "LIVING THESIS RECAP",
       "reportHref": "/investor/research-network/#thesis-d4473d35e5",
       "chartTitle": "主线证据强度演化",
@@ -2883,28 +3103,28 @@
       "chartUnit": "证据强度",
       "chart": {
         "labels": [
-          "06-08",
-          "06-10",
-          "06-11",
           "06-12",
           "06-13",
           "06-14",
           "06-15",
           "06-16",
           "06-17",
-          "06-18"
+          "06-18",
+          "06-19",
+          "06-20",
+          "06-21"
         ],
         "values": [
           30,
-          22.4,
-          32.8,
-          40.2,
-          37.6,
-          36,
-          23.4,
-          39.8,
-          47.2,
-          54.6
+          33.4,
+          25.8,
+          19.2,
+          35.6,
+          43,
+          50.4,
+          33.8,
+          43.2,
+          48.6
         ]
       },
       "metrics": [
@@ -2915,12 +3135,12 @@
         },
         {
           "label": "风险事件",
-          "value": "99",
+          "value": "97",
           "accent": "red"
         },
         {
           "label": "分析师",
-          "value": "14",
+          "value": "15",
           "accent": "green"
         },
         {
@@ -2936,17 +3156,17 @@
         },
         {
           "title": "最新变化",
-          "text": "2026-06-18: Research note 07 的三层对冲在当前宏观体制下结构性合理且效率达 ~2.7x，1.5–2% SPX 看跌价差预算处性价比拐点，但应使预算与结构随 VIX 体制状态依赖切换，并对黄金腿设置再通胀触发的减仓规则。"
+          "text": "2026-06-21: 电气化资本开支周期通过物理瓶颈、长交期和投入品价格黏性，结构性强化“更高更久”，但其作用是压低2027年降息空间，而非单独制造广义CPI螺旋。"
         },
         {
           "title": "证据纪律",
-          "text": "当前以 8 条支持、99 条风险和 53 条观察证据进行动态跟踪。"
+          "text": "当前以 10 条支持、97 条风险和 53 条观察证据进行动态跟踪。"
         }
       ],
       "checklist": [
         {
           "label": "支持证据",
-          "status": "8 条",
+          "status": "10 条",
           "detail": "继续观察是否出现跨来源、跨分析师的同向验证。",
           "bull": "支持证据集中出现在最新日期且源报告可追溯",
           "bear": "支持证据停留在旧报告或单一来源",
@@ -2954,7 +3174,7 @@
         },
         {
           "label": "风险证据",
-          "status": "99 条",
+          "status": "97 条",
           "detail": "风险证据用于判断主线是否变成拥挤交易或证伪样本。",
           "bull": "风险被新证据消化",
           "bear": "风险事件数量超过支持事件",
@@ -2971,44 +3191,17 @@
       ],
       "timeline": [
         {
-          "date": "2026-06-08",
+          "date": "2026-06-12",
           "value": 30,
           "label": "风险",
-          "title": "能源冲击已足够大到支撑美联储鹰派沟通，但是否转化为实际加息，取决于6月海峡恢复是否延误以及二次通胀效应是否扩散。",
-          "view": "截至2026-06-08，霍尔木兹冲击足以支撑美联储鹰派预期，但更偏向“压制降息、保留加息风险”而非立即加息。海峡正常承载近20 mb/d石油出口和约19%全球LNG贸易[S1]，绕行能力仅3.5-5.5 mb/d[S1]；IEA显示4月全球供应较2月累计下降12.8 mb/d[S2]。美国4月C…",
+          "title": "贸易壁垒倒逼海外布局对国别经常账户的冲击远小于市场叙事，真正可观测的重塑发生在服务与初次收入账户、以及欧洲电价通胀渠道，特种海运对全球CPI的传导被高估。",
+          "view": "截至2026-06-12，本卡对'贸易壁垒倒逼本地化将快速重塑中欧/中美经常账户、并通过特种海运推升全球通胀'的线性叙事进行压力测试。结论：货物贸易顺差塌缩论被证伪——年化影响仅占中国货物顺差0.6%–0.8%；服务出口(EPC+租赁)与FDI利润汇回反向贡献中国经常账户。中欧合计经常账户净变化-…",
           "check": "支持 0 / 风险 2 / 观察 0",
           "href": "/investor/research-network/#thesis-d4473d35e5"
         },
         {
-          "date": "2026-06-10",
-          "value": 22.4,
-          "label": "观察",
-          "title": "[auto-handoff] 慢去产能周期下CPI食品项及H2通胀中枢敏感性评估",
-          "view": "致 农业行业分析师： 协同任务已完成。执行方为 中国宏观分析师。 模式: adhoc 会话: 21e65805-b96d-4e1e-8071-581e93f19615 结果摘要: I will run the command 系统日期锚 to anchor today's date as requ…",
-          "check": "支持 0 / 风险 5 / 观察 3",
-          "href": "/investor/research-network/#thesis-d4473d35e5"
-        },
-        {
-          "date": "2026-06-11",
-          "value": 32.8,
-          "label": "观察",
-          "title": "医药'去中国化'是一股结构性、慢释放的供给侧通胀力量，每年向美国核心医疗CPI注入25–40bp，并已迫使美联储将生物科技融资环境纳入金融稳定框架。",
-          "view": "截至2026-06-12，《生物安全法案》及1260H清单升级已将中美医药脱钩转化为可测量的供给侧成本冲击。按模态加权，非中替代溢价合计抬升受影响SKU零售价4.5–6.5%，对应美国核心医疗服务CPI每年额外+25–40bp、Medicare Part B支出增速每年高出基线60–90bp，20…",
-          "check": "支持 0 / 风险 3 / 观察 2",
-          "href": "/investor/research-network/#thesis-d4473d35e5"
-        },
-        {
-          "date": "2026-06-12",
-          "value": 40.2,
-          "label": "风险",
-          "title": "贸易壁垒倒逼海外布局对国别经常账户的冲击远小于市场叙事，真正可观测的重塑发生在服务与初次收入账户、以及欧洲电价通胀渠道，特种海运对全球CPI的传导被高估。",
-          "view": "截至2026-06-12，本卡对'贸易壁垒倒逼本地化将快速重塑中欧/中美经常账户、并通过特种海运推升全球通胀'的线性叙事进行压力测试。结论：货物贸易顺差塌缩论被证伪——年化影响仅占中国货物顺差0.6%–0.8%；服务出口(EPC+租赁)与FDI利润汇回反向贡献中国经常账户。中欧合计经常账户净变化-…",
-          "check": "支持 0 / 风险 1 / 观察 0",
-          "href": "/investor/research-network/#thesis-d4473d35e5"
-        },
-        {
           "date": "2026-06-13",
-          "value": 37.6,
+          "value": 33.4,
           "label": "支持",
           "title": "结构性金属供给紧缩对全球通胀及美联储政策路径的影响",
           "view": "支持（有界定）：铜/铝结构性缺口驱动的二次通胀足以硬化美联储终端利率逻辑，但机制是抬高底部、消除2026年降息期权，而非单独迫使加息。LME铜2026年6月初约13,800美元/吨、1月29日创14,527.50美元/吨历史高位，高盛上调年底预测至13,735；铝突破3,015.50美元/吨、对应…",
@@ -3017,16 +3210,16 @@
         },
         {
           "date": "2026-06-14",
-          "value": 36,
+          "value": 25.8,
           "label": "风险",
           "title": "能源CPI与核心CPI背离下，美联储应上调通胀预测并取消2026年降息，但6月仍以鹰派按兵不动为基准。",
           "view": "截至2026-06-14，能源冲击要求美联储显著上调2026年总体PCE预测，但核心上修应更温和。5月CPI同比4.2%、核心2.9%，加上4月PCE 3.8%、核心PCE 3.3%，说明压力真实但尚未全面扩散。基准建议是6月维持3.50%-3.75%，把2026年点阵图从一次降息改为不降息；若布…",
-          "check": "支持 1 / 风险 4 / 观察 1",
+          "check": "支持 1 / 风险 5 / 观察 1",
           "href": "/investor/research-network/#thesis-d4473d35e5"
         },
         {
           "date": "2026-06-15",
-          "value": 23.4,
+          "value": 19.2,
           "label": "风险",
           "title": "[auto-handoff] 美国CPI/PPI背离对大类资产风险溢价及下半年美股板块轮动影响研判",
           "view": "致 全球宏观分析师： 协同任务已完成。执行方为 首席策略师。 模式: adhoc 会话: f4668e4f-748a-467a-bfe5-e36469d590db 结果摘要: Wrote handoff_response.md (10465 bytes); wrote handoff_respon…",
@@ -3035,7 +3228,7 @@
         },
         {
           "date": "2026-06-16",
-          "value": 39.8,
+          "value": 35.6,
           "label": "风险",
           "title": "美国5月通胀反弹与6月FOMC前的全球宏观交易含义",
           "view": "截至2026-06-15，本卡选择global-macro视角。结论是：6月FOMC大概率维持利率不变，但声明会让近期降息门槛更高。5月通胀主要由能源拉动，核心CPI环比仍温和；但4月核心PCE仍高、5月就业不弱、居民通胀预期仍偏高，使美联储很难快速转鸽。对市场而言，关键不是单纯押注利率上行，而是…",
@@ -3044,7 +3237,7 @@
         },
         {
           "date": "2026-06-17",
-          "value": 47.2,
+          "value": 43,
           "label": "风险",
           "title": "2026 能源地缘政治风险对 AI 算力成本与全球通胀的传导评估",
           "view": "支持卡片03：霍尔木兹封锁（卡塔尔3-4不可抗力，约20%全球LNG受阻[S1]）使全球气价飙升而美国Henry Hub脱钩走低——TTF +35%至14.8、JKM +51%至16.0美元/MMBtu，Henry Hub自2-28跌约9%[S1]，2026均价仅约3.5美元[S3]。我把它延伸到…",
@@ -3053,11 +3246,38 @@
         },
         {
           "date": "2026-06-18",
-          "value": 54.6,
+          "value": 50.4,
           "label": "观察",
           "title": "[auto-handoff] 油价回落与headline CPI缓和对国内消费需求的净传导",
           "view": "致 消费行业分析师： 协同任务已完成。执行方为 中国宏观分析师。 模式: adhoc 会话: d5d23e30-7f8c-4941-90b4-d0523c113c1f 结果摘要: Wrote handoff_response.md (13103 bytes); wrote handoff_resp…",
           "check": "支持 0 / 风险 1 / 观察 2",
+          "href": "/investor/research-network/#thesis-d4473d35e5"
+        },
+        {
+          "date": "2026-06-19",
+          "value": 33.8,
+          "label": "风险",
+          "title": "电网公用事业资产费率基数扩张对宏观通胀与货币政策的传导效应",
+          "view": "压力测试卡片01–05的宏观结论。直接渠道被夸大：电力属能源、按构造排除于核心PCE之外，达拉斯联储测算数据中心对总体PCE的拉动2026仅+0.05pp、2030升至+0.13pp[S1]；电力仅占CPI约2.5%[S11]，自测算直接总体贡献约0.10pp。但费率基数是30–40年价格水平锁定…",
+          "check": "支持 0 / 风险 3 / 观察 0",
+          "href": "/investor/research-network/#thesis-d4473d35e5"
+        },
+        {
+          "date": "2026-06-20",
+          "value": 43.2,
+          "label": "风险",
+          "title": "美联储6月会议后的“降息交易”出清与再通胀风险",
+          "view": "工作日期2026-06-20。本卡选择global-macro，结论是美联储尚未承诺加息，但6月FOMC已把市场基线从自动降息转向higher-for-longer和加息风险。3.50%-3.75%的政策区间、2026年SEP中3.8%的年底利率中位数、5月CPI同比4.2%、5月非农+172,0…",
+          "check": "支持 1 / 风险 3 / 观察 0",
+          "href": "/investor/research-network/#thesis-d4473d35e5"
+        },
+        {
+          "date": "2026-06-21",
+          "value": 48.6,
+          "label": "观察",
+          "title": "伊朗战争后的全球宏观转折：能源冲击消退，但美联储与日本央行维持鹰派带来的滞胀宿醉",
+          "view": "2026年伊朗战争（2/28美以空袭、3/4霍尔木兹关闭）将布伦特推至逾120美元，6/17美伊谅解备忘录使油价回落至约80美元。但通胀已从能源迁至核心：5月美国CPI总体同比4.2%（三年新高），核心升至2.9%，居住与食品双双加速。央行反应函数已上移——美联储6/17维持3.50–3.75%但…",
+          "check": "支持 0 / 风险 2 / 观察 2",
           "href": "/investor/research-network/#thesis-d4473d35e5"
         }
       ],
@@ -3072,13 +3292,13 @@
           "label": "维度二",
           "title": "证据",
           "front": "证据是否可追溯？",
-          "back": "覆盖 14 位分析师和 6 类公开来源。"
+          "back": "覆盖 15 位分析师和 6 类公开来源。"
         },
         {
           "label": "维度三",
           "title": "证伪",
           "front": "风险是否上升？",
-          "back": "风险事件 99 条，方向为 分歧。"
+          "back": "风险事件 97 条，方向为 分歧。"
         }
       ],
       "sources": [
@@ -3092,19 +3312,17 @@
       "kind": "living_thesis_recap"
     },
     {
-      "slug": "living-9a860a8801-9a860a88-2026-06-19",
-      "title": "信用再融资压力正在把利率风险转化为资产负债表筛选：动态复盘",
-      "subtitle": "当前共有 40 条证据、3 位分析师和 2 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
-      "date": "2026-06-19",
+      "slug": "living-58200390b4-58200390-2026-06-21",
+      "title": "加密资产仍是全球流动性和散户风险偏好的高频回声：动态复盘",
+      "subtitle": "当前共有 40 条证据、4 位分析师和 1 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
+      "date": "2026-06-21",
       "badge": "LIVING THESIS RECAP",
-      "reportHref": "/investor/research-network/#thesis-9a860a8801",
+      "reportHref": "/investor/research-network/#thesis-58200390b4",
       "chartTitle": "主线证据强度演化",
       "chartDescription": "由公开研究事件按日期聚合，显示支持、风险和观察证据如何改变主线强度。",
       "chartUnit": "证据强度",
       "chart": {
         "labels": [
-          "06-10",
-          "06-11",
           "06-12",
           "06-13",
           "06-14",
@@ -3112,19 +3330,21 @@
           "06-16",
           "06-17",
           "06-18",
-          "06-19"
+          "06-19",
+          "06-20",
+          "06-21"
         ],
         "values": [
-          30,
-          25.4,
+          39,
+          22.4,
+          20.8,
           12,
-          44.2,
-          22.6,
-          21,
-          38.4,
-          39.8,
-          29.2,
-          48.6
+          12,
+          12,
+          12,
+          12,
+          12,
+          12.6
         ]
       },
       "metrics": [
@@ -3135,12 +3355,12 @@
         },
         {
           "label": "风险事件",
-          "value": "104",
+          "value": "137",
           "accent": "red"
         },
         {
           "label": "分析师",
-          "value": "19",
+          "value": "13",
           "accent": "green"
         },
         {
@@ -3152,15 +3372,15 @@
       "conclusions": [
         {
           "title": "主线定义",
-          "text": "当前共有 40 条证据、3 位分析师和 2 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。"
+          "text": "当前共有 40 条证据、4 位分析师和 1 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。"
         },
         {
           "title": "最新变化",
-          "text": "2026-06-19: 美联储偏鹰/熊平体制下高负债高CapEx算力租赁标的的融资瓶颈与估值压力"
+          "text": "2026-06-21: AI算力对电网密度的压力测试：高壁垒HVDC与特高压能否满足数据中心极端负载需求？"
         },
         {
           "title": "证据纪律",
-          "text": "当前以 7 条支持、104 条风险和 49 条观察证据进行动态跟踪。"
+          "text": "当前以 7 条支持、137 条风险和 16 条观察证据进行动态跟踪。"
         }
       ],
       "checklist": [
@@ -3174,7 +3394,7 @@
         },
         {
           "label": "风险证据",
-          "status": "104 条",
+          "status": "137 条",
           "detail": "风险证据用于判断主线是否变成拥挤交易或证伪样本。",
           "bull": "风险被新证据消化",
           "bear": "风险事件数量超过支持事件",
@@ -3182,323 +3402,103 @@
         },
         {
           "label": "监控词",
-          "status": "GPU / CPI / Credit",
-          "detail": "GPU / CPI / Credit / refinancing / pressure / turning / rate / risk",
+          "status": "HBM / GPU / Crypto",
+          "detail": "HBM / GPU / Crypto / remains / high-frequency / echo / global / liquidity",
           "bull": "监控词在新报告中被反复验证",
           "bear": "监控词热度上升但价格或基本面未兑现",
           "active": "bull"
         }
       ],
       "timeline": [
-        {
-          "date": "2026-06-10",
-          "value": 30,
-          "label": "风险",
-          "title": "AI需求到2026年底足以兑现HBM锁定的供给，但A股的真正约束是份额捕获与财政融资通量，因此应超配云挂钩供应商与一体化国产替代栈、把端侧AI作期权、低配离岸GP…",
-          "view": "锚定2026-06-10，本卡综合第01卡（首席策略师）与第02卡（政策分析师）。中国宏观叠加三条修正：(1) A股AI capex由大基金三期+省级算力券+头部云自融政策配给，民营信贷通道薄，是财政题非周期题；(2) 5月PMI 49.6 / Caixin 50.4 / 社融~8.4% / CP…",
-          "check": "支持 0 / 风险 4 / 观察 4",
-          "href": "/investor/research-network/#thesis-9a860a8801"
-        },
-        {
-          "date": "2026-06-11",
-          "value": 25.4,
-          "label": "风险",
-          "title": "[auto-handoff] 腾讯40亿美元双币种债成功定价对跨国企业离岸多币种融资及美日利差平仓效应评估",
-          "view": "致 债券分析师： 协同任务已完成。执行方为 全球宏观分析师。 模式: adhoc 会话: c771ebd8-7d32-4f43-920f-18a3db842a12 结果摘要: Wrote handoff_response.md (11901 bytes); wrote handoff_respon…",
-          "check": "支持 0 / 风险 4 / 观察 2",
-          "href": "/investor/research-network/#thesis-9a860a8801"
-        },
         {
           "date": "2026-06-12",
+          "value": 39,
+          "label": "观察",
+          "title": "Your Role: AI基础设施分析师 (AI Infrastructure Analyst) Expertise: AI compute/datacenter…",
+          "view": "Your Role: AI基础设施分析师 (AI Infrastructure Analyst) Expertise: AI compute/datacenter/GPU clusters, power & grid bottleneck, hyperscaler capex Step −1 — …",
+          "check": "支持 0 / 风险 1 / 观察 1",
+          "href": "/investor/research-network/#thesis-58200390b4"
+        },
+        {
+          "date": "2026-06-13",
+          "value": 22.4,
+          "label": "风险",
+          "title": "GB200 级效率提升改善 AI factory 经济性，但 2026-2028 年真正限制部署节奏的是站点电力、并网、变压器、稳定电源和电网运行能力，而不是 C…",
+          "view": "2026-06-13：本卡对 NVIDIA 护城河做电力压力测试。GB200 NVL72 单机柜约 120 kW，1 GW IT 功率约支持 8,333 个机柜、约 600,000 颗 GPU。IEA、DOE/LBNL 与 NERC 显示，数据中心用电、并网队列、变压器和燃机交期都在拉长，大型计算…",
+          "check": "支持 0 / 风险 4 / 观察 1",
+          "href": "/investor/research-network/#thesis-58200390b4"
+        },
+        {
+          "date": "2026-06-14",
+          "value": 20.8,
+          "label": "风险",
+          "title": "AI先进封装与HBM产能瓶颈对算力基础设施扩张及超大规模厂商资本开支的影响",
+          "view": "支持半导体分析师Research note 01的论点并向下游延伸：CoWoS/HBM确为算力的关键约束，2026年部署受封装与内存所限（CoWoS扩至约13万片/月仍订满；SK Hynix与Micron 2026年HBM售罄；HBM4验证延迟使NVIDIA将Rubin目标由200万下调至150万…",
+          "check": "支持 0 / 风险 4 / 观察 0",
+          "href": "/investor/research-network/#thesis-58200390b4"
+        },
+        {
+          "date": "2026-06-15",
           "value": 12,
           "label": "风险",
-          "title": "在2026年下半年全球公用事业Capex年增29%的超级周期中，通过超配受俄亥俄DCT关税保护的AEP以对冲美国监管限价风险，同时超配中国可调度电源与电网设备以套…",
-          "view": "针对2026年6月13日的宏观基准，本报告对中美公用事业在AI基建超级周期下的套利配置进行了综合。我们设计了由50%美国公用事业（超配受DCT保护的AEP及锁价PPA的CEG，对冲电价通胀抵制监管风险）与50%中国智能电网与可调度电源（超配思源、金盘、湖北能源、福能，套利国产低能效GPU带来的负荷…",
-          "check": "支持 0 / 风险 7 / 观察 1",
-          "href": "/investor/research-network/#thesis-9a860a8801"
-        },
-        {
-          "date": "2026-06-13",
-          "value": 44.2,
-          "label": "观察",
-          "title": "[auto-handoff] Valuation Impairment Transmission of CMSK Commercial REIT Filing o…",
-          "view": "致 全球宏观分析师： 协同任务已完成。执行方为 信用分析师。 模式: adhoc 会话: 174e7290-66d6-4aaa-b96d-31aa0aaa0098 结果摘要: Wrote handoff_response.md (10770 bytes); wrote handoff_respon…",
-          "check": "支持 2 / 风险 4 / 观察 2",
-          "href": "/investor/research-network/#thesis-9a860a8801"
-        },
-        {
-          "date": "2026-06-14",
-          "value": 22.6,
-          "label": "风险",
-          "title": "评估 Tier-2/Neocloud 厂商在能源重资产化背景下的杠杆率与信用违约风险",
-          "view": "本卡压力测试并部分否定 Research note 06「Tier-2 仅利润率压缩、退守利基即可存活」的乐观尾部。能源重资产资本开支并非通过电费、而是通过资本结构架构重新定价 Tier-2/Neocloud 的违约风险：拉长并固化资产久期、加深对顺周期回收的 GPU 抵押品依赖、并把客户预付款变…",
-          "check": "支持 1 / 风险 6 / 观察 1",
-          "href": "/investor/research-network/#thesis-9a860a8801"
-        },
-        {
-          "date": "2026-06-15",
-          "value": 21,
-          "label": "观察",
-          "title": "I have analyzed the transmission of macro credit tightening and financing \"short …",
-          "view": "I have analyzed the transmission of macro credit tightening and financing \"short termization\" to the AI infrastructure expansion cycle as the AI Infr…",
-          "check": "支持 1 / 风险 7 / 观察 2",
-          "href": "/investor/research-network/#thesis-9a860a8801"
+          "title": "验证AI算力硬件链的估值承压：流动性虹吸下的先进封装与GPU产业链韧性评估",
+          "view": "本卡对AI算力硬件链做压力测试，得出'分化韧性'结论。资金流层面确认虹吸：2026-06-08半导体−219.33亿、通信−98.35亿、消费电子−69.92亿元净流出居前[S6]，年内93家半导体公司减持[S7]，叠加CXMT约295亿IPO锚定[S9]。但估值下移是资金流/轮动驱动、非盈利驱动…",
+          "check": "支持 0 / 风险 7 / 观察 2",
+          "href": "/investor/research-network/#thesis-58200390b4"
         },
         {
           "date": "2026-06-16",
-          "value": 38.4,
-          "label": "观察",
-          "title": "[auto-handoff] 霍尔木兹海峡复航预期下的全球供应链通胀及运费重估",
-          "view": "致 能源行业分析师： 协同任务已完成。执行方为 全球宏观分析师。 模式: adhoc 会话: 1dff2613-6f22-4648-a9bf-6fe630974650 结果摘要: Wrote handoff_response.md (10216 bytes); wrote handoff_resp…",
-          "check": "支持 0 / 风险 3 / 观察 2",
-          "href": "/investor/research-network/#thesis-9a860a8801"
+          "value": 12,
+          "label": "风险",
+          "title": "通胀和高利率提高了AI硬件基础设施的质量门槛，但没有削弱其配置价值；应买入瓶颈供应商而非泛AI叙事。",
+          "view": "截至2026-06-16，本卡支持“硬科技配置中保留AI基础设施”的上一轮判断，但建议从广义AI beta收窄到有订单、定价权和瓶颈属性的硬件基础设施。高利率会压缩投机型数据中心开发商和远期AI应用估值，却未削弱GPU、定制AI芯片、HBM、配电、冷却、变压器、开关设备和已锁定电力的数据中心容量的…",
+          "check": "支持 1 / 风险 15 / 观察 1",
+          "href": "/investor/research-network/#thesis-58200390b4"
         },
         {
           "date": "2026-06-17",
-          "value": 39.8,
-          "label": "风险",
-          "title": "2026 能源地缘政治风险对 AI 算力成本与全球通胀的传导评估",
-          "view": "支持卡片03：霍尔木兹封锁（卡塔尔3-4不可抗力，约20%全球LNG受阻[S1]）使全球气价飙升而美国Henry Hub脱钩走低——TTF +35%至14.8、JKM +51%至16.0美元/MMBtu，Henry Hub自2-28跌约9%[S1]，2026均价仅约3.5美元[S3]。我把它延伸到…",
-          "check": "支持 0 / 风险 2 / 观察 0",
-          "href": "/investor/research-network/#thesis-9a860a8801"
-        },
-        {
-          "date": "2026-06-18",
-          "value": 29.2,
-          "label": "风险",
-          "title": "WTI 75-77缓解中国原油进口账单和后续PPI压力，但在成品油价格管理与弱需求约束下，它更像制造业利润率修复信号，而非居民端通胀再定价信号。",
-          "view": "截至2026-06-18，本卡支持前序WTI 75-77作为工作基准，但强调其对中国是“PPI与利润率冲击降温”，不是直接的CPI通缩红利。按5月7.79 mb/d进口量测算，油价每USD 1/bbl对应约USD 28.4亿或RMB 192亿年化进口成本；若回到11 mb/d，敏感性升至USD 4…",
-          "check": "支持 0 / 风险 4 / 观察 0",
-          "href": "/investor/research-network/#thesis-9a860a8801"
-        },
-        {
-          "date": "2026-06-19",
-          "value": 48.6,
-          "label": "风险",
-          "title": "美联储偏鹰/熊平体制下高负债高CapEx算力租赁标的的融资瓶颈与估值压力",
-          "view": "美联储偏鹰/熊平体制下高负债高CapEx算力租赁标的的融资瓶颈与估值压力 Tightening and Curve Bear-Flattening: Financing Bottlenecks for GPU Cloud Players 在凯文·沃什（Kevin Warsh）废除前瞻指引、美债2Y…",
-          "check": "支持 0 / 风险 1 / 观察 0",
-          "href": "/investor/research-network/#thesis-9a860a8801"
-        }
-      ],
-      "dimensions": [
-        {
-          "label": "维度一",
-          "title": "论点",
-          "front": "研究问题是否清晰？",
-          "back": "信用再融资压力正在把利率风险转化为资产负债表筛选"
-        },
-        {
-          "label": "维度二",
-          "title": "证据",
-          "front": "证据是否可追溯？",
-          "back": "覆盖 19 位分析师和 5 类公开来源。"
-        },
-        {
-          "label": "维度三",
-          "title": "证伪",
-          "front": "风险是否上升？",
-          "back": "风险事件 104 条，方向为 分歧。"
-        }
-      ],
-      "sources": [
-        {
-          "href": "/investor/research-network/#thesis-9a860a8801",
-          "label": "研究网络主线",
-          "tag": "网络"
-        }
-      ],
-      "autoGenerated": true,
-      "kind": "living_thesis_recap"
-    },
-    {
-      "slug": "living-fd31cc177b-fd31cc17-2026-06-19",
-      "title": "债券供给、地方债与久期需求决定利率下行空间：动态复盘",
-      "subtitle": "当前共有 40 条证据、2 位分析师和 2 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。",
-      "date": "2026-06-19",
-      "badge": "LIVING THESIS RECAP",
-      "reportHref": "/investor/research-network/#thesis-fd31cc177b",
-      "chartTitle": "主线证据强度演化",
-      "chartDescription": "由公开研究事件按日期聚合，显示支持、风险和观察证据如何改变主线强度。",
-      "chartUnit": "证据强度",
-      "chart": {
-        "labels": [
-          "06-09",
-          "06-10",
-          "06-11",
-          "06-13",
-          "06-14",
-          "06-15",
-          "06-16",
-          "06-17",
-          "06-18",
-          "06-19"
-        ],
-        "values": [
-          27,
-          40.4,
-          44.8,
-          49.2,
-          59.6,
-          49,
-          41.4,
-          67.8,
-          35.2,
-          57.6
-        ]
-      },
-      "metrics": [
-        {
-          "label": "证据事件",
-          "value": "160",
-          "accent": "blue"
-        },
-        {
-          "label": "风险事件",
-          "value": "67",
-          "accent": "red"
-        },
-        {
-          "label": "分析师",
-          "value": "22",
-          "accent": "green"
-        },
-        {
-          "label": "方向",
-          "value": "分歧",
-          "accent": "orange"
-        }
-      ],
-      "conclusions": [
-        {
-          "title": "主线定义",
-          "text": "当前共有 40 条证据、2 位分析师和 2 条风险信号指向该判断；主导链条为 宏观通胀传导。该主题应作为可跟踪投资假设，而不是孤立结论。"
-        },
-        {
-          "title": "最新变化",
-          "text": "2026-06-19: [auto-handoff] Asset Allocation under High Speculative Margin Debt and Rising Private Credit Defaults"
-        },
-        {
-          "title": "证据纪律",
-          "text": "当前以 4 条支持、67 条风险和 89 条观察证据进行动态跟踪。"
-        }
-      ],
-      "checklist": [
-        {
-          "label": "支持证据",
-          "status": "4 条",
-          "detail": "继续观察是否出现跨来源、跨分析师的同向验证。",
-          "bull": "支持证据集中出现在最新日期且源报告可追溯",
-          "bear": "支持证据停留在旧报告或单一来源",
-          "active": "bear"
-        },
-        {
-          "label": "风险证据",
-          "status": "67 条",
-          "detail": "风险证据用于判断主线是否变成拥挤交易或证伪样本。",
-          "bull": "风险被新证据消化",
-          "bear": "风险事件数量超过支持事件",
-          "active": "bear"
-        },
-        {
-          "label": "监控词",
-          "status": "Bond / supply / local-government",
-          "detail": "Bond / supply / local-government / debt / duration / demand / define / room",
-          "bull": "监控词在新报告中被反复验证",
-          "bear": "监控词热度上升但价格或基本面未兑现",
-          "active": "bull"
-        }
-      ],
-      "timeline": [
-        {
-          "date": "2026-06-09",
-          "value": 27,
-          "label": "风险",
-          "title": "[auto-handoff] 商业银行净息差（NIM）降至1.40%极值背景下中小银行对低评级城投债买盘的边际收缩与流动性支持减弱评估",
-          "view": "致 信用分析师： 协同任务已完成。执行方为 金融行业分析师。 模式: adhoc 会话: c3ce5681-f62b-48d8-b4a7-31be70b22fcc 结果摘要: Wrote handoff_response.md (14239 bytes); wrote handoff_respon…",
-          "check": "支持 0 / 风险 3 / 观察 1",
-          "href": "/investor/research-network/#thesis-fd31cc177b"
-        },
-        {
-          "date": "2026-06-10",
-          "value": 40.4,
-          "label": "风险",
-          "title": "[auto-handoff] 方案四多资产风险平价模型杠杆及久期风险修正",
-          "view": "致 日报总编： 协同任务已完成。执行方为 大类资产配置师。 模式: adhoc 会话: d1524db5-ea43-417a-bd60-1a85bae11c74 结果摘要: I will start by checking the current date using the shell and …",
-          "check": "支持 0 / 风险 2 / 观察 3",
-          "href": "/investor/research-network/#thesis-fd31cc177b"
-        },
-        {
-          "date": "2026-06-11",
-          "value": 44.8,
-          "label": "观察",
-          "title": "[auto-handoff] 黄金与期限溢价",
-          "view": "致 市场情绪师： 协同任务已完成。执行方为 债券分析师。 模式: adhoc 会话: 3b4d96d5-66d4-4a47-a013-a981dacf9226 结果摘要: # Role Bond Analyst (债券分析师). # Expertise Rates, credit, yield c…",
-          "check": "支持 0 / 风险 2 / 观察 4",
-          "href": "/investor/research-network/#thesis-fd31cc177b"
-        },
-        {
-          "date": "2026-06-13",
-          "value": 49.2,
-          "label": "观察",
-          "title": "[auto-handoff] Valuation Impairment Transmission of CMSK Commercial REIT Filing o…",
-          "view": "致 全球宏观分析师： 协同任务已完成。执行方为 信用分析师。 模式: adhoc 会话: 174e7290-66d6-4aaa-b96d-31aa0aaa0098 结果摘要: Wrote handoff_response.md (10770 bytes); wrote handoff_respon…",
-          "check": "支持 0 / 风险 0 / 观察 1",
-          "href": "/investor/research-network/#thesis-fd31cc177b"
-        },
-        {
-          "date": "2026-06-14",
-          "value": 59.6,
-          "label": "观察",
-          "title": "I will begin by inspecting the session brief and the report from Research note 4 …",
-          "view": "I will begin by inspecting the session brief and the report from Research note 4 to establish a solid foundation for our stress test analysis of LGFV…",
-          "check": "支持 0 / 风险 0 / 观察 4",
-          "href": "/investor/research-network/#thesis-fd31cc177b"
-        },
-        {
-          "date": "2026-06-15",
-          "value": 49,
-          "label": "观察",
-          "title": "I have analyzed the transmission of macro credit tightening and financing \"short …",
-          "view": "I have analyzed the transmission of macro credit tightening and financing \"short termization\" to the AI infrastructure expansion cycle as the AI Infr…",
-          "check": "支持 0 / 风险 1 / 观察 2",
-          "href": "/investor/research-network/#thesis-fd31cc177b"
-        },
-        {
-          "date": "2026-06-16",
-          "value": 41.4,
-          "label": "观察",
-          "title": "I have completed the synthesis for Research note 08 of the research thread sessio…",
-          "view": "I have completed the synthesis for Research note 08 of the research thread session as the Chief Strategist. By integrating the macroeconomic, sector …",
-          "check": "支持 0 / 风险 2 / 观察 1",
-          "href": "/investor/research-network/#thesis-fd31cc177b"
-        },
-        {
-          "date": "2026-06-17",
-          "value": 67.8,
+          "value": 12,
           "label": "支持",
-          "title": "[auto-handoff] Reconcile central-bank live rates: Fed 3.50-3.75 + BOJ ~1.00 vs yo…",
-          "view": "致 投委会主席： 协同任务已完成。执行方为 全球宏观分析师。 模式: adhoc 会话: 52c789a5-0838-441f-a4e5-b83a3af4060d 结果摘要: Wrote handoff_response.md (6374 bytes); wrote handoff_respons…",
-          "check": "支持 2 / 风险 0 / 观察 0",
-          "href": "/investor/research-network/#thesis-fd31cc177b"
+          "title": "AIDD是AI基础设施需求的高质量增量因子：规模小于通用大模型，但持续性、数据壁垒和监管/IP属性更强。",
+          "view": "截至2026-06-18，本卡片支持上一张卡片的方向：AIDD不会单独决定hyperscaler capex，但会把高价值、持续性的生命科学工作负载接入GPU、网络、存储、液冷和电力保障型数据中心。Recursion BioHive-2、DCAI Gefion、Novo Nordisk、Isomo…",
+          "check": "支持 1 / 风险 11 / 观察 0",
+          "href": "/investor/research-network/#thesis-58200390b4"
         },
         {
           "date": "2026-06-18",
-          "value": 35.2,
-          "label": "观察",
-          "title": "[auto-handoff] 中小银行NIM跌破1.40%引发的信用收缩对大型公用事业二级债配置意愿的传导",
-          "view": "致 首席策略师： 协同任务已完成。执行方为 金融行业分析师。 模式: adhoc 会话: 9260bd6a-eb3c-44f2-bb64-3074089878bd 结果摘要: Wrote handoff_response.md (11016 bytes); wrote handoff_respon…",
-          "check": "支持 0 / 风险 5 / 观察 4",
-          "href": "/investor/research-network/#thesis-fd31cc177b"
+          "value": 12,
+          "label": "风险",
+          "title": "电力/电网瓶颈真实且已在容量价格中显形,但2027年前仅推迟部分美国新增集群、不封顶全球GPU部署,Research note 01的BOM组合在2026至202…",
+          "view": "AI算力电力瓶颈真实存在但属于'延后+置换'而非'封顶':PJM 2026/27容量价已跳11倍至$329.17/MW-日,2027/28预测缺口6.6 GW,新接入等待40个月;ERCOT 2026 Q1单季198 GW申请,累计大负荷队列约410 GW;全球电网接入等待5-10年,变压器交期1…",
+          "check": "支持 1 / 风险 12 / 观察 2",
+          "href": "/investor/research-network/#thesis-58200390b4"
         },
         {
           "date": "2026-06-19",
-          "value": 57.6,
-          "label": "观察",
-          "title": "[auto-handoff] Asset Allocation under High Speculative Margin Debt and Rising Pri…",
-          "view": "致 首席风控官： 协同任务已完成。执行方为 大类资产配置师。 模式: adhoc 会话: c1b77a5e-12ab-4991-ac9a-7eb73454bb5f 结果摘要: Wrote handoff_response.md (9451 bytes); wrote handoff_respons…",
-          "check": "支持 0 / 风险 0 / 观察 1",
-          "href": "/investor/research-network/#thesis-fd31cc177b"
+          "value": 12,
+          "label": "风险",
+          "title": "电力与封装成本上升会触发AI基础设施技术路线调整，但截至2026-06-20仍不足以触发超大规模云厂商AI芯片采购总量的全面回撤。",
+          "view": "工作日2026-06-20：本卡压力测试认为，电力和先进封装成本上升不会在2026年触发超大规模云厂商全面削减AI芯片采购，但会提高单位弹性，推动技术路线从“更多GPU插槽”转向“每瓦性能、液冷机架、自研ASIC、提前锁定CoWoS/HBM和电力站点”。真正风险是并网、变电站、CoWoS或HBM配…",
+          "check": "支持 0 / 风险 14 / 观察 1",
+          "href": "/investor/research-network/#thesis-58200390b4"
+        },
+        {
+          "date": "2026-06-20",
+          "value": 12,
+          "label": "风险",
+          "title": "虽然HBM国产化良率崩塌会将集群 CapEx 推升 98%，但中国互联网巨头通过异构分级部署与算法优化（缩减30%GPU需求）并结合西部绿电直连套利（LCOE降至…",
+          "view": "评估HBM成本压力对AI集群TCO及扩容策略的传导。100%国产材料导致HBM3封装良率崩塌至4.11%，推升10000颗GPU集群CapEx至8.17亿美元，东部煤电下3年TCO达10.17亿美元（+66.13%）。建议协同优化：架构上采取60% HBM3与40% HBM2E的分级部署，结合算法…",
+          "check": "支持 1 / 风险 19 / 观察 0",
+          "href": "/investor/research-network/#thesis-58200390b4"
+        },
+        {
+          "date": "2026-06-21",
+          "value": 12.6,
+          "label": "风险",
+          "title": "Hyperscaler资本开支正从算力优先转向电力协同：总量仍大，但边际一美元先购买电力、进度和并网确定性，再购买下一组加速器。",
+          "view": "截至2026-06-21，本卡压力测试认为：Hyperscaler资本开支不会因电力瓶颈在2026-2027年崩塌，但边际规则已从“买更多GPU”转向“按确定日期拿到可通电MW”。核电购电、表后自发电、并网权、长交期电气设备和区域边缘部署正在获得更高资本权重。核电是长期稀缺性对冲，不是近端解决方案…",
+          "check": "支持 0 / 风险 7 / 观察 0",
+          "href": "/investor/research-network/#thesis-58200390b4"
         }
       ],
       "dimensions": [
@@ -3506,24 +3506,24 @@
           "label": "维度一",
           "title": "论点",
           "front": "研究问题是否清晰？",
-          "back": "债券供给、地方债与久期需求决定利率下行空间"
+          "back": "加密资产仍是全球流动性和散户风险偏好的高频回声"
         },
         {
           "label": "维度二",
           "title": "证据",
           "front": "证据是否可追溯？",
-          "back": "覆盖 22 位分析师和 5 类公开来源。"
+          "back": "覆盖 13 位分析师和 5 类公开来源。"
         },
         {
           "label": "维度三",
           "title": "证伪",
           "front": "风险是否上升？",
-          "back": "风险事件 67 条，方向为 分歧。"
+          "back": "风险事件 137 条，方向为 分歧。"
         }
       ],
       "sources": [
         {
-          "href": "/investor/research-network/#thesis-fd31cc177b",
+          "href": "/investor/research-network/#thesis-58200390b4",
           "label": "研究网络主线",
           "tag": "网络"
         }

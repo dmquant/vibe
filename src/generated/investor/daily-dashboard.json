@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-06-19T08:05:06.930Z",
-  "date": "2026-06-19",
-  "source": "outputs/morning-brief-images/manifest.json",
-  "investorDailyDate": "2026-06-19",
-  "status": "synced",
+  "generatedAt": "2026-06-21T12:26:17.230Z",
+  "date": "2026-06-21",
+  "source": "frontend/generated/daily/latest.json",
+  "investorDailyDate": "2026-06-21",
+  "status": "investor_daily_newer_than_morning_manifest",
   "summary": {
-    "headline": "2026-06-19 晨会信号：市场报价、策略偏置与研究链条已归并",
-    "lead": "2026-06-19 共纳入 124 篇中文研究结果，覆盖 20 位活跃分析师和 6 条主要行业链，较 2026-06-18 的主题变化可在右侧动量表中核对。简报优先呈现可被报告链接追溯的结论，而不是孤立摘要。",
+    "headline": "2026-06-21 晨会信号：市场报价、策略偏置与研究链条已归并",
+    "lead": "2026-06-21 共纳入 213 篇中文研究结果，覆盖 1 位活跃分析师和 6 条主要行业链，较 2026-06-20 的主题变化可在右侧动量表中核对。简报优先呈现可被报告链接追溯的结论，而不是孤立摘要。",
     "privacyNote": "Dashboard publishes sanitized metadata and public links; private brief bodies remain outside the Vibe deployment."
   },
   "stats": {
     "sections": 6,
     "deepResearch": 0,
     "handoffs": 0,
-    "marketQuotes": 6
+    "marketQuotes": 0
   },
   "links": {
     "dashboard": "/investor/daily/",
@@ -22,111 +22,45 @@
     "briefEn": "/investor/daily/#daily-dashboard-sections",
     "editorZh": "/investor/daily/#daily-dashboard-editor",
     "mailboxZh": "/investor/#operations",
-    "docx": "/investor-downloads/daily-brief-2026-06-19.docx"
+    "docx": "/investor-downloads/daily-brief-2026-06-21.docx"
   },
-  "marketTape": {
-    "en": [
-      "Dow Jones 51,564.7 (-0.84%)",
-      "S&P 500 7,497.86 (-0.20%)",
-      "Nasdaq 100 30,406.1938 (+1.46%)",
-      "Nikkei 225 71,053.49 (+2.38%)",
-      "Hang Seng 23,924.81 (-2.32%)",
-      "UST 10Y 4.46% (+3 bps)"
-    ],
-    "zh": [
-      "道琼斯 51,564.7 (-0.84%)",
-      "标普500 7,497.86 (-0.20%)",
-      "纳斯达克100 30,406.1938 (+1.46%)",
-      "日经225 71,053.49 (+2.38%)",
-      "恒生指数 23,924.81 (-2.32%)",
-      "美国10Y 4.46% (+3 bps)"
-    ]
-  },
-  "marketQuotes": [
-    {
-      "key": "DOW",
-      "group": "Equity",
-      "labelZh": "道琼斯",
-      "value": "51,564.7",
-      "change": "-0.84%",
-      "href": "/investor/daily/#daily-dashboard-sections"
-    },
-    {
-      "key": "SPX",
-      "group": "Equity",
-      "labelZh": "标普500",
-      "value": "7,497.86",
-      "change": "-0.20%",
-      "href": "/investor/daily/#daily-dashboard-sections"
-    },
-    {
-      "key": "NDX",
-      "group": "Equity",
-      "labelZh": "纳斯达克100",
-      "value": "30,406.1938",
-      "change": "+1.46%",
-      "href": "/investor/daily/#daily-dashboard-sections"
-    },
-    {
-      "key": "N225",
-      "group": "Equity",
-      "labelZh": "日经225",
-      "value": "71,053.49",
-      "change": "+2.38%",
-      "href": "/investor/daily/#daily-dashboard-sections"
-    },
-    {
-      "key": "HSI",
-      "group": "Equity",
-      "labelZh": "恒生指数",
-      "value": "23,924.81",
-      "change": "-2.32%",
-      "href": "/investor/daily/#daily-dashboard-sections"
-    },
-    {
-      "key": "UST10Y",
-      "group": "Rates/Risk",
-      "labelZh": "美国10Y",
-      "value": "4.46%",
-      "change": "+3 bps",
-      "href": "/investor/daily/#daily-dashboard-sections"
-    }
-  ],
+  "marketTape": {},
+  "marketQuotes": [],
   "morningSections": [
     {
       "label": "01",
-      "title": "prior research notes-06-19 — AI 电力交…",
-      "detail": "prior research notes-06-19 — AI 电力交付的电网设备与并网瓶颈验证: prior research notes-06-19 — AI 电力交付的电网设备与并网瓶颈验证",
+      "title": "电网设备紧缺与 AI 算力交付延迟风险",
+      "detail": "电网设备紧缺与 AI 算力交付延迟风险: 工作日期：2026-06-21（Asia/Singapore；已由 shell 确认）。本报告压力测试 prior research notes的结论：变压器与电网设备紧缺对设备商是重定价 backlog，但对 Hyperscaler 是把 AI cape…",
       "href": "/investor/daily/#daily-dashboard-sections"
     },
     {
       "label": "02",
-      "title": "能源压力测试：电力市场波动、电网容量与 AI 算力 NPV",
-      "detail": "能源压力测试：电力市场波动、电网容量与 AI 算力 NPV: 报告日期： 2026-06-19（Asia/Singapore 权威工作日期） - 研究 / 研究记录： 24bd3174-afc1-4cde-9404-32432c46fa8b / prior research notes- 分析师：…",
+      "title": "电网设备墙是否比芯片更早成为AI的“物理硬约束”？",
+      "detail": "电网设备墙是否比芯片更早成为AI的“物理硬约束”？: 研究记录 - 分析师： 工业制造分析师（industrials-analyst） - 工作日： 2026-06-21（亚洲/新加坡） - 立场： 压力测试（针对“变压器交期 160周=AI的关键硬约束”这一说法） - 任务问题： 变...",
       "href": "/investor/daily/#daily-dashboard-sections"
     },
     {
       "label": "03",
-      "title": "能源设备瓶颈与AI电力篮子的压力测试",
-      "detail": "能源设备瓶颈与AI电力篮子的压力测试: 研究 prior research notes/08 · 能源行业分析师 · 立场：压力测试 工作日期：2026-06-19（Asia/Singapore）· Board 5b84862f-9d24-4785-88b3-088112ff0386",
+      "title": "GOES、铜与电工材料：变压器瓶颈的材料端缓释阀",
+      "detail": "GOES、铜与电工材料：变压器瓶颈的材料端缓释阀: 研究院工作日期：2026-06-21 分析师： 材料行业分析师（ materials-analyst ） 本报告立场： 支持，但加入材料端修正：中国/A股材料产能可以缓解中国和第三国供应链的变压器瓶颈，却不能在关税...",
       "href": "/investor/daily/#daily-dashboard-sections"
     },
     {
       "label": "04",
-      "title": "公用事业分析师2026-06-19",
-      "detail": "公用事业分析师2026-06-19: 截至研究所工作日期 2026-06-19 [自测算: 系统日期锚 返回 2026-06-19]，我支持前序研究的方向：AI 基础设施的下一个主要瓶颈正在从芯片本身，转向电力可获得性、电网并网、以及长交期电力...",
+      "title": "电力设备交付周期对AI算力集群部署进度的传导效应",
+      "detail": "电力设备交付周期对AI算力集群部署进度的传导效应: 权威基准日期： 2026-06-21 (新加坡) 分析师： AI基础设施分析师 (ID: ai-infrastructure-analyst ) 立场： 支持 (Support，确认由电网侧核心电力设备交付瓶颈导致的2027年后超大规模AI算力集…",
       "href": "/investor/daily/#daily-dashboard-sections"
     },
     {
       "label": "05",
-      "title": "2026-06-19 — 电气设备制造商：扩产、定价权与利润率持久性",
-      "detail": "2026-06-19 — 电气设备制造商：扩产、定价权与利润率持久性: AI电力交付主题的久期分化与估值重估边界 - 研究记录 - 分析师 : 工业制造分析师 - 立场 : 综合，支持03，但加入供应商质量筛选 - 日期 : 2026-06-19（Asia/Singapore）",
+      "title": "电网与核电供应链压力测试",
+      "detail": "电网与核电供应链压力测试: 工作日期：2026-06-21（Asia/Singapore；已由 shell 确认）。本报告压力测试 prior research notes对“电网赋能者”的超配判断：2026-30 年电网投资和核电建设是否会遭遇电力设备与关键部件短缺...",
       "href": "/investor/daily/#daily-dashboard-sections"
     },
     {
       "label": "06",
-      "title": "AI电网设备短缺对主要CSP及芯片商收入预期的量化影响评估报告",
-      "detail": "AI电网设备短缺对主要CSP及芯片商收入预期的量化影响评估报告: 报告日期： 2026-06-19 (Asia/Singapore) - 研究门户 ID： 9df029e2-9304-4a7e-9955-18749316df9d - 共享会议路由： 805102d5-0f7c-4ca7-8172-…",
+      "title": "美国AI数据中心电力瓶颈：核电直供转型与电网并网接入困局",
+      "detail": "美国AI数据中心电力瓶颈：核电直供转型与电网并网接入困局: 报告日期： 2026-06-21 作者： AI基础设施分析师 ( ai-infrastructure-analyst ) 研究会话ID： c10afdc8-f845-47c5-87e6-d35e754123f2 研究记录索引： 01/10",
       "href": "/investor/daily/#daily-dashboard-sections"
     }
   ],
@@ -135,66 +69,66 @@
   "chainRadar": [
     {
       "label": "宏观通胀传导",
-      "heat": 2889.4,
-      "latest": 110,
-      "recent": 1482,
-      "risk": 1088,
-      "href": "/investor/reports/archive-33f6ee64452b/",
-      "evidenceTitle": "首席策略师专题研究报告 (2026-06-19)：AI基础设施投运延期与全球WACC冲击下的跨资产再平衡与量化..."
+      "heat": 3148.7,
+      "latest": 201,
+      "recent": 1526,
+      "risk": 1119,
+      "href": "/investor/reports/archive-8920a3054474/",
+      "evidenceTitle": "高利率与能源波动下的 AI 算力基建压力测试"
     },
     {
       "label": "AI 基础设施",
-      "heat": 2770.3,
-      "latest": 108,
-      "recent": 1429,
-      "risk": 1036,
-      "href": "/investor/reports/archive-33f6ee64452b/",
-      "evidenceTitle": "首席策略师专题研究报告 (2026-06-19)：AI基础设施投运延期与全球WACC冲击下的跨资产再平衡与量化..."
+      "heat": 2932,
+      "latest": 186,
+      "recent": 1435,
+      "risk": 1037,
+      "href": "/investor/reports/archive-8920a3054474/",
+      "evidenceTitle": "高利率与能源波动下的 AI 算力基建压力测试"
     },
     {
       "label": "电力与电网",
-      "heat": 877.9,
-      "latest": 24,
-      "recent": 442,
-      "risk": 347,
-      "href": "/investor/reports/archive-9546cd96b5f4/",
-      "evidenceTitle": "融资条件收紧与超大厂自由现金流恶化：AI电力资本开支周期的宏观压力测试"
+      "heat": 1095.9,
+      "latest": 81,
+      "recent": 492,
+      "risk": 393,
+      "href": "/investor/reports/archive-2a9a33144cca/",
+      "evidenceTitle": "面向多年期AI电力资本开支超级周期的配置：刚性容量稀缺确立后的板块配置与风格含义"
     },
     {
       "label": "工业供给瓶颈",
-      "heat": 585.6,
-      "latest": 14,
-      "recent": 293,
-      "risk": 235,
-      "href": "/investor/reports/archive-66ba3c570dd6/",
-      "evidenceTitle": "能源设备瓶颈与AI电力篮子的压力测试"
+      "heat": 678.9,
+      "latest": 57,
+      "recent": 297,
+      "risk": 238,
+      "href": "/investor/reports/archive-755d16aeb867/",
+      "evidenceTitle": "铝代铜产业链的成本传导与供应弹性研究报告"
     },
     {
       "label": "半导体与存储",
-      "heat": 322.9,
-      "latest": 8,
-      "recent": 162,
-      "risk": 129,
-      "href": "/investor/reports/archive-2a6dccbbe012/",
-      "evidenceTitle": "国内 8 英寸 SiC 良率补偿路径评估，2026-06-19"
+      "heat": 427.9,
+      "latest": 28,
+      "recent": 197,
+      "risk": 156,
+      "href": "/investor/reports/archive-b1b071fac1e4/",
+      "evidenceTitle": "能源波动下的半导体制造成本传导压力测试"
     },
     {
       "label": "生产率与效率",
-      "heat": 55.7,
-      "latest": 2,
-      "recent": 31,
+      "heat": 50.9,
+      "latest": 1,
+      "recent": 27,
       "risk": 20,
-      "href": "/investor/reports/archive-88f115730acb/",
-      "evidenceTitle": "欧洲海上风电政策的财政效率与贸易影响评估：基于CfD、负竞价与CBAM/NZIA框架的对比分析"
+      "href": "/investor/reports/archive-33b4e8c0ffe1/",
+      "evidenceTitle": "AI基础设施2026-06-21 — 国产算力效率赤字、电力密度与电网瓶颈"
     }
   ],
   "riskMatrix": [
     {
-      "chain": "AI 基础设施",
-      "title": "跨越电力约束：AI基础设施瓶颈向全球权益市场的配置与估值映射",
+      "chain": "工业供给瓶颈",
+      "title": "2026-06-20 半导体压力测试：电网交付约束下的 AI 芯片架构",
       "impact": 5,
-      "probability": 5,
-      "href": "/investor/reports/archive-6984a39e382c/"
+      "probability": 3,
+      "href": "/investor/reports/archive-3c4c82a3cb4b/"
     },
     {
       "chain": "AI 基础设施",
@@ -204,18 +138,18 @@
       "href": "/investor/reports/archive-9906cc6fde45/"
     },
     {
-      "chain": "工业供给瓶颈",
-      "title": "电网设备供应链瓶颈：变压器及核心部件交期压力测试",
+      "chain": "电力与电网",
+      "title": "AI 基础设施资本开支与电网吸纳能力错配风险（2026-06-19）",
       "impact": 5,
       "probability": 5,
-      "href": "/investor/reports/archive-6921ecb4fc86/"
+      "href": "/investor/reports/archive-d48a735316c1/"
     },
     {
-      "chain": "电力与电网",
-      "title": "电力设备供应链与电网并网压力研究：变压器产能扩张与2027年后数据中心并网瓶颈分析",
+      "chain": "AI 基础设施",
+      "title": "电网设备紧缺与 AI 算力交付延迟风险",
       "impact": 5,
       "probability": 4,
-      "href": "/investor/reports/archive-ac04d2c9cf48/"
+      "href": "/investor/reports/archive-b3f704863398/"
     },
     {
       "chain": "工业供给瓶颈",
@@ -246,69 +180,69 @@
       "href": "/investor/reports/archive-105c4c6a9317/"
     },
     {
-      "chain": "半导体与存储",
-      "title": "AI电力效率的宽禁带材料瓶颈压力测试",
+      "chain": "电力与电网",
+      "title": "算力扩张引发的电力瓶颈：变压器缺口、电网升级与能源供应约束",
       "impact": 5,
-      "probability": 5,
-      "href": "/investor/reports/archive-beefa2e833c1/"
+      "probability": 4,
+      "href": "/investor/reports/archive-6b5e04c6aeea/"
     }
   ],
   "assets": {
-    "promptsReady": true,
+    "promptsReady": false,
     "imagesPublished": false,
-    "imagePrivacy": "Morning briefs are private encrypted site content. Keep generated images local unless a maintainer explicitly sanitizes and approves publication."
+    "imagePrivacy": ""
   },
   "relatedCounts": {
     "editorReportAvailable": false,
     "mailboxDigestAvailable": false,
-    "investorDailyReports": 124,
-    "investorTableReports": 59
+    "investorDailyReports": 213,
+    "investorTableReports": 60
   },
   "readerReport": {
-    "id": "reader-daily-reader-2026-06-19",
-    "title": "2026-06-19 AI Institute 每日读者报告",
-    "date": "2026-06-19",
-    "href": "/investor/reports/reader-daily-reader-2026-06-19/",
-    "summary": "2026-06-19 的主线不是单点行情，而是 宏观通胀传导 与 AI 基础设施 继续交织；市场报价、风险矩阵和分析师视角共同指向“增长叙事仍在，但融资、通胀、电力交付和交易拥挤正在提高验证门槛”。",
+    "id": "reader-daily-reader-2026-06-21",
+    "title": "2026-06-21 AI Institute 每日读者报告",
+    "date": "2026-06-21",
+    "href": "/investor/reports/reader-daily-reader-2026-06-21/",
+    "summary": "2026-06-21 的主线不是单点行情，而是 宏观通胀传导 与 AI 基础设施 继续交织；市场报价、风险矩阵和分析师视角共同指向“增长叙事仍在，但融资、通胀、电力交付和交易拥挤正在提高验证门槛”。",
     "priorityViews": [
       {
         "title": "宏观通胀传导 与 AI 基础设施 是最高热度组合",
-        "view": "今日公开合约显示，宏观通胀传导 heat 2889.4，AI 基础设施 heat 2770.3；这说明研究焦点仍在 AI 需求、能源通胀、基础设施交付和宏观政策之间来回定价。",
+        "view": "今日公开合约显示，宏观通胀传导 heat 3148.7，AI 基础设施 heat 2932；这说明研究焦点仍在 AI 需求、能源通胀、基础设施交付和宏观政策之间来回定价。",
         "whyItMatters": "读者不应只看单一科技涨跌，而要核对 AI 资本开支是否能转化为可通电、可融资、可计费的现金流。",
         "provenance": [
           "daily-dashboard:chainRadar",
-          "/investor/reports/archive-33f6ee64452b/",
-          "claim_20260619_chain_concentration"
+          "/investor/reports/archive-8920a3054474/",
+          "claim_20260621_chain_concentration"
         ]
       },
       {
         "title": "风险矩阵仍把物理交付和供应瓶颈放在前排",
-        "view": "AI 基础设施 的高优先级风险是“跨越电力约束：AI基础设施瓶颈向全球权益市场的配置与估值映射”，impact 5 / probability 5。",
+        "view": "工业供给瓶颈 的高优先级风险是“2026-06-20 半导体压力测试：电网交付约束下的 AI 芯片架构”，impact 5 / probability 3。",
         "whyItMatters": "只要风险矩阵没有从交付、并网、设备、封装和融资上移开，AI 交易就仍然需要用项目兑现率而不是 headline 来验证。",
         "provenance": [
           "daily-dashboard:riskMatrix",
-          "/investor/reports/archive-6984a39e382c/",
-          "claim_20260619_risk_matrix"
+          "/investor/reports/archive-3c4c82a3cb4b/",
+          "claim_20260621_risk_matrix"
         ]
       },
       {
         "title": "市场价格与分析师视角出现分化",
-        "view": "市场报价面板显示：本日市场报价面板未提供稳定可复述的完整价格组。。分析师变化集中在 深研主编、全球宏观分析师、首席策略师、能源行业分析师、日报总编、首席经济学家。",
+        "view": "市场报价面板显示：本日市场报价面板未提供稳定可复述的完整价格组。。分析师变化集中在 深研主编。",
         "whyItMatters": "同一天可能同时出现科技风险偏好、长端利率约束、红利防御拥挤和 A 股结构分化，组合需要分层而不是方向性押注。",
         "provenance": [
           "daily-dashboard:marketQuotes",
           "analyst-tracker:viewChanges",
-          "claim_20260619_market_divergence"
+          "claim_20260621_market_divergence"
         ]
       }
     ],
     "relatedTheses": [
       "thesis_msci_rebalance_active_exit_window",
-      "thesis_oil_geopolitical_disinflation_floor",
-      "thesis_ai_biology_healthcare_productivity",
-      "thesis_datacenter_reit_cooling_water",
+      "thesis_semiconductor_ai_capex_cycle",
       "thesis_optical_copper_interconnect_rent_shift",
-      "thesis_china_export_manufacturing_margin"
+      "thesis_fed_path_global_repricing",
+      "thesis_macro_inflation_policy",
+      "thesis_mag7_ai_platform_reshuffling"
     ]
   }
 }
