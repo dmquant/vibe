@@ -801,6 +801,31 @@
   line-height: 1.55;
 }
 
+.portfolio-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.portfolio-detail-grid span {
+  display: grid;
+  gap: 4px;
+  border: 1px solid var(--network-line);
+  border-radius: 6px;
+  background: var(--network-surface);
+  padding: 8px;
+  color: var(--network-muted);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.portfolio-detail-grid strong {
+  color: var(--network-ink);
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
 .candidate-row aside {
   display: grid;
   align-content: start;
@@ -930,6 +955,7 @@
   }
   .portfolio-item,
   .candidate-row,
+  .portfolio-detail-grid,
   .signal-grid {
     grid-template-columns: 1fr;
   }

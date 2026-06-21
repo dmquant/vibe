@@ -242,7 +242,7 @@ const actionRows = [...theses
           <p>主线以研究问题命名，链条和资产只作为证据标签，避免把图谱退化成实体共现表。</p>
         </div>
         <div class="thesis-grid">
-          {theses.slice(0, 36).map((thesis) => (
+          {theses.slice(0, 56).map((thesis) => (
             <article
               class="thesis-card"
               id={thesis.id}
@@ -280,7 +280,10 @@ const actionRows = [...theses
               </div>
               <div class="practical-copy">
                 <p>{thesis.practical?.portfolioUse}</p>
-                <span>{thesis.practical?.riskBudget}</span>
+                <span>{thesis.practical?.portfolioRole || thesis.practical?.actionLabel || "观察"}</span>
+                <span>{thesis.practical?.weightGuide || thesis.practical?.riskBudget}</span>
+                <span>{thesis.practical?.timeHorizon || thesis.practical?.reviewCadence}</span>
+                <span>{thesis.practical?.deepResearchPriority || "常规跟踪"}</span>
                 <span>{thesis.practical?.reviewCadence}</span>
               </div>
               <div class="thesis-meter" aria-label="Conviction">

@@ -5,7 +5,7 @@ import { readResearchNetwork } from "../../../lib/investor-generated.js";
 import "../../../styles/research-network.css";
 
 const network = readResearchNetwork();
-const theses = (network.theses || []).slice(0, 56);
+const theses = (network.theses || []).slice(0, 72);
 const buckets = [...theses
   .reduce((acc, thesis) => {
     const bucket = thesis.practical?.exposureBucket || "主题机会";
@@ -106,14 +106,20 @@ const actions = [...theses
               data-action={thesis.practical?.actionLabel || "观察等待"}
             >
               <div>
-                <span>{thesis.practical?.exposureBucket || "主题机会"} · {thesis.practical?.actionLabel || "观察等待"} · Score {thesis.practical?.score || thesis.conviction}</span>
+                <span>{thesis.practical?.exposureBucket || "主题机会"} · {thesis.practical?.portfolioRole || thesis.practical?.actionLabel || "观察等待"} · Score {thesis.practical?.score || thesis.conviction}</span>
                 <h3><a href={`/investor/research-network/#${thesis.id}`}>{thesis.title}</a></h3>
                 <p>{thesis.practical?.portfolioUse || thesis.coreView}</p>
+                <div class="portfolio-detail-grid">
+                  <span><strong>动作</strong>{thesis.practical?.actionLabel || "观察等待"}</span>
+                  <span><strong>风险预算</strong>{thesis.practical?.weightGuide || thesis.practical?.riskBudget || "观察仓"}</span>
+                  <span><strong>期限</strong>{thesis.practical?.timeHorizon || thesis.practical?.reviewCadence || "待定"}</span>
+                  <span><strong>深研优先级</strong>{thesis.practical?.deepResearchPriority || "常规跟踪"}</span>
+                </div>
                 <div class="term-row">
                   {(thesis.practical?.instrumentTags || thesis.topTerms || []).slice(0, 8).map((term) => <span>{term}</span>)}
                 </div>
                 <details>
-                  <summary>确认 / 证伪信号</summary>
+                  <summary>确认 / 证伪 / 深研信号</summary>
                   <div class="signal-grid">
                     <div>
                       <strong>确认</strong>
@@ -123,11 +129,21 @@ const actions = [...theses
                       <strong>证伪</strong>
                       {(thesis.practical?.invalidationSignals || []).slice(0, 3).map((item) => <p>{item}</p>)}
                     </div>
+                    <div>
+                      <strong>下一步</strong>
+                      {(thesis.practical?.dueDiligenceQuestions || []).slice(0, 3).map((item) => <p>{item}</p>)}
+                    </div>
+                    <div>
+                      <strong>配对 / 对冲</strong>
+                      {(thesis.practical?.pairedHedges || []).slice(0, 4).map((item) => <p>{item}</p>)}
+                    </div>
                   </div>
                 </details>
               </div>
               <aside>
-                <span>{thesis.practical?.riskBudget}</span>
+                <span>{thesis.practical?.portfolioRole || thesis.practical?.actionLabel || "观察"}</span>
+                <span>{thesis.practical?.weightGuide || thesis.practical?.riskBudget}</span>
+                <span>{thesis.practical?.deepResearchPriority || "常规跟踪"}</span>
                 <span>{thesis.practical?.reviewCadence}</span>
                 <button
                   type="button"
@@ -137,7 +153,7 @@ const actions = [...theses
                   data-track-bucket={thesis.practical?.exposureBucket || "主题机会"}
                   data-track-action={thesis.practical?.actionLabel || "观察等待"}
                   data-track-score={thesis.practical?.score || thesis.conviction || 0}
-                  data-track-risk={thesis.practical?.riskBudget || ""}
+                  data-track-risk={thesis.practical?.weightGuide || thesis.practical?.riskBudget || ""}
                 >
                   加入组合
                 </button>
