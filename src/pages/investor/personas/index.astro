@@ -1,0 +1,187 @@
+---
+import BaseHead from "../../../components/BaseHead.astro";
+import Header from "../../../components/Header.astro";
+import { readAnalystPersonaTimelines } from "../../../lib/investor-generated.js";
+import "../../../styles/research-network.css";
+
+const personaData = readAnalystPersonaTimelines();
+const stats = personaData.stats || {};
+const personas = personaData.personas || [];
+const formatDate = (value) => String(value || "").replace(/^2026-/, "");
+const pct = (value) => `${Math.max(6, Math.min(100, Number(value || 0)))}%`;
+const maxEvents = Math.max(1, ...personas.map((persona) => persona.eventCount || 0));
+const allTerms = [...personas
+  .flatMap((persona) => persona.topTerms || [])
+  .reduce((acc, term) => {
+    acc.set(term, (acc.get(term) || 0) + 1);
+    return acc;
+  }, new Map())
+  .entries()]
+  .sort((a, b) => b[1] - a[1])
+  .slice(0, 16);
+const latestEvents = personas
+  .flatMap((persona) => (persona.latestEvents || []).slice(0, 4).map((event) => ({ ...event, persona })))
+  .sort((a, b) => String(b.date).localeCompare(String(a.date)))
+  .slice(0, 10);
+---
+
+<!doctype html>
+<html lang="zh-CN" data-lang="zh">
+  <head>
+    <BaseHead
+      title="分析师画像时间线 · AI Institute 投资研究台"
+      description="Public analyst persona timelines grouped by thesis, evidence events, and view changes."
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="research-network persona-page" data-persona-count={personas.length}>
+      <section class="network-hero">
+        <div>
+          <div class="network-kicker">AI Institute · Analyst Personas</div>
+          <h1>分析师画像时间线</h1>
+          <p>{personaData.summary?.lead || "按 analyst persona 重组公开研究事件，观察每位 persona 连接哪些 thesis，以及观点如何随时间改变。"}</p>
+          <div class="network-actions">
+            <a href="/investor/">返回研究台</a>
+            <a href="/investor/research-network/">研究主线</a>
+            <a href="/investor/timeline/">研究时间线</a>
+            <a href="/investor/portfolio/">组合追踪</a>
+          </div>
+        </div>
+        <aside class="network-privacy">
+          <span>Public Contract</span>
+          <p>{personaData.summary?.privacyNote}</p>
+        </aside>
+      </section>
+
+      <section class="network-stat-grid" aria-label="Analyst persona stats">
+        <div><span>Personas</span><strong>{stats.personaCount || personas.length}</strong><em>公开画像</em></div>
+        <div><span>Thesis Links</span><strong>{stats.thesisLinks || 0}</strong><em>persona 与主线连接</em></div>
+        <div><span>Events</span><strong>{stats.timelineEvents || 0}</strong><em>公开研究事件</em></div>
+        <div><span>Range</span><strong>{formatDate(stats.dateRange?.last) || "latest"}</strong><em>{formatDate(stats.dateRange?.first)} 起</em></div>
+      </section>
+
+      <section class="network-controls persona-controls">
+        <label for="personaSearch">Search</label>
+        <input id="personaSearch" type="search" placeholder="搜索 persona、thesis、主题词、观点变化..." />
+        <a href="/investor-data/analyst-persona-timelines.json">JSON 数据</a>
+      </section>
+
+      <section class="persona-layout">
+        <div class="persona-grid">
+          {personas.map((persona) => (
+            <article
+              class={`persona-card tone-${(persona.stanceCounts?.risks || 0) > (persona.stanceCounts?.supports || 0) ? "red" : "blue"}`}
+              id={persona.id}
+              data-search={`${persona.name} ${persona.nameEn} ${persona.category} ${persona.specialty} ${persona.currentView} ${(persona.topTerms || []).join(" ")} ${(persona.theses || []).map((thesis) => thesis.title).join(" ")}`}
+            >
+              <div class="persona-topline">
+                <span>{persona.category}</span>
+                <a href={`#${persona.id}`}>{formatDate(persona.firstSeen)} → {formatDate(persona.lastSeen)}</a>
+              </div>
+              <h2>{persona.name}</h2>
+              <p class="persona-subtitle">{persona.nameEn}</p>
+              <p>{persona.currentView}</p>
+
+              <div class="persona-meter">
+                <i style={`width:${pct(((persona.eventCount || 0) / maxEvents) * 100)}`}></i>
+                <strong>{persona.eventCount} events</strong>
+              </div>
+
+              <div class="persona-counters">
+                <span>主线 {persona.thesisCount}</span>
+                <span>支持 {persona.stanceCounts?.supports || 0}</span>
+                <span>风险 {persona.stanceCounts?.risks || 0}</span>
+                <span>观察 {persona.stanceCounts?.neutral || 0}</span>
+              </div>
+
+              <div class="persona-thesis-list">
+                {(persona.theses || []).slice(0, 6).map((thesis) => (
+                  <a href={thesis.href}>
+                    <span>{thesis.exposureBucket} · {thesis.actionLabel}</span>
+                    <strong>{thesis.title}</strong>
+                    <em>{thesis.eventCount} events · {formatDate(thesis.lastSeen)}</em>
+                  </a>
+                ))}
+              </div>
+
+              <div class="persona-timeline-strip" aria-label={`${persona.name} timeline`}>
+                {(persona.timeline || []).slice(-18).map((point) => (
+                  <a
+                    href={point.events?.[0]?.href || `#${persona.id}`}
+                    title={`${point.date}: 支持 ${point.supports} / 风险 ${point.risks} / 观察 ${point.neutral}`}
+                    style={`height:${Math.max(12, Math.min(54, Number(point.value || 20)))}px`}
+                    class={point.risks > point.supports ? "risk" : point.supports ? "support" : "neutral"}
+                  >
+                    <span>{formatDate(point.date)}</span>
+                  </a>
+                ))}
+              </div>
+
+              <div class="term-row">
+                {(persona.topTerms || []).slice(0, 8).map((term) => <a href={`?q=${encodeURIComponent(term)}`}>{term}</a>)}
+              </div>
+
+              <div class="event-stack persona-event-stack">
+                {(persona.latestEvents || []).slice(0, 3).map((event) => (
+                  <a href={event.href || event.thesisHref || `#${persona.id}`}>
+                    <span>{formatDate(event.date)} · {event.sourceLabel} · {event.supportLabel}</span>
+                    <strong>{event.thesisTitle}</strong>
+                    <em>{event.title}</em>
+                  </a>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <aside class="network-side persona-side">
+          <section>
+            <h2>画像用途</h2>
+            <p>这不是内部绩效排名，而是公开研究视角的变化地图：看每位 persona 正在反复参与哪些 thesis、哪些证据在支持或挑战其观点。</p>
+          </section>
+          <section>
+            <h2>高频主题词</h2>
+            <div class="persona-term-cloud">
+              {allTerms.map(([term, count]) => (
+                <a href={`?q=${encodeURIComponent(term)}`}>
+                  <span>{term}</span>
+                  <strong>{count}</strong>
+                </a>
+              ))}
+            </div>
+          </section>
+          <section>
+            <h2>最新观点变化</h2>
+            <div class="mini-thesis-list">
+              {latestEvents.map((event) => (
+                <a href={event.href || event.thesisHref || event.persona.href}>
+                  <span>{formatDate(event.date)} · {event.persona.name} · {event.supportLabel}</span>
+                  <strong>{event.thesisTitle}</strong>
+                  <em>{event.title}</em>
+                </a>
+              ))}
+            </div>
+          </section>
+        </aside>
+      </section>
+    </main>
+
+    <script>
+      const input = document.getElementById("personaSearch");
+      const cards = [...document.querySelectorAll(".persona-card[data-search]")];
+
+      function syncPersonaSearch() {
+        const query = String(input?.value || new URLSearchParams(location.search).get("q") || "").toLowerCase().trim();
+        if (input && !input.value && query) input.value = query;
+        cards.forEach((card) => {
+          const match = !query || String(card.dataset.search || "").toLowerCase().includes(query);
+          card.classList.toggle("is-hidden", !match);
+        });
+      }
+
+      input?.addEventListener("input", syncPersonaSearch);
+      syncPersonaSearch();
+    </script>
+  </body>
+</html>

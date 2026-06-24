@@ -35,6 +35,11 @@ const routeRows = [
     text: "主题级 thesis、证据时间线、风险事件、自动复盘和公开研究网络。",
   },
   {
+    path: "/investor/personas/",
+    title: "Personas / 画像",
+    text: "按 analyst persona 查看观点时间线，以及每位 persona 连接的多条研究主线。",
+  },
+  {
     path: "/investor/portfolio/",
     title: "Portfolio / 组合",
     text: "把研究主线转成观察、验证、核心、对冲、退出等本地可维护清单。",
@@ -133,7 +138,7 @@ const routeRows = [
       <section class="ia-section">
         <div class="ia-section-head">
           <div class="ia-section-label">Primary Paths</div>
-          <h2>六条主路径</h2>
+          <h2>七条主路径</h2>
           <p>不要从文章列表开始找。先按任务选择入口，再向下进入报告、证据、图谱或历史档案。</p>
         </div>
         <div class="ia-card-grid">
@@ -150,25 +155,31 @@ const routeRows = [
             <div class="ia-card-actions"><a class="primary" href="/investor/research-network/">看主线网络</a></div>
           </article>
           <article class="ia-card yellow">
-            <div class="ia-card-kicker">03 · Portfolio</div>
+            <div class="ia-card-kicker">03 · Personas</div>
+            <h3>哪些分析师视角在改变</h3>
+            <p>按 persona 查看其参与的多条 thesis、最新观点变化和支持/风险证据。</p>
+            <div class="ia-card-actions"><a class="primary" href="/investor/personas/">看分析师画像</a></div>
+          </article>
+          <article class="ia-card orange">
+            <div class="ia-card-kicker">04 · Portfolio</div>
             <h3>如何转成组合动作</h3>
             <p>把 thesis 放入本地追踪，维护观察仓、验证仓、核心仓、对冲和退出状态。</p>
             <div class="ia-card-actions"><a class="primary" href="/investor/portfolio/">打开组合追踪</a></div>
           </article>
-          <article class="ia-card orange">
-            <div class="ia-card-kicker">04 · Timeline</div>
+          <article class="ia-card blue">
+            <div class="ia-card-kicker">05 · Timeline</div>
             <h3>观点如何随时间变化</h3>
             <p>用时间线查看每日简报、读者报告、主线与复盘之间的演化关系。</p>
             <div class="ia-card-actions"><a class="primary" href="/investor/timeline/">打开时间线</a></div>
           </article>
           <article class="ia-card red">
-            <div class="ia-card-kicker">05 · Recap</div>
+            <div class="ia-card-kicker">06 · Recap</div>
             <h3>重要主题如何复盘</h3>
             <p>关键主题被整理成可视化仪表盘，便于周度和专题复盘。</p>
             <div class="ia-card-actions"><a class="primary" href="/investor/recaps/">看复盘仪表盘</a></div>
           </article>
           <article class="ia-card blue">
-            <div class="ia-card-kicker">06 · Archive</div>
+            <div class="ia-card-kicker">07 · Archive</div>
             <h3>历史材料在哪里</h3>
             <p>统一整理公开简报、深度研究、读者报告、复盘和建造故事。</p>
             <div class="ia-card-actions"><a class="primary" href="/investor/archive/">打开档案地图</a></div>

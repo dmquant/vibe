@@ -1,0 +1,17 @@
+{
+  "slug": "archive-940849f91038",
+  "href": "/investor/reports/archive-940849f91038/",
+  "meta": {
+    "title": "共享数据采集摘要 2026-06-24",
+    "date": "2026-06-24",
+    "analyst_id": "data-scientist",
+    "analyst_name": "数据科学家",
+    "tags": [
+      "综合编审"
+    ],
+    "source": "archive-940849f91038",
+    "source_label": "每日任务报告",
+    "source_kind": "daily_task"
+  },
+  "bodyHtml": "<h1>共享数据采集摘要 2026-06-24</h1>\n<h2>markets_overnight</h2>\n<ul>\n<li>字段总数 13、空值 0、confidence: high</li>\n<li>数据采集点：Stooq CSV 下载终端（触发反爬 JS 挑战）</li>\n<li>修复机制：成功通过网络搜索（Bloomberg, Reuters, Investing.com, Yahoo Finance, Morningstar）补充隔夜市场数值。</li>\n<li>包括字段</li>\n<li><code>spx_close</code>: 7365.46 (比上一交易日下跌 -1.44%)</li>\n<li><code>ndx_close</code>: 29393.20 (比上一交易日下跌 -3.30%)</li>\n<li><code>dow_close</code>: 51666.84 (比上一交易日下跌 -0.09%)</li>\n<li><code>brent_usd</code>: 77.00 (比上一交易日下跌 -0.67%)</li>\n<li><code>wti_usd</code>: 73.00 (比上一交易日下跌 -1.16%)</li>\n<li><code>gold_usd</code>: 4110.77 (比上一交易日下跌 -2.06%)</li>\n<li><code>dxy</code>: 101.42 (比上一交易日上涨 +0.40%)</li>\n<li><code>ust10y_pct</code>: 4.46 (比上一交易日下跌 -1.11%)</li>\n<li><code>eur_usd</code>: 1.1383 (比上一交易日下跌 -0.42%)</li>\n<li><code>usd_jpy</code>: 161.51 (比上一交易日下跌 -0.20%)</li>\n<li><code>vix</code>: 19.52 (比上一交易日上涨 +12.25%)</li>\n<li><code>n225_close</code>: 69788.38 (比上一交易日下跌 -3.55%)</li>\n<li><code>hsi_close</code>: 23336.28 (比上一交易日下跌 -1.82%)</li>\n</ul>\n<h2>markets_close_cn</h2>\n<ul>\n<li>字段总数 5、空值 0、confidence: high</li>\n<li>数据采集点：新浪财经 JS 实时接口（已通过编码转换正常解析）</li>\n<li>包括字段</li>\n<li><code>sse_close</code>: 4106.25 (比上一交易日下跌 -1.37%)</li>\n<li><code>szse_close</code>: 15854.20 (比上一交易日下跌 -3.17%)</li>\n<li><code>cyb_close</code>: 4192.19 (比上一交易日下跌 -3.84%)</li>\n<li><code>kc50_close</code>: 1916.21 (比上一交易日下跌 -1.68%)</li>\n<li><code>hsi_close</code>: 23336.28 (比上一交易日下跌 -1.82%)</li>\n</ul>\n<h2>失败 / 修复日志</h2>\n<ul>\n<li><code>spx_close=empty</code> (通过网络搜索修复为 7365.46)</li>\n<li><code>ndx_close=empty</code> (通过网络搜索修复为 29393.20)</li>\n<li><code>dow_close=empty</code> (通过网络搜索修复为 51666.84)</li>\n<li><code>brent_usd=empty</code> (通过网络搜索修复为 77.00)</li>\n<li><code>wti_usd=empty</code> (通过网络搜索修复为 73.00)</li>\n<li><code>gold_usd=empty</code> (通过网络搜索修复为 4110.77)</li>\n<li><code>dxy=empty</code> (通过网络搜索修复为 101.42)</li>\n<li><code>ust10y_pct=empty</code> (通过网络搜索修复为 4.46)</li>\n<li><code>eur_usd=empty</code> (通过网络搜索修复为 1.1383)</li>\n<li><code>usd_jpy=empty</code> (通过网络搜索修复为 161.51)</li>\n<li><code>vix=empty</code> (通过网络搜索修复为 19.52)</li>\n<li><code>n225_close=empty</code> (通过网络搜索修复为 69788.38)</li>\n<li><code>hsi_close=empty</code> (通过网络搜索修复为 23336.28)</li>\n</ul>"
+}

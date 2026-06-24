@@ -1,0 +1,21 @@
+{
+  "slug": "archive-71d1ae23bfc3",
+  "href": "/investor/reports/archive-71d1ae23bfc3/",
+  "meta": {
+    "title": "realestate-analyst · daily meetup · daily meetup.md",
+    "date": "2026-06-24",
+    "analyst_id": "realestate-analyst",
+    "analyst_name": "房地产分析师",
+    "tags": [
+      "AI",
+      "通胀",
+      "A股",
+      "风险",
+      "行业研究"
+    ],
+    "source": "archive-71d1ae23bfc3",
+    "source_label": "每日任务报告",
+    "source_kind": "daily_task"
+  },
+  "bodyHtml": "<h2>realestate-analyst · daily_meetup · daily_meetup.md</h2>\n<ul>\n<li>analyst: <code>realestate-analyst</code></li>\n<li>work_date: 2026-06-24</li>\n<li>archived_at: 2026-06-24T04:21:00.865Z</li>\n</ul>\n<h1>房地产分析师午间同步简报（2026-06-24）</h1>\n<h2>优先结论</h2>\n<ul>\n<li><strong>日期锚点</strong>：本地 shell <code>系统日期锚</code> 返回 <code>2026-06-24</code>；本文所有“今日、上午、下午、本周、上周、上一交易日”均以此日期为准。</li>\n<li><strong>连续性校验</strong>：已拉取并通读 <code>my_recent_reports.md</code>（<code>399</code> 行）、<code>my_disputed_claims.md</code>（<code>8</code> 行）、<code>operator_feedback.md</code>（<code>9</code> 行）、<code>research_projects.md</code>（<code>86</code> 行）和 <code>recent_reports.md</code>（<code>1104</code> 行）；本轮没有缺失上游文件。</li>\n<li><strong>结论变化</strong>：主线没有反转，仍是“住宅开发链弱修复、运营型商业 REITs 更具资金验证、但不能追高”。需要明示的一处纠偏是：近期自身报告曾引用 <code>508603</code> 的较高分派率口径；今天复核到上交所/基金发售公告披露的 <code>508603</code> 2026/2027 年预测现金流分派率为 <code>4.40%</code>/<code>4.66%</code>，低于部分媒体文章的 <code>4.57%</code>/<code>4.99%</code>，下午收益率表必须以公告口径统一复核。</li>\n<li><strong>争议与反馈状态</strong>：<code>my_disputed_claims.md</code> 显示过去 14 天 <code>found=0</code>；<code>operator_feedback.md</code> 显示过去 5 天 <code>Items=0</code>、<code>Forecasts emitted=0</code>、<code>Positions opened=0</code>，没有需要继承的 operator-routed 预测。</li>\n<li><strong>午间判断</strong>：<code>508602</code> 仍是四只商业 REITs 中最抗跌的奥莱资产，<code>508600</code>、<code>508601</code>、<code>508603</code> 上午明显回撤；这强化“优先运营质量与流动性，下午按收盘价重算隐含分派率”的执行框架，而不是把商业 REITs 整体视作无差别高息避险资产。</li>\n</ul>\n<h2>上午已确认事实与数据</h2>\n<table>\n<thead>\n<tr>\n<th>主题</th>\n<th>已确认事实</th>\n<th>对地产研究的含义</th>\n<th>来源</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>全国房地产基本面</td>\n<td>2026 年 1-5 月全国房地产开发投资 <code>30356</code> 亿元，同比 <code>-16.2%</code>；新建商品房销售面积 <code>31320</code> 万平方米，同比 <code>-10.8%</code>；销售额 <code>29366</code> 亿元，同比 <code>-13.5%</code>；房屋新开工面积 <code>17929</code> 万平方米，同比 <code>-22.6%</code>；房企到位资金 <code>32756</code> 亿元，同比 <code>-19.0%</code>，其中国内贷款 <code>4875</code> 亿元，同比 <code>-28.7%</code>。</td>\n<td>销售端不是断崖，但投资、开工、融资仍在收缩；住宅开发商仍不具备资产负债表修复的强确认。</td>\n<td><code>my_recent_reports.md</code>（引用国家统计局 2026-06-16 数据）</td>\n</tr>\n<tr>\n<td>商业 REITs 11:30 行情</td>\n<td>[web — checked internal: time-sensitive — internal sources are &gt;24h stale for today's 11:30 quote] <code>508600</code> 报 <code>3.846</code> 元、日内 <code>-5.41%</code>、成交额 <code>1470.8663</code> 万元；<code>508601</code> 报 <code>2.869</code> 元、日内 <code>-5.44%</code>、成交额 <code>4486.3912</code> 万元；<code>508602</code> 报 <code>6.049</code> 元、日内 <code>-0.18%</code>、成交额 <code>2144.6402</code> 万元；<code>508603</code> 报 <code>3.722</code> 元、日内 <code>-3.32%</code>、成交额 <code>6318.5923</code> 万元。</td>\n<td>资金不是普遍追逐商业 REITs，而是在奥莱龙头与其他商业资产间继续分层；<code>508602</code> 价格韧性最强，但其收益率已经被价格上行压缩。</td>\n<td>腾讯行情接口 <code>https://qt.gtimg.cn/q=sh508600,sh508601,sh508602,sh508603</code>；新浪行情接口 <code>https://hq.sinajs.cn/list=sh508600,sh508601,sh508602,sh508603</code></td>\n</tr>\n<tr>\n<td>REITs 发行价对比</td>\n<td>以发行价对比，上午 <code>508600</code> 较 <code>4.092</code> 元为 <code>-6.01%</code></td>\n<td></td>\n<td></td>\n</tr>\n</tbody>\n</table>\n<p>[…truncated; original 4485 chars]</p>"
+}

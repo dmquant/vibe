@@ -118,6 +118,10 @@ export function readResearchNetwork() {
   return rewriteInvestorPaths(readJson("research-network.json"));
 }
 
+export function readAnalystPersonaTimelines() {
+  return rewriteInvestorPaths(readJson("analyst-persona-timelines.json"));
+}
+
 export function readDeepIndex() {
   return rewriteInvestorPaths(readJson("deep-research/index.json"));
 }

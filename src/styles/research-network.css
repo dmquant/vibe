@@ -913,15 +913,205 @@
 .timeline-strip .risk { background: var(--red); }
 .timeline-strip .neutral { background: var(--blue); }
 
+.persona-page .network-hero h1 {
+  max-width: 1040px;
+}
+
+.persona-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
+  gap: 18px;
+  align-items: start;
+}
+
+.persona-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.persona-card {
+  border: 1px solid var(--network-line);
+  border-radius: 8px;
+  background: var(--network-panel);
+  box-shadow: var(--shadow);
+  padding: 16px;
+}
+
+.persona-card.tone-red {
+  border-top: 4px solid var(--red);
+}
+
+.persona-card.tone-blue {
+  border-top: 4px solid var(--blue);
+}
+
+.persona-topline,
+.persona-counters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--network-muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.persona-card h2 {
+  margin: 10px 0 2px;
+  font-size: 26px;
+  line-height: 1.05;
+}
+
+.persona-card p {
+  color: var(--network-muted);
+  line-height: 1.55;
+}
+
+.persona-subtitle {
+  margin-top: 0;
+  color: var(--blue) !important;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.persona-meter {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  margin: 14px 0 10px;
+}
+
+.persona-meter i {
+  display: block;
+  height: 10px;
+  border: 1px solid var(--network-line);
+  background: linear-gradient(90deg, var(--blue), var(--green));
+}
+
+.persona-meter strong {
+  color: var(--network-ink);
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.persona-counters {
+  justify-content: flex-start;
+  border-top: 1px solid var(--network-line);
+  border-bottom: 1px solid var(--network-line);
+  padding: 10px 0;
+}
+
+.persona-thesis-list,
+.persona-term-cloud {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.persona-thesis-list a {
+  display: grid;
+  gap: 4px;
+  border: 1px solid var(--network-line);
+  border-radius: 4px;
+  background: var(--network-surface);
+  padding: 10px;
+  color: var(--network-ink);
+}
+
+.persona-thesis-list span,
+.persona-thesis-list em,
+.persona-event-stack em {
+  color: var(--network-muted);
+  font-size: 12px;
+  font-style: normal;
+}
+
+.persona-thesis-list strong,
+.persona-event-stack strong {
+  line-height: 1.3;
+}
+
+.persona-timeline-strip {
+  display: flex;
+  align-items: end;
+  gap: 3px;
+  min-height: 62px;
+  border-bottom: 1px solid var(--network-line);
+  margin: 14px 0 10px;
+  padding-bottom: 4px;
+}
+
+.persona-timeline-strip a {
+  display: block;
+  min-width: 10px;
+  background: var(--blue);
+  position: relative;
+}
+
+.persona-timeline-strip a:hover {
+  outline: 2px solid var(--network-ink);
+  text-decoration: none;
+}
+
+.persona-timeline-strip span {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%) rotate(-65deg);
+  transform-origin: top left;
+  color: var(--network-muted);
+  font-size: 9px;
+  white-space: nowrap;
+  opacity: 0;
+}
+
+.persona-timeline-strip a:hover span {
+  opacity: 1;
+}
+
+.persona-timeline-strip .support { background: var(--green); }
+.persona-timeline-strip .risk { background: var(--red); }
+.persona-timeline-strip .neutral { background: var(--blue); }
+
+.persona-event-stack a {
+  grid-template-columns: 1fr;
+}
+
+.persona-term-cloud {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.persona-term-cloud a {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  border: 1px solid var(--network-line);
+  border-radius: 4px;
+  background: var(--network-surface);
+  padding: 8px;
+  color: var(--network-ink);
+  font-size: 13px;
+  font-weight: 850;
+}
+
 @media (max-width: 1120px) {
   .network-hero,
   .network-layout,
   .practical-overview,
-  .portfolio-workbench {
+  .portfolio-workbench,
+  .persona-layout {
     grid-template-columns: 1fr;
   }
   .thesis-grid,
-  .recap-grid {
+  .recap-grid,
+  .persona-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .portfolio-item {
@@ -936,7 +1126,8 @@
   .network-stat-grid,
   .thesis-grid,
   .recap-grid,
-  .network-controls {
+  .network-controls,
+  .persona-grid {
     grid-template-columns: 1fr;
   }
   .network-stage {
