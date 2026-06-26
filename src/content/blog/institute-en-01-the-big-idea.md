@@ -145,13 +145,13 @@ describing what you want.
 The platform has two live applications, both of which I built and use myself:
 
 - **Infinite Research** — type a question, get a recursively explored tree
-  of answers, all with sources. Detailed in [Article 3](./03-infinite-research.md).
+  of answers, all with sources. Detailed in [Article 3](/blog/institute-en-03-infinite-research/).
 
 - **AI Institute** — a multi-agent investment research operation. A team
   of role-played AI analysts (compliance officer, ESG analyst, derivatives
   strategist, chief economist, real-estate analyst, theme researcher)
   produces daily morning briefings, weekly reports, and ad-hoc
-  investigations. Detailed in [Article 4](./04-ai-institute.md).
+  investigations. Detailed in [Article 4](/blog/institute-en-04-ai-institute/).
 
 Both apps share the same underlying platform. Both are usable today. Both
 were built in days, not months, by one person with an AI partner.
@@ -185,4 +185,4 @@ what it builds, and what it took to put together.
 
 ---
 
-**Next:** [How It Works — A Restaurant for AI](./02-how-it-works.md)
+**Next:** [How It Works — A Restaurant for AI](/blog/institute-en-02-how-it-works/)

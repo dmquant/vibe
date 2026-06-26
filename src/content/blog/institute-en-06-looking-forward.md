@@ -209,7 +209,7 @@ Thanks for reading. The next move is yours.
 
 ---
 
-**Previous:** [The Build Story](./05-the-build-story.md)
+**Previous:** [The Build Story](/blog/institute-en-05-the-build-story/)
 
 ---
 

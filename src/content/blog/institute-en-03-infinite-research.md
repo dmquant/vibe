@@ -259,4 +259,4 @@ called **AI Institute**.
 
 ---
 
-**Previous:** [How It Works](./02-how-it-works.md)  ·  **Next:** [App Spotlight — AI Institute](./04-ai-institute.md)
+**Previous:** [How It Works](/blog/institute-en-02-how-it-works/)  ·  **Next:** [App Spotlight — AI Institute](/blog/institute-en-04-ai-institute/)

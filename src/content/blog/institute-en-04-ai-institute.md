@@ -307,4 +307,4 @@ infrastructure with an AI partner, in 10 days.
 
 ---
 
-**Previous:** [App Spotlight — Infinite Research](./03-infinite-research.md)  ·  **Next:** [The Build Story](./05-the-build-story.md)
+**Previous:** [App Spotlight — Infinite Research](/blog/institute-en-03-infinite-research/)  ·  **Next:** [The Build Story](/blog/institute-en-05-the-build-story/)

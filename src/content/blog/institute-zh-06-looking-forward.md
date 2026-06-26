@@ -215,7 +215,7 @@ AI 智能体也会是。
 
 ---
 
-**上一篇:** [建设故事](./05-the-build-story.md)
+**上一篇:** [建设故事](/blog/institute-zh-05-the-build-story/)
 
 ---
 

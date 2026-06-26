@@ -266,11 +266,11 @@ AI 模型偶尔会卡住。CLI 偶尔会崩。网络偶尔会抽风。
 ---
 
 后面两篇文章会更详细地讲实际的应用。
-[第 3 篇](./03-infinite-research.md) 讲 Infinite Research ——
+[第 3 篇](/blog/institute-zh-03-infinite-research/) 讲 Infinite Research ——
 递归式问题探索器。
-[第 4 篇](./04-ai-institute.md) 讲 AI Institute ——
+[第 4 篇](/blog/institute-zh-04-ai-institute/) 讲 AI Institute ——
 多智能体投研团队。
 
 ---
 
-**上一篇:** [核心想法](./01-the-big-idea.md)  ·  **下一篇:** [应用聚焦 —— 无限研究](./03-infinite-research.md)
+**上一篇:** [核心想法](/blog/institute-zh-01-the-big-idea/)  ·  **下一篇:** [应用聚焦 —— 无限研究](/blog/institute-zh-03-infinite-research/)

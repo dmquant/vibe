@@ -211,6 +211,22 @@
 }
 .investor-console .panel { padding: 22px; }
 .investor-console .card { padding: 18px; }
+.investor-console a.card-link {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color .16s ease, box-shadow .16s ease, transform .16s ease;
+}
+.investor-console a.card-link:hover {
+  border-color: var(--blue);
+  box-shadow: 0 14px 34px rgba(16, 24, 40, .12);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+.investor-console a.card-link:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--blue) 36%, transparent);
+  outline-offset: 3px;
+}
 .investor-console .section-head {
   display: flex;
   align-items: flex-end;

@@ -14,20 +14,20 @@ lang: "zh"
 
 | # | 标题 | 阅读时长 |
 | - | ---- | ------- |
-| 1 | [核心想法 —— 为什么需要多智能体 AI 操作系统](./zh-CN/01-the-big-idea.md) | 约 6 分钟 |
-| 2 | [它如何运作 —— 一家"AI 餐厅"](./zh-CN/02-how-it-works.md) | 约 7 分钟 |
-| 3 | [应用一瞥 —— Infinite Research(无限研究)](./zh-CN/03-infinite-research.md) | 约 7 分钟 |
-| 4 | [应用一瞥 —— AI Institute(智研所)](./zh-CN/04-ai-institute.md) | 约 9 分钟 |
-| 5 | [建造故事 —— 与 AI 伙伴度过的十天](./zh-CN/05-the-build-story.md) | 约 8 分钟 |
-| 6 | [展望未来 —— 这条路通向何方](./zh-CN/06-looking-forward.md) | 约 6 分钟 |
+| 1 | [核心想法 —— 为什么需要多智能体 AI 操作系统](/blog/institute-zh-01-the-big-idea/) | 约 6 分钟 |
+| 2 | [它如何运作 —— 一家"AI 餐厅"](/blog/institute-zh-02-how-it-works/) | 约 7 分钟 |
+| 3 | [应用一瞥 —— Infinite Research(无限研究)](/blog/institute-zh-03-infinite-research/) | 约 7 分钟 |
+| 4 | [应用一瞥 —— AI Institute(智研所)](/blog/institute-zh-04-ai-institute/) | 约 9 分钟 |
+| 5 | [建造故事 —— 与 AI 伙伴度过的十天](/blog/institute-zh-05-the-build-story/) | 约 8 分钟 |
+| 6 | [展望未来 —— 这条路通向何方](/blog/institute-zh-06-looking-forward/) | 约 6 分钟 |
 
 **建议按顺序阅读**,也可以跳到感兴趣的篇章。
 1–2 篇是背景,3–4 篇展示具体应用,5–6 篇讲心路与路线图。
 
 ## English
 
-- [README · series intro](./README.md)
-- [en/](./en/) — all six English articles
+- [README · series intro](/blog/institute-en-00-series-index/)
+- [en/](/blog/institute-en-00-series-index/) — all six English articles
 
 ## 许可证
 

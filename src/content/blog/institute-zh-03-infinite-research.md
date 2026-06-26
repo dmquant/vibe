@@ -244,4 +244,4 @@ AI 负责思考;平台负责管路。
 
 ---
 
-**上一篇:** [它如何运作](./02-how-it-works.md)  ·  **下一篇:** [应用聚焦 —— 智研所](./04-ai-institute.md)
+**上一篇:** [它如何运作](/blog/institute-zh-02-how-it-works/)  ·  **下一篇:** [应用聚焦 —— 智研所](/blog/institute-zh-04-ai-institute/)

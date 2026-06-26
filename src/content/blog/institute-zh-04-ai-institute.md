@@ -304,4 +304,4 @@ AI Institute 跑在的平台并不复杂,但搭起来还是花了些功夫。
 
 ---
 
-**上一篇:** [应用聚焦 —— 无限研究](./03-infinite-research.md)  ·  **下一篇:** [建设故事](./05-the-build-story.md)
+**上一篇:** [应用聚焦 —— 无限研究](/blog/institute-zh-03-infinite-research/)  ·  **下一篇:** [建设故事](/blog/institute-zh-05-the-build-story/)

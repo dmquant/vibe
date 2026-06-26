@@ -285,4 +285,4 @@ AI 完成机械性工作,你用判断引导 —— 现在正在发生在:
 
 ---
 
-**上一篇:** [应用聚焦 —— 智研所](./04-ai-institute.md)  ·  **下一篇:** [展望未来](./06-looking-forward.md)
+**上一篇:** [应用聚焦 —— 智研所](/blog/institute-zh-04-ai-institute/)  ·  **下一篇:** [展望未来](/blog/institute-zh-06-looking-forward/)

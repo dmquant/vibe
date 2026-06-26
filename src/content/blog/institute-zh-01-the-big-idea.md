@@ -140,13 +140,13 @@ ResearchOS 就是我注意到这三件事都发生了之后,
 
 - **Infinite Research(无限研究)** —— 输入一个问题,
   得到一棵递归探索的回答树,每条都附带来源。
-  详见[第 3 篇](./03-infinite-research.md)。
+  详见[第 3 篇](/blog/institute-zh-03-infinite-research/)。
 
 - **AI Institute(智研所)** —— 一个多智能体投研团队。
   一队角色化的 AI 分析师(合规官、ESG 分析师、衍生品策略师、
   首席经济学家、房地产分析师、主题研究员)
   产出每日晨报、周报、临时调研。
-  详见[第 4 篇](./04-ai-institute.md)。
+  详见[第 4 篇](/blog/institute-zh-04-ai-institute/)。
 
 两个应用共享同一个底层平台。
 两个都今天就能用。两个都是一个人加一个 AI 伙伴在几天内搭出来的,不是几个月。
@@ -180,4 +180,4 @@ ResearchOS 就是我注意到这三件事都发生了之后,
 
 ---
 
-**下一篇:**[它如何运作 —— 一家"AI 餐厅"](./02-how-it-works.md)
+**下一篇:**[它如何运作 —— 一家"AI 餐厅"](/blog/institute-zh-02-how-it-works/)

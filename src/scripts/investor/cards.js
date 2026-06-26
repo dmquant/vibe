@@ -1,18 +1,28 @@
 import { esc, fmt, tags } from "./utils.js";
 
+function linkedCard(href, className, innerHtml, label) {
+  const safeClass = esc(className);
+  if (!href) {
+    return `<article class="${safeClass}">${innerHtml}</article>`;
+  }
+  return `<a class="${safeClass} card-link" href="${esc(href)}" aria-label="${esc(label || "打开研究报告")}">${innerHtml}</a>`;
+}
+
 export function viewCard(item) {
-  return `<article class="card thesis-card">
+  const title = item.title || "未命名观点";
+  return linkedCard(item.href, "card thesis-card", `
     <div class="mini-stats"><span>${esc(item.date || "未标注日期")}</span><span>${esc(item.analyst || "")}</span></div>
-    <h3>${item.href ? `<a href="${esc(item.href)}">${esc(item.title)}</a>` : esc(item.title)}</h3>
+    <h3>${esc(title)}</h3>
     <p>${esc(item.view)}</p>
     ${tags(item.tags)}
-  </article>`;
+  `, title);
 }
 
 export function reportCard(report) {
-  return `<article class="card report-card">
+  const title = report.title || "未命名报告";
+  return linkedCard(report.href, "card report-card", `
     <div>
-      <h3><a href="${esc(report.href)}">${esc(report.title)}</a></h3>
+      <h3>${esc(title)}</h3>
       <p>${esc(report.excerpt)}</p>
       ${tags(report.tags)}
     </div>
@@ -21,7 +31,7 @@ export function reportCard(report) {
       <span>${esc(report.analyst)}</span>
       <span>${esc(report.category)}</span>
     </div>
-  </article>`;
+  `, title);
 }
 
 export function analystCard(analyst) {
@@ -44,10 +54,11 @@ export function analystCard(analyst) {
 }
 
 export function deepResearchCard(item) {
-  return `<article class="card thesis-card">
+  const title = item.title_zh || item.title_en || "未命名深度研究";
+  return linkedCard(item.href, "card thesis-card", `
     <div class="mini-stats"><span>${esc(item.date || "未标注日期")}</span><span>${esc(item.topic_id || "")}</span><span>${fmt(item.evidence_count)} 证据</span><span>${fmt(item.risk_count)} 风险</span></div>
-    <h3><a href="${esc(item.href)}">${esc(item.title_zh || item.title_en)}</a></h3>
+    <h3>${esc(title)}</h3>
     <p>${esc(item.summary_zh || item.summary_en)}</p>
     ${tags(item.chains || [])}
-  </article>`;
+  `, title);
 }

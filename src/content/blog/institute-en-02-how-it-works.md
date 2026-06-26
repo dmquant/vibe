@@ -281,10 +281,10 @@ a couple of Macs in the corner that I already owned.
 ---
 
 The next two articles get into the actual apps in more detail.
-[Article 3](./03-infinite-research.md) covers Infinite Research — the
-recursive question explorer. [Article 4](./04-ai-institute.md) covers
+[Article 3](/blog/institute-en-03-infinite-research/) covers Infinite Research — the
+recursive question explorer. [Article 4](/blog/institute-en-04-ai-institute/) covers
 AI Institute — the multi-agent investment research team.
 
 ---
 
-**Previous:** [The Big Idea](./01-the-big-idea.md)  ·  **Next:** [App Spotlight — Infinite Research](./03-infinite-research.md)
+**Previous:** [The Big Idea](/blog/institute-en-01-the-big-idea/)  ·  **Next:** [App Spotlight — Infinite Research](/blog/institute-en-03-infinite-research/)

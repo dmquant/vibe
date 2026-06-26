@@ -289,4 +289,4 @@ The final article is about where all this goes from here.
 
 ---
 
-**Previous:** [App Spotlight — AI Institute](./04-ai-institute.md)  ·  **Next:** [Looking Forward](./06-looking-forward.md)
+**Previous:** [App Spotlight — AI Institute](/blog/institute-en-04-ai-institute/)  ·  **Next:** [Looking Forward](/blog/institute-en-06-looking-forward/)

@@ -16,20 +16,20 @@ series is what's open.
 
 | # | Title | Length |
 | - | ----- | ------ |
-| 1 | [The Big Idea — Why a Multi-Agent AI Operating System](./en/01-the-big-idea.md) | ~6 min |
-| 2 | [How It Works — A Restaurant for AI](./en/02-how-it-works.md) | ~7 min |
-| 3 | [App Spotlight — Infinite Research](./en/03-infinite-research.md) | ~7 min |
-| 4 | [App Spotlight — AI Institute](./en/04-ai-institute.md) | ~9 min |
-| 5 | [The Build Story — Ten Days with an AI Partner](./en/05-the-build-story.md) | ~8 min |
-| 6 | [Looking Forward — Where This Goes](./en/06-looking-forward.md) | ~6 min |
+| 1 | [The Big Idea — Why a Multi-Agent AI Operating System](/blog/institute-en-01-the-big-idea/) | ~6 min |
+| 2 | [How It Works — A Restaurant for AI](/blog/institute-en-02-how-it-works/) | ~7 min |
+| 3 | [App Spotlight — Infinite Research](/blog/institute-en-03-infinite-research/) | ~7 min |
+| 4 | [App Spotlight — AI Institute](/blog/institute-en-04-ai-institute/) | ~9 min |
+| 5 | [The Build Story — Ten Days with an AI Partner](/blog/institute-en-05-the-build-story/) | ~8 min |
+| 6 | [Looking Forward — Where This Goes](/blog/institute-en-06-looking-forward/) | ~6 min |
 
 **Read in order**, or jump to whatever pulls you in. Articles 1–2 give context;
 3–4 show the apps; 5–6 cover journey and roadmap.
 
 ## 简体中文
 
-- [README · 系列介绍](./README.zh-CN.md)
-- [zh-CN/](./zh-CN/) — 全部六篇中文版
+- [README · 系列介绍](/blog/institute-zh-00-series-index/)
+- [zh-CN/](/blog/institute-zh-00-series-index/) — 全部六篇中文版
 
 ## License
 
