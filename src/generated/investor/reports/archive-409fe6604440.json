@@ -1,0 +1,17 @@
+{
+  "slug": "archive-409fe6604440",
+  "href": "/investor/reports/archive-409fe6604440/",
+  "meta": {
+    "title": "共享数据采集摘要 2026-06-29",
+    "date": "2026-06-29",
+    "analyst_id": "data-scientist",
+    "analyst_name": "数据科学家",
+    "tags": [
+      "综合编审"
+    ],
+    "source": "archive-409fe6604440",
+    "source_label": "每日任务报告",
+    "source_kind": "daily_task"
+  },
+  "bodyHtml": "<h1>共享数据采集摘要 2026-06-29</h1>\n<h2>markets_overnight</h2>\n<ul>\n<li>字段总数 13、空值 0、confidence: high</li>\n</ul>\n<h2>markets_close_cn</h2>\n<ul>\n<li>字段总数 5、空值 0、confidence: high</li>\n</ul>\n<h2>失败 / 修复</h2>\n<ul>\n<li>Stooq CSV 种子源对 overnight 字段返回空值或 404 小错误页，已通过 web_search 来源修复：spx、ndx、dow、brent、wti、gold、dxy、ust10y、eurusd、usdjpy、vix、n225、hsi。</li>\n<li>Sina CN 字段在设置 LC_ALL=C 并显式传入字段号后正常返回。</li>\n</ul>"
+}
