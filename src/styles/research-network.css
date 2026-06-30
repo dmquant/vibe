@@ -463,6 +463,7 @@
 }
 
 .node-thesis circle { fill: var(--yellow); }
+.node-stock circle { fill: var(--orange); }
 .node-term circle { fill: var(--blue); }
 .node-event circle { fill: var(--green); }
 
@@ -618,6 +619,92 @@
   gap: 14px;
 }
 
+.lane-stock-board {
+  display: grid;
+  grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.lane-stock-board section {
+  border: 1px solid var(--network-line);
+  border-radius: 8px;
+  background: var(--network-panel);
+  box-shadow: var(--shadow);
+  padding: 14px;
+}
+
+.lane-list,
+.stock-cloud {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.lane-list a {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 5px 10px;
+  border: 1px solid var(--network-line);
+  border-radius: 6px;
+  background: var(--network-surface);
+  padding: 9px;
+  color: var(--network-ink);
+}
+
+.lane-list span {
+  font-weight: 900;
+}
+
+.lane-list strong,
+.lane-list em {
+  color: var(--network-muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 850;
+}
+
+.lane-list em {
+  grid-column: 1 / -1;
+  color: var(--orange);
+}
+
+.stock-cloud {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.stock-cloud a,
+.stock-chip-row a {
+  border: 1px solid var(--network-line);
+  border-radius: 5px;
+  background: var(--network-surface);
+  color: var(--network-ink);
+}
+
+.stock-cloud a {
+  display: grid;
+  gap: 3px;
+  min-height: 74px;
+  padding: 9px;
+}
+
+.stock-cloud strong,
+.stock-chip-row strong {
+  color: var(--orange);
+  font-family: var(--font-mono);
+  font-weight: 950;
+}
+
+.stock-cloud span,
+.stock-cloud em,
+.stock-chip-row span {
+  min-width: 0;
+  color: var(--network-muted);
+  font-size: 11px;
+  font-style: normal;
+}
+
 .recap-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -686,6 +773,26 @@
 .practical-callout strong {
   color: var(--tone, var(--blue));
   font-size: 14px;
+}
+
+.stock-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0 10px;
+}
+
+.stock-chip-row a {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  gap: 6px;
+  align-items: baseline;
+  padding: 5px 7px;
+  text-decoration: none;
+}
+
+.stock-chip-row.compact {
+  margin: 8px 0;
 }
 
 .practical-copy {
@@ -1106,6 +1213,7 @@
   .network-layout,
   .practical-overview,
   .portfolio-workbench,
+  .lane-stock-board,
   .persona-layout {
     grid-template-columns: 1fr;
   }
@@ -1135,6 +1243,9 @@
   }
   .network-stage svg {
     min-height: 420px;
+  }
+  .stock-cloud {
+    grid-template-columns: 1fr;
   }
   .graph-toolbar {
     position: static;

@@ -101,19 +101,28 @@ const actions = [...theses
           {theses.map((thesis) => (
             <article
               class="candidate-row"
-              data-search={`${thesis.title} ${thesis.coreView} ${(thesis.topTerms || []).join(" ")} ${thesis.practical?.exposureBucket || ""} ${thesis.practical?.actionLabel || ""}`}
+              data-search={`${thesis.title} ${thesis.coreView} ${thesis.lane || ""} ${(thesis.stockTickers || []).join(" ")} ${(thesis.stockUniverse || []).map((stock) => stock.name).join(" ")} ${(thesis.topTerms || []).join(" ")} ${thesis.practical?.exposureBucket || ""} ${thesis.practical?.actionLabel || ""}`}
               data-bucket={thesis.practical?.exposureBucket || "主题机会"}
               data-action={thesis.practical?.actionLabel || "观察等待"}
             >
               <div>
-                <span>{thesis.practical?.exposureBucket || "主题机会"} · {thesis.practical?.portfolioRole || thesis.practical?.actionLabel || "观察等待"} · Score {thesis.practical?.score || thesis.conviction}</span>
+                <span>{thesis.lane || thesis.practical?.sectorLane || thesis.practical?.exposureBucket || "主题机会"} · {thesis.practical?.portfolioRole || thesis.practical?.actionLabel || "观察等待"} · Score {thesis.practical?.score || thesis.conviction}</span>
                 <h3><a href={`/investor/research-network/#${thesis.id}`}>{thesis.title}</a></h3>
                 <p>{thesis.practical?.portfolioUse || thesis.coreView}</p>
                 <div class="portfolio-detail-grid">
+                  <span><strong>赛道</strong>{thesis.lane || thesis.practical?.sectorLane || "未分类"}</span>
                   <span><strong>动作</strong>{thesis.practical?.actionLabel || "观察等待"}</span>
                   <span><strong>风险预算</strong>{thesis.practical?.weightGuide || thesis.practical?.riskBudget || "观察仓"}</span>
                   <span><strong>期限</strong>{thesis.practical?.timeHorizon || thesis.practical?.reviewCadence || "待定"}</span>
                   <span><strong>深研优先级</strong>{thesis.practical?.deepResearchPriority || "常规跟踪"}</span>
+                </div>
+                <div class="stock-chip-row compact">
+                  {(thesis.stockUniverse || thesis.practical?.primaryStocks || []).slice(0, 8).map((stock) => (
+                    <a href={`/investor/research-network/?q=${encodeURIComponent(stock.ticker)}`} title={`${stock.name} · ${stock.role || ""}`}>
+                      <strong>{stock.ticker}</strong>
+                      <span>{stock.market}</span>
+                    </a>
+                  ))}
                 </div>
                 <div class="term-row">
                   {(thesis.practical?.instrumentTags || thesis.topTerms || []).slice(0, 8).map((term) => <span>{term}</span>)}
