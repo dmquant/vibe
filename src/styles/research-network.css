@@ -184,6 +184,34 @@
   margin-top: 20px;
 }
 
+.detail-page {
+  min-height: 100vh;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
+  gap: 14px;
+  margin: 20px 0;
+}
+
+.detail-panel {
+  border: 1px solid var(--network-line);
+  border-radius: 8px;
+  background: var(--network-panel);
+  box-shadow: var(--shadow);
+  padding: 16px;
+}
+
+.detail-panel.is-main {
+  min-height: 220px;
+}
+
+.detail-panel p {
+  color: var(--network-muted);
+  line-height: 1.6;
+}
+
 .practical-panel,
 .portfolio-panel {
   border: 1px solid var(--network-line);
@@ -674,6 +702,10 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.stock-cloud.wide {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .stock-cloud a,
 .stock-chip-row a {
   border: 1px solid var(--network-line);
@@ -793,6 +825,20 @@
 
 .stock-chip-row.compact {
   margin: 8px 0;
+}
+
+.detail-events a {
+  border: 1px solid var(--network-line);
+  border-radius: 6px;
+  background: var(--network-panel);
+  padding: 12px;
+}
+
+.detail-events em {
+  color: var(--network-muted);
+  font-size: 13px;
+  font-style: normal;
+  line-height: 1.45;
 }
 
 .practical-copy {
@@ -1214,6 +1260,7 @@
   .practical-overview,
   .portfolio-workbench,
   .lane-stock-board,
+  .detail-grid,
   .persona-layout {
     grid-template-columns: 1fr;
   }
@@ -1245,6 +1292,9 @@
     min-height: 420px;
   }
   .stock-cloud {
+    grid-template-columns: 1fr;
+  }
+  .stock-cloud.wide {
     grid-template-columns: 1fr;
   }
   .graph-toolbar {

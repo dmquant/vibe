@@ -2,6 +2,7 @@
 import BaseHead from "../../../components/BaseHead.astro";
 import Header from "../../../components/Header.astro";
 import { readResearchNetwork } from "../../../lib/investor-generated.js";
+import { lanePath, stockPath, thesisPath } from "../../../lib/investor-market.js";
 import "../../../styles/research-network.css";
 
 const network = readResearchNetwork();
@@ -70,7 +71,7 @@ const actionRows = [...theses
 const laneRows = [...theses
   .reduce((acc, thesis) => {
     const lane = thesis.lane || thesis.practical?.sectorLane || thesis.practical?.exposureBucket || "未分类赛道";
-    const row = acc.get(lane) || { lane, count: 0, tickers: new Set(), score: 0 };
+    const row = acc.get(lane) || { lane, href: thesis.laneHref || lanePath(thesis), count: 0, tickers: new Set(), score: 0 };
     row.count += 1;
     row.score += Number(thesis.practical?.score || thesis.conviction || 0);
     (thesis.stockUniverse || []).slice(0, 6).forEach((stock) => row.tickers.add(stock.ticker));
@@ -254,7 +255,7 @@ const stockRows = [...theses
             <h2>最新主线</h2>
             <div class="mini-thesis-list">
               {theses.slice(0, 6).map((thesis) => (
-                <a href={`#${thesis.id}`}>
+                <a href={thesisPath(thesis)}>
                   <span>{thesis.directionLabel} · {thesis.eventCount} events</span>
                   <strong>{thesis.title}</strong>
                   <em>{formatDate(thesis.lastSeen)}</em>
@@ -279,7 +280,7 @@ const stockRows = [...theses
             </div>
             <div class="lane-list">
               {laneRows.map((row) => (
-                <a href={`?q=${encodeURIComponent(row.lane)}`}>
+                <a href={row.href}>
                   <span>{row.lane}</span>
                   <strong>{row.count} thesis · Score {row.avgScore}</strong>
                   <em>{row.tickers.join(" · ") || "待补充标的"}</em>
@@ -294,7 +295,7 @@ const stockRows = [...theses
             </div>
             <div class="stock-cloud">
               {stockRows.map((stock) => (
-                <a href={`?q=${encodeURIComponent(stock.ticker)}`}>
+                <a href={stock.href || stockPath(stock)}>
                   <strong>{stock.ticker}</strong>
                   <span>{stock.name}</span>
                   <em>{stock.count} thesis · {stock.market}</em>
@@ -320,7 +321,7 @@ const stockRows = [...theses
                 <span>{thesis.lane || thesis.practical?.sectorLane || thesis.directionLabel}</span>
                 <span>{formatDate(thesis.firstSeen)} → {formatDate(thesis.lastSeen)}</span>
               </div>
-              <h3>{thesis.title}</h3>
+              <h3><a href={thesisPath(thesis)}>{thesis.title}</a></h3>
               <p>{thesis.coreView}</p>
               <div class={`practical-callout tone-${thesis.practical?.actionTone || thesis.practical?.tone || "blue"}`}>
                 <div>
@@ -342,7 +343,7 @@ const stockRows = [...theses
               </div>
               <div class="stock-chip-row">
                 {(thesis.stockUniverse || thesis.practical?.primaryStocks || []).slice(0, 8).map((stock) => (
-                  <a href={`?q=${encodeURIComponent(stock.ticker)}`} title={`${stock.name} · ${stock.role || ""}`}>
+                  <a href={stock.href || stockPath(stock)} title={`${stock.name} · ${stock.role || ""}`}>
                     <strong>{stock.ticker}</strong>
                     <span>{stock.market}</span>
                   </a>
@@ -376,7 +377,7 @@ const stockRows = [...theses
               </div>
               <div class="event-stack">
                 {(thesis.events || []).slice(0, 3).map((event) => (
-                  <a href={event.href || `#${thesis.id}`}>
+                  <a href={event.href || thesisPath(thesis)}>
                     <span>{formatDate(event.date)} · {event.sourceLabel} · {event.supportLabel}</span>
                     <strong>{event.title}</strong>
                   </a>

@@ -2,6 +2,7 @@
 import BaseHead from "../../../components/BaseHead.astro";
 import Header from "../../../components/Header.astro";
 import { readResearchNetwork } from "../../../lib/investor-generated.js";
+import { stockPath, thesisPath } from "../../../lib/investor-market.js";
 import "../../../styles/research-network.css";
 
 const network = readResearchNetwork();
@@ -107,7 +108,7 @@ const actions = [...theses
             >
               <div>
                 <span>{thesis.lane || thesis.practical?.sectorLane || thesis.practical?.exposureBucket || "主题机会"} · {thesis.practical?.portfolioRole || thesis.practical?.actionLabel || "观察等待"} · Score {thesis.practical?.score || thesis.conviction}</span>
-                <h3><a href={`/investor/research-network/#${thesis.id}`}>{thesis.title}</a></h3>
+                <h3><a href={thesisPath(thesis)}>{thesis.title}</a></h3>
                 <p>{thesis.practical?.portfolioUse || thesis.coreView}</p>
                 <div class="portfolio-detail-grid">
                   <span><strong>赛道</strong>{thesis.lane || thesis.practical?.sectorLane || "未分类"}</span>
@@ -118,7 +119,7 @@ const actions = [...theses
                 </div>
                 <div class="stock-chip-row compact">
                   {(thesis.stockUniverse || thesis.practical?.primaryStocks || []).slice(0, 8).map((stock) => (
-                    <a href={`/investor/research-network/?q=${encodeURIComponent(stock.ticker)}`} title={`${stock.name} · ${stock.role || ""}`}>
+                    <a href={stock.href || stockPath(stock)} title={`${stock.name} · ${stock.role || ""}`}>
                       <strong>{stock.ticker}</strong>
                       <span>{stock.market}</span>
                     </a>
@@ -239,7 +240,7 @@ const actions = [...theses
           <article class="portfolio-item" data-id="${item.id}">
             <div>
               <span>${item.bucket || "主题机会"} · ${item.action || "观察等待"} · ${item.score || ""}</span>
-              <strong><a href="/investor/research-network/#${item.id}">${item.title}</a></strong>
+              <strong><a href="/investor/theses/${item.id}/">${item.title}</a></strong>
               <em>${item.risk || ""}</em>
             </div>
             <label>状态

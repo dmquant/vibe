@@ -1,0 +1,100 @@
+---
+import BaseHead from "../../../components/BaseHead.astro";
+import Header from "../../../components/Header.astro";
+import { readResearchNetwork } from "../../../lib/investor-generated.js";
+import { buildLaneIndex, formatDate, pct, stockPath, thesisPath } from "../../../lib/investor-market.js";
+import "../../../styles/research-network.css";
+
+export function getStaticPaths() {
+  const network = readResearchNetwork();
+  return buildLaneIndex(network.theses || []).map((lane) => ({
+    params: { slug: lane.slug },
+    props: { lane },
+  }));
+}
+
+const { lane } = Astro.props;
+const maxAction = Math.max(1, ...lane.actions.map((item) => item[1]));
+---
+
+<!doctype html>
+<html lang="zh-CN" data-lang="zh">
+  <head>
+    <BaseHead
+      title={`${lane.lane} · AI Institute Lane`}
+      description={`AI Institute lane page for ${lane.lane}, linked theses, stocks, and evidence state.`}
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="research-network detail-page">
+      <section class="network-hero">
+        <div>
+          <div class="network-kicker">AI Institute · Lane</div>
+          <h1>{lane.lane}</h1>
+          <p>该页按赛道聚合相关 thesis、候选股票池和组合动作分布，方便从产业链入口进入研究证据。</p>
+          <div class="network-actions">
+            <a href="/investor/research-network/">研究网络</a>
+            <a href="/investor/portfolio/">组合追踪</a>
+            <a href="/investor/recaps/">复盘仪表盘</a>
+          </div>
+        </div>
+        <aside class="network-privacy">
+          <span>Lane Contract</span>
+          <p>{lane.laneEn || "公开赛道页只展示压缩后的主线、标的和公共证据，不暴露内部运行材料。"}</p>
+        </aside>
+      </section>
+
+      <section class="network-stat-grid">
+        <div><span>Theses</span><strong>{lane.theses.length}</strong><em>相关主线</em></div>
+        <div><span>Stocks</span><strong>{lane.stocks.length}</strong><em>候选标的</em></div>
+        <div><span>Avg Score</span><strong>{lane.avgScore}</strong><em>平均强度</em></div>
+        <div><span>Actions</span><strong>{lane.actions.length}</strong><em>组合动作</em></div>
+      </section>
+
+      <section class="detail-grid">
+        <article class="detail-panel is-main">
+          <div class="section-mini-head"><span>Thesis Pool</span><strong>赛道内主线</strong></div>
+          <div class="mini-thesis-list">
+            {lane.theses.map((thesis) => (
+              <a href={thesisPath(thesis)}>
+                <span>{thesis.practical?.actionLabel || thesis.directionLabel} · Score {thesis.practical?.score || thesis.conviction}</span>
+                <strong>{thesis.title}</strong>
+                <em>{formatDate(thesis.lastSeen)}</em>
+              </a>
+            ))}
+          </div>
+        </article>
+        <aside class="detail-panel">
+          <div class="section-mini-head"><span>Action Mix</span><strong>动作分布</strong></div>
+          <div class="source-bars">
+            {lane.actions.map(([label, count]) => (
+              <div class="source-row">
+                <span>{label}</span>
+                <strong>{count}</strong>
+                <i><b style={`width:${pct((count / maxAction) * 100)}`}></b></i>
+              </div>
+            ))}
+          </div>
+        </aside>
+      </section>
+
+      <section class="thesis-section">
+        <div class="section-headline">
+          <span>Stocks</span>
+          <h2>赛道标的图谱</h2>
+          <p>标的按被多少条 thesis 连接排序；角色来自研究合同，不代表交易评级。</p>
+        </div>
+        <div class="stock-cloud wide">
+          {lane.stocks.map((stock) => (
+            <a href={stockPath(stock)}>
+              <strong>{stock.ticker}</strong>
+              <span>{stock.name}</span>
+              <em>{stock.thesisCount} thesis · {stock.market} · {stock.role}</em>
+            </a>
+          ))}
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

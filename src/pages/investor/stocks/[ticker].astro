@@ -1,0 +1,109 @@
+---
+import BaseHead from "../../../components/BaseHead.astro";
+import Header from "../../../components/Header.astro";
+import { readResearchNetwork } from "../../../lib/investor-generated.js";
+import { buildStockIndex, formatDate, lanePath, pct, thesisPath } from "../../../lib/investor-market.js";
+import "../../../styles/research-network.css";
+
+export function getStaticPaths() {
+  const network = readResearchNetwork();
+  return buildStockIndex(network.theses || []).map((stock) => ({
+    params: { ticker: stock.slug },
+    props: { stock },
+  }));
+}
+
+const { stock } = Astro.props;
+const maxConviction = Math.max(1, ...stock.theses.map((thesis) => Number(thesis.conviction || 0)));
+---
+
+<!doctype html>
+<html lang="zh-CN" data-lang="zh">
+  <head>
+    <BaseHead
+      title={`${stock.ticker} · AI Institute Stock`}
+      description={`${stock.ticker} research exposure map across AI Institute theses and lanes.`}
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="research-network detail-page">
+      <section class="network-hero">
+        <div>
+          <div class="network-kicker">AI Institute · Stock</div>
+          <h1>{stock.ticker}</h1>
+          <p>{stock.name} · {stock.market}。该页展示该标的作为研究入口时连接到哪些赛道、主线和证据事件。</p>
+          <div class="network-actions">
+            <a href="/investor/research-network/">研究网络</a>
+            <a href="/investor/portfolio/">组合追踪</a>
+            {stock.lanes.slice(0, 2).map((lane) => <a href={lane.href}>{lane.lane}</a>)}
+          </div>
+        </div>
+        <aside class="network-privacy">
+          <span>Research Handle</span>
+          <p>{stock.role || "候选标的只作为研究跟踪入口，不构成买卖建议。"}</p>
+        </aside>
+      </section>
+
+      <section class="network-stat-grid">
+        <div><span>Linked Theses</span><strong>{stock.theses.length}</strong><em>相关主线</em></div>
+        <div><span>Lanes</span><strong>{stock.lanes.length}</strong><em>关联赛道</em></div>
+        <div><span>Market</span><strong>{stock.market}</strong><em>市场</em></div>
+        <div><span>Events</span><strong>{stock.events.length}</strong><em>近期证据</em></div>
+      </section>
+
+      <section class="detail-grid">
+        <article class="detail-panel is-main">
+          <div class="section-mini-head"><span>Thesis Links</span><strong>连接的主线</strong></div>
+          <div class="mini-thesis-list">
+            {stock.theses.map((thesis) => (
+              <a href={thesisPath(thesis)}>
+                <span>{thesis.lane || thesis.practical?.sectorLane || "未分类"} · {thesis.practical?.actionLabel || thesis.directionLabel}</span>
+                <strong>{thesis.title}</strong>
+                <em>{formatDate(thesis.lastSeen)}</em>
+              </a>
+            ))}
+          </div>
+        </article>
+        <aside class="detail-panel">
+          <div class="section-mini-head"><span>Conviction</span><strong>主线强度</strong></div>
+          <div class="source-bars">
+            {stock.theses.map((thesis) => (
+              <div class="source-row">
+                <span>{thesis.title}</span>
+                <strong>{thesis.conviction}</strong>
+                <i><b style={`width:${pct((Number(thesis.conviction || 0) / maxConviction) * 100)}`}></b></i>
+              </div>
+            ))}
+          </div>
+        </aside>
+      </section>
+
+      <section class="thesis-section">
+        <div class="section-headline">
+          <span>Lanes</span>
+          <h2>关联赛道</h2>
+        </div>
+        <div class="stock-chip-row">
+          {stock.lanes.map((lane) => <a href={lane.href || lanePath(lane)}><strong>{lane.lane}</strong><span>Lane</span></a>)}
+        </div>
+      </section>
+
+      <section class="thesis-section">
+        <div class="section-headline">
+          <span>Recent Evidence</span>
+          <h2>近期证据入口</h2>
+        </div>
+        <div class="event-stack detail-events">
+          {stock.events.map((event) => (
+            <a href={event.href || thesisPath(event.thesis)}>
+              <span>{formatDate(event.date)} · {event.sourceLabel} · {event.thesis.title}</span>
+              <strong>{event.title}</strong>
+              {event.summary && <em>{event.summary}</em>}
+            </a>
+          ))}
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

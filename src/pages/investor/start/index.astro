@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import BaseHead from "../../../components/BaseHead.astro";
 import Header from "../../../components/Header.astro";
 import { readRecapDashboards, readResearchNetwork, readSiteData } from "../../../lib/investor-generated.js";
+import { thesisPath } from "../../../lib/investor-market.js";
 import "../../../styles/information-architecture.css";
 
 const siteData = readSiteData();
@@ -210,7 +211,7 @@ const routeRows = [
             <div class="ia-card-kicker">Latest Thesis</div>
             <div class="ia-mini-list">
               {latestTheses.map((thesis) => (
-                <a href={`/investor/research-network/#${thesis.id}`}>
+                <a href={thesisPath(thesis)}>
                   <span>{thesis.practical?.exposureBucket || thesis.directionLabel} · {thesis.practical?.actionLabel || thesis.directionLabel}</span>
                   <strong>{thesis.title}</strong>
                 </a>
