@@ -2,14 +2,20 @@
 import BaseHead from "../../../components/BaseHead.astro";
 import Header from "../../../components/Header.astro";
 import { readResearchNetwork } from "../../../lib/investor-generated.js";
-import { buildLaneIndex, formatDate, pct, stockPath, thesisPath } from "../../../lib/investor-market.js";
+import { buildLaneIndex, buildLaneRecaps, buildLaneTimeline, formatDate, pct, stockPath, thesisPath } from "../../../lib/investor-market.js";
 import "../../../styles/research-network.css";
 
 export function getStaticPaths() {
   const network = readResearchNetwork();
   return buildLaneIndex(network.theses || []).map((lane) => ({
     params: { slug: lane.slug },
-    props: { lane },
+    props: {
+      lane: {
+        ...lane,
+        timeline: buildLaneTimeline(lane),
+        recaps: buildLaneRecaps(lane, network.livingRecaps || []),
+      },
+    },
   }));
 }
 
@@ -77,6 +83,71 @@ const maxAction = Math.max(1, ...lane.actions.map((item) => item[1]));
             ))}
           </div>
         </aside>
+      </section>
+
+      <section class="thesis-section">
+        <div class="section-headline">
+          <span>Lane Timeline</span>
+          <h2>赛道证据时间线</h2>
+          <p>按日期聚合该赛道下所有 thesis 的支持、风险和观察事件，展示研究结果如何改变赛道判断。</p>
+        </div>
+        <div class="lane-timeline-grid">
+          <article class="detail-panel lane-chart">
+            <div class="section-mini-head"><span>Evidence Curve</span><strong>证据强度</strong></div>
+            <div class="lane-bars">
+              {lane.timeline.map((row) => (
+                <a href={`#lane-date-${row.date}`}>
+                  <span>{formatDate(row.date)}</span>
+                  <i><b style={`height:${row.pct}`}></b></i>
+                  <em>{row.label}</em>
+                </a>
+              ))}
+            </div>
+          </article>
+          <article class="detail-panel">
+            <div class="section-mini-head"><span>Latest Signals</span><strong>最新研究信号</strong></div>
+            <div class="source-bars">
+              {lane.timeline.slice(-6).reverse().map((row) => (
+                <div class="source-row" id={`lane-date-${row.date}`}>
+                  <span>{formatDate(row.date)} · {row.theses.length} thesis</span>
+                  <strong>{row.eventCount}</strong>
+                  <i><b style={`width:${row.pct}`}></b></i>
+                </div>
+              ))}
+            </div>
+          </article>
+        </div>
+        <div class="event-stack detail-events">
+          {lane.timeline.slice(-8).reverse().flatMap((row) => row.events.slice(0, 2).map((event) => (
+            <a href={event.href || event.thesisHref}>
+              <span>{formatDate(row.date)} · {row.label} · {event.thesisTitle}</span>
+              <strong>{event.title}</strong>
+              {event.summary && <em>{event.summary}</em>}
+            </a>
+          )))}
+        </div>
+      </section>
+
+      <section class="thesis-section">
+        <div class="section-headline">
+          <span>Lane Recaps</span>
+          <h2>赛道复盘</h2>
+          <p>复盘卡片来自 living thesis recap；若该赛道暂无自动复盘，则用 thesis 时间线生成可阅读的赛道摘要。</p>
+        </div>
+        <div class="lane-recap-grid">
+          {lane.recaps.map((recap) => (
+            <a class="lane-recap-card" href={recap.href}>
+              <span>{formatDate(recap.date)} · {recap.kind === "living_recap" ? "Living Recap" : "Lane Recap"}</span>
+              <strong>{recap.title}</strong>
+              <em>{recap.subtitle}</em>
+              <div>
+                {(recap.metrics || []).slice(0, 3).map((metric) => (
+                  <b>{metric.label}: {metric.value}</b>
+                ))}
+              </div>
+            </a>
+          ))}
+        </div>
       </section>
 
       <section class="thesis-section">

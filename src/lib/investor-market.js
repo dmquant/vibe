@@ -59,6 +59,97 @@ export function flatEvents(thesis) {
     .filter((event) => event.title || event.summary);
 }
 
+export function buildLaneTimeline(lane, limit = 18) {
+  const dates = new Map();
+  for (const thesis of lane?.theses || []) {
+    for (const group of thesis.timeline || []) {
+      const key = group.date || "undated";
+      const row = dates.get(key) || {
+        date: key,
+        supports: 0,
+        risks: 0,
+        neutral: 0,
+        eventCount: 0,
+        value: 0,
+        theses: new Set(),
+        events: [],
+      };
+      const events = group.events || [];
+      const supports = Number(group.supports ?? events.filter((event) => event.supportType === "support").length);
+      const risks = Number(group.risks ?? events.filter((event) => event.supportType === "risk").length);
+      const neutral = Number(group.neutral ?? Math.max(0, events.length - supports - risks));
+      row.supports += supports;
+      row.risks += risks;
+      row.neutral += neutral;
+      row.eventCount += events.length || supports + risks + neutral;
+      row.value += supports * 2 + neutral + risks * 1.25;
+      row.theses.add(thesis.id);
+      for (const event of events.slice(0, 4)) {
+        row.events.push({
+          ...event,
+          thesisId: thesis.id,
+          thesisTitle: thesis.title,
+          thesisHref: thesisPath(thesis),
+        });
+      }
+      dates.set(key, row);
+    }
+  }
+  const rows = [...dates.values()]
+    .map((row) => ({
+      ...row,
+      theses: [...row.theses],
+      value: Math.round(row.value * 10) / 10,
+      events: row.events
+        .sort((a, b) => Number(b.score || 0) - Number(a.score || 0))
+        .slice(0, 6),
+    }))
+    .sort((a, b) => String(a.date).localeCompare(String(b.date)));
+  const recent = rows.slice(-limit);
+  const maxValue = Math.max(1, ...recent.map((row) => row.value));
+  return recent.map((row) => ({
+    ...row,
+    pct: pct((row.value / maxValue) * 100),
+    label: row.risks > row.supports ? "风险主导" : row.supports > row.risks ? "支持增强" : "观察",
+  }));
+}
+
+export function buildLaneRecaps(lane, livingRecaps = []) {
+  const thesisIds = new Set((lane?.theses || []).map((thesis) => thesis.id));
+  const linked = livingRecaps.filter((recap) => {
+    const href = recap.reportHref || "";
+    return [...thesisIds].some((id) => href.includes(`/investor/theses/${id}/`));
+  });
+  if (linked.length) {
+    return linked.slice(0, 8).map((recap) => ({
+      title: recap.title,
+      subtitle: recap.subtitle || recap.chartDescription || "",
+      href: recap.reportHref || `/investor/recaps/#${recap.slug}`,
+      date: recap.date || "",
+      metrics: recap.metrics || [],
+      conclusions: recap.conclusions || [],
+      kind: recap.kind || "living_recap",
+    }));
+  }
+
+  return (lane?.theses || []).slice(0, 6).map((thesis) => ({
+    title: `${thesis.title}：赛道复盘`,
+    subtitle: thesis.coreView || thesis.practical?.portfolioUse || "",
+    href: thesisPath(thesis),
+    date: thesis.lastSeen || "",
+    metrics: [
+      { label: "证据", value: String(thesis.eventCount || 0), accent: "blue" },
+      { label: "风险", value: String(thesis.risks || 0), accent: "red" },
+      { label: "强度", value: String(thesis.conviction || 0), accent: "green" },
+    ],
+    conclusions: [
+      { title: "主线定义", text: thesis.coreView || "" },
+      { title: "最新变化", text: (thesis.whatChanged || []).slice(0, 1).join("；") || "等待新的研究结果验证。" },
+    ],
+    kind: "lane_synthetic_recap",
+  }));
+}
+
 export function buildLaneIndex(theses = []) {
   const lanes = new Map();
   for (const thesis of theses) {
