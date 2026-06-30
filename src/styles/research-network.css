@@ -106,6 +106,7 @@
 .network-controls,
 .network-stage,
 .network-side section,
+.thermal-section,
 .thesis-card,
 .recap-card {
   border: 1px solid var(--network-line);
@@ -168,6 +169,109 @@
   background: var(--network-surface);
   color: var(--network-ink);
   padding: 0 12px;
+}
+
+.thermal-section {
+  margin-bottom: 20px;
+  padding: 14px;
+}
+
+.thermal-lane-stack {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.thermal-lane-row {
+  display: grid;
+  grid-template-columns: minmax(200px, 280px) minmax(0, 1fr);
+  gap: 10px;
+  align-items: stretch;
+  border: 1px solid var(--network-line);
+  border-radius: 7px;
+  background: var(--network-surface);
+  padding: 8px;
+}
+
+.thermal-lane-head {
+  display: grid;
+  align-content: start;
+  gap: 6px;
+  border-right: 1px solid var(--network-line);
+  padding: 6px 10px 6px 4px;
+  color: var(--network-ink);
+}
+
+.thermal-lane-head span {
+  font-size: 15px;
+  font-weight: 950;
+  line-height: 1.25;
+}
+
+.thermal-lane-head strong,
+.thermal-lane-head em {
+  color: var(--network-muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-style: normal;
+  line-height: 1.45;
+}
+
+.thermal-lane-head em {
+  color: var(--orange);
+}
+
+.thermal-cell-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(136px, 1fr));
+  gap: 7px;
+  min-width: 0;
+}
+
+.thermal-thesis-cell {
+  --cell-ink: var(--network-ink);
+  display: grid;
+  align-content: space-between;
+  gap: 6px;
+  min-height: 86px;
+  border: 1px solid color-mix(in srgb, var(--tone, var(--blue)) 48%, var(--network-line));
+  border-radius: 6px;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--tone, var(--blue)) calc(var(--heat) * 62%), transparent), transparent 72%),
+    var(--network-panel);
+  color: var(--cell-ink);
+  padding: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform .16s ease, border-color .16s ease, background .16s ease;
+}
+
+.thermal-thesis-cell:hover {
+  transform: translateY(-2px);
+  border-color: var(--network-strong);
+  text-decoration: none;
+}
+
+.thermal-thesis-cell strong {
+  display: -webkit-box;
+  min-width: 0;
+  color: var(--network-ink);
+  font-size: 12px;
+  line-height: 1.28;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.thermal-thesis-cell span,
+.thermal-thesis-cell em {
+  color: var(--network-muted);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 850;
+  line-height: 1.35;
+  text-transform: uppercase;
 }
 
 .practical-overview,
@@ -1363,9 +1467,15 @@
   .portfolio-workbench,
   .lane-stock-board,
   .lane-timeline-grid,
+  .thermal-lane-row,
   .detail-grid,
   .persona-layout {
     grid-template-columns: 1fr;
+  }
+  .thermal-lane-head {
+    border-right: 0;
+    border-bottom: 1px solid var(--network-line);
+    padding: 4px 4px 10px;
   }
   .thesis-grid,
   .recap-grid,
@@ -1397,6 +1507,9 @@
   }
   .stock-cloud {
     grid-template-columns: 1fr;
+  }
+  .thermal-cell-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .stock-cloud.wide {
     grid-template-columns: 1fr;

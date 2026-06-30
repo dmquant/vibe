@@ -1033,6 +1033,90 @@
   animation: fade-up .35s ease both;
   text-decoration: none;
 }
+.investor-console .thesis-thermal-console {
+  display: grid;
+  gap: 9px;
+  max-height: 620px;
+  overflow: auto;
+  padding-right: 4px;
+}
+.investor-console .thermal-console-row {
+  display: grid;
+  grid-template-columns: minmax(190px, 260px) minmax(0, 1fr);
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f8fafc;
+  padding: 8px;
+}
+.investor-console .thermal-console-lane {
+  display: grid;
+  align-content: start;
+  gap: 5px;
+  border-right: 1px solid var(--line);
+  padding-right: 10px;
+  color: var(--ink);
+  text-decoration: none;
+}
+.investor-console .thermal-console-lane strong {
+  font-size: 14px;
+  line-height: 1.25;
+}
+.investor-console .thermal-console-lane span,
+.investor-console .thermal-console-lane em {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 850;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+.investor-console .thermal-console-lane em {
+  color: var(--orange);
+}
+.investor-console .thermal-console-cells {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(126px, 1fr));
+  gap: 7px;
+  min-width: 0;
+}
+.investor-console .thermal-console-cell {
+  display: grid;
+  align-content: space-between;
+  gap: 5px;
+  min-height: 78px;
+  border: 1px solid color-mix(in srgb, var(--blue) 45%, var(--line));
+  border-radius: 7px;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--blue) calc(var(--heat) * 58%), transparent), transparent 72%),
+    var(--panel);
+  color: var(--ink);
+  padding: 8px;
+  overflow: hidden;
+  text-decoration: none;
+}
+.investor-console .thermal-console-cell:hover {
+  border-color: var(--ink);
+  transform: translateY(-1px);
+}
+.investor-console .thermal-console-cell strong {
+  display: -webkit-box;
+  font-size: 12px;
+  line-height: 1.25;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.investor-console .thermal-console-cell span,
+.investor-console .thermal-console-cell em {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 850;
+  line-height: 1.35;
+}
 .investor-console .daily-controls {
   display: grid;
   grid-template-columns: minmax(220px, 1fr) 210px;
@@ -2336,7 +2420,9 @@
   }
 }
 @media (max-width: 980px) {
-  .investor-console .app-header, .investor-console .hero-layout, .investor-console .daily-hero, .investor-console .daily-board-head, .investor-console .risk-grid, .investor-console .report-shell, .investor-console .graph-layout, .investor-console .delta-grid, .investor-console .thesis-detail, .investor-console .radar-hero, .investor-console .tracker-layout, .investor-console .tracker-detail, .investor-console .analyst-tracker-layout, .investor-console .analyst-focus-grid, .investor-console .deep-reading-hero, .investor-console .deep-download-panel, .investor-console .deep-report-layout, .investor-console .deep-latest, .investor-console .ops-hero { grid-template-columns: 1fr; display: grid; }
+  .investor-console .app-header, .investor-console .hero-layout, .investor-console .daily-hero, .investor-console .daily-board-head, .investor-console .risk-grid, .investor-console .report-shell, .investor-console .graph-layout, .investor-console .delta-grid, .investor-console .thesis-detail, .investor-console .radar-hero, .investor-console .tracker-layout, .investor-console .tracker-detail, .investor-console .thermal-console-row, .investor-console .analyst-tracker-layout, .investor-console .analyst-focus-grid, .investor-console .deep-reading-hero, .investor-console .deep-download-panel, .investor-console .deep-report-layout, .investor-console .deep-latest, .investor-console .ops-hero { grid-template-columns: 1fr; display: grid; }
+  .investor-console .thermal-console-lane { border-right: 0; border-bottom: 1px solid var(--line); padding: 0 0 8px; }
+  .investor-console .thermal-console-cells { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .investor-console .app-header { align-items: stretch; padding: 24px 18px; }
   .investor-console .header-actions, .investor-console .toolbar, .investor-console .daily-controls, .investor-console .graph-toolbar, .investor-console .tracker-toolbar { min-width: 0; grid-template-columns: 1fr; }
   .investor-console .nav-tabs, .investor-console main, .investor-console .site-footer { padding-left: 18px; padding-right: 18px; }

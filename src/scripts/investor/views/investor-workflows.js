@@ -353,9 +353,73 @@ export function renderChangeRadar({ app, data }) {
     </section>`;
 }
 
+function normalizeNetworkThesisForTracker(item) {
+  const evidence = item.practical?.evidenceBreadth || {};
+  return {
+    ...item,
+    title: item.title || "未命名主线",
+    status: item.status || item.practical?.actionLabel || "观察等待",
+    lastUpdated: item.lastUpdated || item.lastSeen || "",
+    evidenceQuality: item.evidenceQuality ?? Math.round(Number(evidence.evidenceDepth || item.conviction || 0)),
+    riskPressure: item.riskPressure ?? Math.round(Number(evidence.conflictScore || 0)),
+    supportBalance: item.supportBalance ?? Number(item.supports || 0) - Number(item.risks || 0),
+    score: item.score || {
+      for: item.supports || 0,
+      against: item.risks || 0,
+      analysts: item.analystCount || 0,
+      recent: evidence.recentEvents || 0,
+      risks: item.risks || 0,
+    },
+    evidenceFor: item.evidenceFor || [],
+    evidenceAgainst: item.evidenceAgainst || [],
+    risks: item.risks || item.evidenceAgainst || [],
+    monitors: item.monitors || item.practical?.confirmationSignals || item.topTerms || [],
+    falsifiers: item.falsifiers || item.practical?.invalidationSignals || [],
+    sourceLedger: item.sourceLedger || {
+      evidence: item.eventCount || 0,
+      reports: item.linkedReports?.length || 0,
+      analysts: item.analystCount || 0,
+      latestDate: item.lastUpdated || item.lastSeen || "",
+      topReports: item.linkedReports || [],
+    },
+  };
+}
+
+function allThesisRows(data) {
+  const rows = new Map();
+  const add = (item) => {
+    const normalized = normalizeNetworkThesisForTracker(item);
+    const key = String(normalized.id || normalized.href || normalized.title || "").toLowerCase();
+    const titleKey = String(normalized.title || "").replace(/\s+/g, "").toLowerCase();
+    if (!key && !titleKey) return;
+    const existingKey = rows.has(key) ? key : [...rows.keys()].find((candidate) => {
+      const existing = rows.get(candidate);
+      return String(existing.title || "").replace(/\s+/g, "").toLowerCase() === titleKey;
+    });
+    if (existingKey) {
+      const existing = rows.get(existingKey);
+      rows.set(existingKey, {
+        ...normalized,
+        ...existing,
+        href: existing.href || normalized.href,
+        lane: existing.lane || normalized.lane,
+        laneHref: existing.laneHref || normalized.laneHref,
+        stockTickers: existing.stockTickers?.length ? existing.stockTickers : normalized.stockTickers,
+        stockUniverse: existing.stockUniverse?.length ? existing.stockUniverse : normalized.stockUniverse,
+        practical: existing.practical || normalized.practical,
+      });
+    } else {
+      rows.set(key || titleKey, normalized);
+    }
+  };
+  (data.thesisTracker?.theses || []).forEach(add);
+  (data.researchNetwork?.fullTheses || []).forEach(add);
+  return [...rows.values()].sort((a, b) => Number(b.conviction || 0) - Number(a.conviction || 0));
+}
+
 function thesisRows(items) {
   return items.map((item) => `<tr>
-    <td><strong>${esc(item.title)}</strong><div class="mini-stats"><span>${esc(item.lastUpdated || "")}</span><span class="direction-pill ${esc(item.direction)}">${directionLabel(item.direction)}</span></div></td>
+    <td><strong>${item.href ? `<a href="${esc(item.href)}">${esc(item.title)}</a>` : esc(item.title)}</strong><div class="mini-stats"><span>${esc(item.lane || "")}</span><span>${esc(item.lastUpdated || "")}</span><span class="direction-pill ${esc(item.direction)}">${directionLabel(item.direction)}</span></div></td>
     <td><span class="status-pill">${esc(item.status)}</span></td>
     <td><span class="score-badge">${fmt(item.conviction)}</span></td>
     <td>${fmt(item.evidenceQuality)}</td>
@@ -369,7 +433,7 @@ function thesisCard(item) {
     <div class="tracker-card-head">
       <div>
         <div class="mini-stats"><span class="direction-pill ${esc(item.direction)}">${directionLabel(item.direction)}</span><span>${esc(item.status)}</span><span>${esc(item.lastUpdated || "")}</span></div>
-        <h3>${esc(item.title)}</h3>
+        <h3>${item.href ? `<a href="${esc(item.href)}">${esc(item.title)}</a>` : esc(item.title)}</h3>
       </div>
       <div class="tracker-score"><strong>${fmt(item.conviction)}</strong><span>信念</span></div>
     </div>
@@ -411,11 +475,58 @@ function thesisCard(item) {
   </article>`;
 }
 
+function renderThesisThermal(rows = [], network = {}) {
+  const laneRows = network.lanes?.length
+    ? network.lanes.map((lane) => ({
+        lane: lane.lane,
+        href: lane.href,
+        count: lane.count,
+        avgScore: lane.avgScore,
+        tickers: (lane.tickers || []).map((stock) => stock.ticker || stock).filter(Boolean),
+        theses: rows.filter((item) => item.lane === lane.lane),
+      })).filter((lane) => lane.theses.length)
+    : [...rows.reduce((acc, item) => {
+        const lane = item.lane || item.practical?.exposureBucket || "未分类赛道";
+        const row = acc.get(lane) || { lane, href: item.laneHref || "", count: 0, score: 0, tickers: new Set(), theses: [] };
+        row.count += 1;
+        row.score += Number(item.practical?.score || item.conviction || 0);
+        (item.stockTickers || []).slice(0, 6).forEach((ticker) => row.tickers.add(ticker));
+        row.theses.push(item);
+        acc.set(lane, row);
+        return acc;
+      }, new Map()).values()].map((row) => ({
+        ...row,
+        avgScore: Math.round(row.score / Math.max(1, row.count)),
+        tickers: [...row.tickers],
+      }));
+  return `<div class="thesis-thermal-console">
+    ${laneRows.map((lane) => {
+      const theses = lane.theses.length ? lane.theses : rows.filter((item) => item.lane === lane.lane);
+      return `<article class="thermal-console-row">
+        <a class="thermal-console-lane" href="${esc(lane.href || "#thesis-tracker")}">
+          <strong>${esc(lane.lane || "未分类赛道")}</strong>
+          <span>${fmt(lane.count || theses.length)} thesis · Score ${fmt(lane.avgScore || 0)}</span>
+          <em>${esc((lane.tickers || []).slice(0, 8).join(" · ") || "watch")}</em>
+        </a>
+        <div class="thermal-console-cells">
+          ${theses.map((item) => {
+            const heat = Math.max(.14, Math.min(1, Number(item.practical?.score || item.conviction || 0) / 100));
+            return `<a class="thermal-console-cell" href="${esc(item.href || "#thesis-tracker")}" style="--heat:${heat}">
+              <strong>${esc(item.title || "")}</strong>
+              <span>${esc(item.status || "观察等待")} · ${esc(item.lastUpdated || "")}</span>
+              <em>${esc((item.stockTickers || item.stockUniverse?.map((stock) => stock.ticker) || []).slice(0, 4).join(" · ") || "watch")}</em>
+            </a>`;
+          }).join("") || `<div class="empty slim">暂无可见主线。</div>`}
+        </div>
+      </article>`;
+    }).join("")}
+  </div>`;
+}
+
 function filteredTheses(data, state) {
-  const tracker = data.thesisTracker || {};
   const q = (state.thesisQuery || "").trim().toLowerCase();
-  return (tracker.theses || []).filter((item) => {
-    const text = `${item.title} ${item.coreView} ${item.status} ${item.direction} ${(item.monitors || []).join(" ")}`.toLowerCase();
+  return allThesisRows(data).filter((item) => {
+    const text = `${item.title} ${item.coreView} ${item.status} ${item.direction} ${item.lane || ""} ${(item.stockTickers || []).join(" ")} ${(item.monitors || []).join(" ")}`.toLowerCase();
     if (q && !text.includes(q)) return false;
     if (state.thesisDirection && item.direction !== state.thesisDirection) return false;
     return true;
@@ -425,7 +536,9 @@ function filteredTheses(data, state) {
 export function renderThesisTracker(context) {
   const { app, data, state } = context;
   const tracker = data.thesisTracker || {};
+  const network = data.researchNetwork || {};
   const rows = filteredTheses(data, state);
+  const totalTheses = allThesisRows(data).length;
   app.innerHTML = `
     <section class="panel">
       <div class="daily-title">
@@ -434,14 +547,18 @@ export function renderThesisTracker(context) {
           <h2>投资主线追踪器</h2>
           <p>把研究结论升级为可持续跟踪的投资假设：信念、证据质量、风险压力、证伪指标和报告入口都在同一页。</p>
         </div>
-        <div class="daily-date">${fmt(tracker.stats?.total || 0)} 条主线</div>
+        <div class="daily-date">${fmt(totalTheses)} 条主线</div>
       </div>
       <div class="grid cols-4">
-        ${metric("跟踪主线", tracker.stats?.total || 0)}
+        ${metric("跟踪主线", totalTheses)}
         ${metric("源证据", tracker.stats?.sourceEvidence || 0, "var(--green)")}
-        ${metric("真实报告链接", tracker.stats?.sourceReports || 0, "var(--gold)")}
+        ${metric("赛道", network.stats?.laneCount || network.lanes?.length || 0, "var(--gold)")}
         ${metric("风险承压", tracker.stats?.riskPressure || 0, "var(--red)")}
       </div>
+    </section>
+    <section class="panel" style="margin-top:16px">
+      ${sectionHead("Thesis Thermal Map", `覆盖 ${fmt(network.stats?.laneCount || network.lanes?.length || 0)} 条赛道和 ${fmt(totalTheses)} 条主线。`)}
+      ${renderThesisThermal(rows, network)}
     </section>
     <section class="tracker-layout" style="margin-top:16px">
       <div class="panel">
