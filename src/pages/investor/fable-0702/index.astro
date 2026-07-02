@@ -1,0 +1,816 @@
+---
+import BaseHead from "../../../components/BaseHead.astro";
+import Header from "../../../components/Header.astro";
+import { stockPath } from "../../../lib/investor-market.js";
+import "../../../styles/fable-review.css";
+
+const reportDate = "2026-07-02";
+const corpusStats = [
+  { label: "合成报告", value: "228", note: "晨会、日报、周报" },
+  { label: "研究窗口", value: "71d", note: "2026-04-21 至 2026-07-01" },
+  { label: "预测记录", value: "17,333", note: "3,078 个代码/主题" },
+  { label: "组合账本", value: "26", note: "persona books" },
+  { label: "活论点", value: "19", note: "保留已修正与分歧" },
+  { label: "车道", value: "16", note: "可交易主线地图" },
+];
+
+const thesisNodes = [
+  {
+    id: "T01",
+    title: "AI 算力第一约束迁移到电力/电网物理交付",
+    status: "共识",
+    tone: "green",
+    lane: "L01",
+    start: "05-11",
+    end: "07-01",
+    score: 96,
+    summary: "AI capex 的瓶颈从 GPU 订单迁移到并网排队、变压器交期、GOES 与可交付电力。",
+    trigger: "变压器交期、并网队列或 hyperscaler capex 指引明显缓解。",
+  },
+  {
+    id: "T02",
+    title: "两融极值 + 科创50 雪球负 Gamma 去杠杆",
+    status: "共识",
+    tone: "red",
+    lane: "L05",
+    start: "04-23",
+    end: "07-01",
+    score: 94,
+    summary: "融资集中度、雪球敲入带与折算率下调共同构成可量化级联抛压。",
+    trigger: "CMR < 6% 且两融占流通 < 2.5% 持续两周。",
+  },
+  {
+    id: "T03",
+    title: "07-01 高低切换：科技动量反转，金融/猪周期/电力承接",
+    status: "已修正",
+    tone: "orange",
+    lane: "L07",
+    start: "06-22",
+    end: "07-01",
+    score: 91,
+    summary: "科技冲顶后由折算率、中报兑现与资金切换触发放量反转，承接方向转向顺周期与电力。",
+    trigger: "成交跌回 3 万亿下方，或猪价与社融未验证。",
+  },
+  {
+    id: "T04",
+    title: "Higher-for-Longer 再通胀：2026 年不降息为基准情景",
+    status: "共识",
+    tone: "yellow",
+    lane: "L14",
+    start: "04-21",
+    end: "06-29",
+    score: 88,
+    summary: "能源冲击、核心 PCE 与强就业使降息交易被出清，贴现率继续压制长久期资产。",
+    trigger: "核心 PCE 连续两月 m/m <= 0.2% 且就业明显走弱。",
+  },
+  {
+    id: "T05",
+    title: "红利防御完整弧线：避风港到物理红利，再到拥挤出清",
+    status: "已修正",
+    tone: "orange",
+    lane: "L06",
+    start: "04-22",
+    end: "07-01",
+    score: 82,
+    summary: "高股息从资产荒避风港演化为拥挤资产，6 月末进入技术性出清。",
+    trigger: "10Y < 1.65% 且险资被迫回流，可能重启红利抬轿。",
+  },
+  {
+    id: "T06",
+    title: "中国资产荒利率锚 + 年中理财赎回冲击",
+    status: "共识",
+    tone: "red",
+    lane: "L14",
+    start: "06-29",
+    end: "07-01",
+    score: 87,
+    summary: "中美利差极值与年中赎回冲击叠加，短端信用成为最新活跃风险。",
+    trigger: "3M NCD 利差回到 35bp 附近且赎回率显性回落。",
+  },
+  {
+    id: "T07",
+    title: "AI 硬件拥挤度治理：方向不是风险，拥挤度才是",
+    status: "共识",
+    tone: "blue",
+    lane: "L02",
+    start: "04-22",
+    end: "07-01",
+    score: 90,
+    summary: "CPO、光模块、半导体仓位由拥挤度闸门驱动，而非单纯基本面方向。",
+    trigger: "成交回补、宽度修复、两融买入占比回落三腿同现。",
+  },
+  {
+    id: "T08",
+    title: "业绩/订单验证 Alpha：弃虚就实",
+    status: "共识",
+    tone: "green",
+    lane: "L03",
+    start: "04-22",
+    end: "07-01",
+    score: 86,
+    summary: "市场只奖励有一季报、订单、认证或价格信号验证的标的，纯题材被系统性抛弃。",
+    trigger: "中报兑现率低于 0.6 且股价已提前透支。",
+  },
+  {
+    id: "T09",
+    title: "国产替代按良率/能效物理边界定价",
+    status: "共识",
+    tone: "green",
+    lane: "L04",
+    start: "05-20",
+    end: "06-30",
+    score: 84,
+    summary: "国产替代溢价属于设备、材料、成熟制程和绕硅侧环节，不属于全面先进制程突破叙事。",
+    trigger: "国产 HBM 良率越过 50% 或核心辅料突破。",
+  },
+  {
+    id: "T10",
+    title: "DeepSeek 推理通缩：AI 利润池迁移",
+    status: "分歧",
+    tone: "yellow",
+    lane: "L02",
+    start: "04-24",
+    end: "06-08",
+    score: 76,
+    summary: "推理成本下行证伪算力租赁价差，条件性利好高分发、高 token 弹性的应用。",
+    trigger: "ARR、续费率与毛利修复证据补齐，或闭源模型降价压垮云 AI 毛利。",
+  },
+  {
+    id: "T11",
+    title: "Hyperscaler capex ROI 分化",
+    status: "分歧",
+    tone: "yellow",
+    lane: "L02",
+    start: "04-22",
+    end: "06-28",
+    score: 78,
+    summary: "市场奖励有 AI 收入锚的云厂商，同时惩罚 capex 强度过高且现金流未验证者。",
+    trigger: "云收入增速回落而 capex 不减，或任一大厂主动下修 capex。",
+  },
+  {
+    id: "T12",
+    title: "中国医药出海：从政策折价到分段生产修复",
+    status: "共识",
+    tone: "green",
+    lane: "L08",
+    start: "04-17",
+    end: "06-28",
+    score: 83,
+    summary: "CXO 与创新药完成折价、订单韧性、合规折让与政策修复的闭环。",
+    trigger: "BCC 名单列入核心公司或折让扩大到 20% 以上。",
+  },
+  {
+    id: "T13",
+    title: "消费 K 型：白酒生命线失守，增长迁移到即时零售/B 端链主",
+    status: "共识",
+    tone: "blue",
+    lane: "L09",
+    start: "04-25",
+    end: "06-28",
+    score: 80,
+    summary: "白酒类债防御阵亡，真实增量从总量消费复苏迁移到渠道结构与 B 端供应链。",
+    trigger: "批价连续两周站稳 1600、库存月数下降、应收周转改善。",
+  },
+  {
+    id: "T14",
+    title: "地产：政策底不等于主体资产负债表修复",
+    status: "共识",
+    tone: "red",
+    lane: "L13",
+    start: "04-26",
+    end: "06-28",
+    score: 77,
+    summary: "托底在项目级和流动性级，主体信用修复没有发生，高能级核心资产与弱资质主体继续分化。",
+    trigger: "城市更新资金实质落地且百强销售转正。",
+  },
+  {
+    id: "T15",
+    title: "日元 carry unwind：最快的跨资产尾部通道",
+    status: "共识",
+    tone: "red",
+    lane: "L14",
+    start: "04-23",
+    end: "06-26",
+    score: 79,
+    summary: "USD/JPY 和 CFTC 净空极值显示尾部通道仍需买期权凸性，而非裸露 EM 科技敞口。",
+    trigger: "USD/JPY 急跌破 158、BoJ 加息、财务省实弹任二出现。",
+  },
+  {
+    id: "T16",
+    title: "集运/海运顺价：运费脉冲和绕行运力损耗",
+    status: "共识",
+    tone: "blue",
+    lane: "L11",
+    start: "05-29",
+    end: "06-23",
+    score: 75,
+    summary: "SCFI 与绕行损耗支持顺价交易，但复航后进入严格验证期。",
+    trigger: "SCFI 周环比跌超 10% 且新加坡低拥挤窗口超过 2 天。",
+  },
+  {
+    id: "T17",
+    title: "锂电/储能：whipsaw 后收敛为三条件框架",
+    status: "分歧",
+    tone: "yellow",
+    lane: "L12",
+    start: "04-22",
+    end: "06-28",
+    score: 68,
+    summary: "同一条链多次左右互搏，最终固化为现货、基差、排产三条件右侧框架。",
+    trigger: "现货站稳 15 万元/吨、基差连续转正、ESS/动力排产环比改善。",
+  },
+  {
+    id: "T18",
+    title: "能源地缘溢价构建与出清：油价地板论阵亡",
+    status: "已修正",
+    tone: "orange",
+    lane: "L10",
+    start: "04-21",
+    end: "06-30",
+    score: 72,
+    summary: "霍尔木兹溢价被停火与复航出清，交易主线转向库存缓冲与假性宽松分歧。",
+    trigger: "霍尔木兹再封锁或库存连续去化且 WTI 站回 72。",
+  },
+  {
+    id: "T19",
+    title: "商业航天再定价：虹吸论死亡，现金流瀑布定价",
+    status: "已修正",
+    tone: "orange",
+    lane: "L16",
+    start: "05-13",
+    end: "06-28",
+    score: 70,
+    summary: "被动虹吸叙事被证伪，债券定价使无 FCF 太空基建股进入贴现率惩罚框架。",
+    trigger: "07-07 被动流验证，或实际订单落地改变现金流框架。",
+  },
+];
+
+const lanes = [
+  {
+    id: "L01",
+    label: "AI 电力链",
+    priority: 1,
+    tone: "green",
+    freshness: 94,
+    kb: 96,
+    stocks: ["601179.SH", "002028.SZ", "688676.SH", "300274.SZ", "600900.SH", "GEV", "VRT", "ETN", "CLF"],
+    signal: "GOES 215 次，110 买 / 45 卖；FERC 141 次",
+    stance: "三项全满，但 QA 口径未闭合且短期拥挤退潮。",
+  },
+  {
+    id: "L03",
+    label: "存储/HBM/先进封装",
+    priority: 2,
+    tone: "green",
+    freshness: 91,
+    kb: 88,
+    stocks: ["688008.SH", "600584.SH", "603986.SH", "300054.SZ", "MU", "TSM"],
+    signal: "CoWoS/TSMC 203 次，86 买 / 56 卖",
+    stance: "轮动承接首选，07-10 前后需要双向纪律。",
+  },
+  {
+    id: "L02",
+    label: "CPO/光模块/PCB",
+    priority: 3,
+    tone: "blue",
+    freshness: 90,
+    kb: 86,
+    stocks: ["300308.SZ", "300502.SZ", "002463.SZ", "601138.SH", "688256.SH"],
+    signal: "拥挤度由 STAR/两融风险带间接覆盖",
+    stance: "减仓侧但知识最厚，三腿修复后才再入场。",
+  },
+  {
+    id: "L07",
+    label: "顺周期承接：券商/保险/猪周期",
+    priority: 4,
+    tone: "orange",
+    freshness: 96,
+    kb: 28,
+    stocks: ["600030.SH", "300059.SZ", "601688.SH", "601336.SH", "000876.SZ", "002714.SZ", "300498.SZ"],
+    signal: "暂无独立伪 ticker；以成交、社融、猪价验证",
+    stance: "最大错位：承接方向成立，但金融半边知识底座最薄。",
+  },
+  {
+    id: "L05",
+    label: "两融/雪球风险对冲带",
+    priority: 5,
+    tone: "red",
+    freshness: 93,
+    kb: 35,
+    stocks: ["588000.SH", "510300.SH", "IM", "IC"],
+    signal: "STAR 122 次，49 买 / 51 卖",
+    stance: "常开对冲，日频数据驱动，KB 薄可容忍。",
+  },
+  {
+    id: "L14",
+    label: "利率/汇率跨资产对冲",
+    priority: 6,
+    tone: "red",
+    freshness: 89,
+    kb: 70,
+    stocks: ["SHY", "TIP", "518880.SH", "UUP", "TLT"],
+    signal: "HIBOR 257 次，88 买 / 108 卖，唯一净偏空",
+    stance: "宏观带 KB 最扎实，作为组合工具箱常开。",
+  },
+  {
+    id: "L06",
+    label: "物理红利/煤炭防御",
+    priority: 7,
+    tone: "orange",
+    freshness: 84,
+    kb: 58,
+    stocks: ["600900.SH", "601985.SH", "601898.SH", "601398.SH", "002003.SZ", "2800.HK"],
+    signal: "无独立伪 ticker",
+    stance: "出清段执行纪律，保留底仓但不是加仓段。",
+  },
+  {
+    id: "L04",
+    label: "半导体设备/材料国产替代",
+    priority: 8,
+    tone: "green",
+    freshness: 82,
+    kb: 56,
+    stocks: ["002371.SZ", "688012.SH", "688082.SH", "688981.SH", "688037.SH"],
+    signal: "无独立伪 ticker",
+    stance: "限权重持有，电子化学品与电子布环节需要补 KB。",
+  },
+  {
+    id: "L08",
+    label: "创新药/CXO BD 出海",
+    priority: 9,
+    tone: "green",
+    freshness: 70,
+    kb: 32,
+    stocks: ["603259.SH", "2269.HK", "002821.SZ", "600276.SH", "9926.HK", "6990.HK", "1801.HK"],
+    signal: "CDMO 136 次，55 买 / 31 卖",
+    stance: "池最宽、知识最浅，研究补给第二优先。",
+  },
+  {
+    id: "L10",
+    label: "油气尾部/炼化 RIN",
+    priority: 10,
+    tone: "yellow",
+    freshness: 68,
+    kb: 55,
+    stocks: ["XOM", "CVX", "XLE", "0883.HK", "VLO", "MPC", "PSX"],
+    signal: "无独立伪 ticker",
+    stance: "能源 beta 减配，保留尾部对冲和监管分层。",
+  },
+  {
+    id: "L09",
+    label: "消费结构/白酒观察",
+    priority: 11,
+    tone: "blue",
+    freshness: 62,
+    kb: 30,
+    stocks: ["600519.SH", "000858.SZ", "001215.SZ", "605499.SH"],
+    signal: "批价与渠道数据在 KB 外",
+    stance: "底仓防守，三条件前不抄底白酒。",
+  },
+  {
+    id: "L15",
+    label: "端侧 AI/机器人物理 AI",
+    priority: 12,
+    tone: "blue",
+    freshness: 64,
+    kb: 46,
+    stocks: ["300408.SZ", "002463.SZ", "002747.SZ", "688017.SH", "601689.SH", "QCOM", "AAPL"],
+    signal: "手机链 10 天转冷",
+    stance: "只交易资金确认，手机/整机 KB 转冷是隐患。",
+  },
+  {
+    id: "L11",
+    label: "集运/海工顺价",
+    priority: 13,
+    tone: "yellow",
+    freshness: 58,
+    kb: 42,
+    stocks: ["601919.SH", "603727.SH", "601890.SH", "605222.SH"],
+    signal: "SCFI 周度证伪节奏快于 KB 更新",
+    stance: "复航后验证期，必须带硬证伪条款。",
+  },
+  {
+    id: "L13",
+    label: "地产信用分层",
+    priority: 14,
+    tone: "red",
+    freshness: 55,
+    kb: 25,
+    stocks: ["600048.SH", "000002.SZ", "508602.SH", "508600.SH"],
+    signal: "无地产/REITs 专链",
+    stance: "窄仓位与规避清单为主，主体信用仍未修复。",
+  },
+  {
+    id: "L12",
+    label: "锂电/储能三条件",
+    priority: 15,
+    tone: "yellow",
+    freshness: 48,
+    kb: 22,
+    stocks: ["300750.SZ", "LIT", "ALB", "SQM"],
+    signal: "新能源车链 12 天转冷",
+    stance: "左侧禁入纪律与 KB 空白一致，触发前先补链。",
+  },
+  {
+    id: "L16",
+    label: "商业航天/卫星期权",
+    priority: 16,
+    tone: "orange",
+    freshness: 42,
+    kb: 8,
+    stocks: ["688498.SH", "RKLB", "LUNR", "SPCE"],
+    signal: "SPCX 事件流",
+    stance: "纯期权/事件流，不占研究预算。",
+  },
+];
+
+const portfolioPanels = [
+  {
+    label: "已表达",
+    tone: "green",
+    count: 6,
+    title: "研究与仓位基本同向",
+    detail: "T01 电力链、T12 医药出海、T13 消费结构、部分 T11 云 ROI 分化均有组合表达。",
+  },
+  {
+    label: "反向对齐",
+    tone: "blue",
+    count: 3,
+    title: "不持有就是表达",
+    detail: "红利出清、油价地板证伪、锂电三条件未触发，低敞口与论点一致。",
+  },
+  {
+    label: "缺口交易",
+    tone: "orange",
+    count: 6,
+    title: "研究有信念，组合没载体",
+    detail: "T03 大金融/猪周期、T09 设备材料、T16 集运、T14 地产央国企、T12 港股 BD 腿缺席。",
+  },
+  {
+    label: "无主/污染",
+    tone: "red",
+    count: 12,
+    title: "持仓背后没有活论点",
+    detail: "GE、CDMO、TD、CRWV、NMPA/BOM/BESS 等需要归属、清除或校验。",
+  },
+  {
+    label: "结构限制",
+    tone: "yellow",
+    count: 2,
+    title: "系统缺对冲工具",
+    detail: "L05 和 L14 需要期权、期指、汇率、久期工具；当前多头目标权重机制无法表达。",
+  },
+];
+
+const actionItems = [
+  ["1", "清除假 ticker 仓位，并给 proposal 到 rebalance 管道加校验门", "Data Quality", "red"],
+  ["2", "确认 GE 是有意持有还是 GEV 混淆，第一大共识票必须归属", "Ownership", "orange"],
+  ["3", "审查 CRWV：算力租赁被证伪后仍有逆论点仓位", "Conflict", "red"],
+  ["4", "削减 TD、CDMO 等无主大仓，先核实 ticker 真伪", "Stale", "orange"],
+  ["5", "执行 07-01 高低切换减仓半边，降低 A 股 CPO/光模块集中度", "De-risk", "yellow"],
+  ["6", "执行 07-01 高低切换加仓半边，建立券商/金融表达", "Gap", "green"],
+  ["7", "补齐 T12 港股 BD 腿", "Gap", "green"],
+  ["8", "建立集运验证仓，并严格挂 SCFI 证伪条款", "Trial", "blue"],
+  ["9", "修复 A 股空仓书管道，让 T03/T12/T14 有表达载体", "Ops", "red"],
+  ["10", "修复 portfolio 工具列名漂移，让对齐度监控自动化", "Ops", "red"],
+];
+
+const deadTheses = [
+  ["D01", "6 月降息/PCE 放缓交易", "05-03", "降息概率快速归零，强就业与点阵图上修击碎宽松叙事。"],
+  ["D02", "油价 $73-75/80 强地板", "06-26", "WTI 跌至 $69.23，波斯湾出口恢复。"],
+  ["D03", "SpaceX IPO 被动虹吸 A 股/M7", "06-19", "被动再平衡被减持股无一为 A 股。"],
+  ["D04", "白酒防御替代/类债超配", "04-30", "茅台放量破位，泸州老窖 Q1 下滑。"],
+  ["D09", "锂价跌破 10 万", "05-04", "现货仍在 17.7 万元/吨附近，后续又反向打脸。"],
+  ["D12", "红利无限承接", "06-30", "承接上限与拥挤分位约束同时出现。"],
+];
+
+const disputes = [
+  "红利拥挤：物理红利超配 vs 拥挤出清换仓，07-01 行动站在出清侧。",
+  "油价假性宽松：央行超调 vs 库存紧与核心 CPI 传导，尚未裁决。",
+  "杠铃低配 TMT：政策工具误读 vs 类滞胀杠铃，科技权重仍有争议。",
+  "银行：NIM 筑底与 H 股股息 vs 美元计总回报价值陷阱。",
+  "生猪：Q4 周期底部反弹 vs 饲料降本诱发二次育肥。",
+  "AI SaaS：毛利修复条件未被 ARR/续费率证据确认。",
+  "FCF 拐点：利润表拐点同季确认 vs 租赁义务和自由现金流压力。",
+  "指数口径与 SPCX 锚点：多次数据口径冲突要求先 QA 后加杠杆。",
+  "国家队承接归因：成交量推断不能替代中登/申赎验证。",
+];
+
+const statusCounts = [...thesisNodes.reduce((acc, item) => {
+  acc.set(item.status, (acc.get(item.status) || 0) + 1);
+  return acc;
+}, new Map()).entries()];
+const maxLaneStocks = Math.max(...lanes.map((lane) => lane.stocks.length));
+const serializedLanes = JSON.stringify(lanes).replaceAll("<", "\\u003c");
+const serializedTheses = JSON.stringify(thesisNodes).replaceAll("<", "\\u003c");
+
+const stockHref = (ticker) => stockPath(ticker);
+---
+
+<!doctype html>
+<html lang="zh-CN" data-lang="zh">
+  <head>
+    <BaseHead
+      title="Fable 0702 全量研究复盘 · AI Institute"
+      description="把 2026-07-02 Fable review 转化为可交互的论点、车道、知识覆盖与组合对齐度可视化。"
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="fable-review" data-report-date={reportDate}>
+      <section class="fable-hero">
+        <div>
+          <div class="fable-kicker">Fable Review · {reportDate}</div>
+          <h1>研究成果全量挖掘复盘</h1>
+          <p>
+            把 228 篇研究合成报告、17,333 条预测流、26 本组合账本与产业链知识覆盖重新压缩成一个可读、可点击、可执行的研究驾驶舱。
+          </p>
+          <div class="fable-actions">
+            <a href="/investor/">返回研究台</a>
+            <a href="/investor/research-network/">研究网络</a>
+            <a href="/investor/portfolio/">组合追踪</a>
+            <a href="/investor/recaps/">复盘仪表盘</a>
+          </div>
+        </div>
+        <aside class="fable-verdict">
+          <span>Prime Finding</span>
+          <strong>研究引擎和下注引擎是两台不同步的机器。</strong>
+          <p>最新战术判断 T03 在组合中零表达，而需要切出的科技动量仍是 A 股侧最大共识仓之一。</p>
+        </aside>
+      </section>
+
+      <section class="fable-stat-grid" aria-label="Corpus summary">
+        {corpusStats.map((item) => (
+          <article>
+            <span>{item.label}</span>
+            <strong>{item.value}</strong>
+            <em>{item.note}</em>
+          </article>
+        ))}
+      </section>
+
+      <section class="fable-layout">
+        <article class="fable-panel fable-map-panel">
+          <div class="fable-section-head">
+            <span>Lane Priority Matrix</span>
+            <strong>新鲜度 × 知识深度 × 股票池宽度</strong>
+          </div>
+          <div class="matrix-stage" aria-label="Lane priority scatter plot">
+            <svg viewBox="0 0 920 520" role="img" aria-label="车道优先级散点图">
+              <defs>
+                <pattern id="fableGrid" width="46" height="46" patternUnits="userSpaceOnUse">
+                  <path d="M 46 0 L 0 0 0 46" fill="none" stroke="currentColor" stroke-width="1" opacity="0.13" />
+                </pattern>
+              </defs>
+              <rect x="0" y="0" width="920" height="520" fill="url(#fableGrid)" />
+              <line x1="70" y1="450" x2="850" y2="450" class="axis-line" />
+              <line x1="70" y1="450" x2="70" y2="58" class="axis-line" />
+              <text x="460" y="492" class="axis-title" text-anchor="middle">知识深度 / KB Depth</text>
+              <text x="24" y="254" class="axis-title" text-anchor="middle" transform="rotate(-90 24 254)">论点新鲜度 / Freshness</text>
+              {lanes.map((lane, index) => {
+                const x = 70 + (lane.kb / 100) * 780;
+                const y = 450 - (lane.freshness / 100) * 392;
+                const r = 13 + (lane.stocks.length / maxLaneStocks) * 18;
+                return (
+                  <a href={`#${lane.id}`} class={`lane-dot tone-${lane.tone}`} data-lane={lane.id} style={`--delay:${index * 42}ms`}>
+                    <circle cx={x} cy={y} r={r}>
+                      <title>{lane.id} · {lane.label} · Priority {lane.priority}</title>
+                    </circle>
+                    <text x={x} y={y + 4} text-anchor="middle">{lane.id}</text>
+                  </a>
+                );
+              })}
+            </svg>
+            <div class="matrix-legend">
+              <span>右上：可执行且知识足</span>
+              <span>左上：动作急但知识缺</span>
+              <span>右下：知识足但非当下</span>
+              <span>左下：期权/观察</span>
+            </div>
+          </div>
+        </article>
+
+        <aside class="fable-panel lane-inspector" id="laneInspector">
+          <div class="fable-section-head">
+            <span>Lane Inspector</span>
+            <strong id="laneInspectorTitle">L01 · AI 电力链</strong>
+          </div>
+          <p id="laneInspectorStance">三项全满，但 QA 口径未闭合且短期拥挤退潮。</p>
+          <div class="inspector-bars">
+            <label>新鲜度<i><b id="laneFreshnessBar" style="width:94%"></b></i><strong id="laneFreshnessValue">94</strong></label>
+            <label>KB 深度<i><b id="laneKbBar" style="width:96%"></b></i><strong id="laneKbValue">96</strong></label>
+          </div>
+          <div class="signal-note" id="laneSignal">GOES 215 次，110 买 / 45 卖；FERC 141 次</div>
+          <div class="stock-chip-row" id="laneStocks">
+            {lanes[0].stocks.map((ticker) => <a href={stockHref(ticker)}>{ticker}</a>)}
+          </div>
+        </aside>
+      </section>
+
+      <section class="fable-panel">
+        <div class="fable-section-head">
+          <span>Thesis Ledger</span>
+          <strong>{thesisNodes.length} 条活论点 · {deadTheses.length} 条墓地样本</strong>
+        </div>
+        <div class="ledger-toolbar">
+          <input id="fableSearch" type="search" placeholder="搜索论点、车道、股票、风险触发器..." />
+          {statusCounts.map(([status, count]) => <button type="button" data-status={status}>{status}<strong>{count}</strong></button>)}
+          <button type="button" data-status="">全部</button>
+        </div>
+        <div class="thesis-ribbon" aria-label="Thesis timeline">
+          {thesisNodes.map((item, index) => (
+            <a
+              id={item.id}
+              href={`#${item.lane}`}
+              class={`thesis-node tone-${item.tone}`}
+              data-status={item.status}
+              data-search={`${item.id} ${item.title} ${item.status} ${item.lane} ${item.summary} ${item.trigger}`}
+              style={`--score:${item.score}%; --delay:${index * 36}ms`}
+            >
+              <span>{item.id} · {item.start} → {item.end}</span>
+              <strong>{item.title}</strong>
+              <p>{item.summary}</p>
+              <em>{item.status} · {item.lane} · Score {item.score}</em>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="fable-grid-two">
+        <article class="fable-panel">
+          <div class="fable-section-head">
+            <span>Portfolio Alignment</span>
+            <strong>26 本书 vs 19 条活论点</strong>
+          </div>
+          <div class="alignment-strip">
+            <div><span>现金</span><strong>$24.4M</strong><em>NAV $28.06M</em></div>
+            <div><span>实际仓位</span><strong>13.0%</strong><em>谨慎的唯一宏观表达</em></div>
+            <div><span>零表达</span><strong>T03</strong><em>大金融/猪周期缺席</em></div>
+            <div><span>下个检验</span><strong>07-15</strong><em>中报验尸</em></div>
+          </div>
+          <div class="portfolio-panel-grid">
+            {portfolioPanels.map((item) => (
+              <article class={`portfolio-signal tone-${item.tone}`}>
+                <span>{item.label}</span>
+                <strong>{item.count}</strong>
+                <h3>{item.title}</h3>
+                <p>{item.detail}</p>
+              </article>
+            ))}
+          </div>
+        </article>
+
+        <article class="fable-panel">
+          <div class="fable-section-head">
+            <span>Action Queue</span>
+            <strong>从复盘到执行的十个动作</strong>
+          </div>
+          <div class="action-queue">
+            {actionItems.map(([rank, title, badge, tone]) => (
+              <a href="#portfolio-actions" class={`action-item tone-${tone}`}>
+                <span>{rank}</span>
+                <strong>{title}</strong>
+                <em>{badge}</em>
+              </a>
+            ))}
+          </div>
+        </article>
+      </section>
+
+      <section class="fable-panel">
+        <div class="fable-section-head">
+          <span>Lane Heat Table</span>
+          <strong>优先级、信号、股票池与执行姿态</strong>
+        </div>
+        <div class="lane-table">
+          {lanes.map((lane) => (
+            <article id={lane.id} class={`lane-row tone-${lane.tone}`} data-lane={lane.id} data-search={`${lane.id} ${lane.label} ${lane.signal} ${lane.stance} ${lane.stocks.join(" ")}`}>
+              <a class="lane-row-main" href={`#${lane.id}`}>
+                <span>#{lane.priority} · {lane.id}</span>
+                <strong>{lane.label}</strong>
+                <em>{lane.stance}</em>
+              </a>
+              <div class="lane-metrics">
+                <span>Fresh <b style={`width:${lane.freshness}%`}></b><strong>{lane.freshness}</strong></span>
+                <span>KB <b style={`width:${lane.kb}%`}></b><strong>{lane.kb}</strong></span>
+              </div>
+              <div class="lane-signal">{lane.signal}</div>
+              <div class="stock-chip-row compact">
+                {lane.stocks.slice(0, 8).map((ticker) => <a href={stockHref(ticker)}>{ticker}</a>)}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="fable-grid-two">
+        <article class="fable-panel">
+          <div class="fable-section-head">
+            <span>Dead Thesis Graveyard</span>
+            <strong>弃案也是 alpha</strong>
+          </div>
+          <div class="graveyard">
+            {deadTheses.map(([id, title, date, reason]) => (
+              <article>
+                <span>{id} · {date}</span>
+                <strong>{title}</strong>
+                <p>{reason}</p>
+              </article>
+            ))}
+          </div>
+        </article>
+
+        <article class="fable-panel">
+          <div class="fable-section-head">
+            <span>Active Disputes</span>
+            <strong>还没有被市场裁决的矛盾</strong>
+          </div>
+          <ol class="dispute-list">
+            {disputes.map((item) => <li>{item}</li>)}
+          </ol>
+        </article>
+      </section>
+
+      <section class="fable-panel method-panel">
+        <div class="fable-section-head">
+          <span>Method & Limits</span>
+          <strong>公开展示口径</strong>
+        </div>
+        <div class="method-grid">
+          <div>
+            <h2>挖掘方法</h2>
+            <p>按时间与报告类型分桶精读，再将论点、主线、股票池、预测流主题信号和组合持仓做语义合并。页面保留被证伪论点、主动分歧与组合错配，因为这些是下一轮研究和执行改进的核心线索。</p>
+          </div>
+          <div>
+            <h2>已知局限</h2>
+            <p>5 月中至 6 月中周报覆盖存在簇状缺口；预测流中含主题缩写与伪 ticker，需要在组合管道中加校验门；本文展示的是合成层结果，不直接公开内部原始工作流对象。</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script id="fable-lanes" type="application/json" is:inline set:html={serializedLanes}></script>
+    <script id="fable-theses" type="application/json" is:inline set:html={serializedTheses}></script>
+    <script>
+      const lanes = JSON.parse(document.getElementById("fable-lanes")?.textContent || "[]");
+      const laneById = new Map(lanes.map((lane) => [lane.id, lane]));
+      const inspector = {
+        title: document.getElementById("laneInspectorTitle"),
+        stance: document.getElementById("laneInspectorStance"),
+        signal: document.getElementById("laneSignal"),
+        stocks: document.getElementById("laneStocks"),
+        freshnessBar: document.getElementById("laneFreshnessBar"),
+        kbBar: document.getElementById("laneKbBar"),
+        freshnessValue: document.getElementById("laneFreshnessValue"),
+        kbValue: document.getElementById("laneKbValue"),
+      };
+
+      function stockHref(ticker) {
+        const clean = String(ticker || "").trim().toUpperCase().replace(/[^A-Z0-9.:-]+/g, "-").replace(/^-+|-+$/g, "");
+        return `/investor/stocks/${clean || "UNKNOWN"}/`;
+      }
+
+      function selectLane(id) {
+        const lane = laneById.get(id);
+        if (!lane) return;
+        document.querySelectorAll("[data-lane]").forEach((node) => {
+          node.classList.toggle("is-selected", node.dataset.lane === id);
+        });
+        inspector.title.textContent = `${lane.id} · ${lane.label}`;
+        inspector.stance.textContent = lane.stance;
+        inspector.signal.textContent = lane.signal;
+        inspector.freshnessBar.style.width = `${lane.freshness}%`;
+        inspector.kbBar.style.width = `${lane.kb}%`;
+        inspector.freshnessValue.textContent = lane.freshness;
+        inspector.kbValue.textContent = lane.kb;
+        inspector.stocks.innerHTML = lane.stocks.map((ticker) => `<a href="${stockHref(ticker)}">${ticker}</a>`).join("");
+      }
+
+      document.querySelectorAll("[data-lane]").forEach((node) => {
+        node.addEventListener("click", () => selectLane(node.dataset.lane));
+        node.addEventListener("mouseenter", () => selectLane(node.dataset.lane));
+      });
+
+      const search = document.getElementById("fableSearch");
+      let statusFilter = "";
+      function applyFilters() {
+        const q = (search?.value || "").trim().toLowerCase();
+        document.querySelectorAll("[data-search]").forEach((node) => {
+          const haystack = String(node.dataset.search || "").toLowerCase();
+          const status = node.dataset.status || "";
+          const visible = (!q || haystack.includes(q)) && (!statusFilter || status === statusFilter);
+          node.hidden = !visible;
+        });
+      }
+      search?.addEventListener("input", applyFilters);
+      document.querySelectorAll("[data-status]").forEach((button) => {
+        button.addEventListener("click", () => {
+          statusFilter = button.dataset.status || "";
+          document.querySelectorAll("[data-status]").forEach((item) => item.classList.toggle("is-active", item === button));
+          applyFilters();
+        });
+      });
+      selectLane("L01");
+    </script>
+  </body>
+</html>
