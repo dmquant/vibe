@@ -1,6 +1,7 @@
 ---
 import BaseHead from "../../../components/BaseHead.astro";
 import Header from "../../../components/Header.astro";
+import { readResearchNetwork } from "../../../lib/investor-generated.js";
 import { stockPath } from "../../../lib/investor-market.js";
 import "../../../styles/fable-review.css";
 
@@ -501,10 +502,13 @@ const statusCounts = [...thesisNodes.reduce((acc, item) => {
   return acc;
 }, new Map()).entries()];
 const maxLaneStocks = Math.max(...lanes.map((lane) => lane.stocks.length));
+const network = readResearchNetwork();
+const publicStockTickers = new Set((network.theses || []).flatMap((thesis) => (thesis.stockUniverse || []).map((stock) => stock.ticker)));
 const serializedLanes = JSON.stringify(lanes).replaceAll("<", "\\u003c");
 const serializedTheses = JSON.stringify(thesisNodes).replaceAll("<", "\\u003c");
+const serializedPublicStocks = JSON.stringify([...publicStockTickers]).replaceAll("<", "\\u003c");
 
-const stockHref = (ticker) => stockPath(ticker);
+const stockHref = (ticker) => publicStockTickers.has(ticker) ? stockPath(ticker) : `/investor/research-network/?q=${encodeURIComponent(ticker)}`;
 ---
 
 <!doctype html>
@@ -751,8 +755,10 @@ const stockHref = (ticker) => stockPath(ticker);
 
     <script id="fable-lanes" type="application/json" is:inline set:html={serializedLanes}></script>
     <script id="fable-theses" type="application/json" is:inline set:html={serializedTheses}></script>
+    <script id="fable-public-stocks" type="application/json" is:inline set:html={serializedPublicStocks}></script>
     <script>
       const lanes = JSON.parse(document.getElementById("fable-lanes")?.textContent || "[]");
+      const publicStocks = new Set(JSON.parse(document.getElementById("fable-public-stocks")?.textContent || "[]"));
       const laneById = new Map(lanes.map((lane) => [lane.id, lane]));
       const inspector = {
         title: document.getElementById("laneInspectorTitle"),
@@ -767,7 +773,7 @@ const stockHref = (ticker) => stockPath(ticker);
 
       function stockHref(ticker) {
         const clean = String(ticker || "").trim().toUpperCase().replace(/[^A-Z0-9.:-]+/g, "-").replace(/^-+|-+$/g, "");
-        return `/investor/stocks/${clean || "UNKNOWN"}/`;
+        return publicStocks.has(ticker) ? `/investor/stocks/${clean || "UNKNOWN"}/` : `/investor/research-network/?q=${encodeURIComponent(ticker)}`;
       }
 
       function selectLane(id) {
