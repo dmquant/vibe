@@ -1,0 +1,18 @@
+{
+  "slug": "archive-0dcc2f9719c9",
+  "href": "/investor/reports/archive-0dcc2f9719c9/",
+  "meta": {
+    "title": "共享数据采集摘要 2026-07-03",
+    "date": "2026-07-03",
+    "analyst_id": "data-scientist",
+    "analyst_name": "数据科学家",
+    "tags": [
+      "通胀",
+      "综合编审"
+    ],
+    "source": "archive-0dcc2f9719c9",
+    "source_label": "每日任务报告",
+    "source_kind": "daily_task"
+  },
+  "bodyHtml": "<h1>共享数据采集摘要 2026-07-03</h1>\n<h2>markets_overnight</h2>\n<ul>\n<li>字段总数: 13</li>\n<li>空值数: 0</li>\n<li>confidence: high</li>\n</ul>\n<h2>markets_close_cn</h2>\n<ul>\n<li>字段总数: 5</li>\n<li>空值数: 0</li>\n<li>confidence: high</li>\n</ul>\n<h2>失败 / 修复</h2>\n<ul>\n<li>dxy=empty</li>\n<li>vix=empty</li>\n<li>ust10y=empty</li>\n<li>brent=empty</li>\n<li>wti=empty</li>\n<li>gold=empty</li>\n<li>spx=empty</li>\n<li>ndx=empty</li>\n<li>dow=empty</li>\n<li>eurusd=empty</li>\n<li>usdjpy=empty</li>\n<li>n225=empty</li>\n<li>\n<p>hsi=empty</p>\n</li>\n<li>\n<p><strong>修复说明</strong>: 由于 Stooq CSV 下载端点因浏览器验证机制（如 Cloudflare 挑战）被阻断，所有 13 个隔夜市场指标均已通过 <code>web_search</code> 和 Sina JS API 成功修复并填入最新（2026-07-02 收盘）价格。</p>\n</li>\n</ul>"
+}
