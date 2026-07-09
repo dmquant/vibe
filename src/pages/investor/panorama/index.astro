@@ -1,0 +1,263 @@
+---
+import BaseHead from "../../../components/BaseHead.astro";
+import Header from "../../../components/Header.astro";
+import { buildWeeklyPanoramaBundle } from "../../../lib/weekly-panorama.js";
+import "../../../styles/weekly-panorama.css";
+
+const panorama = buildWeeklyPanoramaBundle();
+const stats = panorama.stats || {};
+const maxLaneEvents = Math.max(1, ...panorama.lanes.map((lane) => lane.weeklyEvents || 0));
+const maxClusterShare = Math.max(1, ...panorama.clusters.map((cluster) => cluster.share || 0));
+const maxPersonaEvents = Math.max(1, ...panorama.analystTerritory.map((persona) => persona.weeklyEvents || 0));
+const maxStockMentions = Math.max(1, ...panorama.stocks.map((stock) => stock.mentions || 0));
+const width = (value, max) => `${Math.max(6, Math.round((Number(value || 0) / max) * 100))}%`;
+const searchText = (...items) => String(items.filter(Boolean).join(" ")).replaceAll('"', "&quot;");
+---
+
+<!doctype html>
+<html lang="zh-CN" data-lang="zh">
+  <head>
+    <BaseHead
+      title="周度全景 · AI Institute 投资研究台"
+      description="AI Institute weekly panorama endpoint over public theses, lanes, stocks, analyst territory, risk signals, and reader reports."
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="weekly-panorama" data-week={panorama.week}>
+      <section class="panorama-hero">
+        <div>
+          <div class="panorama-kicker">AI Institute · Weekly Panorama</div>
+          <h1>周度研究全景</h1>
+          <p>{panorama.lead}</p>
+          <div class="panorama-actions">
+            <a href="/investor/">返回研究台</a>
+            <a href="/investor/panorama/weekly.json">JSON bundle</a>
+            <a href="/investor/research-network/">研究网络</a>
+            <a href="/investor/portfolio/">组合追踪</a>
+          </div>
+        </div>
+        <aside class="panorama-window">
+          <span>{panorama.mode}</span>
+          <strong>{panorama.week}</strong>
+          <em>{panorama.window.from} → {panorama.window.to}</em>
+          <p>这是 Vibe 侧的公开合约版周度全景。完整 embed → cluster → scorecard → PDF 的重计算流程应作为独立 Panorama App 运行。</p>
+        </aside>
+      </section>
+
+      <section class="panorama-stat-grid" aria-label="Weekly panorama stats">
+        <a href="/investor/research-network/"><span>Theses</span><strong>{stats.theses}</strong><em>公开主线</em></a>
+        <a href="/investor/research-network/"><span>Lanes</span><strong>{stats.lanes}</strong><em>赛道</em></a>
+        <a href="/investor/research-network/"><span>Stocks</span><strong>{stats.stocks}</strong><em>标的节点</em></a>
+        <a href="/investor/timeline/"><span>Weekly events</span><strong>{stats.weeklyThesisEvents}</strong><em>本窗口主线事件</em></a>
+        <a href="/investor/personas/"><span>View changes</span><strong>{stats.analystViewChanges}</strong><em>分析师视角变化</em></a>
+      </section>
+
+      <section class="panorama-controls">
+        <label for="panoramaSearch">Search</label>
+        <input id="panoramaSearch" type="search" placeholder="搜索主线、赛道、标的、分析师、风险..." />
+        <a href="/investor/panorama/weekly.json">下载 JSON</a>
+      </section>
+
+      <section class="panorama-section">
+        <div class="panorama-section-head">
+          <span>House Thesis</span>
+          <h2>本周主线骨架</h2>
+          <p>{panorama.headline}</p>
+        </div>
+        <div class="house-grid">
+          {panorama.houseTheses.map((thesis, index) => (
+            <article
+              class="house-card panorama-searchable"
+              data-search={searchText(thesis.title, thesis.lane, thesis.coreView, thesis.stockTickers.join(" "), thesis.topTerms.join(" "))}
+            >
+              <div class="house-top">
+                <span>#{index + 1}</span>
+                <em>{thesis.actionLabel}</em>
+              </div>
+              <h3><a href={thesis.href}>{thesis.title}</a></h3>
+              <p>{thesis.coreView}</p>
+              <div class="house-metrics">
+                <span><strong>{thesis.score}</strong> score</span>
+                <span><strong>{thesis.weeklyEvents}</strong> events</span>
+                <span><strong>{thesis.riskRatio}%</strong> risk</span>
+              </div>
+              <div class="tag-row">
+                {thesis.stockTickers.slice(0, 6).map((ticker) => <a href={`/investor/stocks/${ticker}/`}>{ticker}</a>)}
+              </div>
+              <div class="event-stack">
+                {thesis.events.map((event) => (
+                  <a href={event.href || thesis.href}>
+                    <span>{event.date} · {event.supportLabel}</span>
+                    <strong>{event.title}</strong>
+                  </a>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="panorama-two-col">
+        <div class="panorama-section">
+          <div class="panorama-section-head compact">
+            <span>Lane Momentum</span>
+            <h2>赛道动量</h2>
+            <p>按周度事件、主线强度和可点击标的合并。</p>
+          </div>
+          <div class="lane-stack">
+            {panorama.lanes.map((lane) => (
+              <article class="lane-row panorama-searchable" data-search={searchText(lane.lane, lane.stocks.map((stock) => stock.ticker).join(" "), lane.theses.map((thesis) => thesis.title).join(" "))}>
+                <a class="lane-title" href={lane.href}>
+                  <strong>{lane.lane}</strong>
+                  <span>{lane.thesisCount} theses · {lane.weeklyEvents} events · risk {lane.riskShare}%</span>
+                </a>
+                <div class="lane-bar"><i style={`--width:${width(lane.weeklyEvents, maxLaneEvents)}`}></i></div>
+                <div class="tag-row compact">
+                  {lane.stocks.slice(0, 7).map((stock) => <a href={stock.href}>{stock.ticker}</a>)}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <div class="panorama-section">
+          <div class="panorama-section-head compact">
+            <span>Theme Cluster Proxy</span>
+            <h2>主题簇代理</h2>
+            <p>来自公开 top terms 与本周主线事件，完整聚类留给独立应用。</p>
+          </div>
+          <div class="cluster-cloud">
+            {panorama.clusters.map((cluster, index) => (
+              <article class="cluster-token panorama-searchable" data-search={searchText(cluster.label, cluster.stockTickers.join(" "), cluster.linkedTheses.map((thesis) => thesis.title).join(" "))} style={`--share:${width(cluster.share, maxClusterShare)}; --tone-index:${index % 5};`}>
+                <div>
+                  <strong>{cluster.label}</strong>
+                  <span>{cluster.thesisCount} theses · {cluster.eventCount} events</span>
+                </div>
+                <i></i>
+                <div class="cluster-links">
+                  {cluster.linkedTheses.slice(0, 3).map((thesis) => <a href={thesis.href}>{thesis.title}</a>)}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="panorama-section">
+        <div class="panorama-section-head">
+          <span>Stock Signal Surface</span>
+          <h2>标的节点热区</h2>
+          <p>把本周高权重赛道映射到可点击 ticker，作为研究把手，不作为交易建议。</p>
+        </div>
+        <div class="stock-signal-grid">
+          {panorama.stocks.map((stock) => (
+            <a
+              class="stock-signal panorama-searchable"
+              href={stock.href}
+              data-search={searchText(stock.ticker, stock.name, stock.lanes.map((lane) => lane.lane).join(" "))}
+              style={`--width:${width(stock.mentions, maxStockMentions)}`}
+            >
+              <span>{stock.ticker}</span>
+              <strong>{stock.name || stock.ticker}</strong>
+              <em>{stock.mentions} lane links · score {stock.score}</em>
+              <i></i>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="panorama-two-col wide-right">
+        <div class="panorama-section">
+          <div class="panorama-section-head compact">
+            <span>Analyst Territory</span>
+            <h2>分析师 territory</h2>
+            <p>按本周公开事件密度和风险占比排序。</p>
+          </div>
+          <div class="persona-stack">
+            {panorama.analystTerritory.map((persona) => (
+              <article class="persona-row panorama-searchable" data-search={searchText(persona.name, persona.category, persona.currentView, persona.topTerms.join(" "))}>
+                <a href={persona.href}>
+                  <strong>{persona.name}</strong>
+                  <span>{persona.category} · {persona.weeklyEvents} events · risk {persona.riskShare}%</span>
+                </a>
+                <div class="persona-bar"><i style={`--width:${width(persona.weeklyEvents, maxPersonaEvents)}`}></i></div>
+                <p>{persona.currentView}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <div class="panorama-section">
+          <div class="panorama-section-head compact">
+            <span>Risks & Contradictions</span>
+            <h2>风险与分歧</h2>
+            <p>把风险矩阵和双边证据主线放在一起看。</p>
+          </div>
+          <div class="risk-contradiction-grid">
+            <div class="risk-list">
+              {panorama.riskBoard.slice(0, 6).map((risk) => (
+                <a href={risk.href} class="risk-row panorama-searchable" data-search={searchText(risk.chain, risk.title)}>
+                  <span>{risk.chain}</span>
+                  <strong>{risk.title}</strong>
+                  <em>impact {risk.impact} / probability {risk.probability}</em>
+                </a>
+              ))}
+            </div>
+            <div class="contradiction-list">
+              {panorama.contradictions.slice(0, 6).map((item) => (
+                <article class="contradiction-card panorama-searchable" data-search={searchText(item.title, item.status)}>
+                  <span>{item.status} · pressure {item.riskPressure}</span>
+                  <h3><a href={item.href}>{item.title}</a></h3>
+                  <p>支持 {item.supportFor} / 反向 {item.supportAgainst} · {item.analysts} analysts</p>
+                  <div>
+                    {item.forEvidence.map((evidence) => <a href={evidence.href}>支持：{evidence.title}</a>)}
+                    {item.againstEvidence.map((evidence) => <a href={evidence.href}>反向：{evidence.title}</a>)}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panorama-section">
+        <div class="panorama-section-head">
+          <span>Process From 2026-07-07 Design</span>
+          <h2>如何走向完整 Panorama App</h2>
+          <p>{panorama.scorecard.note}</p>
+        </div>
+        <div class="process-grid">
+          {panorama.process.map((item) => (
+            <article>
+              <span>{item.step}</span>
+              <strong>{item.title}</strong>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+        <div class="scorecard-strip">
+          {panorama.scorecard.rows.map((row) => (
+            <a href={row.href}>
+              <span>{row.label}</span>
+              <strong>{row.value}</strong>
+            </a>
+          ))}
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const input = document.getElementById("panoramaSearch");
+      const items = [...document.querySelectorAll(".panorama-searchable")];
+      const normalize = (value) => String(value || "").toLowerCase().trim();
+
+      input?.addEventListener("input", () => {
+        const query = normalize(input.value);
+        items.forEach((item) => {
+          item.classList.toggle("is-hidden", Boolean(query) && !normalize(item.dataset.search).includes(query));
+        });
+      });
+    </script>
+  </body>
+</html>
