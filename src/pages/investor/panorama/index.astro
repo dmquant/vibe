@@ -59,9 +59,111 @@ const searchText = (...items) => String(items.filter(Boolean).join(" ")).replace
         <a href="/investor/panorama/weekly.json">下载 JSON</a>
       </section>
 
+      <section class="panorama-section action-first">
+        <div class="panorama-section-head">
+          <span>This Week's Calls</span>
+          <h2>本周操作结论</h2>
+          <p>{panorama.recommendations.disclaimer}</p>
+        </div>
+        <div class="call-table">
+          {panorama.recommendations.calls.map((call) => (
+            <a
+              class={`call-row action-${String(call.action).toLowerCase()} panorama-searchable`}
+              href={call.href}
+              data-search={searchText(call.action, call.target, call.kind, call.lane, call.driver, call.thesisTitle, call.linkedTicker)}
+            >
+              <span>{call.action}</span>
+              <strong>{call.target}</strong>
+              <em>{call.kind} · {call.evidenceDate}</em>
+              <p>{call.driver}</p>
+              <small>Stop: {call.invalidation}</small>
+              {call.linkedTicker && <b>{call.linkedTicker}</b>}
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="panorama-two-col action-layout">
+        <div class="panorama-section">
+          <div class="panorama-section-head compact">
+            <span>Theses → Positioning</span>
+            <h2>论点到仓位</h2>
+            <p>每条主线压缩为 claim、当前仓位含义、本周证据和证伪条件。</p>
+          </div>
+          <div class="positioning-stack">
+            {panorama.positioning.map((item) => (
+              <article class="positioning-card panorama-searchable" data-search={searchText(item.title, item.lane, item.positioning, item.stocks.map((stock) => stock.ticker).join(" "))}>
+                <div>
+                  <span>{item.action} · {item.evidenceDate}</span>
+                  <h3><a href={item.href}>{item.title}</a></h3>
+                </div>
+                <p>{item.positioning}</p>
+                <small>{item.confirmingDatum}</small>
+                <em>Stop: {item.invalidation}</em>
+                <div class="tag-row compact">
+                  {item.stocks.slice(0, 6).map((stock) => <a href={stock.href}>{stock.ticker}</a>)}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <div class="panorama-section">
+          <div class="panorama-section-head compact">
+            <span>Lane Allocation</span>
+            <h2>赛道配置</h2>
+            <p>按公开合约的主线强度、事件密度和风险占比映射为 Overweight / Neutral / Underweight。</p>
+          </div>
+          <div class="allocation-stack">
+            {panorama.laneAllocation.map((lane) => (
+              <article class={`allocation-row stance-${String(lane.stance).toLowerCase()} panorama-searchable`} data-search={searchText(lane.lane, lane.stance, lane.stocks.map((stock) => stock.ticker).join(" "), lane.nextCatalyst, lane.killSwitch)}>
+                <a href={lane.href}>
+                  <span>#{lane.rank} · {lane.stance}</span>
+                  <strong>{lane.lane}</strong>
+                </a>
+                <p>{lane.nextCatalyst}</p>
+                <small>Kill switch: {lane.killSwitch}</small>
+                <div class="lane-bar"><i style={`--width:${width(lane.weeklyEvents, maxLaneEvents)}`}></i></div>
+                <div class="tag-row compact">
+                  {lane.stocks.slice(0, 6).map((stock) => <a href={stock.href}>{stock.ticker}</a>)}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section class="panorama-section">
         <div class="panorama-section-head">
-          <span>House Thesis</span>
+          <span>Stock Sheet</span>
+          <h2>个股清单</h2>
+          <p>从本周赛道配置和公开合约映射出的核心多头、回避/降权、分歧股和新观察标的。</p>
+        </div>
+        <div class="stock-sheet-grid">
+          {[
+            ["核心多头", panorama.stockSheet.coreLongs],
+            ["空头/回避", panorama.stockSheet.avoidOrTrim],
+            ["分歧股", panorama.stockSheet.debates],
+            ["新出现", panorama.stockSheet.freshNames],
+          ].map(([title, rows]) => (
+            <section class="stock-sheet-column">
+              <h3>{title}</h3>
+              {(rows || []).slice(0, 6).map((stock) => (
+                <a class="stock-sheet-row panorama-searchable" href={stock.href} data-search={searchText(title, stock.ticker, stock.name, stock.driver, stock.numericEvidence)}>
+                  <span>{stock.ticker}</span>
+                  <strong>{stock.name}</strong>
+                  <em>{stock.numericEvidence}</em>
+                  <small>{stock.crowdingFlag} · {stock.evidenceDate}</small>
+                </a>
+              ))}
+            </section>
+          ))}
+        </div>
+      </section>
+
+      <section class="panorama-section">
+        <div class="panorama-section-head">
+          <span>Evidence Appendix · House Thesis</span>
           <h2>本周主线骨架</h2>
           <p>{panorama.headline}</p>
         </div>

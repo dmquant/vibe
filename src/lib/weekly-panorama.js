@@ -53,6 +53,40 @@ function number(value, fallback = 0) {
   return Number.isFinite(parsed) ? parsed : fallback;
 }
 
+function firstText(values, fallback = "") {
+  for (const value of values || []) {
+    const text = sanitizeText(value, 180);
+    if (text) return text;
+  }
+  return fallback;
+}
+
+function isOperationalArtifact(thesis = {}) {
+  const text = [
+    thesis.title,
+    thesis.titleEn,
+    thesis.coreView,
+    thesis.practical?.portfolioUse,
+    thesis.practical?.actionLabel,
+  ].filter(Boolean).join(" ");
+  return [
+    /\b(all three|mandatory|required)\s+deliverables?\s+(are\s+)?(written|verified|validated|complete|successfully|generated)/i,
+    /\bdeliverables?\s+(written|verified|validated|generated)\b/i,
+    /\b(json|meta\.json)\s+(parses|validates|is valid json)\b/i,
+    /\bi have (successfully )?completed (the task|the research|the synthesis|the analysis)\b/i,
+    /\bas requested, here is the confirmation of the written deliverables\b/i,
+    /\bsummary of work\b/i,
+    /\bworkspace robustness\b/i,
+    /\breferenced files .*deliverables\b/i,
+    /\breferenced files\b.*\b(session brief|analyst catalog|report\/metadata|workspace|missing|directories|research note)\b/i,
+    /\breferenced workspace files\b/i,
+    /\bupstream files\b.*\b(session brief|analyst catalog|were missing)\b/i,
+    /\bmissing upstream files\b/i,
+    /\bsession brief\.md\b.*\banalyst catalog\.json\b.*\b(missing|reconstructed|workspace|referenced)\b/i,
+    /\bshared workspace was empty\b/i,
+  ].some((pattern) => pattern.test(text));
+}
+
 function inWindow(date, from, to) {
   const parsed = toDate(date);
   if (!parsed) return false;
@@ -99,6 +133,7 @@ function collectThesisEvents(thesis, from, to) {
 
 function buildHouseTheses(theses, from, to) {
   return theses
+    .filter((thesis) => !isOperationalArtifact(thesis))
     .map((thesis) => {
       const weeklyEvents = collectThesisEvents(thesis, from, to);
       const score = thesisScore(thesis, weeklyEvents);
@@ -111,14 +146,29 @@ function buildHouseTheses(theses, from, to) {
         href: thesis.href || `/investor/theses/${thesis.id}/`,
         score,
         conviction: number(thesis.conviction),
+        direction: sanitizeText(thesis.direction || thesis.directionLabel, 40),
+        actionCode: sanitizeText(thesis.practical?.actionCode || thesis.direction, 50),
         weeklyEvents: weeklyEvents.length,
         weeklySupports: supports,
         weeklyRisks: risks,
+        supportCount: number(thesis.supports),
+        riskCount: number(thesis.risks),
         riskRatio: Math.round((risks / Math.max(1, weeklyEvents.length)) * 100),
         coreView: sanitizeText(thesis.coreView || thesis.practical?.portfolioUse, 220),
+        positioning: sanitizeText(thesis.practical?.portfolioUse || thesis.practical?.positionSizing || thesis.coreView, 220),
+        positionSizing: sanitizeText(thesis.practical?.positionSizing || thesis.practical?.weightGuide, 120),
         actionLabel: sanitizeText(thesis.practical?.actionLabel || thesis.directionLabel || "观察", 60),
+        confirmation: firstText(thesis.practical?.confirmationSignals, "等待下一条可验证的公开证据确认。"),
+        invalidation: firstText(thesis.practical?.invalidationSignals, "若本周反向证据继续增加，则该判断需要下调。"),
         stockTickers: (thesis.stockTickers || thesis.practical?.stockTickers || []).slice(0, 8),
+        primaryStocks: (thesis.practical?.primaryStocks || thesis.stockUniverse || []).slice(0, 8).map((stock) => ({
+          ticker: sanitizeText(stock.ticker, 24),
+          name: sanitizeText(stock.name, 60),
+          href: stock.href || `/investor/stocks/${stock.ticker}/`,
+          role: sanitizeText(stock.role || stock.bucket, 80),
+        })),
         topTerms: (thesis.topTerms || []).slice(0, 8).map((term) => sanitizeText(term, 28)),
+        evidenceDate: weeklyEvents[0]?.date || thesis.lastSeen || "",
         events: weeklyEvents.slice(0, 3),
       };
     })
@@ -130,6 +180,7 @@ function buildHouseTheses(theses, from, to) {
 function buildLaneMap(theses, houseThesesById, from, to) {
   const lanes = new Map();
   for (const thesis of theses) {
+    if (isOperationalArtifact(thesis)) continue;
     const weeklyEvents = collectThesisEvents(thesis, from, to);
     if (!weeklyEvents.length && !houseThesesById.has(thesis.id)) continue;
     const lane = sanitizeText(thesis.lane || thesis.practical?.sectorLane || "未分类赛道", 80);
@@ -143,6 +194,8 @@ function buildLaneMap(theses, houseThesesById, from, to) {
       score: 0,
       stocks: new Map(),
       theses: [],
+      confirmations: [],
+      invalidations: [],
       latestEvent: "",
     };
     row.thesisCount += 1;
@@ -156,7 +209,11 @@ function buildLaneMap(theses, houseThesesById, from, to) {
       title: sanitizeText(thesis.title, 80),
       href: thesis.href || `/investor/theses/${thesis.id}/`,
       score: thesisScore(thesis, weeklyEvents),
+      actionCode: sanitizeText(thesis.practical?.actionCode || thesis.direction, 50),
+      actionLabel: sanitizeText(thesis.practical?.actionLabel || thesis.directionLabel, 60),
     });
+    row.confirmations.push(...(thesis.practical?.confirmationSignals || []).map((item) => sanitizeText(item, 140)).filter(Boolean));
+    row.invalidations.push(...(thesis.practical?.invalidationSignals || []).map((item) => sanitizeText(item, 140)).filter(Boolean));
     for (const stock of thesis.stockUniverse || []) {
       const ticker = sanitizeText(stock.ticker, 24);
       if (!ticker) continue;
@@ -179,6 +236,8 @@ function buildLaneMap(theses, houseThesesById, from, to) {
       stocks: [...lane.stocks.values()].sort((a, b) => b.mentions - a.mentions).slice(0, 10),
       theses: lane.theses.sort((a, b) => b.score - a.score).slice(0, 5),
       riskShare: Math.round((lane.risks / Math.max(1, lane.weeklyEvents)) * 100),
+      confirmation: lane.confirmations[0] || "等待公开证据继续验证。",
+      invalidation: lane.invalidations[0] || "若反向证据继续增加，则下调该赛道权重。",
     }))
     .sort((a, b) => b.weeklyEvents - a.weeklyEvents || b.avgScore - a.avgScore)
     .slice(0, 12);
@@ -329,6 +388,145 @@ function buildRiskBoard(dailyDashboard, thesisTracker) {
   return [...dailyRisks, ...thesisRisks].slice(0, 10);
 }
 
+function inferActionFromCode(actionCode = "", actionLabel = "", riskRatio = 0) {
+  const text = `${actionCode} ${actionLabel}`.toLowerCase();
+  if (text.includes("avoid") || text.includes("exit") || text.includes("回避")) return "AVOID";
+  if (text.includes("trim") || text.includes("hedge") || text.includes("reduce") || text.includes("降权")) return "TRIM";
+  if (text.includes("add") || text.includes("long") || text.includes("overweight") || text.includes("增配") || text.includes("加仓")) return "ADD";
+  if (riskRatio >= 70 && text.includes("risk")) return "TRIM";
+  return "HOLD";
+}
+
+function laneStanceFromRow(lane) {
+  if (lane.avgScore >= 76 && lane.riskShare <= 45) return "OVERWEIGHT";
+  if (lane.riskShare >= 65 || lane.avgScore < 58) return "UNDERWEIGHT";
+  return "NEUTRAL";
+}
+
+function buildRecommendations(houseTheses, lanes, window) {
+  const calls = houseTheses.slice(0, 10).map((thesis) => {
+    const action = inferActionFromCode(thesis.actionCode, thesis.actionLabel, thesis.riskRatio);
+    const primary = thesis.primaryStocks?.[0] || (thesis.stockTickers?.[0] ? {
+      ticker: thesis.stockTickers[0],
+      href: `/investor/stocks/${thesis.stockTickers[0]}/`,
+    } : null);
+    const targetKind = action === "ADD" && primary?.ticker ? "stock" : "lane";
+    const target = targetKind === "stock" ? primary.ticker : thesis.lane;
+    const href = targetKind === "stock" ? primary.href : thesis.href;
+    return {
+      action,
+      target,
+      kind: targetKind,
+      href,
+      linkedTicker: primary?.ticker || "",
+      linkedTickerHref: primary?.href || "",
+      thesisId: thesis.id,
+      thesisTitle: thesis.title,
+      thesisHref: thesis.href,
+      lane: thesis.lane,
+      driver: sanitizeText(`${thesis.actionLabel}：${thesis.positioning || thesis.coreView}`, 220),
+      invalidation: sanitizeText(thesis.invalidation, 180),
+      confirmation: sanitizeText(thesis.confirmation, 180),
+      evidenceDate: thesis.evidenceDate || window.to,
+      changedFrom: null,
+      score: thesis.score,
+    };
+  });
+
+  const exits = lanes
+    .filter((lane) => laneStanceFromRow(lane) === "UNDERWEIGHT")
+    .slice(0, 4)
+    .map((lane) => ({
+      target: lane.lane,
+      kind: "lane",
+      href: lane.href,
+      reason: sanitizeText(lane.invalidation, 180),
+      evidenceDate: lane.latestEvent || window.to,
+    }));
+
+  return {
+    grade: "public-contract-action-proxy",
+    disclaimer: "基于公开研究合约的研究台操作视图，不构成投资建议；完整客观命中率与真实组合交易需要独立 Panorama App/组合账本读取。",
+    calls,
+    exits,
+    bookTradesThisWeek: [],
+  };
+}
+
+function buildPositioning(houseTheses) {
+  return houseTheses.slice(0, 8).map((thesis) => ({
+    thesisId: thesis.id,
+    title: thesis.title,
+    href: thesis.href,
+    lane: thesis.lane,
+    action: inferActionFromCode(thesis.actionCode, thesis.actionLabel, thesis.riskRatio),
+    claim: sanitizeText(thesis.coreView, 180),
+    positioning: sanitizeText(thesis.positioning || thesis.positionSizing, 180),
+    confirmingDatum: thesis.events[0]
+      ? sanitizeText(`${thesis.events[0].date} · ${thesis.events[0].title || thesis.events[0].summary}`, 180)
+      : sanitizeText(`${thesis.evidenceDate || "本周"} · ${thesis.confirmation}`, 180),
+    invalidation: thesis.invalidation,
+    evidenceDate: thesis.evidenceDate,
+    stocks: thesis.primaryStocks?.length ? thesis.primaryStocks.slice(0, 6) : thesis.stockTickers.slice(0, 6).map((ticker) => ({
+      ticker,
+      href: `/investor/stocks/${ticker}/`,
+    })),
+    score: thesis.score,
+  }));
+}
+
+function buildLaneAllocation(lanes, window) {
+  return lanes.map((lane, index) => ({
+    laneId: lane.href.split("/").filter(Boolean).at(-1) || `lane-${index + 1}`,
+    lane: lane.lane,
+    href: lane.href,
+    stance: laneStanceFromRow(lane),
+    rank: index + 1,
+    avgScore: lane.avgScore,
+    weeklyEvents: lane.weeklyEvents,
+    riskShare: lane.riskShare,
+    evidenceDate: lane.latestEvent || window.to,
+    nextCatalyst: sanitizeText(lane.confirmation, 130),
+    killSwitch: sanitizeText(lane.invalidation, 130),
+    stocks: lane.stocks.slice(0, 8),
+    topThesis: lane.theses[0],
+  }));
+}
+
+function buildStockSheet(stocks, laneAllocation, window) {
+  const laneStances = new Map(laneAllocation.map((lane) => [lane.lane, lane.stance]));
+  const rows = stocks.map((stock) => {
+    const stances = stock.lanes.map((lane) => laneStances.get(lane.lane)).filter(Boolean);
+    const stance = stances.includes("OVERWEIGHT")
+      ? "core_long"
+      : stances.includes("UNDERWEIGHT")
+        ? "avoid_or_trim"
+        : "debate";
+    return {
+      ticker: stock.ticker,
+      name: stock.name || stock.ticker,
+      href: stock.href,
+      stance,
+      lanes: stock.lanes,
+      evidenceDate: window.to,
+      numericEvidence: `${stock.mentions} lane links · ${stock.weeklyEvents} public events · score ${stock.score}`,
+      crowdingFlag: stock.mentions >= 3 ? "multi-lane crowded" : "single-lane watch",
+      driver: sanitizeText(stock.lanes.map((lane) => lane.lane).join(" / "), 140),
+    };
+  });
+  const byStrength = [...rows].sort((a, b) => {
+    const aScore = number(a.numericEvidence.match(/score (\d+)/)?.[1]);
+    const bScore = number(b.numericEvidence.match(/score (\d+)/)?.[1]);
+    return bScore - aScore;
+  });
+  return {
+    coreLongs: byStrength.filter((row) => row.stance === "core_long").slice(0, 8),
+    avoidOrTrim: byStrength.filter((row) => row.stance === "avoid_or_trim").slice(0, 8),
+    debates: byStrength.filter((row) => row.stance === "debate").slice(0, 8),
+    freshNames: byStrength.filter((row) => row.lanes.length <= 1).slice(0, 8),
+  };
+}
+
 function buildProcessCards() {
   return [
     {
@@ -343,8 +541,8 @@ function buildProcessCards() {
     },
     {
       step: "Synthesize",
-      title: "先合约后叙事",
-      text: "页面先生成 bundle，再从 bundle 渲染人类可读界面；每个主结论保留可点击的主线、报告或 persona 链接。",
+      title: "先操作后叙事",
+      text: "2026-07-10 版本把本周 calls、thesis→positioning、lane allocation 和 stock sheet 放在首屏，分析图谱降为证据层。",
     },
     {
       step: "Publish",
@@ -371,6 +569,11 @@ export function buildWeeklyPanoramaBundle() {
   const houseThesesById = new Set(houseTheses.map((thesis) => thesis.id));
   const lanes = buildLaneMap(theses, houseThesesById, from, to);
   const stocks = buildStockSignals(lanes);
+  const window = { from: isoDate(from), to: isoDate(to) };
+  const recommendations = buildRecommendations(houseTheses, lanes, window);
+  const positioning = buildPositioning(houseTheses);
+  const laneAllocation = buildLaneAllocation(lanes, window);
+  const stockSheet = buildStockSheet(stocks, laneAllocation, window);
   const clusters = buildThemeClusters(theses, from, to);
   const analystTerritory = buildAnalystTerritory(personaData.personas || [], from, to);
   const contradictions = buildContradictions(thesisTracker);
@@ -400,23 +603,27 @@ export function buildWeeklyPanoramaBundle() {
   };
 
   return {
-    schema: "vibe.weekly_panorama.public_bundle.v1",
+    schema: "vibe.weekly_panorama.public_bundle.v1.1",
     generatedAt: new Date().toISOString(),
     week: isoWeek(anchor),
-    mode: "public-contract-weekly",
-    window: { from: isoDate(from), to: isoDate(to) },
+    mode: "public-contract-weekly-action-first",
+    window,
     source: {
       dailyDashboardDate: dailyDashboard.date,
       networkGeneratedAt: network.generatedAt,
       thesisTrackerGeneratedAt: thesisTracker.generatedAt,
       personaGeneratedAt: personaData.generatedAt,
     },
-    headline: `周度全景：${houseTheses[0]?.lane || "AI Institute"} 与 ${lanes[0]?.lane || "研究主线"} 是本周公开合约的核心交汇。`,
+    headline: `周度全景：先看 calls，再看 ${houseTheses[0]?.lane || "AI Institute"} 与 ${lanes[0]?.lane || "研究主线"} 的证据链。`,
     lead:
       dailyDashboard.readerReport?.summary ||
       dailyDashboard.summary?.lead ||
-      "本端点把公开研究合约压缩为周度视角：主线、赛道、标的、分析师 territory、风险和矛盾一屏对齐。",
+      "本端点把公开研究合约压缩为投资优先的周度视角：本周操作结论、主线到仓位、赛道配置、个股清单先行，主题簇和分析师 territory 作为证据层。",
     stats,
+    recommendations,
+    positioning,
+    laneAllocation,
+    stockSheet,
     houseTheses,
     lanes,
     stocks,
