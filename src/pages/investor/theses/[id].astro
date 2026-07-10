@@ -2,14 +2,14 @@
 import BaseHead from "../../../components/BaseHead.astro";
 import Header from "../../../components/Header.astro";
 import { readResearchNetwork } from "../../../lib/investor-generated.js";
-import { buildLaneIndex, buildStockIndex, formatDate, lanePath, pct, stockPath, thesisPath } from "../../../lib/investor-market.js";
+import { buildLaneIndex, buildStockIndex, formatDate, lanePath, mappingSourceLabel, pct, stockPath, thesisPath } from "../../../lib/investor-market.js";
 import "../../../styles/research-network.css";
 
 export function getStaticPaths() {
   const network = readResearchNetwork();
   const theses = network.theses || [];
-  const lanes = buildLaneIndex(theses);
-  const stocks = buildStockIndex(theses);
+  const lanes = buildLaneIndex(network);
+  const stocks = buildStockIndex(network);
   return theses.map((thesis) => ({
     params: { id: thesis.id },
     props: {
@@ -89,6 +89,24 @@ const events = (thesis.timeline || []).flatMap((group) => (group.events || []).m
         </aside>
       </section>
 
+      {(thesis.reportRefs || []).length > 0 && (
+        <section class="thesis-section">
+          <div class="section-headline">
+            <span>Provenance</span>
+            <h2>核心来源报告</h2>
+            <p>主线、赛道与标的映射均可回到公开研究结果复核。</p>
+          </div>
+          <div class="event-stack detail-events">
+            {thesis.reportRefs.slice(0, 8).map((report) => (
+              <a href={report.href}>
+                <span>{formatDate(report.date)} · SOURCE REPORT</span>
+                <strong>{report.title}</strong>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
+
       <section class="thesis-section">
         <div class="section-headline">
           <span>Stock Universe</span>
@@ -100,7 +118,11 @@ const events = (thesis.timeline || []).flatMap((group) => (group.events || []).m
             <a href={stockPath(stock)}>
               <strong>{stock.ticker}</strong>
               <span>{stock.name}</span>
-              <em>{stock.market} · {stock.role}</em>
+              <em>
+                {stock.market} · {stock.role}
+                {stock.mappingSource ? ` · ${mappingSourceLabel(stock.mappingSource)}` : ""}
+                {Number(stock.evidenceCount || 0) > 0 ? ` · 证据 ${stock.evidenceCount}` : ""}
+              </em>
             </a>
           ))}
         </div>

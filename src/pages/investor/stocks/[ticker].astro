@@ -7,7 +7,7 @@ import "../../../styles/research-network.css";
 
 export function getStaticPaths() {
   const network = readResearchNetwork();
-  return buildStockIndex(network.theses || []).map((stock) => ({
+  return buildStockIndex(network).map((stock) => ({
     params: { ticker: stock.slug },
     props: { stock },
   }));
@@ -49,7 +49,7 @@ const maxConviction = Math.max(1, ...stock.theses.map((thesis) => Number(thesis.
         <div><span>Linked Theses</span><strong>{stock.theses.length}</strong><em>相关主线</em></div>
         <div><span>Lanes</span><strong>{stock.lanes.length}</strong><em>关联赛道</em></div>
         <div><span>Market</span><strong>{stock.market}</strong><em>市场</em></div>
-        <div><span>Events</span><strong>{stock.events.length}</strong><em>近期证据</em></div>
+        <div><span>Evidence</span><strong>{stock.evidenceCount || stock.events.length}</strong><em>来源报告</em></div>
       </section>
 
       <section class="detail-grid">
@@ -78,6 +78,23 @@ const maxConviction = Math.max(1, ...stock.theses.map((thesis) => Number(thesis.
           </div>
         </aside>
       </section>
+
+      {(stock.recentEvidence || []).length > 0 && (
+        <section class="thesis-section">
+          <div class="section-headline">
+            <span>Provenance</span>
+            <h2>标的来源报告</h2>
+          </div>
+          <div class="event-stack detail-events">
+            {stock.recentEvidence.map((report) => (
+              <a href={report.href}>
+                <span>{formatDate(report.date)} · SOURCE REPORT</span>
+                <strong>{report.title}</strong>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section class="thesis-section">
         <div class="section-headline">

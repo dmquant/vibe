@@ -7,7 +7,7 @@ import "../../../styles/research-network.css";
 
 export function getStaticPaths() {
   const network = readResearchNetwork();
-  return buildLaneIndex(network.theses || []).map((lane) => ({
+  return buildLaneIndex(network).map((lane) => ({
     params: { slug: lane.slug },
     props: {
       lane: {
@@ -84,6 +84,24 @@ const maxAction = Math.max(1, ...lane.actions.map((item) => item[1]));
           </div>
         </aside>
       </section>
+
+      {(lane.reportRefs || []).length > 0 && (
+        <section class="thesis-section">
+          <div class="section-headline">
+            <span>Lane Evidence</span>
+            <h2>赛道来源报告</h2>
+            <p>{lane.reportCount || lane.reportRefs.length} 份报告进入该赛道映射，以下为最近的高相关公开结果。</p>
+          </div>
+          <div class="event-stack detail-events">
+            {lane.reportRefs.map((report) => (
+              <a href={report.href}>
+                <span>{formatDate(report.date)} · SOURCE REPORT</span>
+                <strong>{report.title}</strong>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section class="thesis-section">
         <div class="section-headline">

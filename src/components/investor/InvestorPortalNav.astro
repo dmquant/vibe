@@ -1,14 +1,20 @@
 ---
+import marketNav from "../../generated/investor/market-nav.json";
+
 const pathname = Astro.url.pathname;
+const laneLinks = (marketNav.lanes || []).slice(0, 4);
+const stockLinks = (marketNav.stocks || []).slice(0, 6);
 const items = [
   { href: "/investor/", label: "Portal", match: (path) => path === "/investor/" },
   { href: "/investor/daily/", label: "Today", match: (path) => path.startsWith("/investor/daily") },
   { href: "/investor/panorama/", label: "Weekly", match: (path) => path.startsWith("/investor/panorama") },
   {
-    href: "/investor/research-network/",
+    href: "/investor/research-network/#theses",
     label: "Theses",
-    match: (path) => ["/investor/research-network", "/investor/theses", "/investor/lanes", "/investor/stocks"].some((prefix) => path.startsWith(prefix)),
+    match: (path) => path.startsWith("/investor/research-network") || path.startsWith("/investor/theses"),
   },
+  { href: "/investor/research-network/#thermal", label: "Lanes", match: (path) => path.startsWith("/investor/lanes") },
+  { href: "/investor/research-network/#stocks", label: "Stocks", match: (path) => path.startsWith("/investor/stocks") },
   { href: "/investor/portfolio/", label: "Portfolio", match: (path) => path.startsWith("/investor/portfolio") },
   { href: "/investor/timeline/", label: "Timeline", match: (path) => path.startsWith("/investor/timeline") },
   { href: "/investor/recaps/", label: "Recaps", match: (path) => path.startsWith("/investor/recaps") },
@@ -30,6 +36,13 @@ const items = [
     })}
   </div>
   <a class="portal-nav-reader" href="/investor/#reader">Reader mode</a>
+</nav>
+<nav class="investor-market-scope" aria-label="Active market lanes and stocks">
+  <span>MARKET MAP</span>
+  <div>
+    {laneLinks.map((lane) => <a href={lane.href}>{lane.title}</a>)}
+    {stockLinks.map((stock) => <a class="stock" href={stock.href}>{stock.ticker}</a>)}
+  </div>
 </nav>
 
 <style>
@@ -90,6 +103,58 @@ const items = [
     color: var(--accent-green, #169b62) !important;
   }
 
+  .investor-market-scope {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: 12px;
+    max-width: 1440px;
+    min-height: 30px;
+    margin: 0 auto;
+    border-top: 1px solid var(--border, #30363d);
+    font-family: var(--font-mono, monospace);
+  }
+
+  .investor-market-scope > span {
+    color: var(--accent-yellow, #d7a316);
+    font-size: 9px;
+    font-weight: 800;
+  }
+
+  .investor-market-scope > div {
+    display: flex;
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .investor-market-scope > div::-webkit-scrollbar {
+    display: none;
+  }
+
+  .investor-market-scope a {
+    display: inline-flex;
+    min-height: 28px;
+    flex: 0 0 auto;
+    align-items: center;
+    border-left: 1px solid var(--border, #30363d);
+    color: var(--text-secondary, #8b949e);
+    padding: 0 9px;
+    font-size: 9px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .investor-market-scope a:hover {
+    color: var(--text-primary, #e6edf3);
+    background: var(--bg-elevated, #151515);
+  }
+
+  .investor-market-scope a.stock {
+    color: var(--accent-green, #169b62);
+  }
+
   @media (max-width: 760px) {
     .investor-portal-nav {
       grid-template-columns: auto minmax(0, 1fr);
@@ -99,6 +164,14 @@ const items = [
 
     .portal-nav-reader {
       display: none !important;
+    }
+
+    .investor-market-scope {
+      gap: 8px;
+    }
+
+    .investor-market-scope > span {
+      font-size: 8px;
     }
 
     .investor-portal-nav a {

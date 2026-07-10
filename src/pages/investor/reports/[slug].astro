@@ -1,17 +1,20 @@
 ---
 import BaseHead from "../../../components/BaseHead.astro";
 import Header from "../../../components/Header.astro";
-import { listReports } from "../../../lib/investor-generated.js";
+import MarketContextPanel from "../../../components/investor/MarketContextPanel.astro";
+import { listReports, readMarketOntology } from "../../../lib/investor-generated.js";
+import { resolveMarketContext } from "../../../lib/investor-market.js";
 import "../../../styles/investor-console.css";
 
 export function getStaticPaths() {
+  const ontology = readMarketOntology();
   return listReports().map((report) => ({
     params: { slug: report.slug },
-    props: { report },
+    props: { report, marketContext: resolveMarketContext(ontology, report.slug) },
   }));
 }
 
-const { report } = Astro.props;
+const { report, marketContext } = Astro.props;
 const meta = report.meta;
 ---
 
@@ -40,8 +43,19 @@ const meta = report.meta;
             <dt>档案编号</dt><dd>{meta.source_label || report.slug}</dd>
           </dl>
         </aside>
-        <article class="markdown-report" set:html={report.bodyHtml}></article>
+        <div class="report-content">
+          <MarketContextPanel context={marketContext} title="报告对应赛道与标的" compact={true} />
+          <article class="markdown-report" set:html={report.bodyHtml}></article>
+        </div>
       </main>
     </section>
   </body>
 </html>
+
+<style>
+  .report-content {
+    display: grid;
+    min-width: 0;
+    gap: 16px;
+  }
+</style>

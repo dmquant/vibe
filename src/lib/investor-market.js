@@ -150,7 +150,47 @@ export function buildLaneRecaps(lane, livingRecaps = []) {
   }));
 }
 
-export function buildLaneIndex(theses = []) {
+export function buildLaneIndex(input = []) {
+  const source = Array.isArray(input) ? { theses: input } : (input || {});
+  const theses = source.theses || [];
+  if ((source.lanes || []).length) {
+    const thesisById = new Map(theses.map((thesis) => [thesis.id, thesis]));
+    const stockByTicker = new Map((source.stocks || []).map((stock) => [stock.ticker, stock]));
+    return source.lanes.map((lane) => {
+      const linkedTheses = (lane.thesisIds || []).map((id) => thesisById.get(id)).filter(Boolean);
+      const actions = new Map();
+      for (const thesis of linkedTheses) {
+        const label = thesis.practical?.actionLabel || "观察等待";
+        actions.set(label, (actions.get(label) || 0) + 1);
+      }
+      const linkedStocks = (lane.stockTickers || []).map((ticker) => {
+        const stock = stockByTicker.get(ticker) || { ticker, name: ticker, market: "", href: stockPath(ticker) };
+        const mappings = linkedTheses
+          .flatMap((thesis) => (thesis.stockUniverse || []).filter((item) => item.ticker === ticker));
+        return {
+          ...stock,
+          role: mappings[0]?.role || stock.roles?.[0] || "研究跟踪标的",
+          mappingSource: mappings[0]?.mappingSource || "",
+          confidence: Math.max(Number(stock.confidence || 0), ...mappings.map((item) => Number(item.confidence || 0))),
+          evidenceCount: Math.max(Number(stock.evidenceCount || 0), ...mappings.map((item) => Number(item.evidenceCount || 0))),
+          thesisCount: mappings.length,
+          href: stock.href || stockPath(ticker),
+        };
+      });
+      return {
+        ...lane,
+        slug: lane.slug || lane.href?.split("/").filter(Boolean).at(-1) || slugify(lane.titleEn || lane.titleZh, "lane"),
+        lane: lane.titleZh || lane.lane || "未分类赛道",
+        laneEn: lane.titleEn || lane.laneEn || "",
+        href: lane.href || `/investor/lanes/${lane.slug}/`,
+        theses: linkedTheses,
+        stocks: linkedStocks,
+        actions: [...actions.entries()].sort((a, b) => b[1] - a[1]),
+        avgScore: Math.round(linkedTheses.reduce((sum, thesis) => sum + Number(thesis.practical?.score || thesis.conviction || 0), 0) / Math.max(1, linkedTheses.length)),
+      };
+    }).sort((a, b) => Number(b.evidenceCount || 0) - Number(a.evidenceCount || 0) || b.theses.length - a.theses.length);
+  }
+
   const lanes = new Map();
   for (const thesis of theses) {
     const slug = laneSlug(thesis);
@@ -185,7 +225,39 @@ export function buildLaneIndex(theses = []) {
     .sort((a, b) => b.theses.length - a.theses.length || b.avgScore - a.avgScore);
 }
 
-export function buildStockIndex(theses = []) {
+export function buildStockIndex(input = []) {
+  const source = Array.isArray(input) ? { theses: input } : (input || {});
+  const theses = source.theses || [];
+  if ((source.stocks || []).length) {
+    const thesisById = new Map(theses.map((thesis) => [thesis.id, thesis]));
+    const laneById = new Map((source.lanes || []).map((lane) => [lane.id, lane]));
+    return source.stocks.map((stock) => {
+      const linkedTheses = (stock.thesisIds || []).map((id) => thesisById.get(id)).filter(Boolean);
+      const mappings = linkedTheses.flatMap((thesis) => (thesis.stockUniverse || [])
+        .filter((item) => item.ticker === stock.ticker)
+        .map((item) => ({ ...item, thesisId: thesis.id, thesisTitle: thesis.title, thesisHref: thesisPath(thesis) })));
+      const events = linkedTheses
+        .flatMap((thesis) => flatEvents(thesis).slice(0, 3).map((event) => ({ ...event, thesis })))
+        .sort((a, b) => String(b.date).localeCompare(String(a.date)))
+        .slice(0, 14);
+      return {
+        ...stock,
+        slug: stock.slug || stockSlug(stock.ticker),
+        href: stock.href || stockPath(stock.ticker),
+        role: mappings[0]?.role || stock.roles?.[0] || "研究跟踪标的",
+        mappingSource: mappings[0]?.mappingSource || "",
+        theses: linkedTheses,
+        lanes: (stock.laneIds || []).map((id) => {
+          const lane = laneById.get(id);
+          return lane ? { id, lane: lane.titleZh, laneEn: lane.titleEn, href: lane.href } : null;
+        }).filter(Boolean),
+        roles: stock.roles || [...new Set(mappings.map((item) => item.role).filter(Boolean))].slice(0, 8),
+        mappings,
+        events,
+      };
+    }).sort((a, b) => Number(b.evidenceCount || 0) - Number(a.evidenceCount || 0) || b.theses.length - a.theses.length || a.ticker.localeCompare(b.ticker));
+  }
+
   const stocks = new Map();
   for (const thesis of theses) {
     for (const stock of thesis.stockUniverse || []) {
@@ -217,4 +289,39 @@ export function buildStockIndex(theses = []) {
       events: stock.events.sort((a, b) => String(b.date).localeCompare(String(a.date))).slice(0, 14),
     }))
     .sort((a, b) => b.theses.length - a.theses.length || a.ticker.localeCompare(b.ticker));
+}
+
+const marketContextIndexCache = new WeakMap();
+
+export function resolveMarketContext(ontology, reportSlug) {
+  const raw = ontology?.reportContexts?.[reportSlug];
+  if (!raw) return { lanes: [], stocks: [], theses: [] };
+  let indexes = marketContextIndexCache.get(ontology);
+  if (!indexes) {
+    indexes = {
+      laneById: new Map((ontology.lanes || []).map((lane) => [lane.id, lane])),
+      stockByTicker: new Map((ontology.stocks || []).map((stock) => [stock.ticker, stock])),
+      thesisById: new Map((ontology.theses || []).map((thesis) => [thesis.id, thesis])),
+    };
+    marketContextIndexCache.set(ontology, indexes);
+  }
+  return {
+    date: raw.date || "",
+    lanes: (raw.laneIds || []).map((id) => indexes.laneById.get(id)).filter(Boolean),
+    stocks: (raw.stockMappings || []).map((mapping) => {
+      const stock = indexes.stockByTicker.get(mapping.ticker);
+      return stock ? { ...stock, confidence: Math.max(Number(stock.confidence || 0), Number(mapping.confidence || 0)) } : null;
+    }).filter(Boolean),
+    theses: (raw.thesisIds || []).map((id) => indexes.thesisById.get(id)).filter(Boolean),
+  };
+}
+
+export function mappingSourceLabel(value) {
+  const labels = {
+    curated_and_report: "种子 + 报告证据",
+    report_evidence: "报告证据",
+    curated_seed: "研究种子",
+    lane_proxy: "赛道代理",
+  };
+  return labels[value] || "研究映射";
 }

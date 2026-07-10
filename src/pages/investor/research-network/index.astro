@@ -2,7 +2,7 @@
 import BaseHead from "../../../components/BaseHead.astro";
 import Header from "../../../components/Header.astro";
 import { readResearchNetwork } from "../../../lib/investor-generated.js";
-import { lanePath, stockPath, thesisPath } from "../../../lib/investor-market.js";
+import { buildLaneIndex, buildStockIndex, stockPath, thesisPath } from "../../../lib/investor-market.js";
 import "../../../styles/research-network.css";
 
 const network = readResearchNetwork();
@@ -69,57 +69,23 @@ const actionRows = [...theses
     return acc;
   }, new Map())
   .entries()].sort((a, b) => b[1] - a[1]);
-const laneRows = [...theses
-  .reduce((acc, thesis) => {
-    const lane = thesis.lane || thesis.practical?.sectorLane || thesis.practical?.exposureBucket || "未分类赛道";
-    const row = acc.get(lane) || { lane, href: thesis.laneHref || lanePath(thesis), count: 0, tickers: new Set(), score: 0 };
-    row.count += 1;
-    row.score += Number(thesis.practical?.score || thesis.conviction || 0);
-    (thesis.stockUniverse || []).slice(0, 6).forEach((stock) => row.tickers.add(stock.ticker));
-    acc.set(lane, row);
-    return acc;
-  }, new Map())
-  .values()]
-  .map((row) => ({ ...row, tickers: [...row.tickers].slice(0, 8), avgScore: Math.round(row.score / Math.max(1, row.count)) }))
-  .sort((a, b) => b.count - a.count || b.avgScore - a.avgScore);
-const stockRows = [...theses
-  .flatMap((thesis) => (thesis.stockUniverse || []).map((stock) => ({ ...stock, thesisTitle: thesis.title, lane: thesis.lane || thesis.practical?.sectorLane || "" })))
-  .reduce((acc, stock) => {
-    const row = acc.get(stock.ticker) || { ...stock, count: 0, lanes: new Set() };
-    row.count += 1;
-    if (stock.lane) row.lanes.add(stock.lane);
-    acc.set(stock.ticker, row);
-    return acc;
-  }, new Map())
-  .values()]
-  .map((row) => ({ ...row, lanes: [...row.lanes].slice(0, 3) }))
-  .sort((a, b) => b.count - a.count || a.ticker.localeCompare(b.ticker));
-const thermalLaneRows = [...theses
-  .reduce((acc, thesis) => {
-    const lane = thesis.lane || thesis.practical?.sectorLane || thesis.practical?.exposureBucket || "未分类赛道";
-    const row = acc.get(lane) || {
-      lane,
-      href: thesis.laneHref || lanePath(thesis),
-      count: 0,
-      score: 0,
-      tickers: new Set(),
-      theses: [],
-    };
-    row.count += 1;
-    row.score += Number(thesis.practical?.score || thesis.conviction || 0);
-    (thesis.stockUniverse || []).slice(0, 8).forEach((stock) => row.tickers.add(stock.ticker));
-    row.theses.push(thesis);
-    acc.set(lane, row);
-    return acc;
-  }, new Map())
-  .values()]
-  .map((row) => ({
-    ...row,
-    tickers: [...row.tickers].slice(0, 10),
-    avgScore: Math.round(row.score / Math.max(1, row.count)),
-    theses: row.theses.sort((a, b) => Number(b.practical?.score || b.conviction || 0) - Number(a.practical?.score || a.conviction || 0)),
-  }))
-  .sort((a, b) => b.count - a.count || b.avgScore - a.avgScore || a.lane.localeCompare(b.lane));
+const laneIndex = buildLaneIndex(network);
+const stockIndex = buildStockIndex(network);
+const laneRows = laneIndex.map((lane) => ({
+  ...lane,
+  count: lane.theses.length,
+  tickers: lane.stocks.slice(0, 8).map((stock) => stock.ticker),
+}));
+const stockRows = stockIndex.map((stock) => ({
+  ...stock,
+  count: stock.theses.length,
+}));
+const thermalLaneRows = laneIndex.map((lane) => ({
+  ...lane,
+  count: lane.theses.length,
+  tickers: lane.stocks.slice(0, 10).map((stock) => stock.ticker),
+  theses: [...lane.theses].sort((a, b) => Number(b.practical?.score || b.conviction || 0) - Number(a.practical?.score || a.conviction || 0)),
+}));
 ---
 
 <!doctype html>

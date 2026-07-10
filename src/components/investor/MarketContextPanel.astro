@@ -1,0 +1,196 @@
+---
+import { mappingSourceLabel } from "../../lib/investor-market.js";
+
+const {
+  context = { lanes: [], stocks: [], theses: [] },
+  title = "市场映射",
+  eyebrow = "Market Context",
+  compact = false,
+} = Astro.props;
+const lanes = context.lanes || [];
+const stocks = context.stocks || [];
+const theses = context.theses || [];
+const total = lanes.length + stocks.length + theses.length;
+---
+
+{total > 0 && (
+  <section class:list={["market-context-panel", { compact }]}>
+    <header>
+      <div>
+        <span>{eyebrow}</span>
+        <h2>{title}</h2>
+      </div>
+      <strong>{total.toString().padStart(2, "0")}</strong>
+    </header>
+
+    {lanes.length > 0 && (
+      <div class="context-group">
+        <b>LANES</b>
+        <div class="context-links lane-links">
+          {lanes.map((lane) => (
+            <a href={lane.href}>
+              <span>{lane.titleZh || lane.lane}</span>
+              <em>{lane.reportCount ? `${lane.reportCount} 报告` : lane.titleEn}</em>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {stocks.length > 0 && (
+      <div class="context-group">
+        <b>STOCKS / ETFs</b>
+        <div class="context-links stock-links">
+          {stocks.map((stock) => (
+            <a href={stock.href}>
+              <strong>{stock.ticker}</strong>
+              <span>{stock.name}</span>
+              <em>
+                {stock.mappingSource ? mappingSourceLabel(stock.mappingSource) : "证据映射"}
+                {Number(stock.evidenceCount || 0) > 0 ? ` · ${stock.evidenceCount}` : ""}
+                {Number(stock.confidence || 0) > 0 ? ` · ${Math.round(stock.confidence * 100)}%` : ""}
+              </em>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {theses.length > 0 && (
+      <div class="context-group">
+        <b>THESES</b>
+        <div class="context-links thesis-links">
+          {theses.map((thesis) => (
+            <a href={thesis.href}>
+              <span>{thesis.title}</span>
+              <em>{thesis.lastSeen || thesis.direction || "Living thesis"}</em>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+  </section>
+)}
+
+<style>
+  .market-context-panel {
+    display: grid;
+    gap: 18px;
+    border-block: 1px solid var(--border, #30363d);
+    padding: 22px 0;
+  }
+
+  .market-context-panel > header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .market-context-panel > header span,
+  .context-group > b {
+    color: var(--accent-blue, #2f80ed);
+    font-family: var(--font-mono, monospace);
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+
+  .market-context-panel h2 {
+    margin: 4px 0 0;
+    color: var(--text-primary, #e6edf3);
+    font-size: 20px;
+    letter-spacing: 0;
+  }
+
+  .market-context-panel > header > strong {
+    color: var(--accent-yellow, #d7a316);
+    font-family: var(--font-mono, monospace);
+    font-size: 28px;
+  }
+
+  .context-group {
+    display: grid;
+    grid-template-columns: 92px minmax(0, 1fr);
+    gap: 12px;
+    align-items: start;
+  }
+
+  .context-group > b {
+    padding-top: 10px;
+    color: var(--text-secondary, #8b949e);
+  }
+
+  .context-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1px;
+    background: var(--border, #30363d);
+    border: 1px solid var(--border, #30363d);
+  }
+
+  .context-links a {
+    display: grid;
+    min-width: 0;
+    gap: 3px;
+    background: var(--bg-surface, #0d1117);
+    color: var(--text-primary, #e6edf3);
+    padding: 10px 12px;
+    text-decoration: none;
+  }
+
+  .context-links a:hover {
+    background: var(--bg-elevated, #161b22);
+    box-shadow: inset 3px 0 0 var(--accent-green, #169b62);
+  }
+
+  .context-links span,
+  .context-links strong,
+  .context-links em {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    letter-spacing: 0;
+  }
+
+  .context-links span,
+  .context-links strong {
+    font-size: 12px;
+    font-style: normal;
+  }
+
+  .context-links strong {
+    color: var(--accent-green, #169b62);
+    font-family: var(--font-mono, monospace);
+  }
+
+  .context-links em {
+    color: var(--text-secondary, #8b949e);
+    font-family: var(--font-mono, monospace);
+    font-size: 9px;
+    font-style: normal;
+  }
+
+  .compact {
+    gap: 12px;
+    padding: 14px 0;
+  }
+
+  .compact .context-group {
+    grid-template-columns: 76px minmax(0, 1fr);
+  }
+
+  @media (max-width: 680px) {
+    .context-group,
+    .compact .context-group {
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
+
+    .context-group > b {
+      padding-top: 0;
+    }
+
+    .context-links {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
