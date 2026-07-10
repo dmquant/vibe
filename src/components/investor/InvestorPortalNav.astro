@@ -6,6 +6,7 @@ const laneLinks = (marketNav.lanes || []).slice(0, 4);
 const stockLinks = (marketNav.stocks || []).slice(0, 6);
 const items = [
   { href: "/investor/", label: "Portal", match: (path) => path === "/investor/" },
+  { href: "/100-days/", label: "100 Days", match: (path) => path.startsWith("/100-days") },
   { href: "/investor/daily/", label: "Today", match: (path) => path.startsWith("/investor/daily") },
   { href: "/investor/panorama/", label: "Weekly", match: (path) => path.startsWith("/investor/panorama") },
   {

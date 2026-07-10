@@ -1,0 +1,380 @@
+---
+const { data } = Astro.props;
+const initialDay = Math.max(1, Math.min(data.dayCount, data.latestDataDay || data.currentDay || 1));
+const initialRecord = data.days.find((day) => day.dayNumber === initialDay) || data.days[0];
+const payload = JSON.stringify(data).replaceAll("<", "\\u003c");
+const number = new Intl.NumberFormat("en-US");
+const scoreItems = [
+  { key: "reports", label: "Reports", labelZh: "窗口内研究", color: "blue" },
+  { key: "researchThreads", label: "Research threads", labelZh: "研究线程", color: "green" },
+  { key: "researchNotes", label: "Research notes", labelZh: "研究节点", color: "yellow" },
+  { key: "theses", label: "Living theses", labelZh: "动态论点", color: "orange" },
+  { key: "lanes", label: "Investable lanes", labelZh: "投资赛道", color: "blue" },
+  { key: "stocks", label: "Stock nodes", labelZh: "股票节点", color: "green" },
+  { key: "personas", label: "Analyst personas", labelZh: "分析师画像", color: "yellow" },
+  { key: "personaTimelineEvents", label: "View changes", labelZh: "观点时间事件", color: "orange" },
+  { key: "readerMemos", label: "Reader memos", labelZh: "人类友好报告", color: "blue" },
+  { key: "recapDashboards", label: "Living recaps", labelZh: "动态复盘", color: "green" },
+  { key: "deepResearch", label: "Deep research", labelZh: "旗舰深研", color: "red" },
+  { key: "publicEdges", label: "Public graph edges", labelZh: "公开研究关系", color: "orange" },
+];
+
+const episodeFilters = [
+  { id: "all", label: "All episodes", labelZh: "全部研究事件" },
+  { id: "reader", label: "Reader memos", labelZh: "读者报告" },
+  { id: "recap", label: "Recaps", labelZh: "动态复盘" },
+  { id: "deep", label: "Deep research", labelZh: "深度研究" },
+];
+---
+
+<div class="hundred-days-shell" data-hundred-days-root data-initial-day={initialDay}>
+  <section class="century-hero" id="atlas" aria-labelledby="century-title">
+    <canvas id="centuryUniverse" class="century-universe" aria-label="AI Institute thesis, lane and stock universe across the first 100 days"></canvas>
+    <div class="century-space-grid" aria-hidden="true"></div>
+    <div class="century-hero-copy">
+      <div class="century-kicker">
+        <span class="century-live-dot" aria-hidden="true"></span>
+        <span class="i18n-zh">AI 研究院 · 时间型研究图谱</span>
+        <span class="i18n-en">AI Institute · Temporal Research Atlas</span>
+      </div>
+      <h1 id="century-title">
+        <span class="i18n-zh">AI 研究院的 100 天</span>
+        <span class="i18n-en">100 Days of AI Institute</span>
+      </h1>
+      <p>
+        <span class="i18n-zh">不是展示 AI 写了多少文件，而是回放 Agentic Models 如何被组织、约束、质疑、复盘，并持续转化为人类可用的研究判断。</span>
+        <span class="i18n-en">A replay of how agentic models became an organized, constrained, auditable research institution built for human judgment.</span>
+      </p>
+      <div class="century-hero-actions">
+        <a class="century-primary-action" href="#daily-field">
+          <span aria-hidden="true">↓</span>
+          <span class="i18n-zh">进入每日时间线</span><span class="i18n-en">Enter daily timeline</span>
+        </a>
+        <a href="/investor/">
+          <span aria-hidden="true">↗</span>
+          <span class="i18n-zh">打开实时研究院</span><span class="i18n-en">Open the live Institute</span>
+        </a>
+      </div>
+    </div>
+
+    <aside class="century-hero-hud" aria-label="100 day portal status">
+      <div class="century-day-lockup">
+        <span>DAY</span>
+        <strong id="centuryHeroDay">{String(data.currentDay).padStart(3, "0")}</strong>
+        <em>/ 100</em>
+      </div>
+      <div class="century-progress-track" aria-label={`${data.progressPct}% complete`}>
+        <i style={`--century-progress:${data.progressPct}%`}></i>
+      </div>
+      <dl>
+        <div><dt class="i18n-zh">数据截至</dt><dt class="i18n-en">Data through</dt><dd>{data.latestDataDate}</dd></div>
+        <div><dt class="i18n-zh">图谱节点</dt><dt class="i18n-en">Atlas nodes</dt><dd>{number.format(data.atlas.stats.nodes)}</dd></div>
+        <div><dt class="i18n-zh">研究关系</dt><dt class="i18n-en">Relations</dt><dd>{number.format(data.atlas.stats.edges)}</dd></div>
+      </dl>
+      <div class="century-atlas-legend" aria-label="Atlas legend">
+        <span class="legend-blue"><i></i>Lane</span>
+        <span class="legend-yellow"><i></i>Thesis</span>
+        <span class="legend-orange"><i></i>Stock</span>
+      </div>
+    </aside>
+
+    <div id="centuryUniverseTooltip" class="century-universe-tooltip" hidden></div>
+    <div class="century-hero-status" aria-live="polite">
+      <span id="centuryUniverseStatus">DAY {String(initialDay).padStart(3, "0")} · {initialRecord.date}</span>
+      <span class="i18n-zh">拖动旋转 · 滚轮缩放 · 点击进入节点</span>
+      <span class="i18n-en">Drag to orbit · scroll to zoom · click to inspect</span>
+    </div>
+  </section>
+
+  <nav class="century-section-nav" aria-label="100 days portal sections">
+    <a href="#story"><span>01</span><strong class="i18n-zh">故事</strong><strong class="i18n-en">Story</strong></a>
+    <a href="#daily-field"><span>02</span><strong class="i18n-zh">每日</strong><strong class="i18n-en">Daily</strong></a>
+    <a href="#research-river"><span>03</span><strong class="i18n-zh">研究流</strong><strong class="i18n-en">River</strong></a>
+    <a href="#episodes"><span>04</span><strong class="i18n-zh">事件库</strong><strong class="i18n-en">Episodes</strong></a>
+    <a href="#institution"><span>05</span><strong class="i18n-zh">机构</strong><strong class="i18n-en">Institution</strong></a>
+    <a href="#scorecard"><span>06</span><strong class="i18n-zh">记分卡</strong><strong class="i18n-en">Scorecard</strong></a>
+    <a href="/investor/"><span>↗</span><strong>Live</strong></a>
+  </nav>
+
+  <main class="century-main">
+    <section class="century-manifesto" id="story">
+      <div class="century-section-index">01 / THESIS</div>
+      <div class="century-manifesto-copy">
+        <p class="century-large-statement i18n-zh">100 天不是为了证明 AI 能写很多报告，而是证明模型可以被组织成一座会留下证据、承认错误并持续运行的研究机构。</p>
+        <p class="century-large-statement i18n-en">The point is not that AI can write many reports. It is that models can be organized into a research institution that preserves evidence, admits errors, and keeps operating.</p>
+        <div class="century-principles">
+          <article>
+            <span>01</span>
+            <h2 class="i18n-zh">模型不是机构</h2><h2 class="i18n-en">A model is not an institution</h2>
+            <p class="i18n-zh">角色、节奏、记忆、协作、QA 和读者契约共同构成研究院。</p>
+            <p class="i18n-en">Roles, cadence, memory, collaboration, QA, and a reader contract make the institution.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h2 class="i18n-zh">数量不是质量</h2><h2 class="i18n-en">Volume is not quality</h2>
+            <p class="i18n-zh">真正的价值来自观点如何变化、为何变化，以及何时应被证伪。</p>
+            <p class="i18n-en">Value comes from how views change, why they change, and when they should be falsified.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h2 class="i18n-zh">研究必须可读</h2><h2 class="i18n-en">Research must be readable</h2>
+            <p class="i18n-zh">图结构材料只有进入人类判断顺序，才真正成为投资研究产品。</p>
+            <p class="i18n-en">Graph-shaped evidence becomes useful only after entering a human decision sequence.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="century-stat-rail" aria-label="100 day public statistics">
+      <div><span>REPORTS</span><strong>{number.format(data.scorecard.reports)}</strong><em class="i18n-zh">100 天窗口</em><em class="i18n-en">100-day window</em></div>
+      <div><span>THREADS</span><strong>{number.format(data.scorecard.researchThreads)}</strong><em class="i18n-zh">研究讨论</em><em class="i18n-en">research discussions</em></div>
+      <div><span>THESES</span><strong>{number.format(data.scorecard.theses)}</strong><em class="i18n-zh">动态论点</em><em class="i18n-en">living theses</em></div>
+      <div><span>LANES</span><strong>{number.format(data.scorecard.lanes)}</strong><em class="i18n-zh">投资赛道</em><em class="i18n-en">investable lanes</em></div>
+      <div><span>STOCKS</span><strong>{number.format(data.scorecard.stocks)}</strong><em class="i18n-zh">股票节点</em><em class="i18n-en">stock nodes</em></div>
+      <div><span>EPISODES</span><strong>{number.format(data.episodes.length)}</strong><em class="i18n-zh">可回放事件</em><em class="i18n-en">replayable episodes</em></div>
+    </section>
+
+    <section class="century-section century-daily-section" id="daily-field">
+      <header class="century-section-header">
+        <div>
+          <span>02 / DAILY FIELD</span>
+          <h2 class="i18n-zh">一百天，每一天都可以打开</h2>
+          <h2 class="i18n-en">One hundred days, every day inspectable</h2>
+        </div>
+        <p class="i18n-zh">选择日期会同步 3D 图谱、活动河流和研究详情。亮度表示公开研究密度，彩色角标表示当日主导主题。</p>
+        <p class="i18n-en">Selecting a day synchronizes the 3D atlas, activity river, and research inspector. Intensity represents public research density.</p>
+      </header>
+
+      <div class="century-time-console">
+        <div class="century-playback-controls" aria-label="Timeline playback">
+          <button type="button" id="centuryPrevDay" aria-label="Previous day" title="Previous day">←</button>
+          <button type="button" id="centuryPlay" aria-label="Play timeline" title="Play timeline"><span aria-hidden="true">▶</span></button>
+          <button type="button" id="centuryNextDay" aria-label="Next day" title="Next day">→</button>
+          <button type="button" id="centuryLatest" class="century-text-control">
+            <span class="i18n-zh">最新数据</span><span class="i18n-en">Latest data</span>
+          </button>
+        </div>
+        <div class="century-time-readout" aria-live="polite">
+          <strong id="centurySelectedDay">DAY {String(initialDay).padStart(3, "0")}</strong>
+          <span id="centurySelectedDate">{initialRecord.date}</span>
+          <em id="centurySelectedStatus">{initialRecord.status}</em>
+        </div>
+        <label class="century-range-control" for="centuryDayRange">
+          <span class="i18n-zh">全局时间游标</span><span class="i18n-en">Global time cursor</span>
+          <input id="centuryDayRange" type="range" min="1" max={data.dayCount} value={initialDay} step="1" />
+        </label>
+      </div>
+
+      <div class="century-daily-layout">
+        <div class="century-day-field" aria-label="100 day activity field">
+          {data.days.map((day) => (
+            <button
+              type="button"
+              class:list={[
+                "century-day-cell",
+                `status-${day.status}`,
+                `tone-${day.dominantTopic?.color || "yellow"}`,
+                { "is-selected": day.dayNumber === initialDay },
+              ]}
+              data-century-day={day.dayNumber}
+              data-date={day.date}
+              data-activity={day.activityScore}
+              style={`--day-activity:${Math.max(0.06, day.activityScore / 100)}`}
+              aria-label={`Day ${day.dayNumber}, ${day.date}, ${day.metrics.reports} reports`}
+              aria-pressed={day.dayNumber === initialDay ? "true" : "false"}
+              title={`${day.date} · ${day.headline}`}
+            >
+              <span>{String(day.dayNumber).padStart(2, "0")}</span>
+              <i aria-hidden="true"></i>
+              <em>{day.date.slice(5)}</em>
+            </button>
+          ))}
+        </div>
+
+        <article class="century-day-inspector" aria-live="polite" aria-busy="true">
+          <div class="century-inspector-topline">
+            <span id="centuryInspectorTopic">{initialRecord.dominantTopic?.labelZh || "综合研究"}</span>
+            <a id="centuryDayContractLink" href={initialRecord.detailHref}>JSON ↗</a>
+          </div>
+          <h3 id="centuryInspectorHeadline">{initialRecord.headline}</h3>
+          <p id="centuryInspectorSummary">{initialRecord.summary}</p>
+          <div class="century-inspector-metrics" id="centuryInspectorMetrics"></div>
+          <div class="century-inspector-tabs" role="tablist" aria-label="Day detail views">
+            <button type="button" role="tab" aria-selected="true" data-day-tab="overview"><span class="i18n-zh">总览</span><span class="i18n-en">Overview</span></button>
+            <button type="button" role="tab" aria-selected="false" data-day-tab="reports"><span class="i18n-zh">报告</span><span class="i18n-en">Reports</span></button>
+            <button type="button" role="tab" aria-selected="false" data-day-tab="theses">Theses</button>
+            <button type="button" role="tab" aria-selected="false" data-day-tab="personas"><span class="i18n-zh">分析师</span><span class="i18n-en">Personas</span></button>
+            <button type="button" role="tab" aria-selected="false" data-day-tab="discussions"><span class="i18n-zh">研究链</span><span class="i18n-en">Threads</span></button>
+          </div>
+          <div id="centuryInspectorBody" class="century-inspector-body">
+            <div class="century-inspector-loading"><i></i><span>Loading public day contract…</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="century-section century-river-section" id="research-river">
+      <header class="century-section-header">
+        <div>
+          <span>03 / RESEARCH RIVER</span>
+          <h2 class="i18n-zh">研究活动如何在一百天里积累</h2>
+          <h2 class="i18n-en">How research activity accumulated across 100 days</h2>
+        </div>
+        <p class="i18n-zh">报告、研究讨论、thesis 证据和 persona 观点变化使用独立尺度。移动或点击图表可以改变全局日期。</p>
+        <p class="i18n-en">Reports, discussions, thesis evidence, and persona changes use independent scales. Hover or click to move the global date.</p>
+      </header>
+      <div class="century-river-workbench">
+        <canvas id="centuryResearchRiver" aria-label="Interactive 100-day research activity chart"></canvas>
+        <div class="century-river-cursor" id="centuryRiverCursor" aria-hidden="true"></div>
+        <div class="century-river-tooltip" id="centuryRiverTooltip" hidden></div>
+      </div>
+      <div class="century-river-legend">
+        <span class="legend-blue"><i></i><span class="i18n-zh">公开报告</span><span class="i18n-en">Reports</span></span>
+        <span class="legend-green"><i></i><span class="i18n-zh">研究讨论</span><span class="i18n-en">Discussions</span></span>
+        <span class="legend-yellow"><i></i><span class="i18n-zh">Thesis 证据</span><span class="i18n-en">Thesis evidence</span></span>
+        <span class="legend-orange"><i></i><span class="i18n-zh">Persona 变化</span><span class="i18n-en">Persona changes</span></span>
+      </div>
+    </section>
+
+    <section class="century-section century-episodes-section" id="episodes">
+      <header class="century-section-header">
+        <div>
+          <span>04 / EPISODE LIBRARY</span>
+          <h2 class="i18n-zh">不是六个案例，而是持续扩展的研究事件库</h2>
+          <h2 class="i18n-en">Not six cases, but an expanding research episode library</h2>
+        </div>
+        <p class="i18n-zh">Reader memos、动态复盘和旗舰深研全部保留。每个事件都链接到完整页面和来源关系。</p>
+        <p class="i18n-en">Reader memos, living recaps, and flagship deep research remain available with stable detail links.</p>
+      </header>
+
+      <div class="century-episode-controls">
+        <label for="centuryEpisodeSearch">
+          <span class="i18n-zh">搜索研究事件</span><span class="i18n-en">Search episodes</span>
+          <input id="centuryEpisodeSearch" type="search" placeholder="AI power, Mag7, 科创50, HBM, MSCI…" />
+        </label>
+        <div class="century-filter-buttons" aria-label="Episode filters">
+          {episodeFilters.map((filter, index) => (
+            <button type="button" class:list={{ "is-active": index === 0 }} data-episode-filter={filter.id}>
+              <span class="i18n-zh">{filter.labelZh}</span><span class="i18n-en">{filter.label}</span>
+            </button>
+          ))}
+        </div>
+        <span id="centuryEpisodeCount">{data.episodes.length} episodes</span>
+      </div>
+
+      <div class="century-episode-grid" id="centuryEpisodeGrid">
+        {data.episodes.map((episode) => (
+          <article
+            class={`century-episode-card tone-${episode.color}`}
+            data-episode-type={episode.type}
+            data-episode-search={`${episode.title} ${episode.titleEn || ""} ${episode.summary} ${(episode.tags || []).join(" ")}`.toLowerCase()}
+          >
+            <a class="century-episode-link" href={episode.href} aria-label={`Open ${episode.title}`}></a>
+            <div class="century-episode-topline"><span>{episode.badge}</span><em>{episode.date}</em></div>
+            <h3>{episode.title}</h3>
+            <p>{episode.summary}</p>
+            {episode.chart?.values?.length ? (
+              <canvas class="century-episode-spark" width="260" height="62" data-values={episode.chart.values.join(",")} aria-label={`${episode.title} timeline sparkline`}></canvas>
+            ) : (
+              <div class="century-episode-nochart" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+            )}
+            <footer>
+              <span>{episode.type}</span>
+              <strong><span class="i18n-zh">打开完整研究</span><span class="i18n-en">Open research</span> ↗</strong>
+            </footer>
+          </article>
+        ))}
+      </div>
+      <div class="century-episode-more">
+        <button type="button" id="centuryShowMoreEpisodes">
+          <span class="i18n-zh">显示更多研究事件</span><span class="i18n-en">Show more episodes</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="century-section century-institution-section" id="institution">
+      <header class="century-section-header">
+        <div>
+          <span>05 / INSTITUTION LOOP</span>
+          <h2 class="i18n-zh">模型如何变成研究同事</h2>
+          <h2 class="i18n-en">How models become research colleagues</h2>
+        </div>
+        <p class="i18n-zh">这不是一条单向生产线。复盘和证伪会回到下一轮信号选择，形成可观察的机构记忆。</p>
+        <p class="i18n-en">This is not a one-way pipeline. Recap and falsification return to signal selection as observable institutional memory.</p>
+      </header>
+      <div class="century-flow-stage" data-flow-stage>
+        <canvas id="centuryInstitutionFlow" aria-label="Animated AI Institute research loop"></canvas>
+        <div class="century-flow-nodes">
+          {data.institution.stages.map((stage, index) => (
+            <button type="button" class={`tone-${stage.color}`} data-flow-index={index}>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <strong class="i18n-zh">{stage.labelZh}</strong><strong class="i18n-en">{stage.labelEn}</strong>
+            </button>
+          ))}
+        </div>
+        <div class="century-flow-inspector" id="centuryFlowInspector">
+          <span>01 / SIGNAL</span>
+          <strong class="i18n-zh">信号进入研究议程</strong><strong class="i18n-en">Signals enter the research agenda</strong>
+          <p class="i18n-zh">市场变化、研究缺口和既有 thesis 的证伪条件决定下一步由谁研究，而不是让模型随机生成内容。</p>
+          <p class="i18n-en">Market changes, evidence gaps, and thesis falsifiers determine what is researched next.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="century-section century-scorecard-section" id="scorecard">
+      <header class="century-section-header">
+        <div>
+          <span>06 / PUBLIC SCORECARD</span>
+          <h2 class="i18n-zh">规模、结构、可读性与复盘</h2>
+          <h2 class="i18n-en">Scale, structure, readability, and recap</h2>
+        </div>
+        <p class="i18n-zh">以下只展示当前公开数据能够证明的指标。尚未形成可靠口径的质量指标不会被伪造成完成率。</p>
+        <p class="i18n-en">Only metrics supported by current public contracts are shown. Unmeasured quality is not presented as a fabricated completion rate.</p>
+      </header>
+      <div class="century-score-grid">
+        {scoreItems.map((item) => (
+          <a class={`century-score-row tone-${item.color}`} href={item.key === "reports" ? "/investor/archive/" : item.key === "theses" || item.key === "lanes" || item.key === "stocks" || item.key === "publicEdges" ? "/investor/research-network/" : item.key === "personas" || item.key === "personaTimelineEvents" ? "/investor/personas/" : item.key === "readerMemos" ? "/investor/#reader" : item.key === "recapDashboards" ? "/investor/recaps/" : item.key === "deepResearch" ? "/investor/console/#deep" : "/investor/console/#operations"}>
+            <span>{item.label}</span>
+            <strong>{number.format(data.scorecard[item.key] || 0)}</strong>
+            <em>{item.labelZh}</em>
+            <i aria-hidden="true"></i>
+          </a>
+        ))}
+      </div>
+      <div class="century-quality-ledger">
+        <div>
+          <span>DAY 101 / MEASUREMENT</span>
+          <h3 class="i18n-zh">下一阶段应测量什么</h3><h3 class="i18n-en">What the next phase should measure</h3>
+        </div>
+        <ul>
+          <li class="i18n-zh">引用覆盖率与来源质量</li><li class="i18n-en">Citation coverage and source quality</li>
+          <li class="i18n-zh">QA 通过、修订与失败比例</li><li class="i18n-en">QA pass, revision, and failure rates</li>
+          <li class="i18n-zh">Thesis 强化、削弱与证伪比例</li><li class="i18n-en">Thesis strengthening, weakening, and falsification</li>
+          <li class="i18n-zh">从研究生成到人类可读交付的时间</li><li class="i18n-en">Time from research generation to a reader deliverable</li>
+          <li class="i18n-zh">完整样本的市场表现与决策价值</li><li class="i18n-en">Full-sample market outcomes and decision value</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="century-live-section" id="live">
+      <div>
+        <span>DAY 100 IS A SNAPSHOT / THE INSTITUTE CONTINUES</span>
+        <h2 class="i18n-zh">快照会冻结，研究不会停止。</h2>
+        <h2 class="i18n-en">The snapshot will freeze. The research will not.</h2>
+        <p class="i18n-zh">继续进入实时晨会、周度全景、thesis、赛道、股票、组合、复盘和研究网络。</p>
+        <p class="i18n-en">Continue into live briefs, weekly panorama, theses, lanes, stocks, portfolios, recaps, and the research network.</p>
+      </div>
+      <div class="century-live-actions">
+        <a class="century-primary-action" href="/investor/"><span>↗</span><span class="i18n-zh">进入实时研究院</span><span class="i18n-en">Enter the live Institute</span></a>
+        <a href={data.methodologyHref}><span>◎</span><span class="i18n-zh">阅读机构方法</span><span class="i18n-en">Read the methodology</span></a>
+      </div>
+    </section>
+  </main>
+
+  <script type="application/json" id="hundredDaysPayload" set:html={payload}></script>
+</div>
+
+<script>
+  import { mountHundredDaysPortal } from "../../scripts/hundred-days.js";
+  mountHundredDaysPortal();
+</script>

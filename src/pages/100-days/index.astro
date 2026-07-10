@@ -1,0 +1,21 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import HundredDaysPortal from "../../components/hundred-days/HundredDaysPortal.astro";
+import hundredDays from "../../generated/hundred-days/index.json";
+import "../../styles/hundred-days.css";
+---
+
+<!doctype html>
+<html lang="zh-CN" data-lang="zh">
+  <head>
+    <BaseHead
+      title="AI 研究院的 100 天 · 100 Days of AI Institute"
+      description="A temporal research atlas replaying 100 days of AI Institute reports, research threads, theses, lanes, stocks, analyst views, recaps, and human-readable synthesis."
+    />
+  </head>
+  <body class="hundred-days-page">
+    <Header />
+    <HundredDaysPortal data={hundredDays} />
+  </body>
+</html>

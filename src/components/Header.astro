@@ -3,7 +3,7 @@ import { SITE_TITLE } from '../consts';
 import HeaderLink from './HeaderLink.astro';
 import InvestorPortalNav from './investor/InvestorPortalNav.astro';
 
-const isInvestorRoute = Astro.url.pathname.startsWith('/investor');
+const isInvestorRoute = Astro.url.pathname.startsWith('/investor') || Astro.url.pathname.startsWith('/100-days');
 ---
 
 <header>
@@ -16,6 +16,7 @@ const isInvestorRoute = Astro.url.pathname.startsWith('/investor');
 		</div>
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
+			<HeaderLink href="/100-days">100 Days</HeaderLink>
 			<HeaderLink href="/investor">Investment</HeaderLink>
 			<HeaderLink href="/blog">Articles</HeaderLink>
 			<HeaderLink href="/graph">Network</HeaderLink>
