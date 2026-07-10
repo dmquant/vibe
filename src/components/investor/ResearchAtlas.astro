@@ -1,0 +1,128 @@
+---
+import "../../styles/research-atlas.css";
+---
+
+<section class="research-atlas" id="research-atlas" data-research-atlas data-endpoint="/investor-data/research-atlas.json">
+  <header class="atlas-header">
+    <div>
+      <span class="atlas-eyebrow">Thesis Topology Atlas</span>
+      <h2>研究主线拓扑图谱</h2>
+      <p>以公开研究关系投影赛道密度、主线邻域、候选标的与证据分歧。</p>
+    </div>
+    <div class="atlas-header-meta" aria-live="polite">
+      <span><strong id="atlasVisibleCount">—</strong> visible</span>
+      <span><strong id="atlasZoomValue">100%</strong> zoom</span>
+      <a href="/investor-data/research-atlas.json">Atlas JSON</a>
+    </div>
+  </header>
+
+  <div class="atlas-querybar">
+    <div class="atlas-search-box">
+      <label for="networkSearch">Search</label>
+      <input id="networkSearch" type="search" autocomplete="off" placeholder="搜索 thesis、赛道、股票、术语、报告…" />
+      <button type="button" id="atlasSearchClear" aria-label="清除搜索" title="清除搜索">×</button>
+      <div class="atlas-search-results" id="atlasSearchResults" hidden></div>
+    </div>
+    <div class="atlas-mode-switch" aria-label="图谱操作模式">
+      <button type="button" class="is-active" data-atlas-mode="navigate">导航</button>
+      <button type="button" data-atlas-mode="brush">框选</button>
+    </div>
+    <button type="button" class="atlas-quiet-button" id="atlasClearSelection">清除选择</button>
+  </div>
+
+  <div class="atlas-workbench">
+    <aside class="atlas-filter-panel" aria-label="图谱筛选">
+      <section>
+        <div class="atlas-panel-title"><span>Node Types</span><strong>节点</strong></div>
+        <fieldset class="atlas-type-list">
+          <label><input type="checkbox" value="thesis" data-atlas-type checked /><i class="type-thesis"></i><span>Theses</span><strong id="atlasTypeThesis">—</strong></label>
+          <label><input type="checkbox" value="stock" data-atlas-type checked /><i class="type-stock"></i><span>Stocks</span><strong id="atlasTypeStock">—</strong></label>
+          <label><input type="checkbox" value="term" data-atlas-type checked /><i class="type-term"></i><span>Terms</span><strong id="atlasTypeTerm">—</strong></label>
+          <label><input type="checkbox" value="event" data-atlas-type checked /><i class="type-event"></i><span>Evidence</span><strong id="atlasTypeEvent">—</strong></label>
+        </fieldset>
+      </section>
+
+      <section class="atlas-filter-stack">
+        <div class="atlas-panel-title"><span>Cross Filters</span><strong>联动筛选</strong></div>
+        <label>
+          <span>赛道</span>
+          <select id="atlasLaneFilter"><option value="">全部赛道</option></select>
+        </label>
+        <label>
+          <span>主线状态</span>
+          <select id="atlasDirectionFilter">
+            <option value="">全部状态</option>
+            <option value="strengthening">增强</option>
+            <option value="conflicting">分歧</option>
+            <option value="weakening">减弱</option>
+            <option value="stable">稳定</option>
+          </select>
+        </label>
+        <label>
+          <span>最低强度 <strong id="atlasScoreValue">0</strong></span>
+          <input id="atlasScoreFilter" type="range" min="0" max="90" value="0" step="5" />
+        </label>
+        <label class="atlas-toggle-row">
+          <input id="atlasLinksToggle" type="checkbox" />
+          <span>显示全局关系线</span>
+        </label>
+      </section>
+
+      <section class="atlas-lane-section">
+        <div class="atlas-panel-title"><span>Dense Regions</span><strong>高密度赛道</strong></div>
+        <div class="atlas-lane-list" id="atlasLaneList"></div>
+      </section>
+    </aside>
+
+    <div class="atlas-map-panel" id="atlasMapPanel">
+      <canvas id="atlasCanvas" aria-label="研究主线、赛道、股票、术语与证据的交互式拓扑投影"></canvas>
+      <div class="atlas-loading" id="atlasLoading">
+        <span></span>
+        <strong>BUILDING ATLAS</strong>
+      </div>
+      <div class="atlas-tooltip" id="atlasTooltip" hidden></div>
+      <div class="atlas-map-tools" aria-label="缩放控制">
+        <button type="button" id="atlasZoomIn" aria-label="放大" title="放大">+</button>
+        <button type="button" id="atlasZoomOut" aria-label="缩小" title="缩小">−</button>
+        <button type="button" id="atlasFit" aria-label="适配全部" title="适配全部">⊙</button>
+        <button type="button" id="atlasFullscreen" aria-label="全屏图谱" title="全屏图谱">⛶</button>
+      </div>
+      <canvas class="atlas-minimap" id="atlasMinimap" width="180" height="112" aria-hidden="true"></canvas>
+      <div class="atlas-map-caption">
+        <span id="atlasProjectionLabel">TOPOLOGY / 2D</span>
+        <strong id="atlasSelectionCount">ALL NODES</strong>
+      </div>
+    </div>
+
+    <aside class="atlas-inspector" id="atlasInspector" aria-live="polite">
+      <div class="atlas-inspector-empty">
+        <span>Atlas Overview</span>
+        <h3>公开研究空间</h3>
+        <div class="atlas-overview-grid">
+          <div><strong id="atlasOverviewLanes">—</strong><span>赛道</span></div>
+          <div><strong id="atlasOverviewNodes">—</strong><span>节点</span></div>
+          <div><strong id="atlasOverviewEdges">—</strong><span>关系</span></div>
+          <div><strong id="atlasOverviewDates">—</strong><span>时间跨度</span></div>
+        </div>
+        <div class="atlas-evidence-balance" id="atlasEvidenceBalance"></div>
+        <div class="atlas-inspector-list" id="atlasOverviewList"></div>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="atlas-footer">
+    <div class="atlas-legend" aria-label="节点图例">
+      <span><i class="type-thesis"></i> Thesis</span>
+      <span><i class="type-stock"></i> Stock</span>
+      <span><i class="type-term"></i> Term</span>
+      <span><i class="type-event"></i> Support</span>
+      <span><i class="type-risk"></i> Risk</span>
+    </div>
+    <div class="atlas-context" id="atlasContext">PUBLIC GRAPH · FULL NODE COVERAGE</div>
+  </footer>
+</section>
+
+<script>
+  import { mountResearchAtlas } from "../../scripts/research-atlas.js";
+  mountResearchAtlas();
+</script>

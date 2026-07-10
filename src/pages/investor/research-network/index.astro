@@ -1,6 +1,7 @@
 ---
 import BaseHead from "../../../components/BaseHead.astro";
 import Header from "../../../components/Header.astro";
+import ResearchAtlas from "../../../components/investor/ResearchAtlas.astro";
 import { readResearchNetwork } from "../../../lib/investor-generated.js";
 import { buildLaneIndex, buildStockIndex, stockPath, thesisPath } from "../../../lib/investor-market.js";
 import "../../../styles/research-network.css";
@@ -10,44 +11,9 @@ const stats = network.stats || {};
 const theses = network.theses || [];
 const graph = network.graph || { nodes: [], edges: [] };
 const recaps = network.livingRecaps || [];
-
-const nodeGroups = new Map();
-for (const node of graph.nodes || []) {
-  const group = nodeGroups.get(node.type) || [];
-  group.push(node);
-  nodeGroups.set(node.type, group);
-}
-const width = 980;
-const height = 600;
-const centerX = width / 2;
-const centerY = height / 2;
-const rings = { thesis: 135, stock: 215, term: 280, event: 340 };
-const nodePositions = new Map();
-for (const [type, nodes] of nodeGroups.entries()) {
-  nodes.forEach((node, index) => {
-    const count = Math.max(1, nodes.length);
-    const angle = (Math.PI * 2 * index) / count - Math.PI / 2 + (type === "term" ? 0.08 : type === "event" ? 0.16 : 0);
-    const ring = rings[type] || 280;
-    nodePositions.set(node.id, {
-      ...node,
-      x: centerX + Math.cos(angle) * ring,
-      y: centerY + Math.sin(angle) * ring,
-    });
-  });
-}
-const visibleEdges = (graph.edges || []).filter((edge) => nodePositions.has(edge.source) && nodePositions.has(edge.target)).slice(0, 320);
-const visibleNodes = [...nodePositions.values()].slice(0, 180);
 const formatDate = (value) => String(value || "").replace(/^2026-/, "");
 const pct = (value) => `${Math.max(6, Math.min(100, Number(value || 0)))}%`;
 const heat = (value) => Math.max(0.14, Math.min(1, Number(value || 0) / 100)).toFixed(2);
-const sourceMix = theses
-  .flatMap((thesis) => Object.entries(thesis.sourceTypeCounts || {}))
-  .reduce((acc, [label, count]) => {
-    acc.set(label, (acc.get(label) || 0) + Number(count || 0));
-    return acc;
-  }, new Map());
-const sourceRows = [...sourceMix.entries()].sort((a, b) => b[1] - a[1]).slice(0, 8);
-const maxSource = Math.max(1, ...sourceRows.map((row) => row[1]));
 const bucketRows = [...theses
   .reduce((acc, thesis) => {
     const bucket = thesis.practical?.exposureBucket || "主题机会";
@@ -126,11 +92,7 @@ const thermalLaneRows = laneIndex.map((lane) => ({
         <div><span>Recaps</span><strong>{stats.autoRecaps || recaps.length}</strong><em>自动复盘</em></div>
       </section>
 
-      <section class="network-controls">
-        <label for="networkSearch">Search</label>
-        <input id="networkSearch" type="search" placeholder="搜索主线、公司、资产、链条、风险..." />
-        <a href="/investor-data/research-network.json">JSON 数据</a>
-      </section>
+      <ResearchAtlas />
 
       <section class="thermal-section" id="thermal" aria-label="All theses thermal matrix">
         <div class="section-mini-head">
@@ -209,86 +171,6 @@ const thermalLaneRows = laneIndex.map((lane) => ({
           <div class="portfolio-summary" id="portfolioSummary">尚未添加主线。</div>
           <div class="portfolio-list" id="portfolioList" aria-live="polite"></div>
         </div>
-      </section>
-
-      <section class="network-layout">
-        <div class="network-stage" aria-label="Public research network graph">
-          <div class="graph-toolbar">
-            <button type="button" data-graph-filter="all" class="is-active">All</button>
-            <button type="button" data-graph-filter="thesis">Thesis</button>
-            <button type="button" data-graph-filter="stock">Stocks</button>
-            <button type="button" data-graph-filter="term">Terms</button>
-            <button type="button" data-graph-filter="event">Events</button>
-            <button type="button" id="resetGraph">Reset</button>
-          </div>
-          <svg id="networkSvg" viewBox={`0 0 ${width} ${height}`} role="img" aria-label="研究主线、关键词和证据事件网络">
-            <g id="networkViewport">
-              <g class="network-edges">
-                {visibleEdges.map((edge) => {
-                  const source = nodePositions.get(edge.source);
-                  const target = nodePositions.get(edge.target);
-                  return <line x1={source.x} y1={source.y} x2={target.x} y2={target.y} class={`edge ${edge.type}`} data-source={edge.source} data-target={edge.target} />;
-                })}
-              </g>
-              <g class="network-center">
-                <circle cx={centerX} cy={centerY} r="54"></circle>
-                <text x={centerX} y={centerY - 3} text-anchor="middle">AI Institute</text>
-                <text x={centerX} y={centerY + 16} text-anchor="middle">ResearchOS</text>
-              </g>
-              <g class="network-nodes">
-                {visibleNodes.map((node) => (
-                  <a
-                    href={node.href || "#"}
-                    class={`node node-${node.type}`}
-                    data-node-id={node.id}
-                    data-node-type={node.type}
-                    data-node-label={node.label}
-                    data-node-lane={node.lane || ""}
-                    data-node-bucket={node.bucket || ""}
-                    data-node-action={node.actionLabel || ""}
-                    data-node-score={node.practicalScore || node.conviction || ""}
-                    data-search={`${node.label} ${node.type} ${node.lane || ""} ${node.name || ""} ${node.market || ""} ${node.role || ""} ${node.bucket || ""} ${node.actionLabel || ""}`}
-                  >
-                    <circle cx={node.x} cy={node.y} r={node.type === "thesis" ? 13 : node.type === "stock" ? 10 : node.type === "term" ? 8 : 5}></circle>
-                    <text x={node.x} y={node.y - (node.type === "thesis" ? 18 : node.type === "stock" ? 15 : 11)} text-anchor="middle">{node.label}</text>
-                  </a>
-                ))}
-              </g>
-            </g>
-          </svg>
-          <div class="graph-hint">滚轮缩放，拖动画布平移，点击节点查看关系。</div>
-        </div>
-
-        <aside class="network-side">
-          <section class="selection-panel" id="networkSelection">
-            <h2>节点详情</h2>
-            <p>点击图谱节点后，这里会显示主线、行动建议和关联关系。</p>
-          </section>
-          <section>
-            <h2>来源构成</h2>
-            <div class="source-bars">
-              {sourceRows.map(([label, count]) => (
-                <div class="source-row">
-                  <span>{label}</span>
-                  <strong>{count}</strong>
-                  <i><b style={`width:${pct((count / maxSource) * 100)}`}></b></i>
-                </div>
-              ))}
-            </div>
-          </section>
-          <section>
-            <h2>最新主线</h2>
-            <div class="mini-thesis-list">
-              {theses.slice(0, 6).map((thesis) => (
-                <a href={thesisPath(thesis)}>
-                  <span>{thesis.directionLabel} · {thesis.eventCount} events</span>
-                  <strong>{thesis.title}</strong>
-                  <em>{formatDate(thesis.lastSeen)}</em>
-                </a>
-              ))}
-            </div>
-          </section>
-        </aside>
       </section>
 
       <section class="thesis-section" id="theses">
@@ -443,20 +325,8 @@ const thermalLaneRows = laneIndex.map((lane) => ({
       const input = document.getElementById("networkSearch");
       const searchable = [...document.querySelectorAll("[data-search]")];
       const actionButtons = [...document.querySelectorAll("[data-action-filter]")];
-      const graphButtons = [...document.querySelectorAll("[data-graph-filter]")];
-      const nodes = [...document.querySelectorAll(".node[data-node-id]")];
-      const edges = [...document.querySelectorAll(".edge[data-source][data-target]")];
-      const selection = document.getElementById("networkSelection");
-      const svg = document.getElementById("networkSvg");
-      const viewport = document.getElementById("networkViewport");
       const portfolioKey = "vibe.researchNetwork.portfolio.v1";
-      let graphFilter = "all";
       let actionFilter = "";
-      let panX = 0;
-      let panY = 0;
-      let zoom = 1;
-      let dragging = false;
-      let lastPoint = null;
 
       function readPortfolio() {
         try {
@@ -530,66 +400,12 @@ const thermalLaneRows = laneIndex.map((lane) => ({
         searchable.forEach((item) => {
           const text = String(item.dataset.search || "").toLowerCase();
           const action = String(item.dataset.action || "");
-          const type = String(item.dataset.nodeType || "");
           const matchQuery = !query || text.includes(query);
           const matchAction = !actionFilter || action === actionFilter || !item.classList.contains("thesis-card");
-          const matchGraph = graphFilter === "all" || !item.classList.contains("node") || type === graphFilter;
-          const match = matchQuery && matchAction && matchGraph;
+          const match = matchQuery && matchAction;
           item.classList.toggle("is-muted", !match);
           item.classList.toggle("is-hidden", !match && item.classList.contains("thesis-card"));
         });
-      }
-
-      function resetGraphFocus() {
-        nodes.forEach((node) => node.classList.remove("is-selected", "is-related"));
-        edges.forEach((edge) => edge.classList.remove("is-selected", "is-related"));
-        if (selection) {
-          selection.innerHTML = "<h2>节点详情</h2><p>点击图谱节点后，这里会显示主线、行动建议和关联关系。</p>";
-        }
-      }
-
-      function selectNode(node) {
-        const id = node.dataset.nodeId;
-        const relatedIds = new Set([id]);
-        nodes.forEach((item) => item.classList.toggle("is-selected", item === node));
-        edges.forEach((edge) => {
-          const related = edge.dataset.source === id || edge.dataset.target === id;
-          edge.classList.toggle("is-related", related);
-          edge.classList.toggle("is-selected", related);
-          if (related) {
-            relatedIds.add(edge.dataset.source);
-            relatedIds.add(edge.dataset.target);
-          }
-        });
-        nodes.forEach((item) => item.classList.toggle("is-related", relatedIds.has(item.dataset.nodeId)));
-        if (selection) {
-          const href = node.getAttribute("href") || "#";
-          const isThesis = node.dataset.nodeType === "thesis";
-          selection.innerHTML = `
-            <h2>${node.dataset.nodeLabel || "节点"}</h2>
-            <div class="selection-tags">
-              <span>${node.dataset.nodeType || "node"}</span>
-              ${node.dataset.nodeLane ? `<span>${node.dataset.nodeLane}</span>` : ""}
-              ${node.dataset.nodeBucket ? `<span>${node.dataset.nodeBucket}</span>` : ""}
-              ${node.dataset.nodeAction ? `<span>${node.dataset.nodeAction}</span>` : ""}
-              ${node.dataset.nodeScore ? `<span>Score ${node.dataset.nodeScore}</span>` : ""}
-            </div>
-            <p>${isThesis ? "这是一条可加入组合追踪的研究主线。关联线显示它的关键词和最新证据。" : "点击关联主线可以进入具体 thesis，或使用搜索收窄关系。"}</p>
-            <div class="network-actions compact-actions">
-              <a href="${href}">打开节点</a>
-              ${isThesis ? `<button type="button" data-select-track="${id}">加入追踪</button>` : ""}
-            </div>
-          `;
-        }
-      }
-
-      function setTransform() {
-        if (viewport) viewport.setAttribute("transform", `translate(${panX} ${panY}) scale(${zoom})`);
-      }
-
-      function svgPoint(event) {
-        const rect = svg.getBoundingClientRect();
-        return { x: event.clientX - rect.left, y: event.clientY - rect.top };
       }
 
       input?.addEventListener("input", syncSearch);
@@ -600,54 +416,8 @@ const thermalLaneRows = laneIndex.map((lane) => ({
           syncSearch();
         });
       });
-      graphButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          graphFilter = button.dataset.graphFilter || "all";
-          graphButtons.forEach((item) => item.classList.toggle("is-active", item === button));
-          resetGraphFocus();
-          syncSearch();
-        });
-      });
-      nodes.forEach((node) => {
-        node.addEventListener("click", (event) => {
-          event.preventDefault();
-          selectNode(node);
-        });
-      });
-      svg?.addEventListener("wheel", (event) => {
-        event.preventDefault();
-        const direction = event.deltaY > 0 ? -0.08 : 0.08;
-        zoom = Math.max(0.65, Math.min(2.2, zoom + direction));
-        setTransform();
-      }, { passive: false });
-      svg?.addEventListener("pointerdown", (event) => {
-        if (event.target.closest?.(".node")) return;
-        dragging = true;
-        lastPoint = svgPoint(event);
-        svg.setPointerCapture?.(event.pointerId);
-      });
-      svg?.addEventListener("pointermove", (event) => {
-        if (!dragging || !lastPoint) return;
-        const point = svgPoint(event);
-        panX += (point.x - lastPoint.x) / zoom;
-        panY += (point.y - lastPoint.y) / zoom;
-        lastPoint = point;
-        setTransform();
-      });
-      svg?.addEventListener("pointerup", () => {
-        dragging = false;
-        lastPoint = null;
-      });
-      document.getElementById("resetGraph")?.addEventListener("click", () => {
-        panX = 0;
-        panY = 0;
-        zoom = 1;
-        setTransform();
-        resetGraphFocus();
-      });
       document.addEventListener("click", (event) => {
         const track = event.target.closest?.(".track-thesis");
-        const selectTrack = event.target.closest?.("[data-select-track]");
         if (track) {
           upsertPortfolio({
             id: track.dataset.trackId,
@@ -657,19 +427,6 @@ const thermalLaneRows = laneIndex.map((lane) => ({
             score: track.dataset.trackScore,
             risk: track.dataset.trackRisk,
           });
-        }
-        if (selectTrack) {
-          const card = document.querySelector(`[data-thesis-id="${selectTrack.dataset.selectTrack}"]`);
-          if (card) {
-            upsertPortfolio({
-              id: card.dataset.thesisId,
-              title: card.dataset.title,
-              bucket: card.dataset.bucket,
-              action: card.dataset.action,
-              score: card.dataset.score,
-              risk: card.dataset.riskBudget,
-            });
-          }
         }
         const remove = event.target.closest?.("[data-remove]");
         if (remove) writePortfolio(readPortfolio().filter((item) => item.id !== remove.dataset.remove));
