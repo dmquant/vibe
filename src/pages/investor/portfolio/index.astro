@@ -1,327 +1,240 @@
 ---
 import BaseHead from "../../../components/BaseHead.astro";
 import Header from "../../../components/Header.astro";
-import { readResearchNetwork } from "../../../lib/investor-generated.js";
+import { readMarketOntology, readResearchNetwork } from "../../../lib/investor-generated.js";
 import { stockPath, thesisPath } from "../../../lib/investor-market.js";
 import "../../../styles/research-network.css";
 
 const network = readResearchNetwork();
-const theses = (network.theses || []).slice(0, 72);
-const buckets = [...theses
-  .reduce((acc, thesis) => {
-    const bucket = thesis.practical?.exposureBucket || "主题机会";
-    acc.set(bucket, (acc.get(bucket) || 0) + 1);
-    return acc;
-  }, new Map())
-  .entries()].sort((a, b) => b[1] - a[1]);
-const actions = [...theses
-  .reduce((acc, thesis) => {
-    const action = thesis.practical?.actionLabel || "观察等待";
-    acc.set(action, (acc.get(action) || 0) + 1);
-    return acc;
-  }, new Map())
-  .entries()].sort((a, b) => b[1] - a[1]);
+const ontology = readMarketOntology();
+const theses = network.theses || [];
+const stocks = [...(ontology.stocks || [])].sort((a, b) => Number(b.evidenceCount || 0) - Number(a.evidenceCount || 0) || a.ticker.localeCompare(b.ticker));
+const lanes = ontology.lanes || [];
+const laneById = new Map(lanes.map((lane) => [lane.id, lane]));
+const adviceLanes = lanes.filter((lane) => lane.advice).sort((a, b) => Number(b.advice.confidence || 0) - Number(a.advice.confidence || 0));
+const markets = [...new Set(stocks.map((stock) => stock.market).filter(Boolean))].sort();
+const buckets = [...theses.reduce((acc, thesis) => {
+  const bucket = thesis.practical?.exposureBucket || "主题机会";
+  acc.set(bucket, (acc.get(bucket) || 0) + 1);
+  return acc;
+}, new Map()).entries()].sort((a, b) => b[1] - a[1]);
+const actions = [...theses.reduce((acc, thesis) => {
+  const action = thesis.practical?.actionLabel || "观察等待";
+  acc.set(action, (acc.get(action) || 0) + 1);
+  return acc;
+}, new Map()).entries()].sort((a, b) => b[1] - a[1]);
+const stanceLabels = { overweight: "超配", selective: "精选", neutral: "中性", underweight: "低配", avoid: "回避" };
+const roleLabels = { core: "核心", watch: "观察", hedge: "对冲" };
+const portfolioData = JSON.stringify({
+  stocks: stocks.map((stock) => ({ ticker: stock.ticker, name: stock.name, market: stock.market, href: stock.href, laneIds: stock.laneIds || [] })),
+  lanes: lanes.map((lane) => ({ id: lane.id, titleZh: lane.titleZh, titleEn: lane.titleEn, href: lane.href, advice: lane.advice || null })),
+}).replaceAll("<", "\\u003c");
 ---
 
 <!doctype html>
 <html lang="zh-CN" data-lang="zh">
   <head>
     <BaseHead
-      title="组合追踪 · AI Institute 投资研究台"
-      description="Browser-local thesis portfolio tracker for AI Institute public research network."
+      title="组合工作台 · AI Institute"
+      description="Browser-local thesis and stock portfolio workbench with validated lane research views."
     />
   </head>
   <body>
     <Header />
     <main class="research-network portfolio-page">
-      <section class="network-hero">
+      <section class="network-hero portfolio-hero">
         <div>
-          <div class="network-kicker">AI Institute · Portfolio Tracker</div>
-          <h1>组合追踪</h1>
-          <p>把研究主线转化为可复核的组合动作：观察、验证、核心、对冲、退出。所有权重、备注和复核日期只保存在当前浏览器。</p>
+          <div class="network-kicker">AI Institute · Portfolio Workbench</div>
+          <h1>组合工作台</h1>
+          <p>从研究主线进入赛道和股票簿：模型负责生成可证伪的赛道观点，市值、成本、盈亏与暴露由本地确定性账本计算。</p>
           <div class="network-actions">
-            <a href="/investor/">返回研究台</a>
+            <a href="/investor/">研究台</a>
             <a href="/investor/research-network/">研究网络</a>
-            <a href="/investor/recaps/">复盘仪表盘</a>
+            <a href="/investor/recaps/">复盘</a>
           </div>
         </div>
         <aside class="network-privacy">
-          <span>Static Site Mode</span>
-          <p>该功能不接入交易账户、不上传仓位、不构成投资建议，只把 AI Institute 研究主线变成可跟踪的决策清单。</p>
+          <span>Local Research Book</span>
+          <p>仓位、价格、汇率因子和备注只保存在当前浏览器；静态站点不连接账户，也不上传持仓。</p>
         </aside>
       </section>
 
-      <section class="network-stat-grid" aria-label="Portfolio tracker stats">
-        <div><span>Theses</span><strong>{theses.length}</strong><em>可选主线</em></div>
-        <div><span>Buckets</span><strong>{buckets.length}</strong><em>风险暴露</em></div>
-        <div><span>Actions</span><strong>{actions.length}</strong><em>组合动作</em></div>
-        <div><span>Storage</span><strong>Local</strong><em>浏览器保存</em></div>
+      <section class="network-stat-grid" aria-label="Portfolio coverage">
+        <div><span>Stocks</span><strong>{stocks.length}</strong><em>公开标的节点</em></div>
+        <div><span>Theses</span><strong>{theses.length}</strong><em>可追踪主线</em></div>
+        <div><span>Model Views</span><strong>{adviceLanes.length}</strong><em>已验证赛道观点</em></div>
+        <div><span>Local Book</span><strong><b data-count-stocks>0</b> / <b data-count-theses>0</b></strong><em>股票 / thesis</em></div>
       </section>
 
-      <section class="portfolio-workbench">
-        <div class="portfolio-panel is-large">
-          <div class="section-mini-head">
-            <span>Current Book</span>
-            <strong>本地组合视图</strong>
-          </div>
-          <div class="portfolio-toolbar">
-            <button type="button" id="exportPortfolio">导出 JSON</button>
-            <button type="button" id="clearPortfolio">清空本地组合</button>
-          </div>
-          <div class="portfolio-summary" id="portfolioSummary">尚未添加主线。</div>
-          <div class="allocation-board" id="allocationBoard"></div>
-          <div class="portfolio-list full" id="portfolioList" aria-live="polite"></div>
+      <section class="portfolio-command-bar" aria-label="Portfolio controls">
+        <div class="portfolio-mode-tabs" role="tablist" aria-label="Portfolio views">
+          <button type="button" data-view-target="stocks" role="tab">股票簿 <b data-count-stocks>0</b></button>
+          <button type="button" data-view-target="theses" role="tab">Thesis Book <b data-count-theses>0</b></button>
+          <button type="button" data-view-target="advice" role="tab">模型赛道观点 <b>{adviceLanes.length}</b></button>
         </div>
-
-        <aside class="portfolio-panel">
-          <div class="section-mini-head">
-            <span>Filters</span>
-            <strong>筛选候选</strong>
-          </div>
-          <label class="filter-control">搜索
-            <input id="portfolioSearch" type="search" placeholder="主线、资产、风险、行动..." />
-          </label>
-          <div class="bucket-stack compact">
-            <button type="button" data-filter-bucket="">全部暴露</button>
-            {buckets.map(([bucket, count]) => <button type="button" data-filter-bucket={bucket}>{bucket}<strong>{count}</strong></button>)}
-          </div>
-          <div class="action-stack compact">
-            <button type="button" data-filter-action="">全部动作</button>
-            {actions.map(([action, count]) => <button type="button" data-filter-action={action}>{action}<strong>{count}</strong></button>)}
-          </div>
-        </aside>
+        <div class="portfolio-toolbar">
+          <button type="button" id="importPortfolioButton">导入 JSON</button>
+          <input id="importPortfolio" type="file" accept="application/json,.json" hidden />
+          <button type="button" id="exportPortfolio">导出 JSON</button>
+          <button type="button" id="clearPortfolio" class="is-danger">清空本地账本</button>
+        </div>
       </section>
 
-      <section class="thesis-section">
-        <div class="section-headline">
-          <span>Candidate Thesis Pool</span>
-          <h2>可加入组合的研究主线</h2>
-          <p>每条主线都带有风险暴露、建议动作、风险预算、确认信号和证伪信号。点击“加入组合”后可维护权重和复核日期。</p>
-        </div>
-        <div class="portfolio-candidate-list">
-          {theses.map((thesis) => (
-            <article
-              class="candidate-row"
-              data-search={`${thesis.title} ${thesis.coreView} ${thesis.lane || ""} ${(thesis.stockTickers || []).join(" ")} ${(thesis.stockUniverse || []).map((stock) => stock.name).join(" ")} ${(thesis.topTerms || []).join(" ")} ${thesis.practical?.exposureBucket || ""} ${thesis.practical?.actionLabel || ""}`}
-              data-bucket={thesis.practical?.exposureBucket || "主题机会"}
-              data-action={thesis.practical?.actionLabel || "观察等待"}
-            >
-              <div>
-                <span>{thesis.lane || thesis.practical?.sectorLane || thesis.practical?.exposureBucket || "主题机会"} · {thesis.practical?.portfolioRole || thesis.practical?.actionLabel || "观察等待"} · Score {thesis.practical?.score || thesis.conviction}</span>
-                <h3><a href={thesisPath(thesis)}>{thesis.title}</a></h3>
-                <p>{thesis.practical?.portfolioUse || thesis.coreView}</p>
-                <div class="portfolio-detail-grid">
-                  <span><strong>赛道</strong>{thesis.lane || thesis.practical?.sectorLane || "未分类"}</span>
-                  <span><strong>动作</strong>{thesis.practical?.actionLabel || "观察等待"}</span>
-                  <span><strong>风险预算</strong>{thesis.practical?.weightGuide || thesis.practical?.riskBudget || "观察仓"}</span>
-                  <span><strong>期限</strong>{thesis.practical?.timeHorizon || thesis.practical?.reviewCadence || "待定"}</span>
-                  <span><strong>深研优先级</strong>{thesis.practical?.deepResearchPriority || "常规跟踪"}</span>
+      <div data-portfolio-view="stocks">
+        <section class="portfolio-ledger-layout">
+          <article class="portfolio-panel is-large">
+            <div class="section-mini-head"><span>Stock Book</span><strong>股票持仓与观察簿</strong></div>
+            <div class="stock-book-summary" id="stockPortfolioSummary"></div>
+            <div class="portfolio-list full" id="stockPortfolioList" aria-live="polite"></div>
+          </article>
+          <aside class="portfolio-panel portfolio-accounting">
+            <div class="section-mini-head"><span>Exposure</span><strong>赛道暴露</strong></div>
+            <label class="filter-control">基础币种
+              <select id="portfolioBaseCurrency">
+                <option value="USD">USD</option><option value="CNY">CNY</option><option value="HKD">HKD</option><option value="EUR">EUR</option>
+              </select>
+            </label>
+            <div class="allocation-board" id="laneExposureBoard"></div>
+          </aside>
+        </section>
+
+        <section class="thesis-section">
+          <div class="section-headline">
+            <span>Stock Universe</span>
+            <h2>公开股票节点</h2>
+            <p>按研究证据排序，股票名称、赛道和来源均来自公开市场本体。</p>
+          </div>
+          <div class="stock-pool-toolbar">
+            <label class="filter-control">搜索
+              <input id="stockSearch" type="search" placeholder="Ticker、公司、赛道、研究角色" />
+            </label>
+            <label class="filter-control">市场
+              <select id="stockMarketFilter"><option value="">全部市场</option>{markets.map((market) => <option value={market}>{market}</option>)}</select>
+            </label>
+          </div>
+          <div class="stock-candidate-grid">
+            {stocks.map((stock) => {
+              const stockLanes = (stock.laneIds || []).map((id) => laneById.get(id)).filter(Boolean);
+              return (
+                <article class="stock-candidate" data-market={stock.market} data-search={`${stock.ticker} ${stock.name} ${stock.market} ${(stock.roles || []).join(" ")} ${stockLanes.map((lane) => lane.titleZh).join(" ")}`}>
+                  <a href={stock.href || stockPath(stock)}>
+                    <span>{stock.market} · {stock.evidenceCount || 0} evidence</span>
+                    <strong>{stock.ticker}</strong>
+                    <em>{stock.name}</em>
+                  </a>
+                  <div>{stockLanes.slice(0, 3).map((lane) => <a href={lane.href}>{lane.titleZh}</a>)}</div>
+                  <button type="button" data-add-stock={stock.ticker}>加入股票簿</button>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+      </div>
+
+      <div data-portfolio-view="theses" hidden>
+        <section class="portfolio-workbench">
+          <article class="portfolio-panel is-large">
+            <div class="section-mini-head"><span>Thesis Book</span><strong>主线配置视图</strong></div>
+            <div class="portfolio-summary" id="thesisPortfolioSummary">当前 thesis book 为空。</div>
+            <div class="allocation-board" id="thesisAllocationBoard"></div>
+            <div class="portfolio-list full" id="thesisPortfolioList" aria-live="polite"></div>
+          </article>
+          <aside class="portfolio-panel">
+            <div class="section-mini-head"><span>Filters</span><strong>筛选研究主线</strong></div>
+            <label class="filter-control">搜索<input id="thesisSearch" type="search" placeholder="主线、标的、风险、动作" /></label>
+            <div class="bucket-stack compact">
+              <button type="button" data-thesis-bucket="">全部暴露</button>
+              {buckets.map(([bucket, count]) => <button type="button" data-thesis-bucket={bucket}>{bucket}<strong>{count}</strong></button>)}
+            </div>
+            <div class="action-stack compact">
+              <button type="button" data-thesis-action="">全部动作</button>
+              {actions.map(([action, count]) => <button type="button" data-thesis-action={action}>{action}<strong>{count}</strong></button>)}
+            </div>
+          </aside>
+        </section>
+
+        <section class="thesis-section">
+          <div class="section-headline">
+            <span>Candidate Thesis Pool</span>
+            <h2>研究主线候选池</h2>
+            <p>主线包含赛道、股票映射、确认信号、证伪条件和风险预算。</p>
+          </div>
+          <div class="portfolio-candidate-list">
+            {theses.map((thesis) => (
+              <article class="candidate-row" data-search={`${thesis.title} ${thesis.coreView} ${thesis.lane || ""} ${(thesis.stockTickers || []).join(" ")} ${(thesis.stockUniverse || []).map((stock) => stock.name).join(" ")} ${thesis.practical?.exposureBucket || ""} ${thesis.practical?.actionLabel || ""}`} data-bucket={thesis.practical?.exposureBucket || "主题机会"} data-action={thesis.practical?.actionLabel || "观察等待"}>
+                <div>
+                  <span>{thesis.lane || thesis.practical?.sectorLane || "主题机会"} · {thesis.practical?.portfolioRole || thesis.practical?.actionLabel || "观察"} · Score {thesis.practical?.score || thesis.conviction}</span>
+                  <h3><a href={thesisPath(thesis)}>{thesis.title}</a></h3>
+                  <p>{thesis.practical?.portfolioUse || thesis.coreView}</p>
+                  <div class="portfolio-detail-grid">
+                    <span><strong>动作</strong>{thesis.practical?.actionLabel || "观察等待"}</span>
+                    <span><strong>风险预算</strong>{thesis.practical?.weightGuide || thesis.practical?.riskBudget || "观察仓"}</span>
+                    <span><strong>期限</strong>{thesis.practical?.timeHorizon || thesis.practical?.reviewCadence || "待定"}</span>
+                    <span><strong>证据</strong>{thesis.eventCount || 0} events</span>
+                  </div>
+                  <div class="stock-chip-row compact">
+                    {(thesis.stockUniverse || []).slice(0, 8).map((stock) => <a href={stock.href || stockPath(stock)}><strong>{stock.ticker}</strong><span>{stock.market}</span></a>)}
+                  </div>
+                  <details>
+                    <summary>确认、证伪与下一步研究</summary>
+                    <div class="signal-grid">
+                      <div><strong>确认</strong>{(thesis.practical?.confirmationSignals || []).slice(0, 3).map((item) => <p>{item}</p>)}</div>
+                      <div><strong>证伪</strong>{(thesis.practical?.invalidationSignals || []).slice(0, 3).map((item) => <p>{item}</p>)}</div>
+                    </div>
+                  </details>
                 </div>
-                <div class="stock-chip-row compact">
-                  {(thesis.stockUniverse || thesis.practical?.primaryStocks || []).slice(0, 8).map((stock) => (
-                    <a href={stock.href || stockPath(stock)} title={`${stock.name} · ${stock.role || ""}`}>
-                      <strong>{stock.ticker}</strong>
-                      <span>{stock.market}</span>
-                    </a>
+                <aside>
+                  <span>{thesis.practical?.portfolioRole || thesis.practical?.actionLabel || "观察"}</span>
+                  <span>{thesis.practical?.weightGuide || thesis.practical?.riskBudget}</span>
+                  <button type="button" class="track-thesis" data-track-id={thesis.id} data-track-title={thesis.title} data-track-bucket={thesis.practical?.exposureBucket || "主题机会"} data-track-action={thesis.practical?.actionLabel || "观察等待"} data-track-score={thesis.practical?.score || thesis.conviction || 0} data-track-risk={thesis.practical?.weightGuide || thesis.practical?.riskBudget || ""}>加入 Thesis Book</button>
+                </aside>
+              </article>
+            ))}
+          </div>
+        </section>
+      </div>
+
+      <div data-portfolio-view="advice" hidden>
+        <section class="thesis-section model-advice-section">
+          <div class="section-headline">
+            <span>Validated Model Views</span>
+            <h2>LLM 赛道投资观点</h2>
+            <p>每条观点都经过允许标的、公开来源、配置区间和证伪条件校验；观点不直接修改本地价格或仓位。</p>
+          </div>
+          <div class="lane-advice-grid">
+            {adviceLanes.map((lane) => (
+              <article class={`lane-advice-card stance-${lane.advice.stance}`}>
+                <header>
+                  <div><span>{stanceLabels[lane.advice.stance] || lane.advice.stance} · {lane.advice.horizon}</span><h3><a href={lane.href}>{lane.titleZh}</a></h3></div>
+                  <strong>{lane.advice.confidence}<em>confidence</em></strong>
+                </header>
+                <p>{lane.advice.summaryZh}</p>
+                <div class="advice-range"><span>研究配置区间</span><strong>{lane.advice.allocationRangePct.min}%–{lane.advice.allocationRangePct.max}%</strong><i><b style={`width:${lane.advice.allocationRangePct.max * 4}%`}></b></i></div>
+                <div class="advice-basket">
+                  {lane.advice.basket.map((item) => (
+                    <a href={stockPath(item.ticker)}><span>{roleLabels[item.role] || item.role}</span><strong>{item.ticker}</strong><em>{item.suggestedWeightPct}%</em><p>{item.rationaleZh}</p></a>
                   ))}
                 </div>
-                <div class="term-row">
-                  {(thesis.practical?.instrumentTags || thesis.topTerms || []).slice(0, 8).map((term) => <span>{term}</span>)}
-                </div>
                 <details>
-                  <summary>确认 / 证伪 / 深研信号</summary>
-                  <div class="signal-grid">
-                    <div>
-                      <strong>确认</strong>
-                      {(thesis.practical?.confirmationSignals || []).slice(0, 3).map((item) => <p>{item}</p>)}
-                    </div>
-                    <div>
-                      <strong>证伪</strong>
-                      {(thesis.practical?.invalidationSignals || []).slice(0, 3).map((item) => <p>{item}</p>)}
-                    </div>
-                    <div>
-                      <strong>下一步</strong>
-                      {(thesis.practical?.dueDiligenceQuestions || []).slice(0, 3).map((item) => <p>{item}</p>)}
-                    </div>
-                    <div>
-                      <strong>配对 / 对冲</strong>
-                      {(thesis.practical?.pairedHedges || []).slice(0, 4).map((item) => <p>{item}</p>)}
-                    </div>
+                  <summary>催化剂、风险、证伪与来源</summary>
+                  <div class="advice-detail-grid">
+                    <div><strong>催化剂</strong>{lane.advice.catalystsZh.map((item) => <p>{item}</p>)}</div>
+                    <div><strong>风险</strong>{lane.advice.risksZh.map((item) => <p>{item}</p>)}</div>
+                    <div><strong>证伪</strong>{lane.advice.falsifiersZh.map((item) => <p>{item}</p>)}</div>
+                    <div><strong>仓位纪律</strong>{lane.advice.sizingRulesZh.map((item) => <p>{item}</p>)}</div>
                   </div>
+                  <div class="advice-sources">{lane.advice.reportRefs.map((report) => <a href={report.href}>{report.date} · {report.title}</a>)}</div>
                 </details>
-              </div>
-              <aside>
-                <span>{thesis.practical?.portfolioRole || thesis.practical?.actionLabel || "观察"}</span>
-                <span>{thesis.practical?.weightGuide || thesis.practical?.riskBudget}</span>
-                <span>{thesis.practical?.deepResearchPriority || "常规跟踪"}</span>
-                <span>{thesis.practical?.reviewCadence}</span>
-                <button
-                  type="button"
-                  class="track-thesis"
-                  data-track-id={thesis.id}
-                  data-track-title={thesis.title}
-                  data-track-bucket={thesis.practical?.exposureBucket || "主题机会"}
-                  data-track-action={thesis.practical?.actionLabel || "观察等待"}
-                  data-track-score={thesis.practical?.score || thesis.conviction || 0}
-                  data-track-risk={thesis.practical?.weightGuide || thesis.practical?.riskBudget || ""}
-                >
-                  加入组合
-                </button>
-              </aside>
-            </article>
-          ))}
-        </div>
-      </section>
+                <footer><span>{lane.advice.asOfDate} · {lane.advice.provenance.model}</span><button type="button" data-add-basket={lane.id}>加入股票簿</button></footer>
+              </article>
+            ))}
+          </div>
+          <p class="portfolio-disclaimer">模型观点用于研究排序与情景管理，不构成交易指令；价格、汇率、仓位和盈亏由用户在本地账本维护。</p>
+        </section>
+      </div>
     </main>
 
-    <script>
-      const portfolioKey = "vibe.researchNetwork.portfolio.v1";
-      const candidates = [...document.querySelectorAll(".candidate-row")];
-      const search = document.getElementById("portfolioSearch");
-      let bucketFilter = "";
-      let actionFilter = "";
-
-      function readPortfolio() {
-        try {
-          return JSON.parse(localStorage.getItem(portfolioKey) || "[]");
-        } catch {
-          return [];
-        }
-      }
-
-      function writePortfolio(items) {
-        localStorage.setItem(portfolioKey, JSON.stringify(items));
-        renderPortfolio();
-      }
-
-      function upsertPortfolio(item) {
-        const items = readPortfolio();
-        const index = items.findIndex((entry) => entry.id === item.id);
-        const next = {
-          ...item,
-          status: item.status || "观察",
-          weight: item.weight || "0",
-          reviewDate: item.reviewDate || "",
-          note: item.note || "",
-          updatedAt: new Date().toISOString(),
-        };
-        if (index >= 0) items[index] = { ...items[index], ...next };
-        else items.unshift(next);
-        writePortfolio(items);
-      }
-
-      function renderPortfolio() {
-        const items = readPortfolio();
-        const list = document.getElementById("portfolioList");
-        const summary = document.getElementById("portfolioSummary");
-        const allocation = document.getElementById("allocationBoard");
-        const totalWeight = items.reduce((sum, item) => sum + Number(item.weight || 0), 0);
-        if (summary) {
-          summary.textContent = items.length
-            ? `${items.length} 条主线 · 目标权重 ${totalWeight.toFixed(1)}% · 本地浏览器保存`
-            : "尚未添加主线。";
-        }
-        if (allocation) {
-          const byBucket = items.reduce((acc, item) => {
-            const bucket = item.bucket || "主题机会";
-            acc.set(bucket, (acc.get(bucket) || 0) + Number(item.weight || 0));
-            return acc;
-          }, new Map());
-          allocation.innerHTML = [...byBucket.entries()].map(([bucket, weight]) => `
-            <div class="allocation-row">
-              <span>${bucket}</span>
-              <strong>${weight.toFixed(1)}%</strong>
-              <i><b style="width:${Math.min(100, Math.max(4, weight))}%"></b></i>
-            </div>
-          `).join("");
-        }
-        if (!list) return;
-        list.innerHTML = items.map((item) => `
-          <article class="portfolio-item" data-id="${item.id}">
-            <div>
-              <span>${item.bucket || "主题机会"} · ${item.action || "观察等待"} · ${item.score || ""}</span>
-              <strong><a href="/investor/theses/${item.id}/">${item.title}</a></strong>
-              <em>${item.risk || ""}</em>
-            </div>
-            <label>状态
-              <select data-field="status">${["观察", "验证仓", "核心仓", "对冲", "退出"].map((status) => `<option ${status === item.status ? "selected" : ""}>${status}</option>`).join("")}</select>
-            </label>
-            <label>权重
-              <input data-field="weight" type="number" min="0" max="100" step="0.5" value="${item.weight || "0"}" />
-            </label>
-            <label>复核
-              <input data-field="reviewDate" type="date" value="${item.reviewDate || ""}" />
-            </label>
-            <label>备注
-              <input data-field="note" type="text" value="${String(item.note || "").replaceAll('"', "&quot;")}" />
-            </label>
-            <button type="button" data-remove="${item.id}">移除</button>
-          </article>
-        `).join("");
-      }
-
-      function syncFilters() {
-        const query = String(search?.value || "").toLowerCase().trim();
-        candidates.forEach((row) => {
-          const matchQuery = !query || String(row.dataset.search || "").toLowerCase().includes(query);
-          const matchBucket = !bucketFilter || row.dataset.bucket === bucketFilter;
-          const matchAction = !actionFilter || row.dataset.action === actionFilter;
-          row.classList.toggle("is-hidden", !(matchQuery && matchBucket && matchAction));
-        });
-      }
-
-      document.addEventListener("click", (event) => {
-        const track = event.target.closest?.(".track-thesis");
-        if (track) {
-          upsertPortfolio({
-            id: track.dataset.trackId,
-            title: track.dataset.trackTitle,
-            bucket: track.dataset.trackBucket,
-            action: track.dataset.trackAction,
-            score: track.dataset.trackScore,
-            risk: track.dataset.trackRisk,
-          });
-        }
-        const remove = event.target.closest?.("[data-remove]");
-        if (remove) writePortfolio(readPortfolio().filter((item) => item.id !== remove.dataset.remove));
-        const bucket = event.target.closest?.("[data-filter-bucket]");
-        if (bucket) {
-          bucketFilter = bucket.dataset.filterBucket || "";
-          document.querySelectorAll("[data-filter-bucket]").forEach((item) => item.classList.toggle("is-active", item === bucket && Boolean(bucketFilter)));
-          syncFilters();
-        }
-        const action = event.target.closest?.("[data-filter-action]");
-        if (action) {
-          actionFilter = action.dataset.filterAction || "";
-          document.querySelectorAll("[data-filter-action]").forEach((item) => item.classList.toggle("is-active", item === action && Boolean(actionFilter)));
-          syncFilters();
-        }
-      });
-      document.addEventListener("change", (event) => {
-        const field = event.target.closest?.("[data-field]");
-        const itemEl = event.target.closest?.(".portfolio-item");
-        if (!field || !itemEl) return;
-        const items = readPortfolio();
-        const item = items.find((entry) => entry.id === itemEl.dataset.id);
-        if (!item) return;
-        item[field.dataset.field] = field.value;
-        localStorage.setItem(portfolioKey, JSON.stringify(items));
-        renderPortfolio();
-      });
-      search?.addEventListener("input", syncFilters);
-      document.getElementById("exportPortfolio")?.addEventListener("click", () => {
-        const blob = new Blob([JSON.stringify(readPortfolio(), null, 2)], { type: "application/json" });
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement("a");
-        link.href = url;
-        link.download = `vibe-thesis-portfolio-${new Date().toISOString().slice(0, 10)}.json`;
-        link.click();
-        URL.revokeObjectURL(url);
-      });
-      document.getElementById("clearPortfolio")?.addEventListener("click", () => {
-        if (confirm("清空本地 thesis 追踪列表？")) writePortfolio([]);
-      });
-      renderPortfolio();
-    </script>
+    <script id="portfolioData" type="application/json" set:html={portfolioData}></script>
+    <script src="../../../scripts/portfolio-workbench.js"></script>
   </body>
 </html>

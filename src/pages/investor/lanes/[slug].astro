@@ -21,6 +21,8 @@ export function getStaticPaths() {
 
 const { lane } = Astro.props;
 const maxAction = Math.max(1, ...lane.actions.map((item) => item[1]));
+const stanceLabels = { overweight: "超配", selective: "精选", neutral: "中性", underweight: "低配", avoid: "回避" };
+const roleLabels = { core: "核心", watch: "观察", hedge: "对冲" };
 ---
 
 <!doctype html>
@@ -57,6 +59,36 @@ const maxAction = Math.max(1, ...lane.actions.map((item) => item[1]));
         <div><span>Avg Score</span><strong>{lane.avgScore}</strong><em>平均强度</em></div>
         <div><span>Actions</span><strong>{lane.actions.length}</strong><em>组合动作</em></div>
       </section>
+
+      {lane.advice && (
+        <section class="thesis-section model-advice-section">
+          <div class="section-headline">
+            <span>Validated Model View</span>
+            <h2>赛道投资观点</h2>
+            <p>结构化模型输出已经过标的、来源、配置区间和证伪条件校验。</p>
+          </div>
+          <article class={`lane-advice-card stance-${lane.advice.stance}`}>
+            <header>
+              <div><span>{stanceLabels[lane.advice.stance] || lane.advice.stance} · {lane.advice.horizon} · {lane.advice.asOfDate}</span><h3>{lane.lane}</h3></div>
+              <strong>{lane.advice.confidence}<em>confidence</em></strong>
+            </header>
+            <p>{lane.advice.summaryZh}</p>
+            <div class="advice-range"><span>研究配置区间</span><strong>{lane.advice.allocationRangePct.min}%–{lane.advice.allocationRangePct.max}%</strong><i><b style={`width:${lane.advice.allocationRangePct.max * 4}%`}></b></i></div>
+            <div class="advice-basket">
+              {lane.advice.basket.map((item) => (
+                <a href={stockPath(item.ticker)}><span>{roleLabels[item.role] || item.role}</span><strong>{item.ticker}</strong><em>{item.suggestedWeightPct}%</em><p>{item.rationaleZh}</p></a>
+              ))}
+            </div>
+            <div class="advice-detail-grid">
+              <div><strong>催化剂</strong>{lane.advice.catalystsZh.map((item) => <p>{item}</p>)}</div>
+              <div><strong>风险</strong>{lane.advice.risksZh.map((item) => <p>{item}</p>)}</div>
+              <div><strong>证伪</strong>{lane.advice.falsifiersZh.map((item) => <p>{item}</p>)}</div>
+              <div><strong>仓位纪律</strong>{lane.advice.sizingRulesZh.map((item) => <p>{item}</p>)}</div>
+            </div>
+            <footer><span>{lane.advice.provenance.model} · structured review</span><a href="/investor/portfolio/#advice">打开组合工作台</a></footer>
+          </article>
+        </section>
+      )}
 
       <section class="detail-grid">
         <article class="detail-panel is-main">

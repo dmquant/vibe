@@ -320,12 +320,15 @@ const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" "
       });
 
       try {
-        const items = JSON.parse(localStorage.getItem("vibe.researchNetwork.portfolio.v1") || "[]");
-        const weight = items.reduce((sum, item) => sum + Number(item.weight || 0), 0);
+        const book = JSON.parse(localStorage.getItem("vibe.researchNetwork.portfolio.v2") || "null");
+        const legacy = JSON.parse(localStorage.getItem("vibe.researchNetwork.portfolio.v1") || "[]");
+        const theses = Array.isArray(book?.theses) ? book.theses : legacy;
+        const stocks = Array.isArray(book?.stocks) ? book.stocks : [];
+        const weight = theses.reduce((sum, item) => sum + Number(item.weight || 0), 0);
         const count = document.getElementById("portalPortfolioCount");
         const state = document.getElementById("portalPortfolioState");
-        if (count) count.textContent = `${items.length} tracked theses`;
-        if (state) state.textContent = items.length ? `目标权重 ${weight.toFixed(1)}% · ${new Set(items.map((item) => item.bucket)).size} 类风险暴露` : "尚未添加主线。";
+        if (count) count.textContent = `${stocks.length} stocks · ${theses.length} theses`;
+        if (state) state.textContent = stocks.length || theses.length ? `股票目标权重 ${stocks.reduce((sum, item) => sum + Number(item.targetWeight || 0), 0).toFixed(1)}% · Thesis ${weight.toFixed(1)}%` : "当前本地组合为空。";
       } catch {
         // Local portfolio state is optional on the static portal.
       }
