@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-10T10:04:54.212Z",
+  "generatedAt": "2026-07-10T18:57:40.694Z",
   "date": "2026-07-10",
   "source": "frontend/generated/daily/latest.json",
   "investorDailyDate": "2026-07-10",
@@ -200,49 +200,52 @@
   },
   "readerReport": {
     "id": "reader-daily-reader-2026-07-10",
-    "title": "2026-07-10 AI Institute 每日读者报告",
+    "title": "2026-07-10 每日综合：AI需求未退，定价权转向可交付电力",
     "date": "2026-07-10",
     "href": "/investor/reports/reader-daily-reader-2026-07-10/",
-    "summary": "2026-07-10 的主线不是单点行情，而是 宏观通胀传导 与 AI 基础设施 继续交织；市场报价、风险矩阵和分析师视角共同指向“增长叙事仍在，但融资、通胀、电力交付和交易拥挤正在提高验证门槛”。",
+    "summary": "今日真正变化不是宏观通胀与AI基础设施继续保持高研究热度，而是投资框架被进一步拆开：AI资本开支对电价和融资成本仍有韧性，但能否形成收入越来越取决于并网、变压器和可靠电源；中国又不能照搬北美“全面缺设备”的判断，西部枢纽总体可交付、东部节点更紧，电网硬件订单与液冷高估值应分别处理。与此同时，报告记录的科技反弹与高MOVE、偏高认沽需求和强美元仓位并存，7月14日美国CPI将决定高贴现率压力是缓和还是继续压缩权益估值。",
     "priorityViews": [
       {
-        "title": "宏观通胀传导 与 AI 基础设施 是最高热度组合",
-        "view": "今日公开合约显示，宏观通胀传导 heat 2930.3，AI 基础设施 heat 2592.2；这说明研究焦点仍在 AI 需求、能源通胀、基础设施交付和宏观政策之间来回定价。",
-        "whyItMatters": "读者不应只看单一科技涨跌，而要核对 AI 资本开支是否能转化为可通电、可融资、可计费的现金流。",
+        "title": "AI资本开支的约束已从财务压力收敛到物理交付",
+        "view": "同日压力测试认为，即使电价上升30%、融资成本增加100个基点，示例集群的年化总拥有成本仅增加约3%，但变压器、开关设备和并网仍可能延迟数年。需求韧性因此不等于项目能够按期通电和确认收入。",
+        "whyItMatters": "组合内应区分现金流充足的云平台、拥有可交付兆瓦的电力资产，以及受益于多年设备交期的供应商；泛AI估值无法替代项目交付验证。",
         "provenance": [
-          "daily-dashboard:chainRadar",
-          "/investor/reports/archive-736bf5ccef22/",
-          "claim_20260710_chain_concentration"
+          "claim_20260710_01",
+          "ev_bf5a28307c",
+          "report:archive-ce309bb0c3fe",
+          "risk_0e8e5b17eb"
         ]
       },
       {
-        "title": "风险矩阵仍把物理交付和供应瓶颈放在前排",
-        "view": "AI 基础设施 的高优先级风险是“AI 算力开支刚性与北美变压器及并网物理瓶颈的估值博弈”，impact 5 / probability 3。",
-        "whyItMatters": "只要风险矩阵没有从交付、并网、设备、封装和融资上移开，AI 交易就仍然需要用项目兑现率而不是 headline 来验证。",
+        "title": "中国电力链出现可投资的内部断层",
+        "view": "新增研究把全国性“电墙”修正为东部节点约束与西部可交付并存，并进一步区分订单和估值均有缓冲的变压器、特高压设备，与盈利下滑且估值拥挤的液冷温控。",
+        "whyItMatters": "同属AI电力主题，600089.SH、601179.SH与300274.SZ的传导依据是订单、出口和储能盈利，而液冷暴露更依赖收入确认和估值消化，不能作为一篮子处理。",
         "provenance": [
-          "daily-dashboard:riskMatrix",
-          "/investor/reports/archive-db053b73b427/",
-          "claim_20260710_risk_matrix"
+          "claim_20260710_03",
+          "ev_e95f98b82f",
+          "report:archive-5de3cbdda63c",
+          "report:archive-710afaa90d12"
         ]
       },
       {
-        "title": "市场价格与分析师视角出现分化",
-        "view": "市场报价面板显示：本日市场报价面板未提供稳定可复述的完整价格组。。分析师变化集中在 深研主编、日报总编、市场情绪师、全球宏观分析师、首席策略师、外汇策略师。",
-        "whyItMatters": "同一天可能同时出现科技风险偏好、长端利率约束、红利防御拥挤和 A 股结构分化，组合需要分层而不是方向性押注。",
+        "title": "科技反弹没有解除贴现率与套息尾部约束",
+        "view": "有日期的隔夜报告记录科技和半导体走强，但情绪报告同时显示MOVE维持高位、认沽需求偏强；黄金走强而日元未同步升值，则表明套息交易尚未平仓，却积累了更不对称的尾部风险。",
+        "whyItMatters": "7月14日CPI、长端收益率和日元波动将决定科技反弹能否扩展为更稳健的风险偏好，而不是依赖对冲保护的脆弱上涨。",
         "provenance": [
-          "daily-dashboard:marketQuotes",
-          "analyst-tracker:viewChanges",
-          "claim_20260710_market_divergence"
+          "claim_20260710_05",
+          "analyst-view:sentiment-analyst:2026-07-10",
+          "report:archive-8e673aa47b81",
+          "analyst-view:global-macro:2026-07-10"
         ]
       }
     ],
     "relatedTheses": [
-      "thesis_crypto_liquidity_risk_appetite",
-      "thesis_domestic_it_substitution_stack",
-      "thesis_optical_copper_interconnect_rent_shift",
+      "thesis_semiconductor_ai_capex_cycle",
       "thesis_macro_inflation_policy",
       "thesis_ashare_hardtech_star50_rotation",
-      "thesis_china_cloud_compute_stack_localization"
+      "thesis_options_gamma_volatility_microstructure",
+      "thesis_bond_supply_local_debt",
+      "thesis_yen_carry_em_tech_liquidity"
     ]
   }
 }
