@@ -37,7 +37,11 @@ function cleanSlug(value) {
 export function normalizeInvestorPath(value) {
   if (typeof value !== "string") return value;
   if (!value || /^(?:[a-z][a-z0-9+.-]*:|#)/i.test(value)) return value;
-  if (value === "/#deep") return "/investor/#deep";
+  if (value === "/#deep") return "/investor/console/#deep";
+  const legacyInvestorHash = value.match(/^\/investor\/#(.+)$/);
+  if (legacyInvestorHash && !["reader", "research-map", "deep"].includes(legacyInvestorHash[1])) {
+    return `/investor/console/#${legacyInvestorHash[1]}`;
+  }
 
   const { pathname, suffix } = splitSuffix(value);
   const withoutLeadingSlash = pathname.replace(/^\/+/, "");

@@ -193,7 +193,7 @@ const escapeAttr = (value) => String(value || "").replaceAll('"', "&quot;");
               {timeline.thesisTracks.slice(0, 7).map((track) => {
                 const primary = track.theses[0];
                 const event = track.events[0];
-                const href = event?.href || primary?.linkedReports?.[0]?.href || "/investor/#theses";
+                const href = event?.href || primary?.linkedReports?.[0]?.href || "/investor/console/#theses";
                 return (
                   <a class={`track-card accent-${track.accent || "yellow"}`} href={href}>
                     <span class="track-label">{track.labelZh} · {track.eventCount} events</span>

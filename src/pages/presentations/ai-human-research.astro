@@ -35,10 +35,10 @@ const selectedThemes = themes
 	.slice(0, 5);
 
 const heroStats = [
-	{ label: 'AI 分析师', value: stats.analysts || siteData.analysts?.length || 0, suffix: '位', href: '/investor/#analysts' },
-	{ label: '证据报告', value: stats.reports || siteData.reports?.length || 0, suffix: '篇', href: '/investor/#dailyReports' },
-	{ label: '知识节点', value: stats.knowledge_nodes || 0, suffix: '个', href: '/investor/#knowledgeGraph' },
-	{ label: '图谱边', value: stats.knowledge_edges || 0, suffix: '条', href: '/investor/#knowledgeGraph' },
+	{ label: 'AI 分析师', value: stats.analysts || siteData.analysts?.length || 0, suffix: '位', href: '/investor/personas/' },
+	{ label: '证据报告', value: stats.reports || siteData.reports?.length || 0, suffix: '篇', href: '/investor/archive/' },
+	{ label: '知识节点', value: stats.knowledge_nodes || 0, suffix: '个', href: '/investor/research-network/' },
+	{ label: '图谱边', value: stats.knowledge_edges || 0, suffix: '条', href: '/investor/research-network/' },
 ];
 
 const workflowSteps = [
@@ -58,7 +58,7 @@ const workflowSteps = [
 		kicker: '03',
 		title: '证据归档与图谱化',
 		text: '报告被归入主题、产业链和风险矩阵，方便人类研究员回溯证据，而不是只看摘要。',
-		href: '/investor/#knowledgeGraph',
+		href: '/investor/research-network/',
 	},
 	{
 		kicker: '04',
@@ -121,28 +121,28 @@ const imagePanels = [
 		id: 'daily',
 		label: '晨会仪表盘',
 		src: '/investor-assets/daily/daily-brief-2026-05-26-web-summary.png',
-		href: '/investor/#daily',
+		href: '/investor/daily/',
 		caption: '晨会把当日主题、风险、市场价格和证据链接压缩为可执行看板。',
 	},
 	{
 		id: 'heatmap',
 		label: '风险热力图',
 		src: '/investor-assets/daily/daily-brief-2026-05-26-web-heatmap.png',
-		href: '/investor/#daily',
+		href: '/investor/daily/',
 		caption: '风险热力图把“哪里可能错”前置给人类决策者。',
 	},
 	{
 		id: 'funnel',
 		label: '语料漏斗',
 		src: '/investor-assets/charts/corpus_funnel.png',
-		href: '/investor/#method',
+		href: '/investor/start/',
 		caption: '语料漏斗展示从原始材料到可发布研究的过滤过程。',
 	},
 	{
 		id: 'map',
 		label: '传导通道',
 		src: '/investor-assets/charts/channel_map.png',
-		href: '/investor/#knowledgeGraph',
+		href: '/investor/research-network/',
 		caption: '传导图把主题、风险与产业链连接起来，帮助研究员追溯因果链。',
 	},
 ];
@@ -273,7 +273,7 @@ const marketRows = marketTape.map(marketParser);
 
 					<div class="theme-bars" aria-label="主题强度条形图">
 						{selectedThemes.map((item) => (
-							<a href="/investor/#themes" class="theme-bar">
+							<a href="/investor/research-network/" class="theme-bar">
 								<span>{item.label}</span>
 								<div class="bar-track"><i style={`--bar:${pct(item.value, maxThemeValue)}%`}></i></div>
 								<strong>{formatNumber(item.value)}</strong>
@@ -299,7 +299,7 @@ const marketRows = marketTape.map(marketParser);
 							</div>
 							<div class="market-strip" aria-label="市场价格带">
 								{marketRows.map((row) => (
-									<a href="/investor/#daily" class={`market-pill ${row.direction}`}>
+									<a href="/investor/daily/" class={`market-pill ${row.direction}`}>
 										<span>{row.label}</span>
 										<strong>{row.value}</strong>
 										<small>{row.change || 'latest'}</small>
@@ -308,7 +308,7 @@ const marketRows = marketTape.map(marketParser);
 							</div>
 							<div class="decision-list">
 								{decisionExamples.map((item) => (
-									<a href={item.href || '/investor/#daily'} class="decision-item">
+									<a href={item.href || '/investor/daily/'} class="decision-item">
 										<span>{item.label}</span>
 										<p>{item.text}</p>
 									</a>
@@ -410,7 +410,7 @@ const marketRows = marketTape.map(marketParser);
 							<strong>先建设环境</strong>
 							<p>算力、电力、内存、封装、光互联、冷却和工作流环境，是 AI 能进化的基础设施。</p>
 						</a>
-						<a href="/investor/#daily" class="closing-card">
+						<a href="/investor/daily/" class="closing-card">
 							<span>02</span>
 							<strong>再输出证据</strong>
 							<p>晨会、风险矩阵和深研让投资决策有据可查，而不是让人类简单服从模型答案。</p>

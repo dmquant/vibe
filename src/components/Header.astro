@@ -1,10 +1,13 @@
 ---
 import { SITE_TITLE } from '../consts';
 import HeaderLink from './HeaderLink.astro';
+import InvestorPortalNav from './investor/InvestorPortalNav.astro';
+
+const isInvestorRoute = Astro.url.pathname.startsWith('/investor');
 ---
 
 <header>
-	<nav>
+	<nav class="global-nav">
 		<div class="nav-left">
 			<a href="/" class="logo">
 				<span class="logo-icon">◆</span>
@@ -13,14 +16,9 @@ import HeaderLink from './HeaderLink.astro';
 		</div>
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/investor/start">Start</HeaderLink>
-			<HeaderLink href="/investor/daily">Today</HeaderLink>
-			<HeaderLink href="/investor/research-network">Theses</HeaderLink>
-			<HeaderLink href="/investor/fable-0702">Fable</HeaderLink>
-			<HeaderLink href="/investor/personas">Personas</HeaderLink>
-			<HeaderLink href="/investor/portfolio">Portfolio</HeaderLink>
-			<HeaderLink href="/investor/archive">Archive</HeaderLink>
-			<HeaderLink href="/investor">Console</HeaderLink>
+			<HeaderLink href="/investor">Investment</HeaderLink>
+			<HeaderLink href="/blog">Articles</HeaderLink>
+			<HeaderLink href="/graph">Network</HeaderLink>
 			<HeaderLink href="/about">About</HeaderLink>
 		</div>
 		<div class="nav-right">
@@ -43,6 +41,7 @@ import HeaderLink from './HeaderLink.astro';
 			</a>
 		</div>
 	</nav>
+	{isInvestorRoute ? <InvestorPortalNav /> : null}
 </header>
 
 <script>
@@ -110,7 +109,7 @@ import HeaderLink from './HeaderLink.astro';
 		-webkit-backdrop-filter: blur(12px);
 		border-bottom: 1px solid var(--border, #30363d);
 	}
-	nav {
+	.global-nav {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -130,7 +129,7 @@ import HeaderLink from './HeaderLink.astro';
 	}
 	.logo-icon { color: var(--accent-blue, #2f80ed); font-size: 1.2rem; }
 	.internal-links { display: flex; gap: 0.25rem; }
-	nav a {
+	.global-nav a {
 		padding: 0.5em 0.75em;
 		color: var(--text-secondary, #8b949e);
 		text-decoration: none;
@@ -138,7 +137,7 @@ import HeaderLink from './HeaderLink.astro';
 		border-radius: 6px;
 		transition: all 0.2s;
 	}
-	nav a:hover, nav a.active {
+	.global-nav a:hover, .global-nav a.active {
 		color: var(--text-primary, #e6edf3);
 		background: var(--bg-elevated, #151515);
 	}
@@ -191,7 +190,7 @@ import HeaderLink from './HeaderLink.astro';
 		header {
 			padding: 0.45rem 0.75rem;
 		}
-		nav {
+		.global-nav {
 			height: auto;
 			flex-wrap: wrap;
 			gap: 0.45rem;
@@ -217,7 +216,7 @@ import HeaderLink from './HeaderLink.astro';
 		.internal-links::-webkit-scrollbar {
 			display: none;
 		}
-		nav a {
+		.global-nav a {
 			white-space: nowrap;
 			border: 1px solid var(--border, #30363d);
 			border-radius: 3px;

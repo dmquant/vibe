@@ -14,7 +14,7 @@ function currentTheme() {
 }
 
 function popupHtml(item) {
-  const link = item.href || "/investor/#dailyReports";
+  const link = item.href || "/investor/daily/";
   return `<div class="signal-map-popup">
     <strong>${item.label || "Research chain"}</strong>
     <span>Heat ${item.heat ?? "-"} · Today ${item.latest ?? "-"} · Risk ${item.risk ?? "-"}</span>

@@ -27,6 +27,11 @@ const archiveRoutes = [
     text: "每日首屏入口。用于查看今日结论、市场报价、链条地图和下载材料。",
   },
   {
+    path: "/investor/panorama/",
+    title: "周度研究全景",
+    text: "本周操作结论、论点到仓位、赛道配置、个股清单与证伪条件。",
+  },
+  {
     path: "/investor/reports/{slug}/",
     title: "读者报告与原始公开报告",
     text: "人类友好读者报告和可公开展示的归档报告详情页。",
@@ -47,6 +52,11 @@ const archiveRoutes = [
     text: "浏览器本地保存的 thesis watchlist，不上传仓位，不连接账户。",
   },
   {
+    path: "/investor/timeline/",
+    title: "跨日研究时间线",
+    text: "串联每日简报、读者报告、主线事件、分析师变化和复盘。",
+  },
+  {
     path: "/investor/recaps/",
     title: "关键复盘仪表盘",
     text: "手工关键复盘和自动 living thesis recap 的统一入口。",
@@ -55,6 +65,11 @@ const archiveRoutes = [
     path: "/blog/",
     title: "文章与项目故事",
     text: "公开文章库，包含 AI Institute 系列、研究论文、Vibe 建造故事和历史简报。",
+  },
+  {
+    path: "/investor/console/",
+    title: "高级研究控制台",
+    text: "完整报告检索、变化雷达、分析师动向、研究运营和知识图谱入口。",
   },
 ];
 ---
@@ -76,7 +91,7 @@ const archiveRoutes = [
           <h1>公开档案地图</h1>
           <p>这里不是新的报告库，而是告诉读者和后续维护模型：每类公开内容应该在哪里找、从哪里进入、如何保持路径稳定。</p>
           <div class="ia-actions">
-            <a class="primary" href="/investor/start/">回到开始页</a>
+            <a class="primary" href="/investor/">回到投资门户</a>
             <a href="/investor/daily/">今日看板</a>
             <a href="/blog/">文章库</a>
           </div>

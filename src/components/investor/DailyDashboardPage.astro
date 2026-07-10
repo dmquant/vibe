@@ -12,7 +12,7 @@ const publicDailyHref = (href, fallback = dashboardHref) => {
 const sectionHref = hrefWithAnchor("daily-dashboard-sections");
 const editorHref = hrefWithAnchor("daily-dashboard-editor");
 const researchHref = hrefWithAnchor("daily-dashboard-research");
-const mailboxHref = publicDailyHref(dashboard.links?.mailboxZh, "/investor/#operations");
+const mailboxHref = publicDailyHref(dashboard.links?.mailboxZh, "/investor/console/#operations");
 const readerReport = dashboard.readerReport || null;
 const readerHref = publicDailyHref(readerReport?.href, "/investor/reports/");
 
@@ -45,7 +45,7 @@ const mapItems = (dashboard.chainRadar || []).map((item, index) => ({
   latest: item.latest,
   recent: item.recent,
   risk: item.risk,
-  href: publicDailyHref(item.href, "/investor/#dailyReports"),
+  href: publicDailyHref(item.href, "/investor/console/#dailyReports"),
   evidenceTitle: item.evidenceTitle || "",
   coords: mapCoordinates[item.label] || fallbackCoordinates[index % fallbackCoordinates.length],
   accent: accents[index % accents.length],
@@ -78,9 +78,9 @@ const comboCount = (dashboard.stats?.sections || 0) + (dashboard.stats?.deepRese
   <section class="daily-dashboard-actions" aria-label="Morning brief links">
     <a href={sectionHref}>中文晨会简报</a>
     <a href={editorHref}>总编报告</a>
-    <a href={mailboxHref}>邮箱摘要</a>
+    <a href={mailboxHref}>研究交接摘要</a>
     {readerReport ? <a href={readerHref}>读者报告</a> : null}
-    <a href={dashboard.links?.investorShell || "/investor/#daily"}>投资台交互版</a>
+    <a href={dashboard.links?.investorShell || "/investor/console/#daily"}>高级控制台</a>
     {dashboard.links?.docx ? <a href={dashboard.links.docx}>下载 DOCX</a> : null}
   </section>
 

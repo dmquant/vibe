@@ -7,7 +7,7 @@ const { href, class: className, ...props } = Astro.props;
 const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, '').replace(/\/$/, '') || '/';
 const normalizedHref = String(href || '/').replace(/\/$/, '') || '/';
 let isActive = pathname === normalizedHref;
-if (normalizedHref !== '/' && normalizedHref !== '/investor') {
+if (normalizedHref !== '/') {
 	isActive = isActive || pathname.startsWith(`${normalizedHref}/`);
 }
 ---

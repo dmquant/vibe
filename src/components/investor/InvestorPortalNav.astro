@@ -1,0 +1,110 @@
+---
+const pathname = Astro.url.pathname;
+const items = [
+  { href: "/investor/", label: "Portal", match: (path) => path === "/investor/" },
+  { href: "/investor/daily/", label: "Today", match: (path) => path.startsWith("/investor/daily") },
+  { href: "/investor/panorama/", label: "Weekly", match: (path) => path.startsWith("/investor/panorama") },
+  {
+    href: "/investor/research-network/",
+    label: "Theses",
+    match: (path) => ["/investor/research-network", "/investor/theses", "/investor/lanes", "/investor/stocks"].some((prefix) => path.startsWith(prefix)),
+  },
+  { href: "/investor/portfolio/", label: "Portfolio", match: (path) => path.startsWith("/investor/portfolio") },
+  { href: "/investor/timeline/", label: "Timeline", match: (path) => path.startsWith("/investor/timeline") },
+  { href: "/investor/recaps/", label: "Recaps", match: (path) => path.startsWith("/investor/recaps") },
+  { href: "/investor/archive/", label: "Archive", match: (path) => path.startsWith("/investor/archive") },
+  { href: "/investor/console/", label: "Console", match: (path) => path.startsWith("/investor/console") },
+];
+---
+
+<nav class="investor-portal-nav" aria-label="Investment portal navigation">
+  <span class="portal-nav-mark" aria-hidden="true"></span>
+  <div class="portal-nav-links">
+    {items.map((item) => {
+      const active = item.match(pathname);
+      return (
+        <a href={item.href} class:list={{ active }} aria-current={active ? "page" : undefined}>
+          {item.label}
+        </a>
+      );
+    })}
+  </div>
+  <a class="portal-nav-reader" href="/investor/#reader">Reader mode</a>
+</nav>
+
+<style>
+  .investor-portal-nav {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+    max-width: 1440px;
+    min-height: 38px;
+    margin: 0 auto;
+    border-top: 1px solid var(--border, #30363d);
+    font-family: var(--font-ui, Inter, sans-serif);
+  }
+
+  .portal-nav-mark {
+    width: 9px;
+    height: 9px;
+    border: 1px solid var(--text-primary, #e6edf3);
+    background: var(--accent-green, #169b62);
+    box-shadow: 12px 0 0 var(--accent-blue, #2f80ed), 24px 0 0 var(--accent-yellow, #d7a316);
+  }
+
+  .portal-nav-links {
+    display: flex;
+    min-width: 0;
+    align-items: center;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .portal-nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .investor-portal-nav a {
+    display: inline-flex;
+    min-height: 36px;
+    flex: 0 0 auto;
+    align-items: center;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+    color: var(--text-secondary, #8b949e);
+    padding: 0 10px;
+    font-size: 12px;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .investor-portal-nav a:hover,
+  .investor-portal-nav a.active {
+    border-bottom-color: var(--accent-blue, #2f80ed);
+    background: transparent;
+    color: var(--text-primary, #e6edf3);
+  }
+
+  .portal-nav-reader {
+    color: var(--accent-green, #169b62) !important;
+  }
+
+  @media (max-width: 760px) {
+    .investor-portal-nav {
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 10px;
+      min-height: 36px;
+    }
+
+    .portal-nav-reader {
+      display: none !important;
+    }
+
+    .investor-portal-nav a {
+      min-height: 34px;
+      padding: 0 9px;
+      font-size: 11px;
+    }
+  }
+</style>

@@ -111,7 +111,7 @@ const dailyMapItems = chainRadarSource.slice(0, 6).map((item, index) => ({
 	latest: item.latest,
 	recent: item.recent,
 	risk: item.risk,
-	href: publicDailyHref(item.href || item.evidence?.[0]?.href, '/investor/#dailyReports'),
+	href: publicDailyHref(item.href || item.evidence?.[0]?.href, '/investor/daily/'),
 	evidenceTitle: item.evidence?.[0]?.title || '',
 	coords: mapCoordinates[item.label] || fallbackCoordinates[index % fallbackCoordinates.length],
 	accent: signalAccents[index % signalAccents.length],
@@ -238,7 +238,7 @@ const homeLanes = [
 			<div class="ticker-wrapper">
 				<div class="ticker-track">
 					{[...marketTickerRows, ...marketTickerRows].map((row) => (
-						<a class="ticker-item" href="/investor/#dailyReports">
+						<a class="ticker-item" href="/investor/daily/">
 							<span class="ticker-label">{row.label}</span>
 							<span class="ticker-val">{row.value}</span>
 							<span class={`ticker-change ${row.direction}`}>{row.change || 'latest'}</span>
@@ -326,7 +326,7 @@ const homeLanes = [
 					</div>
 					<div class="signal-actions">
 						<a href="/investor/daily/" class="btn btn-sm btn-primary" data-en="Open full dashboard" data-zh="打开完整看板">Open full dashboard</a>
-						<a href={dailyDashboard.links?.docx || dailyBrief.docxHref || '/investor/#dailyReports'} class="btn btn-sm btn-ghost" data-en="Download brief" data-zh="下载简报">Download brief</a>
+						<a href={dailyDashboard.links?.docx || dailyBrief.docxHref || '/investor/daily/'} class="btn btn-sm btn-ghost" data-en="Download brief" data-zh="下载简报">Download brief</a>
 					</div>
 				</div>
 				<div class="signal-stat-strip">
@@ -364,7 +364,7 @@ const homeLanes = [
 						<div class="signal-panel-title" data-en="Latest prices" data-zh="最新报价">Latest prices</div>
 						<div class="signal-market-list">
 							{marketTapeRows.map((row) => (
-								<a href="/investor/#dailyReports" class={`signal-market-row ${row.direction}`}>
+								<a href="/investor/daily/" class={`signal-market-row ${row.direction}`}>
 									<span>{row.label}</span>
 									<strong>{row.value}</strong>
 									<em>{row.change || 'latest'}</em>
@@ -374,7 +374,7 @@ const homeLanes = [
 						{dailyWatchItems.length ? (
 							<div class="signal-watch-list">
 								{dailyWatchItems.map((item) => (
-									<a href={publicDailyHref(item.href, '/investor/#dailyReports')}>
+									<a href={publicDailyHref(item.href, '/investor/daily/')}>
 										<strong>{item.title}</strong>
 										<span>{item.reason}</span>
 									</a>

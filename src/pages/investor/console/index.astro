@@ -1,0 +1,28 @@
+---
+import BaseHead from "../../../components/BaseHead.astro";
+import Header from "../../../components/Header.astro";
+import InvestorConsoleShell from "../../../components/investor/InvestorConsoleShell.astro";
+import { readSiteData } from "../../../lib/investor-generated.js";
+import "../../../styles/investor-console.css";
+
+const siteData = readSiteData();
+const serializedSiteData = JSON.stringify(siteData).replaceAll("<", "\\u003c");
+---
+
+<!doctype html>
+<html lang="zh-CN" data-lang="zh">
+  <head>
+    <BaseHead
+      title="高级研究控制台 · AI Institute"
+      description="AI Institute advanced research console for reports, analyst views, evidence graphs, and research operations."
+    />
+  </head>
+  <body>
+    <Header />
+    <InvestorConsoleShell />
+    <script id="institute-site-data" type="application/json" is:inline set:html={serializedSiteData}></script>
+    <script>
+      import "../../../scripts/investor/site.js";
+    </script>
+  </body>
+</html>
