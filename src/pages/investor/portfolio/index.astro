@@ -203,7 +203,13 @@ const portfolioData = JSON.stringify({
           </div>
           <div class="lane-advice-grid">
             {adviceLanes.map((lane) => (
-              <article class={`lane-advice-card stance-${lane.advice.stance}`}>
+              <article
+                class={`lane-advice-card stance-${lane.advice.stance}`}
+                data-research-href={lane.href}
+                tabindex="0"
+                role="link"
+                aria-label={`打开${lane.titleZh}赛道详情`}
+              >
                 <header>
                   <div><span>{stanceLabels[lane.advice.stance] || lane.advice.stance} · {lane.advice.horizon}</span><h3><a href={lane.href}>{lane.titleZh}</a></h3></div>
                   <strong>{lane.advice.confidence}<em>confidence</em></strong>

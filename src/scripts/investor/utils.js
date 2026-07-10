@@ -9,6 +9,10 @@ export const esc = (value) =>
 
 export const fmt = (n) => Number(n || 0).toLocaleString("zh-CN");
 
+export const cardLinkAttrs = (href, label = "打开研究详情") => href
+  ? `data-research-href="${esc(href)}" tabindex="0" role="link" aria-label="${esc(label)}"`
+  : "";
+
 export const maxOf = (items, key = "value") =>
   Math.max(1, ...items.map((item) => Number(item[key] || 0)));
 

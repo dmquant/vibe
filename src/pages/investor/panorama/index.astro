@@ -92,7 +92,14 @@ const searchText = (...items) => String(items.filter(Boolean).join(" ")).replace
           </div>
           <div class="positioning-stack">
             {panorama.positioning.map((item) => (
-              <article class="positioning-card panorama-searchable" data-search={searchText(item.title, item.lane, item.positioning, item.stocks.map((stock) => stock.ticker).join(" "))}>
+              <article
+                class="positioning-card panorama-searchable"
+                data-search={searchText(item.title, item.lane, item.positioning, item.stocks.map((stock) => stock.ticker).join(" "))}
+                data-research-href={item.href}
+                tabindex="0"
+                role="link"
+                aria-label={`打开主线详情：${item.title}`}
+              >
                 <div>
                   <span>{item.action} · {item.evidenceDate}</span>
                   <h3><a href={item.href}>{item.title}</a></h3>
@@ -116,7 +123,14 @@ const searchText = (...items) => String(items.filter(Boolean).join(" ")).replace
           </div>
           <div class="allocation-stack">
             {panorama.laneAllocation.map((lane) => (
-              <article class={`allocation-row stance-${String(lane.stance).toLowerCase()} panorama-searchable`} data-search={searchText(lane.lane, lane.stance, lane.stocks.map((stock) => stock.ticker).join(" "), lane.nextCatalyst, lane.killSwitch)}>
+              <article
+                class={`allocation-row stance-${String(lane.stance).toLowerCase()} panorama-searchable`}
+                data-search={searchText(lane.lane, lane.stance, lane.stocks.map((stock) => stock.ticker).join(" "), lane.nextCatalyst, lane.killSwitch)}
+                data-research-href={lane.href}
+                tabindex="0"
+                role="link"
+                aria-label={`打开赛道详情：${lane.lane}`}
+              >
                 <a href={lane.href}>
                   <span>#{lane.rank} · {lane.stance}</span>
                   <strong>{lane.lane}</strong>
@@ -308,7 +322,14 @@ const searchText = (...items) => String(items.filter(Boolean).join(" ")).replace
             </div>
             <div class="contradiction-list">
               {panorama.contradictions.slice(0, 6).map((item) => (
-                <article class="contradiction-card panorama-searchable" data-search={searchText(item.title, item.status)}>
+                <article
+                  class="contradiction-card panorama-searchable"
+                  data-search={searchText(item.title, item.status)}
+                  data-research-href={item.href}
+                  tabindex="0"
+                  role="link"
+                  aria-label={`打开分歧主线：${item.title}`}
+                >
                   <span>{item.status} · pressure {item.riskPressure}</span>
                   <h3><a href={item.href}>{item.title}</a></h3>
                   <p>支持 {item.supportFor} / 反向 {item.supportAgainst} · {item.analysts} analysts</p>

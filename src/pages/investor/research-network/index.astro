@@ -223,6 +223,10 @@ const thermalLaneRows = laneIndex.map((lane) => ({
               data-score={thesis.practical?.score || thesis.conviction || 0}
               data-risk-budget={thesis.practical?.riskBudget || ""}
               data-search={`${thesis.title} ${thesis.coreView} ${thesis.lane || ""} ${(thesis.stockTickers || []).join(" ")} ${(thesis.stockUniverse || []).map((stock) => stock.name).join(" ")} ${(thesis.topTerms || []).join(" ")} ${thesis.practical?.exposureBucket || ""} ${thesis.practical?.actionLabel || ""}`}
+              data-research-href={thesisPath(thesis)}
+              tabindex="0"
+              role="link"
+              aria-label={`打开主线详情：${thesis.title}`}
             >
               <div class="thesis-top">
                 <span>{thesis.lane || thesis.practical?.sectorLane || thesis.directionLabel}</span>
@@ -303,7 +307,14 @@ const thermalLaneRows = laneIndex.map((lane) => ({
         </div>
         <div class="recap-grid">
           {recaps.slice(0, 16).map((recap) => (
-            <article class="recap-card" data-search={`${recap.title} ${recap.subtitle}`}>
+            <article
+              class="recap-card"
+              data-search={`${recap.title} ${recap.subtitle}`}
+              data-research-href={`/investor/recaps/${recap.slug}/`}
+              tabindex="0"
+              role="link"
+              aria-label={`打开复盘：${recap.title}`}
+            >
               <div class="thesis-top">
                 <span>{recap.badge}</span>
                 <span>{recap.date}</span>

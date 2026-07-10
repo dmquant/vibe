@@ -1,5 +1,5 @@
 import { analystCard, deepResearchCard, viewCard } from "../cards.js";
-import { barRows, esc, fmt, metric, sectionHead } from "../utils.js";
+import { barRows, cardLinkAttrs, esc, fmt, metric, sectionHead } from "../utils.js";
 
 function uniqueViews(items = []) {
   const seen = new Set();
@@ -52,7 +52,7 @@ export function renderDashboard({ app, data }) {
             ${sectionHead("关键复盘仪表盘", "把重要研究线索做成可点击时间线、信号清单和机制剖面。")}
             <div class="grid cols-4">${recapDashboards
               .map(
-                (item) => `<article class="card thesis-card">
+                (item) => `<article class="card thesis-card" ${cardLinkAttrs(item.href, `打开复盘：${item.title}`)}>
                   <div class="mini-stats"><span>${esc(item.date || "未标注日期")}</span><span>${esc(item.badge || "RECAP")}</span></div>
                   <h3><a href="${esc(item.href)}">${esc(item.title)}</a></h3>
                   <p>${esc(item.subtitle || "")}</p>
@@ -120,7 +120,7 @@ export function renderDeepResearch({ app, data }) {
       ${sectionHead("深度研究", `已生成 ${fmt(items.length)} 篇双语深度报告，报告页包含中英文正文、证据表、图表和下载入口。`)}
       ${
         latest
-          ? `<article class="deep-latest inline">
+          ? `<article class="deep-latest inline" ${cardLinkAttrs(latest.href, `打开深度研究：${latest.title_zh || latest.title_en || ""}`)}>
               <div>
                 <div class="eyebrow">Latest Deep Research</div>
                 <h2><a href="${esc(latest.href)}">${esc(latest.title_zh || latest.title_en)}</a></h2>

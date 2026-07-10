@@ -1,11 +1,11 @@
 import { directionLabel } from "../research-os.js";
-import { esc, fmt, metric, sectionHead } from "../utils.js";
+import { cardLinkAttrs, esc, fmt, metric, sectionHead } from "../utils.js";
 
 function evidenceMiniCard(item, tone = "neutral") {
   if (!item) return "";
   const chainLabels = (item.chains || []).map((chain) => chain.label_zh || chain.label_en).filter(Boolean).slice(0, 3);
   const title = item.source_href ? `<a href="${esc(item.source_href)}">${esc(item.title_zh || item.title_en)}</a>` : esc(item.title_zh || item.title_en);
-  return `<article class="evidence-card" style="border-left:4px solid ${tone === "against" ? "var(--red)" : tone === "risk" ? "var(--gold)" : "var(--blue)"}">
+  return `<article class="evidence-card" ${cardLinkAttrs(item.source_href, `打开证据报告：${item.title_zh || item.title_en}`)} style="border-left:4px solid ${tone === "against" ? "var(--red)" : tone === "risk" ? "var(--gold)" : "var(--blue)"}">
     <div class="mini-stats"><span>${esc(item.date || "未标注日期")}</span><span>${esc(item.analyst_name_zh || "")}</span><span>${esc(chainLabels.join(" / "))}</span></div>
     <h3>${title}</h3>
     <p>${esc(item.summary_zh || item.summary_en || "")}</p>
@@ -15,7 +15,7 @@ function evidenceMiniCard(item, tone = "neutral") {
 function riskMiniCard(item) {
   if (!item) return "";
   const title = item.report_href ? `<a href="${esc(item.report_href)}">${esc(item.title_zh || item.title_en)}</a>` : esc(item.title_zh || item.title_en);
-  return `<article class="risk-card">
+  return `<article class="risk-card" ${cardLinkAttrs(item.report_href, `打开风险报告：${item.title_zh || item.title_en}`)}>
     <div class="mini-stats"><span>影响 <strong>${fmt(item.impact)}</strong></span><span>概率 <strong>${fmt(item.probability)}</strong></span><span>${esc(item.trend || "stable")}</span></div>
     <h3>${title}</h3>
     <p>${esc(item.summary_zh || item.summary_en || "")}</p>
@@ -68,7 +68,7 @@ export function renderDelta({ app, data, access }) {
       <aside class="panel">
         ${sectionHead("必读报告", "由今日简报高分结论继承，点击进入可追溯报告。")}
         <div class="delta-stack">
-          ${(delta.must_read_reports || []).slice(0, 8).map((item) => `<article class="delta-card">
+          ${(delta.must_read_reports || []).slice(0, 8).map((item) => `<article class="delta-card" ${cardLinkAttrs(item.href, `打开必读报告：${item.title || ""}`)}>
             <div class="mini-stats"><span>${esc(item.analyst || "")}</span><span>${esc(item.reason || "")}</span></div>
             <h3>${item.href ? `<a href="${esc(item.href)}">${esc(item.title || "")}</a>` : esc(item.title || "")}</h3>
           </article>`).join("") || `<div class="empty">暂无必读报告。</div>`}

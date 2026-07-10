@@ -1,5 +1,5 @@
 import { directionLabel } from "../research-os.js";
-import { esc, fmt, metric, sectionHead, tags } from "../utils.js";
+import { cardLinkAttrs, esc, fmt, metric, sectionHead, tags } from "../utils.js";
 
 const directionOptions = [
   ["", "全部方向"],
@@ -29,7 +29,7 @@ function compactSignalItem(item) {
     item.direction ? directionLabel(item.direction) : "",
     item.conviction ? `信念 ${fmt(item.conviction)}` : "",
   ].filter(Boolean);
-  return `<article class="signal-item">
+  return `<article class="signal-item" ${cardLinkAttrs(item.href, `打开研究详情：${item.title || ""}`)}>
     <div class="mini-stats">${meta.map((value) => `<span>${esc(value)}</span>`).join("")}</div>
     <h3>${linkedTitle(item)}</h3>
     ${item.summary ? `<p>${esc(item.summary)}</p>` : ""}
@@ -311,7 +311,7 @@ export function renderChangeRadar({ app, data }) {
       <div class="panel">
         ${sectionHead("分析师活跃", "按近七日真实报告数量排序，并保留代表性报告入口。")}
         <div class="signal-list">
-          ${(radar.analystActivity || []).map((item) => `<article class="signal-item">
+          ${(radar.analystActivity || []).map((item) => `<article class="signal-item" ${cardLinkAttrs(item.topReport?.href, `打开${item.name || item.id || "分析师"}代表报告`)}>
             <div class="mini-stats"><span>${esc(item.category || "")}</span><span>报告 ${fmt(item.reports)}</span><span>${esc(item.latestDate || "")}</span></div>
             <h3>${esc(item.name || item.id || "")}</h3>
             ${item.topReport?.title ? `<p><a href="${esc(item.topReport.href)}">${esc(item.topReport.title)}</a></p>` : ""}
@@ -323,7 +323,7 @@ export function renderChangeRadar({ app, data }) {
       <div class="panel">
         ${sectionHead("风险警报", "优先阅读影响和概率同时较高的风险证据。")}
         <div class="signal-list">
-          ${(radar.riskAlerts || []).map((item) => `<article class="risk-alert">
+          ${(radar.riskAlerts || []).map((item) => `<article class="risk-alert" ${cardLinkAttrs(item.href, `打开风险报告：${item.title || ""}`)}>
             <div class="mini-stats"><span>${esc(item.chain)}</span><span>影响 ${fmt(item.impact)}</span><span>概率 ${fmt(item.probability)}</span><span>${esc(item.trend)}</span></div>
             <h3>${linkedTitle(item)}</h3>
             <p>${esc(item.summary || "")}</p>
@@ -339,7 +339,7 @@ export function renderChangeRadar({ app, data }) {
           </a>`).join("") || `<div class="empty">暂无必读报告。</div>`}
         </div>
         <div class="signal-list" style="margin-top:14px">
-          ${(radar.analystSignals || []).slice(0, 5).map((item) => `<article class="signal-item">
+          ${(radar.analystSignals || []).slice(0, 5).map((item) => `<article class="signal-item" ${cardLinkAttrs(item.href, `打开${item.analyst || "分析师"}观点报告`)}>
             <div class="mini-stats"><span>${esc(item.date || "")}</span><span>${esc(item.stance || "")}</span></div>
             <h3>${item.href ? `<a href="${esc(item.href)}">${esc(item.analyst || "")}</a>` : esc(item.analyst || "")}</h3>
             <p>${esc(item.change || "")}</p>
@@ -429,7 +429,7 @@ function thesisRows(items) {
 }
 
 function thesisCard(item) {
-  return `<article class="panel tracker-card">
+  return `<article class="panel tracker-card" ${cardLinkAttrs(item.href, `打开主线详情：${item.title || ""}`)}>
     <div class="tracker-card-head">
       <div>
         <div class="mini-stats"><span class="direction-pill ${esc(item.direction)}">${directionLabel(item.direction)}</span><span>${esc(item.status)}</span><span>${esc(item.lastUpdated || "")}</span></div>

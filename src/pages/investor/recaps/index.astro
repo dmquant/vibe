@@ -30,7 +30,13 @@ const { dashboards, generatedAt } = readRecapDashboards();
 
       <section class="recap-card-grid">
         {dashboards.map((dashboard) => (
-          <article class="recap-list-card">
+          <article
+            class="recap-list-card"
+            data-research-href={`/investor/recaps/${dashboard.slug}/`}
+            tabindex="0"
+            role="link"
+            aria-label={`打开复盘仪表盘：${dashboard.title}`}
+          >
             <div class="recap-card-top">
               <span>{dashboard.badge}</span>
               <span>{dashboard.date}</span>

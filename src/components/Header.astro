@@ -94,9 +94,51 @@ const isInvestorRoute = Astro.url.pathname.startsWith('/investor');
 		window.dispatchEvent(new CustomEvent('theme-change', { detail: { theme: next } }));
 	});
 
+	const nestedControlSelector = 'a, button, input, select, textarea, summary, details, [role="button"]';
+
+	function openResearchCard(card: HTMLElement) {
+		const href = card.dataset.researchHref?.trim();
+		if (href) window.location.assign(href);
+	}
+
+	document.addEventListener('click', (event) => {
+		const target = event.target as HTMLElement | null;
+		const card = target?.closest('[data-research-href]') as HTMLElement | null;
+		if (!card || event.defaultPrevented) return;
+		const nestedControl = target?.closest(nestedControlSelector);
+		if (nestedControl && nestedControl !== card) return;
+		openResearchCard(card);
+	});
+
+	document.addEventListener('keydown', (event) => {
+		if (event.key !== 'Enter' && event.key !== ' ') return;
+		const target = event.target as HTMLElement | null;
+		const card = target?.closest('[data-research-href]') as HTMLElement | null;
+		if (!card || target !== card) return;
+		event.preventDefault();
+		openResearchCard(card);
+	});
+
 	initTheme();
 	initLang();
 </script>
+
+<style is:global>
+	[data-research-href] {
+		cursor: pointer;
+		transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+	}
+	[data-research-href]:hover {
+		border-color: var(--accent-blue, var(--blue, #2f80ed));
+	}
+	[data-research-href]:focus-visible {
+		outline: 2px solid var(--accent-blue, var(--blue, #2f80ed));
+		outline-offset: 3px;
+	}
+	@media (prefers-reduced-motion: reduce) {
+		[data-research-href] { transition: none; }
+	}
+</style>
 
 <style>
 	header {

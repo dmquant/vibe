@@ -1,5 +1,5 @@
 import { filteredReports } from "./reports.js";
-import { esc, fmt, sectionHead, tags, truncate } from "../utils.js";
+import { cardLinkAttrs, esc, fmt, sectionHead, tags, truncate } from "../utils.js";
 
 function graphFilteredReports(context) {
   return filteredReports(context);
@@ -103,7 +103,7 @@ export function renderKnowledge(context) {
         <aside class="graph-side">
           ${sectionHead("关联报告", `匹配 ${fmt(reports.length)} 篇，点击标题打开报告结果。`)}
           <div class="graph-report-list">
-            ${reports.slice(0, 140).map((report) => `<article class="graph-report">
+            ${reports.slice(0, 140).map((report) => `<article class="graph-report" ${cardLinkAttrs(report.href, `打开报告：${report.title}`)}>
               <div class="mini-stats"><span>${esc(report.date || "未标注日期")}</span><span>${esc(report.analyst)}</span></div>
               <h3><a href="${esc(report.href)}">${esc(report.title)}</a></h3>
               <p>${esc(report.excerpt)}</p>
