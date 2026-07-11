@@ -1,0 +1,5115 @@
+{
+  "schema": "vibe.ai_institute.public_research_workspace.v0",
+  "version": "public-analysis.2026-07-11.1",
+  "status": "analysis_view",
+  "statusLabel": "公开分析视图",
+  "generatedAt": "2026-07-10T21:02:39.114Z",
+  "asOfDate": "2026-07-10",
+  "sourceHash": "4facda361a69b007",
+  "summary": {
+    "headline": "从公开研究图谱中重建当前最值得读者关注的 12 条主线。",
+    "lead": "这个页面把已经发布的报告、thesis、赛道、股票和影子赔率压缩成有限容量的阅读界面，帮助读者判断变化、分歧、传导路径与证伪条件。",
+    "boundary": "这是基于已清洗公开结果的确定性分析与展示层，不是研究生产队列，不代表模型内部状态，也不展示隐藏推理。"
+  },
+  "selection": {
+    "capacity": 12,
+    "prioritySlots": 10,
+    "dissentSlots": 2,
+    "basis": "deterministic_public_analysis",
+    "label": "公开材料综合关注度",
+    "scoreMeaning": "Focus score 仅用于页面排序，由时效、证据密度、影子赔率变化、输入置信度、Reader Report 关联和研究覆盖共同构成；它不是发生概率、投资评级或模型置信度。",
+    "historyStatus": "current_snapshot_only",
+    "historyNote": "正式注意力进入/退出历史尚未在公开层记录。本页只展示当前重建快照，不伪造历史 admission 或 settlement。"
+  },
+  "coverage": {
+    "focusItems": 12,
+    "focusLanes": 11,
+    "focusStocks": 40,
+    "focusReports": 37,
+    "highDissentItems": 3,
+    "publicCorpus": {
+      "reports": 15022,
+      "theses": 100,
+      "lanes": 50,
+      "stocks": 242
+    }
+  },
+  "readerReport": {
+    "title": "2026-07-10 每日综合：AI需求未退，定价权转向可交付电力",
+    "date": "2026-07-10",
+    "href": "/investor/reports/reader-daily-reader-2026-07-10/",
+    "summary": "今日真正变化不是宏观通胀与AI基础设施继续保持高研究热度，而是投资框架被进一步拆开：AI资本开支对电价和融资成本仍有韧性，但能否形成收入越来越取决于并网、变压器和可靠电源；中国又不能照搬北美“全面缺设备”的判断，西部枢纽总体可交付、东部节点更紧，电网硬件订单与液冷高估值应分别处理。与此同时，报告记录的科技反弹与高MOVE、偏高认沽需求和强美元仓位并存，7月14日美国CPI将决定高贴现率压力是缓和还是继续压缩权益估值。",
+    "priorityViews": [
+      {
+        "title": "AI资本开支的约束已从财务压力收敛到物理交付",
+        "view": "同日压力测试认为，即使电价上升30%、融资成本增加100个基点，示例集群的年化总拥有成本仅增加约3%，但变压器、开关设备和并网仍可能延迟数年。需求韧性因此不等于项目能够按期通电和确认收入。",
+        "whyItMatters": "组合内应区分现金流充足的云平台、拥有可交付兆瓦的电力资产，以及受益于多年设备交期的供应商；泛AI估值无法替代项目交付验证。",
+        "href": "/investor/reports/reader-daily-reader-2026-07-10/"
+      },
+      {
+        "title": "中国电力链出现可投资的内部断层",
+        "view": "新增研究把全国性“电墙”修正为东部节点约束与西部可交付并存，并进一步区分订单和估值均有缓冲的变压器、特高压设备，与盈利下滑且估值拥挤的液冷温控。",
+        "whyItMatters": "同属AI电力主题，600089.SH、601179.SH与300274.SZ的传导依据是订单、出口和储能盈利，而液冷暴露更依赖收入确认和估值消化，不能作为一篮子处理。",
+        "href": "/investor/reports/reader-daily-reader-2026-07-10/"
+      },
+      {
+        "title": "科技反弹没有解除贴现率与套息尾部约束",
+        "view": "有日期的隔夜报告记录科技和半导体走强，但情绪报告同时显示MOVE维持高位、认沽需求偏强；黄金走强而日元未同步升值，则表明套息交易尚未平仓，却积累了更不对称的尾部风险。",
+        "whyItMatters": "7月14日CPI、长端收益率和日元波动将决定科技反弹能否扩展为更稳健的风险偏好，而不是依赖对冲保护的脆弱上涨。",
+        "href": "/investor/reports/reader-daily-reader-2026-07-10/"
+      }
+    ]
+  },
+  "focusItems": [
+    {
+      "id": "focus:thesis-3986819dc0",
+      "thesisId": "thesis-3986819dc0",
+      "focusScore": 72,
+      "focusTier": {
+        "code": "high",
+        "label": "高关注"
+      },
+      "dissentScore": 51,
+      "dissentLevel": {
+        "code": "medium",
+        "label": "有分歧"
+      },
+      "selectionReasons": [
+        "近期证据更新",
+        "跨分析师覆盖"
+      ],
+      "thesis": {
+        "id": "thesis-3986819dc0",
+        "title": "A 股半导体的核心风险从订单验证转向 A/H 溢价、两融与负 Gamma",
+        "titleEn": "A-share semiconductor risk is shifting from order proof to A/H premium, margin financing, and negative gamma",
+        "href": "/investor/theses/thesis-3986819dc0/",
+        "direction": "conflicting",
+        "directionLabel": "分歧",
+        "conviction": 58,
+        "actionCode": "watch",
+        "actionLabel": "观察等待",
+        "timeHorizon": "1-2 周验证"
+      },
+      "lane": {
+        "id": "lane_968dd01cb43f",
+        "title": "A股半导体/两融负 Gamma",
+        "titleEn": "A-share semiconductor margin and negative gamma",
+        "href": "/investor/lanes/a-share-semiconductor-margin-and-negative-gamma/",
+        "adviceStatus": "not_available"
+      },
+      "whatChanged": "前序研究研究报告 — 2026-07-10",
+      "whyItMatters": "先放入观察池，只在证据密度和价格确认同时改善时进入组合。",
+      "evidence": {
+        "supports": 24,
+        "risks": 96,
+        "neutral": 0,
+        "total": 120,
+        "balance": -0.6,
+        "riskShare": 0.8,
+        "eventCount": 120,
+        "analystCount": 8,
+        "firstSeen": "2024-05-27",
+        "lastSeen": "2026-07-10",
+        "ageDays": 0
+      },
+      "odds": {
+        "status": "shadow",
+        "statusLabel": "影子赔率盘",
+        "confidence": 98,
+        "curve": {
+          "code": "flat",
+          "label": "近似平坦",
+          "slopePp": -0.1
+        },
+        "horizons": [
+          {
+            "horizon": "5d",
+            "pHouse": 0.452,
+            "pHousePct": 45,
+            "fairDecimalOdds": 2.21,
+            "movePp": 0.9,
+            "calibrated": false
+          },
+          {
+            "horizon": "20d",
+            "pHouse": 0.449,
+            "pHousePct": 45,
+            "fairDecimalOdds": 2.23,
+            "movePp": 0.6,
+            "calibrated": false
+          },
+          {
+            "horizon": "60d",
+            "pHouse": 0.451,
+            "pHousePct": 45,
+            "fairDecimalOdds": 2.22,
+            "movePp": 0.2,
+            "calibrated": false
+          }
+        ],
+        "note": "证据驱动、未校准的影子赔率，不是市场隐含概率。"
+      },
+      "activity": [
+        {
+          "date": "2026-06-29",
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-06-30",
+          "supports": 2,
+          "risks": 1,
+          "neutral": 0,
+          "events": 3
+        },
+        {
+          "date": "2026-07-01",
+          "supports": 1,
+          "risks": 1,
+          "neutral": 0,
+          "events": 2
+        },
+        {
+          "date": "2026-07-02",
+          "supports": 1,
+          "risks": 4,
+          "neutral": 0,
+          "events": 5
+        },
+        {
+          "date": "2026-07-03",
+          "supports": 3,
+          "risks": 2,
+          "neutral": 0,
+          "events": 5
+        },
+        {
+          "date": "2026-07-04",
+          "supports": 1,
+          "risks": 4,
+          "neutral": 0,
+          "events": 5
+        },
+        {
+          "date": "2026-07-05",
+          "supports": 1,
+          "risks": 2,
+          "neutral": 0,
+          "events": 3
+        },
+        {
+          "date": "2026-07-06",
+          "supports": 2,
+          "risks": 5,
+          "neutral": 0,
+          "events": 7
+        },
+        {
+          "date": "2026-07-07",
+          "supports": 2,
+          "risks": 6,
+          "neutral": 0,
+          "events": 8
+        },
+        {
+          "date": "2026-07-08",
+          "supports": 0,
+          "risks": 3,
+          "neutral": 0,
+          "events": 3
+        },
+        {
+          "date": "2026-07-09",
+          "supports": 2,
+          "risks": 0,
+          "neutral": 0,
+          "events": 2
+        },
+        {
+          "date": "2026-07-10",
+          "supports": 1,
+          "risks": 0,
+          "neutral": 0,
+          "events": 1
+        }
+      ],
+      "stocks": [
+        {
+          "ticker": "688981.SH",
+          "name": "中芯国际",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/688981.SH/"
+        },
+        {
+          "ticker": "688256.SH",
+          "name": "寒武纪",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/688256.SH/"
+        },
+        {
+          "ticker": "0981.HK",
+          "name": "中芯国际",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/0981.HK/"
+        },
+        {
+          "ticker": "688041.SH",
+          "name": "海光信息",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/688041.SH/"
+        },
+        {
+          "ticker": "600900.SH",
+          "name": "长江电力",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/600900.SH/"
+        },
+        {
+          "ticker": "588000.SH",
+          "name": "科创50 ETF",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/588000.SH/"
+        }
+      ],
+      "sources": [
+        {
+          "title": "2026-07-03 — 将算力链压力图谱转化为 A股持仓：做多稀缺咽喉、做空重营运资本集成商",
+          "date": "2026-07-10",
+          "href": "/investor/reports/archive-92369070bdb0/"
+        },
+        {
+          "title": "2026-07-04压力测试：去杠杆级联对科创50 1750突破平台的冲击",
+          "date": "2026-07-10",
+          "href": "/investor/reports/archive-60556accbec3/"
+        },
+        {
+          "title": "2026-07-06 半导体压力测试：科创50触及1,516点会否打断AI资本开支与国产替代？",
+          "date": "2026-07-10",
+          "href": "/investor/reports/archive-16db12a99137/"
+        },
+        {
+          "title": "2026-07-07 研究报告：45/35/20风格组合的A股市场结构落地与再平衡触发器",
+          "date": "2026-07-10",
+          "href": "/investor/reports/archive-3947f514d3f4/"
+        }
+      ],
+      "confirmations": [
+        "融资余额、ETF 申赎和北向资金是否同向",
+        "被动调仓窗口是否被主动资金提前交易",
+        "订单、盈利和估值是否同步改善"
+      ],
+      "falsifiers": [
+        "风险事件继续高于支持事件，且最新证据没有修复。",
+        "核心监控词热度上升，但可验证订单、价格或现金流没有同步改善。",
+        "同一结论只来自单一来源，无法形成跨来源验证。"
+      ],
+      "tags": [
+        "观察等待",
+        "分歧",
+        "HBM",
+        "通胀",
+        "A股"
+      ],
+      "rank": 1,
+      "slotType": "priority",
+      "slotLabel": "重点观察"
+    },
+    {
+      "id": "focus:thesis-70daf87262",
+      "thesisId": "thesis-70daf87262",
+      "focusScore": 72,
+      "focusTier": {
+        "code": "high",
+        "label": "高关注"
+      },
+      "dissentScore": 65,
+      "dissentLevel": {
+        "code": "medium",
+        "label": "有分歧"
+      },
+      "selectionReasons": [
+        "近期证据更新",
+        "跨分析师覆盖",
+        "保留高分歧反方"
+      ],
+      "thesis": {
+        "id": "thesis-70daf87262",
+        "title": "A 股红利与硬科技杠铃仍是政策、利率和风险偏好的组合表达",
+        "titleEn": "A-share dividend and hard-tech barbell remains the portfolio expression of policy, rates, and risk appetite",
+        "href": "/investor/theses/thesis-70daf87262/",
+        "direction": "strengthening",
+        "directionLabel": "强化",
+        "conviction": 73,
+        "actionCode": "watch",
+        "actionLabel": "观察等待",
+        "timeHorizon": "1-2 周验证"
+      },
+      "lane": {
+        "id": "lane_bf77fb66551a",
+        "title": "A股红利/硬科技杠铃",
+        "titleEn": "A-share dividend and hard-tech barbell",
+        "href": "/investor/lanes/a-share-dividend-and-hard-tech-barbell/",
+        "adviceStatus": "not_available"
+      },
+      "whatChanged": "把全球双峰利率杠铃映射到A股风格轮动：红利/红筹锚 vs. 成长久期",
+      "whyItMatters": "先放入观察池，只在证据密度和价格确认同时改善时进入组合。",
+      "evidence": {
+        "supports": 74,
+        "risks": 45,
+        "neutral": 1,
+        "total": 120,
+        "balance": 0.242,
+        "riskShare": 0.378,
+        "eventCount": 120,
+        "analystCount": 9,
+        "firstSeen": "2026-05-02",
+        "lastSeen": "2026-07-09",
+        "ageDays": 1
+      },
+      "odds": {
+        "status": "shadow",
+        "statusLabel": "影子赔率盘",
+        "confidence": 98,
+        "curve": {
+          "code": "flat",
+          "label": "近似平坦",
+          "slopePp": -0.4
+        },
+        "horizons": [
+          {
+            "horizon": "5d",
+            "pHouse": 0.587,
+            "pHousePct": 59,
+            "fairDecimalOdds": 1.7,
+            "movePp": 3.8,
+            "calibrated": false
+          },
+          {
+            "horizon": "20d",
+            "pHouse": 0.571,
+            "pHousePct": 57,
+            "fairDecimalOdds": 1.75,
+            "movePp": 0.9,
+            "calibrated": false
+          },
+          {
+            "horizon": "60d",
+            "pHouse": 0.583,
+            "pHousePct": 58,
+            "fairDecimalOdds": 1.72,
+            "movePp": 0.5,
+            "calibrated": false
+          }
+        ],
+        "note": "证据驱动、未校准的影子赔率，不是市场隐含概率。"
+      },
+      "activity": [
+        {
+          "date": "2026-06-27",
+          "supports": 2,
+          "risks": 1,
+          "neutral": 0,
+          "events": 3
+        },
+        {
+          "date": "2026-06-29",
+          "supports": 1,
+          "risks": 0,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-06-30",
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-07-01",
+          "supports": 1,
+          "risks": 0,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-07-02",
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-07-03",
+          "supports": 1,
+          "risks": 2,
+          "neutral": 0,
+          "events": 3
+        },
+        {
+          "date": "2026-07-04",
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-07-05",
+          "supports": 3,
+          "risks": 1,
+          "neutral": 0,
+          "events": 4
+        },
+        {
+          "date": "2026-07-06",
+          "supports": 2,
+          "risks": 3,
+          "neutral": 0,
+          "events": 5
+        },
+        {
+          "date": "2026-07-07",
+          "supports": 5,
+          "risks": 3,
+          "neutral": 0,
+          "events": 8
+        },
+        {
+          "date": "2026-07-08",
+          "supports": 2,
+          "risks": 1,
+          "neutral": 0,
+          "events": 3
+        },
+        {
+          "date": "2026-07-09",
+          "supports": 6,
+          "risks": 0,
+          "neutral": 0,
+          "events": 6
+        }
+      ],
+      "stocks": [
+        {
+          "ticker": "600900.SH",
+          "name": "长江电力",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/600900.SH/"
+        },
+        {
+          "ticker": "601088.SH",
+          "name": "中国神华",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/601088.SH/"
+        },
+        {
+          "ticker": "601398.SH",
+          "name": "工商银行",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/601398.SH/"
+        },
+        {
+          "ticker": "688981.SH",
+          "name": "中芯国际",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/688981.SH/"
+        },
+        {
+          "ticker": "588000.SH",
+          "name": "科创50 ETF",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/588000.SH/"
+        },
+        {
+          "ticker": "600941.SH",
+          "name": "中国移动",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/600941.SH/"
+        }
+      ],
+      "sources": [
+        {
+          "title": "2026-07-03 AI硬件与半导体退拥挤后的A股哑铃重组",
+          "date": "2026-07-09",
+          "href": "/investor/reports/archive-7d1d71c02339/"
+        },
+        {
+          "title": "2026-07-05 — 险资红利锚买入能力与银行NCD/理财融资承压的定量刻画研究报告",
+          "date": "2026-07-09",
+          "href": "/investor/reports/archive-5a087916dca3/"
+        },
+        {
+          "title": "2026-07-06 策略银行红利缩水后的风险平价重构",
+          "date": "2026-07-09",
+          "href": "/investor/reports/archive-48a1cbf7ecdd/"
+        },
+        {
+          "title": "2026-07-07 研究报告：45/35/20风格组合的A股市场结构落地与再平衡触发器",
+          "date": "2026-07-09",
+          "href": "/investor/reports/archive-3947f514d3f4/"
+        }
+      ],
+      "confirmations": [
+        "融资余额、ETF 申赎和北向资金是否同向",
+        "被动调仓窗口是否被主动资金提前交易",
+        "订单、盈利和估值是否同步改善"
+      ],
+      "falsifiers": [
+        "支持证据停止更新，价格或资金面先于基本面走弱。",
+        "核心监控词热度上升，但可验证订单、价格或现金流没有同步改善。",
+        "同一结论只来自单一来源，无法形成跨来源验证。"
+      ],
+      "tags": [
+        "观察等待",
+        "强化",
+        "通胀",
+        "利率",
+        "银行"
+      ],
+      "rank": 2,
+      "slotType": "priority",
+      "slotLabel": "重点观察"
+    },
+    {
+      "id": "focus:thesis-bef6966fdd",
+      "thesisId": "thesis-bef6966fdd",
+      "focusScore": 72,
+      "focusTier": {
+        "code": "high",
+        "label": "高关注"
+      },
+      "dissentScore": 59,
+      "dissentLevel": {
+        "code": "medium",
+        "label": "有分歧"
+      },
+      "selectionReasons": [
+        "近期证据更新",
+        "20D 影子赔率发生明显移动",
+        "跨分析师覆盖"
+      ],
+      "thesis": {
+        "id": "thesis-bef6966fdd",
+        "title": "工业机械的出口订单质量和设备更新周期决定制造业 CapEx 弹性",
+        "titleEn": "Industrial machinery beta depends on export-order quality and equipment-upgrade capex",
+        "href": "/investor/theses/thesis-bef6966fdd/",
+        "direction": "conflicting",
+        "directionLabel": "分歧",
+        "conviction": 58,
+        "actionCode": "watch",
+        "actionLabel": "观察等待",
+        "timeHorizon": "1-2 周验证"
+      },
+      "lane": {
+        "id": "lane_6e2dcaab093e",
+        "title": "工业机械/设备更新出海",
+        "titleEn": "Industrial machinery, equipment upgrade, and exports",
+        "href": "/investor/lanes/industrial-machinery-equipment-upgrade-and-exports/",
+        "adviceStatus": "not_available"
+      },
+      "whatChanged": "产业链调研报告：工业机械产业链（2026-07-09）",
+      "whyItMatters": "先放入观察池，只在证据密度和价格确认同时改善时进入组合。",
+      "evidence": {
+        "supports": 29,
+        "risks": 81,
+        "neutral": 3,
+        "total": 113,
+        "balance": -0.46,
+        "riskShare": 0.736,
+        "eventCount": 113,
+        "analystCount": 12,
+        "firstSeen": "2026-04-30",
+        "lastSeen": "2026-07-09",
+        "ageDays": 1
+      },
+      "odds": {
+        "status": "shadow",
+        "statusLabel": "影子赔率盘",
+        "confidence": 98,
+        "curve": {
+          "code": "mild_front_rich",
+          "label": "温和前倾",
+          "slopePp": -2
+        },
+        "horizons": [
+          {
+            "horizon": "5d",
+            "pHouse": 0.486,
+            "pHousePct": 49,
+            "fairDecimalOdds": 2.06,
+            "movePp": 3.9,
+            "calibrated": false
+          },
+          {
+            "horizon": "20d",
+            "pHouse": 0.468,
+            "pHousePct": 47,
+            "fairDecimalOdds": 2.14,
+            "movePp": 1.2,
+            "calibrated": false
+          },
+          {
+            "horizon": "60d",
+            "pHouse": 0.466,
+            "pHousePct": 47,
+            "fairDecimalOdds": 2.15,
+            "movePp": 0.4,
+            "calibrated": false
+          }
+        ],
+        "note": "证据驱动、未校准的影子赔率，不是市场隐含概率。"
+      },
+      "activity": [
+        {
+          "date": "2026-06-23",
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-06-24",
+          "supports": 2,
+          "risks": 7,
+          "neutral": 1,
+          "events": 10
+        },
+        {
+          "date": "2026-06-26",
+          "supports": 1,
+          "risks": 0,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-06-27",
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-06-29",
+          "supports": 1,
+          "risks": 0,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-07-01",
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-07-02",
+          "supports": 2,
+          "risks": 4,
+          "neutral": 0,
+          "events": 6
+        },
+        {
+          "date": "2026-07-03",
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-07-04",
+          "supports": 1,
+          "risks": 1,
+          "neutral": 0,
+          "events": 2
+        },
+        {
+          "date": "2026-07-06",
+          "supports": 0,
+          "risks": 4,
+          "neutral": 0,
+          "events": 4
+        },
+        {
+          "date": "2026-07-07",
+          "supports": 3,
+          "risks": 3,
+          "neutral": 0,
+          "events": 6
+        },
+        {
+          "date": "2026-07-09",
+          "supports": 3,
+          "risks": 0,
+          "neutral": 0,
+          "events": 3
+        }
+      ],
+      "stocks": [
+        {
+          "ticker": "603338.SH",
+          "name": "浙江鼎力",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/603338.SH/"
+        },
+        {
+          "ticker": "600761.SH",
+          "name": "安徽合力",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/600761.SH/"
+        },
+        {
+          "ticker": "002747.SZ",
+          "name": "埃斯顿",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/002747.SZ/"
+        },
+        {
+          "ticker": "600031.SH",
+          "name": "三一重工",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/600031.SH/"
+        },
+        {
+          "ticker": "300124.SZ",
+          "name": "汇川技术",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/300124.SZ/"
+        },
+        {
+          "ticker": "601882.SH",
+          "name": "601882.SH",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/601882.SH/"
+        }
+      ],
+      "sources": [
+        {
+          "title": "2026-06-29 工业制造研究记录05：限制性实际利率下的中游机械订单与利润压力",
+          "date": "2026-07-09",
+          "href": "/investor/reports/archive-bc31d8a7dfa1/"
+        },
+        {
+          "title": "2026-07-01 收官卡（10/10）：国家级\"以旧换新/设备更新\"政策对智能卫浴需求的对冲强度评估",
+          "date": "2026-07-09",
+          "href": "/investor/reports/archive-b43153d3400a/"
+        },
+        {
+          "title": "2026-07-07 A股策略：制造业设备更新与红利防御的再平衡",
+          "date": "2026-07-09",
+          "href": "/investor/reports/archive-3b320df9578f/"
+        },
+        {
+          "title": "2026-07-09 全球宏观综合：5万亿设备更新周期的财政可持续性",
+          "date": "2026-07-09",
+          "href": "/investor/reports/archive-30d899237e70/"
+        }
+      ],
+      "confirmations": [
+        "CPI/PCE 与油价是否重新推高实际利率",
+        "美元、人民币和日元套息交易是否发生拥挤反转",
+        "长端利率是否压制权益估值扩张"
+      ],
+      "falsifiers": [
+        "风险事件继续高于支持事件，且最新证据没有修复。",
+        "核心监控词热度上升，但可验证订单、价格或现金流没有同步改善。",
+        "同一结论只来自单一来源，无法形成跨来源验证。"
+      ],
+      "tags": [
+        "观察等待",
+        "分歧",
+        "GOES",
+        "利率",
+        "工业机械"
+      ],
+      "rank": 3,
+      "slotType": "priority",
+      "slotLabel": "重点观察"
+    },
+    {
+      "id": "focus:thesis-603a5f7966",
+      "thesisId": "thesis-603a5f7966",
+      "focusScore": 71,
+      "focusTier": {
+        "code": "high",
+        "label": "高关注"
+      },
+      "dissentScore": 69,
+      "dissentLevel": {
+        "code": "medium",
+        "label": "有分歧"
+      },
+      "selectionReasons": [
+        "近期证据更新",
+        "跨分析师覆盖",
+        "保留高分歧反方"
+      ],
+      "thesis": {
+        "id": "thesis-603a5f7966",
+        "title": "A 股硬科技与科创50的复苏需要订单、融资盘和指数结构共振",
+        "titleEn": "A-share hard tech and STAR50 recovery needs orders, margin positioning, and index structure to align",
+        "href": "/investor/theses/thesis-603a5f7966/",
+        "direction": "conflicting",
+        "directionLabel": "分歧",
+        "conviction": 65,
+        "actionCode": "watch",
+        "actionLabel": "观察等待",
+        "timeHorizon": "1-2 周验证"
+      },
+      "lane": {
+        "id": "lane_4cc1e74d8e5f",
+        "title": "A股硬科技/科创50",
+        "titleEn": "A-share hard tech and STAR50",
+        "href": "/investor/lanes/a-share-hard-tech-and-star50/",
+        "adviceStatus": "not_available"
+      },
+      "whatChanged": "前序研究研究报告 — 2026-07-10",
+      "whyItMatters": "先放入观察池，只在证据密度和价格确认同时改善时进入组合。",
+      "evidence": {
+        "supports": 41,
+        "risks": 74,
+        "neutral": 4,
+        "total": 119,
+        "balance": -0.277,
+        "riskShare": 0.643,
+        "eventCount": 119,
+        "analystCount": 9,
+        "firstSeen": "2026-03-31",
+        "lastSeen": "2026-07-10",
+        "ageDays": 0
+      },
+      "odds": {
+        "status": "shadow",
+        "statusLabel": "影子赔率盘",
+        "confidence": 98,
+        "curve": {
+          "code": "mild_back_rich",
+          "label": "温和后倾",
+          "slopePp": 5.6
+        },
+        "horizons": [
+          {
+            "horizon": "5d",
+            "pHouse": 0.444,
+            "pHousePct": 44,
+            "fairDecimalOdds": 2.25,
+            "movePp": 2,
+            "calibrated": false
+          },
+          {
+            "horizon": "20d",
+            "pHouse": 0.481,
+            "pHousePct": 48,
+            "fairDecimalOdds": 2.08,
+            "movePp": -0.6,
+            "calibrated": false
+          },
+          {
+            "horizon": "60d",
+            "pHouse": 0.5,
+            "pHousePct": 50,
+            "fairDecimalOdds": 2,
+            "movePp": 0.2,
+            "calibrated": false
+          }
+        ],
+        "note": "证据驱动、未校准的影子赔率，不是市场隐含概率。"
+      },
+      "activity": [
+        {
+          "date": "2026-06-26",
+          "supports": 1,
+          "risks": 0,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-06-30",
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-07-01",
+          "supports": 1,
+          "risks": 0,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-07-02",
+          "supports": 0,
+          "risks": 3,
+          "neutral": 0,
+          "events": 3
+        },
+        {
+          "date": "2026-07-03",
+          "supports": 1,
+          "risks": 3,
+          "neutral": 0,
+          "events": 4
+        },
+        {
+          "date": "2026-07-04",
+          "supports": 0,
+          "risks": 2,
+          "neutral": 0,
+          "events": 2
+        },
+        {
+          "date": "2026-07-05",
+          "supports": 1,
+          "risks": 1,
+          "neutral": 0,
+          "events": 2
+        },
+        {
+          "date": "2026-07-06",
+          "supports": 0,
+          "risks": 3,
+          "neutral": 0,
+          "events": 3
+        },
+        {
+          "date": "2026-07-07",
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-07-08",
+          "supports": 0,
+          "risks": 2,
+          "neutral": 0,
+          "events": 2
+        },
+        {
+          "date": "2026-07-09",
+          "supports": 1,
+          "risks": 1,
+          "neutral": 0,
+          "events": 2
+        },
+        {
+          "date": "2026-07-10",
+          "supports": 2,
+          "risks": 1,
+          "neutral": 0,
+          "events": 3
+        }
+      ],
+      "stocks": [
+        {
+          "ticker": "688256.SH",
+          "name": "寒武纪",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/688256.SH/"
+        },
+        {
+          "ticker": "300308.SZ",
+          "name": "中际旭创",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/300308.SZ/"
+        },
+        {
+          "ticker": "688981.SH",
+          "name": "中芯国际",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/688981.SH/"
+        },
+        {
+          "ticker": "688041.SH",
+          "name": "海光信息",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/688041.SH/"
+        },
+        {
+          "ticker": "0981.HK",
+          "name": "中芯国际",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/0981.HK/"
+        },
+        {
+          "ticker": "600900.SH",
+          "name": "长江电力",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/600900.SH/"
+        }
+      ],
+      "sources": [
+        {
+          "title": "2026-07-04压力测试：去杠杆级联对科创50 1750突破平台的冲击",
+          "date": "2026-07-10",
+          "href": "/investor/reports/archive-60556accbec3/"
+        },
+        {
+          "title": "2026-07-06 半导体压力测试：科创50触及1,516点会否打断AI资本开支与国产替代？",
+          "date": "2026-07-10",
+          "href": "/investor/reports/archive-16db12a99137/"
+        },
+        {
+          "title": "AI数据中心电力与并网瓶颈能否支撑2027光模块/PCB订单兑现",
+          "date": "2026-07-10",
+          "href": "/investor/reports/archive-788620b91416/"
+        },
+        {
+          "title": "A股去杠杆与硬科技解禁压力下的战术资产配置与风险对冲报告",
+          "date": "2026-07-10",
+          "href": "/investor/reports/archive-aed3d96490cb/"
+        }
+      ],
+      "confirmations": [
+        "融资余额、ETF 申赎和北向资金是否同向",
+        "被动调仓窗口是否被主动资金提前交易",
+        "订单、盈利和估值是否同步改善"
+      ],
+      "falsifiers": [
+        "风险事件继续高于支持事件，且最新证据没有修复。",
+        "核心监控词热度上升，但可验证订单、价格或现金流没有同步改善。",
+        "同一结论只来自单一来源，无法形成跨来源验证。"
+      ],
+      "tags": [
+        "观察等待",
+        "分歧",
+        "AI 基础设施",
+        "GPU",
+        "ASIC"
+      ],
+      "rank": 4,
+      "slotType": "priority",
+      "slotLabel": "重点观察"
+    },
+    {
+      "id": "focus:thesis-075017003b",
+      "thesisId": "thesis-075017003b",
+      "focusScore": 71,
+      "focusTier": {
+        "code": "high",
+        "label": "高关注"
+      },
+      "dissentScore": 79,
+      "dissentLevel": {
+        "code": "high",
+        "label": "高分歧"
+      },
+      "selectionReasons": [
+        "近期证据更新",
+        "跨分析师覆盖",
+        "保留高分歧反方"
+      ],
+      "thesis": {
+        "id": "thesis-075017003b",
+        "title": "AI 资本开支通过能源、设备和利率进入通胀定价",
+        "titleEn": "AI capex enters inflation pricing through energy, equipment, and rates",
+        "href": "/investor/theses/thesis-075017003b/",
+        "direction": "conflicting",
+        "directionLabel": "分歧",
+        "conviction": 65,
+        "actionCode": "watch",
+        "actionLabel": "观察等待",
+        "timeHorizon": "1-2 周验证"
+      },
+      "lane": {
+        "id": "lane_c0702fb29e08",
+        "title": "AI 再通胀/利率敏感资产",
+        "titleEn": "AI reflation and rate-sensitive assets",
+        "href": "/investor/lanes/ai-reflation-and-rate-sensitive-assets/",
+        "adviceStatus": "not_available"
+      },
+      "whatChanged": "2026-07-10 全球宏观报告：中国生产资料PPI再通胀能否传导至核心CPI？",
+      "whyItMatters": "先放入观察池，只在证据密度和价格确认同时改善时进入组合。",
+      "evidence": {
+        "supports": 50,
+        "risks": 63,
+        "neutral": 1,
+        "total": 114,
+        "balance": -0.114,
+        "riskShare": 0.558,
+        "eventCount": 114,
+        "analystCount": 15,
+        "firstSeen": "2026-05-04",
+        "lastSeen": "2026-07-10",
+        "ageDays": 0
+      },
+      "odds": {
+        "status": "shadow",
+        "statusLabel": "影子赔率盘",
+        "confidence": 98,
+        "curve": {
+          "code": "mild_back_rich",
+          "label": "温和后倾",
+          "slopePp": 5.1
+        },
+        "horizons": [
+          {
+            "horizon": "5d",
+            "pHouse": 0.471,
+            "pHousePct": 47,
+            "fairDecimalOdds": 2.12,
+            "movePp": 0,
+            "calibrated": false
+          },
+          {
+            "horizon": "20d",
+            "pHouse": 0.454,
+            "pHousePct": 45,
+            "fairDecimalOdds": 2.2,
+            "movePp": -0.4,
+            "calibrated": false
+          },
+          {
+            "horizon": "60d",
+            "pHouse": 0.522,
+            "pHousePct": 52,
+            "fairDecimalOdds": 1.92,
+            "movePp": -0.1,
+            "calibrated": false
+          }
+        ],
+        "note": "证据驱动、未校准的影子赔率，不是市场隐含概率。"
+      },
+      "activity": [
+        {
+          "date": "2026-06-27",
+          "supports": 0,
+          "risks": 7,
+          "neutral": 0,
+          "events": 7
+        },
+        {
+          "date": "2026-06-28",
+          "supports": 0,
+          "risks": 2,
+          "neutral": 0,
+          "events": 2
+        },
+        {
+          "date": "2026-06-29",
+          "supports": 0,
+          "risks": 2,
+          "neutral": 0,
+          "events": 2
+        },
+        {
+          "date": "2026-06-30",
+          "supports": 1,
+          "risks": 2,
+          "neutral": 0,
+          "events": 3
+        },
+        {
+          "date": "2026-07-03",
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-07-04",
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-07-05",
+          "supports": 1,
+          "risks": 2,
+          "neutral": 0,
+          "events": 3
+        },
+        {
+          "date": "2026-07-06",
+          "supports": 0,
+          "risks": 2,
+          "neutral": 0,
+          "events": 2
+        },
+        {
+          "date": "2026-07-07",
+          "supports": 0,
+          "risks": 2,
+          "neutral": 0,
+          "events": 2
+        },
+        {
+          "date": "2026-07-08",
+          "supports": 1,
+          "risks": 1,
+          "neutral": 0,
+          "events": 2
+        },
+        {
+          "date": "2026-07-09",
+          "supports": 4,
+          "risks": 3,
+          "neutral": 0,
+          "events": 7
+        },
+        {
+          "date": "2026-07-10",
+          "supports": 1,
+          "risks": 2,
+          "neutral": 0,
+          "events": 3
+        }
+      ],
+      "stocks": [
+        {
+          "ticker": "META",
+          "name": "Meta Platforms",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/META/"
+        },
+        {
+          "ticker": "TLT",
+          "name": "iShares 20+ Year Treasury Bond ETF",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/TLT/"
+        },
+        {
+          "ticker": "MSFT",
+          "name": "Microsoft",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/MSFT/"
+        },
+        {
+          "ticker": "GLD",
+          "name": "SPDR Gold Shares",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/GLD/"
+        },
+        {
+          "ticker": "AMZN",
+          "name": "Amazon",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/AMZN/"
+        },
+        {
+          "ticker": "XLU",
+          "name": "Utilities Select Sector SPDR",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/XLU/"
+        }
+      ],
+      "sources": [
+        {
+          "title": "2026-07-06 全球宏观压力测试：乳业/畜牧业去产能、食品CPI与农业信用传导",
+          "date": "2026-07-10",
+          "href": "/investor/reports/archive-7bdc935e4854/"
+        },
+        {
+          "title": "2026-07-10 全球宏观报告：中国生产资料PPI再通胀能否传导至核心CPI？",
+          "date": "2026-07-10",
+          "href": "/investor/reports/archive-0d6b2cf8e971/"
+        },
+        {
+          "title": "2026-07-10 全球宏观研究记录：信用低配后，久期对冲还是通胀保护？",
+          "date": "2026-07-10",
+          "href": "/investor/reports/archive-a89d72aca7f6/"
+        },
+        {
+          "title": "AI 资本开支的财务天花板：信用约束、抵押品贬值与风险再配置",
+          "date": "2026-07-10",
+          "href": "/investor/reports/archive-62c424c0183c/"
+        }
+      ],
+      "confirmations": [
+        "CPI/PCE 与油价是否重新推高实际利率",
+        "美元、人民币和日元套息交易是否发生拥挤反转",
+        "长端利率是否压制权益估值扩张"
+      ],
+      "falsifiers": [
+        "风险事件继续高于支持事件，且最新证据没有修复。",
+        "核心监控词热度上升，但可验证订单、价格或现金流没有同步改善。",
+        "同一结论只来自单一来源，无法形成跨来源验证。"
+      ],
+      "tags": [
+        "观察等待",
+        "分歧",
+        "AI 资本开支",
+        "AI CapEx",
+        "CPI"
+      ],
+      "rank": 5,
+      "slotType": "priority",
+      "slotLabel": "重点观察"
+    },
+    {
+      "id": "focus:thesis-ab1fb6a453",
+      "thesisId": "thesis-ab1fb6a453",
+      "focusScore": 71,
+      "focusTier": {
+        "code": "high",
+        "label": "高关注"
+      },
+      "dissentScore": 66,
+      "dissentLevel": {
+        "code": "medium",
+        "label": "有分歧"
+      },
+      "selectionReasons": [
+        "近期证据更新",
+        "跨分析师覆盖",
+        "保留高分歧反方"
+      ],
+      "thesis": {
+        "id": "thesis-ab1fb6a453",
+        "title": "DeepSeek 式低价模型正在重塑 AI 定价权与软件利润池",
+        "titleEn": "DeepSeek-style low-cost models are reshaping AI pricing power and software profit pools",
+        "href": "/investor/theses/thesis-ab1fb6a453/",
+        "direction": "conflicting",
+        "directionLabel": "分歧",
+        "conviction": 72,
+        "actionCode": "pair_or_probe",
+        "actionLabel": "分歧主线：配对验证",
+        "timeHorizon": "事件驱动"
+      },
+      "lane": {
+        "id": "lane_13710af7e06d",
+        "title": "低价模型/AI 软件利润池",
+        "titleEn": "Low-cost models and AI software profit pools",
+        "href": "/investor/lanes/low-cost-models-and-ai-software-profit-pools/",
+        "adviceStatus": "not_available"
+      },
+      "whatChanged": "市场情绪午间扫描与研究议题推介（2026年07月09日）",
+      "whyItMatters": "这是有投资含义但证据分歧很高的主线，更适合配对验证、分批试错和严格证伪。",
+      "evidence": {
+        "supports": 33,
+        "risks": 68,
+        "neutral": 7,
+        "total": 108,
+        "balance": -0.324,
+        "riskShare": 0.673,
+        "eventCount": 108,
+        "analystCount": 14,
+        "firstSeen": "2025-10-15",
+        "lastSeen": "2026-07-09",
+        "ageDays": 1
+      },
+      "odds": {
+        "status": "shadow",
+        "statusLabel": "影子赔率盘",
+        "confidence": 98,
+        "curve": {
+          "code": "back_rich",
+          "label": "后端抬升",
+          "slopePp": 7.3
+        },
+        "horizons": [
+          {
+            "horizon": "5d",
+            "pHouse": 0.436,
+            "pHousePct": 44,
+            "fairDecimalOdds": 2.29,
+            "movePp": -2,
+            "calibrated": false
+          },
+          {
+            "horizon": "20d",
+            "pHouse": 0.475,
+            "pHousePct": 47,
+            "fairDecimalOdds": 2.11,
+            "movePp": -0.8,
+            "calibrated": false
+          },
+          {
+            "horizon": "60d",
+            "pHouse": 0.509,
+            "pHousePct": 51,
+            "fairDecimalOdds": 1.96,
+            "movePp": -0.1,
+            "calibrated": false
+          }
+        ],
+        "note": "证据驱动、未校准的影子赔率，不是市场隐含概率。"
+      },
+      "activity": [
+        {
+          "date": "2026-06-13",
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-06-14",
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-06-15",
+          "supports": 1,
+          "risks": 0,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-06-16",
+          "supports": 2,
+          "risks": 1,
+          "neutral": 0,
+          "events": 3
+        },
+        {
+          "date": "2026-06-17",
+          "supports": 0,
+          "risks": 2,
+          "neutral": 0,
+          "events": 2
+        },
+        {
+          "date": "2026-06-18",
+          "supports": 0,
+          "risks": 2,
+          "neutral": 0,
+          "events": 2
+        },
+        {
+          "date": "2026-06-19",
+          "supports": 1,
+          "risks": 1,
+          "neutral": 0,
+          "events": 2
+        },
+        {
+          "date": "2026-06-21",
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-06-28",
+          "supports": 0,
+          "risks": 2,
+          "neutral": 0,
+          "events": 2
+        },
+        {
+          "date": "2026-06-30",
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-07-05",
+          "supports": 1,
+          "risks": 0,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-07-09",
+          "supports": 1,
+          "risks": 3,
+          "neutral": 0,
+          "events": 4
+        }
+      ],
+      "stocks": [
+        {
+          "ticker": "BABA",
+          "name": "Alibaba",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/BABA/"
+        },
+        {
+          "ticker": "CRM",
+          "name": "Salesforce",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/CRM/"
+        },
+        {
+          "ticker": "MSFT",
+          "name": "Microsoft",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/MSFT/"
+        },
+        {
+          "ticker": "BIDU",
+          "name": "Baidu",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/BIDU/"
+        },
+        {
+          "ticker": "9988.HK",
+          "name": "阿里巴巴",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/9988.HK/"
+        },
+        {
+          "ticker": "NOW",
+          "name": "ServiceNow",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/NOW/"
+        }
+      ],
+      "sources": [
+        {
+          "title": "2026-06-28 — TMT压力测试：算力过建与利用不足下的云厂商ROI",
+          "date": "2026-07-09",
+          "href": "/investor/reports/archive-f58eeab99ea4/"
+        },
+        {
+          "title": "AI 基础设施分析：高 WACC 与能源价格分化背景下 BTM 现场发电与并网方案的 CapEx 权衡",
+          "date": "2026-07-09",
+          "href": "/investor/reports/archive-75a2a2aab598/"
+        },
+        {
+          "title": "AI 应用 ROI 验证：从 Copilot 订阅到企业级代理 — 2026-07-05",
+          "date": "2026-07-09",
+          "href": "/investor/reports/archive-59908dc48ecd/"
+        },
+        {
+          "title": "AI基础设施Capex风险：先进制程设备国产化滑期与冗余算力采购",
+          "date": "2026-07-09",
+          "href": "/investor/reports/archive-1aff75421621/"
+        }
+      ],
+      "confirmations": [
+        "云厂商 capex 指引是否继续上修",
+        "HBM/CPO/先进封装供给是否缓解",
+        "单集群 ROI 是否覆盖折旧、电力和联网成本"
+      ],
+      "falsifiers": [
+        "风险事件继续高于支持事件，且最新证据没有修复。",
+        "核心监控词热度上升，但可验证订单、价格或现金流没有同步改善。",
+        "同一结论只来自单一来源，无法形成跨来源验证。"
+      ],
+      "tags": [
+        "分歧主线：配对验证",
+        "分歧",
+        "AI 基础设施",
+        "GPU",
+        "利率"
+      ],
+      "rank": 6,
+      "slotType": "priority",
+      "slotLabel": "重点观察"
+    },
+    {
+      "id": "focus:thesis-31f32af77b",
+      "thesisId": "thesis-31f32af77b",
+      "focusScore": 71,
+      "focusTier": {
+        "code": "high",
+        "label": "高关注"
+      },
+      "dissentScore": 61,
+      "dissentLevel": {
+        "code": "medium",
+        "label": "有分歧"
+      },
+      "selectionReasons": [
+        "近期证据更新",
+        "跨分析师覆盖",
+        "保留高分歧反方"
+      ],
+      "thesis": {
+        "id": "thesis-31f32af77b",
+        "title": "中国云与国产算力栈的关键不是模型热度，而是训练/推理订单、服务器交付和生态锁定",
+        "titleEn": "China cloud and local compute stacks depend less on model hype than training/inference orders, server delivery, and e...",
+        "href": "/investor/theses/thesis-31f32af77b/",
+        "direction": "conflicting",
+        "directionLabel": "分歧",
+        "conviction": 65,
+        "actionCode": "watch",
+        "actionLabel": "观察等待",
+        "timeHorizon": "1-2 周验证"
+      },
+      "lane": {
+        "id": "lane_2997650d0638",
+        "title": "中国云/国产算力栈",
+        "titleEn": "China cloud and local compute stack",
+        "href": "/investor/lanes/china-cloud-and-local-compute-stack/",
+        "adviceStatus": "not_available"
+      },
+      "whatChanged": "第二层估值命门：国产AI算力资本开支/订单周期，是多年建设还是前置透支的气穴？—— 工作日 2026-...",
+      "whyItMatters": "先放入观察池，只在证据密度和价格确认同时改善时进入组合。",
+      "evidence": {
+        "supports": 31,
+        "risks": 78,
+        "neutral": 2,
+        "total": 111,
+        "balance": -0.423,
+        "riskShare": 0.716,
+        "eventCount": 111,
+        "analystCount": 11,
+        "firstSeen": "2026-02-25",
+        "lastSeen": "2026-07-09",
+        "ageDays": 1
+      },
+      "odds": {
+        "status": "shadow",
+        "statusLabel": "影子赔率盘",
+        "confidence": 98,
+        "curve": {
+          "code": "back_rich",
+          "label": "后端抬升",
+          "slopePp": 9.2
+        },
+        "horizons": [
+          {
+            "horizon": "5d",
+            "pHouse": 0.392,
+            "pHousePct": 39,
+            "fairDecimalOdds": 2.55,
+            "movePp": -0.4,
+            "calibrated": false
+          },
+          {
+            "horizon": "20d",
+            "pHouse": 0.446,
+            "pHousePct": 45,
+            "fairDecimalOdds": 2.24,
+            "movePp": -0.6,
+            "calibrated": false
+          },
+          {
+            "horizon": "60d",
+            "pHouse": 0.484,
+            "pHousePct": 48,
+            "fairDecimalOdds": 2.06,
+            "movePp": -0.1,
+            "calibrated": false
+          }
+        ],
+        "note": "证据驱动、未校准的影子赔率，不是市场隐含概率。"
+      },
+      "activity": [
+        {
+          "date": "2026-06-23",
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-06-24",
+          "supports": 0,
+          "risks": 2,
+          "neutral": 0,
+          "events": 2
+        },
+        {
+          "date": "2026-06-25",
+          "supports": 0,
+          "risks": 2,
+          "neutral": 0,
+          "events": 2
+        },
+        {
+          "date": "2026-06-29",
+          "supports": 2,
+          "risks": 1,
+          "neutral": 0,
+          "events": 3
+        },
+        {
+          "date": "2026-06-30",
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-07-01",
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-07-02",
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-07-03",
+          "supports": 1,
+          "risks": 1,
+          "neutral": 0,
+          "events": 2
+        },
+        {
+          "date": "2026-07-04",
+          "supports": 0,
+          "risks": 3,
+          "neutral": 0,
+          "events": 3
+        },
+        {
+          "date": "2026-07-06",
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-07-08",
+          "supports": 0,
+          "risks": 3,
+          "neutral": 0,
+          "events": 3
+        },
+        {
+          "date": "2026-07-09",
+          "supports": 0,
+          "risks": 2,
+          "neutral": 0,
+          "events": 2
+        }
+      ],
+      "stocks": [
+        {
+          "ticker": "688256.SH",
+          "name": "寒武纪",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/688256.SH/"
+        },
+        {
+          "ticker": "688041.SH",
+          "name": "海光信息",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/688041.SH/"
+        },
+        {
+          "ticker": "300308.SZ",
+          "name": "中际旭创",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/300308.SZ/"
+        },
+        {
+          "ticker": "601138.SH",
+          "name": "工业富联",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/601138.SH/"
+        },
+        {
+          "ticker": "0981.HK",
+          "name": "中芯国际",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/0981.HK/"
+        },
+        {
+          "ticker": "688981.SH",
+          "name": "中芯国际",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/688981.SH/"
+        }
+      ],
+      "sources": [
+        {
+          "title": "2026-07-02 A股策略：城投智算信用重定价与电子 / AI基础设施应收账款风险",
+          "date": "2026-07-09",
+          "href": "/investor/reports/archive-d9bab6a065b1/"
+        },
+        {
+          "title": "2026-07-03 — 智算违约冲击压力测试：服务器厂商账期 vs. 芯片流片节奏再定时",
+          "date": "2026-07-09",
+          "href": "/investor/reports/archive-927cbc506022/"
+        },
+        {
+          "title": "AI基础设施分析师专题研究报告：电力硬约束下长三角与粤港澳算力枢纽选址的OPEX敏感度与投产延期压...",
+          "date": "2026-07-09",
+          "href": "/investor/reports/archive-ce02178bf7d3/"
+        },
+        {
+          "title": "AI算力与电网瓶颈：如何同时定价芯片盈利弹性与并网硬约束？",
+          "date": "2026-07-09",
+          "href": "/investor/reports/archive-4c6a0c2b9bcb/"
+        }
+      ],
+      "confirmations": [
+        "云厂商 capex 指引是否继续上修",
+        "HBM/CPO/先进封装供给是否缓解",
+        "单集群 ROI 是否覆盖折旧、电力和联网成本"
+      ],
+      "falsifiers": [
+        "风险事件继续高于支持事件，且最新证据没有修复。",
+        "核心监控词热度上升，但可验证订单、价格或现金流没有同步改善。",
+        "同一结论只来自单一来源，无法形成跨来源验证。"
+      ],
+      "tags": [
+        "观察等待",
+        "分歧",
+        "AI 基础设施",
+        "ASIC",
+        "HBM"
+      ],
+      "rank": 7,
+      "slotType": "priority",
+      "slotLabel": "重点观察"
+    },
+    {
+      "id": "focus:thesis-7f0a75c5f6",
+      "thesisId": "thesis-7f0a75c5f6",
+      "focusScore": 70,
+      "focusTier": {
+        "code": "high",
+        "label": "高关注"
+      },
+      "dissentScore": 57,
+      "dissentLevel": {
+        "code": "medium",
+        "label": "有分歧"
+      },
+      "selectionReasons": [
+        "近期证据更新",
+        "跨分析师覆盖"
+      ],
+      "thesis": {
+        "id": "thesis-7f0a75c5f6",
+        "title": "数据中心地产、液冷与水资源正在决定 AI 容量的区域迁移",
+        "titleEn": "Data-center real estate, liquid cooling, and water resources are deciding regional migration of AI capacity",
+        "href": "/investor/theses/thesis-7f0a75c5f6/",
+        "direction": "conflicting",
+        "directionLabel": "分歧",
+        "conviction": 57,
+        "actionCode": "watch",
+        "actionLabel": "观察等待",
+        "timeHorizon": "1-2 周验证"
+      },
+      "lane": {
+        "id": "lane_0679894fe06b",
+        "title": "数据中心地产/液冷",
+        "titleEn": "Data-center real estate and cooling",
+        "href": "/investor/lanes/data-center-real-estate-and-cooling/",
+        "adviceStatus": "not_available"
+      },
+      "whatChanged": "A股硬科技：从拥挤的AI芯片重配至订单可验证的电力设备、储能与液冷改造链",
+      "whyItMatters": "先放入观察池，只在证据密度和价格确认同时改善时进入组合。",
+      "evidence": {
+        "supports": 28,
+        "risks": 84,
+        "neutral": 4,
+        "total": 116,
+        "balance": -0.483,
+        "riskShare": 0.75,
+        "eventCount": 116,
+        "analystCount": 8,
+        "firstSeen": "2026-05-02",
+        "lastSeen": "2026-07-10",
+        "ageDays": 0
+      },
+      "odds": {
+        "status": "shadow",
+        "statusLabel": "影子赔率盘",
+        "confidence": 98,
+        "curve": {
+          "code": "mild_front_rich",
+          "label": "温和前倾",
+          "slopePp": -3.3
+        },
+        "horizons": [
+          {
+            "horizon": "5d",
+            "pHouse": 0.494,
+            "pHousePct": 49,
+            "fairDecimalOdds": 2.02,
+            "movePp": 2.8,
+            "calibrated": false
+          },
+          {
+            "horizon": "20d",
+            "pHouse": 0.441,
+            "pHousePct": 44,
+            "fairDecimalOdds": 2.27,
+            "movePp": 0,
+            "calibrated": false
+          },
+          {
+            "horizon": "60d",
+            "pHouse": 0.461,
+            "pHousePct": 46,
+            "fairDecimalOdds": 2.17,
+            "movePp": 0.1,
+            "calibrated": false
+          }
+        ],
+        "note": "证据驱动、未校准的影子赔率，不是市场隐含概率。"
+      },
+      "activity": [
+        {
+          "date": "2026-06-28",
+          "supports": 0,
+          "risks": 9,
+          "neutral": 0,
+          "events": 9
+        },
+        {
+          "date": "2026-06-29",
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-06-30",
+          "supports": 1,
+          "risks": 0,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-07-01",
+          "supports": 0,
+          "risks": 2,
+          "neutral": 0,
+          "events": 2
+        },
+        {
+          "date": "2026-07-02",
+          "supports": 0,
+          "risks": 2,
+          "neutral": 0,
+          "events": 2
+        },
+        {
+          "date": "2026-07-03",
+          "supports": 0,
+          "risks": 2,
+          "neutral": 0,
+          "events": 2
+        },
+        {
+          "date": "2026-07-04",
+          "supports": 0,
+          "risks": 2,
+          "neutral": 0,
+          "events": 2
+        },
+        {
+          "date": "2026-07-05",
+          "supports": 2,
+          "risks": 0,
+          "neutral": 0,
+          "events": 2
+        },
+        {
+          "date": "2026-07-06",
+          "supports": 3,
+          "risks": 4,
+          "neutral": 0,
+          "events": 7
+        },
+        {
+          "date": "2026-07-08",
+          "supports": 0,
+          "risks": 3,
+          "neutral": 0,
+          "events": 3
+        },
+        {
+          "date": "2026-07-09",
+          "supports": 1,
+          "risks": 1,
+          "neutral": 0,
+          "events": 2
+        },
+        {
+          "date": "2026-07-10",
+          "supports": 1,
+          "risks": 0,
+          "neutral": 0,
+          "events": 1
+        }
+      ],
+      "stocks": [
+        {
+          "ticker": "VRT",
+          "name": "Vertiv",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/VRT/"
+        },
+        {
+          "ticker": "NVDA",
+          "name": "NVIDIA",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/NVDA/"
+        },
+        {
+          "ticker": "ETN",
+          "name": "Eaton",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/ETN/"
+        },
+        {
+          "ticker": "META",
+          "name": "Meta Platforms",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/META/"
+        },
+        {
+          "ticker": "GEV",
+          "name": "GE Vernova",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/GEV/"
+        },
+        {
+          "ticker": "MSFT",
+          "name": "Microsoft",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/MSFT/"
+        }
+      ],
+      "sources": [
+        {
+          "title": "2026-07-02 电网扩容 vs. AI电力缺口——电网与电力设备供应链真能对冲吗？",
+          "date": "2026-07-10",
+          "href": "/investor/reports/archive-e9b75a3349dc/"
+        },
+        {
+          "title": "2026-07-05 策略综合：上市 AI 基础设施的 time-to-power 溢价与折价纪律",
+          "date": "2026-07-10",
+          "href": "/investor/reports/archive-a2c775288142/"
+        },
+        {
+          "title": "2026-07-06 材料行业研究记录：变压器原材料价格敏感性与液冷氟化液国产化弹性评估",
+          "date": "2026-07-10",
+          "href": "/investor/reports/archive-8c752b43ba6f/"
+        },
+        {
+          "title": "2026-07-09 - AI园区季度通电、液冷与GPU利用率兑现报告 (2027-2028)",
+          "date": "2026-07-10",
+          "href": "/investor/reports/archive-761a07f77bac/"
+        }
+      ],
+      "confirmations": [
+        "云厂商 capex 指引是否继续上修",
+        "HBM/CPO/先进封装供给是否缓解",
+        "单集群 ROI 是否覆盖折旧、电力和联网成本"
+      ],
+      "falsifiers": [
+        "风险事件继续高于支持事件，且最新证据没有修复。",
+        "核心监控词热度上升，但可验证订单、价格或现金流没有同步改善。",
+        "同一结论只来自单一来源，无法形成跨来源验证。"
+      ],
+      "tags": [
+        "观察等待",
+        "分歧",
+        "AI 基础设施",
+        "GPU",
+        "HBM"
+      ],
+      "rank": 8,
+      "slotType": "priority",
+      "slotLabel": "重点观察"
+    },
+    {
+      "id": "focus:thesis-7a6599a3f5",
+      "thesisId": "thesis-7a6599a3f5",
+      "focusScore": 70,
+      "focusTier": {
+        "code": "high",
+        "label": "高关注"
+      },
+      "dissentScore": 68,
+      "dissentLevel": {
+        "code": "medium",
+        "label": "有分歧"
+      },
+      "selectionReasons": [
+        "近期证据更新",
+        "跨分析师覆盖",
+        "保留高分歧反方"
+      ],
+      "thesis": {
+        "id": "thesis-7a6599a3f5",
+        "title": "新一代信息技术国产替代要从信创叙事进入算力、软件与安全订单验证",
+        "titleEn": "Domestic IT substitution must move from policy narrative to compute, software, and security order proof",
+        "href": "/investor/theses/thesis-7a6599a3f5/",
+        "direction": "conflicting",
+        "directionLabel": "分歧",
+        "conviction": 65,
+        "actionCode": "watch",
+        "actionLabel": "观察等待",
+        "timeHorizon": "1-2 周验证"
+      },
+      "lane": {
+        "id": "lane_e4f90acbf804",
+        "title": "信创/国产 IT 栈",
+        "titleEn": "Domestic IT substitution stack",
+        "href": "/investor/lanes/domestic-it-substitution-stack/",
+        "adviceStatus": "not_available"
+      },
+      "whatChanged": "前序研究研究报告 — 2026-07-10",
+      "whyItMatters": "先放入观察池，只在证据密度和价格确认同时改善时进入组合。",
+      "evidence": {
+        "supports": 39,
+        "risks": 73,
+        "neutral": 3,
+        "total": 115,
+        "balance": -0.296,
+        "riskShare": 0.652,
+        "eventCount": 115,
+        "analystCount": 7,
+        "firstSeen": "2026-03-12",
+        "lastSeen": "2026-07-10",
+        "ageDays": 0
+      },
+      "odds": {
+        "status": "shadow",
+        "statusLabel": "影子赔率盘",
+        "confidence": 96,
+        "curve": {
+          "code": "mild_back_rich",
+          "label": "温和后倾",
+          "slopePp": 5.3
+        },
+        "horizons": [
+          {
+            "horizon": "5d",
+            "pHouse": 0.445,
+            "pHousePct": 44,
+            "fairDecimalOdds": 2.25,
+            "movePp": 0,
+            "calibrated": false
+          },
+          {
+            "horizon": "20d",
+            "pHouse": 0.496,
+            "pHousePct": 50,
+            "fairDecimalOdds": 2.02,
+            "movePp": 0.3,
+            "calibrated": false
+          },
+          {
+            "horizon": "60d",
+            "pHouse": 0.498,
+            "pHousePct": 50,
+            "fairDecimalOdds": 2.01,
+            "movePp": 0.1,
+            "calibrated": false
+          }
+        ],
+        "note": "证据驱动、未校准的影子赔率，不是市场隐含概率。"
+      },
+      "activity": [
+        {
+          "date": "2026-06-29",
+          "supports": 1,
+          "risks": 0,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-06-30",
+          "supports": 0,
+          "risks": 4,
+          "neutral": 0,
+          "events": 4
+        },
+        {
+          "date": "2026-07-01",
+          "supports": 1,
+          "risks": 0,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-07-02",
+          "supports": 1,
+          "risks": 3,
+          "neutral": 0,
+          "events": 4
+        },
+        {
+          "date": "2026-07-03",
+          "supports": 2,
+          "risks": 1,
+          "neutral": 0,
+          "events": 3
+        },
+        {
+          "date": "2026-07-04",
+          "supports": 0,
+          "risks": 2,
+          "neutral": 0,
+          "events": 2
+        },
+        {
+          "date": "2026-07-05",
+          "supports": 1,
+          "risks": 0,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-07-06",
+          "supports": 1,
+          "risks": 2,
+          "neutral": 0,
+          "events": 3
+        },
+        {
+          "date": "2026-07-07",
+          "supports": 0,
+          "risks": 2,
+          "neutral": 0,
+          "events": 2
+        },
+        {
+          "date": "2026-07-08",
+          "supports": 1,
+          "risks": 2,
+          "neutral": 0,
+          "events": 3
+        },
+        {
+          "date": "2026-07-09",
+          "supports": 0,
+          "risks": 2,
+          "neutral": 0,
+          "events": 2
+        },
+        {
+          "date": "2026-07-10",
+          "supports": 1,
+          "risks": 0,
+          "neutral": 0,
+          "events": 1
+        }
+      ],
+      "stocks": [
+        {
+          "ticker": "688256.SH",
+          "name": "寒武纪",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/688256.SH/"
+        },
+        {
+          "ticker": "688041.SH",
+          "name": "海光信息",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/688041.SH/"
+        },
+        {
+          "ticker": "688981.SH",
+          "name": "中芯国际",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/688981.SH/"
+        },
+        {
+          "ticker": "0981.HK",
+          "name": "中芯国际",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/0981.HK/"
+        },
+        {
+          "ticker": "300308.SZ",
+          "name": "中际旭创",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/300308.SZ/"
+        },
+        {
+          "ticker": "NVDA",
+          "name": "NVIDIA",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/NVDA/"
+        }
+      ],
+      "sources": [
+        {
+          "title": "2026-07-03 — 地方财政与债务压力对算力补贴持续性及国内 GPU 订单簿的边际冲击",
+          "date": "2026-07-10",
+          "href": "/investor/reports/archive-ef72c5c942c1/"
+        },
+        {
+          "title": "2026-07-03 — 将算力链压力图谱转化为 A股持仓：做多稀缺咽喉、做空重营运资本集成商",
+          "date": "2026-07-10",
+          "href": "/investor/reports/archive-92369070bdb0/"
+        },
+        {
+          "title": "2026-07-03 — 智算违约冲击压力测试：服务器厂商账期 vs. 芯片流片节奏再定时",
+          "date": "2026-07-10",
+          "href": "/investor/reports/archive-927cbc506022/"
+        },
+        {
+          "title": "2026-07-06 半导体压力测试：科创50触及1,516点会否打断AI资本开支与国产替代？",
+          "date": "2026-07-10",
+          "href": "/investor/reports/archive-16db12a99137/"
+        }
+      ],
+      "confirmations": [
+        "云厂商 capex 指引是否继续上修",
+        "HBM/CPO/先进封装供给是否缓解",
+        "单集群 ROI 是否覆盖折旧、电力和联网成本"
+      ],
+      "falsifiers": [
+        "风险事件继续高于支持事件，且最新证据没有修复。",
+        "核心监控词热度上升，但可验证订单、价格或现金流没有同步改善。",
+        "同一结论只来自单一来源，无法形成跨来源验证。"
+      ],
+      "tags": [
+        "观察等待",
+        "分歧",
+        "AI 基础设施",
+        "GPU",
+        "ASIC"
+      ],
+      "rank": 9,
+      "slotType": "priority",
+      "slotLabel": "重点观察"
+    },
+    {
+      "id": "focus:thesis-3d421524cd",
+      "thesisId": "thesis-3d421524cd",
+      "focusScore": 70,
+      "focusTier": {
+        "code": "high",
+        "label": "高关注"
+      },
+      "dissentScore": 61,
+      "dissentLevel": {
+        "code": "medium",
+        "label": "有分歧"
+      },
+      "selectionReasons": [
+        "近期证据更新",
+        "跨分析师覆盖",
+        "保留高分歧反方"
+      ],
+      "thesis": {
+        "id": "thesis-3d421524cd",
+        "title": "油价地缘底线决定再通胀与降息交易的安全边际",
+        "titleEn": "The geopolitical oil floor defines the margin of safety for disinflation and rate-cut trades",
+        "href": "/investor/theses/thesis-3d421524cd/",
+        "direction": "conflicting",
+        "directionLabel": "分歧",
+        "conviction": 66,
+        "actionCode": "watch",
+        "actionLabel": "观察等待",
+        "timeHorizon": "1-2 周验证"
+      },
+      "lane": {
+        "id": "lane_93300d58763e",
+        "title": "油气/地缘通胀",
+        "titleEn": "Oil, gas, and geopolitical inflation",
+        "href": "/investor/lanes/oil-gas-and-geopolitical-inflation/",
+        "adviceStatus": "available"
+      },
+      "whatChanged": "全球宏观专题报告：通胀路径验证、美联储反应函数与权益估值压力测试",
+      "whyItMatters": "地缘风险提供油价尾部，但持续收益取决于库存、资本纪律和上游现金流，而非单日冲击。",
+      "evidence": {
+        "supports": 33,
+        "risks": 84,
+        "neutral": 2,
+        "total": 119,
+        "balance": -0.429,
+        "riskShare": 0.718,
+        "eventCount": 119,
+        "analystCount": 9,
+        "firstSeen": "2026-05-02",
+        "lastSeen": "2026-07-10",
+        "ageDays": 0
+      },
+      "odds": {
+        "status": "shadow",
+        "statusLabel": "影子赔率盘",
+        "confidence": 98,
+        "curve": {
+          "code": "mild_back_rich",
+          "label": "温和后倾",
+          "slopePp": 5.1
+        },
+        "horizons": [
+          {
+            "horizon": "5d",
+            "pHouse": 0.435,
+            "pHousePct": 44,
+            "fairDecimalOdds": 2.3,
+            "movePp": -1.5,
+            "calibrated": false
+          },
+          {
+            "horizon": "20d",
+            "pHouse": 0.464,
+            "pHousePct": 46,
+            "fairDecimalOdds": 2.16,
+            "movePp": -0.2,
+            "calibrated": false
+          },
+          {
+            "horizon": "60d",
+            "pHouse": 0.486,
+            "pHousePct": 49,
+            "fairDecimalOdds": 2.06,
+            "movePp": 0,
+            "calibrated": false
+          }
+        ],
+        "note": "证据驱动、未校准的影子赔率，不是市场隐含概率。"
+      },
+      "activity": [
+        {
+          "date": "2026-06-27",
+          "supports": 0,
+          "risks": 7,
+          "neutral": 0,
+          "events": 7
+        },
+        {
+          "date": "2026-06-28",
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-06-29",
+          "supports": 1,
+          "risks": 1,
+          "neutral": 0,
+          "events": 2
+        },
+        {
+          "date": "2026-06-30",
+          "supports": 1,
+          "risks": 1,
+          "neutral": 0,
+          "events": 2
+        },
+        {
+          "date": "2026-07-02",
+          "supports": 2,
+          "risks": 0,
+          "neutral": 0,
+          "events": 2
+        },
+        {
+          "date": "2026-07-03",
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-07-04",
+          "supports": 1,
+          "risks": 1,
+          "neutral": 0,
+          "events": 2
+        },
+        {
+          "date": "2026-07-06",
+          "supports": 1,
+          "risks": 1,
+          "neutral": 0,
+          "events": 2
+        },
+        {
+          "date": "2026-07-07",
+          "supports": 1,
+          "risks": 0,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-07-08",
+          "supports": 1,
+          "risks": 3,
+          "neutral": 0,
+          "events": 4
+        },
+        {
+          "date": "2026-07-09",
+          "supports": 0,
+          "risks": 5,
+          "neutral": 1,
+          "events": 6
+        },
+        {
+          "date": "2026-07-10",
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "events": 1
+        }
+      ],
+      "stocks": [
+        {
+          "ticker": "CVX",
+          "name": "Chevron",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/CVX/"
+        },
+        {
+          "ticker": "XOM",
+          "name": "Exxon Mobil",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/XOM/"
+        },
+        {
+          "ticker": "0883.HK",
+          "name": "中国海洋石油",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/0883.HK/"
+        },
+        {
+          "ticker": "0857.HK",
+          "name": "中国石油股份",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/0857.HK/"
+        },
+        {
+          "ticker": "600938.SH",
+          "name": "中国海油",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/600938.SH/"
+        },
+        {
+          "ticker": "XLE",
+          "name": "Energy Select Sector SPDR",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/XLE/"
+        }
+      ],
+      "sources": [
+        {
+          "title": "2026-07-06 首席策略师：低油价、薄库存、2026不降息下的跨资产不对称定仓",
+          "date": "2026-07-10",
+          "href": "/investor/reports/archive-18b6cb414cca/"
+        },
+        {
+          "title": "2026-07-09 美联储反应函数：look through 油价，还是 9 月兑现加息？",
+          "date": "2026-07-10",
+          "href": "/investor/reports/archive-1bf4c7d01bd5/"
+        },
+        {
+          "title": "2026年7月3日 全球原油市场监测报告：地缘溢价彻底消退与霍尔木兹海峡复航，油价触及四个月新低",
+          "date": "2026-07-10",
+          "href": "/investor/reports/archive-ddeb23862c25/"
+        },
+        {
+          "title": "2883.HK 公司概况",
+          "date": "2026-07-10",
+          "href": "/investor/reports/archive-35c211a2cff4/"
+        }
+      ],
+      "confirmations": [
+        "CPI/PCE 与油价是否重新推高实际利率",
+        "美元、人民币和日元套息交易是否发生拥挤反转",
+        "长端利率是否压制权益估值扩张"
+      ],
+      "falsifiers": [
+        "风险事件继续高于支持事件，且最新证据没有修复。",
+        "核心监控词热度上升，但可验证订单、价格或现金流没有同步改善。",
+        "同一结论只来自单一来源，无法形成跨来源验证。"
+      ],
+      "tags": [
+        "观察等待",
+        "分歧",
+        "油价",
+        "Brent",
+        "WTI"
+      ],
+      "rank": 10,
+      "slotType": "priority",
+      "slotLabel": "重点观察"
+    },
+    {
+      "id": "focus:thesis-7b2fce37a7",
+      "thesisId": "thesis-7b2fce37a7",
+      "focusScore": 58,
+      "focusTier": {
+        "code": "watch",
+        "label": "持续观察"
+      },
+      "dissentScore": 83,
+      "dissentLevel": {
+        "code": "high",
+        "label": "高分歧"
+      },
+      "selectionReasons": [
+        "近期证据更新",
+        "保留高分歧反方"
+      ],
+      "thesis": {
+        "id": "thesis-7b2fce37a7",
+        "title": "长江电力资金大流出与药明/恒瑞大涨，是否标志着A股向成长风格的系统性切换已经确立？中盘红利如伟星股份能否承接传统红利的溢出资金？",
+        "titleEn": "Practical research topic: 长江电力资金大流出与药明/恒瑞大涨，是否标志着A股向成长风格的系统性切换已经确立？中盘红利如伟星股份能否承接传统红利的溢出资金？",
+        "href": "/investor/theses/thesis-7b2fce37a7/",
+        "direction": "stable",
+        "directionLabel": "稳定",
+        "conviction": 66,
+        "actionCode": "deep_research_candidate",
+        "actionLabel": "深研候选：先建观察仓",
+        "timeHorizon": "1-4 周"
+      },
+      "lane": {
+        "id": "lane_22c1ed929e2e",
+        "title": "公用事业/电网信用",
+        "titleEn": "Utilities, grid rate base, and credit",
+        "href": "/investor/lanes/utilities-grid-rate-base-and-credit/",
+        "adviceStatus": "available"
+      },
+      "whatChanged": "2026-07-10 策略卡：公用事业防守质量分化后，重设红利低波与电力仓位上限",
+      "whyItMatters": "公用事业正从单纯红利逻辑转向容量费、电网扩容和信用回收，但高股息拥挤限制整体上行空间。",
+      "evidence": {
+        "supports": 39,
+        "risks": 36,
+        "neutral": 0,
+        "total": 75,
+        "balance": 0.04,
+        "riskShare": 0.48,
+        "eventCount": 75,
+        "analystCount": 1,
+        "firstSeen": "2026-06-03",
+        "lastSeen": "2026-07-10",
+        "ageDays": 0
+      },
+      "odds": {
+        "status": "shadow",
+        "statusLabel": "影子赔率盘",
+        "confidence": 71,
+        "curve": {
+          "code": "mild_front_rich",
+          "label": "温和前倾",
+          "slopePp": -2
+        },
+        "horizons": [
+          {
+            "horizon": "5d",
+            "pHouse": 0.55,
+            "pHousePct": 55,
+            "fairDecimalOdds": 1.82,
+            "movePp": -0.5,
+            "calibrated": false
+          },
+          {
+            "horizon": "20d",
+            "pHouse": 0.524,
+            "pHousePct": 52,
+            "fairDecimalOdds": 1.91,
+            "movePp": -0.2,
+            "calibrated": false
+          },
+          {
+            "horizon": "60d",
+            "pHouse": 0.53,
+            "pHousePct": 53,
+            "fairDecimalOdds": 1.89,
+            "movePp": 0,
+            "calibrated": false
+          }
+        ],
+        "note": "证据驱动、未校准的影子赔率，不是市场隐含概率。"
+      },
+      "activity": [
+        {
+          "date": "2026-06-28",
+          "supports": 1,
+          "risks": 0,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-06-29",
+          "supports": 1,
+          "risks": 2,
+          "neutral": 0,
+          "events": 3
+        },
+        {
+          "date": "2026-06-30",
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-07-02",
+          "supports": 4,
+          "risks": 2,
+          "neutral": 0,
+          "events": 6
+        },
+        {
+          "date": "2026-07-03",
+          "supports": 2,
+          "risks": 2,
+          "neutral": 0,
+          "events": 4
+        },
+        {
+          "date": "2026-07-04",
+          "supports": 1,
+          "risks": 6,
+          "neutral": 0,
+          "events": 7
+        },
+        {
+          "date": "2026-07-05",
+          "supports": 3,
+          "risks": 1,
+          "neutral": 0,
+          "events": 4
+        },
+        {
+          "date": "2026-07-06",
+          "supports": 4,
+          "risks": 3,
+          "neutral": 0,
+          "events": 7
+        },
+        {
+          "date": "2026-07-07",
+          "supports": 7,
+          "risks": 1,
+          "neutral": 0,
+          "events": 8
+        },
+        {
+          "date": "2026-07-08",
+          "supports": 5,
+          "risks": 5,
+          "neutral": 0,
+          "events": 10
+        },
+        {
+          "date": "2026-07-09",
+          "supports": 8,
+          "risks": 3,
+          "neutral": 0,
+          "events": 11
+        },
+        {
+          "date": "2026-07-10",
+          "supports": 1,
+          "risks": 1,
+          "neutral": 0,
+          "events": 2
+        }
+      ],
+      "stocks": [
+        {
+          "ticker": "600900.SH",
+          "name": "长江电力",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/600900.SH/"
+        },
+        {
+          "ticker": "600905.SH",
+          "name": "三峡能源",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/600905.SH/"
+        },
+        {
+          "ticker": "DUK",
+          "name": "Duke Energy",
+          "role": "proxy",
+          "bucket": "proxy",
+          "href": "/investor/stocks/DUK/"
+        }
+      ],
+      "sources": [
+        {
+          "title": "2026-07-07 A股策略：制造业设备更新与红利防御的再平衡",
+          "date": "2026-07-10",
+          "href": "/investor/reports/archive-3b320df9578f/"
+        },
+        {
+          "title": "2026-07-08 A股红利基荷再入场的宏观时钟",
+          "date": "2026-07-10",
+          "href": "/investor/reports/archive-8a244dce9fa7/"
+        },
+        {
+          "title": "2026-07-09 A股主线向电网设备与物理红利的风格切换中的指数重估与隐含波动率建仓时点",
+          "date": "2026-07-10",
+          "href": "/investor/reports/archive-24b64a5f237f/"
+        },
+        {
+          "title": "2026-07-09 A股策略：电力瓶颈下科技-红利杠铃的再平衡",
+          "date": "2026-07-10",
+          "href": "/investor/reports/archive-19184e44168f/"
+        }
+      ],
+      "confirmations": [
+        "融资余额、ETF 申赎和北向资金是否同向",
+        "被动调仓窗口是否被主动资金提前交易",
+        "订单、盈利和估值是否同步改善"
+      ],
+      "falsifiers": [
+        "支持证据停止更新，价格或资金面先于基本面走弱。",
+        "核心监控词热度上升，但可验证订单、价格或现金流没有同步改善。",
+        "同一结论只来自单一来源，无法形成跨来源验证。"
+      ],
+      "tags": [
+        "深研候选：先建观察仓",
+        "稳定",
+        "电力",
+        "红利",
+        "A股"
+      ],
+      "rank": 11,
+      "slotType": "dissent_safeguard",
+      "slotLabel": "反方保留"
+    },
+    {
+      "id": "focus:thesis-134347aa13",
+      "thesisId": "thesis-134347aa13",
+      "focusScore": 57,
+      "focusTier": {
+        "code": "watch",
+        "label": "持续观察"
+      },
+      "dissentScore": 80,
+      "dissentLevel": {
+        "code": "high",
+        "label": "高分歧"
+      },
+      "selectionReasons": [
+        "近期证据更新",
+        "保留高分歧反方"
+      ],
+      "thesis": {
+        "id": "thesis-134347aa13",
+        "title": "长江电力等红利拥挤度处于95%历史极值，且股息率利差压缩至历史低点，而在跨境分段生产解禁及创新药商业化兑现下医药板块大涨，这是否标志着A…",
+        "titleEn": "Practical research topic: 长江电力等红利拥挤度处于95%历史极值，且股息率利差压缩至历史低点，而在跨境分段生产解禁及创新药商业化兑现下医药板块大涨，这是否标志着A…",
+        "href": "/investor/theses/thesis-134347aa13/",
+        "direction": "stable",
+        "directionLabel": "稳定",
+        "conviction": 66,
+        "actionCode": "deep_research_candidate",
+        "actionLabel": "深研候选：先建观察仓",
+        "timeHorizon": "1-4 周"
+      },
+      "lane": {
+        "id": "lane_22c1ed929e2e",
+        "title": "公用事业/电网信用",
+        "titleEn": "Utilities, grid rate base, and credit",
+        "href": "/investor/lanes/utilities-grid-rate-base-and-credit/",
+        "adviceStatus": "available"
+      },
+      "whatChanged": "2026-07-10 策略卡：公用事业防守质量分化后，重设红利低波与电力仓位上限",
+      "whyItMatters": "公用事业正从单纯红利逻辑转向容量费、电网扩容和信用回收，但高股息拥挤限制整体上行空间。",
+      "evidence": {
+        "supports": 40,
+        "risks": 35,
+        "neutral": 0,
+        "total": 75,
+        "balance": 0.067,
+        "riskShare": 0.467,
+        "eventCount": 75,
+        "analystCount": 1,
+        "firstSeen": "2026-06-03",
+        "lastSeen": "2026-07-10",
+        "ageDays": 0
+      },
+      "odds": {
+        "status": "shadow",
+        "statusLabel": "影子赔率盘",
+        "confidence": 71,
+        "curve": {
+          "code": "flat",
+          "label": "近似平坦",
+          "slopePp": -1.8
+        },
+        "horizons": [
+          {
+            "horizon": "5d",
+            "pHouse": 0.55,
+            "pHousePct": 55,
+            "fairDecimalOdds": 1.82,
+            "movePp": -0.5,
+            "calibrated": false
+          },
+          {
+            "horizon": "20d",
+            "pHouse": 0.529,
+            "pHousePct": 53,
+            "fairDecimalOdds": 1.89,
+            "movePp": 0,
+            "calibrated": false
+          },
+          {
+            "horizon": "60d",
+            "pHouse": 0.532,
+            "pHousePct": 53,
+            "fairDecimalOdds": 1.88,
+            "movePp": 0,
+            "calibrated": false
+          }
+        ],
+        "note": "证据驱动、未校准的影子赔率，不是市场隐含概率。"
+      },
+      "activity": [
+        {
+          "date": "2026-06-28",
+          "supports": 1,
+          "risks": 0,
+          "neutral": 0,
+          "events": 1
+        },
+        {
+          "date": "2026-06-29",
+          "supports": 1,
+          "risks": 2,
+          "neutral": 0,
+          "events": 3
+        },
+        {
+          "date": "2026-06-30",
+          "supports": 0,
+          "risks": 2,
+          "neutral": 0,
+          "events": 2
+        },
+        {
+          "date": "2026-07-02",
+          "supports": 4,
+          "risks": 2,
+          "neutral": 0,
+          "events": 6
+        },
+        {
+          "date": "2026-07-03",
+          "supports": 2,
+          "risks": 2,
+          "neutral": 0,
+          "events": 4
+        },
+        {
+          "date": "2026-07-04",
+          "supports": 1,
+          "risks": 6,
+          "neutral": 0,
+          "events": 7
+        },
+        {
+          "date": "2026-07-05",
+          "supports": 3,
+          "risks": 1,
+          "neutral": 0,
+          "events": 4
+        },
+        {
+          "date": "2026-07-06",
+          "supports": 4,
+          "risks": 3,
+          "neutral": 0,
+          "events": 7
+        },
+        {
+          "date": "2026-07-07",
+          "supports": 7,
+          "risks": 1,
+          "neutral": 0,
+          "events": 8
+        },
+        {
+          "date": "2026-07-08",
+          "supports": 5,
+          "risks": 5,
+          "neutral": 0,
+          "events": 10
+        },
+        {
+          "date": "2026-07-09",
+          "supports": 8,
+          "risks": 3,
+          "neutral": 0,
+          "events": 11
+        },
+        {
+          "date": "2026-07-10",
+          "supports": 1,
+          "risks": 1,
+          "neutral": 0,
+          "events": 2
+        }
+      ],
+      "stocks": [
+        {
+          "ticker": "600900.SH",
+          "name": "长江电力",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/600900.SH/"
+        },
+        {
+          "ticker": "600905.SH",
+          "name": "三峡能源",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/600905.SH/"
+        },
+        {
+          "ticker": "DUK",
+          "name": "Duke Energy",
+          "role": "proxy",
+          "bucket": "proxy",
+          "href": "/investor/stocks/DUK/"
+        }
+      ],
+      "sources": [
+        {
+          "title": "2026-07-07 A股策略：制造业设备更新与红利防御的再平衡",
+          "date": "2026-07-10",
+          "href": "/investor/reports/archive-3b320df9578f/"
+        },
+        {
+          "title": "2026-07-08 A股红利基荷再入场的宏观时钟",
+          "date": "2026-07-10",
+          "href": "/investor/reports/archive-8a244dce9fa7/"
+        },
+        {
+          "title": "2026-07-09 A股主线向电网设备与物理红利的风格切换中的指数重估与隐含波动率建仓时点",
+          "date": "2026-07-10",
+          "href": "/investor/reports/archive-24b64a5f237f/"
+        },
+        {
+          "title": "2026-07-09 A股策略：电力瓶颈下科技-红利杠铃的再平衡",
+          "date": "2026-07-10",
+          "href": "/investor/reports/archive-19184e44168f/"
+        }
+      ],
+      "confirmations": [
+        "融资余额、ETF 申赎和北向资金是否同向",
+        "被动调仓窗口是否被主动资金提前交易",
+        "订单、盈利和估值是否同步改善"
+      ],
+      "falsifiers": [
+        "支持证据停止更新，价格或资金面先于基本面走弱。",
+        "核心监控词热度上升，但可验证订单、价格或现金流没有同步改善。",
+        "同一结论只来自单一来源，无法形成跨来源验证。"
+      ],
+      "tags": [
+        "深研候选：先建观察仓",
+        "稳定",
+        "电力",
+        "红利",
+        "A股"
+      ],
+      "rank": 12,
+      "slotType": "dissent_safeguard",
+      "slotLabel": "反方保留"
+    }
+  ],
+  "laneSummaries": [
+    {
+      "id": "lane_22c1ed929e2e",
+      "title": "公用事业/电网信用",
+      "titleEn": "Utilities, grid rate base, and credit",
+      "href": "/investor/lanes/utilities-grid-rate-base-and-credit/",
+      "focusItemIds": [
+        "focus:thesis-7b2fce37a7",
+        "focus:thesis-134347aa13"
+      ],
+      "focusCount": 2,
+      "averageFocusScore": 58,
+      "stocks": [
+        {
+          "ticker": "600900.SH",
+          "name": "长江电力",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/600900.SH/"
+        },
+        {
+          "ticker": "600905.SH",
+          "name": "三峡能源",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/600905.SH/"
+        },
+        {
+          "ticker": "DUK",
+          "name": "Duke Energy",
+          "role": "proxy",
+          "bucket": "proxy",
+          "href": "/investor/stocks/DUK/"
+        }
+      ]
+    },
+    {
+      "id": "lane_968dd01cb43f",
+      "title": "A股半导体/两融负 Gamma",
+      "titleEn": "A-share semiconductor margin and negative gamma",
+      "href": "/investor/lanes/a-share-semiconductor-margin-and-negative-gamma/",
+      "focusItemIds": [
+        "focus:thesis-3986819dc0"
+      ],
+      "focusCount": 1,
+      "averageFocusScore": 72,
+      "stocks": [
+        {
+          "ticker": "688981.SH",
+          "name": "中芯国际",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/688981.SH/"
+        },
+        {
+          "ticker": "688256.SH",
+          "name": "寒武纪",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/688256.SH/"
+        },
+        {
+          "ticker": "0981.HK",
+          "name": "中芯国际",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/0981.HK/"
+        },
+        {
+          "ticker": "688041.SH",
+          "name": "海光信息",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/688041.SH/"
+        },
+        {
+          "ticker": "600900.SH",
+          "name": "长江电力",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/600900.SH/"
+        },
+        {
+          "ticker": "588000.SH",
+          "name": "科创50 ETF",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/588000.SH/"
+        }
+      ]
+    },
+    {
+      "id": "lane_bf77fb66551a",
+      "title": "A股红利/硬科技杠铃",
+      "titleEn": "A-share dividend and hard-tech barbell",
+      "href": "/investor/lanes/a-share-dividend-and-hard-tech-barbell/",
+      "focusItemIds": [
+        "focus:thesis-70daf87262"
+      ],
+      "focusCount": 1,
+      "averageFocusScore": 72,
+      "stocks": [
+        {
+          "ticker": "600900.SH",
+          "name": "长江电力",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/600900.SH/"
+        },
+        {
+          "ticker": "601088.SH",
+          "name": "中国神华",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/601088.SH/"
+        },
+        {
+          "ticker": "601398.SH",
+          "name": "工商银行",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/601398.SH/"
+        },
+        {
+          "ticker": "688981.SH",
+          "name": "中芯国际",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/688981.SH/"
+        },
+        {
+          "ticker": "588000.SH",
+          "name": "科创50 ETF",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/588000.SH/"
+        },
+        {
+          "ticker": "600941.SH",
+          "name": "中国移动",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/600941.SH/"
+        }
+      ]
+    },
+    {
+      "id": "lane_6e2dcaab093e",
+      "title": "工业机械/设备更新出海",
+      "titleEn": "Industrial machinery, equipment upgrade, and exports",
+      "href": "/investor/lanes/industrial-machinery-equipment-upgrade-and-exports/",
+      "focusItemIds": [
+        "focus:thesis-bef6966fdd"
+      ],
+      "focusCount": 1,
+      "averageFocusScore": 72,
+      "stocks": [
+        {
+          "ticker": "603338.SH",
+          "name": "浙江鼎力",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/603338.SH/"
+        },
+        {
+          "ticker": "600761.SH",
+          "name": "安徽合力",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/600761.SH/"
+        },
+        {
+          "ticker": "002747.SZ",
+          "name": "埃斯顿",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/002747.SZ/"
+        },
+        {
+          "ticker": "600031.SH",
+          "name": "三一重工",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/600031.SH/"
+        },
+        {
+          "ticker": "300124.SZ",
+          "name": "汇川技术",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/300124.SZ/"
+        },
+        {
+          "ticker": "601882.SH",
+          "name": "601882.SH",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/601882.SH/"
+        }
+      ]
+    },
+    {
+      "id": "lane_c0702fb29e08",
+      "title": "AI 再通胀/利率敏感资产",
+      "titleEn": "AI reflation and rate-sensitive assets",
+      "href": "/investor/lanes/ai-reflation-and-rate-sensitive-assets/",
+      "focusItemIds": [
+        "focus:thesis-075017003b"
+      ],
+      "focusCount": 1,
+      "averageFocusScore": 71,
+      "stocks": [
+        {
+          "ticker": "META",
+          "name": "Meta Platforms",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/META/"
+        },
+        {
+          "ticker": "TLT",
+          "name": "iShares 20+ Year Treasury Bond ETF",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/TLT/"
+        },
+        {
+          "ticker": "MSFT",
+          "name": "Microsoft",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/MSFT/"
+        },
+        {
+          "ticker": "GLD",
+          "name": "SPDR Gold Shares",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/GLD/"
+        },
+        {
+          "ticker": "AMZN",
+          "name": "Amazon",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/AMZN/"
+        },
+        {
+          "ticker": "XLU",
+          "name": "Utilities Select Sector SPDR",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/XLU/"
+        }
+      ]
+    },
+    {
+      "id": "lane_4cc1e74d8e5f",
+      "title": "A股硬科技/科创50",
+      "titleEn": "A-share hard tech and STAR50",
+      "href": "/investor/lanes/a-share-hard-tech-and-star50/",
+      "focusItemIds": [
+        "focus:thesis-603a5f7966"
+      ],
+      "focusCount": 1,
+      "averageFocusScore": 71,
+      "stocks": [
+        {
+          "ticker": "688256.SH",
+          "name": "寒武纪",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/688256.SH/"
+        },
+        {
+          "ticker": "300308.SZ",
+          "name": "中际旭创",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/300308.SZ/"
+        },
+        {
+          "ticker": "688981.SH",
+          "name": "中芯国际",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/688981.SH/"
+        },
+        {
+          "ticker": "688041.SH",
+          "name": "海光信息",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/688041.SH/"
+        },
+        {
+          "ticker": "0981.HK",
+          "name": "中芯国际",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/0981.HK/"
+        },
+        {
+          "ticker": "600900.SH",
+          "name": "长江电力",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/600900.SH/"
+        }
+      ]
+    },
+    {
+      "id": "lane_2997650d0638",
+      "title": "中国云/国产算力栈",
+      "titleEn": "China cloud and local compute stack",
+      "href": "/investor/lanes/china-cloud-and-local-compute-stack/",
+      "focusItemIds": [
+        "focus:thesis-31f32af77b"
+      ],
+      "focusCount": 1,
+      "averageFocusScore": 71,
+      "stocks": [
+        {
+          "ticker": "688256.SH",
+          "name": "寒武纪",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/688256.SH/"
+        },
+        {
+          "ticker": "688041.SH",
+          "name": "海光信息",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/688041.SH/"
+        },
+        {
+          "ticker": "300308.SZ",
+          "name": "中际旭创",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/300308.SZ/"
+        },
+        {
+          "ticker": "601138.SH",
+          "name": "工业富联",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/601138.SH/"
+        },
+        {
+          "ticker": "0981.HK",
+          "name": "中芯国际",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/0981.HK/"
+        },
+        {
+          "ticker": "688981.SH",
+          "name": "中芯国际",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/688981.SH/"
+        }
+      ]
+    },
+    {
+      "id": "lane_13710af7e06d",
+      "title": "低价模型/AI 软件利润池",
+      "titleEn": "Low-cost models and AI software profit pools",
+      "href": "/investor/lanes/low-cost-models-and-ai-software-profit-pools/",
+      "focusItemIds": [
+        "focus:thesis-ab1fb6a453"
+      ],
+      "focusCount": 1,
+      "averageFocusScore": 71,
+      "stocks": [
+        {
+          "ticker": "BABA",
+          "name": "Alibaba",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/BABA/"
+        },
+        {
+          "ticker": "CRM",
+          "name": "Salesforce",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/CRM/"
+        },
+        {
+          "ticker": "MSFT",
+          "name": "Microsoft",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/MSFT/"
+        },
+        {
+          "ticker": "BIDU",
+          "name": "Baidu",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/BIDU/"
+        },
+        {
+          "ticker": "9988.HK",
+          "name": "阿里巴巴",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/9988.HK/"
+        },
+        {
+          "ticker": "NOW",
+          "name": "ServiceNow",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/NOW/"
+        }
+      ]
+    },
+    {
+      "id": "lane_e4f90acbf804",
+      "title": "信创/国产 IT 栈",
+      "titleEn": "Domestic IT substitution stack",
+      "href": "/investor/lanes/domestic-it-substitution-stack/",
+      "focusItemIds": [
+        "focus:thesis-7a6599a3f5"
+      ],
+      "focusCount": 1,
+      "averageFocusScore": 70,
+      "stocks": [
+        {
+          "ticker": "688256.SH",
+          "name": "寒武纪",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/688256.SH/"
+        },
+        {
+          "ticker": "688041.SH",
+          "name": "海光信息",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/688041.SH/"
+        },
+        {
+          "ticker": "688981.SH",
+          "name": "中芯国际",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/688981.SH/"
+        },
+        {
+          "ticker": "0981.HK",
+          "name": "中芯国际",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/0981.HK/"
+        },
+        {
+          "ticker": "300308.SZ",
+          "name": "中际旭创",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/300308.SZ/"
+        },
+        {
+          "ticker": "NVDA",
+          "name": "NVIDIA",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/NVDA/"
+        }
+      ]
+    },
+    {
+      "id": "lane_0679894fe06b",
+      "title": "数据中心地产/液冷",
+      "titleEn": "Data-center real estate and cooling",
+      "href": "/investor/lanes/data-center-real-estate-and-cooling/",
+      "focusItemIds": [
+        "focus:thesis-7f0a75c5f6"
+      ],
+      "focusCount": 1,
+      "averageFocusScore": 70,
+      "stocks": [
+        {
+          "ticker": "VRT",
+          "name": "Vertiv",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/VRT/"
+        },
+        {
+          "ticker": "NVDA",
+          "name": "NVIDIA",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/NVDA/"
+        },
+        {
+          "ticker": "ETN",
+          "name": "Eaton",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/ETN/"
+        },
+        {
+          "ticker": "META",
+          "name": "Meta Platforms",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/META/"
+        },
+        {
+          "ticker": "GEV",
+          "name": "GE Vernova",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/GEV/"
+        },
+        {
+          "ticker": "MSFT",
+          "name": "Microsoft",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/MSFT/"
+        }
+      ]
+    },
+    {
+      "id": "lane_93300d58763e",
+      "title": "油气/地缘通胀",
+      "titleEn": "Oil, gas, and geopolitical inflation",
+      "href": "/investor/lanes/oil-gas-and-geopolitical-inflation/",
+      "focusItemIds": [
+        "focus:thesis-3d421524cd"
+      ],
+      "focusCount": 1,
+      "averageFocusScore": 70,
+      "stocks": [
+        {
+          "ticker": "CVX",
+          "name": "Chevron",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/CVX/"
+        },
+        {
+          "ticker": "XOM",
+          "name": "Exxon Mobil",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/XOM/"
+        },
+        {
+          "ticker": "0883.HK",
+          "name": "中国海洋石油",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/0883.HK/"
+        },
+        {
+          "ticker": "0857.HK",
+          "name": "中国石油股份",
+          "role": "core",
+          "bucket": "core",
+          "href": "/investor/stocks/0857.HK/"
+        },
+        {
+          "ticker": "600938.SH",
+          "name": "中国海油",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/600938.SH/"
+        },
+        {
+          "ticker": "XLE",
+          "name": "Energy Select Sector SPDR",
+          "role": "evidence",
+          "bucket": "evidence",
+          "href": "/investor/stocks/XLE/"
+        }
+      ]
+    }
+  ],
+  "broadcastMap": {
+    "interpretation": "节点和边表示公开页面之间的可点击关系，不表示模型内部激活、因果权重或自动执行路径。",
+    "nodes": [
+      {
+        "id": "focus:thesis-3986819dc0",
+        "type": "thesis",
+        "label": "A 股半导体的核心风险从订单验证转向 A/H 溢价、两融与负 Gamma",
+        "meta": "72 focus · 有分歧",
+        "href": "/investor/theses/thesis-3986819dc0/"
+      },
+      {
+        "id": "lane:lane_968dd01cb43f",
+        "type": "lane",
+        "label": "A股半导体/两融负 Gamma",
+        "meta": "赛道",
+        "href": "/investor/lanes/a-share-semiconductor-margin-and-negative-gamma/"
+      },
+      {
+        "id": "stock:688981.SH",
+        "type": "stock",
+        "label": "688981.SH",
+        "meta": "中芯国际",
+        "href": "/investor/stocks/688981.SH/"
+      },
+      {
+        "id": "stock:688256.SH",
+        "type": "stock",
+        "label": "688256.SH",
+        "meta": "寒武纪",
+        "href": "/investor/stocks/688256.SH/"
+      },
+      {
+        "id": "stock:0981.HK",
+        "type": "stock",
+        "label": "0981.HK",
+        "meta": "中芯国际",
+        "href": "/investor/stocks/0981.HK/"
+      },
+      {
+        "id": "stock:688041.SH",
+        "type": "stock",
+        "label": "688041.SH",
+        "meta": "海光信息",
+        "href": "/investor/stocks/688041.SH/"
+      },
+      {
+        "id": "stock:600900.SH",
+        "type": "stock",
+        "label": "600900.SH",
+        "meta": "长江电力",
+        "href": "/investor/stocks/600900.SH/"
+      },
+      {
+        "id": "stock:588000.SH",
+        "type": "stock",
+        "label": "588000.SH",
+        "meta": "科创50 ETF",
+        "href": "/investor/stocks/588000.SH/"
+      },
+      {
+        "id": "report:6996605d1bf9",
+        "type": "report",
+        "label": "2026-07-03 — 将算力链压力图谱转化为 A股持仓：做多稀缺咽喉、做空重营运资本集成商",
+        "meta": "2026-07-10",
+        "href": "/investor/reports/archive-92369070bdb0/"
+      },
+      {
+        "id": "report:fd22abe44349",
+        "type": "report",
+        "label": "2026-07-04压力测试：去杠杆级联对科创50 1750突破平台的冲击",
+        "meta": "2026-07-10",
+        "href": "/investor/reports/archive-60556accbec3/"
+      },
+      {
+        "id": "report:eba1bea550b8",
+        "type": "report",
+        "label": "2026-07-06 半导体压力测试：科创50触及1,516点会否打断AI资本开支与国产替代？",
+        "meta": "2026-07-10",
+        "href": "/investor/reports/archive-16db12a99137/"
+      },
+      {
+        "id": "report:724b4bca397a",
+        "type": "report",
+        "label": "2026-07-07 研究报告：45/35/20风格组合的A股市场结构落地与再平衡触发器",
+        "meta": "2026-07-10",
+        "href": "/investor/reports/archive-3947f514d3f4/"
+      },
+      {
+        "id": "focus:thesis-70daf87262",
+        "type": "thesis",
+        "label": "A 股红利与硬科技杠铃仍是政策、利率和风险偏好的组合表达",
+        "meta": "72 focus · 有分歧",
+        "href": "/investor/theses/thesis-70daf87262/"
+      },
+      {
+        "id": "lane:lane_bf77fb66551a",
+        "type": "lane",
+        "label": "A股红利/硬科技杠铃",
+        "meta": "赛道",
+        "href": "/investor/lanes/a-share-dividend-and-hard-tech-barbell/"
+      },
+      {
+        "id": "stock:601088.SH",
+        "type": "stock",
+        "label": "601088.SH",
+        "meta": "中国神华",
+        "href": "/investor/stocks/601088.SH/"
+      },
+      {
+        "id": "stock:601398.SH",
+        "type": "stock",
+        "label": "601398.SH",
+        "meta": "工商银行",
+        "href": "/investor/stocks/601398.SH/"
+      },
+      {
+        "id": "stock:600941.SH",
+        "type": "stock",
+        "label": "600941.SH",
+        "meta": "中国移动",
+        "href": "/investor/stocks/600941.SH/"
+      },
+      {
+        "id": "report:6e0cdac04c30",
+        "type": "report",
+        "label": "2026-07-03 AI硬件与半导体退拥挤后的A股哑铃重组",
+        "meta": "2026-07-09",
+        "href": "/investor/reports/archive-7d1d71c02339/"
+      },
+      {
+        "id": "report:a228074db35a",
+        "type": "report",
+        "label": "2026-07-05 — 险资红利锚买入能力与银行NCD/理财融资承压的定量刻画研究报告",
+        "meta": "2026-07-09",
+        "href": "/investor/reports/archive-5a087916dca3/"
+      },
+      {
+        "id": "report:e038a55ef6ad",
+        "type": "report",
+        "label": "2026-07-06 策略银行红利缩水后的风险平价重构",
+        "meta": "2026-07-09",
+        "href": "/investor/reports/archive-48a1cbf7ecdd/"
+      },
+      {
+        "id": "focus:thesis-bef6966fdd",
+        "type": "thesis",
+        "label": "工业机械的出口订单质量和设备更新周期决定制造业 CapEx 弹性",
+        "meta": "72 focus · 有分歧",
+        "href": "/investor/theses/thesis-bef6966fdd/"
+      },
+      {
+        "id": "lane:lane_6e2dcaab093e",
+        "type": "lane",
+        "label": "工业机械/设备更新出海",
+        "meta": "赛道",
+        "href": "/investor/lanes/industrial-machinery-equipment-upgrade-and-exports/"
+      },
+      {
+        "id": "stock:603338.SH",
+        "type": "stock",
+        "label": "603338.SH",
+        "meta": "浙江鼎力",
+        "href": "/investor/stocks/603338.SH/"
+      },
+      {
+        "id": "stock:600761.SH",
+        "type": "stock",
+        "label": "600761.SH",
+        "meta": "安徽合力",
+        "href": "/investor/stocks/600761.SH/"
+      },
+      {
+        "id": "stock:002747.SZ",
+        "type": "stock",
+        "label": "002747.SZ",
+        "meta": "埃斯顿",
+        "href": "/investor/stocks/002747.SZ/"
+      },
+      {
+        "id": "stock:600031.SH",
+        "type": "stock",
+        "label": "600031.SH",
+        "meta": "三一重工",
+        "href": "/investor/stocks/600031.SH/"
+      },
+      {
+        "id": "stock:300124.SZ",
+        "type": "stock",
+        "label": "300124.SZ",
+        "meta": "汇川技术",
+        "href": "/investor/stocks/300124.SZ/"
+      },
+      {
+        "id": "stock:601882.SH",
+        "type": "stock",
+        "label": "601882.SH",
+        "meta": "601882.SH",
+        "href": "/investor/stocks/601882.SH/"
+      },
+      {
+        "id": "report:b872d3359f17",
+        "type": "report",
+        "label": "2026-06-29 工业制造研究记录05：限制性实际利率下的中游机械订单与利润压力",
+        "meta": "2026-07-09",
+        "href": "/investor/reports/archive-bc31d8a7dfa1/"
+      },
+      {
+        "id": "report:e49a07812128",
+        "type": "report",
+        "label": "2026-07-01 收官卡（10/10）：国家级\"以旧换新/设备更新\"政策对智能卫浴需求的对冲强度评估",
+        "meta": "2026-07-09",
+        "href": "/investor/reports/archive-b43153d3400a/"
+      },
+      {
+        "id": "report:12f923bbc8f3",
+        "type": "report",
+        "label": "2026-07-07 A股策略：制造业设备更新与红利防御的再平衡",
+        "meta": "2026-07-09",
+        "href": "/investor/reports/archive-3b320df9578f/"
+      },
+      {
+        "id": "report:e826b0183488",
+        "type": "report",
+        "label": "2026-07-09 全球宏观综合：5万亿设备更新周期的财政可持续性",
+        "meta": "2026-07-09",
+        "href": "/investor/reports/archive-30d899237e70/"
+      },
+      {
+        "id": "focus:thesis-603a5f7966",
+        "type": "thesis",
+        "label": "A 股硬科技与科创50的复苏需要订单、融资盘和指数结构共振",
+        "meta": "71 focus · 有分歧",
+        "href": "/investor/theses/thesis-603a5f7966/"
+      },
+      {
+        "id": "lane:lane_4cc1e74d8e5f",
+        "type": "lane",
+        "label": "A股硬科技/科创50",
+        "meta": "赛道",
+        "href": "/investor/lanes/a-share-hard-tech-and-star50/"
+      },
+      {
+        "id": "stock:300308.SZ",
+        "type": "stock",
+        "label": "300308.SZ",
+        "meta": "中际旭创",
+        "href": "/investor/stocks/300308.SZ/"
+      },
+      {
+        "id": "report:1a090db6cecb",
+        "type": "report",
+        "label": "AI数据中心电力与并网瓶颈能否支撑2027光模块/PCB订单兑现",
+        "meta": "2026-07-10",
+        "href": "/investor/reports/archive-788620b91416/"
+      },
+      {
+        "id": "report:a831114b406c",
+        "type": "report",
+        "label": "A股去杠杆与硬科技解禁压力下的战术资产配置与风险对冲报告",
+        "meta": "2026-07-10",
+        "href": "/investor/reports/archive-aed3d96490cb/"
+      },
+      {
+        "id": "focus:thesis-075017003b",
+        "type": "thesis",
+        "label": "AI 资本开支通过能源、设备和利率进入通胀定价",
+        "meta": "71 focus · 高分歧",
+        "href": "/investor/theses/thesis-075017003b/"
+      },
+      {
+        "id": "lane:lane_c0702fb29e08",
+        "type": "lane",
+        "label": "AI 再通胀/利率敏感资产",
+        "meta": "赛道",
+        "href": "/investor/lanes/ai-reflation-and-rate-sensitive-assets/"
+      },
+      {
+        "id": "stock:META",
+        "type": "stock",
+        "label": "META",
+        "meta": "Meta Platforms",
+        "href": "/investor/stocks/META/"
+      },
+      {
+        "id": "stock:TLT",
+        "type": "stock",
+        "label": "TLT",
+        "meta": "iShares 20+ Year Treasury Bond ETF",
+        "href": "/investor/stocks/TLT/"
+      },
+      {
+        "id": "stock:MSFT",
+        "type": "stock",
+        "label": "MSFT",
+        "meta": "Microsoft",
+        "href": "/investor/stocks/MSFT/"
+      },
+      {
+        "id": "stock:GLD",
+        "type": "stock",
+        "label": "GLD",
+        "meta": "SPDR Gold Shares",
+        "href": "/investor/stocks/GLD/"
+      },
+      {
+        "id": "stock:AMZN",
+        "type": "stock",
+        "label": "AMZN",
+        "meta": "Amazon",
+        "href": "/investor/stocks/AMZN/"
+      },
+      {
+        "id": "stock:XLU",
+        "type": "stock",
+        "label": "XLU",
+        "meta": "Utilities Select Sector SPDR",
+        "href": "/investor/stocks/XLU/"
+      },
+      {
+        "id": "report:a0a0454a25f5",
+        "type": "report",
+        "label": "2026-07-06 全球宏观压力测试：乳业/畜牧业去产能、食品CPI与农业信用传导",
+        "meta": "2026-07-10",
+        "href": "/investor/reports/archive-7bdc935e4854/"
+      },
+      {
+        "id": "report:5c874622a380",
+        "type": "report",
+        "label": "2026-07-10 全球宏观报告：中国生产资料PPI再通胀能否传导至核心CPI？",
+        "meta": "2026-07-10",
+        "href": "/investor/reports/archive-0d6b2cf8e971/"
+      },
+      {
+        "id": "report:6f48068fab60",
+        "type": "report",
+        "label": "2026-07-10 全球宏观研究记录：信用低配后，久期对冲还是通胀保护？",
+        "meta": "2026-07-10",
+        "href": "/investor/reports/archive-a89d72aca7f6/"
+      },
+      {
+        "id": "report:cc8c1330ce1a",
+        "type": "report",
+        "label": "AI 资本开支的财务天花板：信用约束、抵押品贬值与风险再配置",
+        "meta": "2026-07-10",
+        "href": "/investor/reports/archive-62c424c0183c/"
+      },
+      {
+        "id": "focus:thesis-ab1fb6a453",
+        "type": "thesis",
+        "label": "DeepSeek 式低价模型正在重塑 AI 定价权与软件利润池",
+        "meta": "71 focus · 有分歧",
+        "href": "/investor/theses/thesis-ab1fb6a453/"
+      },
+      {
+        "id": "lane:lane_13710af7e06d",
+        "type": "lane",
+        "label": "低价模型/AI 软件利润池",
+        "meta": "赛道",
+        "href": "/investor/lanes/low-cost-models-and-ai-software-profit-pools/"
+      },
+      {
+        "id": "stock:BABA",
+        "type": "stock",
+        "label": "BABA",
+        "meta": "Alibaba",
+        "href": "/investor/stocks/BABA/"
+      },
+      {
+        "id": "stock:CRM",
+        "type": "stock",
+        "label": "CRM",
+        "meta": "Salesforce",
+        "href": "/investor/stocks/CRM/"
+      },
+      {
+        "id": "stock:BIDU",
+        "type": "stock",
+        "label": "BIDU",
+        "meta": "Baidu",
+        "href": "/investor/stocks/BIDU/"
+      },
+      {
+        "id": "stock:9988.HK",
+        "type": "stock",
+        "label": "9988.HK",
+        "meta": "阿里巴巴",
+        "href": "/investor/stocks/9988.HK/"
+      },
+      {
+        "id": "stock:NOW",
+        "type": "stock",
+        "label": "NOW",
+        "meta": "ServiceNow",
+        "href": "/investor/stocks/NOW/"
+      },
+      {
+        "id": "report:9656a0a5394d",
+        "type": "report",
+        "label": "2026-06-28 — TMT压力测试：算力过建与利用不足下的云厂商ROI",
+        "meta": "2026-07-09",
+        "href": "/investor/reports/archive-f58eeab99ea4/"
+      },
+      {
+        "id": "report:eaec466cc69e",
+        "type": "report",
+        "label": "AI 基础设施分析：高 WACC 与能源价格分化背景下 BTM 现场发电与并网方案的 CapEx 权衡",
+        "meta": "2026-07-09",
+        "href": "/investor/reports/archive-75a2a2aab598/"
+      },
+      {
+        "id": "report:6c54ab8a38ed",
+        "type": "report",
+        "label": "AI 应用 ROI 验证：从 Copilot 订阅到企业级代理 — 2026-07-05",
+        "meta": "2026-07-09",
+        "href": "/investor/reports/archive-59908dc48ecd/"
+      },
+      {
+        "id": "report:9fbd34912d48",
+        "type": "report",
+        "label": "AI基础设施Capex风险：先进制程设备国产化滑期与冗余算力采购",
+        "meta": "2026-07-09",
+        "href": "/investor/reports/archive-1aff75421621/"
+      },
+      {
+        "id": "focus:thesis-31f32af77b",
+        "type": "thesis",
+        "label": "中国云与国产算力栈的关键不是模型热度，而是训练/推理订单、服务器交付和生态锁定",
+        "meta": "71 focus · 有分歧",
+        "href": "/investor/theses/thesis-31f32af77b/"
+      },
+      {
+        "id": "lane:lane_2997650d0638",
+        "type": "lane",
+        "label": "中国云/国产算力栈",
+        "meta": "赛道",
+        "href": "/investor/lanes/china-cloud-and-local-compute-stack/"
+      },
+      {
+        "id": "stock:601138.SH",
+        "type": "stock",
+        "label": "601138.SH",
+        "meta": "工业富联",
+        "href": "/investor/stocks/601138.SH/"
+      },
+      {
+        "id": "report:3d1cafa79ff1",
+        "type": "report",
+        "label": "2026-07-02 A股策略：城投智算信用重定价与电子 / AI基础设施应收账款风险",
+        "meta": "2026-07-09",
+        "href": "/investor/reports/archive-d9bab6a065b1/"
+      },
+      {
+        "id": "report:41ad7e0f9ac7",
+        "type": "report",
+        "label": "2026-07-03 — 智算违约冲击压力测试：服务器厂商账期 vs. 芯片流片节奏再定时",
+        "meta": "2026-07-09",
+        "href": "/investor/reports/archive-927cbc506022/"
+      },
+      {
+        "id": "report:8405d5ebf8e2",
+        "type": "report",
+        "label": "AI基础设施分析师专题研究报告：电力硬约束下长三角与粤港澳算力枢纽选址的OPEX敏感度与投产延期压...",
+        "meta": "2026-07-09",
+        "href": "/investor/reports/archive-ce02178bf7d3/"
+      },
+      {
+        "id": "report:fb43622b3597",
+        "type": "report",
+        "label": "AI算力与电网瓶颈：如何同时定价芯片盈利弹性与并网硬约束？",
+        "meta": "2026-07-09",
+        "href": "/investor/reports/archive-4c6a0c2b9bcb/"
+      },
+      {
+        "id": "focus:thesis-7f0a75c5f6",
+        "type": "thesis",
+        "label": "数据中心地产、液冷与水资源正在决定 AI 容量的区域迁移",
+        "meta": "70 focus · 有分歧",
+        "href": "/investor/theses/thesis-7f0a75c5f6/"
+      },
+      {
+        "id": "lane:lane_0679894fe06b",
+        "type": "lane",
+        "label": "数据中心地产/液冷",
+        "meta": "赛道",
+        "href": "/investor/lanes/data-center-real-estate-and-cooling/"
+      },
+      {
+        "id": "stock:VRT",
+        "type": "stock",
+        "label": "VRT",
+        "meta": "Vertiv",
+        "href": "/investor/stocks/VRT/"
+      },
+      {
+        "id": "stock:NVDA",
+        "type": "stock",
+        "label": "NVDA",
+        "meta": "NVIDIA",
+        "href": "/investor/stocks/NVDA/"
+      },
+      {
+        "id": "stock:ETN",
+        "type": "stock",
+        "label": "ETN",
+        "meta": "Eaton",
+        "href": "/investor/stocks/ETN/"
+      },
+      {
+        "id": "stock:GEV",
+        "type": "stock",
+        "label": "GEV",
+        "meta": "GE Vernova",
+        "href": "/investor/stocks/GEV/"
+      },
+      {
+        "id": "report:bca1a3996411",
+        "type": "report",
+        "label": "2026-07-02 电网扩容 vs. AI电力缺口——电网与电力设备供应链真能对冲吗？",
+        "meta": "2026-07-10",
+        "href": "/investor/reports/archive-e9b75a3349dc/"
+      },
+      {
+        "id": "report:2e83db5bdb0f",
+        "type": "report",
+        "label": "2026-07-05 策略综合：上市 AI 基础设施的 time-to-power 溢价与折价纪律",
+        "meta": "2026-07-10",
+        "href": "/investor/reports/archive-a2c775288142/"
+      },
+      {
+        "id": "report:46eb49690e8f",
+        "type": "report",
+        "label": "2026-07-06 材料行业研究记录：变压器原材料价格敏感性与液冷氟化液国产化弹性评估",
+        "meta": "2026-07-10",
+        "href": "/investor/reports/archive-8c752b43ba6f/"
+      },
+      {
+        "id": "report:3d6b00e76b23",
+        "type": "report",
+        "label": "2026-07-09 - AI园区季度通电、液冷与GPU利用率兑现报告 (2027-2028)",
+        "meta": "2026-07-10",
+        "href": "/investor/reports/archive-761a07f77bac/"
+      },
+      {
+        "id": "focus:thesis-7a6599a3f5",
+        "type": "thesis",
+        "label": "新一代信息技术国产替代要从信创叙事进入算力、软件与安全订单验证",
+        "meta": "70 focus · 有分歧",
+        "href": "/investor/theses/thesis-7a6599a3f5/"
+      },
+      {
+        "id": "lane:lane_e4f90acbf804",
+        "type": "lane",
+        "label": "信创/国产 IT 栈",
+        "meta": "赛道",
+        "href": "/investor/lanes/domestic-it-substitution-stack/"
+      },
+      {
+        "id": "report:a459e56cdc82",
+        "type": "report",
+        "label": "2026-07-03 — 地方财政与债务压力对算力补贴持续性及国内 GPU 订单簿的边际冲击",
+        "meta": "2026-07-10",
+        "href": "/investor/reports/archive-ef72c5c942c1/"
+      },
+      {
+        "id": "focus:thesis-3d421524cd",
+        "type": "thesis",
+        "label": "油价地缘底线决定再通胀与降息交易的安全边际",
+        "meta": "70 focus · 有分歧",
+        "href": "/investor/theses/thesis-3d421524cd/"
+      },
+      {
+        "id": "lane:lane_93300d58763e",
+        "type": "lane",
+        "label": "油气/地缘通胀",
+        "meta": "赛道",
+        "href": "/investor/lanes/oil-gas-and-geopolitical-inflation/"
+      },
+      {
+        "id": "stock:CVX",
+        "type": "stock",
+        "label": "CVX",
+        "meta": "Chevron",
+        "href": "/investor/stocks/CVX/"
+      },
+      {
+        "id": "stock:XOM",
+        "type": "stock",
+        "label": "XOM",
+        "meta": "Exxon Mobil",
+        "href": "/investor/stocks/XOM/"
+      },
+      {
+        "id": "stock:0883.HK",
+        "type": "stock",
+        "label": "0883.HK",
+        "meta": "中国海洋石油",
+        "href": "/investor/stocks/0883.HK/"
+      },
+      {
+        "id": "stock:0857.HK",
+        "type": "stock",
+        "label": "0857.HK",
+        "meta": "中国石油股份",
+        "href": "/investor/stocks/0857.HK/"
+      },
+      {
+        "id": "stock:600938.SH",
+        "type": "stock",
+        "label": "600938.SH",
+        "meta": "中国海油",
+        "href": "/investor/stocks/600938.SH/"
+      },
+      {
+        "id": "stock:XLE",
+        "type": "stock",
+        "label": "XLE",
+        "meta": "Energy Select Sector SPDR",
+        "href": "/investor/stocks/XLE/"
+      },
+      {
+        "id": "report:571c069df916",
+        "type": "report",
+        "label": "2026-07-06 首席策略师：低油价、薄库存、2026不降息下的跨资产不对称定仓",
+        "meta": "2026-07-10",
+        "href": "/investor/reports/archive-18b6cb414cca/"
+      },
+      {
+        "id": "report:eada6ba8b2cb",
+        "type": "report",
+        "label": "2026-07-09 美联储反应函数：look through 油价，还是 9 月兑现加息？",
+        "meta": "2026-07-10",
+        "href": "/investor/reports/archive-1bf4c7d01bd5/"
+      },
+      {
+        "id": "report:49b987ce1fde",
+        "type": "report",
+        "label": "2026年7月3日 全球原油市场监测报告：地缘溢价彻底消退与霍尔木兹海峡复航，油价触及四个月新低",
+        "meta": "2026-07-10",
+        "href": "/investor/reports/archive-ddeb23862c25/"
+      },
+      {
+        "id": "report:1aa0155f0aff",
+        "type": "report",
+        "label": "2883.HK 公司概况",
+        "meta": "2026-07-10",
+        "href": "/investor/reports/archive-35c211a2cff4/"
+      },
+      {
+        "id": "focus:thesis-7b2fce37a7",
+        "type": "thesis",
+        "label": "长江电力资金大流出与药明/恒瑞大涨，是否标志着A股向成长风格的系统性切换已经确立？中盘红利如伟星股份能否承接传统红利的溢出资金？",
+        "meta": "58 focus · 高分歧",
+        "href": "/investor/theses/thesis-7b2fce37a7/"
+      },
+      {
+        "id": "lane:lane_22c1ed929e2e",
+        "type": "lane",
+        "label": "公用事业/电网信用",
+        "meta": "赛道",
+        "href": "/investor/lanes/utilities-grid-rate-base-and-credit/"
+      },
+      {
+        "id": "stock:600905.SH",
+        "type": "stock",
+        "label": "600905.SH",
+        "meta": "三峡能源",
+        "href": "/investor/stocks/600905.SH/"
+      },
+      {
+        "id": "stock:DUK",
+        "type": "stock",
+        "label": "DUK",
+        "meta": "Duke Energy",
+        "href": "/investor/stocks/DUK/"
+      },
+      {
+        "id": "report:09f222ab7447",
+        "type": "report",
+        "label": "2026-07-08 A股红利基荷再入场的宏观时钟",
+        "meta": "2026-07-10",
+        "href": "/investor/reports/archive-8a244dce9fa7/"
+      },
+      {
+        "id": "report:21ed163634c8",
+        "type": "report",
+        "label": "2026-07-09 A股主线向电网设备与物理红利的风格切换中的指数重估与隐含波动率建仓时点",
+        "meta": "2026-07-10",
+        "href": "/investor/reports/archive-24b64a5f237f/"
+      },
+      {
+        "id": "report:7d8807e76800",
+        "type": "report",
+        "label": "2026-07-09 A股策略：电力瓶颈下科技-红利杠铃的再平衡",
+        "meta": "2026-07-10",
+        "href": "/investor/reports/archive-19184e44168f/"
+      },
+      {
+        "id": "focus:thesis-134347aa13",
+        "type": "thesis",
+        "label": "长江电力等红利拥挤度处于95%历史极值，且股息率利差压缩至历史低点，而在跨境分段生产解禁及创新药商业化兑现下医药板块大涨，这是否标志着A…",
+        "meta": "57 focus · 高分歧",
+        "href": "/investor/theses/thesis-134347aa13/"
+      }
+    ],
+    "edges": [
+      {
+        "source": "focus:thesis-3986819dc0",
+        "target": "lane:lane_968dd01cb43f",
+        "type": "maps_to"
+      },
+      {
+        "source": "focus:thesis-3986819dc0",
+        "target": "stock:688981.SH",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-3986819dc0",
+        "target": "stock:688256.SH",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-3986819dc0",
+        "target": "stock:0981.HK",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-3986819dc0",
+        "target": "stock:688041.SH",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-3986819dc0",
+        "target": "stock:600900.SH",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-3986819dc0",
+        "target": "stock:588000.SH",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-3986819dc0",
+        "target": "report:6996605d1bf9",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-3986819dc0",
+        "target": "report:fd22abe44349",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-3986819dc0",
+        "target": "report:eba1bea550b8",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-3986819dc0",
+        "target": "report:724b4bca397a",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-70daf87262",
+        "target": "lane:lane_bf77fb66551a",
+        "type": "maps_to"
+      },
+      {
+        "source": "focus:thesis-70daf87262",
+        "target": "stock:600900.SH",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-70daf87262",
+        "target": "stock:601088.SH",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-70daf87262",
+        "target": "stock:601398.SH",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-70daf87262",
+        "target": "stock:688981.SH",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-70daf87262",
+        "target": "stock:588000.SH",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-70daf87262",
+        "target": "stock:600941.SH",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-70daf87262",
+        "target": "report:6e0cdac04c30",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-70daf87262",
+        "target": "report:a228074db35a",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-70daf87262",
+        "target": "report:e038a55ef6ad",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-70daf87262",
+        "target": "report:724b4bca397a",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-bef6966fdd",
+        "target": "lane:lane_6e2dcaab093e",
+        "type": "maps_to"
+      },
+      {
+        "source": "focus:thesis-bef6966fdd",
+        "target": "stock:603338.SH",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-bef6966fdd",
+        "target": "stock:600761.SH",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-bef6966fdd",
+        "target": "stock:002747.SZ",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-bef6966fdd",
+        "target": "stock:600031.SH",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-bef6966fdd",
+        "target": "stock:300124.SZ",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-bef6966fdd",
+        "target": "stock:601882.SH",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-bef6966fdd",
+        "target": "report:b872d3359f17",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-bef6966fdd",
+        "target": "report:e49a07812128",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-bef6966fdd",
+        "target": "report:12f923bbc8f3",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-bef6966fdd",
+        "target": "report:e826b0183488",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-603a5f7966",
+        "target": "lane:lane_4cc1e74d8e5f",
+        "type": "maps_to"
+      },
+      {
+        "source": "focus:thesis-603a5f7966",
+        "target": "stock:688256.SH",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-603a5f7966",
+        "target": "stock:300308.SZ",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-603a5f7966",
+        "target": "stock:688981.SH",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-603a5f7966",
+        "target": "stock:688041.SH",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-603a5f7966",
+        "target": "stock:0981.HK",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-603a5f7966",
+        "target": "stock:600900.SH",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-603a5f7966",
+        "target": "report:fd22abe44349",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-603a5f7966",
+        "target": "report:eba1bea550b8",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-603a5f7966",
+        "target": "report:1a090db6cecb",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-603a5f7966",
+        "target": "report:a831114b406c",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-075017003b",
+        "target": "lane:lane_c0702fb29e08",
+        "type": "maps_to"
+      },
+      {
+        "source": "focus:thesis-075017003b",
+        "target": "stock:META",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-075017003b",
+        "target": "stock:TLT",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-075017003b",
+        "target": "stock:MSFT",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-075017003b",
+        "target": "stock:GLD",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-075017003b",
+        "target": "stock:AMZN",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-075017003b",
+        "target": "stock:XLU",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-075017003b",
+        "target": "report:a0a0454a25f5",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-075017003b",
+        "target": "report:5c874622a380",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-075017003b",
+        "target": "report:6f48068fab60",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-075017003b",
+        "target": "report:cc8c1330ce1a",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-ab1fb6a453",
+        "target": "lane:lane_13710af7e06d",
+        "type": "maps_to"
+      },
+      {
+        "source": "focus:thesis-ab1fb6a453",
+        "target": "stock:BABA",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-ab1fb6a453",
+        "target": "stock:CRM",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-ab1fb6a453",
+        "target": "stock:MSFT",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-ab1fb6a453",
+        "target": "stock:BIDU",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-ab1fb6a453",
+        "target": "stock:9988.HK",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-ab1fb6a453",
+        "target": "stock:NOW",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-ab1fb6a453",
+        "target": "report:9656a0a5394d",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-ab1fb6a453",
+        "target": "report:eaec466cc69e",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-ab1fb6a453",
+        "target": "report:6c54ab8a38ed",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-ab1fb6a453",
+        "target": "report:9fbd34912d48",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-31f32af77b",
+        "target": "lane:lane_2997650d0638",
+        "type": "maps_to"
+      },
+      {
+        "source": "focus:thesis-31f32af77b",
+        "target": "stock:688256.SH",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-31f32af77b",
+        "target": "stock:688041.SH",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-31f32af77b",
+        "target": "stock:300308.SZ",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-31f32af77b",
+        "target": "stock:601138.SH",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-31f32af77b",
+        "target": "stock:0981.HK",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-31f32af77b",
+        "target": "stock:688981.SH",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-31f32af77b",
+        "target": "report:3d1cafa79ff1",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-31f32af77b",
+        "target": "report:41ad7e0f9ac7",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-31f32af77b",
+        "target": "report:8405d5ebf8e2",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-31f32af77b",
+        "target": "report:fb43622b3597",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-7f0a75c5f6",
+        "target": "lane:lane_0679894fe06b",
+        "type": "maps_to"
+      },
+      {
+        "source": "focus:thesis-7f0a75c5f6",
+        "target": "stock:VRT",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-7f0a75c5f6",
+        "target": "stock:NVDA",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-7f0a75c5f6",
+        "target": "stock:ETN",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-7f0a75c5f6",
+        "target": "stock:META",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-7f0a75c5f6",
+        "target": "stock:GEV",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-7f0a75c5f6",
+        "target": "stock:MSFT",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-7f0a75c5f6",
+        "target": "report:bca1a3996411",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-7f0a75c5f6",
+        "target": "report:2e83db5bdb0f",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-7f0a75c5f6",
+        "target": "report:46eb49690e8f",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-7f0a75c5f6",
+        "target": "report:3d6b00e76b23",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-7a6599a3f5",
+        "target": "lane:lane_e4f90acbf804",
+        "type": "maps_to"
+      },
+      {
+        "source": "focus:thesis-7a6599a3f5",
+        "target": "stock:688256.SH",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-7a6599a3f5",
+        "target": "stock:688041.SH",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-7a6599a3f5",
+        "target": "stock:688981.SH",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-7a6599a3f5",
+        "target": "stock:0981.HK",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-7a6599a3f5",
+        "target": "stock:300308.SZ",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-7a6599a3f5",
+        "target": "stock:NVDA",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-7a6599a3f5",
+        "target": "report:a459e56cdc82",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-7a6599a3f5",
+        "target": "report:6996605d1bf9",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-7a6599a3f5",
+        "target": "report:41ad7e0f9ac7",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-7a6599a3f5",
+        "target": "report:eba1bea550b8",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-3d421524cd",
+        "target": "lane:lane_93300d58763e",
+        "type": "maps_to"
+      },
+      {
+        "source": "focus:thesis-3d421524cd",
+        "target": "stock:CVX",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-3d421524cd",
+        "target": "stock:XOM",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-3d421524cd",
+        "target": "stock:0883.HK",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-3d421524cd",
+        "target": "stock:0857.HK",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-3d421524cd",
+        "target": "stock:600938.SH",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-3d421524cd",
+        "target": "stock:XLE",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-3d421524cd",
+        "target": "report:571c069df916",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-3d421524cd",
+        "target": "report:eada6ba8b2cb",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-3d421524cd",
+        "target": "report:49b987ce1fde",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-3d421524cd",
+        "target": "report:1aa0155f0aff",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-7b2fce37a7",
+        "target": "lane:lane_22c1ed929e2e",
+        "type": "maps_to"
+      },
+      {
+        "source": "focus:thesis-7b2fce37a7",
+        "target": "stock:600900.SH",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-7b2fce37a7",
+        "target": "stock:600905.SH",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-7b2fce37a7",
+        "target": "stock:DUK",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-7b2fce37a7",
+        "target": "report:12f923bbc8f3",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-7b2fce37a7",
+        "target": "report:09f222ab7447",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-7b2fce37a7",
+        "target": "report:21ed163634c8",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-7b2fce37a7",
+        "target": "report:7d8807e76800",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-134347aa13",
+        "target": "lane:lane_22c1ed929e2e",
+        "type": "maps_to"
+      },
+      {
+        "source": "focus:thesis-134347aa13",
+        "target": "stock:600900.SH",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-134347aa13",
+        "target": "stock:600905.SH",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-134347aa13",
+        "target": "stock:DUK",
+        "type": "exposes"
+      },
+      {
+        "source": "focus:thesis-134347aa13",
+        "target": "report:12f923bbc8f3",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-134347aa13",
+        "target": "report:09f222ab7447",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-134347aa13",
+        "target": "report:21ed163634c8",
+        "type": "supported_by"
+      },
+      {
+        "source": "focus:thesis-134347aa13",
+        "target": "report:7d8807e76800",
+        "type": "supported_by"
+      }
+    ]
+  },
+  "methodology": {
+    "inputs": [
+      "公开 research-network thesis、lane、stock 与 report references",
+      "公开 market ontology 与已验证赛道观点",
+      "公开 5/20/60 交易日影子赔率及其证据变化",
+      "最新人类友好 Reader Report 的关联主线"
+    ],
+    "scoreWeights": {
+      "recency": 0.25,
+      "evidenceDensity": 0.2,
+      "absolute20dOddsMove": 0.15,
+      "oddsInputConfidence": 0.15,
+      "readerReportLink": 0.15,
+      "analystAndStockReach": 0.1
+    },
+    "safeguards": [
+      "固定容量为 12，避免完整图谱重新淹没读者。",
+      "其中保留 2 个反方槽位，按公开支持/风险证据分歧选择。",
+      "所有股票只表示 thesis 研究暴露，不构成股票方向概率或交易建议。",
+      "所有来源必须链接到已经发布的 Vibe 公开页面。"
+    ],
+    "excluded": [
+      "私有提示词、隐藏推理和模型内部状态",
+      "研究候选队列、内部任务、运行标识和本地路径",
+      "未经校准的市场概率、EV、Kelly 和自动组合动作",
+      "未在公开契约中出现的私有材料或诊断结果"
+    ]
+  }
+}

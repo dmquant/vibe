@@ -68,6 +68,11 @@ Vibe turns that workflow into a usable product surface:
   library.
 - A reader-first investment portal for morning briefs, weekly positioning,
   human-readable memos, research-chain signals, and risk alerts.
+- A bounded public research workspace that compresses the published corpus into
+  12 current focus theses, preserves two dissent safeguards, and connects every
+  item to its lane, stocks, shadow odds, confirmations, falsifiers, and source
+  reports. This is an analysis and presentation view, not a research-production
+  queue or a representation of hidden model state.
 - Individual thesis, lane, and stock pages connected to a browser-local
   portfolio tracker.
 - A 5/20/60-day shadow oddsboard that turns theses into falsifiable contracts,
@@ -100,9 +105,10 @@ Vibe turns that workflow into a usable product surface:
 | `/100-days/` | Interactive 100-day AI Institute timeline, 3D research atlas, episode library, and public scorecard |
 | `/investor/` | Reader-first AI Institute investment portal |
 | `/investor/daily/` | Latest daily morning brief dashboard |
+| `/investor/workspace/` | Admin-gated focus board, dissent view, and interactive thesis-to-lane/stock/report map |
 | `/investor/panorama/` | Weekly calls, positioning, lane allocation, and stock sheet |
 | `/investor/research-network/` | Thesis, lane, stock, evidence, and recap network |
-| `/investor/odds/` | Shadow thesis contracts, lane-index term structures, and stock-linked odds surfaces |
+| `/investor/odds/` | Admin-gated shadow thesis contracts, lane-index term structures, and stock-linked odds surfaces |
 | `/investor/theses/[id]/` | Individual living-thesis timeline and evidence page |
 | `/investor/lanes/[slug]/` | Individual investable-lane page |
 | `/investor/stocks/[ticker]/` | Individual stock or ETF research-exposure page |
@@ -120,7 +126,9 @@ Vibe turns that workflow into a usable product surface:
 
 Vibe is a standalone Astro static site. It can be deployed independently on
 Vercel or any static host. Operational data pipelines, private source material,
-and API keys are managed separately from this public repository.
+and API keys are managed separately from this public repository. Vercel uses
+one runtime-only secret, `VIBE_ADMIN_TOKEN`, to gate the odds and workspace
+routes; it is never exposed through a `PUBLIC_*` variable.
 
 The public repository contains only sanitized generated artifacts:
 
@@ -135,6 +143,46 @@ public/hundred-days/
 
 Private source data, API keys, and raw AI Institute outputs are not part of this
 public repository.
+
+### Admin Route Protection
+
+Vercel Routing Middleware protects these deployed paths:
+
+- `/investor/odds/`
+- `/investor/workspace/`
+- `/investor-data/odds-board.json`
+- `/investor-data/research-workspace.json`
+
+Set `VIBE_ADMIN_TOKEN` in **Vercel → Project Settings → Environment
+Variables** for Production and Preview, then redeploy. Use a randomly generated
+value of at least 32 characters.
+
+Browser access uses HTTP Basic Auth:
+
+- Username: `admin`
+- Password: the value of `VIBE_ADMIN_TOKEN`
+
+API clients can use either:
+
+```bash
+curl -H "Authorization: Bearer $VIBE_ADMIN_TOKEN" \
+  https://vibe-alpha-three.vercel.app/investor-data/odds-board.json
+
+curl -H "X-Admin-Token: $VIBE_ADMIN_TOKEN" \
+  https://vibe-alpha-three.vercel.app/investor-data/research-workspace.json
+```
+
+The middleware fails closed with `503` when the variable is missing and returns
+`401` for invalid credentials. Run `npm run test:admin-gate` to verify these
+rules locally. `astro dev` does not emulate Vercel Routing Middleware.
+
+Important boundary: this is HTTPS transport protection plus server-side route
+access control. It is not encryption of files committed to GitHub. Because this
+repository is public and some odds-derived summaries also appear on other
+public investor pages, confidential source material must still never enter
+these contracts. True artifact secrecy would require moving the protected
+contracts to a private server-side store and removing all public generated
+copies and derived views.
 
 ## 简体中文
 
@@ -174,6 +222,9 @@ Vibe 把这套工作流呈现为一个可访问的产品界面：
 - AI 研究院 100 天时间型研究图谱：包含可同步控制的每日时间游标、3D
   thesis/赛道/股票宇宙、研究活动河流和可持续扩展的研究事件库。
 - 以每日晨会、周度定位和人类友好报告为起点的投资研究门户。
+- 有限容量的公开研究注意力工作台：把已发布语料压缩为 12 条当前焦点，固定保留
+  2 个反方槽位，并把每条焦点连接到赛道、股票、影子赔率、确认条件、证伪条件和公开源报告。
+  这个页面只负责分析与展示，不是研究生产队列，也不代表模型的隐藏内部状态。
 - 从 thesis 到赛道、股票/ETF 研究节点，再到本地组合追踪的完整路径。
 - 5/20/60 交易日影子赔率盘：把 thesis 改写成可证伪合约，把赛道组织成成员隐含指数，把股票展示为关联合约研究暴露；在真实价格、payoff 和结算样本接入前，不虚构市场赔率、EV 或 Kelly 仓位。
 - 研究时间线追踪器，用于查看简报、报告、复盘和动态论点如何演进。
@@ -200,9 +251,10 @@ Vibe 把这套工作流呈现为一个可访问的产品界面：
 | `/100-days/` | AI 研究院 100 天交互时间线、3D 研究图谱、研究事件库与公开记分卡 |
 | `/investor/` | 以读者和决策顺序为中心的 AI Institute 投资门户 |
 | `/investor/daily/` | 最新晨会简报看板 |
+| `/investor/workspace/` | 需要管理员令牌的 12 条有限容量焦点、反方保留与交互关系图 |
 | `/investor/panorama/` | 周度操作结论、仓位含义、赛道配置与个股清单 |
 | `/investor/research-network/` | Thesis、赛道、标的、证据与复盘网络 |
-| `/investor/odds/` | 主线合约、赛道指数期限结构与股票关联合约赔率 |
+| `/investor/odds/` | 需要管理员令牌的主线合约、赛道指数期限结构与股票关联合约赔率 |
 | `/investor/theses/[id]/` | 单条动态 thesis 的时间线和证据页 |
 | `/investor/lanes/[slug]/` | 单条可投资赛道页 |
 | `/investor/stocks/[ticker]/` | 单个股票或 ETF 的研究暴露页 |
@@ -218,7 +270,7 @@ Vibe 把这套工作流呈现为一个可访问的产品界面：
 
 ### 运营边界
 
-Vibe 是一个可独立部署的 Astro 静态网站。Vercel 构建不需要读取密钥，也不需要解密私有简报。运营数据管线、私有源材料和 API key 不属于这个公开仓库。
+Vibe 是一个可独立部署的 Astro 静态网站。Vercel 构建不需要解密私有简报；运行时只读取 `VIBE_ADMIN_TOKEN`，用于保护赔率盘与 Workspace。运营数据管线、私有源材料和其他 API key 不属于这个公开仓库。
 
 可以提交到 Vibe 的是已经清洗过的公开发布物：
 
@@ -232,6 +284,33 @@ public/hundred-days/
 ```
 
 私有数据、API key 和原始 AI Institute 输出不会进入这个公开仓库。
+
+### 管理员路由保护
+
+Vercel Routing Middleware 会保护：
+
+- `/investor/odds/`
+- `/investor/workspace/`
+- `/investor-data/odds-board.json`
+- `/investor-data/research-workspace.json`
+
+在 **Vercel → Project Settings → Environment Variables** 中为 Production
+和 Preview 设置 `VIBE_ADMIN_TOKEN`，然后重新部署。建议使用至少 32 位的随机值，
+且不要使用 `PUBLIC_` 前缀。
+
+浏览器打开受保护页面时会出现 Basic Auth 登录框：
+
+- 用户名：`admin`
+- 密码：`VIBE_ADMIN_TOKEN` 的值
+
+API 调用可以使用 `Authorization: Bearer` 或 `X-Admin-Token`。环境变量未配置时
+中间件以 `503` 失败关闭；令牌错误时返回 `401`。本地可以运行
+`npm run test:admin-gate` 验证规则，但 `astro dev` 不会模拟 Vercel 中间件。
+
+必须明确：这提供的是 HTTPS 传输保护和服务器端路由访问控制，不会加密已经提交到
+GitHub 的文件。由于当前仓库公开，且其他投资页面仍展示部分赔率派生摘要，任何真正的
+机密材料仍不能进入这些公开契约。若要实现文件级保密，需要把契约迁移到私有服务端存储，
+同时移除公开仓库中的明文副本和所有派生展示。
 
 ## Deployment
 
@@ -250,6 +329,7 @@ The production build is intentionally self-contained:
 
 ```bash
 npm install
+npm run test:admin-gate
 npm run dev
 npm run build
 ```

@@ -8,13 +8,14 @@ const items = [
   { href: "/investor/", label: "Portal", match: (path) => path === "/investor/" },
   { href: "/100-days/", label: "100 Days", match: (path) => path.startsWith("/100-days") },
   { href: "/investor/daily/", label: "Today", match: (path) => path.startsWith("/investor/daily") },
+  { href: "/investor/workspace/", label: "Workspace", protected: true, match: (path) => path.startsWith("/investor/workspace") },
   { href: "/investor/panorama/", label: "Weekly", match: (path) => path.startsWith("/investor/panorama") },
   {
     href: "/investor/research-network/#theses",
     label: "Theses",
     match: (path) => path.startsWith("/investor/research-network") || path.startsWith("/investor/theses"),
   },
-  { href: "/investor/odds/", label: "Odds", match: (path) => path.startsWith("/investor/odds") },
+  { href: "/investor/odds/", label: "Odds", protected: true, match: (path) => path.startsWith("/investor/odds") },
   { href: "/investor/research-network/#thermal", label: "Lanes", match: (path) => path.startsWith("/investor/lanes") },
   { href: "/investor/research-network/#stocks", label: "Stocks", match: (path) => path.startsWith("/investor/stocks") },
   { href: "/investor/portfolio/", label: "Portfolio", match: (path) => path.startsWith("/investor/portfolio") },
@@ -31,7 +32,7 @@ const items = [
     {items.map((item) => {
       const active = item.match(pathname);
       return (
-        <a href={item.href} class:list={{ active }} aria-current={active ? "page" : undefined}>
+        <a href={item.href} class:list={{ active, protected: item.protected }} aria-current={active ? "page" : undefined} title={item.protected ? "Admin token required" : undefined}>
           {item.label}
         </a>
       );
@@ -103,6 +104,15 @@ const items = [
 
   .portal-nav-reader {
     color: var(--accent-green, #169b62) !important;
+  }
+
+  .portal-nav-links a.protected::after {
+    margin-left: 4px;
+    color: var(--accent-yellow, #d7a316);
+    content: "ADMIN";
+    font-family: var(--font-mono, monospace);
+    font-size: 6px;
+    font-weight: 900;
   }
 
   .investor-market-scope {

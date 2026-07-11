@@ -142,6 +142,10 @@ export function readOddsBoard() {
   return rewriteInvestorPaths(readJson("odds-board.json"));
 }
 
+export function readResearchWorkspace() {
+  return rewriteInvestorPaths(readJson("research-workspace.json"));
+}
+
 export function readAnalystPersonaTimelines() {
   return rewriteInvestorPaths(readJson("analyst-persona-timelines.json"));
 }

@@ -4,10 +4,20 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import { defineConfig, fontProviders } from 'astro/config';
 
+const protectedRoutes = [
+	'/investor/odds/',
+	'/investor/workspace/',
+];
+
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://example.com',
-	integrations: [mdx(), sitemap()],
+	integrations: [
+		mdx(),
+		sitemap({
+			filter: (page) => !protectedRoutes.some((route) => page.includes(route)),
+		}),
+	],
 	fonts: [
 		{
 			provider: fontProviders.local(),

@@ -8,6 +8,7 @@ import {
   readOddsBoard,
   readRecapDashboards,
   readResearchNetwork,
+  readResearchWorkspace,
   readSiteData,
 } from "../../lib/investor-generated.js";
 import { buildOddsIndexes, lanePath, oddsLine, probabilityLabel, stockPath, thesisPath } from "../../lib/investor-market.js";
@@ -21,6 +22,7 @@ const recapData = readRecapDashboards();
 const deepData = readDeepIndex();
 const personaData = readAnalystPersonaTimelines();
 const odds = readOddsBoard();
+const workspace = readResearchWorkspace();
 const oddsIndexes = buildOddsIndexes(odds);
 const laneOddsByHref = new Map((odds.laneLines || []).map((item) => [item.href, item]));
 const panorama = buildWeeklyPanoramaBundle();
@@ -103,6 +105,7 @@ const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" "
           <p>{daily.summary?.lead || "把每日研究结果重组为可读判断、可追踪主线、可点击赛道与标的，以及可复核的组合动作。"}</p>
           <div class="portal-actions">
             <a class="primary" href="/investor/daily/">读今日晨会</a>
+            <a href="/investor/workspace/">看当前焦点</a>
             <a href="/investor/panorama/">看本周结论</a>
             <a href="/investor/odds/">打开赔率盘</a>
             <a href="/investor/portfolio/">打开组合台</a>
@@ -130,6 +133,7 @@ const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" "
 
       <section class="portal-stat-strip" aria-label="Published research counts">
         <a href="/investor/daily/"><span>Daily</span><strong>{daily.date || "latest"}</strong><em>晨会与报价</em></a>
+        <a href="/investor/workspace/"><span>Workspace</span><strong>{workspace.coverage?.focusItems || 0}</strong><em>有限容量焦点</em></a>
         <a href="/investor/panorama/"><span>Weekly</span><strong>{panorama.week}</strong><em>操作全景</em></a>
         <a href="/investor/research-network/"><span>Evidence</span><strong>{network.stats?.publicGraphNodes || 0}</strong><em>公开图节点</em></a>
         <a href="/investor/personas/"><span>Personas</span><strong>{personaData.stats?.personaCount || 0}</strong><em>分析师视角</em></a>

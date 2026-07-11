@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import BaseHead from "../../../components/BaseHead.astro";
 import Header from "../../../components/Header.astro";
-import { readOddsBoard, readRecapDashboards, readResearchNetwork, readSiteData } from "../../../lib/investor-generated.js";
+import { readOddsBoard, readRecapDashboards, readResearchNetwork, readResearchWorkspace, readSiteData } from "../../../lib/investor-generated.js";
 import { thesisPath } from "../../../lib/investor-market.js";
 import "../../../styles/information-architecture.css";
 
@@ -10,6 +10,7 @@ const siteData = readSiteData();
 const network = readResearchNetwork();
 const recapData = readRecapDashboards();
 const odds = readOddsBoard();
+const workspace = readResearchWorkspace();
 const posts = await getCollection("blog");
 const stats = siteData.stats || {};
 const daily = siteData.dailyDashboard || {};
@@ -30,6 +31,11 @@ const routeRows = [
     path: "/investor/daily/",
     title: "Today / 今日",
     text: "晨会看板、最新报价、优先结论、研究链地图和可点击证据入口。",
+  },
+  {
+    path: "/investor/workspace/",
+    title: "Workspace / 焦点",
+    text: "从公开报告、thesis、赛道、股票与影子赔率中重建当前 12 条有限容量研究焦点。",
   },
   {
     path: "/investor/panorama/",
@@ -98,6 +104,7 @@ const routeRows = [
           <div class="ia-actions">
             <a class="primary" href="/investor/">进入投资门户</a>
             <a href="/investor/daily/">读今日</a>
+            <a href="/investor/workspace/">看焦点</a>
             <a href="/investor/research-network/">看主线</a>
             <a href="/investor/odds/">看赔率</a>
             <a href="/investor/portfolio/">做组合追踪</a>
@@ -157,7 +164,7 @@ const routeRows = [
       <section class="ia-section">
         <div class="ia-section-head">
           <div class="ia-section-label">Primary Paths</div>
-          <h2>十条主路径</h2>
+          <h2>十一条主路径</h2>
           <p>不要从文章列表开始找。先按任务选择入口，再向下进入报告、证据、图谱或历史档案。</p>
         </div>
         <div class="ia-card-grid">
@@ -168,55 +175,61 @@ const routeRows = [
             <div class="ia-card-actions"><a class="primary" href="/investor/daily/">打开今日看板</a></div>
           </article>
           <article class="ia-card orange">
-            <div class="ia-card-kicker">02 · Weekly</div>
+            <div class="ia-card-kicker">02 · Workspace</div>
+            <h3>今天真正该关注什么</h3>
+            <p>把 {network.stats?.thesisCount || 0} 条主线压缩为 {workspace.coverage?.focusItems || 0} 条当前焦点，保留反方、变化、赔率、赛道、股票和来源关系。</p>
+            <div class="ia-card-actions"><a class="primary" href="/investor/workspace/">打开研究工作台</a></div>
+          </article>
+          <article class="ia-card orange">
+            <div class="ia-card-kicker">03 · Weekly</div>
             <h3>本周如何定位</h3>
             <p>先看操作结论，再核对论点到仓位、赛道配置、标的清单和证伪条件。</p>
             <div class="ia-card-actions"><a class="primary" href="/investor/panorama/">打开周度全景</a></div>
           </article>
           <article class="ia-card green">
-            <div class="ia-card-kicker">03 · Thesis</div>
+            <div class="ia-card-kicker">04 · Thesis</div>
             <h3>哪些主线正在变化</h3>
             <p>将研究结果压缩为主题级 thesis，而不是报告堆叠或实体共现。</p>
             <div class="ia-card-actions"><a class="primary" href="/investor/research-network/">看主线网络</a></div>
           </article>
           <article class="ia-card yellow">
-            <div class="ia-card-kicker">04 · Odds</div>
+            <div class="ia-card-kicker">05 · Odds</div>
             <h3>判断的胜率和期限是什么</h3>
             <p>{odds.coverage?.shadowPricedTheses || 0} 条主线已经进入影子赔率盘；市场隐含赔率、EV 和 Kelly 在真实输入接入前保持禁用。</p>
             <div class="ia-card-actions"><a class="primary" href="/investor/odds/">打开赔率盘</a></div>
           </article>
           <article class="ia-card yellow">
-            <div class="ia-card-kicker">05 · Personas</div>
+            <div class="ia-card-kicker">06 · Personas</div>
             <h3>哪些分析师视角在改变</h3>
             <p>按 persona 查看其参与的多条 thesis、最新观点变化和支持/风险证据。</p>
             <div class="ia-card-actions"><a class="primary" href="/investor/personas/">看分析师画像</a></div>
           </article>
           <article class="ia-card orange">
-            <div class="ia-card-kicker">06 · Portfolio</div>
+            <div class="ia-card-kicker">07 · Portfolio</div>
             <h3>如何转成组合动作</h3>
             <p>把 thesis 放入本地追踪，维护观察仓、验证仓、核心仓、对冲和退出状态。</p>
             <div class="ia-card-actions"><a class="primary" href="/investor/portfolio/">打开组合追踪</a></div>
           </article>
           <article class="ia-card blue">
-            <div class="ia-card-kicker">07 · Timeline</div>
+            <div class="ia-card-kicker">08 · Timeline</div>
             <h3>观点如何随时间变化</h3>
             <p>用时间线查看每日简报、读者报告、主线与复盘之间的演化关系。</p>
             <div class="ia-card-actions"><a class="primary" href="/investor/timeline/">打开时间线</a></div>
           </article>
           <article class="ia-card red">
-            <div class="ia-card-kicker">08 · Recap</div>
+            <div class="ia-card-kicker">09 · Recap</div>
             <h3>重要主题如何复盘</h3>
             <p>关键主题被整理成可视化仪表盘，便于周度和专题复盘。</p>
             <div class="ia-card-actions"><a class="primary" href="/investor/recaps/">看复盘仪表盘</a></div>
           </article>
           <article class="ia-card blue">
-            <div class="ia-card-kicker">09 · Archive</div>
+            <div class="ia-card-kicker">10 · Archive</div>
             <h3>历史材料在哪里</h3>
             <p>统一整理公开简报、深度研究、读者报告、复盘和建造故事。</p>
             <div class="ia-card-actions"><a class="primary" href="/investor/archive/">打开档案地图</a></div>
           </article>
           <article class="ia-card green">
-            <div class="ia-card-kicker">10 · Console</div>
+            <div class="ia-card-kicker">11 · Console</div>
             <h3>需要继续检索和复核</h3>
             <p>进入完整报告、变化雷达、分析师动向、研究运营和知识图谱的高级界面。</p>
             <div class="ia-card-actions"><a class="primary" href="/investor/console/">打开高级控制台</a></div>

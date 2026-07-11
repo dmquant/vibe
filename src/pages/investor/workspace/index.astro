@@ -1,0 +1,468 @@
+---
+import BaseHead from "../../../components/BaseHead.astro";
+import Header from "../../../components/Header.astro";
+import { readResearchWorkspace } from "../../../lib/investor-generated.js";
+import "../../../styles/research-network.css";
+import "../../../styles/research-workspace.css";
+
+const workspace = readResearchWorkspace();
+const focusItems = workspace.focusItems || [];
+const dissentItems = focusItems.filter((item) => item.slotType === "dissent_safeguard");
+const reader = workspace.readerReport || null;
+const quote = (item, horizon) => item.odds?.horizons?.find((line) => line.horizon === horizon);
+const probability = (value) => Number.isFinite(Number(value)) ? `${Math.round(Number(value) * 100)}%` : "--";
+const signed = (value) => `${Number(value || 0) > 0 ? "+" : ""}${Number(value || 0).toFixed(1)}pp`;
+const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" ").replaceAll('"', "&quot;");
+const activityMax = (item) => Math.max(1, ...(item.activity || []).map((row) => Number(row.events || 0)));
+const payloadJson = JSON.stringify({ focusItems, broadcastMap: workspace.broadcastMap }).replaceAll("<", "\\u003c");
+const firstItem = focusItems[0];
+---
+
+<!doctype html>
+<html lang="zh-CN" data-lang="zh">
+  <head>
+    <BaseHead
+      title="Research Workspace · AI Institute"
+      description="A bounded public analysis view connecting AI Institute reports, theses, lanes, stocks, evidence, dissent, and shadow odds."
+    />
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+  </head>
+  <body>
+    <Header />
+    <main class="research-network workspace-page" data-horizon="20d">
+      <section class="network-hero workspace-hero">
+        <div>
+          <div class="network-kicker">AI Institute · Public Analysis Workspace</div>
+          <h1>研究注意力工作台</h1>
+          <p>{workspace.summary?.lead}</p>
+          <div class="network-actions">
+            <a href="#focus">当前焦点</a>
+            <a href="#broadcast">关系地图</a>
+            <a href="#reader">今日读法</a>
+            <a href="#methodology">方法与边界</a>
+          </div>
+        </div>
+        <aside class="network-privacy workspace-boundary">
+          <span>{workspace.statusLabel}</span>
+          <strong>ANALYSIS / DISPLAY</strong>
+          <p>{workspace.summary?.boundary}</p>
+          <em>{workspace.asOfDate} · {workspace.sourceHash}</em>
+        </aside>
+      </section>
+
+      <section class="network-stat-grid workspace-stats" aria-label="Current public workspace coverage">
+        <div><span>Focus</span><strong>{workspace.coverage?.focusItems || 0}</strong><em>有限容量阅读主线</em></div>
+        <div><span>Lanes</span><strong>{workspace.coverage?.focusLanes || 0}</strong><em>当前连接赛道</em></div>
+        <div><span>Stocks</span><strong>{workspace.coverage?.focusStocks || 0}</strong><em>可点击研究暴露</em></div>
+        <div><span>Sources</span><strong>{workspace.coverage?.focusReports || 0}</strong><em>公开报告入口</em></div>
+      </section>
+
+      {reader && (
+        <section class="workspace-reader" id="reader">
+          <div class="workspace-section-head">
+            <div><span>Reader signal</span><h2>先读今日综合，再进入关系图</h2></div>
+            <a href={reader.href}>打开完整 Reader Report</a>
+          </div>
+          <div class="reader-lead">
+            <a class="reader-lead-copy" href={reader.href}>
+              <span>{reader.date}</span>
+              <h3>{reader.title}</h3>
+              <p>{reader.summary}</p>
+            </a>
+            <div class="reader-priority-grid">
+              {(reader.priorityViews || []).map((view, index) => (
+                <a href={view.href || reader.href}>
+                  <span>0{index + 1}</span>
+                  <strong>{view.title}</strong>
+                  <p>{view.whyItMatters}</p>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      <section class="workspace-controls" aria-label="Workspace controls">
+        <label for="workspaceSearch">Search focus</label>
+        <input id="workspaceSearch" type="search" placeholder="搜索 thesis、赛道、ticker、变化或报告..." />
+        <div class="workspace-horizons" role="group" aria-label="Shadow odds horizon">
+          {(["5d", "20d", "60d"]).map((horizon) => (
+            <button type="button" data-horizon-target={horizon} class:list={{ active: horizon === "20d" }}>
+              {horizon.toUpperCase()}
+            </button>
+          ))}
+        </div>
+        <label for="workspaceSort">Sort</label>
+        <select id="workspaceSort">
+          <option value="focus">Focus score</option>
+          <option value="dissent">Dissent</option>
+          <option value="move">Odds move</option>
+          <option value="recency">Recency</option>
+        </select>
+      </section>
+
+      <section class="workspace-focus-layout" id="focus">
+        <div class="workspace-focus-board">
+          <div class="workspace-board-head">
+            <div><span>Current snapshot</span><h2>12 条当前焦点</h2></div>
+            <p>{workspace.selection?.scoreMeaning}</p>
+          </div>
+          <div class="workspace-focus-list" id="workspaceFocusList">
+            {focusItems.map((item) => (
+              <article
+                class:list={["workspace-focus-row", { dissent: item.slotType === "dissent_safeguard" }]}
+                data-workspace-id={item.id}
+                data-research-href={item.thesis.href}
+                data-search={searchText(item.thesis.title, item.thesis.titleEn, item.lane.title, item.whatChanged, item.whyItMatters, item.stocks.map((stock) => stock.ticker), item.sources.map((source) => source.title))}
+                data-focus={item.focusScore}
+                data-dissent={item.dissentScore}
+                data-move={Math.abs(Number(quote(item, "20d")?.movePp || 0))}
+                data-date={item.evidence.lastSeen}
+                tabindex="0"
+                role="link"
+              >
+                <div class="focus-rank">
+                  <strong>{String(item.rank).padStart(2, "0")}</strong>
+                  <span>{item.slotLabel}</span>
+                  <i style={`--score:${item.focusScore}%`}></i>
+                </div>
+                <div class="focus-copy">
+                  <div class="focus-meta">
+                    <a href={item.lane.href}>{item.lane.title}</a>
+                    <span>{item.thesis.actionLabel}</span>
+                    <em>{item.evidence.lastSeen}</em>
+                  </div>
+                  <h3><a href={item.thesis.href}>{item.thesis.title}</a></h3>
+                  <div class="focus-analysis">
+                    <p><b>变化</b>{item.whatChanged}</p>
+                    <p><b>意义</b>{item.whyItMatters}</p>
+                  </div>
+                  <div class="focus-links">
+                    <div class="focus-stock-links">
+                      {item.stocks.map((stock) => <a href={stock.href} title={stock.name}>{stock.ticker}</a>)}
+                    </div>
+                    <div class="focus-source-links">
+                      {item.sources.slice(0, 3).map((source, index) => <a href={source.href}>R{index + 1} · {source.date}</a>)}
+                    </div>
+                  </div>
+                </div>
+                <div class="focus-signals">
+                  <div class="focus-score-pair">
+                    <span><em>FOCUS</em><strong>{item.focusScore}</strong></span>
+                    <span><em>DISSENT</em><strong>{item.dissentScore}</strong></span>
+                  </div>
+                  <div class="evidence-split" title={`${item.evidence.supports} support / ${item.evidence.risks} risk`}>
+                    <i class="support" style={`width:${Math.round(item.evidence.supports / Math.max(1, item.evidence.supports + item.evidence.risks) * 100)}%`}></i>
+                    <i class="risk"></i>
+                  </div>
+                  <div class="evidence-counts"><span>+{item.evidence.supports}</span><span>−{item.evidence.risks}</span><span>{item.evidence.analystCount} analysts</span></div>
+                  <div class="activity-spark" aria-label="Recent evidence activity">
+                    {(item.activity || []).map((row) => <i style={`height:${Math.max(3, Math.round(Number(row.events || 0) / activityMax(item) * 100))}%`} title={`${row.date}: ${row.events}`}></i>)}
+                  </div>
+                </div>
+                <div class="focus-odds">
+                  {(item.odds?.horizons || []).map((line) => (
+                    <span data-h={line.horizon}>
+                      <em>{line.horizon.toUpperCase()}</em>
+                      <strong>{probability(line.pHouse)}</strong>
+                      <i>{signed(line.movePp)}</i>
+                    </span>
+                  ))}
+                  <small>shadow · uncalibrated</small>
+                </div>
+              </article>
+            ))}
+          </div>
+          <div class="workspace-empty" id="workspaceEmpty" hidden>没有匹配当前筛选的公开焦点。</div>
+        </div>
+
+        <aside class="workspace-dissent-panel">
+          <div class="workspace-side-label">Dissent safeguard</div>
+          <h2>反方保留槽</h2>
+          <p>最后两个位置不按总关注分排序，而是优先保留支持与风险证据最接近的公开主线。</p>
+          <div class="dissent-list">
+            {dissentItems.map((item) => (
+              <button type="button" data-select-focus={item.id}>
+                <span>{item.dissentScore}</span>
+                <strong>{item.thesis.title}</strong>
+                <em>{item.evidence.supports} support / {item.evidence.risks} risk</em>
+              </button>
+            ))}
+          </div>
+          <div class="workspace-lens-key">
+            <div><i class="blue"></i><span>Focus</span><strong>阅读排序</strong></div>
+            <div><i class="red"></i><span>Dissent</span><strong>证据分歧</strong></div>
+            <div><i class="green"></i><span>Support</span><strong>支持证据</strong></div>
+            <div><i class="yellow"></i><span>Odds</span><strong>未校准影子线</strong></div>
+          </div>
+          <a class="workspace-side-link" href="/investor/odds/">查看完整赔率盘</a>
+        </aside>
+      </section>
+
+      <section class="workspace-broadcast-section" id="broadcast">
+        <div class="workspace-section-head">
+          <div><span>Broadcast map</span><h2>从一条主线，看它传播到哪里</h2></div>
+          <p>{workspace.broadcastMap?.interpretation}</p>
+        </div>
+        <div class="workspace-atlas">
+          <nav class="workspace-atlas-index" aria-label="Select a focus thesis">
+            {focusItems.map((item) => (
+              <button type="button" class:list={{ active: item.id === firstItem?.id }} data-atlas-focus={item.id}>
+                <span>{String(item.rank).padStart(2, "0")}</span>
+                <strong>{item.thesis.title}</strong>
+                <em>{item.lane.title}</em>
+              </button>
+            ))}
+          </nav>
+          <div class="workspace-atlas-main">
+            <div class="workspace-map-stage" id="workspaceMapStage" aria-label="Interactive public research relation map">
+              <svg id="workspaceMapEdges" aria-hidden="true"></svg>
+              <div id="workspaceMapNodes">
+                {firstItem && (
+                  <>
+                    <a class="broadcast-node thesis" style="--x:50%;--y:45%" href={firstItem.thesis.href}><span>THESIS</span><strong>{firstItem.thesis.title}</strong></a>
+                    <a class="broadcast-node lane" style="--x:16%;--y:24%" href={firstItem.lane.href}><span>LANE</span><strong>{firstItem.lane.title}</strong></a>
+                    {firstItem.stocks.slice(0, 3).map((stock, index) => <a class="broadcast-node stock" style={`--x:82%;--y:${20 + index * 18}%`} href={stock.href}><span>STOCK</span><strong>{stock.ticker}</strong></a>)}
+                  </>
+                )}
+              </div>
+              <div class="workspace-map-axis x">REPORTS / EVIDENCE</div>
+              <div class="workspace-map-axis y">LANE → EXPOSURE</div>
+            </div>
+            <aside class="workspace-inspector" id="workspaceInspector">
+              {firstItem && (
+                <>
+                  <div class="inspector-head"><span>Selected focus</span><strong>{String(firstItem.rank).padStart(2, "0")}</strong></div>
+                  <h3>{firstItem.thesis.title}</h3>
+                  <p>{firstItem.whatChanged}</p>
+                  <div class="inspector-metrics"><span><em>Focus</em><strong>{firstItem.focusScore}</strong></span><span><em>Dissent</em><strong>{firstItem.dissentScore}</strong></span><span><em>20D</em><strong>{probability(quote(firstItem, "20d")?.pHouse)}</strong></span></div>
+                  <div class="inspector-signals"><div><span>确认</span>{firstItem.confirmations.slice(0, 2).map((signal) => <p>{signal}</p>)}</div><div><span>证伪</span>{firstItem.falsifiers.slice(0, 2).map((signal) => <p>{signal}</p>)}</div></div>
+                  <a class="inspector-primary" href={firstItem.thesis.href}>打开 thesis 详情</a>
+                </>
+              )}
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="workspace-lanes-section">
+        <div class="workspace-section-head">
+          <div><span>Active lanes</span><h2>当前焦点覆盖的赛道</h2></div>
+          <p>赛道只聚合这 12 条焦点中的公开关系；完整 50 条赛道仍保留在主线网络中。</p>
+        </div>
+        <div class="workspace-lane-grid">
+          {(workspace.laneSummaries || []).map((lane) => (
+            <a href={lane.href}>
+              <header><span>{lane.focusCount} focus</span><em>{lane.averageFocusScore} avg</em></header>
+              <h3>{lane.title}</h3>
+              <p>{lane.stocks.slice(0, 6).map((stock) => stock.ticker).join(" · ")}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="workspace-methodology" id="methodology">
+        <div class="workspace-section-head">
+          <div><span>Methodology and limits</span><h2>读者看到什么，也要知道没有看到什么</h2></div>
+          <p>{workspace.selection?.historyNote}</p>
+        </div>
+        <div class="workspace-method-grid">
+          <article><span>01 · Capacity</span><h3>固定 12 条</h3><p>有限容量迫使页面做排序，避免 100 条 thesis 和完整报告图谱再次淹没读者。</p></article>
+          <article><span>02 · Score</span><h3>不是概率</h3><p>{workspace.selection?.scoreMeaning}</p></article>
+          <article><span>03 · Dissent</span><h3>保留反方</h3><p>{workspace.methodology?.safeguards?.[1]}</p></article>
+          <article><span>04 · Boundary</span><h3>只做公开分析</h3><p>{workspace.summary?.boundary}</p></article>
+        </div>
+        <div class="workspace-boundary-table">
+          <div><strong>Included</strong><p>{workspace.methodology?.inputs?.join("；")}</p></div>
+          <div><strong>Excluded</strong><p>{workspace.methodology?.excluded?.join("；")}</p></div>
+        </div>
+      </section>
+    </main>
+
+    <script type="application/json" id="workspacePayload" set:html={payloadJson}></script>
+    <script>
+      const page = document.querySelector(".workspace-page");
+      const search = document.getElementById("workspaceSearch");
+      const sort = document.getElementById("workspaceSort");
+      const list = document.getElementById("workspaceFocusList");
+      const empty = document.getElementById("workspaceEmpty");
+      const rows = [...document.querySelectorAll(".workspace-focus-row")];
+      const horizonButtons = [...document.querySelectorAll("[data-horizon-target]")];
+      const atlasButtons = [...document.querySelectorAll("[data-atlas-focus]")];
+      const selectButtons = [...document.querySelectorAll("[data-select-focus]")];
+      const payloadElement = document.getElementById("workspacePayload");
+      const payload = payloadElement ? JSON.parse(payloadElement.textContent || "{}") : {};
+      const items = payload.focusItems || [];
+      const itemById = new Map(items.map((item) => [item.id, item]));
+      const stage = document.getElementById("workspaceMapStage");
+      const nodeLayer = document.getElementById("workspaceMapNodes");
+      const edgeLayer = document.getElementById("workspaceMapEdges");
+      const inspector = document.getElementById("workspaceInspector");
+      let selectedId = items[0]?.id || "";
+
+      function activeHorizon() {
+        return page?.dataset.horizon || "20d";
+      }
+
+      function applyFilters() {
+        const query = String(search?.value || "").trim().toLowerCase();
+        let visible = 0;
+        rows.forEach((row) => {
+          const matches = !query || String(row.dataset.search || "").toLowerCase().includes(query);
+          row.hidden = !matches;
+          if (matches) visible += 1;
+        });
+        if (empty) empty.hidden = visible > 0;
+      }
+
+      function sortRows() {
+        const mode = sort?.value || "focus";
+        rows
+          .sort((left, right) => {
+            if (mode === "recency") return String(right.dataset.date || "").localeCompare(String(left.dataset.date || ""));
+            const key = mode === "dissent" ? "dissent" : mode === "move" ? "move" : "focus";
+            return Number(right.dataset[key] || 0) - Number(left.dataset[key] || 0);
+          })
+          .forEach((row) => list?.appendChild(row));
+      }
+
+      function makeNode({ type, label, meta, href, x, y, id }) {
+        const node = document.createElement("a");
+        node.className = `broadcast-node ${type}`;
+        node.href = href;
+        node.dataset.nodeId = id;
+        node.style.setProperty("--x", `${x}%`);
+        node.style.setProperty("--y", `${y}%`);
+        const typeLabel = document.createElement("span");
+        typeLabel.textContent = type.toUpperCase();
+        const title = document.createElement("strong");
+        title.textContent = label;
+        node.append(typeLabel, title);
+        if (meta) {
+          const detail = document.createElement("em");
+          detail.textContent = meta;
+          node.append(detail);
+        }
+        nodeLayer?.appendChild(node);
+        return node;
+      }
+
+      function nodePositions(item) {
+        const mobile = (stage?.clientWidth || 0) < 680;
+        const activeQuote = item.odds.horizons.find((line) => line.horizon === activeHorizon());
+        const oddsLabel = `${activeHorizon().toUpperCase()} ${activeQuote ? Math.round(activeQuote.pHouse * 100) : "--"}%`;
+        const nodes = [];
+        if (mobile) {
+          nodes.push({ id: item.id, type: "thesis", label: item.thesis.title, meta: `${item.focusScore} focus`, href: item.thesis.href, x: 50, y: 10 });
+          nodes.push({ id: `lane:${item.lane.id}`, type: "lane", label: item.lane.title, meta: "赛道", href: item.lane.href, x: 50, y: 25 });
+          nodes.push({ id: "odds:surface", type: "odds", label: oddsLabel, meta: "shadow / uncalibrated", href: "/investor/odds/", x: 50, y: 38 });
+          item.stocks.slice(0, 6).forEach((stock, index) => nodes.push({ id: `stock:${stock.ticker}`, type: "stock", label: stock.ticker, meta: stock.name, href: stock.href, x: index % 2 ? 74 : 26, y: 52 + Math.floor(index / 2) * 10 }));
+          item.sources.slice(0, 4).forEach((source, index) => nodes.push({ id: `report:${index}`, type: "report", label: source.title, meta: source.date, href: source.href, x: index % 2 ? 72 : 28, y: 83 + Math.floor(index / 2) * 10 }));
+          return nodes;
+        }
+        nodes.push({ id: item.id, type: "thesis", label: item.thesis.title, meta: `${item.focusScore} focus`, href: item.thesis.href, x: 50, y: 44 });
+        nodes.push({ id: `lane:${item.lane.id}`, type: "lane", label: item.lane.title, meta: "赛道", href: item.lane.href, x: 16, y: 22 });
+        nodes.push({ id: "odds:surface", type: "odds", label: oddsLabel, meta: "shadow / uncalibrated", href: "/investor/odds/", x: 16, y: 62 });
+        item.stocks.slice(0, 6).forEach((stock, index) => nodes.push({ id: `stock:${stock.ticker}`, type: "stock", label: stock.ticker, meta: stock.name, href: stock.href, x: 83, y: 12 + index * 13 }));
+        item.sources.slice(0, 4).forEach((source, index) => nodes.push({ id: `report:${index}`, type: "report", label: source.title, meta: source.date, href: source.href, x: 17 + index * 22, y: 90 }));
+        return nodes;
+      }
+
+      function drawEdges(centerNode, otherNodes) {
+        if (!stage || !edgeLayer || !centerNode) return;
+        const stageRect = stage.getBoundingClientRect();
+        const centerRect = centerNode.getBoundingClientRect();
+        const centerX = centerRect.left - stageRect.left + centerRect.width / 2;
+        const centerY = centerRect.top - stageRect.top + centerRect.height / 2;
+        edgeLayer.setAttribute("viewBox", `0 0 ${stageRect.width} ${stageRect.height}`);
+        edgeLayer.replaceChildren();
+        otherNodes.forEach((node) => {
+          const rect = node.getBoundingClientRect();
+          const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+          line.setAttribute("x1", String(centerX));
+          line.setAttribute("y1", String(centerY));
+          line.setAttribute("x2", String(rect.left - stageRect.left + rect.width / 2));
+          line.setAttribute("y2", String(rect.top - stageRect.top + rect.height / 2));
+          const type = [...node.classList].find((name) => ["lane", "stock", "report", "odds"].includes(name)) || "default";
+          line.setAttribute("class", `edge-${type}`);
+          edgeLayer.appendChild(line);
+        });
+      }
+
+      function renderInspector(item) {
+        if (!inspector) return;
+        inspector.replaceChildren();
+        const head = document.createElement("div");
+        head.className = "inspector-head";
+        const label = document.createElement("span");
+        label.textContent = "Selected focus";
+        const rank = document.createElement("strong");
+        rank.textContent = String(item.rank).padStart(2, "0");
+        head.append(label, rank);
+        const title = document.createElement("h3");
+        title.textContent = item.thesis.title;
+        const changed = document.createElement("p");
+        changed.textContent = item.whatChanged;
+        const metrics = document.createElement("div");
+        metrics.className = "inspector-metrics";
+        const activeQuote = item.odds.horizons.find((line) => line.horizon === activeHorizon());
+        [["Focus", item.focusScore], ["Dissent", item.dissentScore], [activeHorizon().toUpperCase(), activeQuote ? `${Math.round(activeQuote.pHouse * 100)}%` : "--"]].forEach(([name, value]) => {
+          const cell = document.createElement("span");
+          const key = document.createElement("em");
+          const number = document.createElement("strong");
+          key.textContent = String(name);
+          number.textContent = String(value);
+          cell.append(key, number);
+          metrics.appendChild(cell);
+        });
+        const signals = document.createElement("div");
+        signals.className = "inspector-signals";
+        [["确认", item.confirmations], ["证伪", item.falsifiers]].forEach(([name, values]) => {
+          const group = document.createElement("div");
+          const heading = document.createElement("span");
+          heading.textContent = String(name);
+          group.appendChild(heading);
+          (values || []).slice(0, 2).forEach((value) => {
+            const row = document.createElement("p");
+            row.textContent = value;
+            group.appendChild(row);
+          });
+          signals.appendChild(group);
+        });
+        const link = document.createElement("a");
+        link.className = "inspector-primary";
+        link.href = item.thesis.href;
+        link.textContent = "打开 thesis 详情";
+        inspector.append(head, title, changed, metrics, signals, link);
+      }
+
+      function renderAtlas(id) {
+        const item = itemById.get(id);
+        if (!item || !nodeLayer) return;
+        selectedId = id;
+        atlasButtons.forEach((button) => button.classList.toggle("active", button.dataset.atlasFocus === id));
+        nodeLayer.replaceChildren();
+        const nodes = nodePositions(item).map(makeNode);
+        renderInspector(item);
+        requestAnimationFrame(() => drawEdges(nodes[0], nodes.slice(1)));
+      }
+
+      horizonButtons.forEach((button) => button.addEventListener("click", () => {
+        const horizon = button.dataset.horizonTarget || "20d";
+        if (page) page.dataset.horizon = horizon;
+        horizonButtons.forEach((item) => item.classList.toggle("active", item === button));
+        renderAtlas(selectedId);
+      }));
+      atlasButtons.forEach((button) => button.addEventListener("click", () => renderAtlas(button.dataset.atlasFocus || "")));
+      selectButtons.forEach((button) => button.addEventListener("click", () => {
+        renderAtlas(button.dataset.selectFocus || "");
+        document.getElementById("broadcast")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }));
+      search?.addEventListener("input", applyFilters);
+      sort?.addEventListener("change", sortRows);
+      window.addEventListener("resize", () => renderAtlas(selectedId));
+      sortRows();
+      renderAtlas(selectedId);
+    </script>
+  </body>
+</html>
