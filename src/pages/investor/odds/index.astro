@@ -1,0 +1,249 @@
+---
+import BaseHead from "../../../components/BaseHead.astro";
+import Header from "../../../components/Header.astro";
+import { readOddsBoard } from "../../../lib/investor-generated.js";
+import {
+  oddsLine,
+  probabilityLabel,
+  signedPoints,
+} from "../../../lib/investor-market.js";
+import "../../../styles/research-network.css";
+import "../../../styles/odds-board.css";
+
+const odds = readOddsBoard();
+const thesisLines = odds.thesisLines || [];
+const laneLines = odds.laneLines || [];
+const stockSurfaces = odds.stockSurfaces || [];
+const horizonRows = odds.configuration?.horizons || [];
+const line = (surface, horizon) => oddsLine(surface, horizon);
+const searchText = (...values) =>
+  values.flat(Infinity).filter(Boolean).join(" ").replaceAll('"', "&quot;");
+const tone = (value) => {
+  const probability = Number(value || 0.5);
+  if (probability >= 0.55) return "positive";
+  if (probability <= 0.45) return "negative";
+  return "neutral";
+};
+const topMoves = [...thesisLines]
+  .sort(
+    (a, b) =>
+      Math.abs(Number(b.lastTick?.movesPp?.["20d"] || 0)) -
+      Math.abs(Number(a.lastTick?.movesPp?.["20d"] || 0)),
+  )
+  .slice(0, 6);
+---
+
+<!doctype html>
+<html lang="zh-CN" data-lang="zh">
+  <head>
+    <BaseHead
+      title="赔率盘 · AI Institute"
+      description="AI Institute shadow oddsboard for thesis contracts, evolving lane indices, and stock-linked research exposure across 5, 20, and 60 trading days."
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="research-network odds-board" data-horizon="20d">
+      <section class="network-hero odds-hero">
+        <div>
+          <div class="network-kicker">AI Institute · Odds Surface</div>
+          <h1>赔率盘</h1>
+          <p>{odds.summary?.lead}</p>
+          <div class="network-actions">
+            <a href="#contracts">主线合约</a>
+            <a href="#lanes">赛道指数</a>
+            <a href="#stocks">股票暴露</a>
+            <a href="#methodology">方法与边界</a>
+          </div>
+        </div>
+        <aside class="network-privacy odds-shadow-note">
+          <span>{odds.statusLabel}</span>
+          <strong>SHADOW / 未校准</strong>
+          <p>{odds.summary?.publicNote}</p>
+          <em>{odds.asOfDate} · {odds.sourceHash}</em>
+        </aside>
+      </section>
+
+      <section class="network-stat-grid odds-stats" aria-label="Odds coverage">
+        <div><span>Contracts</span><strong>{odds.coverage?.shadowPricedTheses || 0}</strong><em>主线影子报价</em></div>
+        <div><span>Lane indices</span><strong>{odds.coverage?.laneIndices || 0}</strong><em>成员隐含曲线</em></div>
+        <div><span>Stock surfaces</span><strong>{odds.coverage?.stockExposureSurfaces || 0}</strong><em>关联合约均值</em></div>
+        <div><span>Settlements</span><strong>{odds.coverage?.settlements || 0}</strong><em>尚未校准</em></div>
+      </section>
+
+      <section class="odds-controlbar" aria-label="Odds board controls">
+        <label for="oddsSearch">搜索赔率盘</label>
+        <input id="oddsSearch" type="search" placeholder="搜索 thesis、赛道、ticker 或曲线形态..." />
+        <div class="odds-horizon-tabs" role="group" aria-label="Active odds horizon">
+          {horizonRows.map((horizon) => (
+            <button type="button" data-horizon-target={horizon.key} class:list={{ active: horizon.key === "20d" }}>
+              {horizon.key.toUpperCase()}<span>+{horizon.thresholdPct}%</span>
+            </button>
+          ))}
+        </div>
+        <label class="odds-sort-label" for="oddsSort">排序</label>
+        <select id="oddsSort">
+          <option value="probability">House P</option>
+          <option value="move">最新移动</option>
+          <option value="confidence">输入置信度</option>
+        </select>
+      </section>
+
+      <section class="odds-move-strip" aria-label="Largest latest evidence moves">
+        <div class="section-mini-head"><span>Latest ticks</span><strong>20D 最大证据移动</strong></div>
+        <div>
+          {topMoves.map((item) => (
+            <a href={item.href} class="odds-searchable" data-search={searchText(item.title, item.lane)}>
+              <span>{signedPoints(item.lastTick?.movesPp?.["20d"] || 0)}</span>
+              <strong>{item.title}</strong>
+              <em>{item.lastTick?.date}</em>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="thesis-section odds-contract-section" id="contracts">
+        <div class="section-headline">
+          <span>Thesis contracts</span>
+          <h2>主线合约期限结构</h2>
+          <p>每条合约的事件是：方向签名后的股票篮子在对应期限内跑赢基准并超过阈值；证伪条件是提前结算 NO 的 knock-out。</p>
+        </div>
+        <div class="odds-contract-board" id="oddsContractBoard">
+          <div class="odds-contract-head" aria-hidden="true">
+            <span>State</span><span>Contract</span><span data-h="5d">5D</span><span data-h="20d">20D</span><span data-h="60d">60D</span><span>Confidence</span><span>Curve</span><span>Tick</span>
+          </div>
+          {thesisLines.map((item) => (
+            <a
+              href={item.href}
+              class="odds-contract-row odds-searchable"
+              data-search={searchText(item.title, item.titleEn, item.lane, item.curve?.labelZh, item.settlement?.basket?.map((stock) => stock.ticker))}
+              data-p5={line(item, "5d")?.pHouse || 0}
+              data-p20={line(item, "20d")?.pHouse || 0}
+              data-p60={line(item, "60d")?.pHouse || 0}
+              data-move={Math.abs(Number(item.lastTick?.movesPp?.["20d"] || 0))}
+              data-confidence={item.confidence?.score || 0}
+            >
+              <span class="odds-state">{item.pricingStateLabel}</span>
+              <div class="odds-contract-identity"><strong>{item.title}</strong><span>{item.lane}</span><em>{item.settlement?.basket?.slice(0, 5).map((stock) => stock.ticker).join(" · ")}</em></div>
+              {item.termStructure.map((quote) => (
+                <div class={`odds-cell tone-${tone(quote.pHouse)}`} data-h={quote.horizon}>
+                  <strong>{probabilityLabel(quote.pHouse)}</strong><i><b style={`width:${quote.pHousePct}%`}></b></i><span>{quote.fairDecimalOdds.toFixed(2)}x</span>
+                </div>
+              ))}
+              <div class="odds-confidence"><strong>{item.confidence?.score}</strong><i><b style={`width:${item.confidence?.score}%`}></b></i></div>
+              <div class="odds-curve"><strong>{item.curve?.labelZh}</strong><span>{signedPoints(item.curve?.slopePp)}</span></div>
+              <div class="odds-tick"><strong>{signedPoints(item.lastTick?.movesPp?.["20d"] || 0)}</strong><span>{item.lastTick?.date}</span></div>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="thesis-section" id="lanes">
+        <div class="section-headline">
+          <span>Living indices</span>
+          <h2>赛道成员隐含赔率</h2>
+          <p>当前赛道线由成员合约按输入置信度和证据密度加权形成。独立的赛道询价尚未转换成概率，因此 divergence 与内部套利旗标保持待定。</p>
+        </div>
+        <div class="odds-lane-grid">
+          {laneLines.map((item) => (
+            <a class="odds-lane-card odds-searchable" href={item.href} data-search={searchText(item.title, item.titleEn, item.stockTickers, item.curve?.labelZh)}>
+              <header><span>{item.pricingStateLabel}</span><em>{item.memberCount} contracts</em></header>
+              <h3>{item.title}</h3>
+              <div class="odds-mini-curve">
+                {item.termStructure.map((quote) => (
+                  <span data-h={quote.horizon}><em>{quote.horizon.toUpperCase()}</em><strong>{probabilityLabel(quote.pHouse)}</strong><i><b style={`width:${quote.pHousePct}%`}></b></i></span>
+                ))}
+              </div>
+              <footer><span>{item.curve?.labelZh} · {signedPoints(item.curve?.slopePp)}</span><em>{item.confidence?.score} confidence</em></footer>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="thesis-section" id="stocks">
+        <div class="section-headline">
+          <span>Exposure surfaces</span>
+          <h2>股票关联合约赔率</h2>
+          <p>这里衡量的是“该股票连接的研究主线有多强”，不是股票上涨概率。对冲、观察、同业和核心映射使用不同权重，但尚未处理跨主线相关性。</p>
+        </div>
+        <div class="odds-stock-grid">
+          {stockSurfaces.map((item) => (
+            <a class="odds-stock-card odds-searchable" href={item.href} data-search={searchText(item.ticker, item.name, item.market, item.roles, item.linkedContracts?.map((contract) => contract.title))}>
+              <span>{item.market} · {item.linkedThesisCount} contracts</span>
+              <strong>{item.ticker}</strong>
+              <em>{item.name}</em>
+              <div>{item.termStructure.map((quote) => <b data-h={quote.horizon}>{quote.horizon.toUpperCase()} {probabilityLabel(quote.pHouse)}</b>)}</div>
+              <small>{item.curve?.labelZh} · 非股票方向概率</small>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="thesis-section odds-methodology" id="methodology">
+        <div class="section-headline">
+          <span>Methodology and limits</span>
+          <h2>当前能算什么，不能算什么</h2>
+          <p>影子盘的价值是先建立可结算合约和数据缺口，而不是用漂亮数字掩盖尚未接入的市场事实。</p>
+        </div>
+        <div class="odds-method-grid">
+          <article><span>01 · Contract</span><h3>主线是原子合约</h3><p>{odds.configuration?.contractRule}</p></article>
+          <article><span>02 · Lane</span><h3>赛道是动态指数</h3><p>{odds.configuration?.laneRule}</p></article>
+          <article><span>03 · Stock</span><h3>股票是研究暴露</h3><p>{odds.configuration?.stockRule}</p></article>
+          <article><span>04 · Shrinkage</span><h3>概率向 50% 收缩</h3><p>{odds.configuration?.shadowProbabilityMethod?.shrinkage}</p></article>
+        </div>
+        <div class="odds-availability-table">
+          <div><strong>p_house</strong><span>已发布</span><p>证据驱动、未校准的影子概率。</p></div>
+          <div><strong>p_market / edge</strong><span>待接价</span><p>需要篮子、基准与期限内 move-capture。</p></div>
+          <div><strong>payoff / EV</strong><span>待询价</span><p>需要情景收益与损失的不对称拆分。</p></div>
+          <div><strong>Kelly / book</strong><span>禁用</span><p>{odds.configuration?.dynamicKelly?.reason}</p></div>
+          <div><strong>Calibration</strong><span>0 settlements</span><p>需要机械结算、Brier 与基准率历史。</p></div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const board = document.querySelector(".odds-board");
+      const contractBoard = document.getElementById("oddsContractBoard");
+      const search = document.getElementById("oddsSearch");
+      const sort = document.getElementById("oddsSort");
+      const horizonButtons = [...document.querySelectorAll("[data-horizon-target]")];
+      const rows = [...document.querySelectorAll(".odds-contract-row")];
+      const searchable = [...document.querySelectorAll(".odds-searchable")];
+      const probabilityKey = { "5d": "p5", "20d": "p20", "60d": "p60" };
+
+      function activeHorizon() {
+        return board?.dataset.horizon || "20d";
+      }
+
+      function sortRows() {
+        const mode = sort?.value || "probability";
+        const key = probabilityKey[activeHorizon()] || "p20";
+        rows
+          .sort((left, right) => {
+            const field = mode === "move" ? "move" : mode === "confidence" ? "confidence" : key;
+            return Number(right.dataset[field] || 0) - Number(left.dataset[field] || 0);
+          })
+          .forEach((row) => contractBoard?.appendChild(row));
+      }
+
+      function applySearch() {
+        const query = String(search?.value || "").trim().toLowerCase();
+        searchable.forEach((item) => {
+          item.hidden = Boolean(query && !String(item.dataset.search || "").toLowerCase().includes(query));
+        });
+      }
+
+      horizonButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const horizon = button.dataset.horizonTarget || "20d";
+          if (board) board.dataset.horizon = horizon;
+          horizonButtons.forEach((item) => item.classList.toggle("active", item === button));
+          sortRows();
+        });
+      });
+      search?.addEventListener("input", applySearch);
+      sort?.addEventListener("change", sortRows);
+      sortRows();
+    </script>
+  </body>
+</html>

@@ -1,8 +1,9 @@
 ---
 import BaseHead from "../../../components/BaseHead.astro";
 import Header from "../../../components/Header.astro";
-import { readResearchNetwork } from "../../../lib/investor-generated.js";
-import { buildLaneIndex, buildStockIndex, formatDate, lanePath, mappingSourceLabel, pct, stockPath, thesisPath } from "../../../lib/investor-market.js";
+import OddsSurface from "../../../components/investor/OddsSurface.astro";
+import { readOddsBoard, readResearchNetwork } from "../../../lib/investor-generated.js";
+import { buildLaneIndex, buildOddsIndexes, buildStockIndex, formatDate, lanePath, mappingSourceLabel, pct, stockPath, thesisPath } from "../../../lib/investor-market.js";
 import "../../../styles/research-network.css";
 
 export function getStaticPaths() {
@@ -10,17 +11,19 @@ export function getStaticPaths() {
   const theses = network.theses || [];
   const lanes = buildLaneIndex(network);
   const stocks = buildStockIndex(network);
+  const odds = buildOddsIndexes(readOddsBoard()).theses;
   return theses.map((thesis) => ({
     params: { id: thesis.id },
     props: {
       thesis,
+      oddsSurface: odds.get(thesis.id) || null,
       lane: lanes.find((item) => item.slug === (thesis.laneHref || lanePath(thesis)).split("/").filter(Boolean).at(-1)),
       relatedStocks: stocks.filter((stock) => (thesis.stockUniverse || []).some((item) => item.ticker === stock.ticker)),
     },
   }));
 }
 
-const { thesis, lane, relatedStocks } = Astro.props;
+const { thesis, lane, relatedStocks, oddsSurface } = Astro.props;
 const events = (thesis.timeline || []).flatMap((group) => (group.events || []).map((event) => ({ ...event, date: group.date }))).slice(0, 18);
 ---
 
@@ -42,6 +45,7 @@ const events = (thesis.timeline || []).flatMap((group) => (group.events || []).m
           <p>{thesis.coreView}</p>
           <div class="network-actions">
             <a href="/investor/research-network/">研究网络</a>
+            <a href="/investor/odds/">赔率盘</a>
             <a href={lanePath(thesis)}>{thesis.lane || thesis.practical?.sectorLane || "赛道页"}</a>
             <a href="/investor/portfolio/">加入组合台</a>
           </div>
@@ -58,6 +62,12 @@ const events = (thesis.timeline || []).flatMap((group) => (group.events || []).m
         <div><span>Evidence</span><strong>{thesis.eventCount}</strong><em>时间线事件</em></div>
         <div><span>Stocks</span><strong>{(thesis.stockUniverse || []).length}</strong><em>候选标的</em></div>
       </section>
+
+      <OddsSurface
+        surface={oddsSurface}
+        title="主线合约赔率"
+        description="该 thesis 股票篮子相对待映射基准的 5 / 20 / 60 交易日影子概率。"
+      />
 
       <section class="detail-grid">
         <article class="detail-panel is-main">

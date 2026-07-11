@@ -138,6 +138,10 @@ export function readMarketOntology() {
   return rewriteInvestorPaths(readJson("market-ontology.json"));
 }
 
+export function readOddsBoard() {
+  return rewriteInvestorPaths(readJson("odds-board.json"));
+}
+
 export function readAnalystPersonaTimelines() {
   return rewriteInvestorPaths(readJson("analyst-persona-timelines.json"));
 }

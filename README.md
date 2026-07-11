@@ -70,6 +70,10 @@ Vibe turns that workflow into a usable product surface:
   human-readable memos, research-chain signals, and risk alerts.
 - Individual thesis, lane, and stock pages connected to a browser-local
   portfolio tracker.
+- A 5/20/60-day shadow oddsboard that turns theses into falsifiable contracts,
+  lanes into member-implied indices, and stocks into linked research-exposure
+  surfaces. Market-implied odds, EV, Kelly sizing, and calibration remain
+  disabled until the required price and settlement inputs exist.
 - A timeline tracker that shows how briefs, reports, recaps, and living theses
   evolve over time.
 - A searchable report library for AI analyst outputs.
@@ -98,6 +102,7 @@ Vibe turns that workflow into a usable product surface:
 | `/investor/daily/` | Latest daily morning brief dashboard |
 | `/investor/panorama/` | Weekly calls, positioning, lane allocation, and stock sheet |
 | `/investor/research-network/` | Thesis, lane, stock, evidence, and recap network |
+| `/investor/odds/` | Shadow thesis contracts, lane-index term structures, and stock-linked odds surfaces |
 | `/investor/theses/[id]/` | Individual living-thesis timeline and evidence page |
 | `/investor/lanes/[slug]/` | Individual investable-lane page |
 | `/investor/stocks/[ticker]/` | Individual stock or ETF research-exposure page |
@@ -170,6 +175,7 @@ Vibe 把这套工作流呈现为一个可访问的产品界面：
   thesis/赛道/股票宇宙、研究活动河流和可持续扩展的研究事件库。
 - 以每日晨会、周度定位和人类友好报告为起点的投资研究门户。
 - 从 thesis 到赛道、股票/ETF 研究节点，再到本地组合追踪的完整路径。
+- 5/20/60 交易日影子赔率盘：把 thesis 改写成可证伪合约，把赛道组织成成员隐含指数，把股票展示为关联合约研究暴露；在真实价格、payoff 和结算样本接入前，不虚构市场赔率、EV 或 Kelly 仓位。
 - 研究时间线追踪器，用于查看简报、报告、复盘和动态论点如何演进。
 - AI 分析师报告库与人类友好的 reader report。
 - 保留来源、证据和观点脉络的深度研究页面。
@@ -196,6 +202,7 @@ Vibe 把这套工作流呈现为一个可访问的产品界面：
 | `/investor/daily/` | 最新晨会简报看板 |
 | `/investor/panorama/` | 周度操作结论、仓位含义、赛道配置与个股清单 |
 | `/investor/research-network/` | Thesis、赛道、标的、证据与复盘网络 |
+| `/investor/odds/` | 主线合约、赛道指数期限结构与股票关联合约赔率 |
 | `/investor/theses/[id]/` | 单条动态 thesis 的时间线和证据页 |
 | `/investor/lanes/[slug]/` | 单条可投资赛道页 |
 | `/investor/stocks/[ticker]/` | 单个股票或 ETF 的研究暴露页 |

@@ -1,12 +1,14 @@
 ---
 import BaseHead from "../../../components/BaseHead.astro";
 import Header from "../../../components/Header.astro";
-import { readMarketOntology, readResearchNetwork } from "../../../lib/investor-generated.js";
-import { stockPath, thesisPath } from "../../../lib/investor-market.js";
+import { readMarketOntology, readOddsBoard, readResearchNetwork } from "../../../lib/investor-generated.js";
+import { oddsLine, probabilityLabel, signedPoints, stockPath, thesisPath } from "../../../lib/investor-market.js";
 import "../../../styles/research-network.css";
+import "../../../styles/odds-board.css";
 
 const network = readResearchNetwork();
 const ontology = readMarketOntology();
+const odds = readOddsBoard();
 const theses = network.theses || [];
 const stocks = [...(ontology.stocks || [])].sort((a, b) => Number(b.evidenceCount || 0) - Number(a.evidenceCount || 0) || a.ticker.localeCompare(b.ticker));
 const lanes = ontology.lanes || [];
@@ -25,6 +27,8 @@ const actions = [...theses.reduce((acc, thesis) => {
 }, new Map()).entries()].sort((a, b) => b[1] - a[1]);
 const stanceLabels = { overweight: "超配", selective: "精选", neutral: "中性", underweight: "低配", avoid: "回避" };
 const roleLabels = { core: "核心", watch: "观察", hedge: "对冲" };
+const topLaneOdds = (odds.laneLines || []).slice(0, 12);
+const topThesisOdds = (odds.thesisLines || []).slice(0, 18);
 const portfolioData = JSON.stringify({
   stocks: stocks.map((stock) => ({ ticker: stock.ticker, name: stock.name, market: stock.market, href: stock.href, laneIds: stock.laneIds || [] })),
   lanes: lanes.map((lane) => ({ id: lane.id, titleZh: lane.titleZh, titleEn: lane.titleEn, href: lane.href, advice: lane.advice || null })),
@@ -70,6 +74,7 @@ const portfolioData = JSON.stringify({
         <div class="portfolio-mode-tabs" role="tablist" aria-label="Portfolio views">
           <button type="button" data-view-target="stocks" role="tab">股票簿 <b data-count-stocks>0</b></button>
           <button type="button" data-view-target="theses" role="tab">Thesis Book <b data-count-theses>0</b></button>
+          <button type="button" data-view-target="odds" role="tab">Odds Book <b>{odds.coverage?.shadowPricedTheses || 0}</b></button>
           <button type="button" data-view-target="advice" role="tab">模型赛道观点 <b>{adviceLanes.length}</b></button>
         </div>
         <div class="portfolio-toolbar">
@@ -191,6 +196,55 @@ const portfolioData = JSON.stringify({
               </article>
             ))}
           </div>
+        </section>
+      </div>
+
+      <div data-portfolio-view="odds" hidden class="odds-board odds-book-view">
+        <section class="thesis-section">
+          <div class="section-headline">
+            <span>Shadow Odds Book</span>
+            <h2>赔率簿：先比较判断，再决定是否下注</h2>
+            <p>当前只发布证据驱动 house probability。p_market、payoff、EV、动态 Kelly 与真实仓位均未启用。</p>
+          </div>
+          <div class="odds-book-status">
+            <span><strong>{odds.coverage?.shadowPricedTheses || 0}</strong> thesis contracts</span>
+            <span><strong>{odds.coverage?.laneIndices || 0}</strong> lane indices</span>
+            <span><strong>{odds.coverage?.settlements || 0}</strong> settlements</span>
+            <span><strong>OFF</strong> dynamic Kelly</span>
+            <a href="/investor/odds/">打开完整赔率盘</a>
+          </div>
+          <div class="odds-book-columns">
+            <article>
+              <div class="section-mini-head"><span>Lane sub-book</span><strong>赛道成员隐含</strong></div>
+              <div class="odds-lane-grid odds-book-lanes">
+                {topLaneOdds.map((item) => (
+                  <a class="odds-lane-card" href={item.href}>
+                    <header><span>{item.pricingStateLabel}</span><em>{item.memberCount} contracts</em></header>
+                    <h3>{item.title}</h3>
+                    <div class="odds-mini-curve">
+                      {item.termStructure.map((quote) => (
+                        <span data-h={quote.horizon}><em>{quote.horizon.toUpperCase()}</em><strong>{probabilityLabel(quote.pHouse)}</strong><i><b style={`width:${quote.pHousePct}%`}></b></i></span>
+                      ))}
+                    </div>
+                    <footer><span>{item.curve?.labelZh} · {signedPoints(item.curve?.slopePp)}</span><em>Kelly OFF</em></footer>
+                  </a>
+                ))}
+              </div>
+            </article>
+            <article>
+              <div class="section-mini-head"><span>Contract sub-book</span><strong>20D 主线排序</strong></div>
+              <div class="odds-book-contract-list">
+                {topThesisOdds.map((item) => (
+                  <a href={item.href}>
+                    <span>{item.lane} · {item.curve?.labelZh}</span>
+                    <strong>{item.title}</strong>
+                    <em>5D {probabilityLabel(oddsLine(item, "5d")?.pHouse)} · 20D {probabilityLabel(oddsLine(item, "20d")?.pHouse)} · 60D {probabilityLabel(oddsLine(item, "60d")?.pHouse)} · conf {item.confidence?.score}</em>
+                  </a>
+                ))}
+              </div>
+            </article>
+          </div>
+          <p class="portfolio-disclaimer">影子赔率仅用于研究排序。没有 market edge 和 payoff 时，Kelly 为不可计算，不应以 house probability 代替仓位建议。</p>
         </section>
       </div>
 

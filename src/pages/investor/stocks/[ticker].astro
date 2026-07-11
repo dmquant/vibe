@@ -1,19 +1,21 @@
 ---
 import BaseHead from "../../../components/BaseHead.astro";
 import Header from "../../../components/Header.astro";
-import { readResearchNetwork } from "../../../lib/investor-generated.js";
-import { buildStockIndex, formatDate, lanePath, pct, thesisPath } from "../../../lib/investor-market.js";
+import OddsSurface from "../../../components/investor/OddsSurface.astro";
+import { readOddsBoard, readResearchNetwork } from "../../../lib/investor-generated.js";
+import { buildOddsIndexes, buildStockIndex, formatDate, lanePath, pct, thesisPath } from "../../../lib/investor-market.js";
 import "../../../styles/research-network.css";
 
 export function getStaticPaths() {
   const network = readResearchNetwork();
+  const odds = buildOddsIndexes(readOddsBoard()).stocks;
   return buildStockIndex(network).map((stock) => ({
     params: { ticker: stock.slug },
-    props: { stock },
+    props: { stock, oddsSurface: odds.get(stock.ticker) || null },
   }));
 }
 
-const { stock } = Astro.props;
+const { stock, oddsSurface } = Astro.props;
 const maxConviction = Math.max(1, ...stock.theses.map((thesis) => Number(thesis.conviction || 0)));
 ---
 
@@ -35,6 +37,7 @@ const maxConviction = Math.max(1, ...stock.theses.map((thesis) => Number(thesis.
           <p>{stock.name} · {stock.market}。该页展示该标的作为研究入口时连接到哪些赛道、主线和证据事件。</p>
           <div class="network-actions">
             <a href="/investor/research-network/">研究网络</a>
+            <a href="/investor/odds/">赔率盘</a>
             <a href="/investor/portfolio/">组合追踪</a>
             {stock.lanes.slice(0, 2).map((lane) => <a href={lane.href}>{lane.lane}</a>)}
           </div>
@@ -51,6 +54,12 @@ const maxConviction = Math.max(1, ...stock.theses.map((thesis) => Number(thesis.
         <div><span>Market</span><strong>{stock.market}</strong><em>市场</em></div>
         <div><span>Evidence</span><strong>{stock.evidenceCount || stock.events.length}</strong><em>来源报告</em></div>
       </section>
+
+      <OddsSurface
+        surface={oddsSurface}
+        title="股票关联合约赔率"
+        description="这是该股票所连接 thesis 合约的加权均值，不是股票上涨概率、目标价或交易评级。"
+      />
 
       <section class="detail-grid">
         <article class="detail-panel is-main">

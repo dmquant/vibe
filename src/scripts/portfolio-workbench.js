@@ -347,6 +347,6 @@ document.getElementById("clearPortfolio")?.addEventListener("click", () => {
   if (confirm("清空当前浏览器中的 thesis 与 stock book？")) writeState(defaultState());
 });
 
-const initialView = ["stocks", "theses", "advice"].includes(location.hash.slice(1)) ? location.hash.slice(1) : "stocks";
+const initialView = ["stocks", "theses", "odds", "advice"].includes(location.hash.slice(1)) ? location.hash.slice(1) : "stocks";
 activateView(initialView);
 renderAll();

@@ -53,6 +53,29 @@ export function pct(value) {
   return `${Math.max(6, Math.min(100, Number(value || 0)))}%`;
 }
 
+export function oddsLine(surface, horizon = "20d") {
+  return (surface?.termStructure || []).find((line) => line.horizon === horizon) || null;
+}
+
+export function probabilityLabel(value, fallback = "--") {
+  const parsed = Number(value);
+  return Number.isFinite(parsed) ? `${Math.round(parsed * 100)}%` : fallback;
+}
+
+export function signedPoints(value, fallback = "--") {
+  const parsed = Number(value);
+  if (!Number.isFinite(parsed)) return fallback;
+  return `${parsed > 0 ? "+" : ""}${parsed.toFixed(1)}pp`;
+}
+
+export function buildOddsIndexes(odds = {}) {
+  return {
+    theses: new Map((odds.thesisLines || []).map((item) => [item.thesisId, item])),
+    lanes: new Map((odds.laneLines || []).map((item) => [item.laneId, item])),
+    stocks: new Map((odds.stockSurfaces || []).map((item) => [item.ticker, item])),
+  };
+}
+
 export function flatEvents(thesis) {
   return (thesis?.timeline || [])
     .flatMap((group) => (group.events || []).map((event) => ({ ...event, date: group.date })))

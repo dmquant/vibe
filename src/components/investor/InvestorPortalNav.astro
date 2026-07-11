@@ -14,6 +14,7 @@ const items = [
     label: "Theses",
     match: (path) => path.startsWith("/investor/research-network") || path.startsWith("/investor/theses"),
   },
+  { href: "/investor/odds/", label: "Odds", match: (path) => path.startsWith("/investor/odds") },
   { href: "/investor/research-network/#thermal", label: "Lanes", match: (path) => path.startsWith("/investor/lanes") },
   { href: "/investor/research-network/#stocks", label: "Stocks", match: (path) => path.startsWith("/investor/stocks") },
   { href: "/investor/portfolio/", label: "Portfolio", match: (path) => path.startsWith("/investor/portfolio") },

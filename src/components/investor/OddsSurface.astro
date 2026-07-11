@@ -1,0 +1,331 @@
+---
+import {
+  probabilityLabel,
+  signedPoints,
+} from "../../lib/investor-market.js";
+
+const {
+  surface,
+  title = "赔率期限结构",
+  description = "5 / 20 / 60 交易日 house probability",
+  compact = false,
+} = Astro.props;
+const lines = surface?.termStructure || [];
+const confidence = Number(surface?.confidence?.score || 0);
+const tone = (value) => {
+  const probability = Number(value || 0.5);
+  if (probability >= 0.55) return "positive";
+  if (probability <= 0.45) return "negative";
+  return "neutral";
+};
+const moveFor = (line) => {
+  const direct = Number(line?.movePp);
+  if (Number.isFinite(direct)) return direct;
+  const tick = Number(surface?.lastTick?.movesPp?.[line?.horizon]);
+  return Number.isFinite(tick) ? tick : null;
+};
+---
+
+{surface && lines.length > 0 && (
+  <section class:list={["odds-surface", { compact }]} aria-label={title}>
+    <header class="odds-surface-head">
+      <div>
+        <span>Odds / Shadow</span>
+        <h2>{title}</h2>
+        <p>{description}</p>
+      </div>
+      <div class="odds-status">
+        <span>{surface.pricingStateLabel || "影子报价"}</span>
+        <strong>{confidence}<small>input confidence</small></strong>
+      </div>
+    </header>
+
+    <div class="odds-term-grid">
+      {lines.map((line) => {
+        const move = moveFor(line);
+        return (
+          <article class={`odds-term tone-${tone(line.pHouse)}`}>
+            <div class="odds-term-top">
+              <span>{line.horizon.toUpperCase()}</span>
+              <em>门槛 +{line.thresholdPct}%</em>
+            </div>
+            <strong>{probabilityLabel(line.pHouse)}</strong>
+            <div class="odds-probability-rail" aria-label={`House probability ${probabilityLabel(line.pHouse)}`}>
+              <i style={`width:${Math.round(Number(line.pHouse || 0) * 100)}%`}></i>
+              <b style={`left:${Math.round(Number(line.pHouse || 0) * 100)}%`}></b>
+            </div>
+            <div class="odds-term-metrics">
+              <span><b>{line.fairDecimalOdds?.toFixed?.(2) || line.fairDecimalOdds}</b>公平十进制赔率</span>
+              <span><b>{move === null ? "--" : signedPoints(move)}</b>最新证据移动</span>
+              <span><b>{line.pMarket === null ? "待接价" : probabilityLabel(line.pMarket)}</b>市场隐含</span>
+              <span><b>{line.edgeMarket === null ? "--" : signedPoints(line.edgeMarket * 100)}</b>市场边际</span>
+            </div>
+          </article>
+        );
+      })}
+    </div>
+
+    <div class="odds-curve-row">
+      <div>
+        <span>Curve shape</span>
+        <strong>{surface.curve?.labelZh || "待形成"}</strong>
+        <p>{surface.curve?.interpretationZh || "等待更多期限证据。"}</p>
+      </div>
+      <div>
+        <span>5D → 60D</span>
+        <strong>{surface.curve ? signedPoints(surface.curve.slopePp) : "--"}</strong>
+        <p>{surface.directContract === false ? surface.meaning || "由成员合约加权形成。" : "篮子相对基准的期限概率变化。"}</p>
+      </div>
+      <div>
+        <span>EV / Kelly</span>
+        <strong>等待真实输入</strong>
+        <p>payoff、市场价格与结算校准未接入前不计算仓位。</p>
+      </div>
+    </div>
+
+    <footer>
+      <span>UNCALIBRATED · SHADOW MODE</span>
+      <p>该概率用于比较研究判断，不是目标收益率、交易评级或已校准预测。</p>
+      <a href="/investor/odds/#methodology">查看赔率方法</a>
+    </footer>
+  </section>
+)}
+
+<style>
+  .odds-surface {
+    --odds-line: var(--network-line, var(--border));
+    --odds-panel: var(--network-panel, var(--card-bg));
+    --odds-surface-bg: var(--network-surface, var(--bg-surface));
+    --odds-ink: var(--network-ink, var(--text-primary));
+    --odds-muted: var(--network-muted, var(--text-secondary));
+    display: grid;
+    gap: 14px;
+    margin: 24px 0 30px;
+    color: var(--odds-ink);
+  }
+
+  .odds-surface-head {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 18px;
+    border-bottom: 1px solid var(--odds-line);
+    padding-bottom: 12px;
+  }
+
+  .odds-surface-head > div:first-child > span,
+  .odds-curve-row span,
+  .odds-surface footer > span {
+    color: var(--accent-blue);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  .odds-surface-head h2 {
+    margin: 3px 0 2px;
+    border: 0;
+    padding: 0;
+    font-size: 24px;
+    line-height: 1.15;
+  }
+
+  .odds-surface-head p,
+  .odds-curve-row p,
+  .odds-surface footer p {
+    margin: 0;
+    color: var(--odds-muted);
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .odds-status {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .odds-status > span {
+    border: 1px solid var(--accent-yellow);
+    border-radius: 3px;
+    color: var(--accent-yellow);
+    padding: 4px 7px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 850;
+  }
+
+  .odds-status strong {
+    min-width: 66px;
+    color: var(--odds-ink);
+    font-size: 24px;
+    line-height: 1;
+    text-align: right;
+  }
+
+  .odds-status small {
+    display: block;
+    margin-top: 4px;
+    color: var(--odds-muted);
+    font-family: var(--font-mono);
+    font-size: 8px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .odds-term-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .odds-term {
+    --tone: var(--accent-yellow);
+    min-width: 0;
+    border: 1px solid var(--odds-line);
+    border-top: 3px solid var(--tone);
+    border-radius: 6px;
+    background: var(--odds-panel);
+    padding: 12px;
+  }
+
+  .odds-term.tone-positive { --tone: var(--accent-green); }
+  .odds-term.tone-negative { --tone: var(--accent-red); }
+
+  .odds-term-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+  }
+
+  .odds-term-top span {
+    color: var(--tone);
+    font-weight: 900;
+  }
+
+  .odds-term-top em {
+    color: var(--odds-muted);
+    font-style: normal;
+  }
+
+  .odds-term > strong {
+    display: block;
+    margin: 10px 0 9px;
+    color: var(--odds-ink);
+    font-family: var(--font-mono);
+    font-size: 38px;
+    line-height: 1;
+  }
+
+  .odds-probability-rail {
+    position: relative;
+    height: 7px;
+    margin-bottom: 12px;
+    background:
+      linear-gradient(90deg, transparent 49.5%, var(--odds-muted) 49.5%, var(--odds-muted) 50.5%, transparent 50.5%),
+      var(--odds-surface-bg);
+    overflow: visible;
+  }
+
+  .odds-probability-rail i {
+    display: block;
+    height: 100%;
+    background: var(--tone);
+    opacity: 0.7;
+  }
+
+  .odds-probability-rail b {
+    position: absolute;
+    top: -3px;
+    width: 2px;
+    height: 13px;
+    background: var(--tone);
+    transform: translateX(-1px);
+  }
+
+  .odds-term-metrics {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .odds-term-metrics span {
+    min-width: 0;
+    color: var(--odds-muted);
+    font-size: 9px;
+    line-height: 1.35;
+  }
+
+  .odds-term-metrics b {
+    display: block;
+    overflow: hidden;
+    color: var(--odds-ink);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .odds-curve-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-block: 1px solid var(--odds-line);
+  }
+
+  .odds-curve-row > div {
+    min-width: 0;
+    padding: 10px 12px;
+  }
+
+  .odds-curve-row > div + div {
+    border-left: 1px solid var(--odds-line);
+  }
+
+  .odds-curve-row strong {
+    display: block;
+    margin: 3px 0;
+    font-size: 14px;
+  }
+
+  .odds-surface footer {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .odds-surface footer > span { color: var(--accent-orange); }
+
+  .odds-surface footer a {
+    color: var(--accent-blue);
+    font-size: 11px;
+    font-weight: 800;
+  }
+
+  .odds-surface.compact {
+    margin: 16px 0 22px;
+  }
+
+  .odds-surface.compact .odds-term > strong { font-size: 30px; }
+
+  @media (max-width: 760px) {
+    .odds-surface-head,
+    .odds-surface footer {
+      align-items: start;
+      grid-template-columns: 1fr;
+    }
+
+    .odds-surface-head { display: grid; }
+    .odds-status { justify-content: space-between; }
+    .odds-term-grid { grid-template-columns: 1fr; }
+    .odds-curve-row { grid-template-columns: 1fr; }
+    .odds-curve-row > div + div {
+      border-top: 1px solid var(--odds-line);
+      border-left: 0;
+    }
+  }
+</style>

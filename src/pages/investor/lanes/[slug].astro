@@ -1,12 +1,14 @@
 ---
 import BaseHead from "../../../components/BaseHead.astro";
 import Header from "../../../components/Header.astro";
-import { readResearchNetwork } from "../../../lib/investor-generated.js";
-import { buildLaneIndex, buildLaneRecaps, buildLaneTimeline, formatDate, pct, stockPath, thesisPath } from "../../../lib/investor-market.js";
+import OddsSurface from "../../../components/investor/OddsSurface.astro";
+import { readOddsBoard, readResearchNetwork } from "../../../lib/investor-generated.js";
+import { buildLaneIndex, buildLaneRecaps, buildLaneTimeline, buildOddsIndexes, formatDate, pct, stockPath, thesisPath } from "../../../lib/investor-market.js";
 import "../../../styles/research-network.css";
 
 export function getStaticPaths() {
   const network = readResearchNetwork();
+  const odds = buildOddsIndexes(readOddsBoard()).lanes;
   return buildLaneIndex(network).map((lane) => ({
     params: { slug: lane.slug },
     props: {
@@ -15,11 +17,12 @@ export function getStaticPaths() {
         timeline: buildLaneTimeline(lane),
         recaps: buildLaneRecaps(lane, network.livingRecaps || []),
       },
+      oddsSurface: odds.get(lane.id) || null,
     },
   }));
 }
 
-const { lane } = Astro.props;
+const { lane, oddsSurface } = Astro.props;
 const maxAction = Math.max(1, ...lane.actions.map((item) => item[1]));
 const stanceLabels = { overweight: "超配", selective: "精选", neutral: "中性", underweight: "低配", avoid: "回避" };
 const roleLabels = { core: "核心", watch: "观察", hedge: "对冲" };
@@ -43,6 +46,7 @@ const roleLabels = { core: "核心", watch: "观察", hedge: "对冲" };
           <p>该页按赛道聚合相关 thesis、候选股票池和组合动作分布，方便从产业链入口进入研究证据。</p>
           <div class="network-actions">
             <a href="/investor/research-network/">研究网络</a>
+            <a href="/investor/odds/">赔率盘</a>
             <a href="/investor/portfolio/">组合追踪</a>
             <a href="/investor/recaps/">复盘仪表盘</a>
           </div>
@@ -59,6 +63,12 @@ const roleLabels = { core: "核心", watch: "观察", hedge: "对冲" };
         <div><span>Avg Score</span><strong>{lane.avgScore}</strong><em>平均强度</em></div>
         <div><span>Actions</span><strong>{lane.actions.length}</strong><em>组合动作</em></div>
       </section>
+
+      <OddsSurface
+        surface={oddsSurface}
+        title="赛道成员隐含赔率"
+        description="由赛道内 thesis 合约按输入置信度与证据密度加权；独立赛道询价尚未计入。"
+      />
 
       {lane.advice && (
         <section class="thesis-section model-advice-section">

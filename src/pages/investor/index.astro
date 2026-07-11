@@ -5,11 +5,12 @@ import {
   readAnalystPersonaTimelines,
   readDailyDashboard,
   readDeepIndex,
+  readOddsBoard,
   readRecapDashboards,
   readResearchNetwork,
   readSiteData,
 } from "../../lib/investor-generated.js";
-import { lanePath, stockPath, thesisPath } from "../../lib/investor-market.js";
+import { buildOddsIndexes, lanePath, oddsLine, probabilityLabel, stockPath, thesisPath } from "../../lib/investor-market.js";
 import { buildWeeklyPanoramaBundle } from "../../lib/weekly-panorama.js";
 import "../../styles/investment-portal.css";
 
@@ -19,6 +20,9 @@ const network = readResearchNetwork();
 const recapData = readRecapDashboards();
 const deepData = readDeepIndex();
 const personaData = readAnalystPersonaTimelines();
+const odds = readOddsBoard();
+const oddsIndexes = buildOddsIndexes(odds);
+const laneOddsByHref = new Map((odds.laneLines || []).map((item) => [item.href, item]));
 const panorama = buildWeeklyPanoramaBundle();
 
 const stats = siteData.stats || {};
@@ -100,6 +104,7 @@ const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" "
           <div class="portal-actions">
             <a class="primary" href="/investor/daily/">读今日晨会</a>
             <a href="/investor/panorama/">看本周结论</a>
+            <a href="/investor/odds/">打开赔率盘</a>
             <a href="/investor/portfolio/">打开组合台</a>
           </div>
         </div>
@@ -129,6 +134,7 @@ const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" "
         <a href="/investor/research-network/"><span>Evidence</span><strong>{network.stats?.publicGraphNodes || 0}</strong><em>公开图节点</em></a>
         <a href="/investor/personas/"><span>Personas</span><strong>{personaData.stats?.personaCount || 0}</strong><em>分析师视角</em></a>
         <a href="/investor/recaps/"><span>Recaps</span><strong>{latestRecaps.length ? recapData.dashboards.length : 0}</strong><em>动态复盘</em></a>
+        <a href="/investor/odds/"><span>Odds</span><strong>{odds.coverage?.shadowPricedTheses || 0}</strong><em>影子主线合约</em></a>
       </section>
 
       <section class="portal-band portal-decision-band">
@@ -171,8 +177,8 @@ const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" "
 
       <section class="portal-band" id="research-map">
         <div class="portal-section-head">
-          <div><span>Investment Map</span><h2>Thesis → 赛道 → 标的 → 组合</h2></div>
-          <p>每层都保留独立页面和返回路径。股票是研究把手，不是脱离论点的推荐清单。</p>
+          <div><span>Investment Map</span><h2>Thesis → Odds → 赛道 → 标的 → 组合</h2></div>
+          <p>赔率把判断变成有期限的可证伪合约；股票仍是研究把手，不是脱离论点的推荐清单。</p>
         </div>
         <div class="research-map-grid">
           <section class="map-column thesis-column">
@@ -182,7 +188,7 @@ const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" "
                 <a class="map-row portal-searchable" data-search={searchText(thesis.title, thesis.lane, thesis.stockTickers)} href={thesisPath(thesis)}>
                   <span>{thesis.practical?.actionLabel || thesis.directionLabel}</span>
                   <strong>{thesis.title}</strong>
-                  <em>{thesis.lastSeen} · score {thesis.practical?.score || thesis.conviction}</em>
+                  <em>{thesis.lastSeen} · 20D house {probabilityLabel(oddsLine(oddsIndexes.theses.get(thesis.id), "20d")?.pHouse)} · score {thesis.practical?.score || thesis.conviction}</em>
                 </a>
               ))}
             </div>
@@ -193,7 +199,7 @@ const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" "
             <div>
               {laneRows.map((lane) => (
                 <a class="map-row portal-searchable" data-search={searchText(lane.lane, lane.stocks.map((stock) => stock.ticker))} href={lane.href}>
-                  <span>{lane.theses} theses · score {lane.avgScore}</span>
+                  <span>{lane.theses} theses · 20D {probabilityLabel(oddsLine(laneOddsByHref.get(lane.href), "20d")?.pHouse)}</span>
                   <strong>{lane.lane}</strong>
                   <em>{lane.stocks.slice(0, 5).map((stock) => stock.ticker).join(" · ")}</em>
                 </a>
@@ -206,7 +212,7 @@ const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" "
             <div class="stock-node-grid">
               {stockRows.map((stock) => (
                 <a class="stock-node portal-searchable" data-search={searchText(stock.ticker, stock.name, stock.role, stock.lanes)} href={stock.href || stockPath(stock)}>
-                  <span>{stock.market}</span><strong>{stock.ticker}</strong><em>{stock.name}</em><small>{stock.thesisCount} theses</small>
+                  <span>{stock.market}</span><strong>{stock.ticker}</strong><em>{stock.name}</em><small>{stock.thesisCount} theses · 20D linked {probabilityLabel(oddsLine(oddsIndexes.stocks.get(stock.ticker), "20d")?.pHouse)}</small>
                 </a>
               ))}
             </div>

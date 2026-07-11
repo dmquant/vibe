@@ -2,8 +2,8 @@
 import BaseHead from "../../../components/BaseHead.astro";
 import Header from "../../../components/Header.astro";
 import ResearchAtlas from "../../../components/investor/ResearchAtlas.astro";
-import { readResearchNetwork } from "../../../lib/investor-generated.js";
-import { buildLaneIndex, buildStockIndex, stockPath, thesisPath } from "../../../lib/investor-market.js";
+import { readOddsBoard, readResearchNetwork } from "../../../lib/investor-generated.js";
+import { buildLaneIndex, buildOddsIndexes, buildStockIndex, oddsLine, probabilityLabel, stockPath, thesisPath } from "../../../lib/investor-market.js";
 import "../../../styles/research-network.css";
 
 const network = readResearchNetwork();
@@ -11,6 +11,8 @@ const stats = network.stats || {};
 const theses = network.theses || [];
 const graph = network.graph || { nodes: [], edges: [] };
 const recaps = network.livingRecaps || [];
+const odds = readOddsBoard();
+const oddsIndexes = buildOddsIndexes(odds);
 const formatDate = (value) => String(value || "").replace(/^2026-/, "");
 const pct = (value) => `${Math.max(6, Math.min(100, Number(value || 0)))}%`;
 const heat = (value) => Math.max(0.14, Math.min(1, Number(value || 0) / 100)).toFixed(2);
@@ -48,6 +50,7 @@ const stockRows = stockIndex.map((stock) => ({
 }));
 const thermalLaneRows = laneIndex.map((lane) => ({
   ...lane,
+  odds: oddsIndexes.lanes.get(lane.id) || null,
   count: lane.theses.length,
   tickers: lane.stocks.slice(0, 10).map((stock) => stock.ticker),
   theses: [...lane.theses].sort((a, b) => Number(b.practical?.score || b.conviction || 0) - Number(a.practical?.score || a.conviction || 0)),
@@ -73,6 +76,7 @@ const thermalLaneRows = laneIndex.map((lane) => ({
           <div class="network-actions">
             <a href="/investor/">返回研究台</a>
             <a href="/investor/timeline/">研究时间线</a>
+            <a href="/investor/odds/">赔率盘</a>
             <a href="/investor/panorama/">周度全景</a>
             <a href="/investor/recaps/">复盘仪表盘</a>
             <a href="/investor/personas/">分析师画像</a>
@@ -104,7 +108,7 @@ const thermalLaneRows = laneIndex.map((lane) => ({
             <article class="thermal-lane-row" data-search={`${row.lane} ${row.tickers.join(" ")}`}>
               <a class="thermal-lane-head" href={row.href}>
                 <span>{row.lane}</span>
-                <strong>{row.count} thesis · Score {row.avgScore}</strong>
+                <strong>{row.count} thesis · Score {row.avgScore} · 20D {probabilityLabel(oddsLine(row.odds, "20d")?.pHouse)}</strong>
                 <em>{row.tickers.join(" · ") || "待补充标的"}</em>
               </a>
               <div class="thermal-cell-grid">
@@ -117,7 +121,7 @@ const thermalLaneRows = laneIndex.map((lane) => ({
                     data-search={`${thesis.title} ${thesis.coreView} ${thesis.lane || ""} ${(thesis.stockTickers || []).join(" ")} ${(thesis.topTerms || []).join(" ")} ${thesis.practical?.exposureBucket || ""} ${thesis.practical?.actionLabel || ""}`}
                   >
                     <strong>{thesis.title}</strong>
-                    <span>{thesis.practical?.actionLabel || thesis.directionLabel} · {formatDate(thesis.lastSeen)}</span>
+                    <span>{thesis.practical?.actionLabel || thesis.directionLabel} · 20D {probabilityLabel(oddsLine(oddsIndexes.theses.get(thesis.id), "20d")?.pHouse)} · {formatDate(thesis.lastSeen)}</span>
                     <em>{(thesis.stockTickers || []).slice(0, 4).join(" · ") || "watch"}</em>
                   </a>
                 ))}
@@ -189,7 +193,7 @@ const thermalLaneRows = laneIndex.map((lane) => ({
               {laneRows.map((row) => (
                 <a href={row.href}>
                   <span>{row.lane}</span>
-                  <strong>{row.count} thesis · Score {row.avgScore}</strong>
+                  <strong>{row.count} thesis · Score {row.avgScore} · 20D {probabilityLabel(oddsLine(oddsIndexes.lanes.get(row.id), "20d")?.pHouse)}</strong>
                   <em>{row.tickers.join(" · ") || "待补充标的"}</em>
                 </a>
               ))}
@@ -205,7 +209,7 @@ const thermalLaneRows = laneIndex.map((lane) => ({
                 <a href={stock.href || stockPath(stock)}>
                   <strong>{stock.ticker}</strong>
                   <span>{stock.name}</span>
-                  <em>{stock.count} thesis · {stock.market}</em>
+                  <em>{stock.count} thesis · 20D linked {probabilityLabel(oddsLine(oddsIndexes.stocks.get(stock.ticker), "20d")?.pHouse)} · {stock.market}</em>
                 </a>
               ))}
             </div>
@@ -273,6 +277,7 @@ const thermalLaneRows = laneIndex.map((lane) => ({
                 <strong>{thesis.conviction}</strong>
               </div>
               <div class="thesis-counters">
+                <span>20D House {probabilityLabel(oddsLine(oddsIndexes.theses.get(thesis.id), "20d")?.pHouse)}</span>
                 <span>支持 {thesis.supports}</span>
                 <span>风险 {thesis.risks}</span>
                 <span>观察 {thesis.neutral}</span>
