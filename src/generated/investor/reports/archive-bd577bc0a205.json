@@ -1,0 +1,21 @@
+{
+  "slug": "archive-bd577bc0a205",
+  "href": "/investor/reports/archive-bd577bc0a205/",
+  "meta": {
+    "title": "QA 评审：周度研究包",
+    "date": "2026-07-12",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "通胀",
+      "宏观",
+      "港美股",
+      "风险"
+    ],
+    "source": "archive-bd577bc0a205",
+    "source_label": "研究档案",
+    "source_kind": "archive"
+  },
+  "bodyHtml": "<h1>QA 评审：周度研究包</h1>\n<p>锚定日期：2026-07-12（shell <code>系统日期锚</code>）。评审对象：<code>研究档案</code>、<code>研究档案</code>、<code>研究档案</code>、<code>研究档案</code>。</p>\n<h2>1. 文件完整性 (File manifest)</h2>\n<table>\n<thead>\n<tr>\n<th>declared file</th>\n<th>exists in workspace (是 / 否)</th>\n<th>note</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>研究档案</code></td>\n<td>是</td>\n<td>13,068 bytes；内容完整，覆盖 2026-07-06 至 2026-07-10 的研究计划。</td>\n</tr>\n<tr>\n<td><code>研究档案</code></td>\n<td>是</td>\n<td>12,695 bytes；英文计划版本存在，主要内容与中文计划一致。</td>\n</tr>\n<tr>\n<td><code>研究档案</code></td>\n<td>是</td>\n<td>20,019 bytes；中文研究稿存在，包含 5 个问题回答、数据表、证据与局限。</td>\n</tr>\n<tr>\n<td><code>研究档案</code></td>\n<td>是</td>\n<td>21,800 bytes；英文研究稿存在，结构与中文研究稿一致。</td>\n</tr>\n</tbody>\n</table>\n<h2>2. 数据一致性 (Cross-step consistency)</h2>\n<table>\n<thead>\n<tr>\n<th>spot-check item</th>\n<th>plan value</th>\n<th>research value</th>\n<th>QA conclusion</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>覆盖窗口</td>\n<td>2026-07-06 至 2026-07-10</td>\n<td>2026-07-06 至 2026-07-10</td>\n<td>一致。</td>\n</tr>\n<tr>\n<td>SK Hynix ($SKHY) IPO</td>\n<td>募资 265 亿美元；发行价 49；首日收于 68；约 +13%</td>\n<td>约 $26.5B；49.00；68.01；+12.76% / 约 12.8%</td>\n<td>一致；研究稿把计划中的整数收盘价细化为 68.01，属于合理精度补充。</td>\n</tr>\n<tr>\n<td>中国 6 月 CPI / PPI</td>\n<td>CPI +1.0% YoY；PPI +4.1% YoY；5 月分别为 +1.2% / +3.9%</td>\n<td>CPI +1.0% YoY；PPI +4.1% YoY；5 月分别为 +1.2% / +3.9%</td>\n<td>一致；研究稿进一步计算 PPI-CPI 差值 +3.1pp。</td>\n</tr>\n<tr>\n<td>日本 6 月 CGPI</td>\n<td>+7.1% YoY；指数 135.40</td>\n<td>+7.1% YoY；指数 135.4</td>\n<td>一致；仅小数位格式不同。</td>\n</tr>\n<tr>\n<td>德国 5 月出口</td>\n<td>+0.9% MoM 至 €137.9B；美国 +23.1%；中国 +7.1%；欧盟 -1.1%</td>\n<td>+0.9% MoM 至 €137.9B；美国 +23.1%；中国 +7.1%；欧盟 -1.1%</td>\n<td>一致。</td>\n</tr>\n<tr>\n<td>原油与 VIX</td>\n<td>Brent 周三高点 $78.02；WTI $73.52；周五 Brent $76.01</td>\n<td>Brent $78.02（7/8）后至 $76.01；WTI $73.52（7/8）后至 $71.41；VIX 16.90 后至 15.03</td>\n<td>一致；研究稿补充了 VIX 和 WTI 周五数值。</td>\n</tr>\n<tr>\n<td>美联储政策口径</td>\n<td>6 月 FOMC 维持 3.50%–3.75%；7 月 14 日 CPI 是关键催化剂</td>\n<td>维持 3.50%–3.75%；BLS 6 月 CPI 2026-07-14 08:30 ET 发布</td>\n<td>一致。</td>\n</tr>\n</tbody>\n</table>\n<h2>3. 逻辑链条 (Narrative coherence)</h2>\n<p>计划提出的 5 个核心问题均在研究稿中逐项回答：SKHY/HBM 估值重定价、FOMC 与 CPI 情景、中国 CPI-PPI 剪刀差、日本/德国区域分化、油价/VIX 地缘风险溢价。</p>\n<p>主要逻辑链条基本成立：研究稿没有简单复述计划，而是补充了周回报、Fed Funds futures、NBS 分项、BoJ/Destatis 数据和可视化表格，能够支撑“AI 硬件稀缺性再定价 + 通胀/政策路径分化 + 油价冲击仍偏脉冲”的结论。</p>\n<p>仍需修正的链条缺口有三点</p>\n<ul>\n<li>计划要求采集 CME FedWatch 离散概率，研究稿改用 30-Day Fed Funds futures 近似，并在局限中说明；这是可接受替代，但若给 PM 使用，应增加一行“未取得 FedWatch 官方概率，不能表述为概率结论”。</li>\n<li>计划要求分析 A 股中下游制造二季度业绩预告与毛利率趋势，研究稿明确未取得完整可比数据，仅做价格链条敏感性判断；因此“中国制造业利润压缩”应降级为情景推断，避免写成已验证盈利事实。</li>\n<li>计划要求霍尔木兹每日油轮通过量和 BDTI/BCTI，研究稿未取得可靠日频序列；油价与 VIX 足以证明市场冲击，但不足以证明真实物流中断。</li>\n</ul>\n<h2>4. 表达与可读性 (Editorial quality)</h2>\n<ul>\n<li>执行摘要较强，但第 1 条可把 “HBM 稀缺性再定价” 后面补一句“不是全半导体板块普涨”，与 $SOX 仅 +0.52% 的证据直接连接。</li>\n<li>估值表中的 <code>TSM</code> P/S <code>0.55x</code> 与 <code>MU</code> 收盘价 <code>$979.30</code> 读者可能会质疑；研究稿虽有 vendor 口径警告，但建议在表头或脚注标注“vendor 字段未清洗，不用于绝对估值排序”。</li>\n<li>“Fed Chair Warsh 国会证词”是下周跟踪事项中的关键事件，但研究稿正文没有解释 Warsh 的身份变化或为什么该证词重要；建议增加一句背景说明，或若资料来源不足则删除该行。</li>\n<li>图表 2 的 2026-07-09 与 2026-07-10 Brent volume 均为 47,817，需复核是否为连续合约数据复制、缺失填充或真实成交量；图表脚注应说明 vendor 合约拼接风险。</li>\n</ul>\n<h2>5. 修订建议 (Recommended revisions)</h2>\n<ul>\n<li>高优先级：把所有 FedWatch 相关表述改为“Fed Funds futures 近似隐含利率”，不要写成 CME FedWatch 官方概率；若可能，补一张离散概率快照。</li>\n<li>高优先级：复核市场数据异常口径，尤其是 <code>MU</code> $979.30、<code>TSM</code> P/S <code>0.55x</code>、Brent volume 2026-07-09/10 重复值，并在表格脚注说明 vendor、币种、ADR 与连续合约风险。</li>\n<li>中优先级：将中国制造业利润结论标注为“价格链条敏感性推断”，不要暗示已由 A 股二季度预告验证。</li>\n<li>中优先级：为霍尔木兹、BDTI/BCTI、保险/运费数据增加“未取得，不可量化物流中断”的醒目标注，并把结构性风险溢价判断限定为市场价格层面的判断。</li>\n<li>低优先级：统一中英文稿中部分数字精度，例如 68 / 68.01、135.40 / 135.4，以减少 QA 和 PM 复核成本。</li>\n</ul>\n<h2>6. 总体评级</h2>\n<p><code>needs-revision</code> — 文件完整、问题覆盖充分、跨步骤核心数字一致，但在 FedWatch 概率替代、A 股利润验证缺口、航运/物流数据缺失和 vendor 市场数据口径上仍需要修订后才能作为 PM 展示稿使用。</p>"
+}

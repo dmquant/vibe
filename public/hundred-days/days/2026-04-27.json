@@ -4,7 +4,7 @@
   "dayNumber": 6,
   "status": "recorded",
   "headline": "算力分配格局重塑：在模型层多极化下对GPU与ASIC供应逻辑的压力测试",
-  "summary": "当日归档 3 份公开研究，20 条研究讨论和 3 个 thesis 证据事件；研究密度最高的方向为中国资产与市场结构。",
+  "summary": "当日归档 3 份公开研究，20 条研究讨论和 6 个 thesis 证据事件；研究密度最高的方向为中国资产与市场结构。",
   "dominantTopic": {
     "id": "china-assets",
     "labelZh": "中国资产与市场结构",
@@ -22,12 +22,12 @@
     ],
     "count": 2
   },
-  "activityScore": 69,
+  "activityScore": 70,
   "metrics": {
     "reports": 3,
     "researchThreads": 20,
     "researchNotes": 185,
-    "thesisEvents": 3,
+    "thesisEvents": 6,
     "personaEvents": 0,
     "readerMemos": 0,
     "recaps": 0,
@@ -249,6 +249,47 @@
   ],
   "thesisEvents": [
     {
+      "id": "thesis-89c14497ac",
+      "title": "期权伽马、ETF 与尾盘流动性正在放大主题交易的微观结构风险",
+      "titleEn": "Options gamma, ETFs, and closing liquidity are amplifying microstructure risk in theme trades",
+      "href": "/investor/theses/thesis-89c14497ac/",
+      "laneId": "lane_2ba2ee6db1ee",
+      "lane": "期权伽马/市场微观结构",
+      "laneHref": "/investor/lanes/options-gamma-and-market-microstructure/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 72,
+      "supports": 0,
+      "risks": 2,
+      "neutral": 0,
+      "eventCount": 2,
+      "events": [
+        {
+          "title": "“市值退市”潮下的A股生态重构",
+          "summary": "我支持当前主线判断，但需要加一个限定：A股并不是在简单意义上变成“机构持有”的市场，因为散户账户仍然占绝对多数；真正发生的是“A股正在变成由机构定价的市场”。强制退市制度、ETF/被动资...",
+          "href": "/investor/reports/archive-1c37d43f6e55/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        },
+        {
+          "title": "最终质量审计：“市值退市”潮下的A股生态重构",
+          "summary": "评级：needs-revision。 我综合并大体支持前七张研究记录的研究主线，但不给予无条件通过。核心结论是连贯的：A股正在从散户驱动的上市溢价市场，转向机构过滤的流动性溢价市场。从政策执行、ET...",
+          "href": "/investor/reports/archive-49dcde4b188c/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "CBOE",
+        "588000.SH",
+        "CME",
+        "HOOD",
+        "IBKR",
+        "VIRT",
+        "VIXY"
+      ]
+    },
+    {
       "id": "thesis-8c5a9690a0",
       "title": "Mag7 在 AI 时代从平台垄断转向基础设施再分层",
       "titleEn": "Mag7 shifts from platform monopoly to AI infrastructure re-layering",
@@ -294,7 +335,7 @@
       "laneHref": "/investor/lanes/ai-compute-semiconductors/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 67,
+      "conviction": 69,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -312,16 +353,16 @@
         "NVDA",
         "TSM",
         "AVGO",
-        "AMD",
         "000660.KS",
+        "AMD",
         "MU"
       ]
     },
     {
-      "id": "thesis-a10279b001",
+      "id": "thesis-ee275179db",
       "title": "面对 Meta 自建 Meta Compute 算力集群的传闻，Nebius (NBIS) 的 270 亿美元合同是否仍具备护城河？散户…",
       "titleEn": "Practical research topic: 面对 Meta 自建 Meta Compute 算力集群的传闻，Nebius (NBIS) 的 270 亿美元合同是否仍具备护城河？散户…",
-      "href": "/investor/theses/thesis-a10279b001/",
+      "href": "/investor/theses/thesis-ee275179db/",
       "laneId": "lane_f21fc181388a",
       "lane": "Mag7 AI 平台再分层",
       "laneHref": "/investor/lanes/mag7-ai-platform-re-layering/",
@@ -348,9 +389,62 @@
         "GOOGL",
         "NVDA"
       ]
+    },
+    {
+      "id": "thesis-9d3836cc07",
+      "title": "AI 生产率去通胀需要等待采用率和流程重构验证",
+      "titleEn": "AI 生产率去通胀需要等待采用率和流程重构验证",
+      "href": "/investor/theses/thesis-9d3836cc07/",
+      "laneId": "lane_008e3bd9306a",
+      "lane": "AI 软件效率/生产率",
+      "laneHref": "/investor/lanes/ai-software-productivity/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 54,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "算力分配格局重塑：在模型层多极化下对GPU与ASIC供应逻辑的压力测试",
+          "summary": "算力分配格局重塑：在模型层多极化下对GPU与ASIC供应逻辑的压力测试 既有研究记录 — TMT行业分析师 — 工作日期 2026-06-01（亚洲/新加坡） 立场：stress-test（在prior research...",
+          "href": "/investor/reports/archive-c3a93e363a17/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "META",
+        "MSFT",
+        "AMZN",
+        "GOOGL",
+        "NVDA",
+        "NOW",
+        "CRM",
+        "ADBE"
+      ]
     }
   ],
   "lanes": [
+    {
+      "id": "lane_2ba2ee6db1ee",
+      "title": "期权伽马/市场微观结构",
+      "href": "/investor/lanes/options-gamma-and-market-microstructure/",
+      "thesisCount": 1,
+      "eventCount": 2,
+      "convictionTotal": 72,
+      "stockTickers": [
+        "CBOE",
+        "588000.SH",
+        "CME",
+        "HOOD",
+        "IBKR",
+        "VIRT",
+        "VIXY"
+      ],
+      "avgConviction": 72
+    },
     {
       "id": "lane_f21fc181388a",
       "title": "Mag7 AI 平台再分层",
@@ -377,16 +471,35 @@
       "href": "/investor/lanes/ai-compute-semiconductors/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 67,
+      "convictionTotal": 69,
       "stockTickers": [
         "NVDA",
         "TSM",
         "AVGO",
-        "AMD",
         "000660.KS",
+        "AMD",
         "MU"
       ],
-      "avgConviction": 67
+      "avgConviction": 69
+    },
+    {
+      "id": "lane_008e3bd9306a",
+      "title": "AI 软件效率/生产率",
+      "href": "/investor/lanes/ai-software-productivity/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "convictionTotal": 54,
+      "stockTickers": [
+        "META",
+        "MSFT",
+        "AMZN",
+        "GOOGL",
+        "NVDA",
+        "NOW",
+        "CRM",
+        "ADBE"
+      ],
+      "avgConviction": 54
     }
   ],
   "stocks": [
@@ -395,11 +508,12 @@
       "name": "NVIDIA",
       "market": "US",
       "href": "/investor/stocks/NVDA/",
-      "thesisCount": 3,
-      "eventCount": 3,
+      "thesisCount": 4,
+      "eventCount": 4,
       "lanes": [
         "Mag7 AI 平台再分层",
-        "AI 算力半导体"
+        "AI 算力半导体",
+        "AI 软件效率/生产率"
       ]
     },
     {
@@ -407,10 +521,11 @@
       "name": "Meta Platforms",
       "market": "US",
       "href": "/investor/stocks/META/",
-      "thesisCount": 2,
-      "eventCount": 2,
+      "thesisCount": 3,
+      "eventCount": 3,
       "lanes": [
-        "Mag7 AI 平台再分层"
+        "Mag7 AI 平台再分层",
+        "AI 软件效率/生产率"
       ]
     },
     {
@@ -418,10 +533,11 @@
       "name": "Microsoft",
       "market": "US",
       "href": "/investor/stocks/MSFT/",
-      "thesisCount": 2,
-      "eventCount": 2,
+      "thesisCount": 3,
+      "eventCount": 3,
       "lanes": [
-        "Mag7 AI 平台再分层"
+        "Mag7 AI 平台再分层",
+        "AI 软件效率/生产率"
       ]
     },
     {
@@ -429,10 +545,11 @@
       "name": "Amazon",
       "market": "US",
       "href": "/investor/stocks/AMZN/",
-      "thesisCount": 2,
-      "eventCount": 2,
+      "thesisCount": 3,
+      "eventCount": 3,
       "lanes": [
-        "Mag7 AI 平台再分层"
+        "Mag7 AI 平台再分层",
+        "AI 软件效率/生产率"
       ]
     },
     {
@@ -440,10 +557,11 @@
       "name": "Alphabet",
       "market": "US",
       "href": "/investor/stocks/GOOGL/",
-      "thesisCount": 2,
-      "eventCount": 2,
+      "thesisCount": 3,
+      "eventCount": 3,
       "lanes": [
-        "Mag7 AI 平台再分层"
+        "Mag7 AI 平台再分层",
+        "AI 软件效率/生产率"
       ]
     },
     {
@@ -483,6 +601,83 @@
       ]
     },
     {
+      "ticker": "CBOE",
+      "name": "Cboe Global Markets",
+      "market": "US",
+      "href": "/investor/stocks/CBOE/",
+      "thesisCount": 1,
+      "eventCount": 2,
+      "lanes": [
+        "期权伽马/市场微观结构"
+      ]
+    },
+    {
+      "ticker": "588000.SH",
+      "name": "科创50 ETF",
+      "market": "A-share ETF",
+      "href": "/investor/stocks/588000.SH/",
+      "thesisCount": 1,
+      "eventCount": 2,
+      "lanes": [
+        "期权伽马/市场微观结构"
+      ]
+    },
+    {
+      "ticker": "CME",
+      "name": "CME Group",
+      "market": "US",
+      "href": "/investor/stocks/CME/",
+      "thesisCount": 1,
+      "eventCount": 2,
+      "lanes": [
+        "期权伽马/市场微观结构"
+      ]
+    },
+    {
+      "ticker": "HOOD",
+      "name": "Robinhood",
+      "market": "US",
+      "href": "/investor/stocks/HOOD/",
+      "thesisCount": 1,
+      "eventCount": 2,
+      "lanes": [
+        "期权伽马/市场微观结构"
+      ]
+    },
+    {
+      "ticker": "IBKR",
+      "name": "Interactive Brokers",
+      "market": "US",
+      "href": "/investor/stocks/IBKR/",
+      "thesisCount": 1,
+      "eventCount": 2,
+      "lanes": [
+        "期权伽马/市场微观结构"
+      ]
+    },
+    {
+      "ticker": "VIRT",
+      "name": "Virtu Financial",
+      "market": "US",
+      "href": "/investor/stocks/VIRT/",
+      "thesisCount": 1,
+      "eventCount": 2,
+      "lanes": [
+        "期权伽马/市场微观结构"
+      ]
+    },
+    {
+      "ticker": "VIXY",
+      "name": "ProShares VIX Short-Term Futures ETF",
+      "market": "US ETF",
+      "href": "/investor/stocks/VIXY/",
+      "thesisCount": 1,
+      "eventCount": 2,
+      "lanes": [
+        "期权伽马/市场微观结构"
+      ]
+    },
+    {
       "ticker": "AAPL",
       "name": "Apple",
       "market": "US",
@@ -513,6 +708,39 @@
       "eventCount": 1,
       "lanes": [
         "AI 算力半导体"
+      ]
+    },
+    {
+      "ticker": "NOW",
+      "name": "ServiceNow",
+      "market": "US",
+      "href": "/investor/stocks/NOW/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "AI 软件效率/生产率"
+      ]
+    },
+    {
+      "ticker": "CRM",
+      "name": "Salesforce",
+      "market": "US",
+      "href": "/investor/stocks/CRM/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "AI 软件效率/生产率"
+      ]
+    },
+    {
+      "ticker": "ADBE",
+      "name": "Adobe",
+      "market": "US",
+      "href": "/investor/stocks/ADBE/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "AI 软件效率/生产率"
       ]
     }
   ],

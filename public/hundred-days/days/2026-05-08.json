@@ -4,7 +4,7 @@
   "dayNumber": 17,
   "status": "recorded",
   "headline": "锂电产业链时钟错位压力测试 — materials-analyst, 2026-05-24",
-  "summary": "当日归档 19 份公开研究，5 条研究讨论和 6 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
+  "summary": "当日归档 19 份公开研究，5 条研究讨论和 5 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
   "dominantTopic": {
     "id": "macro-rates",
     "labelZh": "宏观、通胀与利率",
@@ -24,12 +24,12 @@
     ],
     "count": 15
   },
-  "activityScore": 59,
+  "activityScore": 58,
   "metrics": {
     "reports": 19,
     "researchThreads": 5,
     "researchNotes": 40,
-    "thesisEvents": 6,
+    "thesisEvents": 5,
     "personaEvents": 0,
     "readerMemos": 0,
     "recaps": 0,
@@ -458,43 +458,13 @@
       "stockTickers": [
         "BABA",
         "CRM",
-        "MSFT",
         "BIDU",
+        "MSFT",
         "9988.HK",
         "NOW",
         "NVDA",
         "0700.HK",
         "9888.HK"
-      ]
-    },
-    {
-      "id": "thesis-1c9177efea",
-      "title": "日元兑美元突破162.052，若日本官方实施抛售美债进行实际干预，是否会推动10Y美债收益率（当前4.49%）飙升？如何传导并冲击全球高…",
-      "titleEn": "Practical research topic: 日元兑美元突破162.052，若日本官方实施抛售美债进行实际干预，是否会推动10Y美债收益率（当前4.49%）飙升？如何传导并冲击全球高…",
-      "href": "/investor/theses/thesis-1c9177efea/",
-      "laneId": "lane_1c216bd29875",
-      "lane": "美债利率/美元再定价",
-      "laneHref": "/investor/lanes/us-rates-and-dollar-repricing/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 72,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "2026-05-22 A股策略卡：英伟达AI光环与美债收益率上行下的杠杆挤压",
-          "summary": "2026-05-22 A股策略卡：英伟达AI光环与美债收益率上行下的杠杆挤压",
-          "href": "/investor/reports/archive-41caa6951edc/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "JPM",
-        "TLT",
-        "IEF"
       ]
     },
     {
@@ -507,7 +477,7 @@
       "laneHref": "/investor/lanes/options-gamma-and-market-microstructure/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 67,
+      "conviction": 72,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -541,7 +511,7 @@
       "laneHref": "/investor/lanes/portfolio-risk-and-evidence-quality/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 43,
+      "conviction": 42,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -556,8 +526,8 @@
         }
       ],
       "stockTickers": [
-        "CBOE",
         "CME",
+        "CBOE",
         "IBKR",
         "VIRT",
         "SH"
@@ -575,8 +545,8 @@
       "stockTickers": [
         "BABA",
         "CRM",
-        "MSFT",
         "BIDU",
+        "MSFT",
         "9988.HK",
         "NOW",
         "NVDA",
@@ -586,26 +556,12 @@
       "avgConviction": 72
     },
     {
-      "id": "lane_1c216bd29875",
-      "title": "美债利率/美元再定价",
-      "href": "/investor/lanes/us-rates-and-dollar-repricing/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 72,
-      "stockTickers": [
-        "JPM",
-        "TLT",
-        "IEF"
-      ],
-      "avgConviction": 72
-    },
-    {
       "id": "lane_2ba2ee6db1ee",
       "title": "期权伽马/市场微观结构",
       "href": "/investor/lanes/options-gamma-and-market-microstructure/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 67,
+      "convictionTotal": 72,
       "stockTickers": [
         "CBOE",
         "588000.SH",
@@ -615,7 +571,7 @@
         "VIRT",
         "VIXY"
       ],
-      "avgConviction": 67
+      "avgConviction": 72
     },
     {
       "id": "lane_ccbe817778d1",
@@ -623,15 +579,15 @@
       "href": "/investor/lanes/portfolio-risk-and-evidence-quality/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 43,
+      "convictionTotal": 42,
       "stockTickers": [
-        "CBOE",
         "CME",
+        "CBOE",
         "IBKR",
         "VIRT",
         "SH"
       ],
-      "avgConviction": 43
+      "avgConviction": 42
     }
   ],
   "stocks": [
@@ -658,10 +614,10 @@
       ]
     },
     {
-      "ticker": "MSFT",
-      "name": "Microsoft",
-      "market": "US",
-      "href": "/investor/stocks/MSFT/",
+      "ticker": "BIDU",
+      "name": "Baidu",
+      "market": "US ADR",
+      "href": "/investor/stocks/BIDU/",
       "thesisCount": 1,
       "eventCount": 3,
       "lanes": [
@@ -669,10 +625,10 @@
       ]
     },
     {
-      "ticker": "BIDU",
-      "name": "Baidu",
-      "market": "US ADR",
-      "href": "/investor/stocks/BIDU/",
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "market": "US",
+      "href": "/investor/stocks/MSFT/",
       "thesisCount": 1,
       "eventCount": 3,
       "lanes": [
@@ -780,39 +736,6 @@
       "lanes": [
         "期权伽马/市场微观结构",
         "组合风控/证据质量"
-      ]
-    },
-    {
-      "ticker": "JPM",
-      "name": "JPMorgan Chase",
-      "market": "US",
-      "href": "/investor/stocks/JPM/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "美债利率/美元再定价"
-      ]
-    },
-    {
-      "ticker": "TLT",
-      "name": "iShares 20+ Year Treasury Bond ETF",
-      "market": "US ETF",
-      "href": "/investor/stocks/TLT/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "美债利率/美元再定价"
-      ]
-    },
-    {
-      "ticker": "IEF",
-      "name": "iShares 7-10 Year Treasury Bond ETF",
-      "market": "US ETF",
-      "href": "/investor/stocks/IEF/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "美债利率/美元再定价"
       ]
     },
     {
