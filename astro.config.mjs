@@ -7,6 +7,7 @@ import { defineConfig, fontProviders } from 'astro/config';
 const protectedRoutes = [
 	'/investor/odds/',
 	'/investor/workspace/',
+	'/investor/panorama/',
 ];
 
 // https://astro.build/config

@@ -71,8 +71,17 @@ Vibe turns that workflow into a usable product surface:
 - A bounded public research workspace that compresses the published corpus into
   12 current focus theses, preserves two dissent safeguards, and connects every
   item to its lane, stocks, shadow odds, confirmations, falsifiers, and source
-  reports. This is an analysis and presentation view, not a research-production
-  queue or a representation of hidden model state.
+  reports. It also retains a bounded published-snapshot history, shows daily
+  entrants/exits/movers, previews source reports, separates supporting and
+  challenging evidence, calculates browser-local portfolio impact, and keeps
+  browser-local saved views and decision notes. This is an analysis and
+  presentation view, not a research-production queue or a representation of
+  hidden model state.
+- A durable weekly investment report with deterministic calls, thesis/lane/
+  stock reconciliation, two-sided evidence, next-week triggers, source
+  previews, publication audit, and stable ISO-week edition routes. Rolling
+  daily refreshes are deterministic; the weekly close can use a strictly
+  grounded structured editor without allowing it to rewrite actions or IDs.
 - Individual thesis, lane, and stock pages connected to a browser-local
   portfolio tracker.
 - A 5/20/60-day shadow oddsboard that turns theses into falsifiable contracts,
@@ -105,8 +114,9 @@ Vibe turns that workflow into a usable product surface:
 | `/100-days/` | Interactive 100-day AI Institute timeline, 3D research atlas, episode library, and public scorecard |
 | `/investor/` | Reader-first AI Institute investment portal |
 | `/investor/daily/` | Latest daily morning brief dashboard |
-| `/investor/workspace/` | Admin-gated focus board, dissent view, and interactive thesis-to-lane/stock/report map |
-| `/investor/panorama/` | Weekly calls, positioning, lane allocation, and stock sheet |
+| `/investor/workspace/` | Admin-gated change ledger, focus board, evidence split, portfolio impact, source previews, and interactive thesis-to-lane/stock/report map |
+| `/investor/panorama/` | Admin-gated evidence-led weekly report: calls, deltas, positioning, tensions, triggers, source ledger, audit, and Word/PDF exports |
+| `/investor/panorama/[ISO-WEEK]/` | Admin-gated durable weekly edition with stable source, evidence, JSON, Word, and PDF links |
 | `/investor/research-network/` | Thesis, lane, stock, evidence, and recap network |
 | `/investor/odds/` | Admin-gated shadow thesis contracts, lane-index term structures, and stock-linked odds surfaces |
 | `/investor/theses/[id]/` | Individual living-thesis timeline and evidence page |
@@ -127,8 +137,8 @@ Vibe turns that workflow into a usable product surface:
 Vibe is a standalone Astro static site. It can be deployed independently on
 Vercel or any static host. Operational data pipelines, private source material,
 and API keys are managed separately from this public repository. Vercel uses
-one runtime-only secret, `VIBE_ADMIN_TOKEN`, to gate the odds and workspace
-routes; it is never exposed through a `PUBLIC_*` variable.
+one runtime-only secret, `VIBE_ADMIN_TOKEN`, to gate the odds, workspace, and
+weekly-research surfaces; it is never exposed through a `PUBLIC_*` variable.
 
 The public repository contains only sanitized generated artifacts:
 
@@ -150,8 +160,13 @@ Vercel Routing Middleware protects these deployed paths:
 
 - `/investor/odds/`
 - `/investor/workspace/`
+- `/investor/panorama/` and all weekly edition routes
 - `/investor-data/odds-board.json`
 - `/investor-data/research-workspace.json`
+- `/investor-data/weekly-report.json`
+- `/investor-data/weekly-report-index.json`
+- `/investor-data/weekly/*`
+- `/investor-downloads/weekly/*` for matching Word and PDF editions
 
 Set `VIBE_ADMIN_TOKEN` in **Vercel → Project Settings → Environment
 Variables** for Production and Preview, then redeploy. Use a randomly generated
@@ -170,6 +185,9 @@ curl -H "Authorization: Bearer $VIBE_ADMIN_TOKEN" \
 
 curl -H "X-Admin-Token: $VIBE_ADMIN_TOKEN" \
   https://vibe-alpha-three.vercel.app/investor-data/research-workspace.json
+
+curl -H "Authorization: Bearer $VIBE_ADMIN_TOKEN" \
+  https://vibe-alpha-three.vercel.app/investor-downloads/weekly/2026-W28/AI-Institute-Weekly-Report-2026-W28-zh.pdf
 ```
 
 The middleware fails closed with `503` when the variable is missing and returns
@@ -223,8 +241,13 @@ Vibe 把这套工作流呈现为一个可访问的产品界面：
   thesis/赛道/股票宇宙、研究活动河流和可持续扩展的研究事件库。
 - 以每日晨会、周度定位和人类友好报告为起点的投资研究门户。
 - 有限容量的公开研究注意力工作台：把已发布语料压缩为 12 条当前焦点，固定保留
-  2 个反方槽位，并把每条焦点连接到赛道、股票、影子赔率、确认条件、证伪条件和公开源报告。
-  这个页面只负责分析与展示，不是研究生产队列，也不代表模型的隐藏内部状态。
+  2 个反方槽位，并把每条焦点连接到赛道、股票、影子赔率、确认条件、证伪条件和公开源报告；
+  同时保留有限的公开快照历史，展示每日进入、退出和变化，支持报告预览、支持/反向证据对照、
+  浏览器本地组合影响、保存视图与决策记录。这个页面只负责分析与展示，不是研究生产队列，
+  也不代表模型的隐藏内部状态。
+- 可持久化的周度投资研究报告：由确定性代码生成操作结论、thesis/赛道/股票映射和环比变化，
+  保留支持与反向证据、下周正负触发器、来源预览、发布审计与稳定的 ISO 周次页面；日常滚动更新
+  不消耗模型调用，周度关闭时可以使用受严格证据约束的结构化编辑模型，但模型不能改写 action 或 ID。
 - 从 thesis 到赛道、股票/ETF 研究节点，再到本地组合追踪的完整路径。
 - 5/20/60 交易日影子赔率盘：把 thesis 改写成可证伪合约，把赛道组织成成员隐含指数，把股票展示为关联合约研究暴露；在真实价格、payoff 和结算样本接入前，不虚构市场赔率、EV 或 Kelly 仓位。
 - 研究时间线追踪器，用于查看简报、报告、复盘和动态论点如何演进。
@@ -251,8 +274,9 @@ Vibe 把这套工作流呈现为一个可访问的产品界面：
 | `/100-days/` | AI 研究院 100 天交互时间线、3D 研究图谱、研究事件库与公开记分卡 |
 | `/investor/` | 以读者和决策顺序为中心的 AI Institute 投资门户 |
 | `/investor/daily/` | 最新晨会简报看板 |
-| `/investor/workspace/` | 需要管理员令牌的 12 条有限容量焦点、反方保留与交互关系图 |
-| `/investor/panorama/` | 周度操作结论、仓位含义、赛道配置与个股清单 |
+| `/investor/workspace/` | 需要管理员令牌的变化账本、12 条有限焦点、证据分歧、组合影响、报告预览与交互关系图 |
+| `/investor/panorama/` | 需要管理员令牌的证据型周报：操作结论、环比变化、仓位、分歧、触发器、来源账本、质量审计与 Word/PDF 导出 |
+| `/investor/panorama/[ISO-WEEK]/` | 需要管理员令牌、可长期引用的周次版本，以及稳定的证据、JSON、Word 和 PDF 链接 |
 | `/investor/research-network/` | Thesis、赛道、标的、证据与复盘网络 |
 | `/investor/odds/` | 需要管理员令牌的主线合约、赛道指数期限结构与股票关联合约赔率 |
 | `/investor/theses/[id]/` | 单条动态 thesis 的时间线和证据页 |
@@ -270,7 +294,7 @@ Vibe 把这套工作流呈现为一个可访问的产品界面：
 
 ### 运营边界
 
-Vibe 是一个可独立部署的 Astro 静态网站。Vercel 构建不需要解密私有简报；运行时只读取 `VIBE_ADMIN_TOKEN`，用于保护赔率盘与 Workspace。运营数据管线、私有源材料和其他 API key 不属于这个公开仓库。
+Vibe 是一个可独立部署的 Astro 静态网站。Vercel 构建不需要解密私有简报；运行时只读取 `VIBE_ADMIN_TOKEN`，用于保护赔率盘、Workspace 与周度研究发布面。运营数据管线、私有源材料和其他 API key 不属于这个公开仓库。
 
 可以提交到 Vibe 的是已经清洗过的公开发布物：
 
@@ -291,8 +315,13 @@ Vercel Routing Middleware 会保护：
 
 - `/investor/odds/`
 - `/investor/workspace/`
+- `/investor/panorama/` 及所有周次版本
 - `/investor-data/odds-board.json`
 - `/investor-data/research-workspace.json`
+- `/investor-data/weekly-report.json`
+- `/investor-data/weekly-report-index.json`
+- `/investor-data/weekly/*`
+- `/investor-downloads/weekly/*` 下对应的 Word 与 PDF 文件
 
 在 **Vercel → Project Settings → Environment Variables** 中为 Production
 和 Preview 设置 `VIBE_ADMIN_TOKEN`，然后重新部署。建议使用至少 32 位的随机值，
@@ -330,6 +359,7 @@ The production build is intentionally self-contained:
 ```bash
 npm install
 npm run test:admin-gate
+npm run test:weekly
 npm run dev
 npm run build
 ```

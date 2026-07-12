@@ -5,8 +5,8 @@ const previousToken = process.env.VIBE_ADMIN_TOKEN;
 const token = "test-only-admin-token-7e1194";
 const protectedUrl = "https://vibe.example/investor/odds/";
 
-function request(headers = {}) {
-  return new Request(protectedUrl, { headers });
+function request(headers = {}, url = protectedUrl) {
+  return new Request(url, { headers });
 }
 
 try {
@@ -52,14 +52,36 @@ try {
     "/investor/odds/",
     "/investor/workspace",
     "/investor/workspace/",
+    "/investor/panorama",
+    "/investor/panorama/",
+    "/investor/panorama/2026-W28/",
+    "/investor/panorama/weekly.json",
     "/investor-data/odds-board.json",
     "/investor-data/research-workspace.json",
+    "/investor-data/weekly-report.json",
+    "/investor-data/weekly-report-index.json",
+    "/investor-data/weekly/2026-W28.json",
+    "/investor-downloads/weekly/2026-W28/AI-Institute-Weekly-Report-2026-W28-zh.docx",
+    "/investor-downloads/weekly/2026-W28/AI-Institute-Weekly-Report-2026-W28-zh.pdf",
   ]) {
     assert.equal(isProtectedPath(pathname), true, `${pathname} must be protected`);
+    const denied = middleware(request({}, `https://vibe.example${pathname}`));
+    assert.equal(denied.status, 401, `${pathname} must reject missing credentials`);
   }
   assert.equal(isProtectedPath("/investor/daily/"), false);
+  assert.equal(isProtectedPath("/investor/panoramic/"), false);
   assert.equal(config.runtime, "edge");
-  assert.equal(config.matcher.length, 4);
+  assert.deepEqual(config.matcher, [
+    "/investor/odds/:path*",
+    "/investor/workspace/:path*",
+    "/investor/panorama/:path*",
+    "/investor-data/odds-board.json",
+    "/investor-data/research-workspace.json",
+    "/investor-data/weekly-report.json",
+    "/investor-data/weekly-report-index.json",
+    "/investor-data/weekly/:path*",
+    "/investor-downloads/weekly/:path*",
+  ]);
 
   console.log(
     JSON.stringify({

@@ -3,8 +3,13 @@ const ADMIN_TOKEN_ENV = "VIBE_ADMIN_TOKEN";
 const PROTECTED_PATHS = [
   "/investor/odds",
   "/investor/workspace",
+  "/investor/panorama",
   "/investor-data/odds-board.json",
   "/investor-data/research-workspace.json",
+  "/investor-data/weekly-report.json",
+  "/investor-data/weekly-report-index.json",
+  "/investor-data/weekly",
+  "/investor-downloads/weekly",
 ];
 
 function isProtectedPath(pathname) {
@@ -95,8 +100,13 @@ export const config = {
   matcher: [
     "/investor/odds/:path*",
     "/investor/workspace/:path*",
+    "/investor/panorama/:path*",
     "/investor-data/odds-board.json",
     "/investor-data/research-workspace.json",
+    "/investor-data/weekly-report.json",
+    "/investor-data/weekly-report-index.json",
+    "/investor-data/weekly/:path*",
+    "/investor-downloads/weekly/:path*",
   ],
   runtime: "edge",
 };

@@ -1,0 +1,39 @@
+{
+  "schema": "vibe.ai_institute.publication_quality.v1",
+  "version": "publication-quality.2026-07-12.1",
+  "generatedAt": "2026-07-10T21:02:39.114Z",
+  "checkedAt": "2026-07-10T21:02:39.114Z",
+  "asOfDate": "2026-07-10",
+  "sourceHash": "d42f8b7749d8cf66",
+  "status": "degraded",
+  "statusLabel": "有警告",
+  "counts": {
+    "error": 0,
+    "warning": 1,
+    "info": 0,
+    "marketQuotes": 0,
+    "theses": 100,
+    "lanes": 50,
+    "stocks": 242,
+    "workspaceFocus": 12
+  },
+  "gates": {
+    "dates": true,
+    "routes": true,
+    "relationships": true,
+    "odds": true,
+    "provenance": true,
+    "marketData": false
+  },
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "MARKET_QUOTES_MISSING",
+      "message": "Daily dashboard contains no current market quotes",
+      "context": {
+        "strict": false
+      }
+    }
+  ],
+  "note": "质量门检查日期、价格时效、公开路由、thesis-lane-stock 双向关系、影子赔率边界与来源完整性。警告会公开显示；阻断项禁止发布。"
+}

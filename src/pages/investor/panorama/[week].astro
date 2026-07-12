@@ -1,0 +1,178 @@
+---
+import BaseHead from "../../../components/BaseHead.astro";
+import Header from "../../../components/Header.astro";
+import { listWeeklyReports } from "../../../lib/investor-generated.js";
+import "../../../styles/weekly-panorama.css";
+
+export function getStaticPaths() {
+  return listWeeklyReports().map((report) => ({
+    params: { week: report.week },
+    props: { report },
+  }));
+}
+
+const { report } = Astro.props;
+const narrative = report.narrative || {};
+const changes = report.weeklyChanges || {};
+const audit = report.audit || { checks: [] };
+const searchText = (...items) => String(items.filter(Boolean).join(" ")).replaceAll('"', "&quot;");
+---
+
+<!doctype html>
+<html lang="zh-CN" data-lang="zh">
+  <head>
+    <BaseHead
+      title={`${report.week} 周度研究全景 · AI Institute`}
+      description={narrative.oneSentenceConclusion || report.lead}
+    />
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+  </head>
+  <body>
+    <Header />
+    <main class="weekly-panorama weekly-edition" data-week={report.week}>
+      <section class="panorama-hero">
+        <div>
+          <div class="panorama-kicker">AI Institute · Durable Weekly Edition</div>
+          <h1>{report.week} 周报</h1>
+          <p>{narrative.oneSentenceConclusion}</p>
+          <div class="panorama-actions">
+            <a href="/investor/panorama/">最新周度全景</a>
+            <a href="#calls">操作结论</a>
+            <a href="#tensions">分歧与验证</a>
+            <a href="#sources">来源账本</a>
+            {report.artifacts?.docx && <a href={report.artifacts.docx}>Word</a>}
+            {report.artifacts?.pdf && <a href={report.artifacts.pdf}>PDF</a>}
+            <a href={report.artifacts.editionJson}>JSON</a>
+          </div>
+        </div>
+        <aside class="panorama-window">
+          <span>{report.edition?.state}</span>
+          <strong>{report.week}</strong>
+          <em>{report.window.from} → {report.window.to}</em>
+          <p>{report.headline}</p>
+          <small>REV {report.edition?.revision} · {audit.status} · {report.composition?.mode}</small>
+        </aside>
+      </section>
+
+      <section class="panorama-stat-grid" aria-label="Weekly edition coverage">
+        <a href="#calls"><span>Calls</span><strong>{report.recommendations.calls.length}</strong><em>操作结论</em></a>
+        <a href="#sources"><span>Sources</span><strong>{report.sourceLedger.length}</strong><em>公开来源</em></a>
+        <a href="#evidence"><span>Evidence</span><strong>{report.evidenceLedger.length}</strong><em>证据行</em></a>
+        <a href="#changes"><span>Changes</span><strong>{(changes.actionChanges?.length || 0) + (changes.laneChanges?.length || 0)}</strong><em>环比变化</em></a>
+        <a href="#quality"><span>Quality</span><strong>{audit.completenessScore}</strong><em>{audit.warnings} warnings</em></a>
+      </section>
+
+      <section class="panorama-section editorial-brief">
+        <div class="panorama-section-head">
+          <span>Executive Synthesis</span>
+          <h2>执行摘要</h2>
+          <p>{narrative.oneSentenceConclusion}</p>
+        </div>
+        <div class="editorial-summary">
+          <p>{narrative.executiveSummary}</p>
+          <footer>{narrative.closingView}</footer>
+        </div>
+      </section>
+
+      <section class="panorama-section action-first" id="calls">
+        <div class="panorama-section-head">
+          <span>This Week's Calls</span>
+          <h2>本周操作结论</h2>
+          <p>{report.recommendations.disclaimer}</p>
+        </div>
+        <div class="call-table">
+          {report.recommendations.calls.map((call) => (
+            <a class={`call-row action-${String(call.action).toLowerCase()}`} href={call.href}>
+              <span>{call.action}</span><strong>{call.target}</strong>
+              <em>{call.kind} · {call.evidenceDate} · {call.changeType}</em>
+              <p>{call.driver}</p><small>Stop: {call.invalidation} · {call.sourceHrefs.length} sources</small>
+              {call.linkedTicker && <b>{call.linkedTicker}</b>}
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="panorama-section weekly-change-section" id="changes">
+        <div class="panorama-section-head">
+          <span>Week-over-week Ledger</span>
+          <h2>{changes.status === "baseline" ? "周度基线" : `相对 ${changes.comparedWith} 的变化`}</h2>
+          <p>{changes.status === "baseline" ? "本版建立持久化基线，不伪造环比。" : "只记录操作、赛道和主线层面的真实方向变化。"}</p>
+        </div>
+        <div class="change-metric-grid">
+          <div><span>Actions</span><strong>{changes.actionChanges?.length || 0}</strong><em>操作变化</em></div>
+          <div><span>Lanes</span><strong>{changes.laneChanges?.length || 0}</strong><em>立场变化</em></div>
+          <div><span>Theses</span><strong>{changes.thesisChanges?.length || 0}</strong><em>主线变化</em></div>
+          <div><span>Sources</span><strong>{changes.newSources?.length || 0}</strong><em>新增来源</em></div>
+        </div>
+      </section>
+
+      <section class="panorama-two-col tension-layout" id="tensions">
+        <div class="panorama-section">
+          <div class="panorama-section-head compact"><span>Two-sided Research</span><h2>关键分歧</h2><p>支持、反向和解决信号同时保留。</p></div>
+          <div class="weekly-tension-stack">
+            {(narrative.tensions || []).map((item) => (
+              <article class="weekly-tension">
+                <h3>{item.topic}</h3>
+                <div class="case support"><span>SUPPORT</span><p>{item.bullCase}</p></div>
+                <div class="case challenge"><span>CHALLENGE</span><p>{item.bearCase}</p></div>
+                <small>Resolve: {item.resolutionSignal}</small>
+              </article>
+            ))}
+          </div>
+        </div>
+        <div class="panorama-section">
+          <div class="panorama-section-head compact"><span>Next-week Playbook</span><h2>下周验证</h2><p>触发器先于叙事，动作先于临场解释。</p></div>
+          <div class="next-week-stack">
+            {(narrative.nextWeek || []).map((item, index) => (
+              <article class="next-week-row">
+                <div><span>{String(index + 1).padStart(2, "0")}</span><h3>{item.signal}</h3></div>
+                <p>{item.why}</p>
+                <dl>
+                  <div><dt>+</dt><dd>{item.positiveTrigger}<small>{item.actionIfPositive}</small></dd></div>
+                  <div><dt>−</dt><dd>{item.negativeTrigger}<small>{item.actionIfNegative}</small></dd></div>
+                </dl>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="panorama-section" id="evidence">
+        <div class="panorama-section-head"><span>Decision Notes</span><h2>从证据到组合</h2><p>模型只负责解释，不能改写确定性 calls。</p></div>
+        <div class="decision-note-grid">
+          {(narrative.decisionNotes || []).map((note, index) => {
+            const call = report.recommendations.calls.find((item) => item.id === note.callId);
+            return (
+              <article class="decision-note" data-search={searchText(note.headline, note.rationale)}>
+                <div><span>0{index + 1} · {call?.action}</span><a href={call?.href}>{call?.target}</a></div>
+                <h3>{note.headline}</h3><p>{note.rationale}</p>
+                <strong>组合含义</strong><p>{note.portfolioReadthrough}</p><small>证伪：{note.invalidation}</small>
+              </article>
+            );
+          })}
+        </div>
+      </section>
+
+      <section class="panorama-section source-ledger-section" id="sources">
+        <div class="panorama-section-head"><span>Public Source Ledger</span><h2>完整来源账本</h2><p>每一项直接进入公开报告详情。</p></div>
+        <div class="source-ledger-grid">
+          {report.sourceLedger.map((source, index) => (
+            <a class="source-ledger-row" href={source.href}>
+              <span>{String(index + 1).padStart(2, "0")} · {source.date}</span>
+              <strong>{source.title}</strong><p>{source.preview}</p>
+              <em>{source.analyst} · {source.roles.slice(0, 2).join(" / ")}</em>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="panorama-section" id="quality">
+        <div class="panorama-section-head"><span>Publication Gate</span><h2>质量与缺口</h2><p>{report.scorecard.note}</p></div>
+        <div class="audit-grid">
+          {(audit.checks || []).map((check) => <article data-status={check.status}><span>{check.status}</span><strong>{check.label}</strong><em>{check.value}</em></article>)}
+        </div>
+        <div class="omission-strip"><strong>本版明确不发布</strong><span>{audit.omittedSections?.join(" · ")}</span></div>
+      </section>
+    </main>
+  </body>
+</html>

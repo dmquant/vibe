@@ -6,6 +6,10 @@ import "../../../styles/weekly-panorama.css";
 
 const panorama = buildWeeklyPanoramaBundle();
 const stats = panorama.stats || {};
+const narrative = panorama.narrative || {};
+const changes = panorama.weeklyChanges || { actionChanges: [], laneChanges: [], thesisChanges: [], newSources: [] };
+const audit = panorama.audit || { checks: [] };
+const sourcePayload = JSON.stringify({ sources: panorama.sourceLedger || [] }).replaceAll("<", "\\u003c");
 const maxLaneEvents = Math.max(1, ...panorama.lanes.map((lane) => lane.weeklyEvents || 0));
 const maxClusterShare = Math.max(1, ...panorama.clusters.map((cluster) => cluster.share || 0));
 const maxPersonaEvents = Math.max(1, ...panorama.analystTerritory.map((persona) => persona.weeklyEvents || 0));
@@ -21,6 +25,7 @@ const searchText = (...items) => String(items.filter(Boolean).join(" ")).replace
       title="周度全景 · AI Institute 投资研究台"
       description="AI Institute weekly panorama endpoint over public theses, lanes, stocks, analyst territory, risk signals, and reader reports."
     />
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
   </head>
   <body>
     <Header />
@@ -31,35 +36,42 @@ const searchText = (...items) => String(items.filter(Boolean).join(" ")).replace
           <h1>周度研究全景</h1>
           <p>{panorama.lead}</p>
           <div class="panorama-actions">
+            <a href="#calls">本周结论</a>
+            <a href="#changes">环比变化</a>
+            <a href="#tensions">分歧与触发器</a>
+            <a href="#sources">来源账本</a>
             <a href="/investor/">返回研究台</a>
+            {panorama.artifacts?.docx && <a href={panorama.artifacts.docx}>Word</a>}
+            {panorama.artifacts?.pdf && <a href={panorama.artifacts.pdf}>PDF</a>}
             <a href="/investor/panorama/weekly.json">JSON bundle</a>
-            <a href="/investor/research-network/">研究网络</a>
-            <a href="/investor/portfolio/">组合追踪</a>
           </div>
         </div>
         <aside class="panorama-window">
-          <span>{panorama.mode}</span>
+          <span>{panorama.edition?.state || panorama.mode}</span>
           <strong>{panorama.week}</strong>
           <em>{panorama.window.from} → {panorama.window.to}</em>
-          <p>这是 Vibe 侧的公开合约版周度全景。完整 embed → cluster → scorecard → PDF 的重计算流程应作为独立 Panorama App 运行。</p>
+          <p>{narrative.oneSentenceConclusion || panorama.lead}</p>
+          <small>REV {panorama.edition?.revision || 1} · {audit.status || "PUBLIC"} · {panorama.composition?.mode || "deterministic"}</small>
         </aside>
       </section>
 
       <section class="panorama-stat-grid" aria-label="Weekly panorama stats">
-        <a href="/investor/research-network/"><span>Theses</span><strong>{stats.theses}</strong><em>公开主线</em></a>
-        <a href="/investor/research-network/"><span>Lanes</span><strong>{stats.lanes}</strong><em>赛道</em></a>
-        <a href="/investor/research-network/"><span>Stocks</span><strong>{stats.stocks}</strong><em>标的节点</em></a>
-        <a href="/investor/timeline/"><span>Weekly events</span><strong>{stats.weeklyThesisEvents}</strong><em>本窗口主线事件</em></a>
-        <a href="/investor/personas/"><span>View changes</span><strong>{stats.analystViewChanges}</strong><em>分析师视角变化</em></a>
+        <a href="#calls"><span>Calls</span><strong>{panorama.recommendations.calls.length}</strong><em>有证据的操作结论</em></a>
+        <a href="#sources"><span>Sources</span><strong>{panorama.sourceLedger?.length || 0}</strong><em>公开报告账本</em></a>
+        <a href="#evidence"><span>Evidence</span><strong>{panorama.evidenceLedger?.length || 0}</strong><em>支持与反向证据</em></a>
+        <a href="#changes"><span>Changes</span><strong>{(changes.actionChanges?.length || 0) + (changes.laneChanges?.length || 0)}</strong><em>相对上周的变化</em></a>
+        <a href="#quality"><span>Quality</span><strong>{audit.completenessScore || 0}</strong><em>{audit.warnings || 0} warnings</em></a>
       </section>
 
       <section class="panorama-controls">
         <label for="panoramaSearch">Search</label>
         <input id="panoramaSearch" type="search" placeholder="搜索主线、赛道、标的、分析师、风险..." />
+        {panorama.artifacts?.docx && <a href={panorama.artifacts.docx}>下载 Word</a>}
+        {panorama.artifacts?.pdf && <a href={panorama.artifacts.pdf}>下载 PDF</a>}
         <a href="/investor/panorama/weekly.json">下载 JSON</a>
       </section>
 
-      <section class="panorama-section action-first">
+      <section class="panorama-section action-first" id="calls">
         <div class="panorama-section-head">
           <span>This Week's Calls</span>
           <h2>本周操作结论</h2>
@@ -74,13 +86,74 @@ const searchText = (...items) => String(items.filter(Boolean).join(" ")).replace
             >
               <span>{call.action}</span>
               <strong>{call.target}</strong>
-              <em>{call.kind} · {call.evidenceDate}</em>
+              <em>{call.kind} · {call.evidenceDate} · {call.changeType}</em>
               <p>{call.driver}</p>
-              <small>Stop: {call.invalidation}</small>
+              <small>Stop: {call.invalidation} · {call.sourceHrefs?.length || 0} sources</small>
               {call.linkedTicker && <b>{call.linkedTicker}</b>}
             </a>
           ))}
         </div>
+      </section>
+
+      <section class="panorama-section editorial-brief">
+        <div class="panorama-section-head">
+          <span>Executive Synthesis</span>
+          <h2>这周到底意味着什么</h2>
+          <p>{narrative.oneSentenceConclusion}</p>
+        </div>
+        <div class="editorial-summary">
+          <p>{narrative.executiveSummary}</p>
+          <footer>{narrative.closingView}</footer>
+        </div>
+        <div class="decision-note-grid">
+          {(narrative.decisionNotes || []).map((note, index) => {
+            const call = panorama.recommendations.calls.find((item) => item.id === note.callId);
+            return (
+              <article class="decision-note panorama-searchable" data-search={searchText(note.headline, note.rationale, note.portfolioReadthrough, call?.target)}>
+                <div><span>0{index + 1} · {call?.action || "VIEW"}</span><a href={call?.href || "#calls"}>{call?.target || "周度判断"}</a></div>
+                <h3>{note.headline}</h3>
+                <p>{note.rationale}</p>
+                <strong>组合含义</strong><p>{note.portfolioReadthrough}</p>
+                <small>证伪：{note.invalidation}</small>
+                <div class="source-button-row">
+                  {note.sourceHrefs?.slice(0, 3).map((href, sourceIndex) => (
+                    <button type="button" data-preview-href={href}>R{sourceIndex + 1}</button>
+                  ))}
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      </section>
+
+      <section class="panorama-section weekly-change-section" id="changes">
+        <div class="panorama-section-head">
+          <span>Week-over-week Ledger</span>
+          <h2>{changes.status === "baseline" ? "首个持久化周度基线" : `相对 ${changes.comparedWith || "上周"} 的变化`}</h2>
+          <p>{changes.status === "baseline" ? "本版不伪造历史变化；后续周报会从这个证据快照开始计算操作、赛道和主线的方向变化。" : "只列真正改变仓位含义、赛道立场或主线权重的变化，未变化项目留在证据附录。"}</p>
+        </div>
+        <div class="change-metric-grid">
+          <div><span>Actions</span><strong>{changes.actionChanges?.length || 0}</strong><em>操作变化</em></div>
+          <div><span>Lanes</span><strong>{changes.laneChanges?.length || 0}</strong><em>赛道立场变化</em></div>
+          <div><span>Theses</span><strong>{changes.thesisChanges?.length || 0}</strong><em>主线分数/事件变化</em></div>
+          <div><span>New sources</span><strong>{changes.newSources?.length || 0}</strong><em>新增公开来源</em></div>
+        </div>
+        {changes.status !== "baseline" && (
+          <div class="change-ledger-grid">
+            <div>
+              <h3>操作与赛道</h3>
+              {[...(changes.actionChanges || []), ...(changes.laneChanges || [])].slice(0, 10).map((item) => (
+                <a href={item.href}><span>{item.from || "NEW"} → {item.to}</span><strong>{item.target || item.lane}</strong></a>
+              ))}
+            </div>
+            <div>
+              <h3>主线权重</h3>
+              {(changes.thesisChanges || []).slice(0, 10).map((item) => (
+                <a href={item.href}><span>{Number(item.scoreDelta || 0) > 0 ? "+" : ""}{item.scoreDelta ?? "new"} score</span><strong>{item.title}</strong></a>
+              ))}
+            </div>
+          </div>
+        )}
       </section>
 
       <section class="panorama-two-col action-layout">
@@ -175,7 +248,53 @@ const searchText = (...items) => String(items.filter(Boolean).join(" ")).replace
         </div>
       </section>
 
-      <section class="panorama-section">
+      <section class="panorama-two-col tension-layout" id="tensions">
+        <div class="panorama-section">
+          <div class="panorama-section-head compact">
+            <span>Two-sided Research</span>
+            <h2>分歧不是脚注</h2>
+            <p>每个主导观点都保留支持、反向与解决信号，避免把报告数量误读成共识强度。</p>
+          </div>
+          <div class="weekly-tension-stack">
+            {(narrative.tensions || []).map((item) => (
+              <article class="weekly-tension panorama-searchable" data-search={searchText(item.topic, item.bullCase, item.bearCase, item.resolutionSignal)}>
+                <h3>{item.topic}</h3>
+                <div class="case support"><span>SUPPORT</span><p>{item.bullCase}</p></div>
+                <div class="case challenge"><span>CHALLENGE</span><p>{item.bearCase}</p></div>
+                <small>Resolve: {item.resolutionSignal}</small>
+                <div class="source-button-row">
+                  {item.sourceHrefs?.slice(0, 3).map((href, index) => <button type="button" data-preview-href={href}>R{index + 1}</button>)}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <div class="panorama-section">
+          <div class="panorama-section-head compact">
+            <span>Next-week Playbook</span>
+            <h2>下周怎么验证</h2>
+            <p>正向和反向触发器必须可观察，并预先写出触发后的组合动作。</p>
+          </div>
+          <div class="next-week-stack">
+            {(narrative.nextWeek || []).map((item, index) => (
+              <article class="next-week-row panorama-searchable" data-search={searchText(item.signal, item.why, item.positiveTrigger, item.negativeTrigger)}>
+                <div><span>{String(index + 1).padStart(2, "0")}</span><h3>{item.signal}</h3></div>
+                <p>{item.why}</p>
+                <dl>
+                  <div><dt>+</dt><dd>{item.positiveTrigger}<small>{item.actionIfPositive}</small></dd></div>
+                  <div><dt>−</dt><dd>{item.negativeTrigger}<small>{item.actionIfNegative}</small></dd></div>
+                </dl>
+                <div class="source-button-row">
+                  {item.sourceHrefs?.slice(0, 3).map((href, sourceIndex) => <button type="button" data-preview-href={href}>R{sourceIndex + 1}</button>)}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="panorama-section" id="evidence">
         <div class="panorama-section-head">
           <span>Evidence Appendix · House Thesis</span>
           <h2>本周主线骨架</h2>
@@ -344,12 +463,46 @@ const searchText = (...items) => String(items.filter(Boolean).join(" ")).replace
         </div>
       </section>
 
-      <section class="panorama-section">
+      <section class="panorama-section source-ledger-section" id="sources">
         <div class="panorama-section-head">
-          <span>Process From 2026-07-07 Design</span>
-          <h2>如何走向完整 Panorama App</h2>
+          <span>Public Source Ledger</span>
+          <h2>来源不是尾注，而是可打开的研究路径</h2>
+          <p>本周公开账本保留报告日期、分析师、证据角色、关联主线与预览。点击任一来源先预览，再进入完整报告。</p>
+        </div>
+        <div class="source-ledger-grid">
+          {(panorama.sourceLedger || []).slice(0, 40).map((source, index) => (
+            <button
+              type="button"
+              class="source-ledger-row panorama-searchable"
+              data-preview-href={source.href}
+              data-search={searchText(source.title, source.analyst, source.category, source.preview, source.tickers.join(" "))}
+            >
+              <span>{String(index + 1).padStart(2, "0")} · {source.date}</span>
+              <strong>{source.title}</strong>
+              <p>{source.preview}</p>
+              <em>{source.analyst} · {source.roles.slice(0, 2).join(" / ")} · {source.tickers.slice(0, 4).join(" ")}</em>
+            </button>
+          ))}
+        </div>
+        {(panorama.sourceLedger?.length || 0) > 40 && <p class="source-ledger-note">页面展示优先级最高的 40 份来源；完整 {panorama.sourceLedger.length} 份来源保留在 <a href="/investor/panorama/weekly.json">JSON 合约</a>。</p>}
+      </section>
+
+      <section class="panorama-section" id="quality">
+        <div class="panorama-section-head">
+          <span>Publication Gate & Editions</span>
+          <h2>这份周报如何生成，也如何承认缺口</h2>
           <p>{panorama.scorecard.note}</p>
         </div>
+        <div class="audit-grid">
+          {(audit.checks || []).map((check) => (
+            <article data-status={check.status}>
+              <span>{check.status}</span><strong>{check.label}</strong><em>{check.value}</em>
+            </article>
+          ))}
+        </div>
+        {audit.omittedSections?.length > 0 && (
+          <div class="omission-strip"><strong>本版明确不发布</strong><span>{audit.omittedSections.join(" · ")}</span></div>
+        )}
         <div class="process-grid">
           {panorama.process.map((item) => (
             <article>
@@ -357,6 +510,12 @@ const searchText = (...items) => String(items.filter(Boolean).join(" ")).replace
               <strong>{item.title}</strong>
               <p>{item.text}</p>
             </article>
+          ))}
+        </div>
+        <div class="edition-strip">
+          <div><span>EDITIONS</span><strong>{panorama.history?.status}</strong></div>
+          {(panorama.history?.editions || []).map((edition) => (
+            <a href={edition.href}><span>{edition.state}</span><strong>{edition.week}</strong><em>rev {edition.revision}</em></a>
           ))}
         </div>
         <div class="scorecard-strip">
@@ -368,8 +527,18 @@ const searchText = (...items) => String(items.filter(Boolean).join(" ")).replace
           ))}
         </div>
       </section>
+
+      <dialog class="panorama-source-dialog" id="panoramaSourceDialog">
+        <form method="dialog"><button type="submit" aria-label="关闭来源预览" title="关闭来源预览">×</button></form>
+        <div class="source-dialog-meta"><span id="panoramaSourceDate"></span><em id="panoramaSourceLabel"></em></div>
+        <h2 id="panoramaSourceTitle"></h2>
+        <p id="panoramaSourcePreview"></p>
+        <div class="source-dialog-tags" id="panoramaSourceTags"></div>
+        <a id="panoramaSourceLink" href="/investor/reports/">打开完整报告</a>
+      </dialog>
     </main>
 
+    <script type="application/json" id="panoramaSourcePayload" set:html={sourcePayload}></script>
     <script>
       const input = document.getElementById("panoramaSearch");
       const items = [...document.querySelectorAll(".panorama-searchable")];
@@ -380,6 +549,39 @@ const searchText = (...items) => String(items.filter(Boolean).join(" ")).replace
         items.forEach((item) => {
           item.classList.toggle("is-hidden", Boolean(query) && !normalize(item.dataset.search).includes(query));
         });
+      });
+
+      const payloadElement = document.getElementById("panoramaSourcePayload");
+      const payload = payloadElement ? JSON.parse(payloadElement.textContent || "{}") : {};
+      const sourceByHref = new Map((payload.sources || []).map((source) => [source.href, source]));
+      const dialog = document.getElementById("panoramaSourceDialog");
+      const dialogDate = document.getElementById("panoramaSourceDate");
+      const dialogLabel = document.getElementById("panoramaSourceLabel");
+      const dialogTitle = document.getElementById("panoramaSourceTitle");
+      const dialogPreview = document.getElementById("panoramaSourcePreview");
+      const dialogTags = document.getElementById("panoramaSourceTags");
+      const dialogLink = document.getElementById("panoramaSourceLink");
+
+      document.addEventListener("click", (event) => {
+        const trigger = event.target.closest?.("[data-preview-href]");
+        if (!trigger || !dialog) return;
+        const source = sourceByHref.get(trigger.dataset.previewHref || "");
+        if (!source) return;
+        if (dialogDate) dialogDate.textContent = source.date || "日期未标注";
+        if (dialogLabel) dialogLabel.textContent = [source.analyst, source.category].filter(Boolean).join(" · ");
+        if (dialogTitle) dialogTitle.textContent = source.title || "研究来源";
+        if (dialogPreview) dialogPreview.textContent = source.preview || "打开完整报告查看上下文。";
+        if (dialogTags) {
+          dialogTags.replaceChildren();
+          [...(source.roles || []), ...(source.tickers || []).slice(0, 8)].forEach((tag) => {
+            const span = document.createElement("span");
+            span.textContent = tag;
+            dialogTags.appendChild(span);
+          });
+        }
+        if (dialogLink) dialogLink.href = source.href;
+        if (typeof dialog.showModal === "function") dialog.showModal();
+        else dialog.setAttribute("open", "");
       });
     </script>
   </body>

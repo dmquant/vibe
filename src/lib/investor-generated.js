@@ -146,6 +146,22 @@ export function readResearchWorkspace() {
   return rewriteInvestorPaths(readJson("research-workspace.json"));
 }
 
+export function readPublicationQuality() {
+  return rewriteInvestorPaths(readJson("publication-quality.json"));
+}
+
+export function readWeeklyReport() {
+  return rewriteInvestorPaths(readJson("weekly-report.json"));
+}
+
+export function readWeeklyReportIndex() {
+  return rewriteInvestorPaths(readJson("weekly-report-index.json"));
+}
+
+export function listWeeklyReports() {
+  return listJsonFiles("weekly").map(rewriteInvestorPaths);
+}
+
 export function readAnalystPersonaTimelines() {
   return rewriteInvestorPaths(readJson("analyst-persona-timelines.json"));
 }

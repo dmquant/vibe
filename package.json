@@ -10,6 +10,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "test:admin-gate": "node test/admin-gate.mjs",
+    "test:workspace": "node test/research-workspace.mjs",
+    "test:weekly": "node test/weekly-report.mjs",
     "astro": "astro"
   },
   "dependencies": {

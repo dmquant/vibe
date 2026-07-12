@@ -1,21 +1,24 @@
 ---
 import BaseHead from "../../../components/BaseHead.astro";
 import Header from "../../../components/Header.astro";
-import { readResearchWorkspace } from "../../../lib/investor-generated.js";
+import { readPublicationQuality, readResearchWorkspace } from "../../../lib/investor-generated.js";
 import "../../../styles/research-network.css";
 import "../../../styles/research-workspace.css";
 
 const workspace = readResearchWorkspace();
+const quality = readPublicationQuality();
 const focusItems = workspace.focusItems || [];
 const dissentItems = focusItems.filter((item) => item.slotType === "dissent_safeguard");
 const reader = workspace.readerReport || null;
 const quote = (item, horizon) => item.odds?.horizons?.find((line) => line.horizon === horizon);
 const probability = (value) => Number.isFinite(Number(value)) ? `${Math.round(Number(value) * 100)}%` : "--";
 const signed = (value) => `${Number(value || 0) > 0 ? "+" : ""}${Number(value || 0).toFixed(1)}pp`;
+const signedNumber = (value) => `${Number(value || 0) > 0 ? "+" : ""}${Number(value || 0).toFixed(0)}`;
 const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" ").replaceAll('"', "&quot;");
 const activityMax = (item) => Math.max(1, ...(item.activity || []).map((row) => Number(row.events || 0)));
-const payloadJson = JSON.stringify({ focusItems, broadcastMap: workspace.broadcastMap }).replaceAll("<", "\\u003c");
+const payloadJson = JSON.stringify({ focusItems, broadcastMap: workspace.broadcastMap, dailyDelta: workspace.dailyDelta, quality }).replaceAll("<", "\\u003c");
 const firstItem = focusItems[0];
+const delta = workspace.dailyDelta || { counts: {}, entrants: [], exits: [], movers: [], newSources: [] };
 ---
 
 <!doctype html>
@@ -36,9 +39,9 @@ const firstItem = focusItems[0];
           <h1>研究注意力工作台</h1>
           <p>{workspace.summary?.lead}</p>
           <div class="network-actions">
+            <a href="#changes">今日变化</a>
             <a href="#focus">当前焦点</a>
             <a href="#broadcast">关系地图</a>
-            <a href="#reader">今日读法</a>
             <a href="#methodology">方法与边界</a>
           </div>
         </div>
@@ -46,7 +49,7 @@ const firstItem = focusItems[0];
           <span>{workspace.statusLabel}</span>
           <strong>ANALYSIS / DISPLAY</strong>
           <p>{workspace.summary?.boundary}</p>
-          <em>{workspace.asOfDate} · {workspace.sourceHash}</em>
+          <em>{workspace.asOfDate} · {workspace.sourceHash} · QUALITY {quality.status.toUpperCase()}</em>
         </aside>
       </section>
 
@@ -82,6 +85,65 @@ const firstItem = focusItems[0];
         </section>
       )}
 
+      <section class="workspace-delta" id="changes">
+        <div class="workspace-section-head">
+          <div><span>Change ledger</span><h2>从上一个发布快照到现在</h2></div>
+          <div class="workspace-quality" data-status={quality.status}>
+            <span>DATA GATE</span>
+            <strong>{quality.statusLabel}</strong>
+            <em>{quality.counts.error} errors · {quality.counts.warning} warnings</em>
+          </div>
+        </div>
+        <div class="delta-metric-grid">
+          <div><span>进入</span><strong>+{delta.counts?.entrants || 0}</strong><em>新进有限焦点</em></div>
+          <div><span>退出</span><strong>−{delta.counts?.exits || 0}</strong><em>仍保留在完整网络</em></div>
+          <div><span>移动</span><strong>{delta.counts?.movers || 0}</strong><em>分数、证据或赔率变化</em></div>
+          <div><span>来源</span><strong>+{delta.counts?.newSources || 0}</strong><em>新公开报告关系</em></div>
+        </div>
+        {delta.status !== "changed" ? (
+          <div class="delta-steady-state">
+            <span>{delta.statusLabel}</span>
+            <strong>{workspace.history?.snapshots?.length || 1} 个公开快照已纳入账本</strong>
+            <p>{workspace.selection?.historyNote}</p>
+          </div>
+        ) : (
+          <div class="delta-board">
+            <div class="delta-column">
+              <header><span>FOCUS FLOW</span><strong>进入 / 退出</strong></header>
+              {[...(delta.entrants || []).map((item) => ({ ...item, flow: "in" })), ...(delta.exits || []).map((item) => ({ ...item, flow: "out" }))].map((item) => (
+                <a class:list={["delta-flow-row", item.flow]} href={item.href}>
+                  <span>{item.flow === "in" ? "IN" : "OUT"}</span><strong>{item.title}</strong><em>{item.lane}</em>
+                </a>
+              ))}
+            </div>
+            <div class="delta-column">
+              <header><span>MOVERS</span><strong>变化最大</strong></header>
+              {(delta.movers || []).slice(0, 6).map((item) => (
+                <a class="delta-mover-row" href={item.href}>
+                  <strong>{item.title}</strong>
+                  <span>Focus {signedNumber(item.focusDelta)} · Dissent {signedNumber(item.dissentDelta)} · 20D {signed(item.p20DeltaPp)}</span>
+                </a>
+              ))}
+            </div>
+            <div class="delta-column">
+              <header><span>NEW SOURCES</span><strong>新增阅读入口</strong></header>
+              {(delta.newSources || []).slice(0, 6).map((source) => (
+                <button class="delta-source-row" type="button" data-preview-href={source.href}>
+                  <span>{source.date}</span><strong>{source.title}</strong><em>{source.thesisTitle}</em>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+        {quality.findings?.length > 0 && (
+          <div class="quality-findings">
+            {quality.findings.slice(0, 3).map((finding) => (
+              <div><span>{finding.severity}</span><strong>{finding.code}</strong><p>{finding.message}</p></div>
+            ))}
+          </div>
+        )}
+      </section>
+
       <section class="workspace-controls" aria-label="Workspace controls">
         <label for="workspaceSearch">Search focus</label>
         <input id="workspaceSearch" type="search" placeholder="搜索 thesis、赛道、ticker、变化或报告..." />
@@ -99,6 +161,14 @@ const firstItem = focusItems[0];
           <option value="move">Odds move</option>
           <option value="recency">Recency</option>
         </select>
+        <div class="workspace-view-tools">
+          <label for="workspaceSavedViews">Saved view</label>
+          <select id="workspaceSavedViews"><option value="">当前视图</option></select>
+          <input id="workspaceViewName" type="text" maxlength="36" placeholder="视图名称" />
+          <button type="button" id="workspaceSaveView">保存</button>
+          <button type="button" id="workspaceDeleteView" title="删除当前保存视图" aria-label="删除当前保存视图">×</button>
+          <span id="workspacePortfolioSummary">读取本地组合中...</span>
+        </div>
       </section>
 
       <section class="workspace-focus-layout" id="focus">
@@ -118,6 +188,7 @@ const firstItem = focusItems[0];
                 data-dissent={item.dissentScore}
                 data-move={Math.abs(Number(quote(item, "20d")?.movePp || 0))}
                 data-date={item.evidence.lastSeen}
+                data-portfolio-thesis={item.thesisId}
                 tabindex="0"
                 role="link"
               >
@@ -130,6 +201,7 @@ const firstItem = focusItems[0];
                   <div class="focus-meta">
                     <a href={item.lane.href}>{item.lane.title}</a>
                     <span>{item.thesis.actionLabel}</span>
+                    <span class:list={["contradiction-chip", item.contradiction?.status]}>{item.contradiction?.label}</span>
                     <em>{item.evidence.lastSeen}</em>
                   </div>
                   <h3><a href={item.thesis.href}>{item.thesis.title}</a></h3>
@@ -142,7 +214,7 @@ const firstItem = focusItems[0];
                       {item.stocks.map((stock) => <a href={stock.href} title={stock.name}>{stock.ticker}</a>)}
                     </div>
                     <div class="focus-source-links">
-                      {item.sources.slice(0, 3).map((source, index) => <a href={source.href}>R{index + 1} · {source.date}</a>)}
+                      {item.sources.slice(0, 3).map((source, index) => <button type="button" data-preview-href={source.href}>R{index + 1} · {source.date}</button>)}
                     </div>
                   </div>
                 </div>
@@ -277,6 +349,15 @@ const firstItem = focusItems[0];
           <div><strong>Excluded</strong><p>{workspace.methodology?.excluded?.join("；")}</p></div>
         </div>
       </section>
+
+      <dialog class="workspace-source-dialog" id="workspaceSourceDialog">
+        <form method="dialog"><button type="submit" aria-label="关闭来源预览" title="关闭来源预览">×</button></form>
+        <div class="source-dialog-meta"><span id="sourceDialogDate"></span><em id="sourceDialogLabel"></em></div>
+        <h2 id="sourceDialogTitle"></h2>
+        <p id="sourceDialogPreview"></p>
+        <div class="source-dialog-tags" id="sourceDialogTags"></div>
+        <a id="sourceDialogLink" href="/investor/reports/">打开完整报告</a>
+      </dialog>
     </main>
 
     <script type="application/json" id="workspacePayload" set:html={payloadJson}></script>
@@ -298,7 +379,41 @@ const firstItem = focusItems[0];
       const nodeLayer = document.getElementById("workspaceMapNodes");
       const edgeLayer = document.getElementById("workspaceMapEdges");
       const inspector = document.getElementById("workspaceInspector");
+      const savedViewsSelect = document.getElementById("workspaceSavedViews");
+      const viewNameInput = document.getElementById("workspaceViewName");
+      const saveViewButton = document.getElementById("workspaceSaveView");
+      const deleteViewButton = document.getElementById("workspaceDeleteView");
+      const portfolioSummary = document.getElementById("workspacePortfolioSummary");
+      const sourceDialog = document.getElementById("workspaceSourceDialog");
+      const sourceDialogDate = document.getElementById("sourceDialogDate");
+      const sourceDialogLabel = document.getElementById("sourceDialogLabel");
+      const sourceDialogTitle = document.getElementById("sourceDialogTitle");
+      const sourceDialogPreview = document.getElementById("sourceDialogPreview");
+      const sourceDialogTags = document.getElementById("sourceDialogTags");
+      const sourceDialogLink = document.getElementById("sourceDialogLink");
+      const savedViewKey = "vibe.researchWorkspace.savedViews.v1";
+      const decisionKey = "vibe.researchWorkspace.decisions.v1";
+      const portfolioKey = "vibe.researchNetwork.portfolio.v2";
+      const sourceByHref = new Map();
+      items.forEach((item) => [
+        ...(item.sources || []),
+        ...(item.contradiction?.support || []),
+        ...(item.contradiction?.challenge || []),
+      ].forEach((source) => source?.href && sourceByHref.set(source.href, source)));
+      (payload.dailyDelta?.newSources || []).forEach((source) => source?.href && sourceByHref.set(source.href, source));
       let selectedId = items[0]?.id || "";
+
+      function readLocalJson(key, fallback) {
+        try {
+          return JSON.parse(localStorage.getItem(key) || "") || fallback;
+        } catch {
+          return fallback;
+        }
+      }
+
+      let savedViews = readLocalJson(savedViewKey, []);
+      let decisions = readLocalJson(decisionKey, {});
+      const portfolio = readLocalJson(portfolioKey, { theses: [], stocks: [], settings: { baseCurrency: "USD" } });
 
       function activeHorizon() {
         return page?.dataset.horizon || "20d";
@@ -324,6 +439,127 @@ const firstItem = focusItems[0];
             return Number(right.dataset[key] || 0) - Number(left.dataset[key] || 0);
           })
           .forEach((row) => list?.appendChild(row));
+      }
+
+      function openSourcePreview(source) {
+        if (!source || !sourceDialog) return;
+        if (sourceDialogDate) sourceDialogDate.textContent = source.date || "日期未标注";
+        if (sourceDialogLabel) sourceDialogLabel.textContent = [source.sourceLabel, source.analyst].filter(Boolean).join(" · ") || "公开研究报告";
+        if (sourceDialogTitle) sourceDialogTitle.textContent = source.title || "研究来源";
+        if (sourceDialogPreview) sourceDialogPreview.textContent = source.preview || "该来源已进入公开证据关系，打开完整报告查看上下文。";
+        if (sourceDialogTags) {
+          sourceDialogTags.replaceChildren();
+          (source.tags || []).forEach((tag) => {
+            const span = document.createElement("span");
+            span.textContent = tag;
+            sourceDialogTags.appendChild(span);
+          });
+        }
+        if (sourceDialogLink) sourceDialogLink.href = source.href;
+        if (typeof sourceDialog.showModal === "function") sourceDialog.showModal();
+        else sourceDialog.setAttribute("open", "");
+      }
+
+      function portfolioImpact(item) {
+        const thesis = (portfolio.theses || []).find((entry) => entry.id === item.thesisId);
+        const tickers = new Set(item.portfolioBridge?.stockTickers || item.stocks.map((stock) => stock.ticker));
+        const stocks = (portfolio.stocks || []).filter((entry) => tickers.has(String(entry.ticker || "").toUpperCase()));
+        const activeStocks = stocks.filter((entry) => Number(entry.shares || 0) > 0 || Number(entry.targetWeight || 0) > 0 || entry.side !== "watch");
+        const marketValue = activeStocks.reduce((sum, entry) => {
+          const fx = Number(entry.fxToBase || 0);
+          return sum + (fx > 0 ? Number(entry.shares || 0) * Number(entry.price || 0) * fx : 0);
+        }, 0);
+        const targetWeight = activeStocks.reduce((sum, entry) => sum + Number(entry.targetWeight || 0), 0) + Number(thesis?.weight || 0);
+        return { thesis, stocks, activeStocks, marketValue, targetWeight, hits: activeStocks.length + (thesis ? 1 : 0) };
+      }
+
+      function formatPortfolioValue(value) {
+        if (!Number(value)) return "--";
+        return new Intl.NumberFormat("zh-CN", { style: "currency", currency: portfolio.settings?.baseCurrency || "USD", maximumFractionDigits: 0 }).format(value);
+      }
+
+      function updatePortfolioBadges() {
+        let matchedFocus = 0;
+        rows.forEach((row) => {
+          row.querySelector(".portfolio-hit-chip")?.remove();
+          const item = itemById.get(row.dataset.workspaceId || "");
+          if (!item) return;
+          const impact = portfolioImpact(item);
+          if (!impact.hits) return;
+          matchedFocus += 1;
+          const chip = document.createElement("span");
+          chip.className = "portfolio-hit-chip";
+          chip.textContent = `组合命中 ${impact.hits}`;
+          row.querySelector(".focus-meta")?.appendChild(chip);
+        });
+        if (portfolioSummary) {
+          const tracked = (portfolio.theses || []).length + (portfolio.stocks || []).length;
+          portfolioSummary.textContent = tracked ? `本地组合 ${tracked} 项 · 命中 ${matchedFocus} 条焦点` : "本地组合为空";
+        }
+      }
+
+      function renderSavedViews() {
+        if (!savedViewsSelect) return;
+        const current = savedViewsSelect.value;
+        savedViewsSelect.replaceChildren();
+        const base = document.createElement("option");
+        base.value = "";
+        base.textContent = "当前视图";
+        savedViewsSelect.appendChild(base);
+        savedViews.slice(0, 20).forEach((view) => {
+          const option = document.createElement("option");
+          option.value = view.id;
+          option.textContent = view.name;
+          savedViewsSelect.appendChild(option);
+        });
+        if (savedViews.some((view) => view.id === current)) savedViewsSelect.value = current;
+      }
+
+      function applySavedView(id) {
+        const view = savedViews.find((item) => item.id === id);
+        if (!view) return;
+        if (search) search.value = view.query || "";
+        if (sort) sort.value = view.sort || "focus";
+        if (page) page.dataset.horizon = view.horizon || "20d";
+        horizonButtons.forEach((button) => button.classList.toggle("active", button.dataset.horizonTarget === (view.horizon || "20d")));
+        applyFilters();
+        sortRows();
+        renderAtlas(itemById.has(view.selectedId) ? view.selectedId : selectedId);
+      }
+
+      function saveCurrentView() {
+        const name = String(viewNameInput?.value || "").trim();
+        if (!name) {
+          viewNameInput?.focus();
+          return;
+        }
+        const existing = savedViews.find((view) => view.name === name);
+        const next = {
+          id: existing?.id || `view-${Date.now()}`,
+          name: name.slice(0, 36),
+          query: String(search?.value || ""),
+          sort: sort?.value || "focus",
+          horizon: activeHorizon(),
+          selectedId,
+          updatedAt: new Date().toISOString(),
+        };
+        savedViews = [next, ...savedViews.filter((view) => view.id !== next.id)].slice(0, 20);
+        localStorage.setItem(savedViewKey, JSON.stringify(savedViews));
+        renderSavedViews();
+        if (savedViewsSelect) savedViewsSelect.value = next.id;
+        if (viewNameInput) viewNameInput.value = "";
+      }
+
+      function saveDecision(item, status, note) {
+        const entry = {
+          status,
+          note: String(note || "").trim().slice(0, 500),
+          at: new Date().toISOString(),
+          sourceHash: payload.quality?.sourceHash || "",
+        };
+        decisions[item.thesisId] = [entry, ...(decisions[item.thesisId] || [])].slice(0, 20);
+        localStorage.setItem(decisionKey, JSON.stringify(decisions));
+        renderInspector(item);
       }
 
       function makeNode({ type, label, meta, href, x, y, id }) {
@@ -429,11 +665,75 @@ const firstItem = focusItems[0];
           });
           signals.appendChild(group);
         });
+        const contradiction = document.createElement("div");
+        contradiction.className = "inspector-contradiction";
+        const contradictionHead = document.createElement("span");
+        contradictionHead.textContent = `Evidence split · ${item.contradiction?.label || "证据状态"}`;
+        const contradictionText = document.createElement("p");
+        contradictionText.textContent = item.contradiction?.synthesis || "等待双向公开证据。";
+        contradiction.append(contradictionHead, contradictionText);
+        const contradictionGrid = document.createElement("div");
+        [["支持", item.contradiction?.support], ["反向", item.contradiction?.challenge]].forEach(([name, sources]) => {
+          const group = document.createElement("section");
+          const heading = document.createElement("strong");
+          heading.textContent = String(name);
+          group.appendChild(heading);
+          (sources || []).slice(0, 2).forEach((source) => {
+            const button = document.createElement("button");
+            button.type = "button";
+            button.textContent = source.title;
+            button.addEventListener("click", () => openSourcePreview(source));
+            group.appendChild(button);
+          });
+          contradictionGrid.appendChild(group);
+        });
+        contradiction.appendChild(contradictionGrid);
+
+        const impact = portfolioImpact(item);
+        const portfolioPanel = document.createElement("div");
+        portfolioPanel.className = "inspector-portfolio-impact";
+        const portfolioHead = document.createElement("span");
+        portfolioHead.textContent = "Portfolio impact · local";
+        const portfolioText = document.createElement("p");
+        portfolioText.textContent = impact.hits
+          ? `${impact.thesis ? "Thesis book 已跟踪" : "Thesis book 未跟踪"}；命中 ${impact.activeStocks.length} 个股票暴露，目标权重合计 ${impact.targetWeight.toFixed(1)}%，可换算市值 ${formatPortfolioValue(impact.marketValue)}。`
+          : "当前浏览器本地组合未命中这条 thesis 或其股票暴露。";
+        const portfolioUse = document.createElement("em");
+        portfolioUse.textContent = item.portfolioBridge?.impactText || "";
+        portfolioPanel.append(portfolioHead, portfolioText, portfolioUse);
+
+        const decisionPanel = document.createElement("div");
+        decisionPanel.className = "inspector-decision-log";
+        const decisionHead = document.createElement("span");
+        decisionHead.textContent = "Analyst decision log · local";
+        const decisionControls = document.createElement("div");
+        const decisionStatus = document.createElement("select");
+        [["watch", "观察"], ["validate", "验证"], ["size", "纳入预算"], ["hedge", "对冲"], ["reject", "否决"]].forEach(([value, label]) => {
+          const option = document.createElement("option");
+          option.value = value;
+          option.textContent = label;
+          decisionStatus.appendChild(option);
+        });
+        const decisionNote = document.createElement("textarea");
+        decisionNote.rows = 2;
+        decisionNote.maxLength = 500;
+        decisionNote.placeholder = "记录判断、条件或下一次复核点";
+        const decisionSave = document.createElement("button");
+        decisionSave.type = "button";
+        decisionSave.textContent = "记录";
+        decisionSave.addEventListener("click", () => saveDecision(item, decisionStatus.value, decisionNote.value));
+        decisionControls.append(decisionStatus, decisionNote, decisionSave);
+        decisionPanel.append(decisionHead, decisionControls);
+        (decisions[item.thesisId] || []).slice(0, 3).forEach((entry) => {
+          const row = document.createElement("p");
+          row.textContent = `${String(entry.at || "").slice(0, 16).replace("T", " ")} · ${entry.status} · ${entry.note || "无备注"}`;
+          decisionPanel.appendChild(row);
+        });
         const link = document.createElement("a");
         link.className = "inspector-primary";
         link.href = item.thesis.href;
         link.textContent = "打开 thesis 详情";
-        inspector.append(head, title, changed, metrics, signals, link);
+        inspector.append(head, title, changed, metrics, signals, contradiction, portfolioPanel, decisionPanel, link);
       }
 
       function renderAtlas(id) {
@@ -458,9 +758,45 @@ const firstItem = focusItems[0];
         renderAtlas(button.dataset.selectFocus || "");
         document.getElementById("broadcast")?.scrollIntoView({ behavior: "smooth", block: "start" });
       }));
+      document.addEventListener("click", (event) => {
+        const preview = event.target.closest?.("[data-preview-href]");
+        if (preview) {
+          event.preventDefault();
+          openSourcePreview(sourceByHref.get(preview.dataset.previewHref || ""));
+        }
+      });
+      rows.forEach((row) => {
+        row.addEventListener("click", (event) => {
+          if (event.target.closest?.("a,button,input,select,textarea")) return;
+          if (row.dataset.researchHref) window.location.href = row.dataset.researchHref;
+        });
+        row.addEventListener("keydown", (event) => {
+          if ((event.key === "Enter" || event.key === " ") && row.dataset.researchHref) {
+            event.preventDefault();
+            window.location.href = row.dataset.researchHref;
+          }
+        });
+      });
+      savedViewsSelect?.addEventListener("change", () => applySavedView(savedViewsSelect.value));
+      saveViewButton?.addEventListener("click", saveCurrentView);
+      viewNameInput?.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") saveCurrentView();
+      });
+      deleteViewButton?.addEventListener("click", () => {
+        const id = savedViewsSelect?.value || "";
+        if (!id) return;
+        savedViews = savedViews.filter((view) => view.id !== id);
+        localStorage.setItem(savedViewKey, JSON.stringify(savedViews));
+        renderSavedViews();
+      });
+      sourceDialog?.addEventListener("click", (event) => {
+        if (event.target === sourceDialog) sourceDialog.close();
+      });
       search?.addEventListener("input", applyFilters);
       sort?.addEventListener("change", sortRows);
       window.addEventListener("resize", () => renderAtlas(selectedId));
+      renderSavedViews();
+      updatePortfolioBadges();
       sortRows();
       renderAtlas(selectedId);
     </script>
