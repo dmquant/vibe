@@ -24,7 +24,7 @@
     ],
     "count": 8
   },
-  "activityScore": 65,
+  "activityScore": 67,
   "metrics": {
     "reports": 10,
     "researchThreads": 13,
@@ -393,9 +393,9 @@
       ],
       "stockTickers": [
         "BABA",
+        "MSFT",
         "CRM",
         "BIDU",
-        "MSFT",
         "9988.HK",
         "NOW",
         "NVDA",
@@ -432,10 +432,10 @@
         "688041.SH",
         "688981.SH",
         "0981.HK",
-        "300308.SZ",
         "NVDA",
-        "000977.SZ",
+        "300308.SZ",
         "688008.SH",
+        "000977.SZ",
         "688111.SH",
         "600845.SH"
       ]
@@ -450,7 +450,7 @@
       "laneHref": "/investor/lanes/a-share-hard-tech-and-star50/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 61,
+      "conviction": 62,
       "supports": 1,
       "risks": 0,
       "neutral": 0,
@@ -465,13 +465,13 @@
         }
       ],
       "stockTickers": [
-        "300308.SZ",
         "688256.SH",
+        "300308.SZ",
         "688981.SH",
-        "0981.HK",
         "688041.SH",
+        "0981.HK",
         "600900.SH",
-        "NVDA",
+        "588000.SH",
         "300394.SZ",
         "688008.SH",
         "300502.SZ"
@@ -509,9 +509,9 @@
       "convictionTotal": 72,
       "stockTickers": [
         "BABA",
+        "MSFT",
         "CRM",
         "BIDU",
-        "MSFT",
         "9988.HK",
         "NOW",
         "NVDA",
@@ -532,10 +532,10 @@
         "688041.SH",
         "688981.SH",
         "0981.HK",
-        "300308.SZ",
         "NVDA",
-        "000977.SZ",
+        "300308.SZ",
         "688008.SH",
+        "000977.SZ",
         "688111.SH",
         "600845.SH"
       ],
@@ -547,20 +547,20 @@
       "href": "/investor/lanes/a-share-hard-tech-and-star50/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 61,
+      "convictionTotal": 62,
       "stockTickers": [
-        "300308.SZ",
         "688256.SH",
+        "300308.SZ",
         "688981.SH",
-        "0981.HK",
         "688041.SH",
+        "0981.HK",
         "600900.SH",
-        "NVDA",
+        "588000.SH",
         "300394.SZ",
         "688008.SH",
         "300502.SZ"
       ],
-      "avgConviction": 61
+      "avgConviction": 62
     }
   ],
   "stocks": [
@@ -569,13 +569,12 @@
       "name": "NVIDIA",
       "market": "US",
       "href": "/investor/stocks/NVDA/",
-      "thesisCount": 4,
-      "eventCount": 5,
+      "thesisCount": 3,
+      "eventCount": 4,
       "lanes": [
         "低价模型/AI 软件利润池",
         "信创/国产 IT 栈",
-        "中国云/国产算力栈",
-        "A股硬科技/科创50"
+        "中国云/国产算力栈"
       ]
     },
     {
@@ -714,6 +713,17 @@
       ]
     },
     {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "market": "US",
+      "href": "/investor/stocks/MSFT/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "低价模型/AI 软件利润池"
+      ]
+    },
+    {
       "ticker": "CRM",
       "name": "Salesforce",
       "market": "US",
@@ -729,17 +739,6 @@
       "name": "Baidu",
       "market": "US ADR",
       "href": "/investor/stocks/BIDU/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "低价模型/AI 软件利润池"
-      ]
-    },
-    {
-      "ticker": "MSFT",
-      "name": "Microsoft",
-      "market": "US",
-      "href": "/investor/stocks/MSFT/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
@@ -795,6 +794,17 @@
       "name": "长江电力",
       "market": "A-share",
       "href": "/investor/stocks/600900.SH/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "A股硬科技/科创50"
+      ]
+    },
+    {
+      "ticker": "588000.SH",
+      "name": "科创50 ETF",
+      "market": "A-share ETF",
+      "href": "/investor/stocks/588000.SH/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
