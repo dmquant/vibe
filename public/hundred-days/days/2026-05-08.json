@@ -4,7 +4,7 @@
   "dayNumber": 17,
   "status": "recorded",
   "headline": "锂电产业链时钟错位压力测试 — materials-analyst, 2026-05-24",
-  "summary": "当日归档 19 份公开研究，5 条研究讨论和 6 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
+  "summary": "当日归档 19 份公开研究，5 条研究讨论和 7 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
   "dominantTopic": {
     "id": "macro-rates",
     "labelZh": "宏观、通胀与利率",
@@ -29,7 +29,7 @@
     "reports": 19,
     "researchThreads": 5,
     "researchNotes": 40,
-    "thesisEvents": 6,
+    "thesisEvents": 7,
     "personaEvents": 0,
     "readerMemos": 0,
     "recaps": 0,
@@ -457,8 +457,8 @@
       ],
       "stockTickers": [
         "BABA",
-        "MSFT",
         "CRM",
+        "MSFT",
         "BIDU",
         "9988.HK",
         "NOW",
@@ -477,7 +477,7 @@
       "laneHref": "/investor/lanes/options-gamma-and-market-microstructure/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 72,
+      "conviction": 73,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -532,6 +532,36 @@
       ]
     },
     {
+      "id": "thesis-29834af85e",
+      "title": "PPI回升至4.1%而CPI仅1.0%，剪刀差压制中游制造利润，同时锂矿融资盘惨遭强平出清。在全球原油因地缘政治冲破$79的背景下，资源…",
+      "titleEn": "Practical research topic: PPI回升至4.1%而CPI仅1.0%，剪刀差压制中游制造利润，同时锂矿融资盘惨遭强平出清。在全球原油因地缘政治冲破$79的背景下，资源…",
+      "href": "/investor/theses/thesis-29834af85e/",
+      "laneId": "lane_93300d58763e",
+      "lane": "油气/地缘通胀",
+      "laneHref": "/investor/lanes/oil-gas-and-geopolitical-inflation/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 55,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "前序研究 — 需求衰退对原油与铜超配的压力测试",
+          "summary": "分析师：能源行业分析师 (energy-analyst) - 立场：stress-test（压力测试） - 工作日：2026-05-17（亚洲/新加坡） - 课题：Brent持续站上100美元情境下，原油与铜的供给扰动与需求衰退风险",
+          "href": "/investor/reports/archive-75201c09acb6/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "0883.HK",
+        "SLB",
+        "OXY"
+      ]
+    },
+    {
       "id": "thesis-e26ef69f73",
       "title": "风险核查与证据质量是主题交易的必要过滤器",
       "titleEn": "Risk verification and evidence quality are necessary filters for theme trades",
@@ -541,7 +571,7 @@
       "laneHref": "/investor/lanes/portfolio-risk-and-evidence-quality/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 46,
+      "conviction": 50,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -574,8 +604,8 @@
       "convictionTotal": 72,
       "stockTickers": [
         "BABA",
-        "MSFT",
         "CRM",
+        "MSFT",
         "BIDU",
         "9988.HK",
         "NOW",
@@ -591,7 +621,7 @@
       "href": "/investor/lanes/options-gamma-and-market-microstructure/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 72,
+      "convictionTotal": 73,
       "stockTickers": [
         "CBOE",
         "588000.SH",
@@ -601,7 +631,7 @@
         "VIRT",
         "VIXY"
       ],
-      "avgConviction": 72
+      "avgConviction": 73
     },
     {
       "id": "lane_1c216bd29875",
@@ -618,12 +648,26 @@
       "avgConviction": 72
     },
     {
+      "id": "lane_93300d58763e",
+      "title": "油气/地缘通胀",
+      "href": "/investor/lanes/oil-gas-and-geopolitical-inflation/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "convictionTotal": 55,
+      "stockTickers": [
+        "0883.HK",
+        "SLB",
+        "OXY"
+      ],
+      "avgConviction": 55
+    },
+    {
       "id": "lane_ccbe817778d1",
       "title": "组合风控/证据质量",
       "href": "/investor/lanes/portfolio-risk-and-evidence-quality/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 46,
+      "convictionTotal": 50,
       "stockTickers": [
         "CME",
         "CBOE",
@@ -631,7 +675,7 @@
         "VIRT",
         "SH"
       ],
-      "avgConviction": 46
+      "avgConviction": 50
     }
   ],
   "stocks": [
@@ -647,10 +691,10 @@
       ]
     },
     {
-      "ticker": "MSFT",
-      "name": "Microsoft",
+      "ticker": "CRM",
+      "name": "Salesforce",
       "market": "US",
-      "href": "/investor/stocks/MSFT/",
+      "href": "/investor/stocks/CRM/",
       "thesisCount": 1,
       "eventCount": 3,
       "lanes": [
@@ -658,10 +702,10 @@
       ]
     },
     {
-      "ticker": "CRM",
-      "name": "Salesforce",
+      "ticker": "MSFT",
+      "name": "Microsoft",
       "market": "US",
-      "href": "/investor/stocks/CRM/",
+      "href": "/investor/stocks/MSFT/",
       "thesisCount": 1,
       "eventCount": 3,
       "lanes": [
@@ -846,6 +890,39 @@
       "eventCount": 1,
       "lanes": [
         "美债利率/美元再定价"
+      ]
+    },
+    {
+      "ticker": "0883.HK",
+      "name": "中国海洋石油",
+      "market": "HK",
+      "href": "/investor/stocks/0883.HK/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "油气/地缘通胀"
+      ]
+    },
+    {
+      "ticker": "SLB",
+      "name": "SLB",
+      "market": "US",
+      "href": "/investor/stocks/SLB/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "油气/地缘通胀"
+      ]
+    },
+    {
+      "ticker": "OXY",
+      "name": "Occidental Petroleum",
+      "market": "US",
+      "href": "/investor/stocks/OXY/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "油气/地缘通胀"
       ]
     },
     {

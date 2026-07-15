@@ -4,7 +4,7 @@
   "dayNumber": 16,
   "status": "recorded",
   "headline": "隔夜市场情绪与资金流向扫描 (2026-05-07)",
-  "summary": "当日归档 28 份公开研究，6 条研究讨论和 14 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
+  "summary": "当日归档 28 份公开研究，6 条研究讨论和 15 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
   "dominantTopic": {
     "id": "macro-rates",
     "labelZh": "宏观、通胀与利率",
@@ -29,8 +29,8 @@
     "reports": 28,
     "researchThreads": 6,
     "researchNotes": 48,
-    "thesisEvents": 14,
-    "personaEvents": 13,
+    "thesisEvents": 15,
+    "personaEvents": 14,
     "readerMemos": 0,
     "recaps": 0,
     "deepResearch": 0
@@ -613,8 +613,8 @@
       ],
       "stockTickers": [
         "BABA",
-        "MSFT",
         "CRM",
+        "MSFT",
         "BIDU",
         "9988.HK",
         "NOW",
@@ -633,7 +633,7 @@
       "laneHref": "/investor/lanes/crypto-and-high-beta-risk-appetite/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 54,
+      "conviction": 58,
       "supports": 0,
       "risks": 2,
       "neutral": 0,
@@ -799,6 +799,42 @@
       ]
     },
     {
+      "id": "thesis-3d421524cd",
+      "title": "油价地缘底线决定再通胀与降息交易的安全边际",
+      "titleEn": "The geopolitical oil floor defines the margin of safety for disinflation and rate-cut trades",
+      "href": "/investor/theses/thesis-3d421524cd/",
+      "laneId": "lane_93300d58763e",
+      "lane": "油气/地缘通胀",
+      "laneHref": "/investor/lanes/oil-gas-and-geopolitical-inflation/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 65,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "布伦特原油持续 100美元/桶对欧元区制造业成本与通胀传导的边际影响评估",
+          "summary": "布伦特原油持续 100美元/桶对欧元区制造业成本与通胀传导的边际影响评估",
+          "href": "/investor/reports/archive-9e86f01ca794/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "0883.HK",
+        "CVX",
+        "XOM",
+        "600938.SH",
+        "0857.HK",
+        "600900.SH",
+        "XLE",
+        "601088.SH",
+        "COP"
+      ]
+    },
+    {
       "id": "thesis-8bbbcdf5a4",
       "title": "GPU、HBM 与先进封装决定 AI 资本开支供给节奏",
       "titleEn": "GPUs, HBM, and advanced packaging shape the AI capex supply cycle",
@@ -845,7 +881,7 @@
       "laneHref": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 62,
+      "conviction": 59,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -862,12 +898,12 @@
       "stockTickers": [
         "MSFT",
         "NVDA",
-        "META",
         "AAPL",
+        "META",
         "ARM",
-        "AMZN",
         "QCOM",
         "AMD",
+        "AMZN",
         "GOOGL",
         "002475.SZ"
       ]
@@ -984,6 +1020,28 @@
   ],
   "lanes": [
     {
+      "id": "lane_93300d58763e",
+      "title": "油气/地缘通胀",
+      "href": "/investor/lanes/oil-gas-and-geopolitical-inflation/",
+      "thesisCount": 3,
+      "eventCount": 3,
+      "convictionTotal": 203,
+      "stockTickers": [
+        "0883.HK",
+        "SLB",
+        "OXY",
+        "CVX",
+        "XOM",
+        "600938.SH",
+        "0857.HK",
+        "600900.SH",
+        "XLE",
+        "601088.SH",
+        "COP"
+      ],
+      "avgConviction": 68
+    },
+    {
       "id": "lane_13710af7e06d",
       "title": "低价模型/AI 软件利润池",
       "href": "/investor/lanes/low-cost-models-and-ai-software-profit-pools/",
@@ -992,8 +1050,8 @@
       "convictionTotal": 72,
       "stockTickers": [
         "BABA",
-        "MSFT",
         "CRM",
+        "MSFT",
         "BIDU",
         "9988.HK",
         "NOW",
@@ -1002,20 +1060,6 @@
         "9888.HK"
       ],
       "avgConviction": 72
-    },
-    {
-      "id": "lane_93300d58763e",
-      "title": "油气/地缘通胀",
-      "href": "/investor/lanes/oil-gas-and-geopolitical-inflation/",
-      "thesisCount": 2,
-      "eventCount": 2,
-      "convictionTotal": 138,
-      "stockTickers": [
-        "0883.HK",
-        "SLB",
-        "OXY"
-      ],
-      "avgConviction": 69
     },
     {
       "id": "lane_f44cf45c8649",
@@ -1044,7 +1088,7 @@
       "href": "/investor/lanes/crypto-and-high-beta-risk-appetite/",
       "thesisCount": 1,
       "eventCount": 2,
-      "convictionTotal": 54,
+      "convictionTotal": 58,
       "stockTickers": [
         "COIN",
         "HOOD",
@@ -1054,7 +1098,7 @@
         "MARA",
         "RIOT"
       ],
-      "avgConviction": 54
+      "avgConviction": 58
     },
     {
       "id": "lane_79a55cd8530e",
@@ -1080,20 +1124,20 @@
       "href": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 62,
+      "convictionTotal": 59,
       "stockTickers": [
         "MSFT",
         "NVDA",
-        "META",
         "AAPL",
+        "META",
         "ARM",
-        "AMZN",
         "QCOM",
         "AMD",
+        "AMZN",
         "GOOGL",
         "002475.SZ"
       ],
-      "avgConviction": 62
+      "avgConviction": 59
     },
     {
       "id": "lane_2d0dcf520f87",
@@ -1170,7 +1214,7 @@
         "AI 算力半导体",
         "端侧 AI/Agent 桌面",
         "AI 基建 TCO/能效筛选",
-        "数据中心地产/液冷"
+        "加密/高波动风险偏好"
       ]
     },
     {
@@ -1230,6 +1274,17 @@
       ]
     },
     {
+      "ticker": "0883.HK",
+      "name": "中国海洋石油",
+      "market": "HK",
+      "href": "/investor/stocks/0883.HK/",
+      "thesisCount": 3,
+      "eventCount": 3,
+      "lanes": [
+        "油气/地缘通胀"
+      ]
+    },
+    {
       "ticker": "TSM",
       "name": "TSMC",
       "market": "US ADR",
@@ -1275,17 +1330,6 @@
       "lanes": [
         "AI 算力半导体",
         "AI 基建 TCO/能效筛选"
-      ]
-    },
-    {
-      "ticker": "0883.HK",
-      "name": "中国海洋石油",
-      "market": "HK",
-      "href": "/investor/stocks/0883.HK/",
-      "thesisCount": 2,
-      "eventCount": 2,
-      "lanes": [
-        "油气/地缘通胀"
       ]
     },
     {
@@ -1555,69 +1599,69 @@
       ]
     },
     {
-      "ticker": "AAPL",
-      "name": "Apple",
+      "ticker": "CVX",
+      "name": "Chevron",
       "market": "US",
-      "href": "/investor/stocks/AAPL/",
+      "href": "/investor/stocks/CVX/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
-        "端侧 AI/Agent 桌面"
+        "油气/地缘通胀"
       ]
     },
     {
-      "ticker": "ARM",
-      "name": "Arm Holdings",
+      "ticker": "XOM",
+      "name": "Exxon Mobil",
       "market": "US",
-      "href": "/investor/stocks/ARM/",
+      "href": "/investor/stocks/XOM/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
-        "端侧 AI/Agent 桌面"
+        "油气/地缘通胀"
       ]
     },
     {
-      "ticker": "QCOM",
-      "name": "Qualcomm",
-      "market": "US",
-      "href": "/investor/stocks/QCOM/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "端侧 AI/Agent 桌面"
-      ]
-    },
-    {
-      "ticker": "002475.SZ",
-      "name": "立讯精密",
+      "ticker": "600938.SH",
+      "name": "中国海油",
       "market": "A-share",
-      "href": "/investor/stocks/002475.SZ/",
+      "href": "/investor/stocks/600938.SH/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
-        "端侧 AI/Agent 桌面"
+        "油气/地缘通胀"
       ]
     },
     {
-      "ticker": "ETN",
-      "name": "Eaton",
-      "market": "US",
-      "href": "/investor/stocks/ETN/",
+      "ticker": "0857.HK",
+      "name": "中国石油股份",
+      "market": "HK",
+      "href": "/investor/stocks/0857.HK/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
-        "数据中心地产/液冷"
+        "油气/地缘通胀"
       ]
     },
     {
-      "ticker": "GEV",
-      "name": "GE Vernova",
-      "market": "US",
-      "href": "/investor/stocks/GEV/",
+      "ticker": "600900.SH",
+      "name": "长江电力",
+      "market": "A-share",
+      "href": "/investor/stocks/600900.SH/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
-        "数据中心地产/液冷"
+        "油气/地缘通胀"
+      ]
+    },
+    {
+      "ticker": "XLE",
+      "name": "Energy Select Sector SPDR",
+      "market": "US ETF",
+      "href": "/investor/stocks/XLE/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "油气/地缘通胀"
       ]
     }
   ],
@@ -1649,14 +1693,15 @@
       "nameEn": "Energy Analyst",
       "href": "/investor/personas/#persona-energy-analyst-ca430c",
       "specialty": "石油/天然气/煤炭/新能源/电力",
-      "currentView": "油价地缘底线决定再通胀与降息交易的安全边际；航运与物流成本是油价、关税和供应链再通胀的二阶传导器；PPI回升至4.1%而CPI仅1.0%，剪刀差压制中游制造利润，同时锂矿融资盘惨遭强平出清。在全球原油因地缘政治冲破$79的背景下，资源… 是当前该 persona 参与最多的研究主线。",
+      "currentView": "航运与物流成本是油价、关税和供应链再通胀的二阶传导器；油价地缘底线决定再通胀与降息交易的安全边际；PPI回升至4.1%而CPI仅1.0%，剪刀差压制中游制造利润，同时锂矿融资盘惨遭强平出清。在全球原油因地缘政治冲破$79的背景下，资源… 是当前该 persona 参与最多的研究主线。",
       "supports": 0,
-      "risks": 2,
+      "risks": 3,
       "neutral": 0,
-      "eventCount": 2,
+      "eventCount": 3,
       "topTheses": [
         "美伊直接交火导致原油暴涨5-6%，布伦特突破79美元逼近80。这是否会引燃二次通胀，推翻债市对美联储‘因分裂而暂停加息’的假设，并在9月…",
-        "地缘原油冲击导致的通胀传导（推升核心PCE至4.16%）将促使无前瞻指引的沃什美联储通过在9月和年底连续加息两次（至4.00%–4.25…"
+        "地缘原油冲击导致的通胀传导（推升核心PCE至4.16%）将促使无前瞻指引的沃什美联储通过在9月和年底连续加息两次（至4.00%–4.25…",
+        "油价地缘底线决定再通胀与降息交易的安全边际"
       ],
       "latestEvent": {
         "title": "布伦特原油持续 100美元/桶对欧元区制造业成本与通胀传导的边际影响评估",
@@ -1669,7 +1714,7 @@
       "nameEn": "A-Share Strategist",
       "href": "/investor/personas/#persona-a-share-strategist-e0ee8e",
       "specialty": "沪深市场结构、两融数据、限售股解禁",
-      "currentView": "A 股硬科技与科创50的复苏需要订单、融资盘和指数结构共振；A 股半导体的核心风险从订单验证转向 A/H 溢价、两融与负 Gamma；科创50单日+8.41%后，团队应把硬科技升为中期主线，还是在两融、广度、ETF申赎确认前按拥挤反弹处理？ 是当前该 persona 参与最多的研究主线。",
+      "currentView": "A 股硬科技与科创50的复苏需要订单、融资盘和指数结构共振；A 股半导体的核心风险从订单验证转向 A/H 溢价、两融与负 Gamma；在两融余额可核口径约3.0万亿元、科创50盘中深V、但解禁与融资拥挤仍在的情况下，今日收盘后仓位框架应从Option 4极致防御调到哪一级？ 是当前该 persona 参与最多的研究主线。",
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -1688,7 +1733,7 @@
       "nameEn": "Global Macro Analyst",
       "href": "/investor/personas/#persona-global-macro-analyst-9745a0",
       "specialty": "美欧日经济、全球贸易、地缘政治风险 【合并扩展 2026-06-11】统筹宏观全域：中国宏观与政策(PMI/PBoC/地方债)、央行政策(Fed/ECB/PBoC)、利率与收益率曲线、信用债与新发行、外汇(人民币/美元/欧元/日元)与利差…",
-      "currentView": "DeepSeek 式低价模型正在重塑 AI 定价权与软件利润池；近海资本开支与设备利用率驱动油服盈利弹性；油价地缘底线决定再通胀与降息交易的安全边际 是当前该 persona 参与最多的研究主线。",
+      "currentView": "DeepSeek 式低价模型正在重塑 AI 定价权与软件利润池；油价地缘底线决定再通胀与降息交易的安全边际；自动驾驶与 Robotaxi 主题必须从演示热度进入单位经济和监管城市扩张验证 是当前该 persona 参与最多的研究主线。",
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -1726,7 +1771,7 @@
       "nameEn": "Sentiment Analyst",
       "href": "/investor/personas/#persona-sentiment-analyst-ea0e85",
       "specialty": "恐贪指数/资金流向/投资者行为 【合并扩展 2026-06-11】纳入另类数据：卫星影像、信用卡消费、App 使用、供应链中断。原 altdata-analyst 职能并入。",
-      "currentView": "加密资产仍是全球流动性和散户风险偏好的高频回声；期权伽马、ETF 与尾盘流动性正在放大主题交易的微观结构风险；风险核查与证据质量是主题交易的必要过滤器 是当前该 persona 参与最多的研究主线。",
+      "currentView": "加密资产仍是全球流动性和散户风险偏好的高频回声；散户情绪与北向资金背离是 A 股风险偏好的关键温度计；期权伽马、ETF 与尾盘流动性正在放大主题交易的微观结构风险 是当前该 persona 参与最多的研究主线。",
       "supports": 0,
       "risks": 1,
       "neutral": 0,

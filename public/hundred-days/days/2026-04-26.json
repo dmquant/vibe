@@ -4,7 +4,7 @@
   "dayNumber": 5,
   "status": "recorded",
   "headline": "研究报告：2026-06-28",
-  "summary": "当日归档 11 份公开研究，25 条研究讨论和 9 个 thesis 证据事件；研究密度最高的方向为半导体、存储与光互联。",
+  "summary": "当日归档 11 份公开研究，25 条研究讨论和 10 个 thesis 证据事件；研究密度最高的方向为半导体、存储与光互联。",
   "dominantTopic": {
     "id": "semis-memory",
     "labelZh": "半导体、存储与光互联",
@@ -28,7 +28,7 @@
     "reports": 11,
     "researchThreads": 25,
     "researchNotes": 248,
-    "thesisEvents": 9,
+    "thesisEvents": 10,
     "personaEvents": 0,
     "readerMemos": 0,
     "recaps": 0,
@@ -480,6 +480,50 @@
       ]
     },
     {
+      "id": "thesis-ffa474a3f2",
+      "title": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
+      "titleEn": "Edge AI and agent desktops are extending compute competition from cloud to chips, OS, and consumer-electronics supply...",
+      "href": "/investor/theses/thesis-ffa474a3f2/",
+      "laneId": "lane_74d352e86208",
+      "lane": "端侧 AI/Agent 桌面",
+      "laneHref": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 59,
+      "supports": 2,
+      "risks": 0,
+      "neutral": 0,
+      "eventCount": 2,
+      "events": [
+        {
+          "title": "AI端侧Agent与PC芯片利润池重分配 - 首席策略师研究记录，2026-06-02",
+          "summary": "AI端侧Agent与PC芯片利润池重分配 - 首席策略师研究记录，2026-06-02",
+          "href": "/investor/reports/archive-adc965b17fa5/",
+          "stance": "supports",
+          "stanceLabel": "支持"
+        },
+        {
+          "title": "研究报告：2026-06-01",
+          "summary": "研究报告：2026-06-01 分析师： tmt-analyst 课题： 量化科技巨头用回购抵消SBC稀释的效率是否下降 立场： 支持",
+          "href": "/investor/reports/archive-59795f3f144e/",
+          "stance": "supports",
+          "stanceLabel": "支持"
+        }
+      ],
+      "stockTickers": [
+        "MSFT",
+        "NVDA",
+        "AAPL",
+        "META",
+        "ARM",
+        "QCOM",
+        "AMD",
+        "AMZN",
+        "GOOGL",
+        "002475.SZ"
+      ]
+    },
+    {
       "id": "thesis-8c5a9690a0",
       "title": "Mag7 在 AI 时代从平台垄断转向基础设施再分层",
       "titleEn": "Mag7 shifts from platform monopoly to AI infrastructure re-layering",
@@ -689,43 +733,6 @@
         "688012.SH",
         "002916.SZ"
       ]
-    },
-    {
-      "id": "thesis-ffa474a3f2",
-      "title": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
-      "titleEn": "Edge AI and agent desktops are extending compute competition from cloud to chips, OS, and consumer-electronics supply...",
-      "href": "/investor/theses/thesis-ffa474a3f2/",
-      "laneId": "lane_74d352e86208",
-      "lane": "端侧 AI/Agent 桌面",
-      "laneHref": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 62,
-      "supports": 1,
-      "risks": 0,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "AI端侧Agent与PC芯片利润池重分配 - 首席策略师研究记录，2026-06-02",
-          "summary": "AI端侧Agent与PC芯片利润池重分配 - 首席策略师研究记录，2026-06-02",
-          "href": "/investor/reports/archive-adc965b17fa5/",
-          "stance": "supports",
-          "stanceLabel": "支持"
-        }
-      ],
-      "stockTickers": [
-        "MSFT",
-        "NVDA",
-        "META",
-        "AAPL",
-        "ARM",
-        "AMZN",
-        "QCOM",
-        "AMD",
-        "GOOGL",
-        "002475.SZ"
-      ]
     }
   ],
   "lanes": [
@@ -771,6 +778,27 @@
         "688012.SH"
       ],
       "avgConviction": 65
+    },
+    {
+      "id": "lane_74d352e86208",
+      "title": "端侧 AI/Agent 桌面",
+      "href": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
+      "thesisCount": 1,
+      "eventCount": 2,
+      "convictionTotal": 59,
+      "stockTickers": [
+        "MSFT",
+        "NVDA",
+        "AAPL",
+        "META",
+        "ARM",
+        "QCOM",
+        "AMD",
+        "AMZN",
+        "GOOGL",
+        "002475.SZ"
+      ],
+      "avgConviction": 59
     },
     {
       "id": "lane_f21fc181388a",
@@ -830,27 +858,6 @@
         "MSFT"
       ],
       "avgConviction": 64
-    },
-    {
-      "id": "lane_74d352e86208",
-      "title": "端侧 AI/Agent 桌面",
-      "href": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 62,
-      "stockTickers": [
-        "MSFT",
-        "NVDA",
-        "META",
-        "AAPL",
-        "ARM",
-        "AMZN",
-        "QCOM",
-        "AMD",
-        "GOOGL",
-        "002475.SZ"
-      ],
-      "avgConviction": 62
     }
   ],
   "stocks": [
@@ -860,7 +867,7 @@
       "market": "US",
       "href": "/investor/stocks/NVDA/",
       "thesisCount": 7,
-      "eventCount": 8,
+      "eventCount": 9,
       "lanes": [
         "Mag7 AI 平台再分层",
         "AI 算力半导体",
@@ -889,12 +896,26 @@
       "market": "US",
       "href": "/investor/stocks/META/",
       "thesisCount": 5,
-      "eventCount": 6,
+      "eventCount": 7,
       "lanes": [
         "Mag7 AI 平台再分层",
         "先进封装/HBM4 闸门",
         "AI 算力半导体",
         "CPO/光模块/高速互联",
+        "端侧 AI/Agent 桌面"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "name": "AMD",
+      "market": "US",
+      "href": "/investor/stocks/AMD/",
+      "thesisCount": 5,
+      "eventCount": 7,
+      "lanes": [
+        "Mag7 AI 平台再分层",
+        "AI 算力半导体",
+        "先进封装/HBM4 闸门",
         "端侧 AI/Agent 桌面"
       ]
     },
@@ -913,26 +934,12 @@
       ]
     },
     {
-      "ticker": "AMD",
-      "name": "AMD",
-      "market": "US",
-      "href": "/investor/stocks/AMD/",
-      "thesisCount": 5,
-      "eventCount": 6,
-      "lanes": [
-        "Mag7 AI 平台再分层",
-        "AI 算力半导体",
-        "先进封装/HBM4 闸门",
-        "端侧 AI/Agent 桌面"
-      ]
-    },
-    {
       "ticker": "MSFT",
       "name": "Microsoft",
       "market": "US",
       "href": "/investor/stocks/MSFT/",
       "thesisCount": 4,
-      "eventCount": 5,
+      "eventCount": 6,
       "lanes": [
         "Mag7 AI 平台再分层",
         "AI 算力半导体",
@@ -970,7 +977,7 @@
       "market": "US",
       "href": "/investor/stocks/AMZN/",
       "thesisCount": 3,
-      "eventCount": 4,
+      "eventCount": 5,
       "lanes": [
         "Mag7 AI 平台再分层",
         "AI 算力半导体",
@@ -983,7 +990,7 @@
       "market": "US",
       "href": "/investor/stocks/GOOGL/",
       "thesisCount": 3,
-      "eventCount": 4,
+      "eventCount": 5,
       "lanes": [
         "Mag7 AI 平台再分层",
         "AI 算力半导体",
@@ -996,7 +1003,7 @@
       "market": "US",
       "href": "/investor/stocks/AAPL/",
       "thesisCount": 2,
-      "eventCount": 2,
+      "eventCount": 3,
       "lanes": [
         "Mag7 AI 平台再分层",
         "端侧 AI/Agent 桌面"
@@ -1034,6 +1041,39 @@
       "lanes": [
         "A股半导体/两融负 Gamma",
         "先进封装/HBM4 闸门"
+      ]
+    },
+    {
+      "ticker": "ARM",
+      "name": "Arm Holdings",
+      "market": "US",
+      "href": "/investor/stocks/ARM/",
+      "thesisCount": 1,
+      "eventCount": 2,
+      "lanes": [
+        "端侧 AI/Agent 桌面"
+      ]
+    },
+    {
+      "ticker": "QCOM",
+      "name": "Qualcomm",
+      "market": "US",
+      "href": "/investor/stocks/QCOM/",
+      "thesisCount": 1,
+      "eventCount": 2,
+      "lanes": [
+        "端侧 AI/Agent 桌面"
+      ]
+    },
+    {
+      "ticker": "002475.SZ",
+      "name": "立讯精密",
+      "market": "A-share",
+      "href": "/investor/stocks/002475.SZ/",
+      "thesisCount": 1,
+      "eventCount": 2,
+      "lanes": [
+        "端侧 AI/Agent 桌面"
       ]
     },
     {
@@ -1166,39 +1206,6 @@
       "eventCount": 1,
       "lanes": [
         "CPO/光模块/高速互联"
-      ]
-    },
-    {
-      "ticker": "ARM",
-      "name": "Arm Holdings",
-      "market": "US",
-      "href": "/investor/stocks/ARM/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "端侧 AI/Agent 桌面"
-      ]
-    },
-    {
-      "ticker": "QCOM",
-      "name": "Qualcomm",
-      "market": "US",
-      "href": "/investor/stocks/QCOM/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "端侧 AI/Agent 桌面"
-      ]
-    },
-    {
-      "ticker": "002475.SZ",
-      "name": "立讯精密",
-      "market": "A-share",
-      "href": "/investor/stocks/002475.SZ/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "端侧 AI/Agent 桌面"
       ]
     }
   ],
