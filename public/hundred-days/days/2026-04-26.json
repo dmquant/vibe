@@ -4,7 +4,7 @@
   "dayNumber": 5,
   "status": "recorded",
   "headline": "研究报告：2026-06-28",
-  "summary": "当日归档 11 份公开研究，25 条研究讨论和 10 个 thesis 证据事件；研究密度最高的方向为半导体、存储与光互联。",
+  "summary": "当日归档 11 份公开研究，25 条研究讨论和 14 个 thesis 证据事件；研究密度最高的方向为半导体、存储与光互联。",
   "dominantTopic": {
     "id": "semis-memory",
     "labelZh": "半导体、存储与光互联",
@@ -28,7 +28,7 @@
     "reports": 11,
     "researchThreads": 25,
     "researchNotes": 248,
-    "thesisEvents": 10,
+    "thesisEvents": 14,
     "personaEvents": 0,
     "readerMemos": 0,
     "recaps": 0,
@@ -436,6 +436,47 @@
   ],
   "thesisEvents": [
     {
+      "id": "thesis-b13c7cf092",
+      "title": "高纯石英材料受益于先进封装扩产，但兑现取决于认证与产品结构",
+      "titleEn": "High-purity quartz can benefit from advanced-packaging expansion, conditional on qualification and mix",
+      "href": "/investor/theses/thesis-b13c7cf092/",
+      "laneId": "lane_f1a271385aff",
+      "lane": "先进封装/HBM4 闸门",
+      "laneHref": "/investor/lanes/advanced-packaging-and-hbm4-gate/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 70,
+      "supports": 1,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 2,
+      "events": [
+        {
+          "title": "AI 利润向算力底座迁移的证据：半导体与网络核心硬件的毛利韧性 — 2026-05-26",
+          "summary": "AI 利润向算力底座迁移的证据：半导体与网络核心硬件的毛利韧性 — 2026-05-26",
+          "href": "/investor/reports/archive-f8876294e5ea/",
+          "stance": "supports",
+          "stanceLabel": "支持"
+        },
+        {
+          "title": "2026-06-17 半导体压力测试：T3 触发、AI 资本开支下修与设计制造链传导",
+          "summary": "2026-06-17 半导体压力测试：T3 触发、AI 资本开支下修与设计制造链传导",
+          "href": "/investor/reports/archive-fb57ae551ea1/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "TSM",
+        "NVDA",
+        "MU",
+        "000660.KS",
+        "ASML",
+        "002916.SZ",
+        "300395.SZ"
+      ]
+    },
+    {
       "id": "thesis-8bbbcdf5a4",
       "title": "GPU、HBM 与先进封装决定 AI 资本开支供给节奏",
       "titleEn": "GPUs, HBM, and advanced packaging shape the AI capex supply cycle",
@@ -471,9 +512,9 @@
         "TSM",
         "AMD",
         "META",
-        "AVGO",
-        "000660.KS",
         "MU",
+        "000660.KS",
+        "AVGO",
         "MSFT",
         "AMZN",
         "GOOGL"
@@ -512,8 +553,8 @@
       ],
       "stockTickers": [
         "MSFT",
-        "NVDA",
         "AAPL",
+        "NVDA",
         "META",
         "ARM",
         "QCOM",
@@ -521,6 +562,40 @@
         "AMZN",
         "GOOGL",
         "002475.SZ"
+      ]
+    },
+    {
+      "id": "thesis-b976d8330e",
+      "title": "NAND盈利弹性由价格与产品结构主导，而非单纯出货增长",
+      "titleEn": "NAND earnings leverage is driven by pricing and mix rather than shipment growth alone",
+      "href": "/investor/theses/thesis-b976d8330e/",
+      "laneId": "lane_f44cf45c8649",
+      "lane": "AI 算力半导体",
+      "laneHref": "/investor/lanes/ai-compute-semiconductors/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 72,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "2026-06-17 半导体压力测试：T3 触发、AI 资本开支下修与设计制造链传导",
+          "summary": "2026-06-17 半导体压力测试：T3 触发、AI 资本开支下修与设计制造链传导",
+          "href": "/investor/reports/archive-fb57ae551ea1/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "NVDA",
+        "TSM",
+        "MU",
+        "000660.KS",
+        "META",
+        "AMD",
+        "AVGO"
       ]
     },
     {
@@ -554,42 +629,41 @@
         "AMZN",
         "GOOGL",
         "TSM",
-        "AVGO",
         "AMD",
+        "AVGO",
         "AAPL"
       ]
     },
     {
-      "id": "thesis-d1f5e35b43",
-      "title": "2026年AI芯片竞争格局：NVIDIA Rubin对阵云巨头ASIC",
-      "titleEn": "Practical research topic: 2026年AI芯片竞争格局：NVIDIA Rubin对阵云巨头ASIC",
-      "href": "/investor/theses/thesis-d1f5e35b43/",
-      "laneId": "lane_f44cf45c8649",
-      "lane": "AI 算力半导体",
-      "laneHref": "/investor/lanes/ai-compute-semiconductors/",
+      "id": "thesis-05c3f6f33c",
+      "title": "随着TSMC CoWoS产能持续紧张且HBM4于2026年开始量产，从HBM3e向HBM4的跨越将如何影响主要AI GPU厂商（如NVI…",
+      "titleEn": "Practical research topic: 随着TSMC CoWoS产能持续紧张且HBM4于2026年开始量产，从HBM3e向HBM4的跨越将如何影响主要AI GPU厂商（如NVI…",
+      "href": "/investor/theses/thesis-05c3f6f33c/",
+      "laneId": "lane_f1a271385aff",
+      "lane": "先进封装/HBM4 闸门",
+      "laneHref": "/investor/lanes/advanced-packaging-and-hbm4-gate/",
       "direction": "conflicting",
       "directionLabel": "分歧",
       "conviction": 67,
-      "supports": 1,
-      "risks": 0,
+      "supports": 0,
+      "risks": 1,
       "neutral": 0,
       "eventCount": 1,
       "events": [
         {
-          "title": "AI价值链利润再分配：轻资产设计/EDA与重资产GPU云的公司层级利润池与产能曲线",
-          "summary": "AI价值链利润再分配：轻资产设计/EDA与重资产GPU云的公司层级利润池与产能曲线",
-          "href": "/investor/reports/archive-072050b5284f/",
-          "stance": "supports",
-          "stanceLabel": "支持"
+          "title": "2026-06-23 TMT压力测试：CoWoS与HBM会成为AI Capex的新瓶颈吗？",
+          "summary": "2026-06-23 TMT压力测试：CoWoS与HBM会成为AI Capex的新瓶颈吗？",
+          "href": "/investor/reports/archive-eac9a245c29c/",
+          "stance": "risk",
+          "stanceLabel": "风险"
         }
       ],
       "stockTickers": [
         "NVDA",
         "TSM",
-        "AVGO",
-        "AMD",
+        "000660.KS",
         "MU",
-        "000660.KS"
+        "ASML"
       ]
     },
     {
@@ -630,37 +704,65 @@
       ]
     },
     {
-      "id": "thesis-ef3a3d48bc",
-      "title": "Meta拟出售富余AI算力后，市场同时奖励软件/平台并惩罚半导体与neocloud；下周组合应把AI敞口从SMH/SOXX切向IGV/平…",
-      "titleEn": "Practical research topic: Meta拟出售富余AI算力后，市场同时奖励软件/平台并惩罚半导体与neocloud；下周组合应把AI敞口从SMH/SOXX切向IGV/平…",
-      "href": "/investor/theses/thesis-ef3a3d48bc/",
-      "laneId": "lane_968dd01cb43f",
-      "lane": "A股半导体/两融负 Gamma",
-      "laneHref": "/investor/lanes/a-share-semiconductor-margin-and-negative-gamma/",
+      "id": "thesis-a323543bc7",
+      "title": "2026 HBM 缺口真实但租金窗口前置在 1H26，真正的稀缺量子是 CoWoS 先进封装而非 HBM 裸晶——杠铃方向成立但工具应以…",
+      "titleEn": "Practical research topic: 2026 HBM 缺口真实但租金窗口前置在 1H26，真正的稀缺量子是 CoWoS 先进封装而非 HBM 裸晶——杠铃方向成立但工具应以…",
+      "href": "/investor/theses/thesis-a323543bc7/",
+      "laneId": "lane_f1a271385aff",
+      "lane": "先进封装/HBM4 闸门",
+      "laneHref": "/investor/lanes/advanced-packaging-and-hbm4-gate/",
       "direction": "conflicting",
       "directionLabel": "分歧",
       "conviction": 66,
-      "supports": 1,
-      "risks": 0,
+      "supports": 0,
+      "risks": 1,
       "neutral": 0,
       "eventCount": 1,
       "events": [
         {
-          "title": "AI 利润向算力底座迁移的证据：半导体与网络核心硬件的毛利韧性 — 2026-05-26",
-          "summary": "AI 利润向算力底座迁移的证据：半导体与网络核心硬件的毛利韧性 — 2026-05-26",
-          "href": "/investor/reports/archive-f8876294e5ea/",
-          "stance": "supports",
-          "stanceLabel": "支持"
+          "title": "2026-06-23 TMT压力测试：CoWoS与HBM会成为AI Capex的新瓶颈吗？",
+          "summary": "2026-06-23 TMT压力测试：CoWoS与HBM会成为AI Capex的新瓶颈吗？",
+          "href": "/investor/reports/archive-eac9a245c29c/",
+          "stance": "risk",
+          "stanceLabel": "风险"
         }
       ],
       "stockTickers": [
-        "688256.SH",
-        "688981.SH",
-        "0981.HK",
-        "688041.SH",
-        "688012.SH",
-        "688072.SH",
-        "688008.SH"
+        "NVDA",
+        "TSM",
+        "000660.KS",
+        "MU"
+      ]
+    },
+    {
+      "id": "thesis-56cb5348fe",
+      "title": "先进封装与HBM出口管制把存储成本压力的核心AI基础设施层从周期性紧张转为政策驱动的结构性通胀，范围窄但中心位置高，至少持续到2027。",
+      "titleEn": "Practical research topic: 先进封装与HBM出口管制把存储成本压力的核心AI基础设施层从周期性紧张转为政策驱动的结构性通胀，范围窄但中心位置高，至少持续到2027。",
+      "href": "/investor/theses/thesis-56cb5348fe/",
+      "laneId": "lane_f1a271385aff",
+      "lane": "先进封装/HBM4 闸门",
+      "laneHref": "/investor/lanes/advanced-packaging-and-hbm4-gate/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 65,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "2026-06-23 TMT压力测试：CoWoS与HBM会成为AI Capex的新瓶颈吗？",
+          "summary": "2026-06-23 TMT压力测试：CoWoS与HBM会成为AI Capex的新瓶颈吗？",
+          "href": "/investor/reports/archive-eac9a245c29c/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "NVDA",
+        "TSM",
+        "000660.KS",
+        "MU"
       ]
     },
     {
@@ -737,47 +839,48 @@
   ],
   "lanes": [
     {
+      "id": "lane_f1a271385aff",
+      "title": "先进封装/HBM4 闸门",
+      "href": "/investor/lanes/advanced-packaging-and-hbm4-gate/",
+      "thesisCount": 6,
+      "eventCount": 7,
+      "convictionTotal": 397,
+      "stockTickers": [
+        "TSM",
+        "NVDA",
+        "MU",
+        "000660.KS",
+        "ASML",
+        "002916.SZ",
+        "300395.SZ",
+        "AMD",
+        "META",
+        "AVGO",
+        "005930.KS",
+        "688012.SH"
+      ],
+      "avgConviction": 66
+    },
+    {
       "id": "lane_f44cf45c8649",
       "title": "AI 算力半导体",
       "href": "/investor/lanes/ai-compute-semiconductors/",
       "thesisCount": 2,
       "eventCount": 3,
-      "convictionTotal": 132,
+      "convictionTotal": 137,
       "stockTickers": [
         "NVDA",
         "TSM",
-        "AVGO",
-        "AMD",
         "MU",
         "000660.KS",
         "META",
+        "AMD",
+        "AVGO",
         "MSFT",
         "AMZN",
         "GOOGL"
       ],
-      "avgConviction": 66
-    },
-    {
-      "id": "lane_f1a271385aff",
-      "title": "先进封装/HBM4 闸门",
-      "href": "/investor/lanes/advanced-packaging-and-hbm4-gate/",
-      "thesisCount": 2,
-      "eventCount": 2,
-      "convictionTotal": 129,
-      "stockTickers": [
-        "NVDA",
-        "TSM",
-        "000660.KS",
-        "MU",
-        "AMD",
-        "META",
-        "AVGO",
-        "ASML",
-        "005930.KS",
-        "002916.SZ",
-        "688012.SH"
-      ],
-      "avgConviction": 65
+      "avgConviction": 69
     },
     {
       "id": "lane_74d352e86208",
@@ -788,8 +891,8 @@
       "convictionTotal": 59,
       "stockTickers": [
         "MSFT",
-        "NVDA",
         "AAPL",
+        "NVDA",
         "META",
         "ARM",
         "QCOM",
@@ -814,29 +917,11 @@
         "AMZN",
         "GOOGL",
         "TSM",
-        "AVGO",
         "AMD",
+        "AVGO",
         "AAPL"
       ],
       "avgConviction": 71
-    },
-    {
-      "id": "lane_968dd01cb43f",
-      "title": "A股半导体/两融负 Gamma",
-      "href": "/investor/lanes/a-share-semiconductor-margin-and-negative-gamma/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 66,
-      "stockTickers": [
-        "688256.SH",
-        "688981.SH",
-        "0981.HK",
-        "688041.SH",
-        "688012.SH",
-        "688072.SH",
-        "688008.SH"
-      ],
-      "avgConviction": 66
     },
     {
       "id": "lane_1f0136d57956",
@@ -866,11 +951,11 @@
       "name": "NVIDIA",
       "market": "US",
       "href": "/investor/stocks/NVDA/",
-      "thesisCount": 7,
-      "eventCount": 9,
+      "thesisCount": 11,
+      "eventCount": 14,
       "lanes": [
-        "Mag7 AI 平台再分层",
         "AI 算力半导体",
+        "Mag7 AI 平台再分层",
         "先进封装/HBM4 闸门",
         "CPO/光模块/高速互联",
         "端侧 AI/Agent 桌面"
@@ -881,13 +966,37 @@
       "name": "TSMC",
       "market": "US ADR",
       "href": "/investor/stocks/TSM/",
-      "thesisCount": 6,
-      "eventCount": 7,
+      "thesisCount": 10,
+      "eventCount": 12,
       "lanes": [
-        "Mag7 AI 平台再分层",
         "AI 算力半导体",
+        "Mag7 AI 平台再分层",
         "先进封装/HBM4 闸门",
         "CPO/光模块/高速互联"
+      ]
+    },
+    {
+      "ticker": "MU",
+      "name": "Micron",
+      "market": "US",
+      "href": "/investor/stocks/MU/",
+      "thesisCount": 8,
+      "eventCount": 10,
+      "lanes": [
+        "AI 算力半导体",
+        "先进封装/HBM4 闸门"
+      ]
+    },
+    {
+      "ticker": "000660.KS",
+      "name": "SK hynix",
+      "market": "Korea",
+      "href": "/investor/stocks/000660.KS/",
+      "thesisCount": 8,
+      "eventCount": 10,
+      "lanes": [
+        "AI 算力半导体",
+        "先进封装/HBM4 闸门"
       ]
     },
     {
@@ -895,12 +1004,12 @@
       "name": "Meta Platforms",
       "market": "US",
       "href": "/investor/stocks/META/",
-      "thesisCount": 5,
-      "eventCount": 7,
+      "thesisCount": 6,
+      "eventCount": 8,
       "lanes": [
+        "AI 算力半导体",
         "Mag7 AI 平台再分层",
         "先进封装/HBM4 闸门",
-        "AI 算力半导体",
         "CPO/光模块/高速互联",
         "端侧 AI/Agent 桌面"
       ]
@@ -913,8 +1022,8 @@
       "thesisCount": 5,
       "eventCount": 7,
       "lanes": [
-        "Mag7 AI 平台再分层",
         "AI 算力半导体",
+        "Mag7 AI 平台再分层",
         "先进封装/HBM4 闸门",
         "端侧 AI/Agent 桌面"
       ]
@@ -927,8 +1036,8 @@
       "thesisCount": 5,
       "eventCount": 6,
       "lanes": [
-        "Mag7 AI 平台再分层",
         "AI 算力半导体",
+        "Mag7 AI 平台再分层",
         "先进封装/HBM4 闸门",
         "CPO/光模块/高速互联"
       ]
@@ -948,26 +1057,13 @@
       ]
     },
     {
-      "ticker": "MU",
-      "name": "Micron",
-      "market": "US",
-      "href": "/investor/stocks/MU/",
+      "ticker": "ASML",
+      "name": "ASML",
+      "market": "US ADR",
+      "href": "/investor/stocks/ASML/",
       "thesisCount": 4,
       "eventCount": 5,
       "lanes": [
-        "AI 算力半导体",
-        "先进封装/HBM4 闸门"
-      ]
-    },
-    {
-      "ticker": "000660.KS",
-      "name": "SK hynix",
-      "market": "Korea",
-      "href": "/investor/stocks/000660.KS/",
-      "thesisCount": 4,
-      "eventCount": 5,
-      "lanes": [
-        "AI 算力半导体",
         "先进封装/HBM4 闸门"
       ]
     },
@@ -998,6 +1094,17 @@
       ]
     },
     {
+      "ticker": "002916.SZ",
+      "name": "深南电路",
+      "market": "A-share",
+      "href": "/investor/stocks/002916.SZ/",
+      "thesisCount": 3,
+      "eventCount": 4,
+      "lanes": [
+        "先进封装/HBM4 闸门"
+      ]
+    },
+    {
       "ticker": "AAPL",
       "name": "Apple",
       "market": "US",
@@ -1010,36 +1117,13 @@
       ]
     },
     {
-      "ticker": "ASML",
-      "name": "ASML",
-      "market": "US ADR",
-      "href": "/investor/stocks/ASML/",
-      "thesisCount": 2,
-      "eventCount": 2,
-      "lanes": [
-        "先进封装/HBM4 闸门"
-      ]
-    },
-    {
-      "ticker": "002916.SZ",
-      "name": "深南电路",
+      "ticker": "300395.SZ",
+      "name": "湖北菲利华石英玻璃股份有限公司",
       "market": "A-share",
-      "href": "/investor/stocks/002916.SZ/",
-      "thesisCount": 2,
+      "href": "/investor/stocks/300395.SZ/",
+      "thesisCount": 1,
       "eventCount": 2,
       "lanes": [
-        "先进封装/HBM4 闸门"
-      ]
-    },
-    {
-      "ticker": "688012.SH",
-      "name": "中微公司",
-      "market": "A-share",
-      "href": "/investor/stocks/688012.SH/",
-      "thesisCount": 2,
-      "eventCount": 2,
-      "lanes": [
-        "A股半导体/两融负 Gamma",
         "先进封装/HBM4 闸门"
       ]
     },
@@ -1085,72 +1169,6 @@
       "eventCount": 1,
       "lanes": [
         "先进封装/HBM4 闸门"
-      ]
-    },
-    {
-      "ticker": "688256.SH",
-      "name": "寒武纪",
-      "market": "A-share",
-      "href": "/investor/stocks/688256.SH/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "A股半导体/两融负 Gamma"
-      ]
-    },
-    {
-      "ticker": "688981.SH",
-      "name": "中芯国际",
-      "market": "A-share",
-      "href": "/investor/stocks/688981.SH/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "A股半导体/两融负 Gamma"
-      ]
-    },
-    {
-      "ticker": "0981.HK",
-      "name": "中芯国际",
-      "market": "HK",
-      "href": "/investor/stocks/0981.HK/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "A股半导体/两融负 Gamma"
-      ]
-    },
-    {
-      "ticker": "688041.SH",
-      "name": "海光信息",
-      "market": "A-share",
-      "href": "/investor/stocks/688041.SH/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "A股半导体/两融负 Gamma"
-      ]
-    },
-    {
-      "ticker": "688072.SH",
-      "name": "拓荆科技",
-      "market": "A-share",
-      "href": "/investor/stocks/688072.SH/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "A股半导体/两融负 Gamma"
-      ]
-    },
-    {
-      "ticker": "688008.SH",
-      "name": "澜起科技",
-      "market": "A-share",
-      "href": "/investor/stocks/688008.SH/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "A股半导体/两融负 Gamma"
       ]
     },
     {
@@ -1206,6 +1224,17 @@
       "eventCount": 1,
       "lanes": [
         "CPO/光模块/高速互联"
+      ]
+    },
+    {
+      "ticker": "688012.SH",
+      "name": "中微公司",
+      "market": "A-share",
+      "href": "/investor/stocks/688012.SH/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "先进封装/HBM4 闸门"
       ]
     }
   ],

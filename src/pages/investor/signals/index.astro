@@ -1,0 +1,155 @@
+---
+import BaseHead from "../../../components/BaseHead.astro";
+import Header from "../../../components/Header.astro";
+import RegistryControls from "../../../components/investor/RegistryControls.astro";
+import { readChangeRadar, readDailyDashboard, readPublicationQuality } from "../../../lib/investor-generated.js";
+import "../../../styles/market-registry.css";
+
+const radar = readChangeRadar();
+const daily = readDailyDashboard();
+const quality = readPublicationQuality();
+const typeLabels = { risk: "Rising risk", read: "Must read", evidence: "New evidence", view: "Analyst view" };
+const rawSignals = [
+  ...(radar.riskAlerts || []).map((item) => ({ ...item, type: "risk", date: radar.date, score: Number(item.impact || 0) * Number(item.probability || 0), detail: item.summary })),
+  ...(radar.mustRead || []).map((item) => ({ ...item, type: "read", date: radar.date, score: 20, detail: item.reason, chain: item.reason?.match(/关联([^；]+)/)?.[1] || "Editorial" })),
+  ...(radar.sourceReports || []).map((item) => ({ ...item, type: "evidence", score: Number(item.score || 0), detail: item.summary })),
+  ...(radar.analystSignals || []).map((item) => ({ ...item, type: "view", title: `${item.analyst}：${item.stance}`, score: 10, detail: item.change, chain: "Analyst view" })),
+];
+const signalMap = new Map();
+for (const item of rawSignals) {
+  const existing = signalMap.get(item.href);
+  if (!existing || Number(item.score || 0) > Number(existing.score || 0)) signalMap.set(item.href, item);
+}
+const signals = [...signalMap.values()].sort((a, b) =>
+  String(b.date || "").localeCompare(String(a.date || "")) || Number(b.score || 0) - Number(a.score || 0));
+const chainOptions = [...new Set(signals.map((item) => item.chain).filter(Boolean))]
+  .sort((a, b) => a.localeCompare(b, "zh-CN"))
+  .map((value) => ({ value, label: value }));
+const typeOptions = [...new Set(signals.map((item) => item.type))]
+  .map((value) => ({ value, label: typeLabels[value] || value }));
+const maxHeat = Math.max(1, ...(radar.chainSignals || []).map((item) => Number(item.heat || 0)));
+const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" ");
+---
+
+<!doctype html>
+<html lang="zh-CN" data-lang="zh">
+  <head>
+    <BaseHead title="研究信号 · AI Institute" description="AI Institute change radar covering new evidence, thesis shifts, rising risks, analyst views, and unresolved questions." />
+  </head>
+  <body>
+    <Header />
+    <main class="market-registry">
+      <section class="registry-hero">
+        <div class="registry-hero-copy">
+          <div class="registry-kicker">Decision Layer / Signals</div>
+          <h1>信号页只回答一件事：今天什么值得重新判断。</h1>
+          <p>{radar.summary || daily.summary?.lead}</p>
+          <div class="registry-actions">
+            <a href="/investor/daily/">读今日晨会</a>
+            <a href="/investor/theses/">回到主线</a>
+            <a href="/investor/panorama/">查看周报</a>
+            <a href="/investor/research-network/">打开证据网络</a>
+          </div>
+        </div>
+        <aside class="registry-hero-meta">
+          <span>{radar.previousDate} → {radar.date}</span>
+          <strong>{radar.headline}</strong>
+          <p>Heat 表示研究注意力，不是价格、资金流或方向。当前结构化市场报价为 {quality.counts?.marketQuotes || 0} 行，所有市场动作必须回到带日期的来源报告。</p>
+        </aside>
+      </section>
+
+      <section class="registry-stat-strip" aria-label="Signal coverage">
+        <a href="#signalStream"><span>New evidence</span><strong>{radar.stats?.newEvidence || 0}</strong><em>新增证据</em></a>
+        <a href="/investor/theses/"><span>Thesis shifts</span><strong>{radar.stats?.thesisShifts || 0}</strong><em>主线状态变化</em></a>
+        <a href="#signalStream"><span>Rising risks</span><strong>{radar.stats?.risingRisks || 0}</strong><em>上升风险</em></a>
+        <a href="#openQuestions"><span>Open questions</span><strong>{radar.openQuestions?.length || 0}</strong><em>尚未解决的问题</em></a>
+      </section>
+
+      <div class="registry-body">
+        <section>
+          <div class="registry-section-head">
+            <div><span>Attention map</span><h2>研究链条热度</h2></div>
+            <p>热度用于发现需要重读的链条；每张卡直接进入该链条最近的来源报告。</p>
+          </div>
+          <div class="signal-heat-grid">
+            {(radar.chainSignals || []).map((chain) => (
+              <a class="signal-heat-card" href={chain.evidence?.[0]?.href || "/investor/research-network/"}>
+                <header><span>{chain.level} attention</span><em>{chain.risk} risk</em></header>
+                <strong>{chain.label}</strong>
+                <p>{chain.evidence?.[0]?.title || "进入研究网络查看该链条的最新证据。"}</p>
+                <div class="signal-meter"><i><b style={`width:${Math.max(4, Math.round((Number(chain.heat || 0) / maxHeat) * 100))}%`}></b></i><span>{Math.round(Number(chain.heat || 0))}</span></div>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <section class="registry-section" id="signalStream">
+          <div class="registry-section-head">
+            <div><span>Change stream</span><h2>可点击信号流</h2></div>
+            <p>风险、必读、证据和分析师观点按日期与优先级归并；重复来源只保留影响更高的一条。</p>
+          </div>
+          <RegistryControls
+            id="signalRegistry"
+            total={signals.length}
+            placeholder="搜索风险、来源报告、链条、分析师或观点..."
+            filters={[
+              { key: "type", label: "Signal", allLabel: "全部信号", options: typeOptions },
+              { key: "chain", label: "Chain", allLabel: "全部链条", options: chainOptions },
+            ]}
+            sorts={[
+              { value: "latest:desc", label: "最近日期" },
+              { value: "score:desc", label: "信号优先级" },
+            ]}
+          />
+          <div class="registry-table-head"><span>信号类型</span><span>变化 / 来源 / 解释</span><span>优先级</span></div>
+          <div class="registry-list" id="signalRegistry">
+            {signals.map((signal) => (
+              <a
+                class="registry-row signal-row"
+                href={signal.href}
+                data-registry-item
+                data-search={searchText(signal.title, signal.detail, signal.chain, signal.analyst, signal.stance)}
+                data-type={signal.type}
+                data-chain={signal.chain || ""}
+                data-latest={signal.date || ""}
+                data-score={signal.score || 0}
+              >
+                <div class="registry-row-status">
+                  <span class="registry-row-label">{signal.date || radar.date}</span>
+                  <strong class={`type-${signal.type}`}>{typeLabels[signal.type] || signal.type}</strong>
+                  <em>{signal.chain || signal.analyst || "Research"}</em>
+                </div>
+                <div class="registry-row-main">
+                  <strong>{signal.title}</strong>
+                  <p>{signal.detail}</p>
+                  <div class="registry-tags">
+                    {signal.chain && <span>{signal.chain}</span>}
+                    {signal.analyst && <span>{signal.analyst}</span>}
+                    {signal.stance && <span>{signal.stance}</span>}
+                  </div>
+                </div>
+                <div class="registry-row-metrics">
+                  <span><b>{Math.round(Number(signal.score || 0))}</b>priority</span>
+                  <span class={signal.type === "risk" ? "metric-risk" : ""}><b>{signal.impact || "--"}</b>impact</span>
+                  <span><b>{signal.probability || "--"}</b>probability</span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <section class="registry-section" id="openQuestions">
+          <div class="registry-section-head">
+            <div><span>Unresolved</span><h2>下一轮研究问题</h2></div>
+            <p>这些问题尚未被现有证据关闭。点击后进入完整 thesis 注册表继续定位。</p>
+          </div>
+          <div class="question-grid">
+            {(radar.openQuestions || []).map((question, index) => (
+              <a href="/investor/theses/"><span>Question {String(index + 1).padStart(2, "0")}</span><strong>{question}</strong></a>
+            ))}
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

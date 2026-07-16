@@ -118,6 +118,10 @@ export function readDailyDashboard() {
   return rewriteInvestorPaths(readJson("daily-dashboard.json"));
 }
 
+export function readChangeRadar() {
+  return rewriteInvestorPaths(readJson("change-radar.json"));
+}
+
 export function readThesisTracker() {
   return rewriteInvestorPaths(readJson("thesis-tracker.json"));
 }

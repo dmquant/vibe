@@ -3,12 +3,12 @@ import BaseHead from "../../components/BaseHead.astro";
 import Header from "../../components/Header.astro";
 import {
   readAnalystPersonaTimelines,
+  readChangeRadar,
   readDailyDashboard,
   readDeepIndex,
   readOddsBoard,
   readRecapDashboards,
   readResearchNetwork,
-  readResearchWorkspace,
   readSiteData,
 } from "../../lib/investor-generated.js";
 import { buildOddsIndexes, lanePath, oddsLine, probabilityLabel, stockPath, thesisPath } from "../../lib/investor-market.js";
@@ -17,12 +17,12 @@ import "../../styles/investment-portal.css";
 
 const siteData = readSiteData();
 const daily = readDailyDashboard();
+const radar = readChangeRadar();
 const network = readResearchNetwork();
 const recapData = readRecapDashboards();
 const deepData = readDeepIndex();
 const personaData = readAnalystPersonaTimelines();
 const odds = readOddsBoard();
-const workspace = readResearchWorkspace();
 const oddsIndexes = buildOddsIndexes(odds);
 const laneOddsByHref = new Map((odds.laneLines || []).map((item) => [item.href, item]));
 const panorama = buildWeeklyPanoramaBundle();
@@ -74,6 +74,10 @@ const stockRows = [...theses
   .map((row) => ({ ...row, thesisCount: row.theses.size, laneCount: row.lanes.size, lanes: [...row.lanes] }))
   .sort((a, b) => b.thesisCount - a.thesisCount || b.score - a.score)
   .slice(0, 12);
+const signalRows = [
+  ...(radar.riskAlerts || []).map((item) => ({ ...item, type: "RISK", detail: item.summary, date: radar.date })),
+  ...(radar.mustRead || []).map((item) => ({ ...item, type: "READ", detail: item.reason, date: radar.date })),
+].filter((item, index, rows) => rows.findIndex((candidate) => candidate.href === item.href) === index).slice(0, 8);
 
 const weeklyCalls = (panorama.recommendations?.calls || []).slice(0, 6);
 const latestRecaps = [...(recapData.dashboards || [])]
@@ -101,13 +105,12 @@ const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" "
       <section class="portal-hero">
         <div class="portal-hero-copy">
           <div class="portal-kicker">AI Institute / Investment Portal</div>
-          <h1>从证据，到主线，再到组合。</h1>
-          <p>{daily.summary?.lead || "把每日研究结果重组为可读判断、可追踪主线、可点击赛道与标的，以及可复核的组合动作。"}</p>
+          <h1>投资研究决策台</h1>
+          <p>{daily.readerReport?.summary || daily.summary?.lead || "把每日研究结果重组为可读判断、可追踪主线、可点击赛道与标的，以及可复核的组合动作。"}</p>
           <div class="portal-actions">
-            <a class="primary" href="/investor/daily/">读今日晨会</a>
-            <a href="/investor/workspace/">看当前焦点</a>
+            <a class="primary" href={readerLead?.href || "/investor/daily/"}>读今日综合</a>
+            <a href="/investor/signals/">看变化信号</a>
             <a href="/investor/panorama/">看本周结论</a>
-            <a href="/investor/odds/">打开赔率盘</a>
             <a href="/investor/portfolio/">打开组合台</a>
           </div>
         </div>
@@ -128,17 +131,17 @@ const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" "
         <label for="portalSearch">Search the investment map</label>
         <input id="portalSearch" type="search" placeholder="搜索 thesis、赛道、ticker、复盘或分析师..." />
         <a href="/investor/start/">使用说明</a>
-        <a href="/investor/console/">高级控制台</a>
+        <a href="/investor/research-network/">完整网络</a>
       </section>
 
       <section class="portal-stat-strip" aria-label="Published research counts">
-        <a href="/investor/daily/"><span>Daily</span><strong>{daily.date || "latest"}</strong><em>晨会与报价</em></a>
-        <a href="/investor/workspace/"><span>Workspace</span><strong>{workspace.coverage?.focusItems || 0}</strong><em>有限容量焦点</em></a>
+        <a href="/investor/daily/"><span>Today</span><strong>{daily.date || "latest"}</strong><em>晨会与读者综合</em></a>
+        <a href="/investor/signals/"><span>Signals</span><strong>{radar.stats?.newEvidence || 0}</strong><em>新增证据</em></a>
+        <a href="/investor/theses/"><span>Theses</span><strong>{network.stats?.thesisCount || 0}</strong><em>可证伪主线</em></a>
+        <a href="/investor/lanes/"><span>Lanes</span><strong>{network.stats?.laneCount || 0}</strong><em>可投资赛道</em></a>
+        <a href="/investor/stocks/"><span>Stocks</span><strong>{network.stats?.stockCount || 0}</strong><em>研究暴露节点</em></a>
         <a href="/investor/panorama/"><span>Weekly</span><strong>{panorama.week}</strong><em>操作全景</em></a>
-        <a href="/investor/research-network/"><span>Evidence</span><strong>{network.stats?.publicGraphNodes || 0}</strong><em>公开图节点</em></a>
-        <a href="/investor/personas/"><span>Personas</span><strong>{personaData.stats?.personaCount || 0}</strong><em>分析师视角</em></a>
-        <a href="/investor/recaps/"><span>Recaps</span><strong>{latestRecaps.length ? recapData.dashboards.length : 0}</strong><em>动态复盘</em></a>
-        <a href="/investor/odds/"><span>Odds</span><strong>{odds.coverage?.shadowPricedTheses || 0}</strong><em>影子主线合约</em></a>
+        <a href="/investor/portfolio/"><span>Portfolio</span><strong>LOCAL</strong><em>本地组合工作台</em></a>
       </section>
 
       <section class="portal-band portal-decision-band">
@@ -181,12 +184,12 @@ const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" "
 
       <section class="portal-band" id="research-map">
         <div class="portal-section-head">
-          <div><span>Investment Map</span><h2>Thesis → Odds → 赛道 → 标的 → 组合</h2></div>
-          <p>赔率把判断变成有期限的可证伪合约；股票仍是研究把手，不是脱离论点的推荐清单。</p>
+          <div><span>Market Registry</span><h2>主线、赛道、股票、信号各有自己的入口</h2></div>
+          <p>首页只显示近期切片；完整注册表提供搜索、过滤与排序，网络页保留给关系探索。</p>
         </div>
         <div class="research-map-grid">
           <section class="map-column thesis-column">
-            <header><span>01</span><div><strong>Theses</strong><em>{network.stats?.thesisCount || theses.length} 条主线</em></div><a href="/investor/research-network/">全部</a></header>
+            <header><span>01</span><div><strong>Theses</strong><em>{network.stats?.thesisCount || theses.length} 条主线</em></div><a href="/investor/theses/">全部</a></header>
             <div>
               {recentTheses.map((thesis) => (
                 <a class="map-row portal-searchable" data-search={searchText(thesis.title, thesis.lane, thesis.stockTickers)} href={thesisPath(thesis)}>
@@ -199,7 +202,7 @@ const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" "
           </section>
 
           <section class="map-column lane-column">
-            <header><span>02</span><div><strong>Lanes / 赛道</strong><em>{network.stats?.laneCount || laneRows.length} 条赛道</em></div><a href="/investor/research-network/#thermal">热力图</a></header>
+            <header><span>02</span><div><strong>Lanes / 赛道</strong><em>{network.stats?.laneCount || laneRows.length} 条赛道</em></div><a href="/investor/lanes/">全部</a></header>
             <div>
               {laneRows.map((lane) => (
                 <a class="map-row portal-searchable" data-search={searchText(lane.lane, lane.stocks.map((stock) => stock.ticker))} href={lane.href}>
@@ -212,7 +215,7 @@ const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" "
           </section>
 
           <section class="map-column stock-column">
-            <header><span>03</span><div><strong>Stocks / 标的</strong><em>{network.stats?.stockCount || stockRows.length} 个节点</em></div><a href="/investor/research-network/#stocks">热区</a></header>
+            <header><span>03</span><div><strong>Stocks / 标的</strong><em>{network.stats?.stockCount || stockRows.length} 个节点</em></div><a href="/investor/stocks/">全部</a></header>
             <div class="stock-node-grid">
               {stockRows.map((stock) => (
                 <a class="stock-node portal-searchable" data-search={searchText(stock.ticker, stock.name, stock.role, stock.lanes)} href={stock.href || stockPath(stock)}>
@@ -222,13 +225,16 @@ const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" "
             </div>
           </section>
 
-          <section class="map-column portfolio-column">
-            <header><span>04</span><div><strong>Portfolio</strong><em>浏览器本地组合</em></div><a href="/investor/portfolio/">打开</a></header>
-            <div class="portfolio-bridge">
-              <strong id="portalPortfolioCount">0 tracked theses</strong>
-              <p>把主线放入观察、验证、核心、对冲或退出状态，并维护权重、复核日期和备注。</p>
-              <div id="portalPortfolioState" class="portfolio-state">当前浏览器尚未载入组合。</div>
-              <a href="/investor/portfolio/">进入组合工作台</a>
+          <section class="map-column signal-column">
+            <header><span>04</span><div><strong>Signals / 信号</strong><em>{radar.stats?.newEvidence || 0} 条新增证据</em></div><a href="/investor/signals/">全部</a></header>
+            <div>
+              {signalRows.map((signal) => (
+                <a class="map-row portal-searchable" data-search={searchText(signal.type, signal.title, signal.detail, signal.chain)} href={signal.href}>
+                  <span>{signal.type} · {signal.chain || radar.date}</span>
+                  <strong>{signal.title}</strong>
+                  <em>{signal.detail}</em>
+                </a>
+              ))}
             </div>
           </section>
         </div>
@@ -307,14 +313,14 @@ const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" "
           <p>门户负责决策顺序；高级控制台、知识图谱和报告库保留给需要继续检索与验证的读者。</p>
         </div>
         <div class="access-grid">
-          <a href="/investor/daily/"><span>01</span><strong>晨会看板</strong><em>今天发生了什么</em></a>
-          <a href="/investor/panorama/"><span>02</span><strong>周度全景</strong><em>本周如何定位</em></a>
-          <a href="/investor/research-network/"><span>03</span><strong>研究网络</strong><em>论点和证据如何连接</em></a>
-          <a href="/investor/portfolio/"><span>04</span><strong>组合追踪</strong><em>如何纳入风险预算</em></a>
-          <a href="/investor/timeline/"><span>05</span><strong>研究时间线</strong><em>观点何时改变</em></a>
-          <a href="/investor/recaps/"><span>06</span><strong>关键复盘</strong><em>历史判断如何兑现</em></a>
-          <a href="/investor/archive/"><span>07</span><strong>档案地图</strong><em>所有公开材料在哪里</em></a>
-          <a href="/investor/console/"><span>08</span><strong>高级控制台</strong><em>报告、分析师和图谱检索</em></a>
+          <a href="/investor/signals/"><span>01</span><strong>变化信号</strong><em>今天什么需要重判</em></a>
+          <a href="/investor/theses/"><span>02</span><strong>投资主线</strong><em>当前判断与证伪条件</em></a>
+          <a href="/investor/lanes/"><span>03</span><strong>可投资赛道</strong><em>产业机制如何传导</em></a>
+          <a href="/investor/stocks/"><span>04</span><strong>股票节点</strong><em>公司暴露在哪些主线</em></a>
+          <a href="/investor/daily/"><span>05</span><strong>晨会看板</strong><em>今日证据与读者综合</em></a>
+          <a href="/investor/panorama/"><span>06</span><strong>周度全景</strong><em>本周如何定位</em></a>
+          <a href="/investor/portfolio/"><span>07</span><strong>组合追踪</strong><em>如何纳入风险预算</em></a>
+          <a href="/investor/research-network/"><span>08</span><strong>完整网络</strong><em>论点和证据如何连接</em></a>
         </div>
       </section>
     </main>
@@ -329,19 +335,6 @@ const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" "
         });
       });
 
-      try {
-        const book = JSON.parse(localStorage.getItem("vibe.researchNetwork.portfolio.v2") || "null");
-        const legacy = JSON.parse(localStorage.getItem("vibe.researchNetwork.portfolio.v1") || "[]");
-        const theses = Array.isArray(book?.theses) ? book.theses : legacy;
-        const stocks = Array.isArray(book?.stocks) ? book.stocks : [];
-        const weight = theses.reduce((sum, item) => sum + Number(item.weight || 0), 0);
-        const count = document.getElementById("portalPortfolioCount");
-        const state = document.getElementById("portalPortfolioState");
-        if (count) count.textContent = `${stocks.length} stocks · ${theses.length} theses`;
-        if (state) state.textContent = stocks.length || theses.length ? `股票目标权重 ${stocks.reduce((sum, item) => sum + Number(item.targetWeight || 0), 0).toFixed(1)}% · Thesis ${weight.toFixed(1)}%` : "当前本地组合为空。";
-      } catch {
-        // Local portfolio state is optional on the static portal.
-      }
     </script>
   </body>
 </html>

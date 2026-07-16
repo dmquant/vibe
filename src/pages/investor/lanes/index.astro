@@ -1,0 +1,127 @@
+---
+import BaseHead from "../../../components/BaseHead.astro";
+import Header from "../../../components/Header.astro";
+import RegistryControls from "../../../components/investor/RegistryControls.astro";
+import { readOddsBoard, readResearchNetwork } from "../../../lib/investor-generated.js";
+import { buildLaneIndex, buildOddsIndexes, oddsLine, probabilityLabel } from "../../../lib/investor-market.js";
+import "../../../styles/market-registry.css";
+
+const network = readResearchNetwork();
+const oddsIndexes = buildOddsIndexes(readOddsBoard());
+const latestDate = network.stats?.dateRange?.last || "";
+const lanes = buildLaneIndex(network);
+const stanceLabels = { overweight: "超配", selective: "精选", neutral: "中性", underweight: "低配", avoid: "回避" };
+const stanceOptions = [...new Set(lanes.map((item) => item.advice?.stance).filter(Boolean))]
+  .map((value) => ({ value, label: stanceLabels[value] || value }));
+const coverageOptions = [
+  { value: "validated", label: "有模型观点" },
+  { value: "deep", label: "5+ theses" },
+  { value: "broad", label: "10+ stocks" },
+];
+const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" ");
+---
+
+<!doctype html>
+<html lang="zh-CN" data-lang="zh">
+  <head>
+    <BaseHead title="投资赛道 · AI Institute" description="AI Institute complete investable lane registry with theses, stock universes, evidence coverage, timelines, and validated model views." />
+  </head>
+  <body>
+    <Header />
+    <main class="market-registry">
+      <section class="registry-hero">
+        <div class="registry-hero-copy">
+          <div class="registry-kicker">Market Map / Lanes</div>
+          <h1>赛道把宏观叙事压缩成可验证的产业传导链。</h1>
+          <p>每条 lane 聚合同一盈利机制下的主线、股票池、来源报告、证据时间线和模型研究姿态。它不是行业标签，而是从需求、瓶颈、订单到现金流的投资路径。</p>
+          <div class="registry-actions">
+            <a href="/investor/theses/">返回主线</a>
+            <a href="/investor/stocks/">查看股票池</a>
+            <a href="/investor/signals/">查看最新信号</a>
+            <a href="/investor/portfolio/">打开组合台</a>
+          </div>
+        </div>
+        <aside class="registry-hero-meta">
+          <span>As of {latestDate}</span>
+          <strong>{lanes.filter((lane) => lane.advice).length} 条赛道已有结构化模型观点</strong>
+          <p>配置区间是研究姿态，不是订单。只有订单、交付、利润率和证伪条件被持续验证时，赛道结论才应升级。</p>
+        </aside>
+      </section>
+
+      <section class="registry-stat-strip" aria-label="Lane coverage">
+        <div><span>Total lanes</span><strong>{lanes.length}</strong><em>完整可投资赛道</em></div>
+        <div><span>Validated views</span><strong>{lanes.filter((lane) => lane.advice).length}</strong><em>模型复核研究姿态</em></div>
+        <div><span>Direct stocks</span><strong>{new Set(lanes.flatMap((lane) => lane.stocks.map((stock) => stock.ticker))).size}</strong><em>直接映射股票</em></div>
+        <div><span>Evidence links</span><strong>{lanes.reduce((sum, lane) => sum + Number(lane.evidenceCount || 0), 0).toLocaleString()}</strong><em>赛道内证据映射</em></div>
+      </section>
+
+      <div class="registry-body">
+        <div class="registry-note"><strong>Lane discipline</strong><p>证据数量衡量研究覆盖，不等于看多。优先查看模型姿态、主线分布、股票角色和最近报告，再进入详情页核对时间线与证伪条件。</p></div>
+        <RegistryControls
+          id="laneRegistry"
+          total={lanes.length}
+          placeholder="搜索赛道、机制、ticker、催化剂或风险..."
+          filters={[
+            { key: "stance", label: "Model view", allLabel: "全部姿态", options: stanceOptions },
+            { key: "coverage", label: "Coverage", allLabel: "全部覆盖", options: coverageOptions },
+          ]}
+          sorts={[
+            { value: "evidence:desc", label: "证据数量" },
+            { value: "latest:desc", label: "最近更新" },
+            { value: "score:desc", label: "平均分数" },
+            { value: "theses:desc", label: "主线数量" },
+            { value: "stocks:desc", label: "股票数量" },
+            { value: "odds:desc", label: "20D 影子赔率" },
+          ]}
+        />
+
+        <div class="registry-table-head"><span>赛道姿态</span><span>机制 / 主线 / 股票</span><span>覆盖指标</span></div>
+        <section class="registry-list" id="laneRegistry">
+          {lanes.map((lane) => {
+            const surface = oddsIndexes.lanes.get(lane.id);
+            const line20d = oddsLine(surface, "20d");
+            const pHouse = Number(line20d?.pHouse);
+            const coverage = [lane.advice ? "validated" : "", lane.theses.length >= 5 ? "deep" : "", lane.stocks.length >= 10 ? "broad" : ""].filter(Boolean).join("|");
+            return (
+              <a
+                class="registry-row lane-row"
+                href={lane.href}
+                data-registry-item
+                data-search={searchText(lane.lane, lane.laneEn, lane.topTerms, lane.stocks.map((stock) => [stock.ticker, stock.name, stock.role]), lane.advice?.summaryZh, lane.advice?.catalystsZh, lane.advice?.risksZh)}
+                data-stance={lane.advice?.stance || ""}
+                data-coverage={coverage}
+                data-latest={lane.lastSeen || ""}
+                data-score={lane.avgScore || 0}
+                data-evidence={lane.evidenceCount || 0}
+                data-theses={lane.theses.length}
+                data-stocks={lane.stocks.length}
+                data-odds={Number.isFinite(pHouse) ? pHouse * 100 : -1}
+              >
+                <div class="registry-row-status">
+                  <span class="registry-row-label">{lane.advice ? "Validated view" : "Research lane"}</span>
+                  <strong>{lane.advice ? stanceLabels[lane.advice.stance] || lane.advice.stance : lane.actions[0]?.[0] || "观察"}</strong>
+                  <em>{lane.lastSeen}</em>
+                </div>
+                <div class="registry-row-main">
+                  <strong>{lane.lane}</strong>
+                  <p>{lane.advice?.summaryZh || `${lane.theses.length} 条主线共同描述该赛道的盈利机制与风险边界。最近证据更新至 ${lane.lastSeen}。`}</p>
+                  <div class="registry-tags">
+                    {(lane.stocks || []).slice(0, 8).map((stock) => <span class="stock-tag">{stock.ticker}</span>)}
+                  </div>
+                </div>
+                <div class="registry-row-metrics">
+                  <span><b>{lane.theses.length}</b>theses</span>
+                  <span><b>{lane.stocks.length}</b>stocks</span>
+                  <span><b>{lane.evidenceCount || 0}</b>evidence</span>
+                  <span><b>{lane.reportCount || 0}</b>reports</span>
+                  <span><b>{lane.avgScore || 0}</b>avg score</span>
+                  <span class="metric-odds"><b>{probabilityLabel(line20d?.pHouse)}</b>20D house</span>
+                </div>
+              </a>
+            );
+          })}
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

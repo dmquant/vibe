@@ -1,0 +1,87 @@
+---
+const {
+  id = "registry",
+  placeholder = "搜索...",
+  filters = [],
+  sorts = [],
+  total = 0,
+} = Astro.props;
+---
+
+<section class="registry-controls" data-registry-controls data-target={id}>
+  <label class="registry-search">
+    <span>Search</span>
+    <input type="search" placeholder={placeholder} data-registry-search autocomplete="off" />
+  </label>
+  {filters.map((filter) => (
+    <label>
+      <span>{filter.label}</span>
+      <select data-filter-key={filter.key}>
+        <option value="">{filter.allLabel || "全部"}</option>
+        {filter.options.map((option) => (
+          <option value={option.value}>{option.label}</option>
+        ))}
+      </select>
+    </label>
+  ))}
+  {sorts.length > 0 && (
+    <label>
+      <span>Sort</span>
+      <select data-registry-sort>
+        {sorts.map((option) => <option value={option.value}>{option.label}</option>)}
+      </select>
+    </label>
+  )}
+  <output data-registry-count aria-live="polite">{total} / {total}</output>
+</section>
+
+<script>
+  const numberKeys = new Set(["score", "evidence", "theses", "stocks", "odds", "confidence", "risk", "heat"]);
+
+  document.querySelectorAll("[data-registry-controls]").forEach((controls) => {
+    const target = document.getElementById(controls.dataset.target || "");
+    if (!target) return;
+
+    const items = [...target.querySelectorAll("[data-registry-item]")];
+    const search = controls.querySelector("[data-registry-search]");
+    const filters = [...controls.querySelectorAll("[data-filter-key]")];
+    const sort = controls.querySelector("[data-registry-sort]");
+    const output = controls.querySelector("[data-registry-count]");
+
+    const refresh = () => {
+      const query = String(search?.value || "").trim().toLowerCase();
+      let visible = 0;
+
+      for (const item of items) {
+        const matchesSearch = !query || String(item.dataset.search || "").toLowerCase().includes(query);
+        const matchesFilters = filters.every((filter) => {
+          const value = String(filter.value || "");
+          if (!value) return true;
+          const field = String(item.dataset[filter.dataset.filterKey] || "");
+          return field.split("|").includes(value);
+        });
+        const matches = matchesSearch && matchesFilters;
+        item.hidden = !matches;
+        if (matches) visible += 1;
+      }
+
+      if (sort?.value) {
+        const [key, direction = "desc"] = sort.value.split(":");
+        const multiplier = direction === "asc" ? 1 : -1;
+        const sorted = [...items].sort((left, right) => {
+          const a = left.dataset[key] || "";
+          const b = right.dataset[key] || "";
+          if (numberKeys.has(key)) return (Number(a) - Number(b)) * multiplier;
+          return String(a).localeCompare(String(b), "zh-CN") * multiplier;
+        });
+        sorted.forEach((item) => target.appendChild(item));
+      }
+
+      if (output) output.textContent = `${visible} / ${items.length}`;
+    };
+
+    controls.addEventListener("input", refresh);
+    controls.addEventListener("change", refresh);
+    refresh();
+  });
+</script>

@@ -1,0 +1,136 @@
+---
+import BaseHead from "../../../components/BaseHead.astro";
+import Header from "../../../components/Header.astro";
+import RegistryControls from "../../../components/investor/RegistryControls.astro";
+import { readOddsBoard, readResearchNetwork } from "../../../lib/investor-generated.js";
+import { buildOddsIndexes, buildStockIndex, oddsLine, probabilityLabel } from "../../../lib/investor-market.js";
+import "../../../styles/market-registry.css";
+
+const network = readResearchNetwork();
+const oddsIndexes = buildOddsIndexes(readOddsBoard());
+const latestDate = network.stats?.dateRange?.last || "";
+const stocks = buildStockIndex(network);
+const marketOptions = [...new Set(stocks.map((item) => item.market || "Unknown"))]
+  .sort((a, b) => a.localeCompare(b, "en"))
+  .map((value) => ({ value, label: value }));
+const laneOptions = [...(network.lanes || [])]
+  .sort((a, b) => a.titleZh.localeCompare(b.titleZh, "zh-CN"))
+  .map((lane) => ({ value: lane.id, label: lane.titleZh }));
+const coverageOptions = [
+  { value: "core", label: "10+ theses" },
+  { value: "multi", label: "3+ lanes" },
+  { value: "fresh", label: "最近七日更新" },
+];
+const recentCutoff = latestDate ? new Date(`${latestDate}T00:00:00Z`) : new Date();
+recentCutoff.setUTCDate(recentCutoff.getUTCDate() - 6);
+const cutoff = recentCutoff.toISOString().slice(0, 10);
+const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" ");
+---
+
+<!doctype html>
+<html lang="zh-CN" data-lang="zh">
+  <head>
+    <BaseHead title="股票研究节点 · AI Institute" description="AI Institute complete stock registry linking each security to theses, lanes, evidence, roles, and shadow odds." />
+  </head>
+  <body>
+    <Header />
+    <main class="market-registry">
+      <section class="registry-hero">
+        <div class="registry-hero-copy">
+          <div class="registry-kicker">Market Map / Stocks</div>
+          <h1>股票是研究主线的暴露节点，不是脱离证据的推荐单。</h1>
+          <p>每个 ticker 都反向连接相关 thesis、赛道、角色和来源报告。用它回答“这家公司暴露在哪些判断里”，再进入详情页核对支持、风险和最新研究结果。</p>
+          <div class="registry-actions">
+            <a href="/investor/theses/">浏览主线</a>
+            <a href="/investor/lanes/">浏览赛道</a>
+            <a href="/investor/signals/">查看信号</a>
+            <a href="/investor/portfolio/">打开组合台</a>
+          </div>
+        </div>
+        <aside class="registry-hero-meta">
+          <span>As of {latestDate}</span>
+          <strong>{stocks.length} 个股票节点连接 {network.stats?.stockMappedTheses || 0} 条主线</strong>
+          <p>覆盖度高意味着更多研究关系，不代表更高预期收益。最新报价缺失时，页面不会把研究热度伪装成市场表现。</p>
+        </aside>
+      </section>
+
+      <section class="registry-stat-strip" aria-label="Stock coverage">
+        <div><span>Total stocks</span><strong>{stocks.length}</strong><em>跨市场研究节点</em></div>
+        <div><span>Markets</span><strong>{marketOptions.length}</strong><em>市场与工具类别</em></div>
+        <div><span>10+ theses</span><strong>{stocks.filter((stock) => stock.theses.length >= 10).length}</strong><em>高连接度股票</em></div>
+        <div><span>Updated 7D</span><strong>{stocks.filter((stock) => String(stock.lastSeen) >= cutoff).length}</strong><em>最近七日新增证据</em></div>
+      </section>
+
+      <div class="registry-body">
+        <div class="registry-note"><strong>Exposure map</strong><p>先看股票在多少条 thesis 和 lane 中出现，再读其角色与最近证据。点击整行进入股票页，可继续追踪每条主线和相关来源报告。</p></div>
+        <RegistryControls
+          id="stockRegistry"
+          total={stocks.length}
+          placeholder="搜索 ticker、公司、市场、赛道、角色或主线..."
+          filters={[
+            { key: "market", label: "Market", allLabel: "全部市场", options: marketOptions },
+            { key: "lane", label: "Lane", allLabel: "全部赛道", options: laneOptions },
+            { key: "coverage", label: "Coverage", allLabel: "全部覆盖", options: coverageOptions },
+          ]}
+          sorts={[
+            { value: "evidence:desc", label: "证据数量" },
+            { value: "theses:desc", label: "主线数量" },
+            { value: "stocks:desc", label: "赛道数量" },
+            { value: "latest:desc", label: "最近更新" },
+            { value: "odds:desc", label: "20D 联动赔率" },
+            { value: "ticker:asc", label: "Ticker A-Z" },
+          ]}
+        />
+
+        <div class="registry-table-head"><span>股票节点</span><span>公司 / 角色 / 赛道</span><span>研究覆盖</span></div>
+        <section class="registry-list" id="stockRegistry">
+          {stocks.map((stock) => {
+            const surface = oddsIndexes.stocks.get(stock.ticker);
+            const line20d = oddsLine(surface, "20d");
+            const pHouse = Number(line20d?.pHouse);
+            const coverage = [stock.theses.length >= 10 ? "core" : "", stock.lanes.length >= 3 ? "multi" : "", String(stock.lastSeen) >= cutoff ? "fresh" : ""].filter(Boolean).join("|");
+            return (
+              <a
+                class="registry-row stock-row"
+                href={stock.href}
+                data-registry-item
+                data-search={searchText(stock.ticker, stock.name, stock.market, stock.roles, stock.role, stock.lanes.map((lane) => [lane.lane, lane.laneEn]), stock.theses.map((thesis) => thesis.title))}
+                data-market={stock.market || "Unknown"}
+                data-lane={stock.lanes.map((lane) => lane.id).join("|")}
+                data-coverage={coverage}
+                data-ticker={stock.ticker}
+                data-latest={stock.lastSeen || ""}
+                data-evidence={stock.evidenceCount || 0}
+                data-theses={stock.theses.length}
+                data-stocks={stock.lanes.length}
+                data-confidence={Number(stock.confidence || 0) * 100}
+                data-odds={Number.isFinite(pHouse) ? pHouse * 100 : -1}
+              >
+                <div class="registry-row-status">
+                  <span class="registry-row-label">{stock.market || "Market"}</span>
+                  <strong>{stock.ticker}</strong>
+                  <em>{stock.lastSeen}</em>
+                </div>
+                <div class="registry-row-main">
+                  <strong>{stock.name || stock.ticker}</strong>
+                  <p>{stock.roles?.slice(0, 3).join("；") || stock.role || "研究跟踪标的"}</p>
+                  <div class="registry-tags">
+                    {stock.lanes.slice(0, 6).map((lane) => <span>{lane.lane}</span>)}
+                  </div>
+                </div>
+                <div class="registry-row-metrics">
+                  <span><b>{stock.theses.length}</b>theses</span>
+                  <span><b>{stock.lanes.length}</b>lanes</span>
+                  <span><b>{stock.evidenceCount || 0}</b>evidence</span>
+                  <span><b>{stock.reportCount || 0}</b>reports</span>
+                  <span class="metric-positive"><b>{Math.round(Number(stock.confidence || 0) * 100)}%</b>mapping</span>
+                  <span class="metric-odds"><b>{probabilityLabel(line20d?.pHouse)}</b>20D linked</span>
+                </div>
+              </a>
+            );
+          })}
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

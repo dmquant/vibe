@@ -1,0 +1,134 @@
+---
+import BaseHead from "../../../components/BaseHead.astro";
+import Header from "../../../components/Header.astro";
+import RegistryControls from "../../../components/investor/RegistryControls.astro";
+import { readOddsBoard, readResearchNetwork } from "../../../lib/investor-generated.js";
+import { buildOddsIndexes, oddsLine, probabilityLabel, thesisPath } from "../../../lib/investor-market.js";
+import "../../../styles/market-registry.css";
+
+const network = readResearchNetwork();
+const oddsIndexes = buildOddsIndexes(readOddsBoard());
+const latestDate = network.stats?.dateRange?.last || "";
+const recentCutoff = latestDate ? new Date(`${latestDate}T00:00:00Z`) : new Date();
+recentCutoff.setUTCDate(recentCutoff.getUTCDate() - 6);
+const cutoff = recentCutoff.toISOString().slice(0, 10);
+const theses = [...(network.theses || [])].sort((a, b) =>
+  String(b.lastSeen || "").localeCompare(String(a.lastSeen || "")) ||
+  Number(b.practical?.score || b.conviction || 0) - Number(a.practical?.score || a.conviction || 0));
+const actionOptions = [...new Set(theses.map((item) => item.practical?.actionLabel).filter(Boolean))]
+  .sort((a, b) => a.localeCompare(b, "zh-CN"))
+  .map((value) => ({ value, label: value }));
+const laneOptions = [...new Map(theses.map((item) => [item.laneHref, { value: item.laneHref, label: item.lane }])).values()]
+  .filter((item) => item.value)
+  .sort((a, b) => a.label.localeCompare(b.label, "zh-CN"));
+const directionOptions = [...new Map(theses.map((item) => [item.direction, { value: item.direction, label: item.directionLabel || item.direction }])).values()]
+  .filter((item) => item.value);
+const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" ");
+---
+
+<!doctype html>
+<html lang="zh-CN" data-lang="zh">
+  <head>
+    <BaseHead title="投资主线 · AI Institute" description="AI Institute complete public thesis registry with timelines, lanes, stocks, evidence, odds, and falsifiers." />
+  </head>
+  <body>
+    <Header />
+    <main class="market-registry">
+      <section class="registry-hero">
+        <div class="registry-hero-copy">
+          <div class="registry-kicker">Market Map / Theses</div>
+          <h1>投资主线不是标题，是可更新、可证伪的判断。</h1>
+          <p>这里收录完整公开 thesis。每条主线连接所属赛道、对应股票、证据时间线、风险压力、赔率与失效条件；列表默认优先显示最近被研究结果改变的判断。</p>
+          <div class="registry-actions">
+            <a href="/investor/lanes/">浏览赛道</a>
+            <a href="/investor/stocks/">浏览股票</a>
+            <a href="/investor/signals/">查看最新信号</a>
+            <a href="/investor/research-network/">打开完整网络</a>
+          </div>
+        </div>
+        <aside class="registry-hero-meta">
+          <span>As of {latestDate}</span>
+          <strong>{network.stats?.stockMappedTheses || theses.length} 条主线已完成股票映射</strong>
+          <p>分数衡量研究强度与可执行性，不代表收益预测。影子赔率尚未使用市场价格校准。</p>
+        </aside>
+      </section>
+
+      <section class="registry-stat-strip" aria-label="Thesis coverage">
+        <div><span>Total theses</span><strong>{theses.length}</strong><em>完整公开主线</em></div>
+        <div><span>Updated 7D</span><strong>{theses.filter((item) => String(item.lastSeen) >= cutoff).length}</strong><em>最近七日有新增证据</em></div>
+        <div><span>Conflicting</span><strong>{theses.filter((item) => item.direction === "conflicting").length}</strong><em>支持与风险仍有分歧</em></div>
+        <div><span>Stock mapped</span><strong>{theses.filter((item) => (item.stockUniverse || []).length > 0).length}</strong><em>至少一个直接标的</em></div>
+      </section>
+
+      <div class="registry-body">
+        <div class="registry-note"><strong>How to read</strong><p>先看主线的动作与核心观点，再核对风险占比、20 日影子赔率和最近更新时间。点击任意整行进入时间线、来源报告和证伪条件。</p></div>
+        <RegistryControls
+          id="thesisRegistry"
+          total={theses.length}
+          placeholder="搜索主线、赛道、ticker、核心观点或证伪条件..."
+          filters={[
+            { key: "action", label: "Action", allLabel: "全部动作", options: actionOptions },
+            { key: "lane", label: "Lane", allLabel: "全部赛道", options: laneOptions },
+            { key: "direction", label: "State", allLabel: "全部状态", options: directionOptions },
+          ]}
+          sorts={[
+            { value: "latest:desc", label: "最近更新" },
+            { value: "score:desc", label: "研究分数" },
+            { value: "evidence:desc", label: "证据数量" },
+            { value: "odds:desc", label: "20D 影子赔率" },
+            { value: "risk:desc", label: "风险占比" },
+          ]}
+        />
+
+        <div class="registry-table-head"><span>状态</span><span>主线 / 赛道 / 股票</span><span>研究指标</span></div>
+        <section class="registry-list" id="thesisRegistry">
+          {theses.map((thesis) => {
+            const surface = oddsIndexes.theses.get(thesis.id);
+            const line20d = oddsLine(surface, "20d");
+            const score = Number(thesis.practical?.score || thesis.conviction || 0);
+            const riskPct = Math.round((Number(thesis.risks || 0) / Math.max(1, Number(thesis.eventCount || 0))) * 100);
+            const pHouse = Number(line20d?.pHouse);
+            return (
+              <a
+                class="registry-row thesis-row"
+                href={thesisPath(thesis)}
+                data-registry-item
+                data-search={searchText(thesis.title, thesis.titleEn, thesis.coreView, thesis.lane, thesis.stockTickers, thesis.practical?.invalidationSignals)}
+                data-action={thesis.practical?.actionLabel || ""}
+                data-lane={thesis.laneHref || ""}
+                data-direction={thesis.direction || ""}
+                data-latest={thesis.lastSeen || ""}
+                data-score={score}
+                data-evidence={thesis.eventCount || 0}
+                data-odds={Number.isFinite(pHouse) ? pHouse * 100 : -1}
+                data-risk={riskPct}
+              >
+                <div class="registry-row-status">
+                  <span class="registry-row-label">{thesis.directionLabel || thesis.direction}</span>
+                  <strong>{thesis.practical?.actionLabel || "观察等待"}</strong>
+                  <em>{thesis.lastSeen}</em>
+                </div>
+                <div class="registry-row-main">
+                  <strong>{thesis.title}</strong>
+                  <p>{thesis.coreView}</p>
+                  <div class="registry-tags">
+                    <span>{thesis.lane}</span>
+                    {(thesis.stockUniverse || []).slice(0, 6).map((stock) => <span class="stock-tag">{stock.ticker}</span>)}
+                  </div>
+                </div>
+                <div class="registry-row-metrics">
+                  <span><b>{score}</b>score</span>
+                  <span><b>{thesis.eventCount || 0}</b>evidence</span>
+                  <span class="metric-risk"><b>{riskPct}%</b>risk share</span>
+                  <span class="metric-odds"><b>{probabilityLabel(line20d?.pHouse)}</b>20D house</span>
+                  <span><b>{thesis.supports || 0}</b>support</span>
+                  <span><b>{(thesis.stockUniverse || []).length}</b>stocks</span>
+                </div>
+              </a>
+            );
+          })}
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

@@ -4,7 +4,7 @@
   "dayNumber": 23,
   "status": "recorded",
   "headline": "风险审计：AI 推理毛利中的能源尾部风险",
-  "summary": "当日归档 129 份公开研究，16 条研究讨论和 50 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
+  "summary": "当日归档 129 份公开研究，16 条研究讨论和 63 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
   "dominantTopic": {
     "id": "macro-rates",
     "labelZh": "宏观、通胀与利率",
@@ -29,8 +29,8 @@
     "reports": 129,
     "researchThreads": 16,
     "researchNotes": 128,
-    "thesisEvents": 50,
-    "personaEvents": 2,
+    "thesisEvents": 63,
+    "personaEvents": 4,
     "readerMemos": 0,
     "recaps": 0,
     "deepResearch": 0
@@ -2421,7 +2421,7 @@
       "directionLabel": "分歧",
       "conviction": 53,
       "supports": 1,
-      "risks": 5,
+      "risks": 6,
       "neutral": 0,
       "eventCount": 4,
       "events": [
@@ -2429,6 +2429,13 @@
           "title": "全球宏观的反驳：为何\"AI 原生金融\"并不会机械地把网点银行估值下调",
           "summary": "板块：[source-id-redacted] ｜ 研究记录 - 工作日期：2026-05-14（Asia/Singapore） - 分析师：全球宏观分析师（global-macro） - 立场： deny （反驳 research note 金融行业...",
           "href": "/investor/reports/archive-15981411dbb9/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        },
+        {
+          "title": "地方 AIDC 需求不达预期后的城投债信用传导与发行人筛选",
+          "summary": "板块：信用 / 城投 / 数字 LGFV - 分析师：信用分析师（credit-analyst） - 立场：stress-test（压力测试 既有研究记录既有研究记录的尾部叙事） - 工作日期：2026-05-14（As...",
+          "href": "/investor/reports/archive-4ce2f09b0de6/",
           "stance": "risk",
           "stanceLabel": "风险"
         },
@@ -2445,13 +2452,6 @@
           "href": "/investor/reports/archive-0c6902a3db1e/",
           "stance": "risk",
           "stanceLabel": "风险"
-        },
-        {
-          "title": "2026-05-14 策略研究记录 01：利率何时打破美股贪婪？",
-          "summary": "截至研究所工作日 2026-05-14，我不认为美股已经充分定价硬着陆。当前价格更像是在押注一个流动性仍在、名义增长仍可支撑盈利的环境：通胀麻烦已经被承认，但尚未被市场转译为盈利下修、违约风...",
-          "href": "/investor/reports/archive-d85326927c94/",
-          "stance": "supports",
-          "stanceLabel": "支持"
         }
       ],
       "stockTickers": [
@@ -2475,7 +2475,7 @@
       "laneHref": "/investor/lanes/ai-power-and-grid-equipment/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 51,
+      "conviction": 52,
       "supports": 1,
       "risks": 4,
       "neutral": 0,
@@ -2511,125 +2511,173 @@
         }
       ],
       "stockTickers": [
-        "GEV",
         "ETN",
+        "GEV",
+        "600089.SH",
         "VST",
         "CEG",
-        "META",
-        "600089.SH",
         "002028.SZ",
-        "MSFT",
+        "META",
+        "601179.SH",
         "AMZN",
-        "601179.SH"
+        "MSFT"
       ]
     },
     {
-      "id": "thesis-026aa1679b",
-      "title": "云厂商自发电正在把 AI 交付风险转移到核电、燃气、电网与公用事业信用",
-      "titleEn": "Cloud self-generation is shifting AI delivery risk into nuclear, gas, grid assets, and utility credit",
-      "href": "/investor/theses/thesis-026aa1679b/",
-      "laneId": "lane_136dd1c3c708",
-      "lane": "云厂商自发电/电力资产",
-      "laneHref": "/investor/lanes/cloud-self-generation-and-power-assets/",
+      "id": "thesis-21dd72c1b1",
+      "title": "航空航天与国防供应链错配正在形成政策驱动的制造业弹性",
+      "titleEn": "Aerospace and defense supply-chain mismatch is creating policy-driven manufacturing beta",
+      "href": "/investor/theses/thesis-21dd72c1b1/",
+      "laneId": "lane_1514a60f727a",
+      "lane": "国防航空航天供应链",
+      "laneHref": "/investor/lanes/defense-and-aerospace-supply-chain/",
       "direction": "conflicting",
       "directionLabel": "分歧",
       "conviction": 51,
-      "supports": 2,
-      "risks": 4,
+      "supports": 1,
+      "risks": 3,
       "neutral": 0,
       "eventCount": 4,
       "events": [
         {
-          "title": "债券分析师：核电 IPP A+C 联合尾部的利率 + 信用对冲",
-          "summary": "日期：2026-05-14（亚洲/新加坡） - 分析师：bond-analyst（specialist） - 立场：stress-test（对研究记录 对冲处方的压力测试） - 待对冲头寸：4.0 风险单位核电 IPP（基准名：CEG、VST、TLN...",
-          "href": "/investor/reports/archive-979e3d491764/",
+          "title": "压力测试：在Tier-2/3供应商流动性失效下，OEM \"订单锁定\" 究竟能挡多少",
+          "summary": "压力测试：在Tier-2/3供应商流动性失效下，OEM \"订单锁定\" 究竟能挡多少",
+          "href": "/investor/reports/archive-a9086f6b271e/",
           "stance": "risk",
           "stanceLabel": "风险"
         },
         {
-          "title": "电网重估：美国IPP与电力设备商的远期利润弹性与估值天花板",
-          "summary": "分析日期：2026年7月8日（Asia/Singapore） 报告编号：research discussion/52b3be77-119c-4448-8c2e-bd7009f8e3a1/research note 分析师：公用事业分析师（ utilities-analyst ） 立场： 综合...",
-          "href": "/investor/reports/archive-7637405c46a4/",
+          "title": "DPA Title III与TFL下的“外科手术式兜底”：流动性压力中的筛选与出清",
+          "summary": "DPA Title III与TFL下的“外科手术式兜底”：流动性压力中的筛选与出清 日期： 2026-05-14 分析师： 政策分析师 [specialist]",
+          "href": "/investor/reports/archive-2958fbebfe88/",
           "stance": "risk",
           "stanceLabel": "风险"
         },
         {
-          "title": "TMT行业研究报告：电力与并网压力下云厂商AI算力扩张逻辑演变 (2026-05-14)",
-          "summary": "TMT行业研究报告：电力与并网压力下云厂商AI算力扩张逻辑演变 (2026-05-14)",
-          "href": "/investor/reports/archive-786405fda222/",
+          "title": "工业制造视角的反驳：风险平价\"三重挤压\"框架误估了订单驱动的实体经济",
+          "summary": "工业制造视角的反驳：风险平价\"三重挤压\"框架误估了订单驱动的实体经济 日期： 2026-05-14 分析师： industrials-analyst 立场： deny（否定） 主题： 从先进制造、国防、航空航天视角，反驳研...",
+          "href": "/investor/reports/archive-7c7595bd73ce/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        },
+        {
+          "title": "全球宏观分析师 · 协同回函",
+          "summary": "接收方：主题研究员（analyst:thematic-researcher，run [source-id-redacted]） - 回函日期：2026-05-16 - 题目：VanEck WARP ETF 的发行是否会触发被动资金对商业航天中上游...",
+          "href": "/investor/reports/archive-a3a42aebe041/",
           "stance": "supports",
           "stanceLabel": "支持"
+        }
+      ],
+      "stockTickers": [
+        "LMT",
+        "RTX",
+        "RKLB",
+        "NOC",
+        "IRDM",
+        "ASTS",
+        "BA",
+        "HWM",
+        "GD"
+      ]
+    },
+    {
+      "id": "thesis-741d1d6f34",
+      "title": "地产、土地财政与 REITs 是中国信用底的慢变量",
+      "titleEn": "Property, land finance, and REITs are the slow variables behind China's credit floor",
+      "href": "/investor/theses/thesis-741d1d6f34/",
+      "laneId": "lane_5c8ea9f78210",
+      "lane": "地产信用底/REITs",
+      "laneHref": "/investor/lanes/china-property-credit-floor-and-reits/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 65,
+      "supports": 0,
+      "risks": 3,
+      "neutral": 0,
+      "eventCount": 3,
+      "events": [
+        {
+          "title": "研究报告：“质量牛”的版图扩张——房地产结构性转轨与“优质价值”轮动分析",
+          "summary": "研究报告：“质量牛”的版图扩张——房地产结构性转轨与“优质价值”轮动分析 日期： 2026-05-14 分析师： 房地产分析师（楼市销售、土地拍卖、政策研究、REITs）",
+          "href": "/investor/reports/archive-2ab2530e9f47/",
+          "stance": "risk",
+          "stanceLabel": "风险"
         },
         {
-          "title": "压力测试：电网是否构成 AI 算力的硬性天花板",
-          "summary": "· 终结卡 - 分析师：TMT 行业分析师 - 日期（亚洲/新加坡）：2026-05-14 - 立场：stress-test（压力测试） - 问题：面对下一代 AI 芯片（NVIDIA Blackwell 及之后）极高的 TDP 需求，当前 2028...",
-          "href": "/investor/reports/archive-3e43956feb2d/",
+          "title": "数字 LGFV 违约窗口下的债券曲线执行方案",
+          "summary": "分析师：债券分析师（bond-analyst） - 立场：synthesize - 工作日期：2026-05-14（Asia/Singapore） - 研究记录 - 研究主题：数字 LGFV：算力基建下的隐形债务陷阱",
+          "href": "/investor/reports/archive-58b4f77d8157/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        },
+        {
+          "title": "地方 AIDC 需求不达预期后的城投债信用传导与发行人筛选",
+          "summary": "板块：信用 / 城投 / 数字 LGFV - 分析师：信用分析师（credit-analyst） - 立场：stress-test（压力测试 既有研究记录既有研究记录的尾部叙事） - 工作日期：2026-05-14（As...",
+          "href": "/investor/reports/archive-4ce2f09b0de6/",
           "stance": "risk",
           "stanceLabel": "风险"
         }
       ],
       "stockTickers": [
-        "VST",
-        "CEG",
-        "GEV",
-        "META",
-        "MSFT",
-        "AMZN",
-        "ETN",
-        "AEP",
-        "NVDA",
-        "DUK"
+        "001979.SZ",
+        "1109.HK",
+        "600048.SH",
+        "0960.HK",
+        "000002.SZ",
+        "0688.HK",
+        "600900.SH",
+        "0823.HK"
       ]
     },
     {
-      "id": "thesis-603a5f7966",
-      "title": "A 股硬科技与科创50的复苏需要订单、融资盘和指数结构共振",
-      "titleEn": "A-share hard tech and STAR50 recovery needs orders, margin positioning, and index structure to align",
-      "href": "/investor/theses/thesis-603a5f7966/",
-      "laneId": "lane_4cc1e74d8e5f",
-      "lane": "A股硬科技/科创50",
-      "laneHref": "/investor/lanes/a-share-hard-tech-and-star50/",
+      "id": "thesis-31f32af77b",
+      "title": "中国云与国产算力栈的关键不是模型热度，而是训练/推理订单、服务器交付和生态锁定",
+      "titleEn": "China cloud and local compute stacks depend less on model hype than training/inference orders, server delivery, and e...",
+      "href": "/investor/theses/thesis-31f32af77b/",
+      "laneId": "lane_2997650d0638",
+      "lane": "中国云/国产算力栈",
+      "laneHref": "/investor/lanes/china-cloud-and-local-compute-stack/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 62,
-      "supports": 1,
+      "conviction": 65,
+      "supports": 2,
       "risks": 1,
-      "neutral": 1,
+      "neutral": 0,
       "eventCount": 3,
       "events": [
         {
-          "title": "前序研究研究报告 - A 股市场结构验证，2026-05-19",
-          "summary": "截至研究院工作日期 2026-05-19，我支持前序研究的核心判断：A 股盘面已经开始从“叙事溢价”转向“确定性溢价”，但证据指向的是哑铃化，而不是全面价值回归。左端是红利、低波、大盘确定性...",
-          "href": "/investor/reports/archive-1e153c72b50c/",
+          "title": "国产算力范式转移下的A股风格轮动与配置优先级",
+          "summary": "作者：首席策略师 (chief-strategist) - 日期：2026-05-14（亚洲/新加坡） - 研究记录 · 立场：support（承接 TMT 分析师 既有研究记录的\"性能驱动\"判断） - 根主题：DeepSeek V4 对国...",
+          "href": "/investor/reports/archive-fd1335f569b8/",
           "stance": "supports",
           "stanceLabel": "支持"
         },
         {
-          "title": "前序研究研究报告 - A 股市场结构验证，2026-05-19",
-          "summary": "前序研究研究报告 - A 股市场结构验证，2026-05-19 截至研究院工作日期 2026-05-19，我支持前序研究的核心判断：A 股盘面已经开始从“叙事溢价”转向“确定性溢价”，但证据指向的是哑铃化，而不是全面价值回归。左端是红利、低波、大盘确定性；右端仍是窄口径 AI 基础设施和硬科技，只…",
-          "href": "/investor/reports/archive-df2d94df829a/",
-          "stance": "neutral",
-          "stanceLabel": "观察"
+          "title": "国产算力范式转移的金融板块映射 — 综合判断",
+          "summary": "工作日期：2026-05-14（亚洲/新加坡） - 板块：金融行业分析师（银行、保险、券商、金融科技） - 立场：synthesize（综合 既有研究记录 主线，给出金融板块的传导与定价） - 研究记录",
+          "href": "/investor/reports/archive-21a2ba106192/",
+          "stance": "supports",
+          "stanceLabel": "支持"
         },
         {
-          "title": "A股市场结构验证：本轮“核心化”切换是否有真实资金支撑？",
-          "summary": "日期: 2026-05-14 分析师: ashare-strategist (A股策略师) 立场: 压力测试 / 证据支持",
-          "href": "/investor/reports/archive-f6de2703c5a0/",
+          "title": "国产算力范式转移与金融板块再定价后的跨资产配置含义",
+          "summary": "研究记录 — 大类资产配置师（synthesize） - 工作日期：2026-05-14（Asia/Singapore） - 总主题：DeepSeek V4 对国产算力叙事的范式转移 - 本报告聚焦：股债比例、信用利差、风险平价杠杆——...",
+          "href": "/investor/reports/archive-f3de7db3d41c/",
           "stance": "risk",
           "stanceLabel": "风险"
         }
       ],
       "stockTickers": [
         "688256.SH",
+        "688041.SH",
+        "601138.SH",
         "300308.SZ",
         "688981.SH",
+        "NVDA",
         "0981.HK",
-        "688041.SH",
-        "600900.SH",
-        "588000.SH",
-        "300394.SZ",
-        "688008.SH",
-        "300502.SZ"
+        "000977.SZ",
+        "9988.HK",
+        "0700.HK"
       ]
     },
     {
@@ -2673,63 +2721,105 @@
       "stockTickers": [
         "002028.SZ",
         "600089.SH",
-        "ETN",
         "601179.SH",
+        "ETN",
         "GEV",
-        "688676.SH",
         "002270.SZ",
+        "688676.SH",
         "ABBNY",
         "601126.SH"
       ]
     },
     {
-      "id": "thesis-21dd72c1b1",
-      "title": "航空航天与国防供应链错配正在形成政策驱动的制造业弹性",
-      "titleEn": "Aerospace and defense supply-chain mismatch is creating policy-driven manufacturing beta",
-      "href": "/investor/theses/thesis-21dd72c1b1/",
-      "laneId": "lane_1514a60f727a",
-      "lane": "国防航空航天供应链",
-      "laneHref": "/investor/lanes/defense-and-aerospace-supply-chain/",
+      "id": "thesis-026aa1679b",
+      "title": "云厂商自发电正在把 AI 交付风险转移到核电、燃气、电网与公用事业信用",
+      "titleEn": "Cloud self-generation is shifting AI delivery risk into nuclear, gas, grid assets, and utility credit",
+      "href": "/investor/theses/thesis-026aa1679b/",
+      "laneId": "lane_136dd1c3c708",
+      "lane": "云厂商自发电/电力资产",
+      "laneHref": "/investor/lanes/cloud-self-generation-and-power-assets/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 49,
-      "supports": 0,
-      "risks": 3,
+      "conviction": 51,
+      "supports": 1,
+      "risks": 2,
       "neutral": 0,
       "eventCount": 3,
       "events": [
         {
-          "title": "压力测试：在Tier-2/3供应商流动性失效下，OEM \"订单锁定\" 究竟能挡多少",
-          "summary": "压力测试：在Tier-2/3供应商流动性失效下，OEM \"订单锁定\" 究竟能挡多少",
-          "href": "/investor/reports/archive-a9086f6b271e/",
+          "title": "债券分析师：核电 IPP A+C 联合尾部的利率 + 信用对冲",
+          "summary": "日期：2026-05-14（亚洲/新加坡） - 分析师：bond-analyst（specialist） - 立场：stress-test（对研究记录 对冲处方的压力测试） - 待对冲头寸：4.0 风险单位核电 IPP（基准名：CEG、VST、TLN...",
+          "href": "/investor/reports/archive-979e3d491764/",
           "stance": "risk",
           "stanceLabel": "风险"
         },
         {
-          "title": "DPA Title III与TFL下的“外科手术式兜底”：流动性压力中的筛选与出清",
-          "summary": "DPA Title III与TFL下的“外科手术式兜底”：流动性压力中的筛选与出清 日期： 2026-05-14 分析师： 政策分析师 [specialist]",
-          "href": "/investor/reports/archive-2958fbebfe88/",
+          "title": "压力测试：电网是否构成 AI 算力的硬性天花板",
+          "summary": "· 终结卡 - 分析师：TMT 行业分析师 - 日期（亚洲/新加坡）：2026-05-14 - 立场：stress-test（压力测试） - 问题：面对下一代 AI 芯片（NVIDIA Blackwell 及之后）极高的 TDP 需求，当前 2028...",
+          "href": "/investor/reports/archive-3e43956feb2d/",
           "stance": "risk",
           "stanceLabel": "风险"
         },
         {
-          "title": "工业制造视角的反驳：风险平价\"三重挤压\"框架误估了订单驱动的实体经济",
-          "summary": "工业制造视角的反驳：风险平价\"三重挤压\"框架误估了订单驱动的实体经济 日期： 2026-05-14 分析师： industrials-analyst 立场： deny（否定） 主题： 从先进制造、国防、航空航天视角，反驳研...",
-          "href": "/investor/reports/archive-7c7595bd73ce/",
+          "title": "2026-05-14 - 资产配置报告：受规制公用事业与核电容量资产的再平衡",
+          "summary": "2026-05-14 - 资产配置报告：受规制公用事业与核电容量资产的再平衡",
+          "href": "/investor/reports/archive-e4efb5b34e97/",
+          "stance": "supports",
+          "stanceLabel": "支持"
+        }
+      ],
+      "stockTickers": [
+        "VST",
+        "CEG",
+        "GEV",
+        "SMR",
+        "META",
+        "MSFT",
+        "ETN",
+        "AMZN",
+        "AEP",
+        "NVDA"
+      ]
+    },
+    {
+      "id": "thesis-b13c7cf092",
+      "title": "高纯石英材料受益于先进封装扩产，但兑现取决于认证与产品结构",
+      "titleEn": "High-purity quartz can benefit from advanced-packaging expansion, conditional on qualification and mix",
+      "href": "/investor/theses/thesis-b13c7cf092/",
+      "laneId": "lane_f1a271385aff",
+      "lane": "先进封装/HBM4 闸门",
+      "laneHref": "/investor/lanes/advanced-packaging-and-hbm4-gate/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 70,
+      "supports": 0,
+      "risks": 2,
+      "neutral": 0,
+      "eventCount": 2,
+      "events": [
+        {
+          "title": "“材技一体化”下半导体设计逻辑的压力测试",
+          "summary": "日期（机构工作日）： 2026-05-14 （亚洲/新加坡） - 分析师：TMT行业分析师（primary） - - 根主题：芯片外交与地缘科技估值重构 - 主题：半导体设计逻辑的压力测试——轻资产IP/设计...",
+          "href": "/investor/reports/archive-a1eda201c0de/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        },
+        {
+          "title": "真实利率对 AI 与半导体估值乘数的压力测试",
+          "summary": "研究记录 - 分析师：TMT 行业分析师 (tmt-analyst) - 立场：stress-test（压力测试） - 工作日期： 2026-05-14 （新加坡时间） - 备注：会话简报中引用的前序研究工作区文件在本工作目录中不存...",
+          "href": "/investor/reports/archive-5767bd4497f1/",
           "stance": "risk",
           "stanceLabel": "风险"
         }
       ],
       "stockTickers": [
-        "LMT",
-        "RTX",
-        "RKLB",
-        "NOC",
-        "IRDM",
-        "ASTS",
-        "BA",
-        "HWM",
-        "GD"
+        "TSM",
+        "NVDA",
+        "MU",
+        "000660.KS",
+        "ASML",
+        "002916.SZ",
+        "300395.SZ"
       ]
     },
     {
@@ -2774,50 +2864,6 @@
       ]
     },
     {
-      "id": "thesis-31f32af77b",
-      "title": "中国云与国产算力栈的关键不是模型热度，而是训练/推理订单、服务器交付和生态锁定",
-      "titleEn": "China cloud and local compute stacks depend less on model hype than training/inference orders, server delivery, and e...",
-      "href": "/investor/theses/thesis-31f32af77b/",
-      "laneId": "lane_2997650d0638",
-      "lane": "中国云/国产算力栈",
-      "laneHref": "/investor/lanes/china-cloud-and-local-compute-stack/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 65,
-      "supports": 2,
-      "risks": 0,
-      "neutral": 0,
-      "eventCount": 2,
-      "events": [
-        {
-          "title": "国产算力范式转移下的A股风格轮动与配置优先级",
-          "summary": "作者：首席策略师 (chief-strategist) - 日期：2026-05-14（亚洲/新加坡） - 研究记录 · 立场：support（承接 TMT 分析师 既有研究记录的\"性能驱动\"判断） - 根主题：DeepSeek V4 对国...",
-          "href": "/investor/reports/archive-fd1335f569b8/",
-          "stance": "supports",
-          "stanceLabel": "支持"
-        },
-        {
-          "title": "国产算力范式转移的金融板块映射 — 综合判断",
-          "summary": "工作日期：2026-05-14（亚洲/新加坡） - 板块：金融行业分析师（银行、保险、券商、金融科技） - 立场：synthesize（综合 既有研究记录 主线，给出金融板块的传导与定价） - 研究记录",
-          "href": "/investor/reports/archive-21a2ba106192/",
-          "stance": "supports",
-          "stanceLabel": "支持"
-        }
-      ],
-      "stockTickers": [
-        "688256.SH",
-        "688041.SH",
-        "601138.SH",
-        "300308.SZ",
-        "688981.SH",
-        "0981.HK",
-        "NVDA",
-        "000977.SZ",
-        "9988.HK",
-        "0700.HK"
-      ]
-    },
-    {
       "id": "thesis-fd31cc177b",
       "title": "债券供给、地方债与久期需求决定利率下行空间",
       "titleEn": "Bond supply, local-government debt, and duration demand define room for rates to fall",
@@ -2827,7 +2873,7 @@
       "laneHref": "/investor/lanes/bond-supply-and-bank-duration/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 64,
+      "conviction": 65,
       "supports": 0,
       "risks": 2,
       "neutral": 0,
@@ -2841,9 +2887,9 @@
           "stanceLabel": "风险"
         },
         {
-          "title": "名义通胀、真实利率与对冲驱动支撑的天花板",
-          "summary": "分析师：首席经济学家 - 日期：2026-05-14（新加坡时区） - 立场： 支持 （延伸研究记录 01 的\"脏上涨\"判断） - 研究记录",
-          "href": "/investor/reports/archive-4d8dc492f93b/",
+          "title": "2027–2028 年数字 LGFV 违约窗口对中国财政政策走向及宏观经济增速的影响分析",
+          "summary": "2027–2028 年数字 LGFV 违约窗口对中国财政政策走向及宏观经济增速的影响分析",
+          "href": "/investor/reports/archive-50db4d2322ec/",
           "stance": "risk",
           "stanceLabel": "风险"
         }
@@ -2857,6 +2903,135 @@
         "IEF",
         "TLT",
         "000001.SZ"
+      ]
+    },
+    {
+      "id": "thesis-603a5f7966",
+      "title": "A 股硬科技与科创50的复苏需要订单、融资盘和指数结构共振",
+      "titleEn": "A-share hard tech and STAR50 recovery needs orders, margin positioning, and index structure to align",
+      "href": "/investor/theses/thesis-603a5f7966/",
+      "laneId": "lane_4cc1e74d8e5f",
+      "lane": "A股硬科技/科创50",
+      "laneHref": "/investor/lanes/a-share-hard-tech-and-star50/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 61,
+      "supports": 1,
+      "risks": 0,
+      "neutral": 1,
+      "eventCount": 2,
+      "events": [
+        {
+          "title": "前序研究研究报告 - A 股市场结构验证，2026-05-19",
+          "summary": "截至研究院工作日期 2026-05-19，我支持前序研究的核心判断：A 股盘面已经开始从“叙事溢价”转向“确定性溢价”，但证据指向的是哑铃化，而不是全面价值回归。左端是红利、低波、大盘确定性...",
+          "href": "/investor/reports/archive-1e153c72b50c/",
+          "stance": "supports",
+          "stanceLabel": "支持"
+        },
+        {
+          "title": "前序研究研究报告 - A 股市场结构验证，2026-05-19",
+          "summary": "前序研究研究报告 - A 股市场结构验证，2026-05-19 截至研究院工作日期 2026-05-19，我支持前序研究的核心判断：A 股盘面已经开始从“叙事溢价”转向“确定性溢价”，但证据指向的是哑铃化，而不是全面价值回归。左端是红利、低波、大盘确定性；右端仍是窄口径 AI 基础设施和硬科技，只…",
+          "href": "/investor/reports/archive-df2d94df829a/",
+          "stance": "neutral",
+          "stanceLabel": "观察"
+        }
+      ],
+      "stockTickers": [
+        "300308.SZ",
+        "688256.SH",
+        "688981.SH",
+        "688041.SH",
+        "0981.HK",
+        "600900.SH",
+        "NVDA",
+        "300394.SZ",
+        "688008.SH",
+        "300502.SZ"
+      ]
+    },
+    {
+      "id": "thesis-a803fa3312",
+      "title": "美联储路径仍是全球资产再定价的总阀门",
+      "titleEn": "The Fed path remains the master valve for global asset repricing",
+      "href": "/investor/theses/thesis-a803fa3312/",
+      "laneId": "lane_1c216bd29875",
+      "lane": "美债利率/美元再定价",
+      "laneHref": "/investor/lanes/us-rates-and-dollar-repricing/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 59,
+      "supports": 1,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 2,
+      "events": [
+        {
+          "title": "2026-05-14 FX 压力测试：DXY、EUR、JPY、CNY、EM FX 与美国进口通胀通道",
+          "summary": "2026-05-14 FX 压力测试：DXY、EUR、JPY、CNY、EM FX 与美国进口通胀通道",
+          "href": "/investor/reports/archive-76c4a03a1866/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        },
+        {
+          "title": "2026-05-14 全球宏观研究记录 02：CPI/PPI 后 Fed 反应函数与美债曲线再定价",
+          "summary": "2026-05-14 全球宏观研究记录 02：CPI/PPI 后 Fed 反应函数与美债曲线再定价",
+          "href": "/investor/reports/archive-533a2a624ab2/",
+          "stance": "supports",
+          "stanceLabel": "支持"
+        }
+      ],
+      "stockTickers": [
+        "CME",
+        "TLT",
+        "GLD",
+        "JPM",
+        "KRE",
+        "IEF",
+        "META",
+        "UUP"
+      ]
+    },
+    {
+      "id": "thesis-7f0a75c5f6",
+      "title": "数据中心地产、液冷与水资源正在决定 AI 容量的区域迁移",
+      "titleEn": "Data-center real estate, liquid cooling, and water resources are deciding regional migration of AI capacity",
+      "href": "/investor/theses/thesis-7f0a75c5f6/",
+      "laneId": "lane_0679894fe06b",
+      "lane": "数据中心地产/液冷",
+      "laneHref": "/investor/lanes/data-center-real-estate-and-cooling/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 57,
+      "supports": 0,
+      "risks": 2,
+      "neutral": 0,
+      "eventCount": 2,
+      "events": [
+        {
+          "title": "AIDC 需求侧承接压力测试 — 2026-05-14",
+          "summary": "研究记录 分析师：tmt-analyst（TMT 行业分析师） - 工作日期：2026-05-14（Asia/Singapore） - 立场：stress-test - 问题：超大规模厂商资本开支与 AI 推理需求，能否消化约 220 万架地方主导...",
+          "href": "/investor/reports/archive-08925dafe80f/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        },
+        {
+          "title": "AI 基础设施风险报告：‘农业-社会’瓶颈的压力测试",
+          "summary": "AI 基础设施风险报告：‘农业-社会’瓶颈的压力测试 日期： 2026-05-14 分析师： [primary] chief-risk 首席风控官 主题： 社会/农业立法压力下 AI 基础设施的 VaR 与回撤分析",
+          "href": "/investor/reports/archive-16e2e82bd75d/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "VRT",
+        "NVDA",
+        "ETN",
+        "META",
+        "MSFT",
+        "GEV",
+        "DLR",
+        "EQIX",
+        "SMR"
       ]
     },
     {
@@ -2876,31 +3051,65 @@
       "eventCount": 2,
       "events": [
         {
-          "title": "政策研究报告：新型电力系统与算力电力 CapEx 监管管道 (2026-2028)",
-          "summary": "政策研究报告：新型电力系统与算力电力 CapEx 监管管道 (2026-2028) 研究所工作日期： 2026-05-14 分析师： 政策分析师 [specialist] 状态： 综合分析 (Synthesized)",
-          "href": "/investor/reports/archive-b9d40f443b6f/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        },
-        {
           "title": "电力负荷升级与能源转型：支撑算力与电气化基础设施的供给侧逻辑",
           "summary": "研究记录 - 分析师：能源行业分析师 - 立场：support（支持） - 工作日期：2026-05-14（亚洲/新加坡） - 根主题：全球消费结构性转型——服务化 vs. 降级化 - 主题：电力负荷升级与能源转型——...",
           "href": "/investor/reports/archive-5e1d5bf81709/",
           "stance": "risk",
           "stanceLabel": "风险"
+        },
+        {
+          "title": "政策研究报告：新型电力系统与算力电力 CapEx 监管管道 (2026-2028)",
+          "summary": "政策研究报告：新型电力系统与算力电力 CapEx 监管管道 (2026-2028) 研究所工作日期： 2026-05-14 分析师： 政策分析师 [specialist] 状态： 综合分析 (Synthesized)",
+          "href": "/investor/reports/archive-b9d40f443b6f/",
+          "stance": "risk",
+          "stanceLabel": "风险"
         }
       ],
       "stockTickers": [
+        "SMR",
         "300750.SZ",
-        "300274.SZ",
         "600900.SH",
+        "300274.SZ",
         "002028.SZ",
         "GEV",
-        "600089.SH",
-        "601179.SH",
         "002594.SZ",
-        "CEG",
-        "MSFT"
+        "MSFT",
+        "600089.SH",
+        "CEG"
+      ]
+    },
+    {
+      "id": "thesis-2a12467f9b",
+      "title": "卫星电源壁垒需由发射节奏和单星价值量持续验证",
+      "titleEn": "Satellite-power barriers require continued validation through launch cadence and content per spacecraft",
+      "href": "/investor/theses/thesis-2a12467f9b/",
+      "laneId": "lane_54700cb9537f",
+      "lane": "商业航天/卫星直连",
+      "laneHref": "/investor/lanes/commercial-space-and-direct-to-device-satellite/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 75,
+      "supports": 1,
+      "risks": 0,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "全球宏观分析师 · 协同回函",
+          "summary": "接收方：主题研究员（analyst:thematic-researcher，run [source-id-redacted]） - 回函日期：2026-05-16 - 题目：VanEck WARP ETF 的发行是否会触发被动资金对商业航天中上游...",
+          "href": "/investor/reports/archive-a3a42aebe041/",
+          "stance": "supports",
+          "stanceLabel": "支持"
+        }
+      ],
+      "stockTickers": [
+        "RKLB",
+        "ASTS",
+        "600118.SH",
+        "IRDM",
+        "RDW",
+        "LUNR",
+        "LMT"
       ]
     },
     {
@@ -2929,44 +3138,14 @@
       ],
       "stockTickers": [
         "BABA",
-        "MSFT",
         "CRM",
         "BIDU",
+        "MSFT",
         "9988.HK",
         "NOW",
         "NVDA",
         "0700.HK",
         "9888.HK"
-      ]
-    },
-    {
-      "id": "thesis-1c9177efea",
-      "title": "日元兑美元突破162.052，若日本官方实施抛售美债进行实际干预，是否会推动10Y美债收益率（当前4.49%）飙升？如何传导并冲击全球高…",
-      "titleEn": "Practical research topic: 日元兑美元突破162.052，若日本官方实施抛售美债进行实际干预，是否会推动10Y美债收益率（当前4.49%）飙升？如何传导并冲击全球高…",
-      "href": "/investor/theses/thesis-1c9177efea/",
-      "laneId": "lane_1c216bd29875",
-      "lane": "美债利率/美元再定价",
-      "laneHref": "/investor/lanes/us-rates-and-dollar-repricing/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 72,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "2026-05-14 债券分析师研究记录 03：美债收益率曲线动态与 HY OAS 信用传导",
-          "summary": "2026-05-14 债券分析师研究记录 03：美债收益率曲线动态与 HY OAS 信用传导",
-          "href": "/investor/reports/archive-0c6902a3db1e/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "JPM",
-        "TLT",
-        "IEF"
       ]
     },
     {
@@ -3000,8 +3179,8 @@
         "AMZN",
         "GOOGL",
         "TSM",
-        "AVGO",
         "AMD",
+        "AVGO",
         "AAPL"
       ]
     },
@@ -3015,7 +3194,7 @@
       "laneHref": "/investor/lanes/options-gamma-and-market-microstructure/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 70,
+      "conviction": 71,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -3040,25 +3219,58 @@
       ]
     },
     {
-      "id": "thesis-d7fd11d0d0",
-      "title": "TeraWulf-Anthropic的20年约9bn租约是否标志AI capex第二波主线，还是市场把前矿企和数据中心电力资产误当同…",
-      "titleEn": "Practical research topic: TeraWulf-Anthropic的20年约9bn租约是否标志AI capex第二波主线，还是市场把前矿企和数据中心电力资产误当同…",
-      "href": "/investor/theses/thesis-d7fd11d0d0/",
+      "id": "thesis-ce2bffa691",
+      "title": "DeepSeek V4 的算法优化是否预示着算力暴力美学的终结，从而导致 GPU 溢价的系统性回归？",
+      "titleEn": "Practical research topic: DeepSeek V4 的算法优化是否预示着算力暴力美学的终结，从而导致 GPU 溢价的系统性回归？",
+      "href": "/investor/theses/thesis-ce2bffa691/",
+      "laneId": "lane_f44cf45c8649",
+      "lane": "AI 算力半导体",
+      "laneHref": "/investor/lanes/ai-compute-semiconductors/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 70,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "TMT行业研究：DeepSeek V4引发的范式转移",
+          "summary": "TMT行业研究：DeepSeek V4引发的范式转移 日期： 2026-05-14 分析师： TMT行业分析师 主题： 国产算力：从“安全替代”到“性能驱动”的逻辑演进",
+          "href": "/investor/reports/archive-eab68ad933a7/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "NVDA",
+        "META",
+        "TSM",
+        "AMD",
+        "AVGO",
+        "000660.KS"
+      ]
+    },
+    {
+      "id": "thesis-c4885bb6a7",
+      "title": "一线城市并网容量物理瓶颈与绿电指标缺口，正倒逼下半年算力资本开支由GPU采购向电力基建分流，放缓硬件落地节奏并加速算力集群外溢西迁。",
+      "titleEn": "Practical research topic: 一线城市并网容量物理瓶颈与绿电指标缺口，正倒逼下半年算力资本开支由GPU采购向电力基建分流，放缓硬件落地节奏并加速算力集群外溢西迁。",
+      "href": "/investor/theses/thesis-c4885bb6a7/",
       "laneId": "lane_10d7884cbe65",
       "lane": "AI 电力/电网设备",
       "laneHref": "/investor/lanes/ai-power-and-grid-equipment/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 69,
+      "conviction": 67,
       "supports": 1,
       "risks": 0,
       "neutral": 0,
       "eventCount": 1,
       "events": [
         {
-          "title": "AI capex 第二阶段四层利润结构下的多空篮子重构与跨主题对冲",
-          "summary": "作者: 首席策略师 (chief-strategist) - 日期: 2026-05-14 (Asia/Singapore) - 立场: synthesize - 研究记录",
-          "href": "/investor/reports/archive-520ce0cfedf0/",
+          "title": "TMT行业研究报告：电力与并网压力下云厂商AI算力扩张逻辑演变 (2026-05-14)",
+          "summary": "TMT行业研究报告：电力与并网压力下云厂商AI算力扩张逻辑演变 (2026-05-14)",
+          "href": "/investor/reports/archive-786405fda222/",
           "stance": "supports",
           "stanceLabel": "支持"
         }
@@ -3066,22 +3278,285 @@
       "stockTickers": [
         "GEV",
         "ETN",
-        "VST",
         "CEG",
-        "002028.SZ"
+        "002028.SZ",
+        "VST",
+        "600089.SH"
       ]
     },
     {
-      "id": "thesis-40b8638803",
-      "title": "全球科技配置应超配ASIC与新代工生态；A股风格则需从“AI题材映射”战略性切换至独立算力的“国产第二供应源”，重仓先进封装产能、核心设…",
-      "titleEn": "Practical research topic: 全球科技配置应超配ASIC与新代工生态；A股风格则需从“AI题材映射”战略性切换至独立算力的“国产第二供应源”，重仓先进封装产能、核心设…",
-      "href": "/investor/theses/thesis-40b8638803/",
+      "id": "thesis-9050a1080a",
+      "title": "人民币稳定使当前应保留滞胀杠铃，但用黄金、久期与轻USD对冲把组合从单一A股Beta改造成可按黄/红档汇率阶梯再平衡的跨资产防御组合。",
+      "titleEn": "Practical research topic: 人民币稳定使当前应保留滞胀杠铃，但用黄金、久期与轻USD对冲把组合从单一A股Beta改造成可按黄/红档汇率阶梯再平衡的跨资产防御组合。",
+      "href": "/investor/theses/thesis-9050a1080a/",
+      "laneId": "lane_c40c2ce413ec",
+      "lane": "人民币/美元流动性敏感资产",
+      "laneHref": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 67,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "USD/CNY 突破 7.35 下的 A 股流动性压力测试（2026-05-14）",
+          "summary": "USD/CNY 突破 7.35 下的 A 股流动性压力测试（2026-05-14）",
+          "href": "/investor/reports/archive-f3bf477dc08f/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "3988.HK",
+        "UUP",
+        "FXI"
+      ]
+    },
+    {
+      "id": "thesis-8643d7d0d6",
+      "title": "卫星热力数据与电网负荷同步跳升，是否意味着算力瓶颈已从芯片供应彻底转向电力配额？这对云厂商估值模型有何影响？",
+      "titleEn": "Practical research topic: 卫星热力数据与电网负荷同步跳升，是否意味着算力瓶颈已从芯片供应彻底转向电力配额？这对云厂商估值模型有何影响？",
+      "href": "/investor/theses/thesis-8643d7d0d6/",
+      "laneId": "lane_10d7884cbe65",
+      "lane": "AI 电力/电网设备",
+      "laneHref": "/investor/lanes/ai-power-and-grid-equipment/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 67,
+      "supports": 1,
+      "risks": 0,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "TMT行业研究报告：电力与并网压力下云厂商AI算力扩张逻辑演变 (2026-05-14)",
+          "summary": "TMT行业研究报告：电力与并网压力下云厂商AI算力扩张逻辑演变 (2026-05-14)",
+          "href": "/investor/reports/archive-786405fda222/",
+          "stance": "supports",
+          "stanceLabel": "支持"
+        }
+      ],
+      "stockTickers": [
+        "GEV",
+        "002028.SZ",
+        "VST",
+        "ETN",
+        "CEG",
+        "600089.SH",
+        "601179.SH"
+      ]
+    },
+    {
+      "id": "thesis-23e436eecc",
+      "title": "云厂商自发电：公用事业信用与电力资产再定价",
+      "titleEn": "Practical research topic: 云厂商自发电：公用事业信用与电力资产再定价",
+      "href": "/investor/theses/thesis-23e436eecc/",
+      "laneId": "lane_136dd1c3c708",
+      "lane": "云厂商自发电/电力资产",
+      "laneHref": "/investor/lanes/cloud-self-generation-and-power-assets/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 67,
+      "supports": 1,
+      "risks": 0,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "TMT行业研究报告：电力与并网压力下云厂商AI算力扩张逻辑演变 (2026-05-14)",
+          "summary": "TMT行业研究报告：电力与并网压力下云厂商AI算力扩张逻辑演变 (2026-05-14)",
+          "href": "/investor/reports/archive-786405fda222/",
+          "stance": "supports",
+          "stanceLabel": "支持"
+        }
+      ],
+      "stockTickers": [
+        "GEV",
+        "CEG",
+        "VST",
+        "ETN",
+        "601985.SH",
+        "DUK"
+      ]
+    },
+    {
+      "id": "thesis-7a6599a3f5",
+      "title": "新一代信息技术国产替代要从信创叙事进入算力、软件与安全订单验证",
+      "titleEn": "Domestic IT substitution must move from policy narrative to compute, software, and security order proof",
+      "href": "/investor/theses/thesis-7a6599a3f5/",
+      "laneId": "lane_e4f90acbf804",
+      "lane": "信创/国产 IT 栈",
+      "laneHref": "/investor/lanes/domestic-it-substitution-stack/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 66,
+      "supports": 1,
+      "risks": 0,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "国产算力范式转移下的A股风格轮动与配置优先级",
+          "summary": "作者：首席策略师 (chief-strategist) - 日期：2026-05-14（亚洲/新加坡） - 研究记录 · 立场：support（承接 TMT 分析师 既有研究记录的\"性能驱动\"判断） - 根主题：DeepSeek V4 对国...",
+          "href": "/investor/reports/archive-fd1335f569b8/",
+          "stance": "supports",
+          "stanceLabel": "支持"
+        }
+      ],
+      "stockTickers": [
+        "688256.SH",
+        "688041.SH",
+        "688981.SH",
+        "0981.HK",
+        "NVDA",
+        "300308.SZ",
+        "688008.SH",
+        "000977.SZ",
+        "688111.SH",
+        "600845.SH"
+      ]
+    },
+    {
+      "id": "thesis-8b23f98d54",
+      "title": "四大云厂商2026年创纪录的7250亿美元CapEx具有强战略刚性，但变压器3-6年交期与电网并网时滞导致800-1100亿美元开支递延…",
+      "titleEn": "Practical research topic: 四大云厂商2026年创纪录的7250亿美元CapEx具有强战略刚性，但变压器3-6年交期与电网并网时滞导致800-1100亿美元开支递延…",
+      "href": "/investor/theses/thesis-8b23f98d54/",
+      "laneId": "lane_10d7884cbe65",
+      "lane": "AI 电力/电网设备",
+      "laneHref": "/investor/lanes/ai-power-and-grid-equipment/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 66,
+      "supports": 1,
+      "risks": 0,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "TMT行业研究报告：电力与并网压力下云厂商AI算力扩张逻辑演变 (2026-05-14)",
+          "summary": "TMT行业研究报告：电力与并网压力下云厂商AI算力扩张逻辑演变 (2026-05-14)",
+          "href": "/investor/reports/archive-786405fda222/",
+          "stance": "supports",
+          "stanceLabel": "支持"
+        }
+      ],
+      "stockTickers": [
+        "GEV",
+        "ETN",
+        "002028.SZ",
+        "CEG",
+        "600089.SH",
+        "VST",
+        "601179.SH"
+      ]
+    },
+    {
+      "id": "thesis-bdf519e236",
+      "title": "截至2026-06-24，能源侧能部分承接 2026-2028 年递延算力需求，但早于 2027 年的真实硬约束已经是 2026 年站点…",
+      "titleEn": "Practical research topic: 截至2026-06-24，能源侧能部分承接 2026-2028 年递延算力需求，但早于 2027 年的真实硬约束已经是 2026 年站点…",
+      "href": "/investor/theses/thesis-bdf519e236/",
+      "laneId": "lane_10d7884cbe65",
+      "lane": "AI 电力/电网设备",
+      "laneHref": "/investor/lanes/ai-power-and-grid-equipment/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 66,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "政策研究报告：新型电力系统与算力电力 CapEx 监管管道 (2026-2028)",
+          "summary": "政策研究报告：新型电力系统与算力电力 CapEx 监管管道 (2026-2028) 研究所工作日期： 2026-05-14 分析师： 政策分析师 [specialist] 状态： 综合分析 (Synthesized)",
+          "href": "/investor/reports/archive-b9d40f443b6f/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "GEV",
+        "ETN",
+        "002028.SZ",
+        "600089.SH",
+        "601179.SH",
+        "VST",
+        "CEG"
+      ]
+    },
+    {
+      "id": "thesis-97f10202a2",
+      "title": "中美利差走宽对中国货币政策空间及人民币汇率稳定性的影响分析",
+      "titleEn": "Practical research topic: 中美利差走宽对中国货币政策空间及人民币汇率稳定性的影响分析",
+      "href": "/investor/theses/thesis-97f10202a2/",
+      "laneId": "lane_c40c2ce413ec",
+      "lane": "人民币/美元流动性敏感资产",
+      "laneHref": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 66,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "USD/CNY 突破 7.35 下的 A 股流动性压力测试（2026-05-14）",
+          "summary": "USD/CNY 突破 7.35 下的 A 股流动性压力测试（2026-05-14）",
+          "href": "/investor/reports/archive-f3bf477dc08f/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "3988.HK",
+        "UUP",
+        "FXI"
+      ]
+    },
+    {
+      "id": "thesis-3a1131522b",
+      "title": "美联储政策路径不确定性对USD/CNY及利差交易的潜在冲击",
+      "titleEn": "Practical research topic: 美联储政策路径不确定性对USD/CNY及利差交易的潜在冲击",
+      "href": "/investor/theses/thesis-3a1131522b/",
+      "laneId": "lane_c40c2ce413ec",
+      "lane": "人民币/美元流动性敏感资产",
+      "laneHref": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 66,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "USD/CNY 突破 7.35 下的 A 股流动性压力测试（2026-05-14）",
+          "summary": "USD/CNY 突破 7.35 下的 A 股流动性压力测试（2026-05-14）",
+          "href": "/investor/reports/archive-f3bf477dc08f/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "3988.HK",
+        "UUP",
+        "FXI"
+      ]
+    },
+    {
+      "id": "thesis-f375c6de1c",
+      "title": "Micron的FQ3-26和FQ4指引是否意味着AI交易应从GPU主线转向内存、先进封装和系统成本再定价，还是这只是DRAM周期顶部？",
+      "titleEn": "Practical research topic: Micron的FQ3-26和FQ4指引是否意味着AI交易应从GPU主线转向内存、先进封装和系统成本再定价，还是这只是DRAM周期顶部？",
+      "href": "/investor/theses/thesis-f375c6de1c/",
       "laneId": "lane_f1a271385aff",
       "lane": "先进封装/HBM4 闸门",
       "laneHref": "/investor/lanes/advanced-packaging-and-hbm4-gate/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 69,
+      "conviction": 66,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -3099,111 +3574,9 @@
         "NVDA",
         "TSM",
         "000660.KS",
+        "688012.SH",
         "MU",
         "ASML"
-      ]
-    },
-    {
-      "id": "thesis-4749f7193b",
-      "title": "云厂商自发电：公用事业信用与电力资产再定价",
-      "titleEn": "Practical research topic: 云厂商自发电：公用事业信用与电力资产再定价",
-      "href": "/investor/theses/thesis-4749f7193b/",
-      "laneId": "lane_136dd1c3c708",
-      "lane": "云厂商自发电/电力资产",
-      "laneHref": "/investor/lanes/cloud-self-generation-and-power-assets/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 69,
-      "supports": 1,
-      "risks": 0,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "TMT行业研究报告：电力与并网压力下云厂商AI算力扩张逻辑演变 (2026-05-14)",
-          "summary": "TMT行业研究报告：电力与并网压力下云厂商AI算力扩张逻辑演变 (2026-05-14)",
-          "href": "/investor/reports/archive-786405fda222/",
-          "stance": "supports",
-          "stanceLabel": "支持"
-        }
-      ],
-      "stockTickers": [
-        "GEV",
-        "VST",
-        "CEG",
-        "ETN",
-        "601985.SH"
-      ]
-    },
-    {
-      "id": "thesis-8b8ede3135",
-      "title": "消费降级、健康刚需与银发经济正在重塑防御型增长",
-      "titleEn": "Consumer downgrade, healthcare necessities, and the silver economy are reshaping defensive growth",
-      "href": "/investor/theses/thesis-8b8ede3135/",
-      "laneId": "lane_8cf8740aac77",
-      "lane": "消费降级/健康银发",
-      "laneHref": "/investor/lanes/consumer-downgrade-health-and-silver-economy/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 67,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "服务业主导经济下的货币政策：传导机制的悖论",
-          "summary": "日期： 2026-05-14 作者： 首席经济学家 (Chief Economist) 状态： 压力测试分析 (Stress-Test Analysis)",
-          "href": "/investor/reports/archive-ae2afaf49383/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "3690.HK",
-        "600519.SH",
-        "001215.SZ",
-        "1801.HK",
-        "600276.SH",
-        "300760.SZ",
-        "603345.SH",
-        "1177.HK",
-        "UNH"
-      ]
-    },
-    {
-      "id": "thesis-741d1d6f34",
-      "title": "地产、土地财政与 REITs 是中国信用底的慢变量",
-      "titleEn": "Property, land finance, and REITs are the slow variables behind China's credit floor",
-      "href": "/investor/theses/thesis-741d1d6f34/",
-      "laneId": "lane_5c8ea9f78210",
-      "lane": "地产信用底/REITs",
-      "laneHref": "/investor/lanes/china-property-credit-floor-and-reits/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 66,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "研究报告：“质量牛”的版图扩张——房地产结构性转轨与“优质价值”轮动分析",
-          "summary": "研究报告：“质量牛”的版图扩张——房地产结构性转轨与“优质价值”轮动分析 日期： 2026-05-14 分析师： 房地产分析师（楼市销售、土地拍卖、政策研究、REITs）",
-          "href": "/investor/reports/archive-2ab2530e9f47/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "001979.SZ",
-        "1109.HK",
-        "600048.SH",
-        "0960.HK",
-        "000002.SZ",
-        "0688.HK",
-        "600900.SH",
-        "0823.HK"
       ]
     },
     {
@@ -3234,56 +3607,19 @@
         "300308.SZ",
         "0700.HK",
         "9988.HK",
-        "600900.SH",
-        "159915.SZ",
         "510300.SH",
+        "159915.SZ",
+        "600900.SH",
+        "META",
         "2800.HK",
-        "588000.SH",
-        "LOW"
+        "588000.SH"
       ]
     },
     {
-      "id": "thesis-7a6599a3f5",
-      "title": "新一代信息技术国产替代要从信创叙事进入算力、软件与安全订单验证",
-      "titleEn": "Domestic IT substitution must move from policy narrative to compute, software, and security order proof",
-      "href": "/investor/theses/thesis-7a6599a3f5/",
-      "laneId": "lane_e4f90acbf804",
-      "lane": "信创/国产 IT 栈",
-      "laneHref": "/investor/lanes/domestic-it-substitution-stack/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 65,
-      "supports": 1,
-      "risks": 0,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "国产算力范式转移下的A股风格轮动与配置优先级",
-          "summary": "作者：首席策略师 (chief-strategist) - 日期：2026-05-14（亚洲/新加坡） - 研究记录 · 立场：support（承接 TMT 分析师 既有研究记录的\"性能驱动\"判断） - 根主题：DeepSeek V4 对国...",
-          "href": "/investor/reports/archive-fd1335f569b8/",
-          "stance": "supports",
-          "stanceLabel": "支持"
-        }
-      ],
-      "stockTickers": [
-        "688256.SH",
-        "688041.SH",
-        "688981.SH",
-        "0981.HK",
-        "NVDA",
-        "300308.SZ",
-        "688008.SH",
-        "000977.SZ",
-        "688111.SH",
-        "600845.SH"
-      ]
-    },
-    {
-      "id": "thesis-22d6499af0",
-      "title": "AI基础设施对电网压力及变压器供应的承压能力分析",
-      "titleEn": "Practical research topic: AI基础设施对电网压力及变压器供应的承压能力分析",
-      "href": "/investor/theses/thesis-22d6499af0/",
+      "id": "thesis-10afdc36bc",
+      "title": "7月2日及3日的系统性去杠杆冲击已彻底出清A股微观杠杆风险，将电网与商品主题的四道拥挤度闸门全部推回安全绿灯区，为组合的低估值执行提供了…",
+      "titleEn": "Practical research topic: 7月2日及3日的系统性去杠杆冲击已彻底出清A股微观杠杆风险，将电网与商品主题的四道拥挤度闸门全部推回安全绿灯区，为组合的低估值执行提供了…",
+      "href": "/investor/theses/thesis-10afdc36bc/",
       "laneId": "lane_10d7884cbe65",
       "lane": "AI 电力/电网设备",
       "laneHref": "/investor/lanes/ai-power-and-grid-equipment/",
@@ -3304,13 +3640,10 @@
         }
       ],
       "stockTickers": [
-        "GEV",
-        "ETN",
-        "CEG",
-        "VST",
         "002028.SZ",
+        "601179.SH",
         "600089.SH",
-        "601179.SH"
+        "600406.SH"
       ]
     },
     {
@@ -3341,12 +3674,48 @@
         "KWEB",
         "0700.HK",
         "9988.HK",
-        "300308.SZ",
         "510300.SH",
-        "2800.HK",
+        "300308.SZ",
         "0981.HK",
         "688981.SH",
+        "2800.HK",
         "3690.HK"
+      ]
+    },
+    {
+      "id": "thesis-8b8ede3135",
+      "title": "消费降级、健康刚需与银发经济正在重塑防御型增长",
+      "titleEn": "Consumer downgrade, healthcare necessities, and the silver economy are reshaping defensive growth",
+      "href": "/investor/theses/thesis-8b8ede3135/",
+      "laneId": "lane_8cf8740aac77",
+      "lane": "消费降级/健康银发",
+      "laneHref": "/investor/lanes/consumer-downgrade-health-and-silver-economy/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 64,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "创新药与医疗器械研发：截至2026-05-14的政策驱动重估",
+          "summary": "创新药与医疗器械研发：截至2026-05-14的政策驱动重估 日期： 2026-05-14 分析师： healthcare-analyst（医疗行业分析师） 研究记录 立场： support 主题： 医疗器械与创新药研发趋势",
+          "href": "/investor/reports/archive-84601f337750/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "300760.SZ",
+        "600276.SH",
+        "688271.SH",
+        "1801.HK",
+        "300633.SZ",
+        "3690.HK",
+        "300832.SZ",
+        "688617.SH",
+        "9926.HK"
       ]
     },
     {
@@ -3387,77 +3756,6 @@
       ]
     },
     {
-      "id": "thesis-a803fa3312",
-      "title": "美联储路径仍是全球资产再定价的总阀门",
-      "titleEn": "The Fed path remains the master valve for global asset repricing",
-      "href": "/investor/theses/thesis-a803fa3312/",
-      "laneId": "lane_1c216bd29875",
-      "lane": "美债利率/美元再定价",
-      "laneHref": "/investor/lanes/us-rates-and-dollar-repricing/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 61,
-      "supports": 1,
-      "risks": 0,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "2026-05-14 全球宏观研究记录 02：CPI/PPI 后 Fed 反应函数与美债曲线再定价",
-          "summary": "2026-05-14 全球宏观研究记录 02：CPI/PPI 后 Fed 反应函数与美债曲线再定价",
-          "href": "/investor/reports/archive-533a2a624ab2/",
-          "stance": "supports",
-          "stanceLabel": "支持"
-        }
-      ],
-      "stockTickers": [
-        "TLT",
-        "CME",
-        "GLD",
-        "IEF",
-        "JPM",
-        "LOW",
-        "META",
-        "NVDA"
-      ]
-    },
-    {
-      "id": "thesis-7f0a75c5f6",
-      "title": "数据中心地产、液冷与水资源正在决定 AI 容量的区域迁移",
-      "titleEn": "Data-center real estate, liquid cooling, and water resources are deciding regional migration of AI capacity",
-      "href": "/investor/theses/thesis-7f0a75c5f6/",
-      "laneId": "lane_0679894fe06b",
-      "lane": "数据中心地产/液冷",
-      "laneHref": "/investor/lanes/data-center-real-estate-and-cooling/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 57,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "AI 基础设施风险报告：‘农业-社会’瓶颈的压力测试",
-          "summary": "AI 基础设施风险报告：‘农业-社会’瓶颈的压力测试 日期： 2026-05-14 分析师： [primary] chief-risk 首席风控官 主题： 社会/农业立法压力下 AI 基础设施的 VaR 与回撤分析",
-          "href": "/investor/reports/archive-16e2e82bd75d/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "VRT",
-        "NVDA",
-        "ETN",
-        "META",
-        "GEV",
-        "MSFT",
-        "DLR",
-        "EQIX",
-        "AMZN"
-      ]
-    },
-    {
       "id": "thesis-d4473d35e5",
       "title": "猪周期、粮食与农产品价格决定中国低通胀修复的弹性",
       "titleEn": "Hog cycle, grain, and agricultural prices define the elasticity of China's low-inflation repair",
@@ -3490,41 +3788,6 @@
         "603345.SH",
         "000876.SZ",
         "605338.SH"
-      ]
-    },
-    {
-      "id": "thesis-740e729f22",
-      "title": "人民币、美元与套息交易决定跨境风险资产的流动性折价",
-      "titleEn": "RMB, USD, and carry trades define the liquidity discount across cross-border risk assets",
-      "href": "/investor/theses/thesis-740e729f22/",
-      "laneId": "lane_c40c2ce413ec",
-      "lane": "人民币/美元流动性敏感资产",
-      "laneHref": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 55,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "2026-05-14 FX 压力测试：DXY、EUR、JPY、CNY、EM FX 与美国进口通胀通道",
-          "summary": "2026-05-14 FX 压力测试：DXY、EUR、JPY、CNY、EM FX 与美国进口通胀通道",
-          "href": "/investor/reports/archive-76c4a03a1866/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "600900.SH",
-        "CME",
-        "0700.HK",
-        "9988.HK",
-        "3988.HK",
-        "300308.SZ",
-        "LOW",
-        "META"
       ]
     },
     {
@@ -3563,6 +3826,42 @@
       ]
     },
     {
+      "id": "thesis-5057edfa79",
+      "title": "AI-Biology 与医疗效率改善需要从科研突破走向支付和监管兑现",
+      "titleEn": "AI biology and healthcare productivity must move from research breakthroughs to reimbursement and regulatory proof",
+      "href": "/investor/theses/thesis-5057edfa79/",
+      "laneId": "lane_2eefe4e126c6",
+      "lane": "AI 医疗/生物科技效率",
+      "laneHref": "/investor/lanes/ai-healthcare-and-biology-productivity/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 52,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "创新药与医疗器械研发：截至2026-05-14的政策驱动重估",
+          "summary": "创新药与医疗器械研发：截至2026-05-14的政策驱动重估 日期： 2026-05-14 分析师： healthcare-analyst（医疗行业分析师） 研究记录 立场： support 主题： 医疗器械与创新药研发趋势",
+          "href": "/investor/reports/archive-84601f337750/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "2359.HK",
+        "2269.HK",
+        "300760.SZ",
+        "688271.SH",
+        "300633.SZ",
+        "688617.SH",
+        "002821.SZ",
+        "SDGR",
+        "DHR"
+      ]
+    },
+    {
       "id": "thesis-2ec6b9d3ee",
       "title": "卫星直连与商业航天从概念弹性进入部署兑现期",
       "titleEn": "Direct-to-device satellite and commercial space are moving from concept beta to deployment proof",
@@ -3597,39 +3896,40 @@
       ]
     },
     {
-      "id": "thesis-5057edfa79",
-      "title": "AI-Biology 与医疗效率改善需要从科研突破走向支付和监管兑现",
-      "titleEn": "AI biology and healthcare productivity must move from research breakthroughs to reimbursement and regulatory proof",
-      "href": "/investor/theses/thesis-5057edfa79/",
-      "laneId": "lane_2eefe4e126c6",
-      "lane": "AI 医疗/生物科技效率",
-      "laneHref": "/investor/lanes/ai-healthcare-and-biology-productivity/",
+      "id": "thesis-485a630a87",
+      "title": "自动驾驶与 Robotaxi 主题必须从演示热度进入单位经济和监管城市扩张验证",
+      "titleEn": "Autonomous driving and robotaxi themes must move from demo excitement to unit economics and regulated city expansion",
+      "href": "/investor/theses/thesis-485a630a87/",
+      "laneId": "lane_0cb100fcf8da",
+      "lane": "自动驾驶/Robotaxi 单位经济",
+      "laneHref": "/investor/lanes/autonomous-driving-and-robotaxi-unit-economics/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 51,
+      "conviction": 45,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
       "eventCount": 1,
       "events": [
         {
-          "title": "创新药与医疗器械研发：截至2026-05-14的政策驱动重估",
-          "summary": "创新药与医疗器械研发：截至2026-05-14的政策驱动重估 日期： 2026-05-14 分析师： healthcare-analyst（医疗行业分析师） 研究记录 立场： support 主题： 医疗器械与创新药研发趋势",
-          "href": "/investor/reports/archive-84601f337750/",
+          "title": "AIDC 需求侧承接压力测试 — 2026-05-14",
+          "summary": "研究记录 分析师：tmt-analyst（TMT 行业分析师） - 工作日期：2026-05-14（Asia/Singapore） - 立场：stress-test - 问题：超大规模厂商资本开支与 AI 推理需求，能否消化约 220 万架地方主导...",
+          "href": "/investor/reports/archive-08925dafe80f/",
           "stance": "risk",
           "stanceLabel": "风险"
         }
       ],
       "stockTickers": [
-        "300760.SZ",
-        "688271.SH",
-        "2359.HK",
-        "2269.HK",
-        "300633.SZ",
-        "688617.SH",
-        "300832.SZ",
-        "SDGR",
-        "DHR"
+        "GOOGL",
+        "TSLA",
+        "NVDA",
+        "META",
+        "MSFT",
+        "XPEV",
+        "BIDU",
+        "BABA",
+        "AMZN",
+        "2015.HK"
       ]
     }
   ],
@@ -3638,44 +3938,46 @@
       "id": "lane_10d7884cbe65",
       "title": "AI 电力/电网设备",
       "href": "/investor/lanes/ai-power-and-grid-equipment/",
-      "thesisCount": 3,
-      "eventCount": 6,
-      "convictionTotal": 185,
+      "thesisCount": 6,
+      "eventCount": 9,
+      "convictionTotal": 383,
       "stockTickers": [
         "GEV",
         "ETN",
-        "VST",
         "CEG",
         "002028.SZ",
+        "VST",
         "600089.SH",
         "601179.SH",
+        "600406.SH",
         "META",
-        "MSFT",
-        "AMZN"
+        "AMZN",
+        "MSFT"
       ],
-      "avgConviction": 62
+      "avgConviction": 64
     },
     {
       "id": "lane_136dd1c3c708",
       "title": "云厂商自发电/电力资产",
       "href": "/investor/lanes/cloud-self-generation-and-power-assets/",
       "thesisCount": 2,
-      "eventCount": 5,
-      "convictionTotal": 120,
+      "eventCount": 4,
+      "convictionTotal": 118,
       "stockTickers": [
         "GEV",
-        "VST",
         "CEG",
+        "VST",
         "ETN",
         "601985.SH",
+        "DUK",
+        "SMR",
         "META",
         "MSFT",
         "AMZN",
         "AEP",
-        "NVDA",
-        "DUK"
+        "NVDA"
       ],
-      "avgConviction": 60
+      "avgConviction": 59
     },
     {
       "id": "lane_b29e1d216a21",
@@ -3697,53 +3999,12 @@
       "avgConviction": 53
     },
     {
-      "id": "lane_4cc1e74d8e5f",
-      "title": "A股硬科技/科创50",
-      "href": "/investor/lanes/a-share-hard-tech-and-star50/",
-      "thesisCount": 1,
-      "eventCount": 3,
-      "convictionTotal": 62,
-      "stockTickers": [
-        "688256.SH",
-        "300308.SZ",
-        "688981.SH",
-        "0981.HK",
-        "688041.SH",
-        "600900.SH",
-        "588000.SH",
-        "300394.SZ",
-        "688008.SH",
-        "300502.SZ"
-      ],
-      "avgConviction": 62
-    },
-    {
-      "id": "lane_e4b72516d71a",
-      "title": "中国电力设备出海",
-      "href": "/investor/lanes/china-power-equipment-exports/",
-      "thesisCount": 1,
-      "eventCount": 3,
-      "convictionTotal": 52,
-      "stockTickers": [
-        "002028.SZ",
-        "600089.SH",
-        "ETN",
-        "601179.SH",
-        "GEV",
-        "688676.SH",
-        "002270.SZ",
-        "ABBNY",
-        "601126.SH"
-      ],
-      "avgConviction": 52
-    },
-    {
       "id": "lane_1514a60f727a",
       "title": "国防航空航天供应链",
       "href": "/investor/lanes/defense-and-aerospace-supply-chain/",
       "thesisCount": 1,
-      "eventCount": 3,
-      "convictionTotal": 49,
+      "eventCount": 4,
+      "convictionTotal": 51,
       "stockTickers": [
         "LMT",
         "RTX",
@@ -3755,26 +4016,100 @@
         "HWM",
         "GD"
       ],
-      "avgConviction": 49
+      "avgConviction": 51
     },
     {
-      "id": "lane_1c216bd29875",
-      "title": "美债利率/美元再定价",
-      "href": "/investor/lanes/us-rates-and-dollar-repricing/",
+      "id": "lane_f1a271385aff",
+      "title": "先进封装/HBM4 闸门",
+      "href": "/investor/lanes/advanced-packaging-and-hbm4-gate/",
       "thesisCount": 2,
-      "eventCount": 2,
-      "convictionTotal": 133,
+      "eventCount": 3,
+      "convictionTotal": 136,
       "stockTickers": [
-        "JPM",
-        "TLT",
-        "IEF",
-        "CME",
-        "GLD",
-        "LOW",
-        "META",
-        "NVDA"
+        "TSM",
+        "NVDA",
+        "MU",
+        "000660.KS",
+        "ASML",
+        "002916.SZ",
+        "300395.SZ",
+        "688012.SH"
       ],
-      "avgConviction": 67
+      "avgConviction": 68
+    },
+    {
+      "id": "lane_c40c2ce413ec",
+      "title": "人民币/美元流动性敏感资产",
+      "href": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
+      "thesisCount": 3,
+      "eventCount": 3,
+      "convictionTotal": 199,
+      "stockTickers": [
+        "3988.HK",
+        "UUP",
+        "FXI"
+      ],
+      "avgConviction": 66
+    },
+    {
+      "id": "lane_5c8ea9f78210",
+      "title": "地产信用底/REITs",
+      "href": "/investor/lanes/china-property-credit-floor-and-reits/",
+      "thesisCount": 1,
+      "eventCount": 3,
+      "convictionTotal": 65,
+      "stockTickers": [
+        "001979.SZ",
+        "1109.HK",
+        "600048.SH",
+        "0960.HK",
+        "000002.SZ",
+        "0688.HK",
+        "600900.SH",
+        "0823.HK"
+      ],
+      "avgConviction": 65
+    },
+    {
+      "id": "lane_2997650d0638",
+      "title": "中国云/国产算力栈",
+      "href": "/investor/lanes/china-cloud-and-local-compute-stack/",
+      "thesisCount": 1,
+      "eventCount": 3,
+      "convictionTotal": 65,
+      "stockTickers": [
+        "688256.SH",
+        "688041.SH",
+        "601138.SH",
+        "300308.SZ",
+        "688981.SH",
+        "NVDA",
+        "0981.HK",
+        "000977.SZ",
+        "9988.HK",
+        "0700.HK"
+      ],
+      "avgConviction": 65
+    },
+    {
+      "id": "lane_e4b72516d71a",
+      "title": "中国电力设备出海",
+      "href": "/investor/lanes/china-power-equipment-exports/",
+      "thesisCount": 1,
+      "eventCount": 3,
+      "convictionTotal": 52,
+      "stockTickers": [
+        "002028.SZ",
+        "600089.SH",
+        "601179.SH",
+        "ETN",
+        "GEV",
+        "002270.SZ",
+        "688676.SH",
+        "ABBNY",
+        "601126.SH"
+      ],
+      "avgConviction": 52
     },
     {
       "id": "lane_22c1ed929e2e",
@@ -3795,33 +4130,12 @@
       "avgConviction": 67
     },
     {
-      "id": "lane_2997650d0638",
-      "title": "中国云/国产算力栈",
-      "href": "/investor/lanes/china-cloud-and-local-compute-stack/",
-      "thesisCount": 1,
-      "eventCount": 2,
-      "convictionTotal": 65,
-      "stockTickers": [
-        "688256.SH",
-        "688041.SH",
-        "601138.SH",
-        "300308.SZ",
-        "688981.SH",
-        "0981.HK",
-        "NVDA",
-        "000977.SZ",
-        "9988.HK",
-        "0700.HK"
-      ],
-      "avgConviction": 65
-    },
-    {
       "id": "lane_6fbf93c613f9",
       "title": "债券供给/银行久期",
       "href": "/investor/lanes/bond-supply-and-bank-duration/",
       "thesisCount": 1,
       "eventCount": 2,
-      "convictionTotal": 64,
+      "convictionTotal": 65,
       "stockTickers": [
         "601398.SH",
         "601939.SH",
@@ -3832,7 +4146,85 @@
         "TLT",
         "000001.SZ"
       ],
+      "avgConviction": 65
+    },
+    {
+      "id": "lane_54700cb9537f",
+      "title": "商业航天/卫星直连",
+      "href": "/investor/lanes/commercial-space-and-direct-to-device-satellite/",
+      "thesisCount": 2,
+      "eventCount": 2,
+      "convictionTotal": 127,
+      "stockTickers": [
+        "RKLB",
+        "ASTS",
+        "600118.SH",
+        "IRDM",
+        "RDW",
+        "LUNR",
+        "LMT"
+      ],
       "avgConviction": 64
+    },
+    {
+      "id": "lane_4cc1e74d8e5f",
+      "title": "A股硬科技/科创50",
+      "href": "/investor/lanes/a-share-hard-tech-and-star50/",
+      "thesisCount": 1,
+      "eventCount": 2,
+      "convictionTotal": 61,
+      "stockTickers": [
+        "300308.SZ",
+        "688256.SH",
+        "688981.SH",
+        "688041.SH",
+        "0981.HK",
+        "600900.SH",
+        "NVDA",
+        "300394.SZ",
+        "688008.SH",
+        "300502.SZ"
+      ],
+      "avgConviction": 61
+    },
+    {
+      "id": "lane_1c216bd29875",
+      "title": "美债利率/美元再定价",
+      "href": "/investor/lanes/us-rates-and-dollar-repricing/",
+      "thesisCount": 1,
+      "eventCount": 2,
+      "convictionTotal": 59,
+      "stockTickers": [
+        "CME",
+        "TLT",
+        "GLD",
+        "JPM",
+        "KRE",
+        "IEF",
+        "META",
+        "UUP"
+      ],
+      "avgConviction": 59
+    },
+    {
+      "id": "lane_0679894fe06b",
+      "title": "数据中心地产/液冷",
+      "href": "/investor/lanes/data-center-real-estate-and-cooling/",
+      "thesisCount": 1,
+      "eventCount": 2,
+      "convictionTotal": 57,
+      "stockTickers": [
+        "VRT",
+        "NVDA",
+        "ETN",
+        "META",
+        "MSFT",
+        "GEV",
+        "DLR",
+        "EQIX",
+        "SMR"
+      ],
+      "avgConviction": 57
     },
     {
       "id": "lane_e69b58816f80",
@@ -3842,16 +4234,16 @@
       "eventCount": 2,
       "convictionTotal": 46,
       "stockTickers": [
+        "SMR",
         "300750.SZ",
-        "300274.SZ",
         "600900.SH",
+        "300274.SZ",
         "002028.SZ",
         "GEV",
-        "600089.SH",
-        "601179.SH",
         "002594.SZ",
-        "CEG",
-        "MSFT"
+        "MSFT",
+        "600089.SH",
+        "CEG"
       ],
       "avgConviction": 46
     },
@@ -3864,9 +4256,9 @@
       "convictionTotal": 72,
       "stockTickers": [
         "BABA",
-        "MSFT",
         "CRM",
         "BIDU",
+        "MSFT",
         "9988.HK",
         "NOW",
         "NVDA",
@@ -3889,8 +4281,8 @@
         "AMZN",
         "GOOGL",
         "TSM",
-        "AVGO",
         "AMD",
+        "AVGO",
         "AAPL"
       ],
       "avgConviction": 71
@@ -3901,7 +4293,7 @@
       "href": "/investor/lanes/options-gamma-and-market-microstructure/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 70,
+      "convictionTotal": 71,
       "stockTickers": [
         "CBOE",
         "588000.SH",
@@ -3911,60 +4303,43 @@
         "VIRT",
         "VIXY"
       ],
+      "avgConviction": 71
+    },
+    {
+      "id": "lane_f44cf45c8649",
+      "title": "AI 算力半导体",
+      "href": "/investor/lanes/ai-compute-semiconductors/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "convictionTotal": 70,
+      "stockTickers": [
+        "NVDA",
+        "META",
+        "TSM",
+        "AMD",
+        "AVGO",
+        "000660.KS"
+      ],
       "avgConviction": 70
     },
     {
-      "id": "lane_f1a271385aff",
-      "title": "先进封装/HBM4 闸门",
-      "href": "/investor/lanes/advanced-packaging-and-hbm4-gate/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 69,
-      "stockTickers": [
-        "NVDA",
-        "TSM",
-        "000660.KS",
-        "MU",
-        "ASML"
-      ],
-      "avgConviction": 69
-    },
-    {
-      "id": "lane_8cf8740aac77",
-      "title": "消费降级/健康银发",
-      "href": "/investor/lanes/consumer-downgrade-health-and-silver-economy/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 67,
-      "stockTickers": [
-        "3690.HK",
-        "600519.SH",
-        "001215.SZ",
-        "1801.HK",
-        "600276.SH",
-        "300760.SZ",
-        "603345.SH",
-        "1177.HK",
-        "UNH"
-      ],
-      "avgConviction": 67
-    },
-    {
-      "id": "lane_5c8ea9f78210",
-      "title": "地产信用底/REITs",
-      "href": "/investor/lanes/china-property-credit-floor-and-reits/",
+      "id": "lane_e4f90acbf804",
+      "title": "信创/国产 IT 栈",
+      "href": "/investor/lanes/domestic-it-substitution-stack/",
       "thesisCount": 1,
       "eventCount": 1,
       "convictionTotal": 66,
       "stockTickers": [
-        "001979.SZ",
-        "1109.HK",
-        "600048.SH",
-        "0960.HK",
-        "000002.SZ",
-        "0688.HK",
-        "600900.SH",
-        "0823.HK"
+        "688256.SH",
+        "688041.SH",
+        "688981.SH",
+        "0981.HK",
+        "NVDA",
+        "300308.SZ",
+        "688008.SH",
+        "000977.SZ",
+        "688111.SH",
+        "600845.SH"
       ],
       "avgConviction": 66
     },
@@ -3979,33 +4354,12 @@
         "300308.SZ",
         "0700.HK",
         "9988.HK",
-        "600900.SH",
-        "159915.SZ",
         "510300.SH",
+        "159915.SZ",
+        "600900.SH",
+        "META",
         "2800.HK",
-        "588000.SH",
-        "LOW"
-      ],
-      "avgConviction": 65
-    },
-    {
-      "id": "lane_e4f90acbf804",
-      "title": "信创/国产 IT 栈",
-      "href": "/investor/lanes/domestic-it-substitution-stack/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 65,
-      "stockTickers": [
-        "688256.SH",
-        "688041.SH",
-        "688981.SH",
-        "0981.HK",
-        "NVDA",
-        "300308.SZ",
-        "688008.SH",
-        "000977.SZ",
-        "688111.SH",
-        "600845.SH"
+        "588000.SH"
       ],
       "avgConviction": 65
     },
@@ -4020,124 +4374,65 @@
         "KWEB",
         "0700.HK",
         "9988.HK",
-        "300308.SZ",
         "510300.SH",
-        "2800.HK",
+        "300308.SZ",
         "0981.HK",
         "688981.SH",
+        "2800.HK",
         "3690.HK"
       ],
       "avgConviction": 65
     },
     {
-      "id": "lane_1f0136d57956",
-      "title": "CPO/光模块/高速互联",
-      "href": "/investor/lanes/cpo-optical-modules-and-high-speed-interconnect/",
+      "id": "lane_8cf8740aac77",
+      "title": "消费降级/健康银发",
+      "href": "/investor/lanes/consumer-downgrade-health-and-silver-economy/",
       "thesisCount": 1,
       "eventCount": 1,
       "convictionTotal": 64,
       "stockTickers": [
-        "300308.SZ",
-        "NVDA",
-        "AVGO",
-        "300394.SZ",
-        "COHR",
-        "META",
-        "MRVL",
-        "LITE",
-        "TSM",
-        "MSFT"
+        "300760.SZ",
+        "600276.SH",
+        "688271.SH",
+        "1801.HK",
+        "300633.SZ",
+        "3690.HK",
+        "300832.SZ",
+        "688617.SH",
+        "9926.HK"
       ],
       "avgConviction": 64
-    },
-    {
-      "id": "lane_0679894fe06b",
-      "title": "数据中心地产/液冷",
-      "href": "/investor/lanes/data-center-real-estate-and-cooling/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 57,
-      "stockTickers": [
-        "VRT",
-        "NVDA",
-        "ETN",
-        "META",
-        "GEV",
-        "MSFT",
-        "DLR",
-        "EQIX",
-        "AMZN"
-      ],
-      "avgConviction": 57
-    },
-    {
-      "id": "lane_6e276fa53da1",
-      "title": "食品农业/猪周期",
-      "href": "/investor/lanes/food-agriculture-and-hog-cycle/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 56,
-      "stockTickers": [
-        "001215.SZ",
-        "002714.SZ",
-        "300498.SZ",
-        "600298.SH",
-        "300973.SZ",
-        "603345.SH",
-        "000876.SZ",
-        "605338.SH"
-      ],
-      "avgConviction": 56
-    },
-    {
-      "id": "lane_c40c2ce413ec",
-      "title": "人民币/美元流动性敏感资产",
-      "href": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 55,
-      "stockTickers": [
-        "600900.SH",
-        "CME",
-        "0700.HK",
-        "9988.HK",
-        "3988.HK",
-        "300308.SZ",
-        "LOW",
-        "META"
-      ],
-      "avgConviction": 55
     }
   ],
   "stocks": [
-    {
-      "ticker": "MSFT",
-      "name": "Microsoft",
-      "market": "US",
-      "href": "/investor/stocks/MSFT/",
-      "thesisCount": 8,
-      "eventCount": 18,
-      "lanes": [
-        "低价模型/AI 软件利润池",
-        "Mag7 AI 平台再分层",
-        "CPO/光模块/高速互联",
-        "数据中心地产/液冷",
-        "信用再融资/私募信贷"
-      ]
-    },
     {
       "ticker": "META",
       "name": "Meta Platforms",
       "market": "US",
       "href": "/investor/stocks/META/",
-      "thesisCount": 8,
-      "eventCount": 17,
+      "thesisCount": 10,
+      "eventCount": 20,
       "lanes": [
         "Mag7 AI 平台再分层",
+        "AI 算力半导体",
+        "中国权益流动性",
         "CPO/光模块/高速互联",
-        "美债利率/美元再定价",
-        "数据中心地产/液冷",
-        "人民币/美元流动性敏感资产"
+        "美债利率/美元再定价"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "market": "US",
+      "href": "/investor/stocks/NVDA/",
+      "thesisCount": 12,
+      "eventCount": 19,
+      "lanes": [
+        "低价模型/AI 软件利润池",
+        "Mag7 AI 平台再分层",
+        "先进封装/HBM4 闸门",
+        "AI 算力半导体",
+        "信创/国产 IT 栈"
       ]
     },
     {
@@ -4145,8 +4440,8 @@
       "name": "GE Vernova",
       "market": "US",
       "href": "/investor/stocks/GEV/",
-      "thesisCount": 8,
-      "eventCount": 17,
+      "thesisCount": 10,
+      "eventCount": 19,
       "lanes": [
         "AI 电力/电网设备",
         "云厂商自发电/电力资产",
@@ -4156,12 +4451,27 @@
       ]
     },
     {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "market": "US",
+      "href": "/investor/stocks/MSFT/",
+      "thesisCount": 9,
+      "eventCount": 19,
+      "lanes": [
+        "低价模型/AI 软件利润池",
+        "Mag7 AI 平台再分层",
+        "CPO/光模块/高速互联",
+        "数据中心地产/液冷",
+        "信用再融资/私募信贷"
+      ]
+    },
+    {
       "ticker": "ETN",
       "name": "Eaton",
       "market": "US",
       "href": "/investor/stocks/ETN/",
-      "thesisCount": 7,
-      "eventCount": 15,
+      "thesisCount": 9,
+      "eventCount": 17,
       "lanes": [
         "AI 电力/电网设备",
         "云厂商自发电/电力资产",
@@ -4174,70 +4484,13 @@
       "name": "Constellation Energy",
       "market": "US",
       "href": "/investor/stocks/CEG/",
-      "thesisCount": 7,
-      "eventCount": 15,
+      "thesisCount": 9,
+      "eventCount": 16,
       "lanes": [
+        "公用事业/电网信用",
         "AI 电力/电网设备",
         "云厂商自发电/电力资产",
-        "公用事业/电网信用",
         "能源转型/储能光伏"
-      ]
-    },
-    {
-      "ticker": "NVDA",
-      "name": "NVIDIA",
-      "market": "US",
-      "href": "/investor/stocks/NVDA/",
-      "thesisCount": 9,
-      "eventCount": 13,
-      "lanes": [
-        "低价模型/AI 软件利润池",
-        "Mag7 AI 平台再分层",
-        "先进封装/HBM4 闸门",
-        "信创/国产 IT 栈",
-        "中国云/国产算力栈"
-      ]
-    },
-    {
-      "ticker": "600900.SH",
-      "name": "长江电力",
-      "market": "A-share",
-      "href": "/investor/stocks/600900.SH/",
-      "thesisCount": 8,
-      "eventCount": 13,
-      "lanes": [
-        "公用事业/电网信用",
-        "地产信用底/REITs",
-        "中国权益流动性",
-        "债券供给/银行久期",
-        "A股硬科技/科创50"
-      ]
-    },
-    {
-      "ticker": "300308.SZ",
-      "name": "中际旭创",
-      "market": "A-share",
-      "href": "/investor/stocks/300308.SZ/",
-      "thesisCount": 8,
-      "eventCount": 11,
-      "lanes": [
-        "中国权益流动性",
-        "信创/国产 IT 栈",
-        "中国云/国产算力栈",
-        "指数调仓/被动资金事件",
-        "CPO/光模块/高速互联"
-      ]
-    },
-    {
-      "ticker": "VST",
-      "name": "Vistra",
-      "market": "US",
-      "href": "/investor/stocks/VST/",
-      "thesisCount": 5,
-      "eventCount": 11,
-      "lanes": [
-        "AI 电力/电网设备",
-        "云厂商自发电/电力资产"
       ]
     },
     {
@@ -4245,12 +4498,92 @@
       "name": "思源电气",
       "market": "A-share",
       "href": "/investor/stocks/002028.SZ/",
-      "thesisCount": 5,
-      "eventCount": 11,
+      "thesisCount": 8,
+      "eventCount": 14,
       "lanes": [
         "AI 电力/电网设备",
         "中国电力设备出海",
         "能源转型/储能光伏"
+      ]
+    },
+    {
+      "ticker": "600089.SH",
+      "name": "特变电工",
+      "market": "A-share",
+      "href": "/investor/stocks/600089.SH/",
+      "thesisCount": 8,
+      "eventCount": 14,
+      "lanes": [
+        "AI 电力/电网设备",
+        "中国电力设备出海",
+        "能源转型/储能光伏"
+      ]
+    },
+    {
+      "ticker": "600900.SH",
+      "name": "长江电力",
+      "market": "A-share",
+      "href": "/investor/stocks/600900.SH/",
+      "thesisCount": 7,
+      "eventCount": 13,
+      "lanes": [
+        "公用事业/电网信用",
+        "中国权益流动性",
+        "地产信用底/REITs",
+        "债券供给/银行久期",
+        "A股硬科技/科创50"
+      ]
+    },
+    {
+      "ticker": "VST",
+      "name": "Vistra",
+      "market": "US",
+      "href": "/investor/stocks/VST/",
+      "thesisCount": 7,
+      "eventCount": 12,
+      "lanes": [
+        "AI 电力/电网设备",
+        "云厂商自发电/电力资产"
+      ]
+    },
+    {
+      "ticker": "601179.SH",
+      "name": "中国西电",
+      "market": "A-share",
+      "href": "/investor/stocks/601179.SH/",
+      "thesisCount": 6,
+      "eventCount": 11,
+      "lanes": [
+        "AI 电力/电网设备",
+        "中国电力设备出海"
+      ]
+    },
+    {
+      "ticker": "300308.SZ",
+      "name": "中际旭创",
+      "market": "A-share",
+      "href": "/investor/stocks/300308.SZ/",
+      "thesisCount": 7,
+      "eventCount": 10,
+      "lanes": [
+        "信创/国产 IT 栈",
+        "中国权益流动性",
+        "中国云/国产算力栈",
+        "指数调仓/被动资金事件",
+        "CPO/光模块/高速互联"
+      ]
+    },
+    {
+      "ticker": "3988.HK",
+      "name": "中国银行",
+      "market": "HK",
+      "href": "/investor/stocks/3988.HK/",
+      "thesisCount": 5,
+      "eventCount": 9,
+      "lanes": [
+        "人民币/美元流动性敏感资产",
+        "债券供给/银行久期",
+        "信用再融资/私募信贷"
       ]
     },
     {
@@ -4259,38 +4592,12 @@
       "market": "US",
       "href": "/investor/stocks/AMZN/",
       "thesisCount": 4,
-      "eventCount": 10,
+      "eventCount": 9,
       "lanes": [
         "Mag7 AI 平台再分层",
-        "数据中心地产/液冷",
         "AI 电力/电网设备",
-        "云厂商自发电/电力资产"
-      ]
-    },
-    {
-      "ticker": "600089.SH",
-      "name": "特变电工",
-      "market": "A-share",
-      "href": "/investor/stocks/600089.SH/",
-      "thesisCount": 4,
-      "eventCount": 10,
-      "lanes": [
-        "AI 电力/电网设备",
-        "中国电力设备出海",
-        "能源转型/储能光伏"
-      ]
-    },
-    {
-      "ticker": "601179.SH",
-      "name": "中国西电",
-      "market": "A-share",
-      "href": "/investor/stocks/601179.SH/",
-      "thesisCount": 4,
-      "eventCount": 10,
-      "lanes": [
-        "AI 电力/电网设备",
-        "中国电力设备出海",
-        "能源转型/储能光伏"
+        "云厂商自发电/电力资产",
+        "自动驾驶/Robotaxi 单位经济"
       ]
     },
     {
@@ -4338,16 +4645,30 @@
       ]
     },
     {
-      "ticker": "3988.HK",
-      "name": "中国银行",
-      "market": "HK",
-      "href": "/investor/stocks/3988.HK/",
+      "ticker": "SMR",
+      "name": "NuScale Power",
+      "market": "US",
+      "href": "/investor/stocks/SMR/",
       "thesisCount": 3,
       "eventCount": 7,
       "lanes": [
-        "债券供给/银行久期",
-        "人民币/美元流动性敏感资产",
-        "信用再融资/私募信贷"
+        "数据中心地产/液冷",
+        "云厂商自发电/电力资产",
+        "能源转型/储能光伏"
+      ]
+    },
+    {
+      "ticker": "TSM",
+      "name": "TSMC",
+      "market": "US ADR",
+      "href": "/investor/stocks/TSM/",
+      "thesisCount": 5,
+      "eventCount": 6,
+      "lanes": [
+        "Mag7 AI 平台再分层",
+        "先进封装/HBM4 闸门",
+        "AI 算力半导体",
+        "CPO/光模块/高速互联"
       ]
     },
     {
@@ -4355,14 +4676,13 @@
       "name": "阿里巴巴",
       "market": "HK",
       "href": "/investor/stocks/9988.HK/",
-      "thesisCount": 5,
+      "thesisCount": 4,
       "eventCount": 6,
       "lanes": [
         "低价模型/AI 软件利润池",
         "中国权益流动性",
         "中国云/国产算力栈",
-        "指数调仓/被动资金事件",
-        "人民币/美元流动性敏感资产"
+        "指数调仓/被动资金事件"
       ]
     },
     {
@@ -4370,40 +4690,61 @@
       "name": "腾讯控股",
       "market": "HK",
       "href": "/investor/stocks/0700.HK/",
-      "thesisCount": 5,
+      "thesisCount": 4,
       "eventCount": 6,
       "lanes": [
         "低价模型/AI 软件利润池",
         "中国权益流动性",
         "中国云/国产算力栈",
-        "指数调仓/被动资金事件",
-        "人民币/美元流动性敏感资产"
+        "指数调仓/被动资金事件"
       ]
     },
     {
-      "ticker": "588000.SH",
-      "name": "科创50 ETF",
-      "market": "A-share ETF",
-      "href": "/investor/stocks/588000.SH/",
-      "thesisCount": 4,
-      "eventCount": 6,
-      "lanes": [
-        "期权伽马/市场微观结构",
-        "中国权益流动性",
-        "A股硬科技/科创50",
-        "A股风险偏好/两融"
-      ]
-    },
-    {
-      "ticker": "JPM",
-      "name": "JPMorgan Chase",
+      "ticker": "RKLB",
+      "name": "Rocket Lab",
       "market": "US",
-      "href": "/investor/stocks/JPM/",
+      "href": "/investor/stocks/RKLB/",
       "thesisCount": 3,
       "eventCount": 6,
       "lanes": [
-        "美债利率/美元再定价",
-        "信用再融资/私募信贷"
+        "商业航天/卫星直连",
+        "国防航空航天供应链"
+      ]
+    },
+    {
+      "ticker": "ASTS",
+      "name": "AST SpaceMobile",
+      "market": "US",
+      "href": "/investor/stocks/ASTS/",
+      "thesisCount": 3,
+      "eventCount": 6,
+      "lanes": [
+        "商业航天/卫星直连",
+        "国防航空航天供应链"
+      ]
+    },
+    {
+      "ticker": "IRDM",
+      "name": "Iridium",
+      "market": "US",
+      "href": "/investor/stocks/IRDM/",
+      "thesisCount": 3,
+      "eventCount": 6,
+      "lanes": [
+        "商业航天/卫星直连",
+        "国防航空航天供应链"
+      ]
+    },
+    {
+      "ticker": "LMT",
+      "name": "Lockheed Martin",
+      "market": "US",
+      "href": "/investor/stocks/LMT/",
+      "thesisCount": 3,
+      "eventCount": 6,
+      "lanes": [
+        "商业航天/卫星直连",
+        "国防航空航天供应链"
       ]
     },
     {
@@ -4420,24 +4761,48 @@
       ]
     },
     {
+      "ticker": "JPM",
+      "name": "JPMorgan Chase",
+      "market": "US",
+      "href": "/investor/stocks/JPM/",
+      "thesisCount": 2,
+      "eventCount": 6,
+      "lanes": [
+        "美债利率/美元再定价",
+        "信用再融资/私募信贷"
+      ]
+    },
+    {
+      "ticker": "KRE",
+      "name": "SPDR S&P Regional Banking ETF",
+      "market": "US ETF",
+      "href": "/investor/stocks/KRE/",
+      "thesisCount": 2,
+      "eventCount": 6,
+      "lanes": [
+        "美债利率/美元再定价",
+        "信用再融资/私募信贷"
+      ]
+    },
+    {
+      "ticker": "UUP",
+      "name": "Invesco DB US Dollar Index Bullish Fund",
+      "market": "US ETF",
+      "href": "/investor/stocks/UUP/",
+      "thesisCount": 4,
+      "eventCount": 5,
+      "lanes": [
+        "人民币/美元流动性敏感资产",
+        "美债利率/美元再定价"
+      ]
+    },
+    {
       "ticker": "AEP",
       "name": "American Electric Power",
       "market": "US",
       "href": "/investor/stocks/AEP/",
       "thesisCount": 2,
-      "eventCount": 6,
-      "lanes": [
-        "公用事业/电网信用",
-        "云厂商自发电/电力资产"
-      ]
-    },
-    {
-      "ticker": "DUK",
-      "name": "Duke Energy",
-      "market": "US",
-      "href": "/investor/stocks/DUK/",
-      "thesisCount": 2,
-      "eventCount": 6,
+      "eventCount": 5,
       "lanes": [
         "公用事业/电网信用",
         "云厂商自发电/电力资产"
@@ -4456,15 +4821,27 @@
       ]
     },
     {
-      "ticker": "TLT",
-      "name": "iShares 20+ Year Treasury Bond ETF",
-      "market": "US ETF",
-      "href": "/investor/stocks/TLT/",
+      "ticker": "000660.KS",
+      "name": "SK hynix",
+      "market": "Korea",
+      "href": "/investor/stocks/000660.KS/",
       "thesisCount": 3,
       "eventCount": 4,
       "lanes": [
-        "美债利率/美元再定价",
-        "债券供给/银行久期"
+        "先进封装/HBM4 闸门",
+        "AI 算力半导体"
+      ]
+    },
+    {
+      "ticker": "000977.SZ",
+      "name": "浪潮信息",
+      "market": "A-share",
+      "href": "/investor/stocks/000977.SZ/",
+      "thesisCount": 2,
+      "eventCount": 4,
+      "lanes": [
+        "信创/国产 IT 栈",
+        "中国云/国产算力栈"
       ]
     },
     {
@@ -4472,94 +4849,23 @@
       "name": "iShares 7-10 Year Treasury Bond ETF",
       "market": "US ETF",
       "href": "/investor/stocks/IEF/",
-      "thesisCount": 3,
-      "eventCount": 4,
-      "lanes": [
-        "美债利率/美元再定价",
-        "债券供给/银行久期"
-      ]
-    },
-    {
-      "ticker": "688008.SH",
-      "name": "澜起科技",
-      "market": "A-share",
-      "href": "/investor/stocks/688008.SH/",
       "thesisCount": 2,
       "eventCount": 4,
       "lanes": [
-        "信创/国产 IT 栈",
-        "A股硬科技/科创50"
+        "债券供给/银行久期",
+        "美债利率/美元再定价"
       ]
     },
     {
-      "ticker": "300394.SZ",
-      "name": "天孚通信",
-      "market": "A-share",
-      "href": "/investor/stocks/300394.SZ/",
-      "thesisCount": 2,
-      "eventCount": 4,
-      "lanes": [
-        "CPO/光模块/高速互联",
-        "A股硬科技/科创50"
-      ]
-    },
-    {
-      "ticker": "RKLB",
-      "name": "Rocket Lab",
-      "market": "US",
-      "href": "/investor/stocks/RKLB/",
-      "thesisCount": 2,
-      "eventCount": 4,
-      "lanes": [
-        "商业航天/卫星直连",
-        "国防航空航天供应链"
-      ]
-    },
-    {
-      "ticker": "ASTS",
-      "name": "AST SpaceMobile",
-      "market": "US",
-      "href": "/investor/stocks/ASTS/",
-      "thesisCount": 2,
-      "eventCount": 4,
-      "lanes": [
-        "商业航天/卫星直连",
-        "国防航空航天供应链"
-      ]
-    },
-    {
-      "ticker": "IRDM",
-      "name": "Iridium",
-      "market": "US",
-      "href": "/investor/stocks/IRDM/",
-      "thesisCount": 2,
-      "eventCount": 4,
-      "lanes": [
-        "商业航天/卫星直连",
-        "国防航空航天供应链"
-      ]
-    },
-    {
-      "ticker": "LMT",
-      "name": "Lockheed Martin",
-      "market": "US",
-      "href": "/investor/stocks/LMT/",
-      "thesisCount": 2,
-      "eventCount": 4,
-      "lanes": [
-        "商业航天/卫星直连",
-        "国防航空航天供应链"
-      ]
-    },
-    {
-      "ticker": "KRE",
-      "name": "SPDR S&P Regional Banking ETF",
+      "ticker": "TLT",
+      "name": "iShares 20+ Year Treasury Bond ETF",
       "market": "US ETF",
-      "href": "/investor/stocks/KRE/",
-      "thesisCount": 1,
+      "href": "/investor/stocks/TLT/",
+      "thesisCount": 2,
       "eventCount": 4,
       "lanes": [
-        "信用再融资/私募信贷"
+        "债券供给/银行久期",
+        "美债利率/美元再定价"
       ]
     },
     {
@@ -4585,66 +4891,68 @@
       ]
     },
     {
-      "ticker": "TSM",
-      "name": "TSMC",
-      "market": "US ADR",
-      "href": "/investor/stocks/TSM/",
-      "thesisCount": 3,
-      "eventCount": 3,
-      "lanes": [
-        "Mag7 AI 平台再分层",
-        "先进封装/HBM4 闸门",
-        "CPO/光模块/高速互联"
-      ]
-    },
-    {
-      "ticker": "CME",
-      "name": "CME Group",
+      "ticker": "RTX",
+      "name": "RTX",
       "market": "US",
-      "href": "/investor/stocks/CME/",
-      "thesisCount": 3,
-      "eventCount": 3,
+      "href": "/investor/stocks/RTX/",
+      "thesisCount": 1,
+      "eventCount": 4,
       "lanes": [
-        "期权伽马/市场微观结构",
-        "美债利率/美元再定价",
-        "人民币/美元流动性敏感资产"
+        "国防航空航天供应链"
       ]
     },
     {
-      "ticker": "510300.SH",
-      "name": "沪深300 ETF",
-      "market": "A-share ETF",
-      "href": "/investor/stocks/510300.SH/",
-      "thesisCount": 3,
-      "eventCount": 3,
-      "lanes": [
-        "中国权益流动性",
-        "指数调仓/被动资金事件",
-        "A股风险偏好/两融"
-      ]
-    },
-    {
-      "ticker": "LOW",
-      "name": "Lowe's",
+      "ticker": "NOC",
+      "name": "Northrop Grumman",
       "market": "US",
-      "href": "/investor/stocks/LOW/",
-      "thesisCount": 3,
-      "eventCount": 3,
+      "href": "/investor/stocks/NOC/",
+      "thesisCount": 1,
+      "eventCount": 4,
       "lanes": [
-        "中国权益流动性",
-        "美债利率/美元再定价",
-        "人民币/美元流动性敏感资产"
+        "国防航空航天供应链"
+      ]
+    },
+    {
+      "ticker": "BA",
+      "name": "Boeing",
+      "market": "US",
+      "href": "/investor/stocks/BA/",
+      "thesisCount": 1,
+      "eventCount": 4,
+      "lanes": [
+        "国防航空航天供应链"
       ]
     }
   ],
   "personas": [
+    {
+      "id": "persona-global-macro-analyst-9745a0",
+      "name": "全球宏观分析师",
+      "nameEn": "Global Macro Analyst",
+      "href": "/investor/personas/#persona-global-macro-analyst-9745a0",
+      "specialty": "美欧日经济、全球贸易、地缘政治风险 【合并扩展 2026-06-11】统筹宏观全域：中国宏观与政策(PMI/PBoC/地方债)、央行政策(Fed/ECB/PBoC)、利率与收益率曲线、信用债与新发行、外汇(人民币/美元/欧元/日元)与利差…",
+      "currentView": "DeepSeek 式低价模型正在重塑 AI 定价权与软件利润池；油价地缘底线决定再通胀与降息交易的安全边际；近海资本开支与设备利用率驱动油服盈利弹性 是当前该 persona 参与最多的研究主线。",
+      "supports": 3,
+      "risks": 0,
+      "neutral": 0,
+      "eventCount": 3,
+      "topTheses": [
+        "卫星电源壁垒需由发射节奏和单星价值量持续验证",
+        "卫星直连与商业航天从概念弹性进入部署兑现期",
+        "航空航天与国防供应链错配正在形成政策驱动的制造业弹性"
+      ],
+      "latestEvent": {
+        "title": "全球宏观分析师 · 协同回函",
+        "href": "/investor/reports/archive-a3a42aebe041/"
+      }
+    },
     {
       "id": "persona-a-share-strategist-e0ee8e",
       "name": "A股策略师",
       "nameEn": "A-Share Strategist",
       "href": "/investor/personas/#persona-a-share-strategist-e0ee8e",
       "specialty": "沪深市场结构、两融数据、限售股解禁",
-      "currentView": "A 股硬科技与科创50的复苏需要订单、融资盘和指数结构共振；A 股半导体的核心风险从订单验证转向 A/H 溢价、两融与负 Gamma；在两融余额可核口径约3.0万亿元、科创50盘中深V、但解禁与融资拥挤仍在的情况下，今日收盘后仓位框架应从Option 4极致防御调到哪一级？ 是当前该 persona 参与最多的研究主线。",
+      "currentView": "A 股半导体的核心风险从订单验证转向 A/H 溢价、两融与负 Gamma；A 股硬科技与科创50的复苏需要订单、融资盘和指数结构共振；今日是MSCI半年度重估正式生效日。虽然散户由于昨日创业板+1.96%的V型反弹而呈现极度FOMO，但A股两融余额正高挂于2.9367万… 是当前该 persona 参与最多的研究主线。",
       "supports": 1,
       "risks": 0,
       "neutral": 0,
@@ -4655,25 +4963,6 @@
       "latestEvent": {
         "title": "前序研究研究报告 - A 股市场结构验证，2026-05-19",
         "href": "/investor/reports/archive-1e153c72b50c/"
-      }
-    },
-    {
-      "id": "persona-global-macro-analyst-9745a0",
-      "name": "全球宏观分析师",
-      "nameEn": "Global Macro Analyst",
-      "href": "/investor/personas/#persona-global-macro-analyst-9745a0",
-      "specialty": "美欧日经济、全球贸易、地缘政治风险 【合并扩展 2026-06-11】统筹宏观全域：中国宏观与政策(PMI/PBoC/地方债)、央行政策(Fed/ECB/PBoC)、利率与收益率曲线、信用债与新发行、外汇(人民币/美元/欧元/日元)与利差…",
-      "currentView": "DeepSeek 式低价模型正在重塑 AI 定价权与软件利润池；油价地缘底线决定再通胀与降息交易的安全边际；自动驾驶与 Robotaxi 主题必须从演示热度进入单位经济和监管城市扩张验证 是当前该 persona 参与最多的研究主线。",
-      "supports": 1,
-      "risks": 0,
-      "neutral": 0,
-      "eventCount": 1,
-      "topTheses": [
-        "卫星直连与商业航天从概念弹性进入部署兑现期"
-      ],
-      "latestEvent": {
-        "title": "全球宏观分析师 · 协同回函",
-        "href": "/investor/reports/archive-a3a42aebe041/"
       }
     }
   ],
