@@ -1,0 +1,193 @@
+---
+import { readFileSync } from "node:fs";
+import path from "node:path";
+import BaseHead from "../../../components/BaseHead.astro";
+import Header from "../../../components/Header.astro";
+import hundredDays from "../../../generated/hundred-days/index.json";
+import "../../../styles/hundred-days.css";
+
+export function getStaticPaths() {
+  return hundredDays.days.map((summary) => {
+    const source = path.join(process.cwd(), "public", "hundred-days", "days", `${summary.date}.json`);
+    const day = JSON.parse(readFileSync(source, "utf8"));
+    return { params: { date: summary.date }, props: { day } };
+  });
+}
+
+const { day } = Astro.props;
+const number = new Intl.NumberFormat("en-US");
+const previous = hundredDays.days[day.dayNumber - 2];
+const next = hundredDays.days[day.dayNumber];
+const isUpcoming = day.status === "upcoming";
+const reports = (day.reports || [])
+  .filter((report) => report.title && !String(report.title).startsWith("§"))
+  .slice(0, 12);
+const thesisEvents = [...(day.thesisEvents || [])]
+  .sort((a, b) => Number(b.eventCount || 0) - Number(a.eventCount || 0))
+  .slice(0, 12);
+const lanes = [...(day.lanes || [])]
+  .sort((a, b) => Number(b.eventCount || 0) - Number(a.eventCount || 0))
+  .slice(0, 12);
+const stocks = [...(day.stocks || [])]
+  .sort((a, b) => Number(b.eventCount || 0) - Number(a.eventCount || 0))
+  .slice(0, 36);
+const topicColor = day.dominantTopic?.color || "yellow";
+const metricItems = [
+  ["REPORTS", day.metrics?.reports || 0, "公开研究"],
+  ["THESIS EVIDENCE", day.metrics?.thesisEvents || 0, "论点证据"],
+  ["READER EDITIONS", day.metrics?.readerMemos || 0, "读者版本"],
+  ["RECAPS", day.metrics?.recaps || 0, "动态复盘"],
+  ["LANES", day.lanes?.length || 0, "活跃赛道"],
+  ["STOCKS", day.stocks?.length || 0, "关联股票"],
+];
+---
+
+<!doctype html>
+<html lang="zh-CN" data-lang="zh">
+  <head>
+    <BaseHead
+      title={`DAY ${String(day.dayNumber).padStart(3, "0")} · ${day.headline} · AI 研究院 100 天`}
+      description={day.summary || `AI 研究院 100 天的第 ${day.dayNumber} 天。`}
+    />
+  </head>
+  <body class="hundred-days-page">
+    <Header />
+    <main class={`hundred-day-story tone-${topicColor}`}>
+      <nav class="hundred-day-breadcrumb" aria-label="Breadcrumb">
+        <a href="/100-days/">100 DAYS</a><span>/</span><strong>DAY {String(day.dayNumber).padStart(3, "0")}</strong>
+      </nav>
+
+      <section class="hundred-day-hero">
+        <div class="hundred-day-copy">
+          <div class="hundred-day-kicker">
+            <span>{day.date}</span>
+            <i></i>
+            <strong>{day.dominantTopic?.labelZh || "综合研究"}</strong>
+          </div>
+          <div class="hundred-day-number"><span>DAY</span><strong>{String(day.dayNumber).padStart(3, "0")}</strong><em>/ 100</em></div>
+          <h1>{day.headline}</h1>
+          <p>{day.summary}</p>
+          <div class="hundred-day-actions">
+            <a class="is-primary" href={`/100-days/?day=${day.date}#daily-field`}><span>⌁</span><span class="i18n-zh">在时间轴中查看</span><span class="i18n-en">View in timeline</span></a>
+            <button type="button" id="hundredDayShare"><span>↗</span><span class="i18n-zh">分享这一天</span><span class="i18n-en">Share this day</span></button>
+            <a href="/investor/"><span>→</span><span class="i18n-zh">进入实时研究院</span><span class="i18n-en">Open live Institute</span></a>
+          </div>
+        </div>
+
+        <aside class="hundred-day-seal-wrap">
+          <div class="hundred-day-seal" aria-label={`Day ${day.dayNumber} of 100`}>
+            {Array.from({ length: 100 }, (_, index) => (
+              <i class:list={{ "is-complete": index < day.dayNumber, "is-current": index + 1 === day.dayNumber }}></i>
+            ))}
+          </div>
+          <dl>
+            <div><dt>STATUS</dt><dd>{day.status}</dd></div>
+            <div><dt>ACTIVITY</dt><dd>{day.activityScore || 0} / 100</dd></div>
+            <div><dt>DATA THROUGH</dt><dd>{hundredDays.latestDataDate}</dd></div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="hundred-day-metrics" aria-label="Daily research metrics">
+        {metricItems.map(([label, value, labelZh]) => (
+          <div><span>{label}</span><strong>{number.format(Number(value || 0))}</strong><em>{labelZh}</em></div>
+        ))}
+      </section>
+
+      {isUpcoming ? (
+        <section class="hundred-day-upcoming">
+          <span>UPCOMING / DAY {String(day.dayNumber).padStart(3, "0")}</span>
+          <h2 class="i18n-zh">这一天仍在百日计划窗口内</h2><h2 class="i18n-en">This day remains inside the 100-day campaign window</h2>
+          <p class="i18n-zh">公开研究结果产生后，这个永久页面会由增量工作流更新。计划日期不会被伪装成已经完成的研究。</p>
+          <p class="i18n-en">The incremental workflow will update this permanent page after public research exists. A planned date is not presented as completed work.</p>
+        </section>
+      ) : (
+        <div class="hundred-day-content">
+          <section class="hundred-day-section is-wide">
+            <header><span>WHAT CHANGED</span><h2 class="i18n-zh">当日论点变化</h2><h2 class="i18n-en">Thesis changes on this day</h2><p class="i18n-zh">按证据事件数量排序，每一项都进入完整论点时间线。</p><p class="i18n-en">Ranked by evidence events, with every item linked to its full thesis timeline.</p></header>
+            {thesisEvents.length ? (
+              <div class="hundred-day-thesis-list">
+                {thesisEvents.map((thesis) => (
+                  <a href={thesis.href}>
+                    <span>{thesis.directionLabel || thesis.direction || "观察"}</span>
+                    <div><strong>{thesis.title}</strong><p>{thesis.lane} · {(thesis.stockTickers || []).slice(0, 7).join(" · ")}</p></div>
+                    <dl><div><dt>EVIDENCE</dt><dd>{thesis.eventCount || 0}</dd></div><div><dt>CONVICTION</dt><dd>{thesis.conviction || 0}</dd></div></dl>
+                  </a>
+                ))}
+              </div>
+            ) : <div class="hundred-day-empty">当日没有已映射的 thesis 证据。</div>}
+          </section>
+
+          {(day.milestones || []).length > 0 && (
+            <section class="hundred-day-section">
+              <header><span>INSTITUTION MILESTONE</span><h2 class="i18n-zh">机构里程碑</h2><h2 class="i18n-en">Institution milestone</h2></header>
+              <div class="hundred-day-milestones">
+                {day.milestones.map((milestone) => (
+                  <a href={milestone.href}><span>{milestone.date}</span><strong class="i18n-zh">{milestone.titleZh}</strong><strong class="i18n-en">{milestone.titleEn}</strong><p class="i18n-zh">{milestone.summaryZh}</p><p class="i18n-en">{milestone.summaryEn}</p></a>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {(day.episodes || []).length > 0 && (
+            <section class="hundred-day-section">
+              <header><span>READER OUTPUT</span><h2 class="i18n-zh">当日可读成果</h2><h2 class="i18n-en">Reader outputs</h2></header>
+              <div class="hundred-day-output-list">
+                {day.episodes.map((episode) => <a href={episode.href}><span>{episode.badge}</span><strong>{episode.title}</strong><p>{episode.summary}</p><em>↗</em></a>)}
+              </div>
+            </section>
+          )}
+
+          <section class="hundred-day-section is-wide">
+            <header><span>LEADING RESEARCH</span><h2 class="i18n-zh">代表研究</h2><h2 class="i18n-en">Leading research</h2><p class="i18n-zh">展示当日较完整的公开研究标题；原始内部材料不进入此页面。</p><p class="i18n-en">Representative public research titles only; raw internal material does not enter this page.</p></header>
+            <div class="hundred-day-report-grid">
+              {reports.map((report) => (
+                <a href={report.href}><span>{report.category} · {report.analyst}</span><strong>{report.title}</strong><p>{report.excerpt}</p><em>OPEN ↗</em></a>
+              ))}
+            </div>
+          </section>
+
+          <section class="hundred-day-section">
+            <header><span>ACTIVE LANES</span><h2 class="i18n-zh">活跃赛道</h2><h2 class="i18n-en">Active lanes</h2></header>
+            <div class="hundred-day-lane-list">
+              {lanes.map((lane) => <a href={lane.href}><strong>{lane.title}</strong><span>{lane.eventCount || 0} evidence · {lane.thesisCount || 0} theses</span><p>{(lane.stockTickers || []).slice(0, 8).join(" · ")}</p></a>)}
+            </div>
+          </section>
+
+          <section class="hundred-day-section">
+            <header><span>STOCK EXPOSURES</span><h2 class="i18n-zh">关联股票节点</h2><h2 class="i18n-en">Linked stock nodes</h2></header>
+            <div class="hundred-day-stock-list">
+              {stocks.map((stock) => <a href={stock.href} title={stock.name}><strong>{stock.ticker}</strong><span>{stock.name}</span><em>{stock.eventCount || 0}</em></a>)}
+            </div>
+          </section>
+        </div>
+      )}
+
+      <nav class="hundred-day-pagination" aria-label="Day navigation">
+        {previous ? <a href={`/100-days/day/${previous.date}/`}><span>← PREVIOUS</span><strong>DAY {String(previous.dayNumber).padStart(3, "0")}</strong><em>{previous.date}</em></a> : <span></span>}
+        <a class="is-index" href="/100-days/"><span>100 DAYS</span><strong class="i18n-zh">返回百日总览</strong><strong class="i18n-en">Return to the atlas</strong></a>
+        {next ? <a href={`/100-days/day/${next.date}/`}><span>NEXT →</span><strong>DAY {String(next.dayNumber).padStart(3, "0")}</strong><em>{next.date}</em></a> : <span></span>}
+      </nav>
+
+      <footer class="hundred-day-provenance">
+        <p class="i18n-zh">该页面只使用公开、脱敏的百日数据契约。指标表示研究活动与映射关系，不构成投资建议或收益承诺。</p>
+        <p class="i18n-en">This page uses only public, sanitized 100-day contracts. Metrics represent research activity and mappings, not investment advice or return promises.</p>
+        <a href={`/hundred-days/days/${day.date}.json`}>PUBLIC DATA CONTRACT ↗</a>
+      </footer>
+    </main>
+    <script>
+      const shareButton = document.getElementById("hundredDayShare");
+      shareButton?.addEventListener("click", async () => {
+        const payload = { title: document.title, text: document.querySelector(".hundred-day-hero h1")?.textContent?.trim(), url: window.location.href };
+        try {
+          if (navigator.share) await navigator.share(payload);
+          else await navigator.clipboard.writeText(window.location.href);
+          shareButton.classList.add("is-shared");
+          window.setTimeout(() => shareButton.classList.remove("is-shared"), 1600);
+        } catch {
+          // User cancellation does not need an error state.
+        }
+      });
+    </script>
+  </body>
+</html>

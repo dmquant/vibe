@@ -1,5 +1,3 @@
-import { mountHundredDaysUniverse } from "./hundred-days-universe.js";
-
 const FLOW_COPY = [
   {
     code: "01 / SIGNAL",
@@ -620,24 +618,47 @@ export function mountHundredDaysPortal() {
   let playback = 0;
   let requestToken = 0;
 
-  const universe = mountHundredDaysUniverse({
-    canvas: document.getElementById("centuryUniverse"),
-    atlas: data.atlas,
-    initialDay: activeDay,
-    onHover(node, event) {
-      if (!universeTooltip || !node || !event) {
-        if (universeTooltip) universeTooltip.hidden = true;
-        return;
-      }
-      universeTooltip.hidden = false;
-      universeTooltip.innerHTML = `<span>${escapeHtml(node.type)} · DAY ${String(node.activation).padStart(3, "0")}</span><strong>${escapeHtml(node.label)}</strong><em>${escapeHtml(node.meta || "Click to inspect")}</em>`;
-      universeTooltip.style.left = `${Math.min(window.innerWidth - 274, Math.max(12, event.clientX + 14))}px`;
-      universeTooltip.style.top = `${Math.min(window.innerHeight - 110, Math.max(12, event.clientY + 14))}px`;
-    },
-    onSelect(node) {
-      if (node?.href) window.location.assign(safeHref(node.href));
-    },
-  });
+  const universeCanvas = document.getElementById("centuryUniverse");
+  let pendingUniverseDay = activeDay;
+  let universePromise = null;
+  let universe = {
+    setDay(value) { pendingUniverseDay = Number(value || 1); },
+    destroy() {},
+  };
+
+  function ensureUniverse() {
+    if (!universeCanvas || universePromise) return universePromise;
+    universePromise = import("./hundred-days-universe.js")
+      .then(({ mountHundredDaysUniverse }) => {
+        universe = mountHundredDaysUniverse({
+          canvas: universeCanvas,
+          atlas: data.atlas,
+          initialDay: pendingUniverseDay,
+          onHover(node, event) {
+            if (!universeTooltip || !node || !event) {
+              if (universeTooltip) universeTooltip.hidden = true;
+              return;
+            }
+            universeTooltip.hidden = false;
+            universeTooltip.innerHTML = `<span>${escapeHtml(node.type)} · DAY ${String(node.activation).padStart(3, "0")}</span><strong>${escapeHtml(node.label)}</strong><em>${escapeHtml(node.meta || "Click to inspect")}</em>`;
+            universeTooltip.style.left = `${Math.min(window.innerWidth - 274, Math.max(12, event.clientX + 14))}px`;
+            universeTooltip.style.top = `${Math.min(window.innerHeight - 110, Math.max(12, event.clientY + 14))}px`;
+          },
+          onSelect(node) {
+            if (node?.href) window.location.assign(safeHref(node.href));
+          },
+        });
+        universe.setDay(pendingUniverseDay);
+        return universe;
+      })
+      .catch(() => null);
+    return universePromise;
+  }
+
+  universeCanvas?.addEventListener("pointerenter", ensureUniverse, { once: true });
+  universeCanvas?.addEventListener("focus", ensureUniverse, { once: true });
+  if ("requestIdleCallback" in window) window.requestIdleCallback(ensureUniverse, { timeout: 1800 });
+  else window.setTimeout(ensureUniverse, 700);
 
   const river = mountResearchRiver(document.getElementById("centuryResearchRiver"), data.days, activeDay, (day) => selectDay(day, { history: true }));
   const episodes = mountEpisodeLibrary();
@@ -659,7 +680,7 @@ export function mountHundredDaysPortal() {
     if (inspectorTopic) inspectorTopic.textContent = language() === "en" ? day.dominantTopic?.labelEn || "Integrated research" : day.dominantTopic?.labelZh || "综合研究";
     if (inspectorHeadline) inspectorHeadline.textContent = day.headline;
     if (inspectorSummary) inspectorSummary.textContent = day.summary;
-    if (contractLink) contractLink.href = safeHref(day.detailHref, `/hundred-days/days/${day.date}.json`);
+    if (contractLink) contractLink.href = `/100-days/day/${day.date}/`;
     updateMetrics(day.metrics);
   }
 
@@ -722,6 +743,84 @@ export function mountHundredDaysPortal() {
     loadDay(day);
     if (options.history !== false) updateUrl(day, Boolean(options.history));
   }
+
+  const guide = document.getElementById("centuryGuide");
+  const guideOpen = document.querySelector("[data-guide-open]");
+  const guideClose = document.querySelector("[data-guide-close]");
+  const guideExplore = document.querySelector("[data-guide-explore]");
+  const guideSteps = [...document.querySelectorAll("[data-guide-step]")];
+  const guideChapters = [...document.querySelectorAll("[data-guide-chapter]")];
+  const guideProgress = document.getElementById("centuryGuideProgress");
+  const guidePlay = document.getElementById("centuryGuidePlay");
+  let guideIndex = 0;
+  let guideTimer = 0;
+
+  function stopGuidePlayback() {
+    window.clearInterval(guideTimer);
+    guideTimer = 0;
+    guidePlay?.classList.remove("is-playing");
+    guidePlay?.setAttribute("aria-label", "Play guided replay");
+    if (guidePlay) guidePlay.textContent = "▶";
+  }
+
+  function setGuideChapter(value, syncDay = true) {
+    guideIndex = Math.max(0, Math.min(guideChapters.length - 1, Number(value || 0)));
+    guideSteps.forEach((step, index) => step.classList.toggle("is-active", index === guideIndex));
+    guideChapters.forEach((chapter, index) => chapter.classList.toggle("is-active", index === guideIndex));
+    if (guideProgress) guideProgress.style.width = `${((guideIndex + 1) / Math.max(1, guideChapters.length)) * 100}%`;
+    const day = Number(guideSteps[guideIndex]?.dataset.guideDay || 1);
+    if (syncDay) selectDay(day, { history: false });
+  }
+
+  function openGuide() {
+    if (!guide) return;
+    ensureUniverse();
+    setGuideChapter(0);
+    if (typeof guide.showModal === "function") guide.showModal();
+    else guide.setAttribute("open", "");
+  }
+
+  function closeGuide() {
+    stopGuidePlayback();
+    if (!guide) return;
+    if (typeof guide.close === "function") guide.close();
+    else guide.removeAttribute("open");
+  }
+
+  guideOpen?.addEventListener("click", openGuide);
+  guideClose?.addEventListener("click", closeGuide);
+  guideExplore?.addEventListener("click", closeGuide);
+  guide?.addEventListener("click", (event) => { if (event.target === guide) closeGuide(); });
+  guide?.addEventListener("close", stopGuidePlayback);
+  guideSteps.forEach((step, index) => step.addEventListener("click", () => {
+    stopGuidePlayback();
+    setGuideChapter(index);
+  }));
+  document.getElementById("centuryGuidePrev")?.addEventListener("click", () => {
+    stopGuidePlayback();
+    setGuideChapter(guideIndex - 1);
+  });
+  document.getElementById("centuryGuideNext")?.addEventListener("click", () => {
+    stopGuidePlayback();
+    setGuideChapter(guideIndex + 1);
+  });
+  guidePlay?.addEventListener("click", () => {
+    if (guideTimer) {
+      stopGuidePlayback();
+      return;
+    }
+    if (guideIndex >= guideChapters.length - 1) setGuideChapter(0);
+    guidePlay.classList.add("is-playing");
+    guidePlay.setAttribute("aria-label", "Pause guided replay");
+    guidePlay.textContent = "Ⅱ";
+    guideTimer = window.setInterval(() => {
+      if (guideIndex >= guideChapters.length - 1) {
+        stopGuidePlayback();
+        return;
+      }
+      setGuideChapter(guideIndex + 1);
+    }, 5200);
+  });
 
   dayCells.forEach((cell) => cell.addEventListener("click", () => selectDay(Number(cell.dataset.centuryDay), { history: true })));
   range?.addEventListener("input", () => selectDay(Number(range.value), { history: false }));

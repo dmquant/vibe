@@ -5,18 +5,164 @@ const initialRecord = data.days.find((day) => day.dayNumber === initialDay) || d
 const payload = JSON.stringify(data).replaceAll("<", "\\u003c");
 const number = new Intl.NumberFormat("en-US");
 const scoreItems = [
-  { key: "reports", label: "Reports", labelZh: "窗口内研究", color: "blue" },
-  { key: "researchThreads", label: "Research threads", labelZh: "研究线程", color: "green" },
-  { key: "researchNotes", label: "Research notes", labelZh: "研究节点", color: "yellow" },
-  { key: "theses", label: "Living theses", labelZh: "动态论点", color: "orange" },
-  { key: "lanes", label: "Investable lanes", labelZh: "投资赛道", color: "blue" },
-  { key: "stocks", label: "Stock nodes", labelZh: "股票节点", color: "green" },
-  { key: "personas", label: "Analyst personas", labelZh: "分析师画像", color: "yellow" },
-  { key: "personaTimelineEvents", label: "View changes", labelZh: "观点时间事件", color: "orange" },
-  { key: "readerMemos", label: "Reader memos", labelZh: "人类友好报告", color: "blue" },
-  { key: "recapDashboards", label: "Living recaps", labelZh: "动态复盘", color: "green" },
-  { key: "deepResearch", label: "Deep research", labelZh: "旗舰深研", color: "red" },
-  { key: "publicEdges", label: "Public graph edges", labelZh: "公开研究关系", color: "orange" },
+  { key: "reports", label: "Published research", labelZh: "公开研究", color: "blue", href: "/investor/archive/" },
+  { key: "researchThreads", label: "Research discussions", labelZh: "研究讨论", color: "green", href: "/investor/timeline/" },
+  { key: "researchNotes", label: "Evidence events", labelZh: "证据事件", color: "yellow", href: "/investor/timeline/" },
+  { key: "theses", label: "Living theses", labelZh: "动态论点", color: "orange", href: "/investor/theses/" },
+  { key: "lanes", label: "Investable lanes", labelZh: "投资赛道", color: "blue", href: "/investor/lanes/" },
+  { key: "stocks", label: "Stock nodes", labelZh: "股票节点", color: "green", href: "/investor/stocks/" },
+  { key: "personas", label: "Analyst personas", labelZh: "分析师画像", color: "yellow", href: "/investor/personas/" },
+  { key: "personaTimelineEvents", label: "View changes", labelZh: "观点变化", color: "orange", href: "/investor/personas/" },
+  { key: "readerMemos", label: "Reader editions", labelZh: "读者版本", color: "blue", href: "/investor/daily/" },
+  { key: "recapDashboards", label: "Living recaps", labelZh: "动态复盘", color: "green", href: "/investor/recaps/" },
+  { key: "deepResearch", label: "Flagship research", labelZh: "旗舰深研", color: "red", href: "/investor/archive/" },
+  { key: "publicEdges", label: "Evidence relations", labelZh: "证据关系", color: "orange", href: "/investor/research-network/" },
+];
+
+const guideChapters = [
+  {
+    day: 1,
+    code: "DAY 001 / MEMORY",
+    color: "blue",
+    titleZh: "研究第一次留下可以继续生长的记忆",
+    titleEn: "Research leaves memory that can keep growing",
+    bodyZh: "第一条公开研究线程把一次性回答变成可延续、可追踪、可被后续角色质疑的讨论链。",
+    bodyEn: "The first public thread turns a one-off answer into a traceable discussion that later specialists can challenge.",
+  },
+  {
+    day: 7,
+    code: "DAY 007 / QA",
+    color: "red",
+    titleZh: "文字流畅度与证据质量被正式分开",
+    titleEn: "Fluent prose and evidence quality become separate tests",
+    bodyZh: "引用、日期和跨步骤一致性获得独立检查，失败不再被漂亮总结掩盖，而是回到修订队列。",
+    bodyEn: "Sources, dates, and cross-step consistency receive independent checks, sending failures back for revision.",
+  },
+  {
+    day: 29,
+    code: "DAY 029 / PUBLIC LAYER",
+    color: "green",
+    titleZh: "Vibe 成为研究院面向人的公开阅读层",
+    titleEn: "Vibe becomes the Institute's public reader layer",
+    bodyZh: "内部图结构不再原样倾倒给读者，而是被重组为结论、变化、风险、证伪条件和来源。",
+    bodyEn: "Internal graph-shaped work is recomposed into conclusions, changes, risks, falsifiers, and sources.",
+  },
+  {
+    day: 33,
+    code: "DAY 033 / HUMAN CHALLENGE",
+    color: "yellow",
+    titleZh: "人类反馈迫使 Mag7 框架重新打开",
+    titleEn: "Human feedback reopens the Mag7 framework",
+    bodyZh: "Microsoft、Office 与 Windows 的质疑没有被当作附注，而是改变了下一轮研究问题与比较框架。",
+    bodyEn: "Challenges around Microsoft, Office, and Windows change the next research questions instead of becoming footnotes.",
+  },
+  {
+    day: 43,
+    code: "DAY 043 / RECAP",
+    color: "orange",
+    titleZh: "研究开始对市场路径和后续证据负责",
+    titleEn: "Research starts answering to later evidence and market paths",
+    bodyZh: "MSCI、科创 50、AI 电力、HBM 与先进封装进入时间化复盘，观点变化开始成为正式成果。",
+    bodyEn: "MSCI, STAR 50, AI power, HBM, and packaging enter temporal recap, making view changes first-class output.",
+  },
+  {
+    day: Math.min(data.latestDataDay || data.currentDay, data.dayCount),
+    code: `DAY ${String(data.latestDataDay || data.currentDay).padStart(3, "0")} / DECISION GRAPH`,
+    color: "blue",
+    titleZh: "研究图最终落到论点、赛道、股票与组合",
+    titleEn: "The research graph resolves into theses, lanes, stocks, and portfolios",
+    bodyZh: "今天的公开层不只回答发生了什么，还保留每个判断连接的产业链、标的、证据时间线和失效条件。",
+    bodyEn: "The public layer now preserves each judgment's lane, stock exposure, evidence timeline, and invalidation conditions.",
+  },
+];
+
+const flagshipReplays = [
+  {
+    code: "01 / AI PHYSICAL STACK",
+    color: "blue",
+    titleZh: "AI 算力的物理边界",
+    titleEn: "The physical boundary of AI compute",
+    summaryZh: "研究从 GPU 需求继续下沉到 HBM、先进封装、CPO、电力、并网、变压器和费率传导。",
+    summaryEn: "The research moves from GPU demand into HBM, packaging, CPO, power, interconnection, transformers, and rate design.",
+    steps: [
+      { date: "05-18", labelZh: "提出资本开支与电力约束", labelEn: "Capex meets power constraints", href: "/investor/deep-research/ai-power-inflation-transmission-0c9ba15c/" },
+      { date: "06-03", labelZh: "扩展到二阶产业瓶颈", labelEn: "Expand into second-order bottlenecks", href: "/investor/reports/recap-ai-power-second-order-bottleneck-recap-2026-06-03/" },
+      { date: "LIVE", labelZh: "进入电力与电网赛道", labelEn: "Track the power and grid lane", href: "/investor/lanes/ai-power-and-grid-equipment/" },
+    ],
+  },
+  {
+    code: "02 / MAG7",
+    color: "yellow",
+    titleZh: "Mag7：从平台垄断到基础设施再分层",
+    titleEn: "Mag7: from platform dominance to infrastructure stratification",
+    summaryZh: "人类反馈把旧软件基石、模型独占、云、自研芯片、终端与管理层能力放进同一比较框架。",
+    summaryEn: "Human feedback brings legacy software, model exclusivity, cloud, custom silicon, devices, and management into one comparison.",
+    steps: [
+      { date: "05-24", labelZh: "发布下一时代输家深研", labelEn: "Publish the next-era loser study", href: "/investor/deep-research/mag7-next-era-losers-6f2a8c9d/" },
+      { date: "06-02", labelZh: "完成首轮观点复盘", labelEn: "Complete the first thesis recap", href: "/investor/reports/recap-mag7-next-era-losers-recap-2026-06-02/" },
+      { date: "LIVE", labelZh: "跟踪动态论点", labelEn: "Track the living thesis", href: "/investor/theses/thesis-8c5a9690a0/" },
+    ],
+  },
+  {
+    code: "03 / CHINA INDEX EVENTS",
+    color: "orange",
+    titleZh: "科创 50 与 MSCI：让判断接受时间检验",
+    titleEn: "STAR 50 and MSCI: making views answer to time",
+    summaryZh: "研究从事件标题推进到执行窗口、流动性、指数路径、触发线和后续修正。",
+    summaryEn: "Research advances from event headlines into execution windows, liquidity, index paths, triggers, and revision.",
+    steps: [
+      { date: "05-30", labelZh: "统一 MSCI 执行与流动性口径", labelEn: "Reconcile MSCI execution and liquidity", href: "/investor/reports/recap-msci-rebalance-reconciliation-report-2026-05-30.zh/" },
+      { date: "06-01", labelZh: "科创 50 首次市场表现复盘", labelEn: "First STAR 50 market-path recap", href: "/investor/reports/recap-kc50-recap-2026-06-01/" },
+      { date: "LIVE", labelZh: "继续跟踪科创 50 论点", labelEn: "Continue the STAR 50 thesis", href: "/investor/theses/thesis-8525fc93df/" },
+    ],
+  },
+];
+
+const revisionLedger = [
+  {
+    date: "2026-05-24",
+    color: "yellow",
+    beforeZh: "把 Mag7 当成统一的平台优势组",
+    beforeEn: "Treat Mag7 as one platform-advantage cohort",
+    afterZh: "拆解旧软件、模型、云、芯片、终端和管理层约束",
+    afterEn: "Separate legacy software, models, cloud, chips, devices, and management constraints",
+    reasonZh: "人类反馈要求重新评估 Microsoft、Office 与 Windows。",
+    reasonEn: "Human feedback required a renewed assessment of Microsoft, Office, and Windows.",
+    href: "/investor/deep-research/mag7-next-era-losers-6f2a8c9d/",
+  },
+  {
+    date: "2026-05-30",
+    color: "orange",
+    beforeZh: "把 MSCI 调整理解为被动买入事件",
+    beforeEn: "Read MSCI changes as a passive-buy event",
+    afterZh: "改写为主动分配、MOC 流动性与执行窗口问题",
+    afterEn: "Reframe it around active allocation, MOC liquidity, and execution windows",
+    reasonZh: "跨报告口径对账暴露了叙事与真实执行之间的差异。",
+    reasonEn: "Cross-report reconciliation exposed the gap between narrative and execution.",
+    href: "/investor/reports/recap-msci-rebalance-reconciliation-report-2026-05-30.zh/",
+  },
+  {
+    date: "2026-06-01",
+    color: "green",
+    beforeZh: "研究结果停留在发布时点",
+    beforeEn: "Let research stop at publication",
+    afterZh: "把科创 50 观点与指数路径、触发线和后续修正并列回放",
+    afterEn: "Replay STAR 50 views beside index paths, triggers, and later revisions",
+    reasonZh: "复盘机制要求观点接受后续市场与证据检验。",
+    reasonEn: "The recap mechanism requires views to answer to later markets and evidence.",
+    href: "/investor/reports/recap-kc50-recap-2026-06-01/",
+  },
+  {
+    date: "2026-06-03",
+    color: "blue",
+    beforeZh: "把 AI 基础设施主要理解为芯片需求",
+    beforeEn: "Frame AI infrastructure mainly as chip demand",
+    afterZh: "扩展到电力、并网、变压器、存储、光互联、材料与交付",
+    afterEn: "Expand into power, interconnection, transformers, memory, optics, materials, and delivery",
+    reasonZh: "二阶瓶颈研究显示利润池与风险并不只停留在 GPU。",
+    reasonEn: "Second-order bottleneck research showed that profit pools and risks do not stop at the GPU.",
+    href: "/investor/reports/recap-ai-power-second-order-bottleneck-recap-2026-06-03/",
+  },
 ];
 
 const episodeFilters = [
@@ -34,22 +180,27 @@ const episodeFilters = [
     <div class="century-hero-copy">
       <div class="century-kicker">
         <span class="century-live-dot" aria-hidden="true"></span>
-        <span class="i18n-zh">AI 研究院 · 时间型研究图谱</span>
-        <span class="i18n-en">AI Institute · Temporal Research Atlas</span>
+        <span class="i18n-zh">100 DAYS · THE INSTITUTION THAT LEARNS</span>
+        <span class="i18n-en">100 DAYS · THE INSTITUTION THAT LEARNS</span>
       </div>
       <h1 id="century-title">
         <span class="i18n-zh">AI 研究院的 100 天</span>
         <span class="i18n-en">100 Days of AI Institute</span>
       </h1>
+      <strong class="century-brand-line">
+        <span class="i18n-zh">研究不是生成，是持续修正。</span>
+        <span class="i18n-en">Research is not generated. It is continuously revised.</span>
+      </strong>
       <p>
-        <span class="i18n-zh">不是展示 AI 写了多少文件，而是回放 Agentic Models 如何被组织、约束、质疑、复盘，并持续转化为人类可用的研究判断。</span>
-        <span class="i18n-en">A replay of how agentic models became an organized, constrained, auditable research institution built for human judgment.</span>
+        <span class="i18n-zh">一座会留下证据、保存分歧、承认修订并持续运行的研究机构，如何在一百天里长出来。</span>
+        <span class="i18n-en">How an institution that preserves evidence, keeps dissent, admits revision, and continues operating grew across one hundred days.</span>
       </p>
       <div class="century-hero-actions">
-        <a class="century-primary-action" href="#daily-field">
-          <span aria-hidden="true">↓</span>
-          <span class="i18n-zh">进入每日时间线</span><span class="i18n-en">Enter daily timeline</span>
-        </a>
+        <button class="century-primary-action" type="button" data-guide-open>
+          <span aria-hidden="true">▶</span>
+          <span class="i18n-zh">观看百日回放</span><span class="i18n-en">Watch the guided replay</span>
+        </button>
+        <a href="#daily-field"><span aria-hidden="true">⌁</span><span class="i18n-zh">探索每一天</span><span class="i18n-en">Explore every day</span></a>
         <a href="/investor/">
           <span aria-hidden="true">↗</span>
           <span class="i18n-zh">打开实时研究院</span><span class="i18n-en">Open the live Institute</span>
@@ -58,6 +209,11 @@ const episodeFilters = [
     </div>
 
     <aside class="century-hero-hud" aria-label="100 day portal status">
+      <div class="century-brand-seal" aria-label={`${data.currentDay} of 100 days complete`}>
+        {Array.from({ length: 100 }, (_, index) => (
+          <i class:list={{ "is-complete": index < data.currentDay, "is-current": index + 1 === data.currentDay }}></i>
+        ))}
+      </div>
       <div class="century-day-lockup">
         <span>DAY</span>
         <strong id="centuryHeroDay">{String(data.currentDay).padStart(3, "0")}</strong>
@@ -86,13 +242,62 @@ const episodeFilters = [
     </div>
   </section>
 
+  <dialog class="century-guide" id="centuryGuide" aria-labelledby="centuryGuideTitle">
+    <div class="century-guide-frame">
+      <header>
+        <div>
+          <span>100 DAYS / GUIDED REPLAY</span>
+          <strong id="centuryGuideTitle" class="i18n-zh">一座会学习的研究院如何长出来</strong>
+          <strong class="i18n-en">How an institution that learns took shape</strong>
+        </div>
+        <button type="button" data-guide-close aria-label="Close guided replay" title="Close">×</button>
+      </header>
+      <div class="century-guide-body">
+        <nav aria-label="Guided replay chapters">
+          {guideChapters.map((chapter, index) => (
+            <button type="button" class:list={{ "is-active": index === 0 }} data-guide-step={index} data-guide-day={chapter.day}>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <i class={`tone-${chapter.color}`}></i>
+              <strong>DAY {String(chapter.day).padStart(3, "0")}</strong>
+            </button>
+          ))}
+        </nav>
+        <div class="century-guide-chapters">
+          {guideChapters.map((chapter, index) => (
+            <article class:list={[`tone-${chapter.color}`, { "is-active": index === 0 }]} data-guide-chapter={index}>
+              <span>{chapter.code}</span>
+              <h2 class="i18n-zh">{chapter.titleZh}</h2><h2 class="i18n-en">{chapter.titleEn}</h2>
+              <p class="i18n-zh">{chapter.bodyZh}</p><p class="i18n-en">{chapter.bodyEn}</p>
+              <div>
+                <a href={`/100-days/day/${data.days.find((day) => day.dayNumber === chapter.day)?.date || data.latestDataDate}/`}>
+                  <span class="i18n-zh">打开这一天</span><span class="i18n-en">Open this day</span> ↗
+                </a>
+                <em>{data.days.find((day) => day.dayNumber === chapter.day)?.date}</em>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+      <footer>
+        <div class="century-guide-progress"><i id="centuryGuideProgress"></i></div>
+        <div class="century-guide-controls">
+          <button type="button" id="centuryGuidePrev" aria-label="Previous chapter" title="Previous chapter">←</button>
+          <button type="button" id="centuryGuidePlay" aria-label="Play guided replay" title="Play guided replay">▶</button>
+          <button type="button" id="centuryGuideNext" aria-label="Next chapter" title="Next chapter">→</button>
+          <a href="#daily-field" data-guide-explore><span class="i18n-zh">进入完整时间线</span><span class="i18n-en">Enter the full timeline</span></a>
+        </div>
+      </footer>
+    </div>
+  </dialog>
+
   <nav class="century-section-nav" aria-label="100 days portal sections">
     <a href="#story"><span>01</span><strong class="i18n-zh">故事</strong><strong class="i18n-en">Story</strong></a>
-    <a href="#daily-field"><span>02</span><strong class="i18n-zh">每日</strong><strong class="i18n-en">Daily</strong></a>
-    <a href="#research-river"><span>03</span><strong class="i18n-zh">研究流</strong><strong class="i18n-en">River</strong></a>
-    <a href="#episodes"><span>04</span><strong class="i18n-zh">事件库</strong><strong class="i18n-en">Episodes</strong></a>
-    <a href="#institution"><span>05</span><strong class="i18n-zh">机构</strong><strong class="i18n-en">Institution</strong></a>
-    <a href="#scorecard"><span>06</span><strong class="i18n-zh">记分卡</strong><strong class="i18n-en">Scorecard</strong></a>
+    <a href="#proof"><span>02</span><strong class="i18n-zh">证据</strong><strong class="i18n-en">Proof</strong></a>
+    <a href="#daily-field"><span>03</span><strong class="i18n-zh">每日</strong><strong class="i18n-en">Daily</strong></a>
+    <a href="#research-river"><span>04</span><strong class="i18n-zh">研究流</strong><strong class="i18n-en">River</strong></a>
+    <a href="#episodes"><span>05</span><strong class="i18n-zh">事件库</strong><strong class="i18n-en">Episodes</strong></a>
+    <a href="#institution"><span>06</span><strong class="i18n-zh">机构</strong><strong class="i18n-en">Institution</strong></a>
+    <a href="#scorecard"><span>07</span><strong class="i18n-zh">记分卡</strong><strong class="i18n-en">Scorecard</strong></a>
     <a href="/investor/"><span>↗</span><strong>Live</strong></a>
   </nav>
 
@@ -125,19 +330,68 @@ const episodeFilters = [
       </div>
     </section>
 
+    <section class="century-section century-proof-section" id="proof">
+      <header class="century-section-header">
+        <div>
+          <span>02 / PROOF OF LEARNING</span>
+          <h2 class="i18n-zh">真正的成果不是更多内容，而是判断如何被改写</h2>
+          <h2 class="i18n-en">The proof is not more content. It is how judgments were rewritten.</h2>
+        </div>
+        <p class="i18n-zh">三个研究回放展示同一套机构能力：提出问题、保存分歧、连接产业与股票、等待后续证据，并公开修订。</p>
+        <p class="i18n-en">Three replays show the same institutional capability: ask, preserve dissent, map industries and stocks, await evidence, and revise in public.</p>
+      </header>
+
+      <div class="century-flagship-grid">
+        {flagshipReplays.map((replay) => (
+          <article class={`century-flagship tone-${replay.color}`}>
+            <header><span>{replay.code}</span><i></i></header>
+            <h3 class="i18n-zh">{replay.titleZh}</h3><h3 class="i18n-en">{replay.titleEn}</h3>
+            <p class="i18n-zh">{replay.summaryZh}</p><p class="i18n-en">{replay.summaryEn}</p>
+            <ol>
+              {replay.steps.map((step) => (
+                <li>
+                  <span>{step.date}</span>
+                  <a href={step.href}><strong class="i18n-zh">{step.labelZh}</strong><strong class="i18n-en">{step.labelEn}</strong><em>↗</em></a>
+                </li>
+              ))}
+            </ol>
+          </article>
+        ))}
+      </div>
+
+      <div class="century-revision-ledger" id="revisions">
+        <header>
+          <div><span>REVISION LEDGER</span><h3 class="i18n-zh">我们如何改变了研究框架</h3><h3 class="i18n-en">How the research frame changed</h3></div>
+          <p class="i18n-zh">这里记录可被公开证据支持的框架修订，不把事后解释包装成预测胜率。</p>
+          <p class="i18n-en">This ledger records evidence-backed revisions without presenting hindsight as forecast accuracy.</p>
+        </header>
+        <div>
+          {revisionLedger.map((revision) => (
+            <a class={`century-revision-row tone-${revision.color}`} href={revision.href}>
+              <span>{revision.date}</span>
+              <div><em class="i18n-zh">原框架</em><em class="i18n-en">Before</em><strong class="i18n-zh">{revision.beforeZh}</strong><strong class="i18n-en">{revision.beforeEn}</strong></div>
+              <i aria-hidden="true">→</i>
+              <div><em class="i18n-zh">修订后</em><em class="i18n-en">After</em><strong class="i18n-zh">{revision.afterZh}</strong><strong class="i18n-en">{revision.afterEn}</strong></div>
+              <p class="i18n-zh">{revision.reasonZh}</p><p class="i18n-en">{revision.reasonEn}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
     <section class="century-stat-rail" aria-label="100 day public statistics">
-      <div><span>REPORTS</span><strong>{number.format(data.scorecard.reports)}</strong><em class="i18n-zh">100 天窗口</em><em class="i18n-en">100-day window</em></div>
-      <div><span>THREADS</span><strong>{number.format(data.scorecard.researchThreads)}</strong><em class="i18n-zh">研究讨论</em><em class="i18n-en">research discussions</em></div>
       <div><span>THESES</span><strong>{number.format(data.scorecard.theses)}</strong><em class="i18n-zh">动态论点</em><em class="i18n-en">living theses</em></div>
       <div><span>LANES</span><strong>{number.format(data.scorecard.lanes)}</strong><em class="i18n-zh">投资赛道</em><em class="i18n-en">investable lanes</em></div>
       <div><span>STOCKS</span><strong>{number.format(data.scorecard.stocks)}</strong><em class="i18n-zh">股票节点</em><em class="i18n-en">stock nodes</em></div>
-      <div><span>EPISODES</span><strong>{number.format(data.episodes.length)}</strong><em class="i18n-zh">可回放事件</em><em class="i18n-en">replayable episodes</em></div>
+      <div><span>READER EDITIONS</span><strong>{number.format(data.scorecard.readerMemos)}</strong><em class="i18n-zh">人类可读交付</em><em class="i18n-en">human-readable outputs</em></div>
+      <div><span>RECAPS</span><strong>{number.format(data.scorecard.recapDashboards)}</strong><em class="i18n-zh">动态复盘</em><em class="i18n-en">living recaps</em></div>
+      <div><span>RELATIONS</span><strong>{number.format(data.scorecard.publicEdges)}</strong><em class="i18n-zh">公开证据关系</em><em class="i18n-en">public evidence relations</em></div>
     </section>
 
     <section class="century-section century-daily-section" id="daily-field">
       <header class="century-section-header">
         <div>
-          <span>02 / DAILY FIELD</span>
+          <span>03 / DAILY FIELD</span>
           <h2 class="i18n-zh">一百天，每一天都可以打开</h2>
           <h2 class="i18n-en">One hundred days, every day inspectable</h2>
         </div>
@@ -194,7 +448,7 @@ const episodeFilters = [
         <article class="century-day-inspector" aria-live="polite" aria-busy="true">
           <div class="century-inspector-topline">
             <span id="centuryInspectorTopic">{initialRecord.dominantTopic?.labelZh || "综合研究"}</span>
-            <a id="centuryDayContractLink" href={initialRecord.detailHref}>JSON ↗</a>
+            <a id="centuryDayContractLink" href={`/100-days/day/${initialRecord.date}/`}><span class="i18n-zh">打开这一天</span><span class="i18n-en">Open this day</span> ↗</a>
           </div>
           <h3 id="centuryInspectorHeadline">{initialRecord.headline}</h3>
           <p id="centuryInspectorSummary">{initialRecord.summary}</p>
@@ -216,7 +470,7 @@ const episodeFilters = [
     <section class="century-section century-river-section" id="research-river">
       <header class="century-section-header">
         <div>
-          <span>03 / RESEARCH RIVER</span>
+          <span>04 / RESEARCH RIVER</span>
           <h2 class="i18n-zh">研究活动如何在一百天里积累</h2>
           <h2 class="i18n-en">How research activity accumulated across 100 days</h2>
         </div>
@@ -239,7 +493,7 @@ const episodeFilters = [
     <section class="century-section century-episodes-section" id="episodes">
       <header class="century-section-header">
         <div>
-          <span>04 / EPISODE LIBRARY</span>
+          <span>05 / EPISODE LIBRARY</span>
           <h2 class="i18n-zh">不是六个案例，而是持续扩展的研究事件库</h2>
           <h2 class="i18n-en">Not six cases, but an expanding research episode library</h2>
         </div>
@@ -295,7 +549,7 @@ const episodeFilters = [
     <section class="century-section century-institution-section" id="institution">
       <header class="century-section-header">
         <div>
-          <span>05 / INSTITUTION LOOP</span>
+          <span>06 / INSTITUTION LOOP</span>
           <h2 class="i18n-zh">模型如何变成研究同事</h2>
           <h2 class="i18n-en">How models become research colleagues</h2>
         </div>
@@ -324,7 +578,7 @@ const episodeFilters = [
     <section class="century-section century-scorecard-section" id="scorecard">
       <header class="century-section-header">
         <div>
-          <span>06 / PUBLIC SCORECARD</span>
+          <span>07 / PUBLIC SCORECARD</span>
           <h2 class="i18n-zh">规模、结构、可读性与复盘</h2>
           <h2 class="i18n-en">Scale, structure, readability, and recap</h2>
         </div>
@@ -333,7 +587,7 @@ const episodeFilters = [
       </header>
       <div class="century-score-grid">
         {scoreItems.map((item) => (
-          <a class={`century-score-row tone-${item.color}`} href={item.key === "reports" ? "/investor/archive/" : item.key === "theses" || item.key === "lanes" || item.key === "stocks" || item.key === "publicEdges" ? "/investor/research-network/" : item.key === "personas" || item.key === "personaTimelineEvents" ? "/investor/personas/" : item.key === "readerMemos" ? "/investor/#reader" : item.key === "recapDashboards" ? "/investor/recaps/" : item.key === "deepResearch" ? "/investor/console/#deep" : "/investor/console/#operations"}>
+          <a class={`century-score-row tone-${item.color}`} href={item.href}>
             <span>{item.label}</span>
             <strong>{number.format(data.scorecard[item.key] || 0)}</strong>
             <em>{item.labelZh}</em>
