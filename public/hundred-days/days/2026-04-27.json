@@ -22,7 +22,7 @@
     ],
     "count": 2
   },
-  "activityScore": 69,
+  "activityScore": 70,
   "metrics": {
     "reports": 3,
     "researchThreads": 20,
@@ -279,22 +279,22 @@
         "AMZN",
         "GOOGL",
         "TSM",
-        "AMD",
         "AVGO",
+        "AMD",
         "AAPL"
       ]
     },
     {
-      "id": "thesis-ce2bffa691",
-      "title": "DeepSeek V4 的算法优化是否预示着算力暴力美学的终结，从而导致 GPU 溢价的系统性回归？",
-      "titleEn": "Practical research topic: DeepSeek V4 的算法优化是否预示着算力暴力美学的终结，从而导致 GPU 溢价的系统性回归？",
-      "href": "/investor/theses/thesis-ce2bffa691/",
+      "id": "thesis-d1f5e35b43",
+      "title": "2026年AI芯片竞争格局：NVIDIA Rubin对阵云巨头ASIC",
+      "titleEn": "Practical research topic: 2026年AI芯片竞争格局：NVIDIA Rubin对阵云巨头ASIC",
+      "href": "/investor/theses/thesis-d1f5e35b43/",
       "laneId": "lane_f44cf45c8649",
       "lane": "AI 算力半导体",
       "laneHref": "/investor/lanes/ai-compute-semiconductors/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 70,
+      "conviction": 69,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -310,24 +310,25 @@
       ],
       "stockTickers": [
         "NVDA",
-        "META",
         "TSM",
+        "META",
+        "000660.KS",
+        "MU",
         "AMD",
-        "AVGO",
-        "000660.KS"
+        "AVGO"
       ]
     },
     {
-      "id": "thesis-9d3836cc07",
-      "title": "AI 生产率去通胀需要等待采用率和流程重构验证",
-      "titleEn": "AI 生产率去通胀需要等待采用率和流程重构验证",
-      "href": "/investor/theses/thesis-9d3836cc07/",
-      "laneId": "lane_008e3bd9306a",
-      "lane": "AI 软件效率/生产率",
-      "laneHref": "/investor/lanes/ai-software-productivity/",
+      "id": "thesis-a10279b001",
+      "title": "面对 Meta 自建 Meta Compute 算力集群的传闻，Nebius (NBIS) 的 270 亿美元合同是否仍具备护城河？散户…",
+      "titleEn": "Practical research topic: 面对 Meta 自建 Meta Compute 算力集群的传闻，Nebius (NBIS) 的 270 亿美元合同是否仍具备护城河？散户…",
+      "href": "/investor/theses/thesis-a10279b001/",
+      "laneId": "lane_f44cf45c8649",
+      "lane": "AI 算力半导体",
+      "laneHref": "/investor/lanes/ai-compute-semiconductors/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 55,
+      "conviction": 66,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -343,17 +344,32 @@
       ],
       "stockTickers": [
         "META",
-        "MSFT",
-        "AMZN",
-        "GOOGL",
         "NVDA",
-        "NOW",
-        "CRM",
-        "ADBE"
+        "TSM",
+        "AMD",
+        "AVGO"
       ]
     }
   ],
   "lanes": [
+    {
+      "id": "lane_f44cf45c8649",
+      "title": "AI 算力半导体",
+      "href": "/investor/lanes/ai-compute-semiconductors/",
+      "thesisCount": 2,
+      "eventCount": 2,
+      "convictionTotal": 135,
+      "stockTickers": [
+        "NVDA",
+        "TSM",
+        "META",
+        "000660.KS",
+        "MU",
+        "AMD",
+        "AVGO"
+      ],
+      "avgConviction": 68
+    },
     {
       "id": "lane_f21fc181388a",
       "title": "Mag7 AI 平台再分层",
@@ -368,47 +384,11 @@
         "AMZN",
         "GOOGL",
         "TSM",
-        "AMD",
         "AVGO",
+        "AMD",
         "AAPL"
       ],
       "avgConviction": 71
-    },
-    {
-      "id": "lane_f44cf45c8649",
-      "title": "AI 算力半导体",
-      "href": "/investor/lanes/ai-compute-semiconductors/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 70,
-      "stockTickers": [
-        "NVDA",
-        "META",
-        "TSM",
-        "AMD",
-        "AVGO",
-        "000660.KS"
-      ],
-      "avgConviction": 70
-    },
-    {
-      "id": "lane_008e3bd9306a",
-      "title": "AI 软件效率/生产率",
-      "href": "/investor/lanes/ai-software-productivity/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 55,
-      "stockTickers": [
-        "META",
-        "MSFT",
-        "AMZN",
-        "GOOGL",
-        "NVDA",
-        "NOW",
-        "CRM",
-        "ADBE"
-      ],
-      "avgConviction": 55
     }
   ],
   "stocks": [
@@ -421,8 +401,7 @@
       "eventCount": 3,
       "lanes": [
         "Mag7 AI 平台再分层",
-        "AI 算力半导体",
-        "AI 软件效率/生产率"
+        "AI 算力半导体"
       ]
     },
     {
@@ -434,44 +413,7 @@
       "eventCount": 3,
       "lanes": [
         "Mag7 AI 平台再分层",
-        "AI 算力半导体",
-        "AI 软件效率/生产率"
-      ]
-    },
-    {
-      "ticker": "MSFT",
-      "name": "Microsoft",
-      "market": "US",
-      "href": "/investor/stocks/MSFT/",
-      "thesisCount": 2,
-      "eventCount": 2,
-      "lanes": [
-        "Mag7 AI 平台再分层",
-        "AI 软件效率/生产率"
-      ]
-    },
-    {
-      "ticker": "AMZN",
-      "name": "Amazon",
-      "market": "US",
-      "href": "/investor/stocks/AMZN/",
-      "thesisCount": 2,
-      "eventCount": 2,
-      "lanes": [
-        "Mag7 AI 平台再分层",
-        "AI 软件效率/生产率"
-      ]
-    },
-    {
-      "ticker": "GOOGL",
-      "name": "Alphabet",
-      "market": "US",
-      "href": "/investor/stocks/GOOGL/",
-      "thesisCount": 2,
-      "eventCount": 2,
-      "lanes": [
-        "Mag7 AI 平台再分层",
-        "AI 软件效率/生产率"
+        "AI 算力半导体"
       ]
     },
     {
@@ -479,20 +421,8 @@
       "name": "TSMC",
       "market": "US ADR",
       "href": "/investor/stocks/TSM/",
-      "thesisCount": 2,
-      "eventCount": 2,
-      "lanes": [
-        "Mag7 AI 平台再分层",
-        "AI 算力半导体"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "name": "AMD",
-      "market": "US",
-      "href": "/investor/stocks/AMD/",
-      "thesisCount": 2,
-      "eventCount": 2,
+      "thesisCount": 3,
+      "eventCount": 3,
       "lanes": [
         "Mag7 AI 平台再分层",
         "AI 算力半导体"
@@ -503,11 +433,56 @@
       "name": "Broadcom",
       "market": "US",
       "href": "/investor/stocks/AVGO/",
-      "thesisCount": 2,
-      "eventCount": 2,
+      "thesisCount": 3,
+      "eventCount": 3,
       "lanes": [
         "Mag7 AI 平台再分层",
         "AI 算力半导体"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "name": "AMD",
+      "market": "US",
+      "href": "/investor/stocks/AMD/",
+      "thesisCount": 3,
+      "eventCount": 3,
+      "lanes": [
+        "Mag7 AI 平台再分层",
+        "AI 算力半导体"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "market": "US",
+      "href": "/investor/stocks/MSFT/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "Mag7 AI 平台再分层"
+      ]
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "market": "US",
+      "href": "/investor/stocks/AMZN/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "Mag7 AI 平台再分层"
+      ]
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet",
+      "market": "US",
+      "href": "/investor/stocks/GOOGL/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "Mag7 AI 平台再分层"
       ]
     },
     {
@@ -533,36 +508,14 @@
       ]
     },
     {
-      "ticker": "NOW",
-      "name": "ServiceNow",
+      "ticker": "MU",
+      "name": "Micron",
       "market": "US",
-      "href": "/investor/stocks/NOW/",
+      "href": "/investor/stocks/MU/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
-        "AI 软件效率/生产率"
-      ]
-    },
-    {
-      "ticker": "CRM",
-      "name": "Salesforce",
-      "market": "US",
-      "href": "/investor/stocks/CRM/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "AI 软件效率/生产率"
-      ]
-    },
-    {
-      "ticker": "ADBE",
-      "name": "Adobe",
-      "market": "US",
-      "href": "/investor/stocks/ADBE/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "AI 软件效率/生产率"
+        "AI 算力半导体"
       ]
     }
   ],
