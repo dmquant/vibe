@@ -29,7 +29,7 @@
     "reports": 2,
     "researchThreads": 3,
     "researchNotes": 30,
-    "thesisEvents": 1,
+    "thesisEvents": 2,
     "personaEvents": 0,
     "readerMemos": 0,
     "recaps": 0,
@@ -128,11 +128,47 @@
         "JPM",
         "KRE",
         "META",
-        "3988.HK",
-        "LITE",
-        "BX",
         "MSFT",
-        "KKR"
+        "3988.HK",
+        "NVDA",
+        "LITE",
+        "BX"
+      ]
+    },
+    {
+      "id": "thesis-66eb42380e",
+      "title": "海洋经济的政策催化需要落到船舶订单、海工装备与海上资源现金流",
+      "titleEn": "Marine-economy policy support must convert into ship orders, offshore equipment, and offshore-resource cash flow",
+      "href": "/investor/theses/thesis-66eb42380e/",
+      "laneId": "lane_f8b4918fe5b3",
+      "lane": "海洋经济/船舶海工",
+      "laneHref": "/investor/lanes/marine-economy-shipbuilding-and-offshore-equipment/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 48,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "2026-06-12 A股海工装备压力测试：中集集团养殖装备订单风险与两融外溢",
+          "summary": "2026-06-12 A股海工装备压力测试：中集集团养殖装备订单风险与两融外溢",
+          "href": "/investor/reports/archive-6b4d059afb0b/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "601890.SH",
+        "600150.SH",
+        "600938.SH",
+        "600583.SH",
+        "300065.SZ",
+        "300589.SZ",
+        "601919.SH",
+        "300810.SZ",
+        "603727.SH"
       ]
     }
   ],
@@ -148,13 +184,33 @@
         "JPM",
         "KRE",
         "META",
-        "3988.HK",
-        "LITE",
-        "BX",
         "MSFT",
-        "KKR"
+        "3988.HK",
+        "NVDA",
+        "LITE",
+        "BX"
       ],
       "avgConviction": 53
+    },
+    {
+      "id": "lane_f8b4918fe5b3",
+      "title": "海洋经济/船舶海工",
+      "href": "/investor/lanes/marine-economy-shipbuilding-and-offshore-equipment/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "convictionTotal": 48,
+      "stockTickers": [
+        "601890.SH",
+        "600150.SH",
+        "600938.SH",
+        "600583.SH",
+        "300065.SZ",
+        "300589.SZ",
+        "601919.SH",
+        "300810.SZ",
+        "603727.SH"
+      ],
+      "avgConviction": 48
     }
   ],
   "stocks": [
@@ -192,10 +248,32 @@
       ]
     },
     {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "market": "US",
+      "href": "/investor/stocks/MSFT/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "信用再融资/私募信贷"
+      ]
+    },
+    {
       "ticker": "3988.HK",
       "name": "中国银行",
       "market": "HK",
       "href": "/investor/stocks/3988.HK/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "信用再融资/私募信贷"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "market": "US",
+      "href": "/investor/stocks/NVDA/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
@@ -225,25 +303,102 @@
       ]
     },
     {
-      "ticker": "MSFT",
-      "name": "Microsoft",
-      "market": "US",
-      "href": "/investor/stocks/MSFT/",
+      "ticker": "601890.SH",
+      "name": "601890.SH",
+      "market": "A-share",
+      "href": "/investor/stocks/601890.SH/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
-        "信用再融资/私募信贷"
+        "海洋经济/船舶海工"
       ]
     },
     {
-      "ticker": "KKR",
-      "name": "KKR",
-      "market": "US",
-      "href": "/investor/stocks/KKR/",
+      "ticker": "600150.SH",
+      "name": "中国船舶",
+      "market": "A-share",
+      "href": "/investor/stocks/600150.SH/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
-        "信用再融资/私募信贷"
+        "海洋经济/船舶海工"
+      ]
+    },
+    {
+      "ticker": "600938.SH",
+      "name": "中国海油",
+      "market": "A-share",
+      "href": "/investor/stocks/600938.SH/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "海洋经济/船舶海工"
+      ]
+    },
+    {
+      "ticker": "600583.SH",
+      "name": "600583.SH",
+      "market": "A-share",
+      "href": "/investor/stocks/600583.SH/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "海洋经济/船舶海工"
+      ]
+    },
+    {
+      "ticker": "300065.SZ",
+      "name": "300065.SZ",
+      "market": "A-share",
+      "href": "/investor/stocks/300065.SZ/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "海洋经济/船舶海工"
+      ]
+    },
+    {
+      "ticker": "300589.SZ",
+      "name": "300589.SZ",
+      "market": "A-share",
+      "href": "/investor/stocks/300589.SZ/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "海洋经济/船舶海工"
+      ]
+    },
+    {
+      "ticker": "601919.SH",
+      "name": "中远海控",
+      "market": "A-share",
+      "href": "/investor/stocks/601919.SH/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "海洋经济/船舶海工"
+      ]
+    },
+    {
+      "ticker": "300810.SZ",
+      "name": "300810.SZ",
+      "market": "A-share",
+      "href": "/investor/stocks/300810.SZ/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "海洋经济/船舶海工"
+      ]
+    },
+    {
+      "ticker": "603727.SH",
+      "name": "603727.SH",
+      "market": "A-share",
+      "href": "/investor/stocks/603727.SH/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "海洋经济/船舶海工"
       ]
     }
   ],
