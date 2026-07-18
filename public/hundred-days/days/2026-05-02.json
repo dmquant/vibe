@@ -4,7 +4,7 @@
   "dayNumber": 11,
   "status": "recorded",
   "headline": "风险评估报告：昇腾渠道层估值下修触发条件与组合风控策略",
-  "summary": "当日归档 53 份公开研究，20 条研究讨论和 33 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
+  "summary": "当日归档 53 份公开研究，20 条研究讨论和 32 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
   "dominantTopic": {
     "id": "macro-rates",
     "labelZh": "宏观、通胀与利率",
@@ -29,7 +29,7 @@
     "reports": 53,
     "researchThreads": 20,
     "researchNotes": 166,
-    "thesisEvents": 33,
+    "thesisEvents": 32,
     "personaEvents": 0,
     "readerMemos": 0,
     "recaps": 0,
@@ -1250,50 +1250,6 @@
       ]
     },
     {
-      "id": "thesis-ffa474a3f2",
-      "title": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
-      "titleEn": "Edge AI and agent desktops are extending compute competition from cloud to chips, OS, and consumer-electronics supply...",
-      "href": "/investor/theses/thesis-ffa474a3f2/",
-      "laneId": "lane_74d352e86208",
-      "lane": "端侧 AI/Agent 桌面",
-      "laneHref": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 59,
-      "supports": 0,
-      "risks": 2,
-      "neutral": 0,
-      "eventCount": 2,
-      "events": [
-        {
-          "title": "Wave 2 企业推理：压力测试 2026 Q3–Q4 重估时间表",
-          "summary": "既有研究记录— Wave 2 企业推理：压力测试 2026 Q3–Q4 重估时间表",
-          "href": "/investor/reports/archive-5c0e3d8a15b8/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        },
-        {
-          "title": "DeepSeek V4 嵌入工业设备渠道：真实部署需求还是适配公告？",
-          "summary": "会话：DeepSeek V4 国产生态 立场：否定 分析师：工业制造分析师（先进制造、机械、航空航天、国防、自动化） 日期：2026-05-02",
-          "href": "/investor/reports/archive-38bc161839a7/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "MSFT",
-        "AAPL",
-        "NVDA",
-        "META",
-        "ARM",
-        "QCOM",
-        "AMZN",
-        "AMD",
-        "GOOGL",
-        "002475.SZ"
-      ]
-    },
-    {
       "id": "thesis-e9630d3ee1",
       "title": "日元套息平仓是 EM 科技、离岸中资与高 beta 主题的尾部流动性风险",
       "titleEn": "Yen carry unwind is a tail liquidity risk for EM tech, offshore China, and high-beta themes",
@@ -1303,7 +1259,7 @@
       "laneHref": "/investor/lanes/yen-carry-and-em-tech-liquidity/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 58,
+      "conviction": 61,
       "supports": 1,
       "risks": 1,
       "neutral": 0,
@@ -1328,9 +1284,9 @@
         "TSM",
         "NVDA",
         "000660.KS",
+        "600900.SH",
         "CME",
         "META",
-        "600900.SH",
         "KWEB",
         "EEM",
         "UUP"
@@ -1485,8 +1441,8 @@
       "stockTickers": [
         "BABA",
         "BIDU",
-        "CRM",
         "9988.HK",
+        "CRM",
         "MSFT",
         "NOW",
         "0700.HK",
@@ -1630,6 +1586,43 @@
         "603345.SH",
         "1177.HK",
         "UNH"
+      ]
+    },
+    {
+      "id": "thesis-ffa474a3f2",
+      "title": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
+      "titleEn": "Edge AI and agent desktops are extending compute competition from cloud to chips, OS, and consumer-electronics supply...",
+      "href": "/investor/theses/thesis-ffa474a3f2/",
+      "laneId": "lane_74d352e86208",
+      "lane": "端侧 AI/Agent 桌面",
+      "laneHref": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 64,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "Wave 2 企业推理：压力测试 2026 Q3–Q4 重估时间表",
+          "summary": "既有研究记录— Wave 2 企业推理：压力测试 2026 Q3–Q4 重估时间表",
+          "href": "/investor/reports/archive-5c0e3d8a15b8/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "MSFT",
+        "NVDA",
+        "AAPL",
+        "META",
+        "ARM",
+        "QCOM",
+        "AMD",
+        "AMZN",
+        "GOOGL",
+        "AVGO"
       ]
     },
     {
@@ -1873,11 +1866,11 @@
         "600900.SH",
         "3988.HK",
         "0700.HK",
-        "CME",
         "9988.HK",
         "300308.SZ",
         "LOW",
-        "META"
+        "META",
+        "CME"
       ]
     },
     {
@@ -1890,7 +1883,7 @@
       "laneHref": "/investor/lanes/crypto-and-high-beta-risk-appetite/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 51,
+      "conviction": 50,
       "supports": 1,
       "risks": 0,
       "neutral": 0,
@@ -2087,45 +2080,24 @@
       "avgConviction": 67
     },
     {
-      "id": "lane_74d352e86208",
-      "title": "端侧 AI/Agent 桌面",
-      "href": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
-      "thesisCount": 1,
-      "eventCount": 2,
-      "convictionTotal": 59,
-      "stockTickers": [
-        "MSFT",
-        "AAPL",
-        "NVDA",
-        "META",
-        "ARM",
-        "QCOM",
-        "AMZN",
-        "AMD",
-        "GOOGL",
-        "002475.SZ"
-      ],
-      "avgConviction": 59
-    },
-    {
       "id": "lane_f3e413e8ce27",
       "title": "日元套息/EM 科技流动性",
       "href": "/investor/lanes/yen-carry-and-em-tech-liquidity/",
       "thesisCount": 1,
       "eventCount": 2,
-      "convictionTotal": 58,
+      "convictionTotal": 61,
       "stockTickers": [
         "TSM",
         "NVDA",
         "000660.KS",
+        "600900.SH",
         "CME",
         "META",
-        "600900.SH",
         "KWEB",
         "EEM",
         "UUP"
       ],
-      "avgConviction": 58
+      "avgConviction": 61
     },
     {
       "id": "lane_0cb100fcf8da",
@@ -2202,8 +2174,8 @@
       "stockTickers": [
         "BABA",
         "BIDU",
-        "CRM",
         "9988.HK",
+        "CRM",
         "MSFT",
         "NOW",
         "0700.HK",
@@ -2285,6 +2257,27 @@
         "UNH"
       ],
       "avgConviction": 65
+    },
+    {
+      "id": "lane_74d352e86208",
+      "title": "端侧 AI/Agent 桌面",
+      "href": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "convictionTotal": 64,
+      "stockTickers": [
+        "MSFT",
+        "NVDA",
+        "AAPL",
+        "META",
+        "ARM",
+        "QCOM",
+        "AMD",
+        "AMZN",
+        "GOOGL",
+        "AVGO"
+      ],
+      "avgConviction": 64
     },
     {
       "id": "lane_e4f90acbf804",
@@ -2377,11 +2370,11 @@
         "600900.SH",
         "3988.HK",
         "0700.HK",
-        "CME",
         "9988.HK",
         "300308.SZ",
         "LOW",
-        "META"
+        "META",
+        "CME"
       ],
       "avgConviction": 53
     },
@@ -2391,7 +2384,7 @@
       "href": "/investor/lanes/crypto-and-high-beta-risk-appetite/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 51,
+      "convictionTotal": 50,
       "stockTickers": [
         "COIN",
         "HOOD",
@@ -2402,7 +2395,7 @@
         "NVDA",
         "ASTS"
       ],
-      "avgConviction": 51
+      "avgConviction": 50
     },
     {
       "id": "lane_79a55cd8530e",
@@ -2450,7 +2443,7 @@
       "market": "US",
       "href": "/investor/stocks/NVDA/",
       "thesisCount": 14,
-      "eventCount": 23,
+      "eventCount": 22,
       "lanes": [
         "中国云/国产算力栈",
         "低价模型/AI 软件利润池",
@@ -2465,13 +2458,13 @@
       "market": "US",
       "href": "/investor/stocks/META/",
       "thesisCount": 10,
-      "eventCount": 14,
+      "eventCount": 13,
       "lanes": [
         "Mag7 AI 平台再分层",
         "AI 算力半导体",
         "端侧 AI/Agent 桌面",
-        "AI 软件效率/生产率",
-        "日元套息/EM 科技流动性"
+        "日元套息/EM 科技流动性",
+        "AI 软件效率/生产率"
       ]
     },
     {
@@ -2480,7 +2473,7 @@
       "market": "US",
       "href": "/investor/stocks/MSFT/",
       "thesisCount": 8,
-      "eventCount": 11,
+      "eventCount": 10,
       "lanes": [
         "低价模型/AI 软件利润池",
         "Mag7 AI 平台再分层",
@@ -2495,7 +2488,7 @@
       "market": "US",
       "href": "/investor/stocks/AMZN/",
       "thesisCount": 6,
-      "eventCount": 9,
+      "eventCount": 8,
       "lanes": [
         "Mag7 AI 平台再分层",
         "端侧 AI/Agent 桌面",
@@ -2532,20 +2525,6 @@
       ]
     },
     {
-      "ticker": "GOOGL",
-      "name": "Alphabet",
-      "market": "US",
-      "href": "/investor/stocks/GOOGL/",
-      "thesisCount": 5,
-      "eventCount": 6,
-      "lanes": [
-        "Mag7 AI 平台再分层",
-        "端侧 AI/Agent 桌面",
-        "AI 软件效率/生产率",
-        "自动驾驶/Robotaxi 单位经济"
-      ]
-    },
-    {
       "ticker": "300308.SZ",
       "name": "中际旭创",
       "market": "A-share",
@@ -2569,6 +2548,20 @@
         "中国云/国产算力栈",
         "低价模型/AI 软件利润池",
         "人民币/美元流动性敏感资产"
+      ]
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet",
+      "market": "US",
+      "href": "/investor/stocks/GOOGL/",
+      "thesisCount": 5,
+      "eventCount": 5,
+      "lanes": [
+        "Mag7 AI 平台再分层",
+        "端侧 AI/Agent 桌面",
+        "AI 软件效率/生产率",
+        "自动驾驶/Robotaxi 单位经济"
       ]
     },
     {
@@ -2723,19 +2716,6 @@
       ]
     },
     {
-      "ticker": "AMD",
-      "name": "AMD",
-      "market": "US",
-      "href": "/investor/stocks/AMD/",
-      "thesisCount": 3,
-      "eventCount": 4,
-      "lanes": [
-        "Mag7 AI 平台再分层",
-        "AI 算力半导体",
-        "端侧 AI/Agent 桌面"
-      ]
-    },
-    {
       "ticker": "VST",
       "name": "Vistra",
       "market": "US",
@@ -2814,14 +2794,28 @@
       ]
     },
     {
-      "ticker": "AAPL",
-      "name": "Apple",
+      "ticker": "AVGO",
+      "name": "Broadcom",
       "market": "US",
-      "href": "/investor/stocks/AAPL/",
-      "thesisCount": 2,
+      "href": "/investor/stocks/AVGO/",
+      "thesisCount": 3,
       "eventCount": 3,
       "lanes": [
         "Mag7 AI 平台再分层",
+        "AI 算力半导体",
+        "端侧 AI/Agent 桌面"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "name": "AMD",
+      "market": "US",
+      "href": "/investor/stocks/AMD/",
+      "thesisCount": 3,
+      "eventCount": 3,
+      "lanes": [
+        "Mag7 AI 平台再分层",
+        "AI 算力半导体",
         "端侧 AI/Agent 桌面"
       ]
     },

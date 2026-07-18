@@ -1,10 +1,10 @@
 {
   "schema": "vibe.ai_institute.public_analyst_persona_timelines.v1",
-  "generatedAt": "2026-07-18T00:24:19.787Z",
+  "generatedAt": "2026-07-18T02:32:09.636Z",
   "stats": {
     "personaCount": 30,
-    "thesisLinks": 244,
-    "timelineEvents": 801,
+    "thesisLinks": 243,
+    "timelineEvents": 799,
     "timelineGroups": 359,
     "dateRange": {
       "first": "2025-12-31",
@@ -26,10 +26,10 @@
       "firstSeen": "2026-03-31",
       "lastSeen": "2026-06-25",
       "thesisCount": 10,
-      "eventCount": 89,
+      "eventCount": 86,
       "stanceCounts": {
         "supports": 41,
-        "risks": 47,
+        "risks": 44,
         "neutral": 1
       },
       "topTerms": [
@@ -37,8 +37,8 @@
         "ASIC",
         "GPU",
         "利率",
-        "先进封装",
         "AI 基础设施",
+        "先进封装",
         "半导体",
         "算力",
         "服务器",
@@ -52,7 +52,7 @@
         "2026-06-25: GPU、HBM 与先进封装决定 AI 资本开支供给节奏 / 美光科技爆表财报对全球先进封装（HBM4/异构集成）景气度的验证与国内产业链的“脱钩与共振”深度...",
         "2026-06-25: 高纯石英材料受益于先进封装扩产，但兑现取决于认证与产品结构 / 美光科技爆表财报对全球先进封装（HBM4/异构集成）景气度的验证与国内产业链的“脱钩与共振”深度...",
         "2026-06-19: Mag7 在 AI 时代从平台垄断转向基础设施再分层 / AI 产业追踪报告（2026年6月）",
-        "2026-06-16: Mag7 在 AI 时代从平台垄断转向基础设施再分层 / AI产业动态追踪"
+        "2026-06-18: 端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链 / AI产业跟踪日报"
       ],
       "theses": [
         {
@@ -128,31 +128,6 @@
           ]
         },
         {
-          "id": "thesis-8bbbcdf5a4",
-          "title": "GPU、HBM 与先进封装决定 AI 资本开支供给节奏",
-          "href": "/investor/theses/thesis-8bbbcdf5a4/",
-          "direction": "conflicting",
-          "directionLabel": "分歧",
-          "exposureBucket": "AI 基础设施",
-          "actionLabel": "观察等待",
-          "eventCount": 7,
-          "supports": 3,
-          "risks": 4,
-          "neutral": 0,
-          "score": 481,
-          "firstSeen": "2026-05-06",
-          "lastSeen": "2026-06-25",
-          "terms": {},
-          "topTerms": [
-            "HBM",
-            "GPU",
-            "先进封装",
-            "半导体",
-            "AI CapEx",
-            "算力"
-          ]
-        },
-        {
           "id": "thesis-b13c7cf092",
           "title": "高纯石英材料受益于先进封装扩产，但兑现取决于认证与产品结构",
           "href": "/investor/theses/thesis-b13c7cf092/",
@@ -172,6 +147,31 @@
             "先进封装",
             "利率",
             "半导体"
+          ]
+        },
+        {
+          "id": "thesis-8bbbcdf5a4",
+          "title": "GPU、HBM 与先进封装决定 AI 资本开支供给节奏",
+          "href": "/investor/theses/thesis-8bbbcdf5a4/",
+          "direction": "conflicting",
+          "directionLabel": "分歧",
+          "exposureBucket": "AI 基础设施",
+          "actionLabel": "观察等待",
+          "eventCount": 6,
+          "supports": 3,
+          "risks": 3,
+          "neutral": 0,
+          "score": 421,
+          "firstSeen": "2026-05-06",
+          "lastSeen": "2026-06-25",
+          "terms": {},
+          "topTerms": [
+            "HBM",
+            "半导体",
+            "AI CapEx",
+            "GPU",
+            "先进封装",
+            "算力"
           ]
         },
         {
@@ -200,31 +200,6 @@
           ]
         },
         {
-          "id": "thesis-cb2ab35c55",
-          "title": "AI 基础设施扩张从规模驱动切换到 TCO、能效和利用率筛选",
-          "href": "/investor/theses/thesis-cb2ab35c55/",
-          "direction": "conflicting",
-          "directionLabel": "分歧",
-          "exposureBucket": "AI 基础设施",
-          "actionLabel": "观察等待",
-          "eventCount": 4,
-          "supports": 2,
-          "risks": 2,
-          "neutral": 0,
-          "score": 243,
-          "firstSeen": "2026-05-07",
-          "lastSeen": "2026-05-20",
-          "terms": {},
-          "topTerms": [
-            "HBM",
-            "液冷",
-            "GPU",
-            "ASIC",
-            "TCO",
-            "AI 基础设施"
-          ]
-        },
-        {
           "id": "thesis-ffa474a3f2",
           "title": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
           "href": "/investor/theses/thesis-ffa474a3f2/",
@@ -232,13 +207,13 @@
           "directionLabel": "分歧",
           "exposureBucket": "消费健康防御",
           "actionLabel": "观察等待",
-          "eventCount": 3,
-          "supports": 0,
+          "eventCount": 4,
+          "supports": 1,
           "risks": 3,
           "neutral": 0,
-          "score": 130,
+          "score": 172,
           "firstSeen": "2026-05-07",
-          "lastSeen": "2026-06-09",
+          "lastSeen": "2026-06-18",
           "terms": {},
           "topTerms": [
             "GPU",
@@ -246,7 +221,7 @@
             "Agent",
             "agent",
             "ASIC",
-            "QCOM"
+            "HBM"
           ]
         },
         {
@@ -296,6 +271,31 @@
             "Meta",
             "利率",
             "NVIDIA"
+          ]
+        },
+        {
+          "id": "thesis-cb2ab35c55",
+          "title": "AI 基础设施扩张从规模驱动切换到 TCO、能效和利用率筛选",
+          "href": "/investor/theses/thesis-cb2ab35c55/",
+          "direction": "conflicting",
+          "directionLabel": "分歧",
+          "exposureBucket": "AI 基础设施",
+          "actionLabel": "观察等待",
+          "eventCount": 3,
+          "supports": 2,
+          "risks": 1,
+          "neutral": 0,
+          "score": 195,
+          "firstSeen": "2026-05-07",
+          "lastSeen": "2026-05-19",
+          "terms": {},
+          "topTerms": [
+            "HBM",
+            "液冷",
+            "AI 基础设施",
+            "GPU",
+            "ASIC",
+            "服务器"
           ]
         }
       ],
@@ -640,10 +640,10 @@
         },
         {
           "date": "2026-05-19",
-          "supports": 20,
+          "supports": 19,
           "risks": 3,
           "neutral": 0,
-          "eventCount": 23,
+          "eventCount": 22,
           "value": 96,
           "topTheses": [
             "NAND盈利弹性由价格与产品结构主导，而非单纯出货增长",
@@ -716,10 +716,10 @@
         {
           "date": "2026-05-20",
           "supports": 3,
-          "risks": 10,
+          "risks": 7,
           "neutral": 0,
-          "eventCount": 13,
-          "value": 14.4,
+          "eventCount": 10,
+          "value": 32.4,
           "topTheses": [
             "NAND盈利弹性由价格与产品结构主导，而非单纯出货增长",
             "Mag7 在 AI 时代从平台垄断转向基础设施再分层",
@@ -764,27 +764,27 @@
             },
             {
               "date": "2026-05-20",
-              "title": "AI 硬件分层策略验证：HBM、GPU 与 CPO 产业链基本面评估",
-              "summary": "AI 硬件分层策略验证：HBM、GPU 与 CPO 产业链基本面评估 作者： TMT 行业分析师 (TMT Analyst) 研究记录 （） 工作日期（亚洲/新加坡）： 2026-05-20 对前序线索的立场： support (验证并细化...",
-              "thesisId": "thesis-8bbbcdf5a4",
-              "thesisTitle": "GPU、HBM 与先进封装决定 AI 资本开支供给节奏",
-              "thesisHref": "/investor/theses/thesis-8bbbcdf5a4/",
+              "title": "AI产业追踪周报 · 2026-05-20",
+              "summary": "作者：TMT行业分析师 数据截止：2026-05-20（北京时间，引用日期均为当日或之前公开信息） 关注范围：大模型进展 / 算力需求 / 应用落地 / 重点公司动态",
+              "thesisId": "thesis-8c5a9690a0",
+              "thesisTitle": "Mag7 在 AI 时代从平台垄断转向基础设施再分层",
+              "thesisHref": "/investor/theses/thesis-8c5a9690a0/",
               "sourceLabel": "深度研究",
-              "supportType": "risk",
-              "supportLabel": "风险",
-              "href": "/investor/reports/archive-40b6cf0730e2/"
+              "supportType": "supports",
+              "supportLabel": "支持",
+              "href": "/investor/reports/archive-401bf8391efb/"
             },
             {
               "date": "2026-05-20",
-              "title": "堡垒轴成本溢价对 AI 芯片需求与半导体毛利的冲击",
-              "summary": "分析师：TMT 行业分析师 - 工作日期（亚洲/新加坡）：2026-05-20 - 立场： stress-test （对 既有研究记录\"算力密度可吸收安全溢价\"叙事的压力测试） - 当前问题：随着选址逻辑从\"电力...",
-              "thesisId": "thesis-cb2ab35c55",
-              "thesisTitle": "AI 基础设施扩张从规模驱动切换到 TCO、能效和利用率筛选",
-              "thesisHref": "/investor/theses/thesis-cb2ab35c55/",
+              "title": "【TMT行业分析】压力测试：G7管制升级对AI服务器PCB下游需求的传导风险",
+              "summary": "【TMT行业分析】压力测试：G7管制升级对AI服务器PCB下游需求的传导风险",
+              "thesisId": "thesis-7a6599a3f5",
+              "thesisTitle": "新一代信息技术国产替代要从信创叙事进入算力、软件与安全订单验证",
+              "thesisHref": "/investor/theses/thesis-7a6599a3f5/",
               "sourceLabel": "深度研究",
               "supportType": "risk",
               "supportLabel": "风险",
-              "href": "/investor/reports/archive-4a346f9703d9/"
+              "href": "/investor/reports/archive-4a5a2dbdb6a8/"
             }
           ]
         },
@@ -1205,12 +1205,37 @@
           ]
         },
         {
-          "date": "2026-06-19",
+          "date": "2026-06-18",
           "supports": 1,
           "risks": 0,
           "neutral": 0,
           "eventCount": 1,
           "value": 75.2,
+          "topTheses": [
+            "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链"
+          ],
+          "events": [
+            {
+              "date": "2026-06-18",
+              "title": "AI产业跟踪日报",
+              "summary": "日期锚点：2026-06-18 覆盖范围：截至本机日期的公开信息，重点跟踪大模型进展、算力需求、应用落地和重点公司动态。 结论口径：中英文两版使用相同事实、数字、来源编号和投资判断。",
+              "thesisId": "thesis-ffa474a3f2",
+              "thesisTitle": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
+              "thesisHref": "/investor/theses/thesis-ffa474a3f2/",
+              "sourceLabel": "深度研究",
+              "supportType": "supports",
+              "supportLabel": "支持",
+              "href": "/investor/reports/archive-ed58553055dd/"
+            }
+          ]
+        },
+        {
+          "date": "2026-06-19",
+          "supports": 1,
+          "risks": 0,
+          "neutral": 0,
+          "eventCount": 1,
+          "value": 76.6,
           "topTheses": [
             "Mag7 在 AI 时代从平台垄断转向基础设施再分层"
           ],
@@ -1235,7 +1260,7 @@
           "risks": 0,
           "neutral": 0,
           "eventCount": 3,
-          "value": 92.6,
+          "value": 94,
           "topTheses": [
             "高纯石英材料受益于先进封装扩产，但兑现取决于认证与产品结构",
             "GPU、HBM 与先进封装决定 AI 资本开支供给节奏",
@@ -1331,6 +1356,18 @@
           "href": "/investor/reports/archive-49bd56464050/"
         },
         {
+          "date": "2026-06-18",
+          "title": "AI产业跟踪日报",
+          "summary": "日期锚点：2026-06-18 覆盖范围：截至本机日期的公开信息，重点跟踪大模型进展、算力需求、应用落地和重点公司动态。 结论口径：中英文两版使用相同事实、数字、来源编号和投资判断。",
+          "thesisId": "thesis-ffa474a3f2",
+          "thesisTitle": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
+          "thesisHref": "/investor/theses/thesis-ffa474a3f2/",
+          "sourceLabel": "深度研究",
+          "supportType": "supports",
+          "supportLabel": "支持",
+          "href": "/investor/reports/archive-ed58553055dd/"
+        },
+        {
           "date": "2026-06-16",
           "title": "AI产业动态追踪",
           "summary": "数据锚点：2026-06-16。所有“最新、今日、上一交易日、本周”等表述均以该 shell 日期为准。",
@@ -1413,18 +1450,6 @@
           "supportType": "supports",
           "supportLabel": "支持",
           "href": "/investor/reports/archive-f1247349a23d/"
-        },
-        {
-          "date": "2026-06-02",
-          "title": "Micron 破万亿美元市值后：HBM 订单能否对冲 NVDA 短期调仓压力？",
-          "summary": "Micron 破万亿美元市值后：HBM 订单能否对冲 NVDA 短期调仓压力？",
-          "thesisId": "thesis-8bbbcdf5a4",
-          "thesisTitle": "GPU、HBM 与先进封装决定 AI 资本开支供给节奏",
-          "thesisHref": "/investor/theses/thesis-8bbbcdf5a4/",
-          "sourceLabel": "深度研究",
-          "supportType": "risk",
-          "supportLabel": "风险",
-          "href": "/investor/reports/archive-27cb3572832f/"
         }
       ],
       "href": "/investor/personas/#persona-tmt-analyst-b5fc12"
@@ -2974,10 +2999,10 @@
       "firstSeen": "2026-05-06",
       "lastSeen": "2026-07-09",
       "thesisCount": 10,
-      "eventCount": 57,
+      "eventCount": 60,
       "stanceCounts": {
-        "supports": 31,
-        "risks": 26,
+        "supports": 33,
+        "risks": 27,
         "neutral": 0
       },
       "topTerms": [
@@ -2999,8 +3024,8 @@
         "2026-07-09: 科创50单日+8.41%后，团队应把硬科技升为中期主线，还是在两融、广度、ETF申赎确认前按拥挤反弹处理？ / A股策略交接：两融与小盘宽基 ETF 监测",
         "2026-07-09: A股实施篮子的两融拥挤与流动性承载压力测试 / A股策略交接：两融与小盘宽基 ETF 监测",
         "2026-07-09: 散户情绪与北向资金背离是 A 股风险偏好的关键温度计 / A股策略交接：两融与小盘宽基 ETF 监测",
-        "2026-07-09: 美股半导体大跌6.3%，A股半导体也因折算率下调产生93.81亿元保证金缺口，科创50遭遇放量回撤。在此轮全球科技股泡沫退潮和两融去杠杆… / A股策略交接：两融与小盘宽基 ETF 监测",
-        "2026-07-09: 在两融余额可核口径约3.0万亿元、科创50盘中深V、但解禁与融资拥挤仍在的情况下，今日收盘后仓位框架应从Option 4极致防御调到哪一级？ / A股策略交接：两融与小盘宽基 ETF 监测"
+        "2026-07-09: Sivers (SIVE:STO) 概念被供应链证伪，而国内电子板块融资余额高达5608亿元，四大半导体龙头两融保证金缺口达93.81亿… / A股策略交接：两融与小盘宽基 ETF 监测",
+        "2026-07-09: 美股半导体大跌6.3%，A股半导体也因折算率下调产生93.81亿元保证金缺口，科创50遭遇放量回撤。在此轮全球科技股泡沫退潮和两融去杠杆… / A股策略交接：两融与小盘宽基 ETF 监测"
       ],
       "theses": [
         {
@@ -3073,6 +3098,31 @@
             "A股",
             "科创50",
             "两融"
+          ]
+        },
+        {
+          "id": "thesis-2fe5298427",
+          "title": "Sivers (SIVE:STO) 概念被供应链证伪，而国内电子板块融资余额高达5608亿元，四大半导体龙头两融保证金缺口达93.81亿…",
+          "href": "/investor/theses/thesis-2fe5298427/",
+          "direction": "conflicting",
+          "directionLabel": "分歧",
+          "exposureBucket": "中国权益与流动性",
+          "actionLabel": "深研候选：先建观察仓",
+          "eventCount": 3,
+          "supports": 2,
+          "risks": 1,
+          "neutral": 0,
+          "score": 134,
+          "firstSeen": "2026-06-05",
+          "lastSeen": "2026-07-09",
+          "terms": {},
+          "topTerms": [
+            "A股",
+            "科创50",
+            "两融",
+            "融资余额",
+            "半导体",
+            "CPO"
           ]
         },
         {
@@ -3216,27 +3266,6 @@
             "融资余额",
             "利率",
             "银行"
-          ]
-        },
-        {
-          "id": "thesis-547daf8501",
-          "title": "科创50单日暴涨逾3%而全市场超4600只个股飘绿，这种前所未有的宽度背离是否意味着A股正进入极度拥挤的‘沙漏型’存量博弈？组合应如何防…",
-          "href": "/investor/theses/thesis-547daf8501/",
-          "direction": "conflicting",
-          "directionLabel": "分歧",
-          "exposureBucket": "中国权益与流动性",
-          "actionLabel": "深研候选：先建观察仓",
-          "eventCount": 2,
-          "supports": 1,
-          "risks": 1,
-          "neutral": 0,
-          "score": 56,
-          "firstSeen": "2026-06-01",
-          "lastSeen": "2026-06-08",
-          "terms": {},
-          "topTerms": [
-            "A股",
-            "科创50"
           ]
         }
       ],
@@ -3623,10 +3652,10 @@
         {
           "date": "2026-06-05",
           "supports": 3,
-          "risks": 7,
+          "risks": 8,
           "neutral": 0,
-          "eventCount": 10,
-          "value": 38,
+          "eventCount": 11,
+          "value": 32,
           "topTheses": [
             "科创50指数存在2207.86点与1596.57点两个报价口径（相差611点），直接导致对雪球敲入（1516-1550点）和两融强平压力…",
             "A 股硬科技与科创50的复苏需要订单、融资盘和指数结构共振",
@@ -3683,15 +3712,15 @@
             },
             {
               "date": "2026-06-05",
-              "title": "A/H 创新药策略判断：ASCO 脉冲之后，进入“选择性重估”窗口",
-              "summary": "日期锚点：本机日期为 2026-06-08；本文所有“当前、上周、下一窗口”均以 2026-06-08 为基准。",
-              "thesisId": "thesis-44cf9d91f6",
-              "thesisTitle": "中国大健康 Alpha 正从医保压价转向创新药出海、临床确定性与设备刚需",
-              "thesisHref": "/investor/theses/thesis-44cf9d91f6/",
+              "title": "另类数据与大类资产策略交接报告：科创50两融去杠杆与雪球负 Gamma 敲入共振压力测试报告",
+              "summary": "另类数据与大类资产策略交接报告：科创50两融去杠杆与雪球负 Gamma 敲入共振压力测试报告",
+              "thesisId": "thesis-2fe5298427",
+              "thesisTitle": "Sivers (SIVE:STO) 概念被供应链证伪，而国内电子板块融资余额高达5608亿元，四大半导体龙头两融保证金缺口达93.81亿…",
+              "thesisHref": "/investor/theses/thesis-2fe5298427/",
               "sourceLabel": "深度研究",
               "supportType": "risk",
               "supportLabel": "风险",
-              "href": "/investor/reports/archive-9d7c78480ac2/"
+              "href": "/investor/reports/archive-3d5d7d501955/"
             }
           ]
         },
@@ -3722,10 +3751,10 @@
         },
         {
           "date": "2026-06-08",
-          "supports": 10,
+          "supports": 11,
           "risks": 0,
           "neutral": 0,
-          "eventCount": 10,
+          "eventCount": 11,
           "value": 96,
           "topTheses": [
             "A 股硬科技与科创50的复苏需要订单、融资盘和指数结构共振",
@@ -3759,6 +3788,18 @@
             },
             {
               "date": "2026-06-08",
+              "title": "A股融资融券专题分析：两融余额急剧去杠杆，科创50零Gamma防线整固与杠铃配置防御",
+              "summary": "A股融资融券专题分析：两融余额急剧去杠杆，科创50零Gamma防线整固与杠铃配置防御",
+              "thesisId": "thesis-2fe5298427",
+              "thesisTitle": "Sivers (SIVE:STO) 概念被供应链证伪，而国内电子板块融资余额高达5608亿元，四大半导体龙头两融保证金缺口达93.81亿…",
+              "thesisHref": "/investor/theses/thesis-2fe5298427/",
+              "sourceLabel": "深度研究",
+              "supportType": "supports",
+              "supportLabel": "支持",
+              "href": "/investor/reports/archive-5cbcd2b76e7c/"
+            },
+            {
+              "date": "2026-06-08",
               "title": "今日A股市场结构深度剖析与资金流向报告 (2026-06-09)",
               "summary": "报告日期：2026-06-09（星期二） 首席分析师：A股策略师 (A-Share Strategist, analyst:ashare-strategist ) 时区：UTC+8 数据截至：2026-06-09 收盘口径（两融明细截至 2026-06-08） 关联协同...",
               "thesisId": "thesis-603a5f7966",
@@ -3776,18 +3817,6 @@
               "thesisId": "thesis-4b3b37e207",
               "thesisTitle": "散户情绪与北向资金背离是 A 股风险偏好的关键温度计",
               "thesisHref": "/investor/theses/thesis-4b3b37e207/",
-              "sourceLabel": "深度研究",
-              "supportType": "supports",
-              "supportLabel": "支持",
-              "href": "/investor/reports/archive-5cbcd2b76e7c/"
-            },
-            {
-              "date": "2026-06-08",
-              "title": "A股融资融券专题分析：两融余额急剧去杠杆，科创50零Gamma防线整固与杠铃配置防御",
-              "summary": "A股融资融券专题分析：两融余额急剧去杠杆，科创50零Gamma防线整固与杠铃配置防御",
-              "thesisId": "thesis-10f0672291",
-              "thesisTitle": "科创50单日+8.41%后，团队应把硬科技升为中期主线，还是在两融、广度、ETF申赎确认前按拥挤反弹处理？",
-              "thesisHref": "/investor/theses/thesis-10f0672291/",
               "sourceLabel": "深度研究",
               "supportType": "supports",
               "supportLabel": "支持",
@@ -3935,10 +3964,10 @@
         },
         {
           "date": "2026-07-09",
-          "supports": 10,
+          "supports": 11,
           "risks": 0,
           "neutral": 0,
-          "eventCount": 10,
+          "eventCount": 11,
           "value": 96,
           "topTheses": [
             "科创50单日+8.41%后，团队应把硬科技升为中期主线，还是在两融、广度、ETF申赎确认前按拥挤反弹处理？",
@@ -3986,9 +4015,9 @@
               "date": "2026-07-09",
               "title": "A股策略交接：两融与小盘宽基 ETF 监测",
               "summary": "日期锚定： 2026-07-09。今日午盘新闻口径显示，沪深两市半日成交额约 1.7万亿元 、科创50半日涨超 3% 、全市场超 4600 只个股下跌，同时油气和半导体链条逆势、锂矿继续调整（来源：财联社/搜...",
-              "thesisId": "thesis-e6cfc49927",
-              "thesisTitle": "美股半导体大跌6.3%，A股半导体也因折算率下调产生93.81亿元保证金缺口，科创50遭遇放量回撤。在此轮全球科技股泡沫退潮和两融去杠杆…",
-              "thesisHref": "/investor/theses/thesis-e6cfc49927/",
+              "thesisId": "thesis-2fe5298427",
+              "thesisTitle": "Sivers (SIVE:STO) 概念被供应链证伪，而国内电子板块融资余额高达5608亿元，四大半导体龙头两融保证金缺口达93.81亿…",
+              "thesisHref": "/investor/theses/thesis-2fe5298427/",
               "sourceLabel": "深度研究",
               "supportType": "supports",
               "supportLabel": "支持",
@@ -3998,9 +4027,9 @@
               "date": "2026-07-09",
               "title": "A股策略交接：两融与小盘宽基 ETF 监测",
               "summary": "日期锚定： 2026-07-09。今日午盘新闻口径显示，沪深两市半日成交额约 1.7万亿元 、科创50半日涨超 3% 、全市场超 4600 只个股下跌，同时油气和半导体链条逆势、锂矿继续调整（来源：财联社/搜...",
-              "thesisId": "thesis-be7efbd4be",
-              "thesisTitle": "在两融余额可核口径约3.0万亿元、科创50盘中深V、但解禁与融资拥挤仍在的情况下，今日收盘后仓位框架应从Option 4极致防御调到哪一级？",
-              "thesisHref": "/investor/theses/thesis-be7efbd4be/",
+              "thesisId": "thesis-e6cfc49927",
+              "thesisTitle": "美股半导体大跌6.3%，A股半导体也因折算率下调产生93.81亿元保证金缺口，科创50遭遇放量回撤。在此轮全球科技股泡沫退潮和两融去杠杆…",
+              "thesisHref": "/investor/theses/thesis-e6cfc49927/",
               "sourceLabel": "深度研究",
               "supportType": "supports",
               "supportLabel": "支持",
@@ -4041,6 +4070,18 @@
           "thesisId": "thesis-4b3b37e207",
           "thesisTitle": "散户情绪与北向资金背离是 A 股风险偏好的关键温度计",
           "thesisHref": "/investor/theses/thesis-4b3b37e207/",
+          "sourceLabel": "深度研究",
+          "supportType": "supports",
+          "supportLabel": "支持",
+          "href": "/investor/reports/archive-a79d0581f33c/"
+        },
+        {
+          "date": "2026-07-09",
+          "title": "A股策略交接：两融与小盘宽基 ETF 监测",
+          "summary": "日期锚定： 2026-07-09。今日午盘新闻口径显示，沪深两市半日成交额约 1.7万亿元 、科创50半日涨超 3% 、全市场超 4600 只个股下跌，同时油气和半导体链条逆势、锂矿继续调整（来源：财联社/搜...",
+          "thesisId": "thesis-2fe5298427",
+          "thesisTitle": "Sivers (SIVE:STO) 概念被供应链证伪，而国内电子板块融资余额高达5608亿元，四大半导体龙头两融保证金缺口达93.81亿…",
+          "thesisHref": "/investor/theses/thesis-2fe5298427/",
           "sourceLabel": "深度研究",
           "supportType": "supports",
           "supportLabel": "支持",
@@ -4141,18 +4182,6 @@
           "supportType": "risk",
           "supportLabel": "风险",
           "href": "/investor/reports/archive-586f9020a1e9/"
-        },
-        {
-          "date": "2026-06-26",
-          "title": "A股风格与板块轮动研判：美股大盘成长向防御/周期轮动映射下的A股结构重塑与交易触发点报告",
-          "summary": "A股风格与板块轮动研判：美股大盘成长向防御/周期轮动映射下的A股结构重塑与交易触发点报告",
-          "thesisId": "thesis-70daf87262",
-          "thesisTitle": "A 股红利与硬科技杠铃仍是政策、利率和风险偏好的组合表达",
-          "thesisHref": "/investor/theses/thesis-70daf87262/",
-          "sourceLabel": "深度研究",
-          "supportType": "supports",
-          "supportLabel": "支持",
-          "href": "/investor/reports/archive-66e216053060/"
         }
       ],
       "href": "/investor/personas/#persona-a-share-strategist-e0ee8e"
@@ -7799,10 +7828,10 @@
       "firstSeen": "2026-05-06",
       "lastSeen": "2026-06-24",
       "thesisCount": 10,
-      "eventCount": 44,
+      "eventCount": 45,
       "stanceCounts": {
         "supports": 19,
-        "risks": 25,
+        "risks": 26,
         "neutral": 0
       },
       "topTerms": [
@@ -7810,11 +7839,11 @@
         "科创50",
         "融资余额",
         "硬科技",
-        "thesis",
         "两融",
         "CPO",
-        "PCB",
+        "thesis",
         "北向",
+        "PCB",
         "HBM",
         "GPU",
         "通胀"
@@ -8424,9 +8453,9 @@
         {
           "date": "2026-06-09",
           "supports": 0,
-          "risks": 9,
+          "risks": 10,
           "neutral": 0,
-          "eventCount": 9,
+          "eventCount": 10,
           "value": 12,
           "topTheses": [
             "中国云与国产算力栈的关键不是模型热度，而是训练/推理订单、服务器交付和生态锁定",
@@ -8474,9 +8503,9 @@
               "date": "2026-06-09",
               "title": "A股收盘技术图谱：科创50收复1600点关口，零Gamma防御后的量缩价升反弹与SpaceX再定价前瞻",
               "summary": "A股收盘技术图谱：科创50收复1600点关口，零Gamma防御后的量缩价升反弹与SpaceX再定价前瞻",
-              "thesisId": "thesis-d1f7cdc7c3",
-              "thesisTitle": "周末机器人板块情绪处于狂热，但硬科技（半导体/算力）去杠杆和科创50指数1750点雪球密集敲入带的风险依然悬顶。这两种割裂力量并存下，科…",
-              "thesisHref": "/investor/theses/thesis-d1f7cdc7c3/",
+              "thesisId": "thesis-2fe5298427",
+              "thesisTitle": "Sivers (SIVE:STO) 概念被供应链证伪，而国内电子板块融资余额高达5608亿元，四大半导体龙头两融保证金缺口达93.81亿…",
+              "thesisHref": "/investor/theses/thesis-2fe5298427/",
               "sourceLabel": "深度研究",
               "supportType": "risk",
               "supportLabel": "风险",
@@ -8484,15 +8513,15 @@
             },
             {
               "date": "2026-06-09",
-              "title": "§1 THESIS",
-              "summary": "ticker rating conviction horizon target band next-session execution --- --- --- --- --- --- 300502.SZ STRONG BUY HIGH 1d spot +3.0%至+6.0% [E5][E19] 09:30-10:00 进1500万限价单，若C...",
-              "thesisId": "thesis-31f32af77b",
-              "thesisTitle": "中国云与国产算力栈的关键不是模型热度，而是训练/推理订单、服务器交付和生态锁定",
-              "thesisHref": "/investor/theses/thesis-31f32af77b/",
+              "title": "A股收盘技术图谱：科创50收复1600点关口，零Gamma防御后的量缩价升反弹与SpaceX再定价前瞻",
+              "summary": "A股收盘技术图谱：科创50收复1600点关口，零Gamma防御后的量缩价升反弹与SpaceX再定价前瞻",
+              "thesisId": "thesis-d1f7cdc7c3",
+              "thesisTitle": "周末机器人板块情绪处于狂热，但硬科技（半导体/算力）去杠杆和科创50指数1750点雪球密集敲入带的风险依然悬顶。这两种割裂力量并存下，科…",
+              "thesisHref": "/investor/theses/thesis-d1f7cdc7c3/",
               "sourceLabel": "深度研究",
               "supportType": "risk",
               "supportLabel": "风险",
-              "href": "/investor/reports/archive-a0973654b1a1/"
+              "href": "/investor/reports/archive-dd094bcafe72/"
             }
           ]
         },
@@ -10105,1004 +10134,6 @@
       "href": "/investor/personas/#persona-sentiment-analyst-ea0e85"
     },
     {
-      "id": "persona-thematic-researcher-b117c9",
-      "name": "主题研究员",
-      "nameEn": "Thematic Researcher",
-      "category": "ESG与主题",
-      "specialty": "AI/量子计算/生物科技/太空经济/Web3 【合并扩展 2026-06-11】纳入监管政策、碳中和/绿色金融、地缘政治、制裁与出口管制、关税框架。原 policy-analyst 职能并入。",
-      "firstSeen": "2026-05-16",
-      "lastSeen": "2026-07-09",
-      "thesisCount": 10,
-      "eventCount": 35,
-      "stanceCounts": {
-        "supports": 8,
-        "risks": 27,
-        "neutral": 0
-      },
-      "topTerms": [
-        "GPU",
-        "利率",
-        "HBM",
-        "算力",
-        "ASIC",
-        "商业航天",
-        "通胀",
-        "SpaceX",
-        "国防",
-        "服务器",
-        "先进封装",
-        "A股"
-      ],
-      "currentView": "卫星电源壁垒需由发射节奏和单星价值量持续验证；卫星直连与商业航天从概念弹性进入部署兑现期；端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链 是当前该 persona 参与最多的研究主线。",
-      "whatChanged": [
-        "2026-07-09: 卫星直连与商业航天从概念弹性进入部署兑现期 / 每日专题研究简报：低轨道商业化转型的基础设施化契机 (2026-07-09)",
-        "2026-07-09: 卫星电源壁垒需由发射节奏和单星价值量持续验证 / 每日专题研究简报：低轨道商业化转型的基础设施化契机 (2026-07-09)",
-        "2026-07-03: 中国大健康 Alpha 正从医保压价转向创新药出海、临床确定性与设备刚需 / 晨间前沿科技与行业轮动扫描报告 (2026-07-03)",
-        "2026-06-24: 2026年AI芯片竞争格局：NVIDIA Rubin对阵云巨头ASIC / 新兴技术突破与产业化进展扫描报告（截至 2026-06-24）",
-        "2026-06-18: 新一代信息技术国产替代要从信创叙事进入算力、软件与安全订单验证 / 截至 2026-06-18 的结论：低价开源与本地算力闭环会持续压低闭源 API 的“可替代工作负载”定价"
-      ],
-      "theses": [
-        {
-          "id": "thesis-2a12467f9b",
-          "title": "卫星电源壁垒需由发射节奏和单星价值量持续验证",
-          "href": "/investor/theses/thesis-2a12467f9b/",
-          "direction": "conflicting",
-          "directionLabel": "分歧",
-          "exposureBucket": "航天国防与新场景",
-          "actionLabel": "分歧主线：配对验证",
-          "eventCount": 5,
-          "supports": 1,
-          "risks": 4,
-          "neutral": 0,
-          "score": 111,
-          "firstSeen": "2026-05-18",
-          "lastSeen": "2026-07-09",
-          "terms": {},
-          "topTerms": [
-            "利率",
-            "商业航天"
-          ]
-        },
-        {
-          "id": "thesis-2ec6b9d3ee",
-          "title": "卫星直连与商业航天从概念弹性进入部署兑现期",
-          "href": "/investor/theses/thesis-2ec6b9d3ee/",
-          "direction": "conflicting",
-          "directionLabel": "分歧",
-          "exposureBucket": "航天国防与新场景",
-          "actionLabel": "观察等待",
-          "eventCount": 5,
-          "supports": 1,
-          "risks": 4,
-          "neutral": 0,
-          "score": 148,
-          "firstSeen": "2026-05-19",
-          "lastSeen": "2026-07-09",
-          "terms": {},
-          "topTerms": [
-            "商业航天",
-            "space",
-            "卫星直连",
-            "RKLB"
-          ]
-        },
-        {
-          "id": "thesis-ffa474a3f2",
-          "title": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
-          "href": "/investor/theses/thesis-ffa474a3f2/",
-          "direction": "conflicting",
-          "directionLabel": "分歧",
-          "exposureBucket": "消费健康防御",
-          "actionLabel": "观察等待",
-          "eventCount": 4,
-          "supports": 1,
-          "risks": 3,
-          "neutral": 0,
-          "score": 159,
-          "firstSeen": "2026-05-16",
-          "lastSeen": "2026-05-19",
-          "terms": {},
-          "topTerms": [
-            "GPU",
-            "算力",
-            "Agent",
-            "agent",
-            "HBM",
-            "ASIC"
-          ]
-        },
-        {
-          "id": "thesis-ab1fb6a453",
-          "title": "DeepSeek 式低价模型正在重塑 AI 定价权与软件利润池",
-          "href": "/investor/theses/thesis-ab1fb6a453/",
-          "direction": "conflicting",
-          "directionLabel": "分歧",
-          "exposureBucket": "AI 基础设施",
-          "actionLabel": "分歧主线：配对验证",
-          "eventCount": 2,
-          "supports": 0,
-          "risks": 2,
-          "neutral": 0,
-          "score": 54,
-          "firstSeen": "2026-05-19",
-          "lastSeen": "2026-06-18",
-          "terms": {},
-          "topTerms": [
-            "利率",
-            "GPU"
-          ]
-        },
-        {
-          "id": "thesis-ef15fe6a81",
-          "title": "Rocket Lab以约80亿美元收购Iridium后，公共市场应如何重估频谱、D2D/PNT、国防可信网络和纵向整合能力，而不是只交易…",
-          "href": "/investor/theses/thesis-ef15fe6a81/",
-          "direction": "conflicting",
-          "directionLabel": "分歧",
-          "exposureBucket": "宏观利率与汇率",
-          "actionLabel": "深研候选：先建观察仓",
-          "eventCount": 2,
-          "supports": 0,
-          "risks": 2,
-          "neutral": 0,
-          "score": 58,
-          "firstSeen": "2026-05-19",
-          "lastSeen": "2026-06-02",
-          "terms": {},
-          "topTerms": [
-            "国防",
-            "SpaceX",
-            "美元",
-            "Rocket"
-          ]
-        },
-        {
-          "id": "thesis-44cf9d91f6",
-          "title": "中国大健康 Alpha 正从医保压价转向创新药出海、临床确定性与设备刚需",
-          "href": "/investor/theses/thesis-44cf9d91f6/",
-          "direction": "conflicting",
-          "directionLabel": "分歧",
-          "exposureBucket": "消费健康防御",
-          "actionLabel": "观察等待",
-          "eventCount": 1,
-          "supports": 1,
-          "risks": 0,
-          "neutral": 0,
-          "score": 25,
-          "firstSeen": "2026-07-03",
-          "lastSeen": "2026-07-03",
-          "terms": {},
-          "topTerms": [
-            "AI 基础设施",
-            "GPU",
-            "创新药"
-          ]
-        },
-        {
-          "id": "thesis-d1f5e35b43",
-          "title": "2026年AI芯片竞争格局：NVIDIA Rubin对阵云巨头ASIC",
-          "href": "/investor/theses/thesis-d1f5e35b43/",
-          "direction": "conflicting",
-          "directionLabel": "分歧",
-          "exposureBucket": "AI 基础设施",
-          "actionLabel": "深研候选：先建观察仓",
-          "eventCount": 1,
-          "supports": 1,
-          "risks": 0,
-          "neutral": 0,
-          "score": 28,
-          "firstSeen": "2026-06-24",
-          "lastSeen": "2026-06-24",
-          "terms": {},
-          "topTerms": [
-            "GPU",
-            "ASIC",
-            "HBM",
-            "利率",
-            "定价权"
-          ]
-        },
-        {
-          "id": "thesis-31f32af77b",
-          "title": "中国云与国产算力栈的关键不是模型热度，而是训练/推理订单、服务器交付和生态锁定",
-          "href": "/investor/theses/thesis-31f32af77b/",
-          "direction": "conflicting",
-          "directionLabel": "分歧",
-          "exposureBucket": "AI 基础设施",
-          "actionLabel": "分歧主线：配对验证",
-          "eventCount": 1,
-          "supports": 0,
-          "risks": 1,
-          "neutral": 0,
-          "score": 46,
-          "firstSeen": "2026-06-18",
-          "lastSeen": "2026-06-18",
-          "terms": {},
-          "topTerms": [
-            "HBM",
-            "服务器",
-            "算力",
-            "国产算力"
-          ]
-        },
-        {
-          "id": "thesis-075017003b",
-          "title": "AI 资本开支通过能源、设备和利率进入通胀定价",
-          "href": "/investor/theses/thesis-075017003b/",
-          "direction": "stable",
-          "directionLabel": "稳定",
-          "exposureBucket": "宏观利率与汇率",
-          "actionLabel": "观察等待",
-          "eventCount": 1,
-          "supports": 1,
-          "risks": 0,
-          "neutral": 0,
-          "score": 39,
-          "firstSeen": "2026-06-18",
-          "lastSeen": "2026-06-18",
-          "terms": {},
-          "topTerms": [
-            "AI 资本开支",
-            "PCE",
-            "通胀",
-            "利率"
-          ]
-        },
-        {
-          "id": "thesis-7a6599a3f5",
-          "title": "新一代信息技术国产替代要从信创叙事进入算力、软件与安全订单验证",
-          "href": "/investor/theses/thesis-7a6599a3f5/",
-          "direction": "conflicting",
-          "directionLabel": "分歧",
-          "exposureBucket": "AI 基础设施",
-          "actionLabel": "观察等待",
-          "eventCount": 1,
-          "supports": 0,
-          "risks": 1,
-          "neutral": 0,
-          "score": 53,
-          "firstSeen": "2026-06-18",
-          "lastSeen": "2026-06-18",
-          "terms": {},
-          "topTerms": [
-            "GPU",
-            "HBM",
-            "服务器",
-            "算力",
-            "信创",
-            "国产替代"
-          ]
-        }
-      ],
-      "timeline": [
-        {
-          "date": "2026-05-16",
-          "supports": 1,
-          "risks": 5,
-          "neutral": 0,
-          "eventCount": 6,
-          "value": 20,
-          "topTheses": [
-            "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
-            "全球科技配置应超配ASIC与新代工生态；A股风格则需从“AI题材映射”战略性切换至独立算力的“国产第二供应源”，重仓先进封装产能、核心设…",
-            "在DeepSeek API成本骤降96%和博通-OpenAI发布Jalapeño推理ASIC的背景下，AI产业是否正从训练硬件投资转向推…"
-          ],
-          "events": [
-            {
-              "date": "2026-05-16",
-              "title": "边缘AI与定制硅（ASIC）的投资映射：基建约束下的算力新形态",
-              "summary": "综合前序对于发电设备、变压器交付滞后的研究结论，本报告认为： 电力设备的基建瓶颈并未引发AI总资本支出（CAPEX）的坍塌，而是作为硬约束，催化了算力形态的结构性演变。 云端算力正加速向高...",
-              "thesisId": "thesis-ffa474a3f2",
-              "thesisTitle": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
-              "thesisHref": "/investor/theses/thesis-ffa474a3f2/",
-              "sourceLabel": "深度研究",
-              "supportType": "risk",
-              "supportLabel": "风险",
-              "href": "/investor/reports/archive-76de3be8fba0/"
-            },
-            {
-              "date": "2026-05-16",
-              "title": "边缘AI与定制硅（ASIC）的投资映射：基建约束下的算力新形态",
-              "summary": "综合前序对于发电设备、变压器交付滞后的研究结论，本报告认为： 电力设备的基建瓶颈并未引发AI总资本支出（CAPEX）的坍塌，而是作为硬约束，催化了算力形态的结构性演变。 云端算力正加速向高...",
-              "thesisId": "thesis-40b8638803",
-              "thesisTitle": "全球科技配置应超配ASIC与新代工生态；A股风格则需从“AI题材映射”战略性切换至独立算力的“国产第二供应源”，重仓先进封装产能、核心设…",
-              "thesisHref": "/investor/theses/thesis-40b8638803/",
-              "sourceLabel": "深度研究",
-              "supportType": "risk",
-              "supportLabel": "风险",
-              "href": "/investor/reports/archive-76de3be8fba0/"
-            },
-            {
-              "date": "2026-05-16",
-              "title": "Web3 叙事重估：Clear Act + 零售情绪共振——机械 beta 还是基本面重估？",
-              "summary": "Web3 叙事重估：Clear Act + 零售情绪共振——机械 beta 还是基本面重估？",
-              "thesisId": "thesis-58200390b4",
-              "thesisTitle": "加密资产仍是全球流动性和散户风险偏好的高频回声",
-              "thesisHref": "/investor/theses/thesis-58200390b4/",
-              "sourceLabel": "深度研究",
-              "supportType": "risk",
-              "supportLabel": "风险",
-              "href": "/investor/reports/archive-306ec11253cd/"
-            },
-            {
-              "date": "2026-05-16",
-              "title": "AI物理层VS软件层：2026年的资本支出博弈",
-              "summary": "工作日期：2026-05-16（Asia/Singapore）。研究记录。立场：综合并支持此前的“错位期”判断。",
-              "thesisId": "thesis-ffa474a3f2",
-              "thesisTitle": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
-              "thesisHref": "/investor/theses/thesis-ffa474a3f2/",
-              "sourceLabel": "深度研究",
-              "supportType": "supports",
-              "supportLabel": "支持",
-              "href": "/investor/reports/archive-676aa9b4c98a/"
-            },
-            {
-              "date": "2026-05-16",
-              "title": "边缘AI与定制硅（ASIC）的投资映射：基建约束下的算力新形态",
-              "summary": "综合前序对于发电设备、变压器交付滞后的研究结论，本报告认为： 电力设备的基建瓶颈并未引发AI总资本支出（CAPEX）的坍塌，而是作为硬约束，催化了算力形态的结构性演变。 云端算力正加速向高...",
-              "thesisId": "thesis-ba5fd94dff",
-              "thesisTitle": "在DeepSeek API成本骤降96%和博通-OpenAI发布Jalapeño推理ASIC的背景下，AI产业是否正从训练硬件投资转向推…",
-              "thesisHref": "/investor/theses/thesis-ba5fd94dff/",
-              "sourceLabel": "深度研究",
-              "supportType": "risk",
-              "supportLabel": "风险",
-              "href": "/investor/reports/archive-76de3be8fba0/"
-            }
-          ]
-        },
-        {
-          "date": "2026-05-18",
-          "supports": 0,
-          "risks": 2,
-          "neutral": 0,
-          "eventCount": 2,
-          "value": 31.4,
-          "topTheses": [
-            "卫星电源壁垒需由发射节奏和单星价值量持续验证",
-            "航空航天与国防供应链错配正在形成政策驱动的制造业弹性"
-          ],
-          "events": [
-            {
-              "date": "2026-05-18",
-              "title": "压力测试\"仅为AI流动性外溢\"的判断（量子与空间）",
-              "summary": "· 立场：stress-test - 分析师：主题研究员（AI / 量子 / 生物科技 / 空间经济 / Web3） - 工作日：2026-05-18（亚洲/新加坡） - 被压力测试的研究记录：既有研究记录（asse...",
-              "thesisId": "thesis-21dd72c1b1",
-              "thesisTitle": "航空航天与国防供应链错配正在形成政策驱动的制造业弹性",
-              "thesisHref": "/investor/theses/thesis-21dd72c1b1/",
-              "sourceLabel": "深度研究",
-              "supportType": "risk",
-              "supportLabel": "风险",
-              "href": "/investor/reports/archive-a1cfed578101/"
-            },
-            {
-              "date": "2026-05-18",
-              "title": "压力测试\"仅为AI流动性外溢\"的判断（量子与空间）",
-              "summary": "· 立场：stress-test - 分析师：主题研究员（AI / 量子 / 生物科技 / 空间经济 / Web3） - 工作日：2026-05-18（亚洲/新加坡） - 被压力测试的研究记录：既有研究记录（asse...",
-              "thesisId": "thesis-2a12467f9b",
-              "thesisTitle": "卫星电源壁垒需由发射节奏和单星价值量持续验证",
-              "thesisHref": "/investor/theses/thesis-2a12467f9b/",
-              "sourceLabel": "深度研究",
-              "supportType": "risk",
-              "supportLabel": "风险",
-              "href": "/investor/reports/archive-a1cfed578101/"
-            }
-          ]
-        },
-        {
-          "date": "2026-05-19",
-          "supports": 0,
-          "risks": 7,
-          "neutral": 0,
-          "eventCount": 7,
-          "value": 12,
-          "topTheses": [
-            "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
-            "卫星电源壁垒需由发射节奏和单星价值量持续验证",
-            "DeepSeek 式低价模型正在重塑 AI 定价权与软件利润池"
-          ],
-          "events": [
-            {
-              "date": "2026-05-19",
-              "title": "AI端侧落地与边缘算力需求验证 - 2026-05-19",
-              "summary": "截至2026-05-19，我支持前序判断：云端推理成本下降和国产算力芯片适配，并没有削弱端侧AI需求，而是改变了需求形态。最强证据来自出货结构和硬件BOM，应用变现证据仍未完全跟上。AI PC与GenAI...",
-              "thesisId": "thesis-ffa474a3f2",
-              "thesisTitle": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
-              "thesisHref": "/investor/theses/thesis-ffa474a3f2/",
-              "sourceLabel": "深度研究",
-              "supportType": "risk",
-              "supportLabel": "风险",
-              "href": "/investor/reports/archive-8d772f92bd52/"
-            },
-            {
-              "date": "2026-05-19",
-              "title": "专题研究报告：SpaceX IPO 背景下的 Rocket Lab (RKLB) 估值逻辑深度解析",
-              "summary": "专题研究报告：SpaceX IPO 背景下的 Rocket Lab (RKLB) 估值逻辑深度解析",
-              "thesisId": "thesis-2ec6b9d3ee",
-              "thesisTitle": "卫星直连与商业航天从概念弹性进入部署兑现期",
-              "thesisHref": "/investor/theses/thesis-2ec6b9d3ee/",
-              "sourceLabel": "深度研究",
-              "supportType": "risk",
-              "supportLabel": "风险",
-              "href": "/investor/reports/archive-5d9c04a74783/"
-            },
-            {
-              "date": "2026-05-19",
-              "title": "2026-05-19 自动驾驶篮子的拥挤度验证与 H2 轮动路径",
-              "summary": "2026-05-19 自动驾驶篮子的拥挤度验证与 H2 轮动路径 - 作者：主题研究员 - 工作日期：2026-05-19（Asia/Singapore） - - 立场：stress-test → 支持主题，但把 A 股腿从“便宜且干净”下调为“...",
-              "thesisId": "thesis-485a630a87",
-              "thesisTitle": "自动驾驶与 Robotaxi 主题必须从演示热度进入单位经济和监管城市扩张验证",
-              "thesisHref": "/investor/theses/thesis-485a630a87/",
-              "sourceLabel": "深度研究",
-              "supportType": "risk",
-              "supportLabel": "风险",
-              "href": "/investor/reports/archive-08140fd1627e/"
-            },
-            {
-              "date": "2026-05-19",
-              "title": "专题研究报告：SpaceX IPO 背景下的 Rocket Lab (RKLB) 估值逻辑深度解析",
-              "summary": "专题研究报告：SpaceX IPO 背景下的 Rocket Lab (RKLB) 估值逻辑深度解析",
-              "thesisId": "thesis-ef15fe6a81",
-              "thesisTitle": "Rocket Lab以约80亿美元收购Iridium后，公共市场应如何重估频谱、D2D/PNT、国防可信网络和纵向整合能力，而不是只交易…",
-              "thesisHref": "/investor/theses/thesis-ef15fe6a81/",
-              "sourceLabel": "深度研究",
-              "supportType": "risk",
-              "supportLabel": "风险",
-              "href": "/investor/reports/archive-5d9c04a74783/"
-            },
-            {
-              "date": "2026-05-19",
-              "title": "AI变现的“11%陷阱”：智能体泡沫还是阵痛？",
-              "summary": "工作日期：2026-05-19（Asia/Singapore） 研究记录 01 / 立场：综合判断，对弱势SaaS群体保持偏谨慎",
-              "thesisId": "thesis-ab1fb6a453",
-              "thesisTitle": "DeepSeek 式低价模型正在重塑 AI 定价权与软件利润池",
-              "thesisHref": "/investor/theses/thesis-ab1fb6a453/",
-              "sourceLabel": "深度研究",
-              "supportType": "risk",
-              "supportLabel": "风险",
-              "href": "/investor/reports/archive-d09cc2d40d8c/"
-            }
-          ]
-        },
-        {
-          "date": "2026-05-30",
-          "supports": 0,
-          "risks": 3,
-          "neutral": 0,
-          "eventCount": 3,
-          "value": 28.2,
-          "topTheses": [
-            "卫星电源壁垒需由发射节奏和单星价值量持续验证",
-            "AI 生产率去通胀需要等待采用率和流程重构验证",
-            "卫星直连与商业航天从概念弹性进入部署兑现期"
-          ],
-          "events": [
-            {
-              "date": "2026-05-30",
-              "title": "周末主题深度扫描 · 2026-05-30(周六)",
-              "summary": "主题研究员 覆盖范围:AI / 量子 / 生物科技 / 太空经济 / Web3 锚定日期(shell):2026-05-30 · 面向窗口:6月1日(周一)开盘前的全员研究辩论 上游文件检查:本工作区在本步骤开始时为空(仅有 .git...",
-              "thesisId": "thesis-9d3836cc07",
-              "thesisTitle": "AI 生产率去通胀需要等待采用率和流程重构验证",
-              "thesisHref": "/investor/theses/thesis-9d3836cc07/",
-              "sourceLabel": "深度研究",
-              "supportType": "risk",
-              "supportLabel": "风险",
-              "href": "/investor/reports/archive-9b824294eb9b/"
-            },
-            {
-              "date": "2026-05-30",
-              "title": "周末主题深度扫描 · 2026-05-30(周六)",
-              "summary": "主题研究员 覆盖范围:AI / 量子 / 生物科技 / 太空经济 / Web3 锚定日期(shell):2026-05-30 · 面向窗口:6月1日(周一)开盘前的全员研究辩论 上游文件检查:本工作区在本步骤开始时为空(仅有 .git...",
-              "thesisId": "thesis-2a12467f9b",
-              "thesisTitle": "卫星电源壁垒需由发射节奏和单星价值量持续验证",
-              "thesisHref": "/investor/theses/thesis-2a12467f9b/",
-              "sourceLabel": "深度研究",
-              "supportType": "risk",
-              "supportLabel": "风险",
-              "href": "/investor/reports/archive-9b824294eb9b/"
-            },
-            {
-              "date": "2026-05-30",
-              "title": "周末主题深度扫描 · 2026-05-30(周六)",
-              "summary": "主题研究员 覆盖范围:AI / 量子 / 生物科技 / 太空经济 / Web3 锚定日期(shell):2026-05-30 · 面向窗口:6月1日(周一)开盘前的全员研究辩论 上游文件检查:本工作区在本步骤开始时为空(仅有 .git...",
-              "thesisId": "thesis-2ec6b9d3ee",
-              "thesisTitle": "卫星直连与商业航天从概念弹性进入部署兑现期",
-              "thesisHref": "/investor/theses/thesis-2ec6b9d3ee/",
-              "sourceLabel": "深度研究",
-              "supportType": "risk",
-              "supportLabel": "风险",
-              "href": "/investor/reports/archive-9b824294eb9b/"
-            }
-          ]
-        },
-        {
-          "date": "2026-06-01",
-          "supports": 0,
-          "risks": 1,
-          "neutral": 0,
-          "eventCount": 1,
-          "value": 41.6,
-          "topTheses": [
-            "公用事业从防御红利切换到电网扩容、容量费与信用再定价"
-          ],
-          "events": [
-            {
-              "date": "2026-06-01",
-              "title": "主题研究员盘前结构性专题扫描与研究专题研报 (2026-06-01)",
-              "summary": "报告日期：2026年6月1日 (星期一) 分析师：主题研究员 (Thematic Researcher, thematic-researcher ) 专业领域：AI与前沿科技实体约束、地缘政治与宏观通胀传导、跨境供应链异动、结构性风格轮...",
-              "thesisId": "thesis-08dd090dc9",
-              "thesisTitle": "公用事业从防御红利切换到电网扩容、容量费与信用再定价",
-              "thesisHref": "/investor/theses/thesis-08dd090dc9/",
-              "sourceLabel": "深度研究",
-              "supportType": "risk",
-              "supportLabel": "风险",
-              "href": "/investor/reports/archive-4edece312220/"
-            }
-          ]
-        },
-        {
-          "date": "2026-06-02",
-          "supports": 0,
-          "risks": 3,
-          "neutral": 0,
-          "eventCount": 3,
-          "value": 31,
-          "topTheses": [
-            "SpaceX (SPCX)挂牌首日大跌且ASTS面临17.6亿美元Capex缺口，散户FOMO热炒ASTS (35-45x EV/Sal…",
-            "Rocket Lab以约80亿美元收购Iridium后，公共市场应如何重估频谱、D2D/PNT、国防可信网络和纵向整合能力，而不是只交易…",
-            "卫星直连与商业航天从概念弹性进入部署兑现期"
-          ],
-          "events": [
-            {
-              "date": "2026-06-02",
-              "title": "SpaceX IPO 对航天存量标的的估值溢出与 6 月 12 日后均值回归判断",
-              "summary": "SpaceX IPO 对航天存量标的的估值溢出与 6 月 12 日后均值回归判断",
-              "thesisId": "thesis-2ec6b9d3ee",
-              "thesisTitle": "卫星直连与商业航天从概念弹性进入部署兑现期",
-              "thesisHref": "/investor/theses/thesis-2ec6b9d3ee/",
-              "sourceLabel": "深度研究",
-              "supportType": "risk",
-              "supportLabel": "风险",
-              "href": "/investor/reports/archive-1c7558fa412d/"
-            },
-            {
-              "date": "2026-06-02",
-              "title": "SpaceX IPO 对航天存量标的的估值溢出与 6 月 12 日后均值回归判断",
-              "summary": "SpaceX IPO 对航天存量标的的估值溢出与 6 月 12 日后均值回归判断",
-              "thesisId": "thesis-ef15fe6a81",
-              "thesisTitle": "Rocket Lab以约80亿美元收购Iridium后，公共市场应如何重估频谱、D2D/PNT、国防可信网络和纵向整合能力，而不是只交易…",
-              "thesisHref": "/investor/theses/thesis-ef15fe6a81/",
-              "sourceLabel": "深度研究",
-              "supportType": "risk",
-              "supportLabel": "风险",
-              "href": "/investor/reports/archive-1c7558fa412d/"
-            },
-            {
-              "date": "2026-06-02",
-              "title": "SpaceX IPO 对航天存量标的的估值溢出与 6 月 12 日后均值回归判断",
-              "summary": "SpaceX IPO 对航天存量标的的估值溢出与 6 月 12 日后均值回归判断",
-              "thesisId": "thesis-065b759e9a",
-              "thesisTitle": "SpaceX (SPCX)挂牌首日大跌且ASTS面临17.6亿美元Capex缺口，散户FOMO热炒ASTS (35-45x EV/Sal…",
-              "thesisHref": "/investor/theses/thesis-065b759e9a/",
-              "sourceLabel": "深度研究",
-              "supportType": "risk",
-              "supportLabel": "风险",
-              "href": "/investor/reports/archive-1c7558fa412d/"
-            }
-          ]
-        },
-        {
-          "date": "2026-06-09",
-          "supports": 1,
-          "risks": 0,
-          "neutral": 0,
-          "eventCount": 1,
-          "value": 58.4,
-          "topTheses": [
-            "NAND盈利弹性由价格与产品结构主导，而非单纯出货增长"
-          ],
-          "events": [
-            {
-              "date": "2026-06-09",
-              "title": "AI算力云与下游链条交易表达 - 2026-06-09",
-              "summary": "1. 1d-5d窗口：建议利用APLD盘后消息带来的同业高开/情绪脉冲，卖出或套保NBIS，而不是追高重资产云平台。 APLD的新增租约是真实利好，但首批运营预计在2028年Q1开始，短线更多是“合同头条 + r...",
-              "thesisId": "thesis-b976d8330e",
-              "thesisTitle": "NAND盈利弹性由价格与产品结构主导，而非单纯出货增长",
-              "thesisHref": "/investor/theses/thesis-b976d8330e/",
-              "sourceLabel": "深度研究",
-              "supportType": "supports",
-              "supportLabel": "支持",
-              "href": "/investor/reports/archive-c395f754297a/"
-            }
-          ]
-        },
-        {
-          "date": "2026-06-10",
-          "supports": 0,
-          "risks": 1,
-          "neutral": 0,
-          "eventCount": 1,
-          "value": 45.8,
-          "topTheses": [
-            "MSCI 调整窗口是被动资金与主动减仓相互博弈的流动性事件"
-          ],
-          "events": [
-            {
-              "date": "2026-06-10",
-              "title": "SPCX 上市对 A 股 TMT 硬件板块的被动流出与冲击成本测算",
-              "summary": "回应对象: A股策略师 · 两融数据分析（ analyst:ashare-strategist:margin analysis，run 59ec3e33 ） 作者: 主题研究员（AI / 量子 / 生物 / 太空经济 / Web3） 日期锚点: 2026-06-10（ date...",
-              "thesisId": "thesis-029ce03da1",
-              "thesisTitle": "MSCI 调整窗口是被动资金与主动减仓相互博弈的流动性事件",
-              "thesisHref": "/investor/theses/thesis-029ce03da1/",
-              "sourceLabel": "深度研究",
-              "supportType": "risk",
-              "supportLabel": "风险",
-              "href": "/investor/reports/archive-8e1177d42920/"
-            }
-          ]
-        },
-        {
-          "date": "2026-06-11",
-          "supports": 1,
-          "risks": 0,
-          "neutral": 0,
-          "eventCount": 1,
-          "value": 61.2,
-          "topTheses": [
-            "数据中心地产、液冷与水资源正在决定 AI 容量的区域迁移"
-          ],
-          "events": [
-            {
-              "date": "2026-06-11",
-              "title": "早间主题轮动扫描：从“算力”向“电力”的范式转移",
-              "summary": "早间主题轮动扫描：从“算力”向“电力”的范式转移 日期： 2026-06-11 分析师： 主题研究员",
-              "thesisId": "thesis-7f0a75c5f6",
-              "thesisTitle": "数据中心地产、液冷与水资源正在决定 AI 容量的区域迁移",
-              "thesisHref": "/investor/theses/thesis-7f0a75c5f6/",
-              "sourceLabel": "深度研究",
-              "supportType": "supports",
-              "supportLabel": "支持",
-              "href": "/investor/reports/archive-2ed99484dedd/"
-            }
-          ]
-        },
-        {
-          "date": "2026-06-14",
-          "supports": 2,
-          "risks": 0,
-          "neutral": 0,
-          "eventCount": 2,
-          "value": 70.6,
-          "topTheses": [
-            "卫星电源壁垒需由发射节奏和单星价值量持续验证",
-            "卫星直连与商业航天从概念弹性进入部署兑现期"
-          ],
-          "events": [
-            {
-              "date": "2026-06-14",
-              "title": "周末深度主题扫描 - 2026-06-14",
-              "summary": "锚定日期：本报告先以 shell 输出 2026-06-14 为“今天”。“过去5个交易日”定义为 2026-06-08 至 2026-06-12，价格表现使用 2026-06-05 收盘至 2026-06-12 收盘的 close-to-close 口径。市场...",
-              "thesisId": "thesis-2ec6b9d3ee",
-              "thesisTitle": "卫星直连与商业航天从概念弹性进入部署兑现期",
-              "thesisHref": "/investor/theses/thesis-2ec6b9d3ee/",
-              "sourceLabel": "深度研究",
-              "supportType": "supports",
-              "supportLabel": "支持",
-              "href": "/investor/reports/archive-89c17f9f1b48/"
-            },
-            {
-              "date": "2026-06-14",
-              "title": "周末深度主题扫描 - 2026-06-14",
-              "summary": "锚定日期：本报告先以 shell 输出 2026-06-14 为“今天”。“过去5个交易日”定义为 2026-06-08 至 2026-06-12，价格表现使用 2026-06-05 收盘至 2026-06-12 收盘的 close-to-close 口径。市场...",
-              "thesisId": "thesis-2a12467f9b",
-              "thesisTitle": "卫星电源壁垒需由发射节奏和单星价值量持续验证",
-              "thesisHref": "/investor/theses/thesis-2a12467f9b/",
-              "sourceLabel": "深度研究",
-              "supportType": "supports",
-              "supportLabel": "支持",
-              "href": "/investor/reports/archive-89c17f9f1b48/"
-            }
-          ]
-        },
-        {
-          "date": "2026-06-18",
-          "supports": 1,
-          "risks": 3,
-          "neutral": 0,
-          "eventCount": 4,
-          "value": 46,
-          "topTheses": [
-            "中国云与国产算力栈的关键不是模型热度，而是训练/推理订单、服务器交付和生态锁定",
-            "DeepSeek 式低价模型正在重塑 AI 定价权与软件利润池",
-            "AI 资本开支通过能源、设备和利率进入通胀定价"
-          ],
-          "events": [
-            {
-              "date": "2026-06-18",
-              "title": "截至 2026-06-18 的结论：低价开源与本地算力闭环会持续压低闭源 API 的“可替代工作负载”定价",
-              "summary": "截至 2026-06-18 的结论：低价开源与本地算力闭环会持续压低闭源 API 的“可替代工作负载”定价",
-              "thesisId": "thesis-7a6599a3f5",
-              "thesisTitle": "新一代信息技术国产替代要从信创叙事进入算力、软件与安全订单验证",
-              "thesisHref": "/investor/theses/thesis-7a6599a3f5/",
-              "sourceLabel": "深度研究",
-              "supportType": "risk",
-              "supportLabel": "风险",
-              "href": "/investor/reports/archive-1850b92ab6e1/"
-            },
-            {
-              "date": "2026-06-18",
-              "title": "截至 2026-06-18 的结论：低价开源与本地算力闭环会持续压低闭源 API 的“可替代工作负载”定价",
-              "summary": "截至 2026-06-18 的结论：低价开源与本地算力闭环会持续压低闭源 API 的“可替代工作负载”定价",
-              "thesisId": "thesis-31f32af77b",
-              "thesisTitle": "中国云与国产算力栈的关键不是模型热度，而是训练/推理订单、服务器交付和生态锁定",
-              "thesisHref": "/investor/theses/thesis-31f32af77b/",
-              "sourceLabel": "深度研究",
-              "supportType": "risk",
-              "supportLabel": "风险",
-              "href": "/investor/reports/archive-1850b92ab6e1/"
-            },
-            {
-              "date": "2026-06-18",
-              "title": "主题轮动晨扫：跨行业制度切换信号",
-              "summary": "锚定日期： 2026-06-18 （本地 shell）。所有“今日/隔夜/下周”均按该日期解释；市场数据截至 2026-06-17 美股收盘，适用于 2026-06-18 亚洲早盘/美股盘前观察。",
-              "thesisId": "thesis-075017003b",
-              "thesisTitle": "AI 资本开支通过能源、设备和利率进入通胀定价",
-              "thesisHref": "/investor/theses/thesis-075017003b/",
-              "sourceLabel": "深度研究",
-              "supportType": "supports",
-              "supportLabel": "支持",
-              "href": "/investor/reports/archive-7c5c57b89ea1/"
-            },
-            {
-              "date": "2026-06-18",
-              "title": "截至 2026-06-18 的结论：低价开源与本地算力闭环会持续压低闭源 API 的“可替代工作负载”定价",
-              "summary": "截至 2026-06-18 的结论：低价开源与本地算力闭环会持续压低闭源 API 的“可替代工作负载”定价",
-              "thesisId": "thesis-ab1fb6a453",
-              "thesisTitle": "DeepSeek 式低价模型正在重塑 AI 定价权与软件利润池",
-              "thesisHref": "/investor/theses/thesis-ab1fb6a453/",
-              "sourceLabel": "深度研究",
-              "supportType": "risk",
-              "supportLabel": "风险",
-              "href": "/investor/reports/archive-1850b92ab6e1/"
-            }
-          ]
-        },
-        {
-          "date": "2026-06-24",
-          "supports": 1,
-          "risks": 0,
-          "neutral": 0,
-          "eventCount": 1,
-          "value": 65.4,
-          "topTheses": [
-            "2026年AI芯片竞争格局：NVIDIA Rubin对阵云巨头ASIC"
-          ],
-          "events": [
-            {
-              "date": "2026-06-24",
-              "title": "新兴技术突破与产业化进展扫描报告（截至 2026-06-24）",
-              "summary": "分析师：主题研究员 ( thematic-researcher ) - 发布日期：2026-06-24 - 文档语言：简体中文 - 工作区路径： /[local-workspace] tech.md",
-              "thesisId": "thesis-d1f5e35b43",
-              "thesisTitle": "2026年AI芯片竞争格局：NVIDIA Rubin对阵云巨头ASIC",
-              "thesisHref": "/investor/theses/thesis-d1f5e35b43/",
-              "sourceLabel": "深度研究",
-              "supportType": "supports",
-              "supportLabel": "支持",
-              "href": "/investor/reports/archive-7d56ce0f77ff/"
-            }
-          ]
-        },
-        {
-          "date": "2026-07-03",
-          "supports": 1,
-          "risks": 0,
-          "neutral": 0,
-          "eventCount": 1,
-          "value": 66.8,
-          "topTheses": [
-            "中国大健康 Alpha 正从医保压价转向创新药出海、临床确定性与设备刚需"
-          ],
-          "events": [
-            {
-              "date": "2026-07-03",
-              "title": "晨间前沿科技与行业轮动扫描报告 (2026-07-03)",
-              "summary": "报告日期：2026-07-03 [依据系统时间验证] 分析师：主题研究员 (Thematic Researcher, analyst:thematic-researcher ) 安全级别：研究院机密 (Internal Use Only) 数据截至：昨日（2026-07-02）...",
-              "thesisId": "thesis-44cf9d91f6",
-              "thesisTitle": "中国大健康 Alpha 正从医保压价转向创新药出海、临床确定性与设备刚需",
-              "thesisHref": "/investor/theses/thesis-44cf9d91f6/",
-              "sourceLabel": "深度研究",
-              "supportType": "supports",
-              "supportLabel": "支持",
-              "href": "/investor/reports/archive-3a070dd4f842/"
-            }
-          ]
-        },
-        {
-          "date": "2026-07-09",
-          "supports": 0,
-          "risks": 2,
-          "neutral": 0,
-          "eventCount": 2,
-          "value": 48.2,
-          "topTheses": [
-            "卫星电源壁垒需由发射节奏和单星价值量持续验证",
-            "卫星直连与商业航天从概念弹性进入部署兑现期"
-          ],
-          "events": [
-            {
-              "date": "2026-07-09",
-              "title": "每日专题研究简报：低轨道商业化转型的基础设施化契机 (2026-07-09)",
-              "summary": "每日专题研究简报：低轨道商业化转型的基础设施化契机 (2026-07-09)",
-              "thesisId": "thesis-2ec6b9d3ee",
-              "thesisTitle": "卫星直连与商业航天从概念弹性进入部署兑现期",
-              "thesisHref": "/investor/theses/thesis-2ec6b9d3ee/",
-              "sourceLabel": "深度研究",
-              "supportType": "risk",
-              "supportLabel": "风险",
-              "href": "/investor/reports/archive-ccfed872b80c/"
-            },
-            {
-              "date": "2026-07-09",
-              "title": "每日专题研究简报：低轨道商业化转型的基础设施化契机 (2026-07-09)",
-              "summary": "每日专题研究简报：低轨道商业化转型的基础设施化契机 (2026-07-09)",
-              "thesisId": "thesis-2a12467f9b",
-              "thesisTitle": "卫星电源壁垒需由发射节奏和单星价值量持续验证",
-              "thesisHref": "/investor/theses/thesis-2a12467f9b/",
-              "sourceLabel": "深度研究",
-              "supportType": "risk",
-              "supportLabel": "风险",
-              "href": "/investor/reports/archive-ccfed872b80c/"
-            }
-          ]
-        }
-      ],
-      "latestEvents": [
-        {
-          "date": "2026-07-09",
-          "title": "每日专题研究简报：低轨道商业化转型的基础设施化契机 (2026-07-09)",
-          "summary": "每日专题研究简报：低轨道商业化转型的基础设施化契机 (2026-07-09)",
-          "thesisId": "thesis-2ec6b9d3ee",
-          "thesisTitle": "卫星直连与商业航天从概念弹性进入部署兑现期",
-          "thesisHref": "/investor/theses/thesis-2ec6b9d3ee/",
-          "sourceLabel": "深度研究",
-          "supportType": "risk",
-          "supportLabel": "风险",
-          "href": "/investor/reports/archive-ccfed872b80c/"
-        },
-        {
-          "date": "2026-07-09",
-          "title": "每日专题研究简报：低轨道商业化转型的基础设施化契机 (2026-07-09)",
-          "summary": "每日专题研究简报：低轨道商业化转型的基础设施化契机 (2026-07-09)",
-          "thesisId": "thesis-2a12467f9b",
-          "thesisTitle": "卫星电源壁垒需由发射节奏和单星价值量持续验证",
-          "thesisHref": "/investor/theses/thesis-2a12467f9b/",
-          "sourceLabel": "深度研究",
-          "supportType": "risk",
-          "supportLabel": "风险",
-          "href": "/investor/reports/archive-ccfed872b80c/"
-        },
-        {
-          "date": "2026-07-03",
-          "title": "晨间前沿科技与行业轮动扫描报告 (2026-07-03)",
-          "summary": "报告日期：2026-07-03 [依据系统时间验证] 分析师：主题研究员 (Thematic Researcher, analyst:thematic-researcher ) 安全级别：研究院机密 (Internal Use Only) 数据截至：昨日（2026-07-02）...",
-          "thesisId": "thesis-44cf9d91f6",
-          "thesisTitle": "中国大健康 Alpha 正从医保压价转向创新药出海、临床确定性与设备刚需",
-          "thesisHref": "/investor/theses/thesis-44cf9d91f6/",
-          "sourceLabel": "深度研究",
-          "supportType": "supports",
-          "supportLabel": "支持",
-          "href": "/investor/reports/archive-3a070dd4f842/"
-        },
-        {
-          "date": "2026-06-24",
-          "title": "新兴技术突破与产业化进展扫描报告（截至 2026-06-24）",
-          "summary": "分析师：主题研究员 ( thematic-researcher ) - 发布日期：2026-06-24 - 文档语言：简体中文 - 工作区路径： /[local-workspace] tech.md",
-          "thesisId": "thesis-d1f5e35b43",
-          "thesisTitle": "2026年AI芯片竞争格局：NVIDIA Rubin对阵云巨头ASIC",
-          "thesisHref": "/investor/theses/thesis-d1f5e35b43/",
-          "sourceLabel": "深度研究",
-          "supportType": "supports",
-          "supportLabel": "支持",
-          "href": "/investor/reports/archive-7d56ce0f77ff/"
-        },
-        {
-          "date": "2026-06-18",
-          "title": "截至 2026-06-18 的结论：低价开源与本地算力闭环会持续压低闭源 API 的“可替代工作负载”定价",
-          "summary": "截至 2026-06-18 的结论：低价开源与本地算力闭环会持续压低闭源 API 的“可替代工作负载”定价",
-          "thesisId": "thesis-7a6599a3f5",
-          "thesisTitle": "新一代信息技术国产替代要从信创叙事进入算力、软件与安全订单验证",
-          "thesisHref": "/investor/theses/thesis-7a6599a3f5/",
-          "sourceLabel": "深度研究",
-          "supportType": "risk",
-          "supportLabel": "风险",
-          "href": "/investor/reports/archive-1850b92ab6e1/"
-        },
-        {
-          "date": "2026-06-18",
-          "title": "截至 2026-06-18 的结论：低价开源与本地算力闭环会持续压低闭源 API 的“可替代工作负载”定价",
-          "summary": "截至 2026-06-18 的结论：低价开源与本地算力闭环会持续压低闭源 API 的“可替代工作负载”定价",
-          "thesisId": "thesis-31f32af77b",
-          "thesisTitle": "中国云与国产算力栈的关键不是模型热度，而是训练/推理订单、服务器交付和生态锁定",
-          "thesisHref": "/investor/theses/thesis-31f32af77b/",
-          "sourceLabel": "深度研究",
-          "supportType": "risk",
-          "supportLabel": "风险",
-          "href": "/investor/reports/archive-1850b92ab6e1/"
-        },
-        {
-          "date": "2026-06-18",
-          "title": "主题轮动晨扫：跨行业制度切换信号",
-          "summary": "锚定日期： 2026-06-18 （本地 shell）。所有“今日/隔夜/下周”均按该日期解释；市场数据截至 2026-06-17 美股收盘，适用于 2026-06-18 亚洲早盘/美股盘前观察。",
-          "thesisId": "thesis-075017003b",
-          "thesisTitle": "AI 资本开支通过能源、设备和利率进入通胀定价",
-          "thesisHref": "/investor/theses/thesis-075017003b/",
-          "sourceLabel": "深度研究",
-          "supportType": "supports",
-          "supportLabel": "支持",
-          "href": "/investor/reports/archive-7c5c57b89ea1/"
-        },
-        {
-          "date": "2026-06-18",
-          "title": "截至 2026-06-18 的结论：低价开源与本地算力闭环会持续压低闭源 API 的“可替代工作负载”定价",
-          "summary": "截至 2026-06-18 的结论：低价开源与本地算力闭环会持续压低闭源 API 的“可替代工作负载”定价",
-          "thesisId": "thesis-ab1fb6a453",
-          "thesisTitle": "DeepSeek 式低价模型正在重塑 AI 定价权与软件利润池",
-          "thesisHref": "/investor/theses/thesis-ab1fb6a453/",
-          "sourceLabel": "深度研究",
-          "supportType": "risk",
-          "supportLabel": "风险",
-          "href": "/investor/reports/archive-1850b92ab6e1/"
-        },
-        {
-          "date": "2026-06-14",
-          "title": "周末深度主题扫描 - 2026-06-14",
-          "summary": "锚定日期：本报告先以 shell 输出 2026-06-14 为“今天”。“过去5个交易日”定义为 2026-06-08 至 2026-06-12，价格表现使用 2026-06-05 收盘至 2026-06-12 收盘的 close-to-close 口径。市场...",
-          "thesisId": "thesis-2ec6b9d3ee",
-          "thesisTitle": "卫星直连与商业航天从概念弹性进入部署兑现期",
-          "thesisHref": "/investor/theses/thesis-2ec6b9d3ee/",
-          "sourceLabel": "深度研究",
-          "supportType": "supports",
-          "supportLabel": "支持",
-          "href": "/investor/reports/archive-89c17f9f1b48/"
-        },
-        {
-          "date": "2026-06-14",
-          "title": "周末深度主题扫描 - 2026-06-14",
-          "summary": "锚定日期：本报告先以 shell 输出 2026-06-14 为“今天”。“过去5个交易日”定义为 2026-06-08 至 2026-06-12，价格表现使用 2026-06-05 收盘至 2026-06-12 收盘的 close-to-close 口径。市场...",
-          "thesisId": "thesis-2a12467f9b",
-          "thesisTitle": "卫星电源壁垒需由发射节奏和单星价值量持续验证",
-          "thesisHref": "/investor/theses/thesis-2a12467f9b/",
-          "sourceLabel": "深度研究",
-          "supportType": "supports",
-          "supportLabel": "支持",
-          "href": "/investor/reports/archive-89c17f9f1b48/"
-        },
-        {
-          "date": "2026-06-11",
-          "title": "早间主题轮动扫描：从“算力”向“电力”的范式转移",
-          "summary": "早间主题轮动扫描：从“算力”向“电力”的范式转移 日期： 2026-06-11 分析师： 主题研究员",
-          "thesisId": "thesis-7f0a75c5f6",
-          "thesisTitle": "数据中心地产、液冷与水资源正在决定 AI 容量的区域迁移",
-          "thesisHref": "/investor/theses/thesis-7f0a75c5f6/",
-          "sourceLabel": "深度研究",
-          "supportType": "supports",
-          "supportLabel": "支持",
-          "href": "/investor/reports/archive-2ed99484dedd/"
-        },
-        {
-          "date": "2026-06-10",
-          "title": "SPCX 上市对 A 股 TMT 硬件板块的被动流出与冲击成本测算",
-          "summary": "回应对象: A股策略师 · 两融数据分析（ analyst:ashare-strategist:margin analysis，run 59ec3e33 ） 作者: 主题研究员（AI / 量子 / 生物 / 太空经济 / Web3） 日期锚点: 2026-06-10（ date...",
-          "thesisId": "thesis-029ce03da1",
-          "thesisTitle": "MSCI 调整窗口是被动资金与主动减仓相互博弈的流动性事件",
-          "thesisHref": "/investor/theses/thesis-029ce03da1/",
-          "sourceLabel": "深度研究",
-          "supportType": "risk",
-          "supportLabel": "风险",
-          "href": "/investor/reports/archive-8e1177d42920/"
-        }
-      ],
-      "href": "/investor/personas/#persona-thematic-researcher-b117c9"
-    },
-    {
       "id": "persona-morning-brief-editor-c376ed",
       "name": "晨会主编",
       "nameEn": "Morning Brief Editor",
@@ -12163,6 +11194,1005 @@
       "href": "/investor/personas/#persona-morning-brief-editor-c376ed"
     },
     {
+      "id": "persona-thematic-researcher-b117c9",
+      "name": "主题研究员",
+      "nameEn": "Thematic Researcher",
+      "category": "ESG与主题",
+      "specialty": "AI/量子计算/生物科技/太空经济/Web3 【合并扩展 2026-06-11】纳入监管政策、碳中和/绿色金融、地缘政治、制裁与出口管制、关税框架。原 policy-analyst 职能并入。",
+      "firstSeen": "2026-05-16",
+      "lastSeen": "2026-07-09",
+      "thesisCount": 10,
+      "eventCount": 34,
+      "stanceCounts": {
+        "supports": 8,
+        "risks": 26,
+        "neutral": 0
+      },
+      "topTerms": [
+        "GPU",
+        "利率",
+        "HBM",
+        "算力",
+        "ASIC",
+        "商业航天",
+        "A股",
+        "通胀",
+        "SpaceX",
+        "国防",
+        "服务器",
+        "先进封装"
+      ],
+      "currentView": "卫星电源壁垒需由发射节奏和单星价值量持续验证；卫星直连与商业航天从概念弹性进入部署兑现期；端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链 是当前该 persona 参与最多的研究主线。",
+      "whatChanged": [
+        "2026-07-09: 卫星直连与商业航天从概念弹性进入部署兑现期 / 每日专题研究简报：低轨道商业化转型的基础设施化契机 (2026-07-09)",
+        "2026-07-09: 卫星电源壁垒需由发射节奏和单星价值量持续验证 / 每日专题研究简报：低轨道商业化转型的基础设施化契机 (2026-07-09)",
+        "2026-07-03: 中国大健康 Alpha 正从医保压价转向创新药出海、临床确定性与设备刚需 / 晨间前沿科技与行业轮动扫描报告 (2026-07-03)",
+        "2026-06-24: 2026年AI芯片竞争格局：NVIDIA Rubin对阵云巨头ASIC / 新兴技术突破与产业化进展扫描报告（截至 2026-06-24）",
+        "2026-06-18: 新一代信息技术国产替代要从信创叙事进入算力、软件与安全订单验证 / 截至 2026-06-18 的结论：低价开源与本地算力闭环会持续压低闭源 API 的“可替代工作负载”定价"
+      ],
+      "theses": [
+        {
+          "id": "thesis-2a12467f9b",
+          "title": "卫星电源壁垒需由发射节奏和单星价值量持续验证",
+          "href": "/investor/theses/thesis-2a12467f9b/",
+          "direction": "conflicting",
+          "directionLabel": "分歧",
+          "exposureBucket": "航天国防与新场景",
+          "actionLabel": "分歧主线：配对验证",
+          "eventCount": 5,
+          "supports": 1,
+          "risks": 4,
+          "neutral": 0,
+          "score": 111,
+          "firstSeen": "2026-05-18",
+          "lastSeen": "2026-07-09",
+          "terms": {},
+          "topTerms": [
+            "利率",
+            "商业航天"
+          ]
+        },
+        {
+          "id": "thesis-2ec6b9d3ee",
+          "title": "卫星直连与商业航天从概念弹性进入部署兑现期",
+          "href": "/investor/theses/thesis-2ec6b9d3ee/",
+          "direction": "conflicting",
+          "directionLabel": "分歧",
+          "exposureBucket": "航天国防与新场景",
+          "actionLabel": "观察等待",
+          "eventCount": 5,
+          "supports": 1,
+          "risks": 4,
+          "neutral": 0,
+          "score": 148,
+          "firstSeen": "2026-05-19",
+          "lastSeen": "2026-07-09",
+          "terms": {},
+          "topTerms": [
+            "商业航天",
+            "space",
+            "卫星直连",
+            "RKLB"
+          ]
+        },
+        {
+          "id": "thesis-ffa474a3f2",
+          "title": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
+          "href": "/investor/theses/thesis-ffa474a3f2/",
+          "direction": "conflicting",
+          "directionLabel": "分歧",
+          "exposureBucket": "消费健康防御",
+          "actionLabel": "观察等待",
+          "eventCount": 3,
+          "supports": 1,
+          "risks": 2,
+          "neutral": 0,
+          "score": 138,
+          "firstSeen": "2026-05-16",
+          "lastSeen": "2026-05-19",
+          "terms": {},
+          "topTerms": [
+            "GPU",
+            "算力",
+            "HBM",
+            "ASIC",
+            "Agent",
+            "agent"
+          ]
+        },
+        {
+          "id": "thesis-ab1fb6a453",
+          "title": "DeepSeek 式低价模型正在重塑 AI 定价权与软件利润池",
+          "href": "/investor/theses/thesis-ab1fb6a453/",
+          "direction": "conflicting",
+          "directionLabel": "分歧",
+          "exposureBucket": "AI 基础设施",
+          "actionLabel": "分歧主线：配对验证",
+          "eventCount": 2,
+          "supports": 0,
+          "risks": 2,
+          "neutral": 0,
+          "score": 54,
+          "firstSeen": "2026-05-19",
+          "lastSeen": "2026-06-18",
+          "terms": {},
+          "topTerms": [
+            "利率",
+            "GPU"
+          ]
+        },
+        {
+          "id": "thesis-ef15fe6a81",
+          "title": "Rocket Lab以约80亿美元收购Iridium后，公共市场应如何重估频谱、D2D/PNT、国防可信网络和纵向整合能力，而不是只交易…",
+          "href": "/investor/theses/thesis-ef15fe6a81/",
+          "direction": "conflicting",
+          "directionLabel": "分歧",
+          "exposureBucket": "宏观利率与汇率",
+          "actionLabel": "深研候选：先建观察仓",
+          "eventCount": 2,
+          "supports": 0,
+          "risks": 2,
+          "neutral": 0,
+          "score": 58,
+          "firstSeen": "2026-05-19",
+          "lastSeen": "2026-06-02",
+          "terms": {},
+          "topTerms": [
+            "国防",
+            "SpaceX",
+            "美元",
+            "Rocket"
+          ]
+        },
+        {
+          "id": "thesis-44cf9d91f6",
+          "title": "中国大健康 Alpha 正从医保压价转向创新药出海、临床确定性与设备刚需",
+          "href": "/investor/theses/thesis-44cf9d91f6/",
+          "direction": "conflicting",
+          "directionLabel": "分歧",
+          "exposureBucket": "消费健康防御",
+          "actionLabel": "观察等待",
+          "eventCount": 1,
+          "supports": 1,
+          "risks": 0,
+          "neutral": 0,
+          "score": 29,
+          "firstSeen": "2026-07-03",
+          "lastSeen": "2026-07-03",
+          "terms": {},
+          "topTerms": [
+            "AI 基础设施",
+            "GPU",
+            "A股",
+            "创新药"
+          ]
+        },
+        {
+          "id": "thesis-d1f5e35b43",
+          "title": "2026年AI芯片竞争格局：NVIDIA Rubin对阵云巨头ASIC",
+          "href": "/investor/theses/thesis-d1f5e35b43/",
+          "direction": "conflicting",
+          "directionLabel": "分歧",
+          "exposureBucket": "AI 基础设施",
+          "actionLabel": "深研候选：先建观察仓",
+          "eventCount": 1,
+          "supports": 1,
+          "risks": 0,
+          "neutral": 0,
+          "score": 28,
+          "firstSeen": "2026-06-24",
+          "lastSeen": "2026-06-24",
+          "terms": {},
+          "topTerms": [
+            "GPU",
+            "ASIC",
+            "HBM",
+            "利率",
+            "定价权"
+          ]
+        },
+        {
+          "id": "thesis-31f32af77b",
+          "title": "中国云与国产算力栈的关键不是模型热度，而是训练/推理订单、服务器交付和生态锁定",
+          "href": "/investor/theses/thesis-31f32af77b/",
+          "direction": "conflicting",
+          "directionLabel": "分歧",
+          "exposureBucket": "AI 基础设施",
+          "actionLabel": "分歧主线：配对验证",
+          "eventCount": 1,
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "score": 46,
+          "firstSeen": "2026-06-18",
+          "lastSeen": "2026-06-18",
+          "terms": {},
+          "topTerms": [
+            "HBM",
+            "服务器",
+            "算力",
+            "国产算力"
+          ]
+        },
+        {
+          "id": "thesis-075017003b",
+          "title": "AI 资本开支通过能源、设备和利率进入通胀定价",
+          "href": "/investor/theses/thesis-075017003b/",
+          "direction": "stable",
+          "directionLabel": "稳定",
+          "exposureBucket": "宏观利率与汇率",
+          "actionLabel": "观察等待",
+          "eventCount": 1,
+          "supports": 1,
+          "risks": 0,
+          "neutral": 0,
+          "score": 39,
+          "firstSeen": "2026-06-18",
+          "lastSeen": "2026-06-18",
+          "terms": {},
+          "topTerms": [
+            "AI 资本开支",
+            "PCE",
+            "通胀",
+            "利率"
+          ]
+        },
+        {
+          "id": "thesis-7a6599a3f5",
+          "title": "新一代信息技术国产替代要从信创叙事进入算力、软件与安全订单验证",
+          "href": "/investor/theses/thesis-7a6599a3f5/",
+          "direction": "conflicting",
+          "directionLabel": "分歧",
+          "exposureBucket": "AI 基础设施",
+          "actionLabel": "观察等待",
+          "eventCount": 1,
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "score": 53,
+          "firstSeen": "2026-06-18",
+          "lastSeen": "2026-06-18",
+          "terms": {},
+          "topTerms": [
+            "GPU",
+            "HBM",
+            "服务器",
+            "算力",
+            "信创",
+            "国产替代"
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-05-16",
+          "supports": 1,
+          "risks": 5,
+          "neutral": 0,
+          "eventCount": 6,
+          "value": 20,
+          "topTheses": [
+            "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
+            "全球科技配置应超配ASIC与新代工生态；A股风格则需从“AI题材映射”战略性切换至独立算力的“国产第二供应源”，重仓先进封装产能、核心设…",
+            "在DeepSeek API成本骤降96%和博通-OpenAI发布Jalapeño推理ASIC的背景下，AI产业是否正从训练硬件投资转向推…"
+          ],
+          "events": [
+            {
+              "date": "2026-05-16",
+              "title": "边缘AI与定制硅（ASIC）的投资映射：基建约束下的算力新形态",
+              "summary": "综合前序对于发电设备、变压器交付滞后的研究结论，本报告认为： 电力设备的基建瓶颈并未引发AI总资本支出（CAPEX）的坍塌，而是作为硬约束，催化了算力形态的结构性演变。 云端算力正加速向高...",
+              "thesisId": "thesis-ffa474a3f2",
+              "thesisTitle": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
+              "thesisHref": "/investor/theses/thesis-ffa474a3f2/",
+              "sourceLabel": "深度研究",
+              "supportType": "risk",
+              "supportLabel": "风险",
+              "href": "/investor/reports/archive-76de3be8fba0/"
+            },
+            {
+              "date": "2026-05-16",
+              "title": "边缘AI与定制硅（ASIC）的投资映射：基建约束下的算力新形态",
+              "summary": "综合前序对于发电设备、变压器交付滞后的研究结论，本报告认为： 电力设备的基建瓶颈并未引发AI总资本支出（CAPEX）的坍塌，而是作为硬约束，催化了算力形态的结构性演变。 云端算力正加速向高...",
+              "thesisId": "thesis-40b8638803",
+              "thesisTitle": "全球科技配置应超配ASIC与新代工生态；A股风格则需从“AI题材映射”战略性切换至独立算力的“国产第二供应源”，重仓先进封装产能、核心设…",
+              "thesisHref": "/investor/theses/thesis-40b8638803/",
+              "sourceLabel": "深度研究",
+              "supportType": "risk",
+              "supportLabel": "风险",
+              "href": "/investor/reports/archive-76de3be8fba0/"
+            },
+            {
+              "date": "2026-05-16",
+              "title": "Web3 叙事重估：Clear Act + 零售情绪共振——机械 beta 还是基本面重估？",
+              "summary": "Web3 叙事重估：Clear Act + 零售情绪共振——机械 beta 还是基本面重估？",
+              "thesisId": "thesis-58200390b4",
+              "thesisTitle": "加密资产仍是全球流动性和散户风险偏好的高频回声",
+              "thesisHref": "/investor/theses/thesis-58200390b4/",
+              "sourceLabel": "深度研究",
+              "supportType": "risk",
+              "supportLabel": "风险",
+              "href": "/investor/reports/archive-306ec11253cd/"
+            },
+            {
+              "date": "2026-05-16",
+              "title": "AI物理层VS软件层：2026年的资本支出博弈",
+              "summary": "工作日期：2026-05-16（Asia/Singapore）。研究记录。立场：综合并支持此前的“错位期”判断。",
+              "thesisId": "thesis-ffa474a3f2",
+              "thesisTitle": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
+              "thesisHref": "/investor/theses/thesis-ffa474a3f2/",
+              "sourceLabel": "深度研究",
+              "supportType": "supports",
+              "supportLabel": "支持",
+              "href": "/investor/reports/archive-676aa9b4c98a/"
+            },
+            {
+              "date": "2026-05-16",
+              "title": "边缘AI与定制硅（ASIC）的投资映射：基建约束下的算力新形态",
+              "summary": "综合前序对于发电设备、变压器交付滞后的研究结论，本报告认为： 电力设备的基建瓶颈并未引发AI总资本支出（CAPEX）的坍塌，而是作为硬约束，催化了算力形态的结构性演变。 云端算力正加速向高...",
+              "thesisId": "thesis-ba5fd94dff",
+              "thesisTitle": "在DeepSeek API成本骤降96%和博通-OpenAI发布Jalapeño推理ASIC的背景下，AI产业是否正从训练硬件投资转向推…",
+              "thesisHref": "/investor/theses/thesis-ba5fd94dff/",
+              "sourceLabel": "深度研究",
+              "supportType": "risk",
+              "supportLabel": "风险",
+              "href": "/investor/reports/archive-76de3be8fba0/"
+            }
+          ]
+        },
+        {
+          "date": "2026-05-18",
+          "supports": 0,
+          "risks": 2,
+          "neutral": 0,
+          "eventCount": 2,
+          "value": 31.4,
+          "topTheses": [
+            "卫星电源壁垒需由发射节奏和单星价值量持续验证",
+            "航空航天与国防供应链错配正在形成政策驱动的制造业弹性"
+          ],
+          "events": [
+            {
+              "date": "2026-05-18",
+              "title": "压力测试\"仅为AI流动性外溢\"的判断（量子与空间）",
+              "summary": "· 立场：stress-test - 分析师：主题研究员（AI / 量子 / 生物科技 / 空间经济 / Web3） - 工作日：2026-05-18（亚洲/新加坡） - 被压力测试的研究记录：既有研究记录（asse...",
+              "thesisId": "thesis-21dd72c1b1",
+              "thesisTitle": "航空航天与国防供应链错配正在形成政策驱动的制造业弹性",
+              "thesisHref": "/investor/theses/thesis-21dd72c1b1/",
+              "sourceLabel": "深度研究",
+              "supportType": "risk",
+              "supportLabel": "风险",
+              "href": "/investor/reports/archive-a1cfed578101/"
+            },
+            {
+              "date": "2026-05-18",
+              "title": "压力测试\"仅为AI流动性外溢\"的判断（量子与空间）",
+              "summary": "· 立场：stress-test - 分析师：主题研究员（AI / 量子 / 生物科技 / 空间经济 / Web3） - 工作日：2026-05-18（亚洲/新加坡） - 被压力测试的研究记录：既有研究记录（asse...",
+              "thesisId": "thesis-2a12467f9b",
+              "thesisTitle": "卫星电源壁垒需由发射节奏和单星价值量持续验证",
+              "thesisHref": "/investor/theses/thesis-2a12467f9b/",
+              "sourceLabel": "深度研究",
+              "supportType": "risk",
+              "supportLabel": "风险",
+              "href": "/investor/reports/archive-a1cfed578101/"
+            }
+          ]
+        },
+        {
+          "date": "2026-05-19",
+          "supports": 0,
+          "risks": 6,
+          "neutral": 0,
+          "eventCount": 6,
+          "value": 12,
+          "topTheses": [
+            "卫星电源壁垒需由发射节奏和单星价值量持续验证",
+            "DeepSeek 式低价模型正在重塑 AI 定价权与软件利润池",
+            "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链"
+          ],
+          "events": [
+            {
+              "date": "2026-05-19",
+              "title": "AI端侧落地与边缘算力需求验证 - 2026-05-19",
+              "summary": "截至2026-05-19，我支持前序判断：云端推理成本下降和国产算力芯片适配，并没有削弱端侧AI需求，而是改变了需求形态。最强证据来自出货结构和硬件BOM，应用变现证据仍未完全跟上。AI PC与GenAI...",
+              "thesisId": "thesis-ffa474a3f2",
+              "thesisTitle": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
+              "thesisHref": "/investor/theses/thesis-ffa474a3f2/",
+              "sourceLabel": "深度研究",
+              "supportType": "risk",
+              "supportLabel": "风险",
+              "href": "/investor/reports/archive-8d772f92bd52/"
+            },
+            {
+              "date": "2026-05-19",
+              "title": "专题研究报告：SpaceX IPO 背景下的 Rocket Lab (RKLB) 估值逻辑深度解析",
+              "summary": "专题研究报告：SpaceX IPO 背景下的 Rocket Lab (RKLB) 估值逻辑深度解析",
+              "thesisId": "thesis-2ec6b9d3ee",
+              "thesisTitle": "卫星直连与商业航天从概念弹性进入部署兑现期",
+              "thesisHref": "/investor/theses/thesis-2ec6b9d3ee/",
+              "sourceLabel": "深度研究",
+              "supportType": "risk",
+              "supportLabel": "风险",
+              "href": "/investor/reports/archive-5d9c04a74783/"
+            },
+            {
+              "date": "2026-05-19",
+              "title": "2026-05-19 自动驾驶篮子的拥挤度验证与 H2 轮动路径",
+              "summary": "2026-05-19 自动驾驶篮子的拥挤度验证与 H2 轮动路径 - 作者：主题研究员 - 工作日期：2026-05-19（Asia/Singapore） - - 立场：stress-test → 支持主题，但把 A 股腿从“便宜且干净”下调为“...",
+              "thesisId": "thesis-485a630a87",
+              "thesisTitle": "自动驾驶与 Robotaxi 主题必须从演示热度进入单位经济和监管城市扩张验证",
+              "thesisHref": "/investor/theses/thesis-485a630a87/",
+              "sourceLabel": "深度研究",
+              "supportType": "risk",
+              "supportLabel": "风险",
+              "href": "/investor/reports/archive-08140fd1627e/"
+            },
+            {
+              "date": "2026-05-19",
+              "title": "专题研究报告：SpaceX IPO 背景下的 Rocket Lab (RKLB) 估值逻辑深度解析",
+              "summary": "专题研究报告：SpaceX IPO 背景下的 Rocket Lab (RKLB) 估值逻辑深度解析",
+              "thesisId": "thesis-ef15fe6a81",
+              "thesisTitle": "Rocket Lab以约80亿美元收购Iridium后，公共市场应如何重估频谱、D2D/PNT、国防可信网络和纵向整合能力，而不是只交易…",
+              "thesisHref": "/investor/theses/thesis-ef15fe6a81/",
+              "sourceLabel": "深度研究",
+              "supportType": "risk",
+              "supportLabel": "风险",
+              "href": "/investor/reports/archive-5d9c04a74783/"
+            },
+            {
+              "date": "2026-05-19",
+              "title": "AI变现的“11%陷阱”：智能体泡沫还是阵痛？",
+              "summary": "工作日期：2026-05-19（Asia/Singapore） 研究记录 01 / 立场：综合判断，对弱势SaaS群体保持偏谨慎",
+              "thesisId": "thesis-ab1fb6a453",
+              "thesisTitle": "DeepSeek 式低价模型正在重塑 AI 定价权与软件利润池",
+              "thesisHref": "/investor/theses/thesis-ab1fb6a453/",
+              "sourceLabel": "深度研究",
+              "supportType": "risk",
+              "supportLabel": "风险",
+              "href": "/investor/reports/archive-d09cc2d40d8c/"
+            }
+          ]
+        },
+        {
+          "date": "2026-05-30",
+          "supports": 0,
+          "risks": 3,
+          "neutral": 0,
+          "eventCount": 3,
+          "value": 28.2,
+          "topTheses": [
+            "卫星电源壁垒需由发射节奏和单星价值量持续验证",
+            "AI 生产率去通胀需要等待采用率和流程重构验证",
+            "卫星直连与商业航天从概念弹性进入部署兑现期"
+          ],
+          "events": [
+            {
+              "date": "2026-05-30",
+              "title": "周末主题深度扫描 · 2026-05-30(周六)",
+              "summary": "主题研究员 覆盖范围:AI / 量子 / 生物科技 / 太空经济 / Web3 锚定日期(shell):2026-05-30 · 面向窗口:6月1日(周一)开盘前的全员研究辩论 上游文件检查:本工作区在本步骤开始时为空(仅有 .git...",
+              "thesisId": "thesis-9d3836cc07",
+              "thesisTitle": "AI 生产率去通胀需要等待采用率和流程重构验证",
+              "thesisHref": "/investor/theses/thesis-9d3836cc07/",
+              "sourceLabel": "深度研究",
+              "supportType": "risk",
+              "supportLabel": "风险",
+              "href": "/investor/reports/archive-9b824294eb9b/"
+            },
+            {
+              "date": "2026-05-30",
+              "title": "周末主题深度扫描 · 2026-05-30(周六)",
+              "summary": "主题研究员 覆盖范围:AI / 量子 / 生物科技 / 太空经济 / Web3 锚定日期(shell):2026-05-30 · 面向窗口:6月1日(周一)开盘前的全员研究辩论 上游文件检查:本工作区在本步骤开始时为空(仅有 .git...",
+              "thesisId": "thesis-2a12467f9b",
+              "thesisTitle": "卫星电源壁垒需由发射节奏和单星价值量持续验证",
+              "thesisHref": "/investor/theses/thesis-2a12467f9b/",
+              "sourceLabel": "深度研究",
+              "supportType": "risk",
+              "supportLabel": "风险",
+              "href": "/investor/reports/archive-9b824294eb9b/"
+            },
+            {
+              "date": "2026-05-30",
+              "title": "周末主题深度扫描 · 2026-05-30(周六)",
+              "summary": "主题研究员 覆盖范围:AI / 量子 / 生物科技 / 太空经济 / Web3 锚定日期(shell):2026-05-30 · 面向窗口:6月1日(周一)开盘前的全员研究辩论 上游文件检查:本工作区在本步骤开始时为空(仅有 .git...",
+              "thesisId": "thesis-2ec6b9d3ee",
+              "thesisTitle": "卫星直连与商业航天从概念弹性进入部署兑现期",
+              "thesisHref": "/investor/theses/thesis-2ec6b9d3ee/",
+              "sourceLabel": "深度研究",
+              "supportType": "risk",
+              "supportLabel": "风险",
+              "href": "/investor/reports/archive-9b824294eb9b/"
+            }
+          ]
+        },
+        {
+          "date": "2026-06-01",
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "eventCount": 1,
+          "value": 41.6,
+          "topTheses": [
+            "公用事业从防御红利切换到电网扩容、容量费与信用再定价"
+          ],
+          "events": [
+            {
+              "date": "2026-06-01",
+              "title": "主题研究员盘前结构性专题扫描与研究专题研报 (2026-06-01)",
+              "summary": "报告日期：2026年6月1日 (星期一) 分析师：主题研究员 (Thematic Researcher, thematic-researcher ) 专业领域：AI与前沿科技实体约束、地缘政治与宏观通胀传导、跨境供应链异动、结构性风格轮...",
+              "thesisId": "thesis-08dd090dc9",
+              "thesisTitle": "公用事业从防御红利切换到电网扩容、容量费与信用再定价",
+              "thesisHref": "/investor/theses/thesis-08dd090dc9/",
+              "sourceLabel": "深度研究",
+              "supportType": "risk",
+              "supportLabel": "风险",
+              "href": "/investor/reports/archive-4edece312220/"
+            }
+          ]
+        },
+        {
+          "date": "2026-06-02",
+          "supports": 0,
+          "risks": 3,
+          "neutral": 0,
+          "eventCount": 3,
+          "value": 31,
+          "topTheses": [
+            "SpaceX (SPCX)挂牌首日大跌且ASTS面临17.6亿美元Capex缺口，散户FOMO热炒ASTS (35-45x EV/Sal…",
+            "Rocket Lab以约80亿美元收购Iridium后，公共市场应如何重估频谱、D2D/PNT、国防可信网络和纵向整合能力，而不是只交易…",
+            "卫星直连与商业航天从概念弹性进入部署兑现期"
+          ],
+          "events": [
+            {
+              "date": "2026-06-02",
+              "title": "SpaceX IPO 对航天存量标的的估值溢出与 6 月 12 日后均值回归判断",
+              "summary": "SpaceX IPO 对航天存量标的的估值溢出与 6 月 12 日后均值回归判断",
+              "thesisId": "thesis-2ec6b9d3ee",
+              "thesisTitle": "卫星直连与商业航天从概念弹性进入部署兑现期",
+              "thesisHref": "/investor/theses/thesis-2ec6b9d3ee/",
+              "sourceLabel": "深度研究",
+              "supportType": "risk",
+              "supportLabel": "风险",
+              "href": "/investor/reports/archive-1c7558fa412d/"
+            },
+            {
+              "date": "2026-06-02",
+              "title": "SpaceX IPO 对航天存量标的的估值溢出与 6 月 12 日后均值回归判断",
+              "summary": "SpaceX IPO 对航天存量标的的估值溢出与 6 月 12 日后均值回归判断",
+              "thesisId": "thesis-ef15fe6a81",
+              "thesisTitle": "Rocket Lab以约80亿美元收购Iridium后，公共市场应如何重估频谱、D2D/PNT、国防可信网络和纵向整合能力，而不是只交易…",
+              "thesisHref": "/investor/theses/thesis-ef15fe6a81/",
+              "sourceLabel": "深度研究",
+              "supportType": "risk",
+              "supportLabel": "风险",
+              "href": "/investor/reports/archive-1c7558fa412d/"
+            },
+            {
+              "date": "2026-06-02",
+              "title": "SpaceX IPO 对航天存量标的的估值溢出与 6 月 12 日后均值回归判断",
+              "summary": "SpaceX IPO 对航天存量标的的估值溢出与 6 月 12 日后均值回归判断",
+              "thesisId": "thesis-065b759e9a",
+              "thesisTitle": "SpaceX (SPCX)挂牌首日大跌且ASTS面临17.6亿美元Capex缺口，散户FOMO热炒ASTS (35-45x EV/Sal…",
+              "thesisHref": "/investor/theses/thesis-065b759e9a/",
+              "sourceLabel": "深度研究",
+              "supportType": "risk",
+              "supportLabel": "风险",
+              "href": "/investor/reports/archive-1c7558fa412d/"
+            }
+          ]
+        },
+        {
+          "date": "2026-06-09",
+          "supports": 1,
+          "risks": 0,
+          "neutral": 0,
+          "eventCount": 1,
+          "value": 58.4,
+          "topTheses": [
+            "NAND盈利弹性由价格与产品结构主导，而非单纯出货增长"
+          ],
+          "events": [
+            {
+              "date": "2026-06-09",
+              "title": "AI算力云与下游链条交易表达 - 2026-06-09",
+              "summary": "1. 1d-5d窗口：建议利用APLD盘后消息带来的同业高开/情绪脉冲，卖出或套保NBIS，而不是追高重资产云平台。 APLD的新增租约是真实利好，但首批运营预计在2028年Q1开始，短线更多是“合同头条 + r...",
+              "thesisId": "thesis-b976d8330e",
+              "thesisTitle": "NAND盈利弹性由价格与产品结构主导，而非单纯出货增长",
+              "thesisHref": "/investor/theses/thesis-b976d8330e/",
+              "sourceLabel": "深度研究",
+              "supportType": "supports",
+              "supportLabel": "支持",
+              "href": "/investor/reports/archive-c395f754297a/"
+            }
+          ]
+        },
+        {
+          "date": "2026-06-10",
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "eventCount": 1,
+          "value": 45.8,
+          "topTheses": [
+            "MSCI 调整窗口是被动资金与主动减仓相互博弈的流动性事件"
+          ],
+          "events": [
+            {
+              "date": "2026-06-10",
+              "title": "SPCX 上市对 A 股 TMT 硬件板块的被动流出与冲击成本测算",
+              "summary": "回应对象: A股策略师 · 两融数据分析（ analyst:ashare-strategist:margin analysis，run 59ec3e33 ） 作者: 主题研究员（AI / 量子 / 生物 / 太空经济 / Web3） 日期锚点: 2026-06-10（ date...",
+              "thesisId": "thesis-029ce03da1",
+              "thesisTitle": "MSCI 调整窗口是被动资金与主动减仓相互博弈的流动性事件",
+              "thesisHref": "/investor/theses/thesis-029ce03da1/",
+              "sourceLabel": "深度研究",
+              "supportType": "risk",
+              "supportLabel": "风险",
+              "href": "/investor/reports/archive-8e1177d42920/"
+            }
+          ]
+        },
+        {
+          "date": "2026-06-11",
+          "supports": 1,
+          "risks": 0,
+          "neutral": 0,
+          "eventCount": 1,
+          "value": 61.2,
+          "topTheses": [
+            "数据中心地产、液冷与水资源正在决定 AI 容量的区域迁移"
+          ],
+          "events": [
+            {
+              "date": "2026-06-11",
+              "title": "早间主题轮动扫描：从“算力”向“电力”的范式转移",
+              "summary": "早间主题轮动扫描：从“算力”向“电力”的范式转移 日期： 2026-06-11 分析师： 主题研究员",
+              "thesisId": "thesis-7f0a75c5f6",
+              "thesisTitle": "数据中心地产、液冷与水资源正在决定 AI 容量的区域迁移",
+              "thesisHref": "/investor/theses/thesis-7f0a75c5f6/",
+              "sourceLabel": "深度研究",
+              "supportType": "supports",
+              "supportLabel": "支持",
+              "href": "/investor/reports/archive-2ed99484dedd/"
+            }
+          ]
+        },
+        {
+          "date": "2026-06-14",
+          "supports": 2,
+          "risks": 0,
+          "neutral": 0,
+          "eventCount": 2,
+          "value": 70.6,
+          "topTheses": [
+            "卫星电源壁垒需由发射节奏和单星价值量持续验证",
+            "卫星直连与商业航天从概念弹性进入部署兑现期"
+          ],
+          "events": [
+            {
+              "date": "2026-06-14",
+              "title": "周末深度主题扫描 - 2026-06-14",
+              "summary": "锚定日期：本报告先以 shell 输出 2026-06-14 为“今天”。“过去5个交易日”定义为 2026-06-08 至 2026-06-12，价格表现使用 2026-06-05 收盘至 2026-06-12 收盘的 close-to-close 口径。市场...",
+              "thesisId": "thesis-2ec6b9d3ee",
+              "thesisTitle": "卫星直连与商业航天从概念弹性进入部署兑现期",
+              "thesisHref": "/investor/theses/thesis-2ec6b9d3ee/",
+              "sourceLabel": "深度研究",
+              "supportType": "supports",
+              "supportLabel": "支持",
+              "href": "/investor/reports/archive-89c17f9f1b48/"
+            },
+            {
+              "date": "2026-06-14",
+              "title": "周末深度主题扫描 - 2026-06-14",
+              "summary": "锚定日期：本报告先以 shell 输出 2026-06-14 为“今天”。“过去5个交易日”定义为 2026-06-08 至 2026-06-12，价格表现使用 2026-06-05 收盘至 2026-06-12 收盘的 close-to-close 口径。市场...",
+              "thesisId": "thesis-2a12467f9b",
+              "thesisTitle": "卫星电源壁垒需由发射节奏和单星价值量持续验证",
+              "thesisHref": "/investor/theses/thesis-2a12467f9b/",
+              "sourceLabel": "深度研究",
+              "supportType": "supports",
+              "supportLabel": "支持",
+              "href": "/investor/reports/archive-89c17f9f1b48/"
+            }
+          ]
+        },
+        {
+          "date": "2026-06-18",
+          "supports": 1,
+          "risks": 3,
+          "neutral": 0,
+          "eventCount": 4,
+          "value": 46,
+          "topTheses": [
+            "中国云与国产算力栈的关键不是模型热度，而是训练/推理订单、服务器交付和生态锁定",
+            "DeepSeek 式低价模型正在重塑 AI 定价权与软件利润池",
+            "AI 资本开支通过能源、设备和利率进入通胀定价"
+          ],
+          "events": [
+            {
+              "date": "2026-06-18",
+              "title": "截至 2026-06-18 的结论：低价开源与本地算力闭环会持续压低闭源 API 的“可替代工作负载”定价",
+              "summary": "截至 2026-06-18 的结论：低价开源与本地算力闭环会持续压低闭源 API 的“可替代工作负载”定价",
+              "thesisId": "thesis-7a6599a3f5",
+              "thesisTitle": "新一代信息技术国产替代要从信创叙事进入算力、软件与安全订单验证",
+              "thesisHref": "/investor/theses/thesis-7a6599a3f5/",
+              "sourceLabel": "深度研究",
+              "supportType": "risk",
+              "supportLabel": "风险",
+              "href": "/investor/reports/archive-1850b92ab6e1/"
+            },
+            {
+              "date": "2026-06-18",
+              "title": "截至 2026-06-18 的结论：低价开源与本地算力闭环会持续压低闭源 API 的“可替代工作负载”定价",
+              "summary": "截至 2026-06-18 的结论：低价开源与本地算力闭环会持续压低闭源 API 的“可替代工作负载”定价",
+              "thesisId": "thesis-31f32af77b",
+              "thesisTitle": "中国云与国产算力栈的关键不是模型热度，而是训练/推理订单、服务器交付和生态锁定",
+              "thesisHref": "/investor/theses/thesis-31f32af77b/",
+              "sourceLabel": "深度研究",
+              "supportType": "risk",
+              "supportLabel": "风险",
+              "href": "/investor/reports/archive-1850b92ab6e1/"
+            },
+            {
+              "date": "2026-06-18",
+              "title": "主题轮动晨扫：跨行业制度切换信号",
+              "summary": "锚定日期： 2026-06-18 （本地 shell）。所有“今日/隔夜/下周”均按该日期解释；市场数据截至 2026-06-17 美股收盘，适用于 2026-06-18 亚洲早盘/美股盘前观察。",
+              "thesisId": "thesis-075017003b",
+              "thesisTitle": "AI 资本开支通过能源、设备和利率进入通胀定价",
+              "thesisHref": "/investor/theses/thesis-075017003b/",
+              "sourceLabel": "深度研究",
+              "supportType": "supports",
+              "supportLabel": "支持",
+              "href": "/investor/reports/archive-7c5c57b89ea1/"
+            },
+            {
+              "date": "2026-06-18",
+              "title": "截至 2026-06-18 的结论：低价开源与本地算力闭环会持续压低闭源 API 的“可替代工作负载”定价",
+              "summary": "截至 2026-06-18 的结论：低价开源与本地算力闭环会持续压低闭源 API 的“可替代工作负载”定价",
+              "thesisId": "thesis-ab1fb6a453",
+              "thesisTitle": "DeepSeek 式低价模型正在重塑 AI 定价权与软件利润池",
+              "thesisHref": "/investor/theses/thesis-ab1fb6a453/",
+              "sourceLabel": "深度研究",
+              "supportType": "risk",
+              "supportLabel": "风险",
+              "href": "/investor/reports/archive-1850b92ab6e1/"
+            }
+          ]
+        },
+        {
+          "date": "2026-06-24",
+          "supports": 1,
+          "risks": 0,
+          "neutral": 0,
+          "eventCount": 1,
+          "value": 65.4,
+          "topTheses": [
+            "2026年AI芯片竞争格局：NVIDIA Rubin对阵云巨头ASIC"
+          ],
+          "events": [
+            {
+              "date": "2026-06-24",
+              "title": "新兴技术突破与产业化进展扫描报告（截至 2026-06-24）",
+              "summary": "分析师：主题研究员 ( thematic-researcher ) - 发布日期：2026-06-24 - 文档语言：简体中文 - 工作区路径： /[local-workspace] tech.md",
+              "thesisId": "thesis-d1f5e35b43",
+              "thesisTitle": "2026年AI芯片竞争格局：NVIDIA Rubin对阵云巨头ASIC",
+              "thesisHref": "/investor/theses/thesis-d1f5e35b43/",
+              "sourceLabel": "深度研究",
+              "supportType": "supports",
+              "supportLabel": "支持",
+              "href": "/investor/reports/archive-7d56ce0f77ff/"
+            }
+          ]
+        },
+        {
+          "date": "2026-07-03",
+          "supports": 1,
+          "risks": 0,
+          "neutral": 0,
+          "eventCount": 1,
+          "value": 66.8,
+          "topTheses": [
+            "中国大健康 Alpha 正从医保压价转向创新药出海、临床确定性与设备刚需"
+          ],
+          "events": [
+            {
+              "date": "2026-07-03",
+              "title": "晨间前沿科技与行业轮动扫描报告 (2026-07-03)",
+              "summary": "报告日期：2026-07-03 [依据系统时间验证] 分析师：主题研究员 (Thematic Researcher, analyst:thematic-researcher ) 安全级别：研究院机密 (Internal Use Only) 数据截至：昨日（2026-07-02）...",
+              "thesisId": "thesis-44cf9d91f6",
+              "thesisTitle": "中国大健康 Alpha 正从医保压价转向创新药出海、临床确定性与设备刚需",
+              "thesisHref": "/investor/theses/thesis-44cf9d91f6/",
+              "sourceLabel": "深度研究",
+              "supportType": "supports",
+              "supportLabel": "支持",
+              "href": "/investor/reports/archive-3a070dd4f842/"
+            }
+          ]
+        },
+        {
+          "date": "2026-07-09",
+          "supports": 0,
+          "risks": 2,
+          "neutral": 0,
+          "eventCount": 2,
+          "value": 48.2,
+          "topTheses": [
+            "卫星电源壁垒需由发射节奏和单星价值量持续验证",
+            "卫星直连与商业航天从概念弹性进入部署兑现期"
+          ],
+          "events": [
+            {
+              "date": "2026-07-09",
+              "title": "每日专题研究简报：低轨道商业化转型的基础设施化契机 (2026-07-09)",
+              "summary": "每日专题研究简报：低轨道商业化转型的基础设施化契机 (2026-07-09)",
+              "thesisId": "thesis-2ec6b9d3ee",
+              "thesisTitle": "卫星直连与商业航天从概念弹性进入部署兑现期",
+              "thesisHref": "/investor/theses/thesis-2ec6b9d3ee/",
+              "sourceLabel": "深度研究",
+              "supportType": "risk",
+              "supportLabel": "风险",
+              "href": "/investor/reports/archive-ccfed872b80c/"
+            },
+            {
+              "date": "2026-07-09",
+              "title": "每日专题研究简报：低轨道商业化转型的基础设施化契机 (2026-07-09)",
+              "summary": "每日专题研究简报：低轨道商业化转型的基础设施化契机 (2026-07-09)",
+              "thesisId": "thesis-2a12467f9b",
+              "thesisTitle": "卫星电源壁垒需由发射节奏和单星价值量持续验证",
+              "thesisHref": "/investor/theses/thesis-2a12467f9b/",
+              "sourceLabel": "深度研究",
+              "supportType": "risk",
+              "supportLabel": "风险",
+              "href": "/investor/reports/archive-ccfed872b80c/"
+            }
+          ]
+        }
+      ],
+      "latestEvents": [
+        {
+          "date": "2026-07-09",
+          "title": "每日专题研究简报：低轨道商业化转型的基础设施化契机 (2026-07-09)",
+          "summary": "每日专题研究简报：低轨道商业化转型的基础设施化契机 (2026-07-09)",
+          "thesisId": "thesis-2ec6b9d3ee",
+          "thesisTitle": "卫星直连与商业航天从概念弹性进入部署兑现期",
+          "thesisHref": "/investor/theses/thesis-2ec6b9d3ee/",
+          "sourceLabel": "深度研究",
+          "supportType": "risk",
+          "supportLabel": "风险",
+          "href": "/investor/reports/archive-ccfed872b80c/"
+        },
+        {
+          "date": "2026-07-09",
+          "title": "每日专题研究简报：低轨道商业化转型的基础设施化契机 (2026-07-09)",
+          "summary": "每日专题研究简报：低轨道商业化转型的基础设施化契机 (2026-07-09)",
+          "thesisId": "thesis-2a12467f9b",
+          "thesisTitle": "卫星电源壁垒需由发射节奏和单星价值量持续验证",
+          "thesisHref": "/investor/theses/thesis-2a12467f9b/",
+          "sourceLabel": "深度研究",
+          "supportType": "risk",
+          "supportLabel": "风险",
+          "href": "/investor/reports/archive-ccfed872b80c/"
+        },
+        {
+          "date": "2026-07-03",
+          "title": "晨间前沿科技与行业轮动扫描报告 (2026-07-03)",
+          "summary": "报告日期：2026-07-03 [依据系统时间验证] 分析师：主题研究员 (Thematic Researcher, analyst:thematic-researcher ) 安全级别：研究院机密 (Internal Use Only) 数据截至：昨日（2026-07-02）...",
+          "thesisId": "thesis-44cf9d91f6",
+          "thesisTitle": "中国大健康 Alpha 正从医保压价转向创新药出海、临床确定性与设备刚需",
+          "thesisHref": "/investor/theses/thesis-44cf9d91f6/",
+          "sourceLabel": "深度研究",
+          "supportType": "supports",
+          "supportLabel": "支持",
+          "href": "/investor/reports/archive-3a070dd4f842/"
+        },
+        {
+          "date": "2026-06-24",
+          "title": "新兴技术突破与产业化进展扫描报告（截至 2026-06-24）",
+          "summary": "分析师：主题研究员 ( thematic-researcher ) - 发布日期：2026-06-24 - 文档语言：简体中文 - 工作区路径： /[local-workspace] tech.md",
+          "thesisId": "thesis-d1f5e35b43",
+          "thesisTitle": "2026年AI芯片竞争格局：NVIDIA Rubin对阵云巨头ASIC",
+          "thesisHref": "/investor/theses/thesis-d1f5e35b43/",
+          "sourceLabel": "深度研究",
+          "supportType": "supports",
+          "supportLabel": "支持",
+          "href": "/investor/reports/archive-7d56ce0f77ff/"
+        },
+        {
+          "date": "2026-06-18",
+          "title": "截至 2026-06-18 的结论：低价开源与本地算力闭环会持续压低闭源 API 的“可替代工作负载”定价",
+          "summary": "截至 2026-06-18 的结论：低价开源与本地算力闭环会持续压低闭源 API 的“可替代工作负载”定价",
+          "thesisId": "thesis-7a6599a3f5",
+          "thesisTitle": "新一代信息技术国产替代要从信创叙事进入算力、软件与安全订单验证",
+          "thesisHref": "/investor/theses/thesis-7a6599a3f5/",
+          "sourceLabel": "深度研究",
+          "supportType": "risk",
+          "supportLabel": "风险",
+          "href": "/investor/reports/archive-1850b92ab6e1/"
+        },
+        {
+          "date": "2026-06-18",
+          "title": "截至 2026-06-18 的结论：低价开源与本地算力闭环会持续压低闭源 API 的“可替代工作负载”定价",
+          "summary": "截至 2026-06-18 的结论：低价开源与本地算力闭环会持续压低闭源 API 的“可替代工作负载”定价",
+          "thesisId": "thesis-31f32af77b",
+          "thesisTitle": "中国云与国产算力栈的关键不是模型热度，而是训练/推理订单、服务器交付和生态锁定",
+          "thesisHref": "/investor/theses/thesis-31f32af77b/",
+          "sourceLabel": "深度研究",
+          "supportType": "risk",
+          "supportLabel": "风险",
+          "href": "/investor/reports/archive-1850b92ab6e1/"
+        },
+        {
+          "date": "2026-06-18",
+          "title": "主题轮动晨扫：跨行业制度切换信号",
+          "summary": "锚定日期： 2026-06-18 （本地 shell）。所有“今日/隔夜/下周”均按该日期解释；市场数据截至 2026-06-17 美股收盘，适用于 2026-06-18 亚洲早盘/美股盘前观察。",
+          "thesisId": "thesis-075017003b",
+          "thesisTitle": "AI 资本开支通过能源、设备和利率进入通胀定价",
+          "thesisHref": "/investor/theses/thesis-075017003b/",
+          "sourceLabel": "深度研究",
+          "supportType": "supports",
+          "supportLabel": "支持",
+          "href": "/investor/reports/archive-7c5c57b89ea1/"
+        },
+        {
+          "date": "2026-06-18",
+          "title": "截至 2026-06-18 的结论：低价开源与本地算力闭环会持续压低闭源 API 的“可替代工作负载”定价",
+          "summary": "截至 2026-06-18 的结论：低价开源与本地算力闭环会持续压低闭源 API 的“可替代工作负载”定价",
+          "thesisId": "thesis-ab1fb6a453",
+          "thesisTitle": "DeepSeek 式低价模型正在重塑 AI 定价权与软件利润池",
+          "thesisHref": "/investor/theses/thesis-ab1fb6a453/",
+          "sourceLabel": "深度研究",
+          "supportType": "risk",
+          "supportLabel": "风险",
+          "href": "/investor/reports/archive-1850b92ab6e1/"
+        },
+        {
+          "date": "2026-06-14",
+          "title": "周末深度主题扫描 - 2026-06-14",
+          "summary": "锚定日期：本报告先以 shell 输出 2026-06-14 为“今天”。“过去5个交易日”定义为 2026-06-08 至 2026-06-12，价格表现使用 2026-06-05 收盘至 2026-06-12 收盘的 close-to-close 口径。市场...",
+          "thesisId": "thesis-2ec6b9d3ee",
+          "thesisTitle": "卫星直连与商业航天从概念弹性进入部署兑现期",
+          "thesisHref": "/investor/theses/thesis-2ec6b9d3ee/",
+          "sourceLabel": "深度研究",
+          "supportType": "supports",
+          "supportLabel": "支持",
+          "href": "/investor/reports/archive-89c17f9f1b48/"
+        },
+        {
+          "date": "2026-06-14",
+          "title": "周末深度主题扫描 - 2026-06-14",
+          "summary": "锚定日期：本报告先以 shell 输出 2026-06-14 为“今天”。“过去5个交易日”定义为 2026-06-08 至 2026-06-12，价格表现使用 2026-06-05 收盘至 2026-06-12 收盘的 close-to-close 口径。市场...",
+          "thesisId": "thesis-2a12467f9b",
+          "thesisTitle": "卫星电源壁垒需由发射节奏和单星价值量持续验证",
+          "thesisHref": "/investor/theses/thesis-2a12467f9b/",
+          "sourceLabel": "深度研究",
+          "supportType": "supports",
+          "supportLabel": "支持",
+          "href": "/investor/reports/archive-89c17f9f1b48/"
+        },
+        {
+          "date": "2026-06-11",
+          "title": "早间主题轮动扫描：从“算力”向“电力”的范式转移",
+          "summary": "早间主题轮动扫描：从“算力”向“电力”的范式转移 日期： 2026-06-11 分析师： 主题研究员",
+          "thesisId": "thesis-7f0a75c5f6",
+          "thesisTitle": "数据中心地产、液冷与水资源正在决定 AI 容量的区域迁移",
+          "thesisHref": "/investor/theses/thesis-7f0a75c5f6/",
+          "sourceLabel": "深度研究",
+          "supportType": "supports",
+          "supportLabel": "支持",
+          "href": "/investor/reports/archive-2ed99484dedd/"
+        },
+        {
+          "date": "2026-06-10",
+          "title": "SPCX 上市对 A 股 TMT 硬件板块的被动流出与冲击成本测算",
+          "summary": "回应对象: A股策略师 · 两融数据分析（ analyst:ashare-strategist:margin analysis，run 59ec3e33 ） 作者: 主题研究员（AI / 量子 / 生物 / 太空经济 / Web3） 日期锚点: 2026-06-10（ date...",
+          "thesisId": "thesis-029ce03da1",
+          "thesisTitle": "MSCI 调整窗口是被动资金与主动减仓相互博弈的流动性事件",
+          "thesisHref": "/investor/theses/thesis-029ce03da1/",
+          "sourceLabel": "深度研究",
+          "supportType": "risk",
+          "supportLabel": "风险",
+          "href": "/investor/reports/archive-8e1177d42920/"
+        }
+      ],
+      "href": "/investor/personas/#persona-thematic-researcher-b117c9"
+    },
+    {
       "id": "persona-utilities-analyst-1d704c",
       "name": "公用事业分析师",
       "nameEn": "Utilities Analyst",
@@ -13066,10 +13096,10 @@
       "firstSeen": "2026-05-06",
       "lastSeen": "2026-06-26",
       "thesisCount": 10,
-      "eventCount": 25,
+      "eventCount": 26,
       "stanceCounts": {
         "supports": 2,
-        "risks": 23,
+        "risks": 24,
         "neutral": 0
       },
       "topTerms": [
@@ -13080,8 +13110,8 @@
         "科创50",
         "ETF",
         "两融",
-        "硬科技",
         "半导体",
+        "硬科技",
         "CPO",
         "融资余额",
         "通胀"
@@ -13090,9 +13120,9 @@
       "whatChanged": [
         "2026-06-26: 期权伽马、ETF 与尾盘流动性正在放大主题交易的微观结构风险 / 588000.SH期权波动率偏斜变化与Collar策略对冲成本核算报告",
         "2026-06-22: A 股半导体的核心风险从订单验证转向 A/H 溢价、两融与负 Gamma / 关于A股电子/半导体行业两融数据勾稽与科创50雪球/负Gamma崖区评估报告",
+        "2026-06-22: Sivers (SIVE:STO) 概念被供应链证伪，而国内电子板块融资余额高达5608亿元，四大半导体龙头两融保证金缺口达93.81亿… / 关于A股电子/半导体行业两融数据勾稽与科创50雪球/负Gamma崖区评估报告",
         "2026-06-22: A 股硬科技与科创50的复苏需要订单、融资盘和指数结构共振 / 关于A股电子/半导体行业两融数据勾稽与科创50雪球/负Gamma崖区评估报告",
-        "2026-06-22: 美股半导体大跌6.3%，A股半导体也因折算率下调产生93.81亿元保证金缺口，科创50遭遇放量回撤。在此轮全球科技股泡沫退潮和两融去杠杆… / 关于A股电子/半导体行业两融数据勾稽与科创50雪球/负Gamma崖区评估报告",
-        "2026-06-22: 散户情绪与北向资金背离是 A 股风险偏好的关键温度计 / 关于A股电子/半导体行业两融数据勾稽与科创50雪球/负Gamma崖区评估报告"
+        "2026-06-22: 美股半导体大跌6.3%，A股半导体也因折算率下调产生93.81亿元保证金缺口，科创50遭遇放量回撤。在此轮全球科技股泡沫退潮和两融去杠杆… / 关于A股电子/半导体行业两融数据勾稽与科创50雪球/负Gamma崖区评估报告"
       ],
       "theses": [
         {
@@ -13210,6 +13240,31 @@
           ]
         },
         {
+          "id": "thesis-2fe5298427",
+          "title": "Sivers (SIVE:STO) 概念被供应链证伪，而国内电子板块融资余额高达5608亿元，四大半导体龙头两融保证金缺口达93.81亿…",
+          "href": "/investor/theses/thesis-2fe5298427/",
+          "direction": "conflicting",
+          "directionLabel": "分歧",
+          "exposureBucket": "中国权益与流动性",
+          "actionLabel": "深研候选：先建观察仓",
+          "eventCount": 1,
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "score": 56,
+          "firstSeen": "2026-06-22",
+          "lastSeen": "2026-06-22",
+          "terms": {},
+          "topTerms": [
+            "CPO",
+            "A股",
+            "科创50",
+            "两融",
+            "融资余额",
+            "半导体"
+          ]
+        },
+        {
           "id": "thesis-547daf8501",
           "title": "科创50单日暴涨逾3%而全市场超4600只个股飘绿，这种前所未有的宽度背离是否意味着A股正进入极度拥挤的‘沙漏型’存量博弈？组合应如何防…",
           "href": "/investor/theses/thesis-547daf8501/",
@@ -13299,31 +13354,6 @@
             "科创50",
             "两融",
             "融资余额"
-          ]
-        },
-        {
-          "id": "thesis-3986819dc0",
-          "title": "A 股半导体的核心风险从订单验证转向 A/H 溢价、两融与负 Gamma",
-          "href": "/investor/theses/thesis-3986819dc0/",
-          "direction": "conflicting",
-          "directionLabel": "分歧",
-          "exposureBucket": "中国权益与流动性",
-          "actionLabel": "观察等待",
-          "eventCount": 1,
-          "supports": 0,
-          "risks": 1,
-          "neutral": 0,
-          "score": 73,
-          "firstSeen": "2026-06-22",
-          "lastSeen": "2026-06-22",
-          "terms": {},
-          "topTerms": [
-            "A股",
-            "科创50",
-            "两融",
-            "半导体",
-            "Gamma",
-            "gamma"
           ]
         }
       ],
@@ -13682,9 +13712,9 @@
         {
           "date": "2026-06-22",
           "supports": 0,
-          "risks": 9,
+          "risks": 10,
           "neutral": 0,
-          "eventCount": 9,
+          "eventCount": 10,
           "value": 12,
           "topTheses": [
             "科创50单日+8.41%后，团队应把硬科技升为中期主线，还是在两融、广度、ETF申赎确认前按拥挤反弹处理？",
@@ -13699,6 +13729,18 @@
               "thesisId": "thesis-3986819dc0",
               "thesisTitle": "A 股半导体的核心风险从订单验证转向 A/H 溢价、两融与负 Gamma",
               "thesisHref": "/investor/theses/thesis-3986819dc0/",
+              "sourceLabel": "深度研究",
+              "supportType": "risk",
+              "supportLabel": "风险",
+              "href": "/investor/reports/archive-cb32ca4e4dae/"
+            },
+            {
+              "date": "2026-06-22",
+              "title": "关于A股电子/半导体行业两融数据勾稽与科创50雪球/负Gamma崖区评估报告",
+              "summary": "关于A股电子/半导体行业两融数据勾稽与科创50雪球/负Gamma崖区评估报告",
+              "thesisId": "thesis-2fe5298427",
+              "thesisTitle": "Sivers (SIVE:STO) 概念被供应链证伪，而国内电子板块融资余额高达5608亿元，四大半导体龙头两融保证金缺口达93.81亿…",
+              "thesisHref": "/investor/theses/thesis-2fe5298427/",
               "sourceLabel": "深度研究",
               "supportType": "risk",
               "supportLabel": "风险",
@@ -13735,18 +13777,6 @@
               "thesisId": "thesis-4b3b37e207",
               "thesisTitle": "散户情绪与北向资金背离是 A 股风险偏好的关键温度计",
               "thesisHref": "/investor/theses/thesis-4b3b37e207/",
-              "sourceLabel": "深度研究",
-              "supportType": "risk",
-              "supportLabel": "风险",
-              "href": "/investor/reports/archive-cb32ca4e4dae/"
-            },
-            {
-              "date": "2026-06-22",
-              "title": "关于A股电子/半导体行业两融数据勾稽与科创50雪球/负Gamma崖区评估报告",
-              "summary": "关于A股电子/半导体行业两融数据勾稽与科创50雪球/负Gamma崖区评估报告",
-              "thesisId": "thesis-10f0672291",
-              "thesisTitle": "科创50单日+8.41%后，团队应把硬科技升为中期主线，还是在两融、广度、ETF申赎确认前按拥挤反弹处理？",
-              "thesisHref": "/investor/theses/thesis-10f0672291/",
               "sourceLabel": "深度研究",
               "supportType": "risk",
               "supportLabel": "风险",
@@ -13800,6 +13830,18 @@
           "thesisId": "thesis-3986819dc0",
           "thesisTitle": "A 股半导体的核心风险从订单验证转向 A/H 溢价、两融与负 Gamma",
           "thesisHref": "/investor/theses/thesis-3986819dc0/",
+          "sourceLabel": "深度研究",
+          "supportType": "risk",
+          "supportLabel": "风险",
+          "href": "/investor/reports/archive-cb32ca4e4dae/"
+        },
+        {
+          "date": "2026-06-22",
+          "title": "关于A股电子/半导体行业两融数据勾稽与科创50雪球/负Gamma崖区评估报告",
+          "summary": "关于A股电子/半导体行业两融数据勾稽与科创50雪球/负Gamma崖区评估报告",
+          "thesisId": "thesis-2fe5298427",
+          "thesisTitle": "Sivers (SIVE:STO) 概念被供应链证伪，而国内电子板块融资余额高达5608亿元，四大半导体龙头两融保证金缺口达93.81亿…",
+          "thesisHref": "/investor/theses/thesis-2fe5298427/",
           "sourceLabel": "深度研究",
           "supportType": "risk",
           "supportLabel": "风险",
@@ -13908,18 +13950,6 @@
           "thesisId": "thesis-89c14497ac",
           "thesisTitle": "期权伽马、ETF 与尾盘流动性正在放大主题交易的微观结构风险",
           "thesisHref": "/investor/theses/thesis-89c14497ac/",
-          "sourceLabel": "深度研究",
-          "supportType": "risk",
-          "supportLabel": "风险",
-          "href": "/investor/reports/archive-b77df37bfc98/"
-        },
-        {
-          "date": "2026-06-16",
-          "title": "SpaceX (SPCX) IPO 后首个到期日 0-DTE 期权持仓分布与 Gamma 挤压风险评估",
-          "summary": "SpaceX (SPCX) IPO 后首个到期日 0-DTE 期权持仓分布与 Gamma 挤压风险评估",
-          "thesisId": "thesis-065b759e9a",
-          "thesisTitle": "SpaceX (SPCX)挂牌首日大跌且ASTS面临17.6亿美元Capex缺口，散户FOMO热炒ASTS (35-45x EV/Sal…",
-          "thesisHref": "/investor/theses/thesis-065b759e9a/",
           "sourceLabel": "深度研究",
           "supportType": "risk",
           "supportLabel": "风险",
@@ -16464,7 +16494,7 @@
           "href": "/investor/theses/thesis-d614778e40/",
           "direction": "conflicting",
           "directionLabel": "分歧",
-          "exposureBucket": "消费健康防御",
+          "exposureBucket": "中国权益与流动性",
           "actionLabel": "观察等待",
           "eventCount": 1,
           "supports": 1,
@@ -16482,7 +16512,7 @@
           "href": "/investor/theses/thesis-9d1baaec59/",
           "direction": "conflicting",
           "directionLabel": "分歧",
-          "exposureBucket": "消费健康防御",
+          "exposureBucket": "中国权益与流动性",
           "actionLabel": "观察等待",
           "eventCount": 1,
           "supports": 1,
@@ -17089,688 +17119,6 @@
       "href": "/investor/personas/#persona-china-macro-analyst-bd4aad"
     },
     {
-      "id": "persona-policy-analyst-7aaee2",
-      "name": "政策分析师",
-      "nameEn": "Policy Analyst",
-      "category": "ESG与主题",
-      "specialty": "监管政策/碳中和/绿色金融/地缘政治/制裁与出口管制/关税框架",
-      "firstSeen": "2026-05-16",
-      "lastSeen": "2026-07-09",
-      "thesisCount": 10,
-      "eventCount": 12,
-      "stanceCounts": {
-        "supports": 5,
-        "risks": 7,
-        "neutral": 0
-      },
-      "topTerms": [
-        "油价",
-        "航运",
-        "服务器",
-        "HBM",
-        "利率",
-        "油轮",
-        "算力",
-        "国产算力",
-        "AI 基础设施",
-        "GPU",
-        "HBM4",
-        "CoWoS"
-      ],
-      "currentView": "航运与物流成本是油价、关税和供应链再通胀的二阶传导器；中国云与国产算力栈的关键不是模型热度，而是训练/推理订单、服务器交付和生态锁定；油价地缘底线决定再通胀与降息交易的安全边际 是当前该 persona 参与最多的研究主线。",
-      "whatChanged": [
-        "2026-07-09: 中国云与国产算力栈的关键不是模型热度，而是训练/推理订单、服务器交付和生态锁定 / 大模型备案与商业化准入中推理端国产算力占比的合规监管分析报告",
-        "2026-06-25: 油价地缘底线决定再通胀与降息交易的安全边际 / U.S.-Iran协议概率与伊朗原油制裁减免评估",
-        "2026-06-25: 航运与物流成本是油价、关税和供应链再通胀的二阶传导器 / U.S.-Iran协议概率与伊朗原油制裁减免评估",
-        "2026-06-09: DeepSeek 式低价模型正在重塑 AI 定价权与软件利润池 / 政策分析师 · 中午团队 Check-in 简报（2026-06-09）",
-        "2026-06-09: 航运与物流成本是油价、关税和供应链再通胀的二阶传导器 / 投研分析报告：航运开放性拆解与 Brent 基准建议"
-      ],
-      "theses": [
-        {
-          "id": "thesis-d6b2c23ed6",
-          "title": "航运与物流成本是油价、关税和供应链再通胀的二阶传导器",
-          "href": "/investor/theses/thesis-d6b2c23ed6/",
-          "direction": "conflicting",
-          "directionLabel": "分歧",
-          "exposureBucket": "宏观利率与汇率",
-          "actionLabel": "观察等待",
-          "eventCount": 3,
-          "supports": 1,
-          "risks": 2,
-          "neutral": 0,
-          "score": 62,
-          "firstSeen": "2026-06-08",
-          "lastSeen": "2026-06-25",
-          "terms": {},
-          "topTerms": [
-            "航运",
-            "油价",
-            "油轮",
-            "物流"
-          ]
-        },
-        {
-          "id": "thesis-31f32af77b",
-          "title": "中国云与国产算力栈的关键不是模型热度，而是训练/推理订单、服务器交付和生态锁定",
-          "href": "/investor/theses/thesis-31f32af77b/",
-          "direction": "conflicting",
-          "directionLabel": "分歧",
-          "exposureBucket": "AI 基础设施",
-          "actionLabel": "分歧主线：配对验证",
-          "eventCount": 1,
-          "supports": 0,
-          "risks": 1,
-          "neutral": 0,
-          "score": 37,
-          "firstSeen": "2026-07-09",
-          "lastSeen": "2026-07-09",
-          "terms": {},
-          "topTerms": [
-            "服务器",
-            "算力",
-            "国产算力"
-          ]
-        },
-        {
-          "id": "thesis-3d421524cd",
-          "title": "油价地缘底线决定再通胀与降息交易的安全边际",
-          "href": "/investor/theses/thesis-3d421524cd/",
-          "direction": "conflicting",
-          "directionLabel": "分歧",
-          "exposureBucket": "宏观利率与汇率",
-          "actionLabel": "观察等待",
-          "eventCount": 1,
-          "supports": 1,
-          "risks": 0,
-          "neutral": 0,
-          "score": 48,
-          "firstSeen": "2026-06-25",
-          "lastSeen": "2026-06-25",
-          "terms": {},
-          "topTerms": [
-            "油价",
-            "Brent"
-          ]
-        },
-        {
-          "id": "thesis-ab1fb6a453",
-          "title": "DeepSeek 式低价模型正在重塑 AI 定价权与软件利润池",
-          "href": "/investor/theses/thesis-ab1fb6a453/",
-          "direction": "conflicting",
-          "directionLabel": "分歧",
-          "exposureBucket": "AI 基础设施",
-          "actionLabel": "分歧主线：配对验证",
-          "eventCount": 1,
-          "supports": 1,
-          "risks": 0,
-          "neutral": 0,
-          "score": 23,
-          "firstSeen": "2026-06-09",
-          "lastSeen": "2026-06-09",
-          "terms": {},
-          "topTerms": []
-        },
-        {
-          "id": "thesis-21dd72c1b1",
-          "title": "航空航天与国防供应链错配正在形成政策驱动的制造业弹性",
-          "href": "/investor/theses/thesis-21dd72c1b1/",
-          "direction": "conflicting",
-          "directionLabel": "分歧",
-          "exposureBucket": "航天国防与新场景",
-          "actionLabel": "观察等待",
-          "eventCount": 1,
-          "supports": 1,
-          "risks": 0,
-          "neutral": 0,
-          "score": 21,
-          "firstSeen": "2026-06-04",
-          "lastSeen": "2026-06-04",
-          "terms": {},
-          "topTerms": [
-            "HBM",
-            "GOES"
-          ]
-        },
-        {
-          "id": "thesis-075017003b",
-          "title": "AI 资本开支通过能源、设备和利率进入通胀定价",
-          "href": "/investor/theses/thesis-075017003b/",
-          "direction": "stable",
-          "directionLabel": "稳定",
-          "exposureBucket": "宏观利率与汇率",
-          "actionLabel": "观察等待",
-          "eventCount": 1,
-          "supports": 1,
-          "risks": 0,
-          "neutral": 0,
-          "score": 40,
-          "firstSeen": "2026-05-26",
-          "lastSeen": "2026-05-26",
-          "terms": {},
-          "topTerms": [
-            "AI 资本开支",
-            "AI CapEx",
-            "CPI",
-            "PCE",
-            "通胀",
-            "利率"
-          ]
-        },
-        {
-          "id": "thesis-6f42e0fe6e",
-          "title": "稀土、铜铝与关键材料正在成为 AI 与新能源共用的供给约束",
-          "href": "/investor/theses/thesis-6f42e0fe6e/",
-          "direction": "conflicting",
-          "directionLabel": "分歧",
-          "exposureBucket": "能源与关键材料",
-          "actionLabel": "观察等待",
-          "eventCount": 1,
-          "supports": 0,
-          "risks": 1,
-          "neutral": 0,
-          "score": 18,
-          "firstSeen": "2026-05-20",
-          "lastSeen": "2026-05-20",
-          "terms": {},
-          "topTerms": [
-            "关键材料"
-          ]
-        },
-        {
-          "id": "thesis-f5d7a79c82",
-          "title": "HBM4、CoWoS 与背面供电正在成为 AI 服务器需求曲线的串行闸门",
-          "href": "/investor/theses/thesis-f5d7a79c82/",
-          "direction": "conflicting",
-          "directionLabel": "分歧",
-          "exposureBucket": "AI 基础设施",
-          "actionLabel": "观察等待",
-          "eventCount": 1,
-          "supports": 0,
-          "risks": 1,
-          "neutral": 0,
-          "score": 57,
-          "firstSeen": "2026-05-19",
-          "lastSeen": "2026-05-19",
-          "terms": {},
-          "topTerms": [
-            "AI 基础设施",
-            "GPU",
-            "HBM",
-            "HBM4",
-            "CoWoS",
-            "先进封装"
-          ]
-        },
-        {
-          "id": "thesis-9e97140446",
-          "title": "中国电力设备出海进入订单质量与政策筛选期",
-          "href": "/investor/theses/thesis-9e97140446/",
-          "direction": "conflicting",
-          "directionLabel": "分歧",
-          "exposureBucket": "电力与公用事业",
-          "actionLabel": "观察等待",
-          "eventCount": 1,
-          "supports": 0,
-          "risks": 1,
-          "neutral": 0,
-          "score": 65,
-          "firstSeen": "2026-05-18",
-          "lastSeen": "2026-05-18",
-          "terms": {},
-          "topTerms": [
-            "电力",
-            "电网",
-            "变压器",
-            "利率",
-            "电力设备"
-          ]
-        },
-        {
-          "id": "thesis-ffa474a3f2",
-          "title": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
-          "href": "/investor/theses/thesis-ffa474a3f2/",
-          "direction": "conflicting",
-          "directionLabel": "分歧",
-          "exposureBucket": "消费健康防御",
-          "actionLabel": "观察等待",
-          "eventCount": 1,
-          "supports": 0,
-          "risks": 1,
-          "neutral": 0,
-          "score": 18,
-          "firstSeen": "2026-05-16",
-          "lastSeen": "2026-05-16",
-          "terms": {},
-          "topTerms": []
-        }
-      ],
-      "timeline": [
-        {
-          "date": "2026-05-16",
-          "supports": 0,
-          "risks": 1,
-          "neutral": 0,
-          "eventCount": 1,
-          "value": 36,
-          "topTheses": [
-            "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链"
-          ],
-          "events": [
-            {
-              "date": "2026-05-16",
-              "title": "[报告] AI代理时代的API标准化与监管边界",
-              "summary": "日期：2026-05-16（Asia/Singapore） - 分析师：policy-analyst（政策分析师） - 立场： 压力测试 (Stress-test) - 研究记录 - 工作区说明：本报告启动时 research note 与 research note 的报...",
-              "thesisId": "thesis-ffa474a3f2",
-              "thesisTitle": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
-              "thesisHref": "/investor/theses/thesis-ffa474a3f2/",
-              "sourceLabel": "深度研究",
-              "supportType": "risk",
-              "supportLabel": "风险",
-              "href": "/investor/reports/archive-f3c02a03bd52/"
-            }
-          ]
-        },
-        {
-          "date": "2026-05-18",
-          "supports": 0,
-          "risks": 1,
-          "neutral": 0,
-          "eventCount": 1,
-          "value": 37.4,
-          "topTheses": [
-            "中国电力设备出海进入订单质量与政策筛选期"
-          ],
-          "events": [
-            {
-              "date": "2026-05-18",
-              "title": "电力设备价格联动机制与监管政策：铜铝冲击究竟有多少传导到利润？",
-              "summary": "分析师：政策分析师（ policy-analyst ） - 立场：压力测试（针对研究记录 05） - 工作日期：2026-05-18（亚洲/新加坡） - 研究记录 - 主题：电力设备价格联动机制与监管政策对利润传导的影响 -...",
-              "thesisId": "thesis-9e97140446",
-              "thesisTitle": "中国电力设备出海进入订单质量与政策筛选期",
-              "thesisHref": "/investor/theses/thesis-9e97140446/",
-              "sourceLabel": "深度研究",
-              "supportType": "risk",
-              "supportLabel": "风险",
-              "href": "/investor/reports/archive-d949639614ab/"
-            }
-          ]
-        },
-        {
-          "date": "2026-05-19",
-          "supports": 0,
-          "risks": 1,
-          "neutral": 0,
-          "eventCount": 1,
-          "value": 38.8,
-          "topTheses": [
-            "HBM4、CoWoS 与背面供电正在成为 AI 服务器需求曲线的串行闸门"
-          ],
-          "events": [
-            {
-              "date": "2026-05-19",
-              "title": "贸易管制对先进封装产能的冲击：存储成本通胀是否具有政策驱动的结构性特...",
-              "summary": "既有研究记录— 贸易管制对先进封装产能的冲击：存储成本通胀是否具有政策驱动的结构性特征？",
-              "thesisId": "thesis-f5d7a79c82",
-              "thesisTitle": "HBM4、CoWoS 与背面供电正在成为 AI 服务器需求曲线的串行闸门",
-              "thesisHref": "/investor/theses/thesis-f5d7a79c82/",
-              "sourceLabel": "深度研究",
-              "supportType": "risk",
-              "supportLabel": "风险",
-              "href": "/investor/reports/archive-44820f8fa2cc/"
-            }
-          ]
-        },
-        {
-          "date": "2026-05-20",
-          "supports": 0,
-          "risks": 1,
-          "neutral": 0,
-          "eventCount": 1,
-          "value": 40.2,
-          "topTheses": [
-            "稀土、铜铝与关键材料正在成为 AI 与新能源共用的供给约束"
-          ],
-          "events": [
-            {
-              "date": "2026-05-20",
-              "title": "研究记录｜高频PCB关键材料国产化进程中的贸易管制与政策扶持动态",
-              "summary": "工作日期：2026-05-20（亚洲/新加坡） - 分析师：政策分析师（policy-analyst） - 立场：stress-test（压力测试研究记录材料栈国产化判断） - 主题：在HVLP铜箔与特种树脂存在技术瓶颈的背景下...",
-              "thesisId": "thesis-6f42e0fe6e",
-              "thesisTitle": "稀土、铜铝与关键材料正在成为 AI 与新能源共用的供给约束",
-              "thesisHref": "/investor/theses/thesis-6f42e0fe6e/",
-              "sourceLabel": "深度研究",
-              "supportType": "risk",
-              "supportLabel": "风险",
-              "href": "/investor/reports/archive-cdf895c5ca4b/"
-            }
-          ]
-        },
-        {
-          "date": "2026-05-26",
-          "supports": 1,
-          "risks": 0,
-          "neutral": 0,
-          "eventCount": 1,
-          "value": 55.6,
-          "topTheses": [
-            "AI 资本开支通过能源、设备和利率进入通胀定价"
-          ],
-          "events": [
-            {
-              "date": "2026-05-26",
-              "title": "Active research-project theses",
-              "summary": "Scope : policy-analyst (slice: own + notes you contributed to) Active : 8 · Recently closed (last 14d) : 0",
-              "thesisId": "thesis-075017003b",
-              "thesisTitle": "AI 资本开支通过能源、设备和利率进入通胀定价",
-              "thesisHref": "/investor/theses/thesis-075017003b/",
-              "sourceLabel": "深度研究",
-              "supportType": "supports",
-              "supportLabel": "支持",
-              "href": "/investor/reports/archive-ab55460def01/"
-            }
-          ]
-        },
-        {
-          "date": "2026-06-04",
-          "supports": 1,
-          "risks": 0,
-          "neutral": 0,
-          "eventCount": 1,
-          "value": 57,
-          "topTheses": [
-            "航空航天与国防供应链错配正在形成政策驱动的制造业弹性"
-          ],
-          "events": [
-            {
-              "date": "2026-06-04",
-              "title": "政策分析师 · 午间团队 Check-in 简报（2026-06-04）",
-              "summary": "政策分析师 · 午间团队 Check-in 简报（2026-06-04）",
-              "thesisId": "thesis-21dd72c1b1",
-              "thesisTitle": "航空航天与国防供应链错配正在形成政策驱动的制造业弹性",
-              "thesisHref": "/investor/theses/thesis-21dd72c1b1/",
-              "sourceLabel": "深度研究",
-              "supportType": "supports",
-              "supportLabel": "支持",
-              "href": "/investor/reports/archive-f6a4f7d80b9d/"
-            }
-          ]
-        },
-        {
-          "date": "2026-06-08",
-          "supports": 0,
-          "risks": 1,
-          "neutral": 0,
-          "eventCount": 1,
-          "value": 44.4,
-          "topTheses": [
-            "航运与物流成本是油价、关税和供应链再通胀的二阶传导器"
-          ],
-          "events": [
-            {
-              "date": "2026-06-08",
-              "title": "美伊谈判与霍尔木兹海峡30天重开情景研判",
-              "summary": "锚定日期： 2026-06-08。本报告中的“上周五”指 2026-06-05；“未来30天”指 2026-06-08 至 2026-07-08。",
-              "thesisId": "thesis-d6b2c23ed6",
-              "thesisTitle": "航运与物流成本是油价、关税和供应链再通胀的二阶传导器",
-              "thesisHref": "/investor/theses/thesis-d6b2c23ed6/",
-              "sourceLabel": "深度研究",
-              "supportType": "risk",
-              "supportLabel": "风险",
-              "href": "/investor/reports/archive-2f2ce7a6af1e/"
-            }
-          ]
-        },
-        {
-          "date": "2026-06-09",
-          "supports": 1,
-          "risks": 1,
-          "neutral": 0,
-          "eventCount": 2,
-          "value": 53.8,
-          "topTheses": [
-            "DeepSeek 式低价模型正在重塑 AI 定价权与软件利润池",
-            "航运与物流成本是油价、关税和供应链再通胀的二阶传导器"
-          ],
-          "events": [
-            {
-              "date": "2026-06-09",
-              "title": "政策分析师 · 中午团队 Check-in 简报（2026-06-09）",
-              "summary": "政策分析师 · 中午团队 Check-in 简报（2026-06-09）",
-              "thesisId": "thesis-ab1fb6a453",
-              "thesisTitle": "DeepSeek 式低价模型正在重塑 AI 定价权与软件利润池",
-              "thesisHref": "/investor/theses/thesis-ab1fb6a453/",
-              "sourceLabel": "深度研究",
-              "supportType": "supports",
-              "supportLabel": "支持",
-              "href": "/investor/reports/archive-308e1f3ed026/"
-            },
-            {
-              "date": "2026-06-09",
-              "title": "投研分析报告：航运开放性拆解与 Brent 基准建议",
-              "summary": "报告日期： 2026-06-09 分析周期： 2026-06-09 至 2026-06-16 针对目标： Brent 94.25 USD/bbl 基线保留决策",
-              "thesisId": "thesis-d6b2c23ed6",
-              "thesisTitle": "航运与物流成本是油价、关税和供应链再通胀的二阶传导器",
-              "thesisHref": "/investor/theses/thesis-d6b2c23ed6/",
-              "sourceLabel": "深度研究",
-              "supportType": "risk",
-              "supportLabel": "风险",
-              "href": "/investor/reports/archive-20585afcc933/"
-            }
-          ]
-        },
-        {
-          "date": "2026-06-25",
-          "supports": 2,
-          "risks": 0,
-          "neutral": 0,
-          "eventCount": 2,
-          "value": 69.2,
-          "topTheses": [
-            "油价地缘底线决定再通胀与降息交易的安全边际",
-            "航运与物流成本是油价、关税和供应链再通胀的二阶传导器"
-          ],
-          "events": [
-            {
-              "date": "2026-06-25",
-              "title": "U.S.-Iran协议概率与伊朗原油制裁减免评估",
-              "summary": "日期锚点：2026-06-25。 本文所有“当前”“本周”“60天窗口”等时间表均以该日期为准。",
-              "thesisId": "thesis-3d421524cd",
-              "thesisTitle": "油价地缘底线决定再通胀与降息交易的安全边际",
-              "thesisHref": "/investor/theses/thesis-3d421524cd/",
-              "sourceLabel": "深度研究",
-              "supportType": "supports",
-              "supportLabel": "支持",
-              "href": "/investor/reports/archive-c527f681cedf/"
-            },
-            {
-              "date": "2026-06-25",
-              "title": "U.S.-Iran协议概率与伊朗原油制裁减免评估",
-              "summary": "日期锚点：2026-06-25。 本文所有“当前”“本周”“60天窗口”等时间表均以该日期为准。",
-              "thesisId": "thesis-d6b2c23ed6",
-              "thesisTitle": "航运与物流成本是油价、关税和供应链再通胀的二阶传导器",
-              "thesisHref": "/investor/theses/thesis-d6b2c23ed6/",
-              "sourceLabel": "深度研究",
-              "supportType": "supports",
-              "supportLabel": "支持",
-              "href": "/investor/reports/archive-c527f681cedf/"
-            }
-          ]
-        },
-        {
-          "date": "2026-07-09",
-          "supports": 0,
-          "risks": 1,
-          "neutral": 0,
-          "eventCount": 1,
-          "value": 48.6,
-          "topTheses": [
-            "中国云与国产算力栈的关键不是模型热度，而是训练/推理订单、服务器交付和生态锁定"
-          ],
-          "events": [
-            {
-              "date": "2026-07-09",
-              "title": "大模型备案与商业化准入中推理端国产算力占比的合规监管分析报告",
-              "summary": "报告基准日期： 2026-07-09 分析师： 政策分析师 (Policy Analyst) 对照英文版： handoff response.en.md",
-              "thesisId": "thesis-31f32af77b",
-              "thesisTitle": "中国云与国产算力栈的关键不是模型热度，而是训练/推理订单、服务器交付和生态锁定",
-              "thesisHref": "/investor/theses/thesis-31f32af77b/",
-              "sourceLabel": "深度研究",
-              "supportType": "risk",
-              "supportLabel": "风险",
-              "href": "/investor/reports/archive-fb29722d01e3/"
-            }
-          ]
-        }
-      ],
-      "latestEvents": [
-        {
-          "date": "2026-07-09",
-          "title": "大模型备案与商业化准入中推理端国产算力占比的合规监管分析报告",
-          "summary": "报告基准日期： 2026-07-09 分析师： 政策分析师 (Policy Analyst) 对照英文版： handoff response.en.md",
-          "thesisId": "thesis-31f32af77b",
-          "thesisTitle": "中国云与国产算力栈的关键不是模型热度，而是训练/推理订单、服务器交付和生态锁定",
-          "thesisHref": "/investor/theses/thesis-31f32af77b/",
-          "sourceLabel": "深度研究",
-          "supportType": "risk",
-          "supportLabel": "风险",
-          "href": "/investor/reports/archive-fb29722d01e3/"
-        },
-        {
-          "date": "2026-06-25",
-          "title": "U.S.-Iran协议概率与伊朗原油制裁减免评估",
-          "summary": "日期锚点：2026-06-25。 本文所有“当前”“本周”“60天窗口”等时间表均以该日期为准。",
-          "thesisId": "thesis-3d421524cd",
-          "thesisTitle": "油价地缘底线决定再通胀与降息交易的安全边际",
-          "thesisHref": "/investor/theses/thesis-3d421524cd/",
-          "sourceLabel": "深度研究",
-          "supportType": "supports",
-          "supportLabel": "支持",
-          "href": "/investor/reports/archive-c527f681cedf/"
-        },
-        {
-          "date": "2026-06-25",
-          "title": "U.S.-Iran协议概率与伊朗原油制裁减免评估",
-          "summary": "日期锚点：2026-06-25。 本文所有“当前”“本周”“60天窗口”等时间表均以该日期为准。",
-          "thesisId": "thesis-d6b2c23ed6",
-          "thesisTitle": "航运与物流成本是油价、关税和供应链再通胀的二阶传导器",
-          "thesisHref": "/investor/theses/thesis-d6b2c23ed6/",
-          "sourceLabel": "深度研究",
-          "supportType": "supports",
-          "supportLabel": "支持",
-          "href": "/investor/reports/archive-c527f681cedf/"
-        },
-        {
-          "date": "2026-06-09",
-          "title": "政策分析师 · 中午团队 Check-in 简报（2026-06-09）",
-          "summary": "政策分析师 · 中午团队 Check-in 简报（2026-06-09）",
-          "thesisId": "thesis-ab1fb6a453",
-          "thesisTitle": "DeepSeek 式低价模型正在重塑 AI 定价权与软件利润池",
-          "thesisHref": "/investor/theses/thesis-ab1fb6a453/",
-          "sourceLabel": "深度研究",
-          "supportType": "supports",
-          "supportLabel": "支持",
-          "href": "/investor/reports/archive-308e1f3ed026/"
-        },
-        {
-          "date": "2026-06-09",
-          "title": "投研分析报告：航运开放性拆解与 Brent 基准建议",
-          "summary": "报告日期： 2026-06-09 分析周期： 2026-06-09 至 2026-06-16 针对目标： Brent 94.25 USD/bbl 基线保留决策",
-          "thesisId": "thesis-d6b2c23ed6",
-          "thesisTitle": "航运与物流成本是油价、关税和供应链再通胀的二阶传导器",
-          "thesisHref": "/investor/theses/thesis-d6b2c23ed6/",
-          "sourceLabel": "深度研究",
-          "supportType": "risk",
-          "supportLabel": "风险",
-          "href": "/investor/reports/archive-20585afcc933/"
-        },
-        {
-          "date": "2026-06-08",
-          "title": "美伊谈判与霍尔木兹海峡30天重开情景研判",
-          "summary": "锚定日期： 2026-06-08。本报告中的“上周五”指 2026-06-05；“未来30天”指 2026-06-08 至 2026-07-08。",
-          "thesisId": "thesis-d6b2c23ed6",
-          "thesisTitle": "航运与物流成本是油价、关税和供应链再通胀的二阶传导器",
-          "thesisHref": "/investor/theses/thesis-d6b2c23ed6/",
-          "sourceLabel": "深度研究",
-          "supportType": "risk",
-          "supportLabel": "风险",
-          "href": "/investor/reports/archive-2f2ce7a6af1e/"
-        },
-        {
-          "date": "2026-06-04",
-          "title": "政策分析师 · 午间团队 Check-in 简报（2026-06-04）",
-          "summary": "政策分析师 · 午间团队 Check-in 简报（2026-06-04）",
-          "thesisId": "thesis-21dd72c1b1",
-          "thesisTitle": "航空航天与国防供应链错配正在形成政策驱动的制造业弹性",
-          "thesisHref": "/investor/theses/thesis-21dd72c1b1/",
-          "sourceLabel": "深度研究",
-          "supportType": "supports",
-          "supportLabel": "支持",
-          "href": "/investor/reports/archive-f6a4f7d80b9d/"
-        },
-        {
-          "date": "2026-05-26",
-          "title": "Active research-project theses",
-          "summary": "Scope : policy-analyst (slice: own + notes you contributed to) Active : 8 · Recently closed (last 14d) : 0",
-          "thesisId": "thesis-075017003b",
-          "thesisTitle": "AI 资本开支通过能源、设备和利率进入通胀定价",
-          "thesisHref": "/investor/theses/thesis-075017003b/",
-          "sourceLabel": "深度研究",
-          "supportType": "supports",
-          "supportLabel": "支持",
-          "href": "/investor/reports/archive-ab55460def01/"
-        },
-        {
-          "date": "2026-05-20",
-          "title": "研究记录｜高频PCB关键材料国产化进程中的贸易管制与政策扶持动态",
-          "summary": "工作日期：2026-05-20（亚洲/新加坡） - 分析师：政策分析师（policy-analyst） - 立场：stress-test（压力测试研究记录材料栈国产化判断） - 主题：在HVLP铜箔与特种树脂存在技术瓶颈的背景下...",
-          "thesisId": "thesis-6f42e0fe6e",
-          "thesisTitle": "稀土、铜铝与关键材料正在成为 AI 与新能源共用的供给约束",
-          "thesisHref": "/investor/theses/thesis-6f42e0fe6e/",
-          "sourceLabel": "深度研究",
-          "supportType": "risk",
-          "supportLabel": "风险",
-          "href": "/investor/reports/archive-cdf895c5ca4b/"
-        },
-        {
-          "date": "2026-05-19",
-          "title": "贸易管制对先进封装产能的冲击：存储成本通胀是否具有政策驱动的结构性特...",
-          "summary": "既有研究记录— 贸易管制对先进封装产能的冲击：存储成本通胀是否具有政策驱动的结构性特征？",
-          "thesisId": "thesis-f5d7a79c82",
-          "thesisTitle": "HBM4、CoWoS 与背面供电正在成为 AI 服务器需求曲线的串行闸门",
-          "thesisHref": "/investor/theses/thesis-f5d7a79c82/",
-          "sourceLabel": "深度研究",
-          "supportType": "risk",
-          "supportLabel": "风险",
-          "href": "/investor/reports/archive-44820f8fa2cc/"
-        },
-        {
-          "date": "2026-05-18",
-          "title": "电力设备价格联动机制与监管政策：铜铝冲击究竟有多少传导到利润？",
-          "summary": "分析师：政策分析师（ policy-analyst ） - 立场：压力测试（针对研究记录 05） - 工作日期：2026-05-18（亚洲/新加坡） - 研究记录 - 主题：电力设备价格联动机制与监管政策对利润传导的影响 -...",
-          "thesisId": "thesis-9e97140446",
-          "thesisTitle": "中国电力设备出海进入订单质量与政策筛选期",
-          "thesisHref": "/investor/theses/thesis-9e97140446/",
-          "sourceLabel": "深度研究",
-          "supportType": "risk",
-          "supportLabel": "风险",
-          "href": "/investor/reports/archive-d949639614ab/"
-        },
-        {
-          "date": "2026-05-16",
-          "title": "[报告] AI代理时代的API标准化与监管边界",
-          "summary": "日期：2026-05-16（Asia/Singapore） - 分析师：policy-analyst（政策分析师） - 立场： 压力测试 (Stress-test) - 研究记录 - 工作区说明：本报告启动时 research note 与 research note 的报...",
-          "thesisId": "thesis-ffa474a3f2",
-          "thesisTitle": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
-          "thesisHref": "/investor/theses/thesis-ffa474a3f2/",
-          "sourceLabel": "深度研究",
-          "supportType": "risk",
-          "supportLabel": "风险",
-          "href": "/investor/reports/archive-f3c02a03bd52/"
-        }
-      ],
-      "href": "/investor/personas/#persona-policy-analyst-7aaee2"
-    },
-    {
       "id": "persona-fx-strategist-bf93e1",
       "name": "外汇策略师",
       "nameEn": "FX Strategist",
@@ -17779,10 +17127,10 @@
       "firstSeen": "2026-05-06",
       "lastSeen": "2026-07-09",
       "thesisCount": 9,
-      "eventCount": 21,
+      "eventCount": 19,
       "stanceCounts": {
-        "supports": 10,
-        "risks": 11,
+        "supports": 9,
+        "risks": 10,
         "neutral": 0
       },
       "topTerms": [
@@ -17796,8 +17144,8 @@
         "套息",
         "USD/CNH",
         "利率",
-        "A股",
-        "ETF"
+        "ETF",
+        "美债"
       ],
       "currentView": "人民币、美元与套息交易决定跨境风险资产的流动性折价；日元套息平仓是 EM 科技、离岸中资与高 beta 主题的尾部流动性风险；美元兑日元跌破161.50关口，财务省干预概率陡增。一旦日元套利平仓瞬间引爆全球EM科技股抛售，叠加SpaceX二次配售24.5亿元的资… 是当前该 persona 参与最多的研究主线。",
       "whatChanged": [
@@ -17816,12 +17164,12 @@
           "directionLabel": "分歧",
           "exposureBucket": "风险偏好与高波动",
           "actionLabel": "观察等待",
-          "eventCount": 8,
-          "supports": 3,
+          "eventCount": 7,
+          "supports": 2,
           "risks": 5,
           "neutral": 0,
-          "score": 484,
-          "firstSeen": "2026-05-26",
+          "score": 440,
+          "firstSeen": "2026-06-01",
           "lastSeen": "2026-06-11",
           "terms": {},
           "topTerms": [
@@ -17866,12 +17214,12 @@
           "directionLabel": "分歧",
           "exposureBucket": "宏观利率与汇率",
           "actionLabel": "深研候选：先建观察仓",
-          "eventCount": 3,
+          "eventCount": 2,
           "supports": 1,
-          "risks": 2,
+          "risks": 1,
           "neutral": 0,
-          "score": 84,
-          "firstSeen": "2026-06-01",
+          "score": 58,
+          "firstSeen": "2026-06-19",
           "lastSeen": "2026-07-03",
           "terms": {},
           "topTerms": [
@@ -18086,28 +17434,15 @@
         },
         {
           "date": "2026-05-26",
-          "supports": 2,
+          "supports": 1,
           "risks": 0,
           "neutral": 0,
-          "eventCount": 2,
-          "value": 60.8,
+          "eventCount": 1,
+          "value": 52.8,
           "topTheses": [
-            "人民币、美元与套息交易决定跨境风险资产的流动性折价",
             "风险核查与证据质量是主题交易的必要过滤器"
           ],
           "events": [
-            {
-              "date": "2026-05-26",
-              "title": "外汇策略日报 — 2026-05-26（周二）",
-              "summary": "作者：FX Strategist 报告日期：2026-05-26（亚洲早盘视角） 上一交易日：2026-05-22（周五，因 2026-05-25 美国阵亡将士纪念日休市，G10 流动性周一显著降低） 数据口径：本报告价格与利差为桌...",
-              "thesisId": "thesis-740e729f22",
-              "thesisTitle": "人民币、美元与套息交易决定跨境风险资产的流动性折价",
-              "thesisHref": "/investor/theses/thesis-740e729f22/",
-              "sourceLabel": "深度研究",
-              "supportType": "supports",
-              "supportLabel": "支持",
-              "href": "/investor/reports/archive-17fd8b7fbd17/"
-            },
             {
               "date": "2026-05-26",
               "title": "外汇策略日报 — 2026-05-26（周二）",
@@ -18150,13 +17485,12 @@
         {
           "date": "2026-06-01",
           "supports": 0,
-          "risks": 3,
+          "risks": 2,
           "neutral": 0,
-          "eventCount": 3,
-          "value": 29.6,
+          "eventCount": 2,
+          "value": 35.6,
           "topTheses": [
-            "人民币、美元与套息交易决定跨境风险资产的流动性折价",
-            "美元兑日元跌破161.50关口，财务省干预概率陡增。一旦日元套利平仓瞬间引爆全球EM科技股抛售，叠加SpaceX二次配售24.5亿元的资…"
+            "人民币、美元与套息交易决定跨境风险资产的流动性折价"
           ],
           "events": [
             {
@@ -18182,18 +17516,6 @@
               "supportType": "risk",
               "supportLabel": "风险",
               "href": "/investor/reports/archive-79ae6d33f119/"
-            },
-            {
-              "date": "2026-06-01",
-              "title": "日本央行/财务省外汇直接干预概率评估与日元套利交易解包风险压力测试报告",
-              "summary": "报告日期：2026年6月1日 (亚洲/新加坡时区) 分析师：外汇策略师 ( fx-strategist ) 协同对象：全球宏观分析师 ( global-macro ) 工作区关联文件： handoff response.md (简体中文版)",
-              "thesisId": "thesis-b13b8604a5",
-              "thesisTitle": "美元兑日元跌破161.50关口，财务省干预概率陡增。一旦日元套利平仓瞬间引爆全球EM科技股抛售，叠加SpaceX二次配售24.5亿元的资…",
-              "thesisHref": "/investor/theses/thesis-b13b8604a5/",
-              "sourceLabel": "深度研究",
-              "supportType": "risk",
-              "supportLabel": "风险",
-              "href": "/investor/reports/archive-650c6f80f1e8/"
             }
           ]
         },
@@ -19246,6 +18568,633 @@
         }
       ],
       "href": "/investor/personas/#persona-bond-analyst-232b52"
+    },
+    {
+      "id": "persona-policy-analyst-7aaee2",
+      "name": "政策分析师",
+      "nameEn": "Policy Analyst",
+      "category": "ESG与主题",
+      "specialty": "监管政策/碳中和/绿色金融/地缘政治/制裁与出口管制/关税框架",
+      "firstSeen": "2026-05-18",
+      "lastSeen": "2026-07-09",
+      "thesisCount": 9,
+      "eventCount": 11,
+      "stanceCounts": {
+        "supports": 5,
+        "risks": 6,
+        "neutral": 0
+      },
+      "topTerms": [
+        "油价",
+        "航运",
+        "服务器",
+        "HBM",
+        "利率",
+        "油轮",
+        "算力",
+        "国产算力",
+        "AI 基础设施",
+        "GPU",
+        "HBM4",
+        "CoWoS"
+      ],
+      "currentView": "航运与物流成本是油价、关税和供应链再通胀的二阶传导器；中国云与国产算力栈的关键不是模型热度，而是训练/推理订单、服务器交付和生态锁定；油价地缘底线决定再通胀与降息交易的安全边际 是当前该 persona 参与最多的研究主线。",
+      "whatChanged": [
+        "2026-07-09: 中国云与国产算力栈的关键不是模型热度，而是训练/推理订单、服务器交付和生态锁定 / 大模型备案与商业化准入中推理端国产算力占比的合规监管分析报告",
+        "2026-06-25: 油价地缘底线决定再通胀与降息交易的安全边际 / U.S.-Iran协议概率与伊朗原油制裁减免评估",
+        "2026-06-25: 航运与物流成本是油价、关税和供应链再通胀的二阶传导器 / U.S.-Iran协议概率与伊朗原油制裁减免评估",
+        "2026-06-09: DeepSeek 式低价模型正在重塑 AI 定价权与软件利润池 / 政策分析师 · 中午团队 Check-in 简报（2026-06-09）",
+        "2026-06-09: 航运与物流成本是油价、关税和供应链再通胀的二阶传导器 / 投研分析报告：航运开放性拆解与 Brent 基准建议"
+      ],
+      "theses": [
+        {
+          "id": "thesis-d6b2c23ed6",
+          "title": "航运与物流成本是油价、关税和供应链再通胀的二阶传导器",
+          "href": "/investor/theses/thesis-d6b2c23ed6/",
+          "direction": "conflicting",
+          "directionLabel": "分歧",
+          "exposureBucket": "宏观利率与汇率",
+          "actionLabel": "观察等待",
+          "eventCount": 3,
+          "supports": 1,
+          "risks": 2,
+          "neutral": 0,
+          "score": 62,
+          "firstSeen": "2026-06-08",
+          "lastSeen": "2026-06-25",
+          "terms": {},
+          "topTerms": [
+            "航运",
+            "油价",
+            "油轮",
+            "物流"
+          ]
+        },
+        {
+          "id": "thesis-31f32af77b",
+          "title": "中国云与国产算力栈的关键不是模型热度，而是训练/推理订单、服务器交付和生态锁定",
+          "href": "/investor/theses/thesis-31f32af77b/",
+          "direction": "conflicting",
+          "directionLabel": "分歧",
+          "exposureBucket": "AI 基础设施",
+          "actionLabel": "分歧主线：配对验证",
+          "eventCount": 1,
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "score": 37,
+          "firstSeen": "2026-07-09",
+          "lastSeen": "2026-07-09",
+          "terms": {},
+          "topTerms": [
+            "服务器",
+            "算力",
+            "国产算力"
+          ]
+        },
+        {
+          "id": "thesis-3d421524cd",
+          "title": "油价地缘底线决定再通胀与降息交易的安全边际",
+          "href": "/investor/theses/thesis-3d421524cd/",
+          "direction": "conflicting",
+          "directionLabel": "分歧",
+          "exposureBucket": "宏观利率与汇率",
+          "actionLabel": "观察等待",
+          "eventCount": 1,
+          "supports": 1,
+          "risks": 0,
+          "neutral": 0,
+          "score": 48,
+          "firstSeen": "2026-06-25",
+          "lastSeen": "2026-06-25",
+          "terms": {},
+          "topTerms": [
+            "油价",
+            "Brent"
+          ]
+        },
+        {
+          "id": "thesis-ab1fb6a453",
+          "title": "DeepSeek 式低价模型正在重塑 AI 定价权与软件利润池",
+          "href": "/investor/theses/thesis-ab1fb6a453/",
+          "direction": "conflicting",
+          "directionLabel": "分歧",
+          "exposureBucket": "AI 基础设施",
+          "actionLabel": "分歧主线：配对验证",
+          "eventCount": 1,
+          "supports": 1,
+          "risks": 0,
+          "neutral": 0,
+          "score": 23,
+          "firstSeen": "2026-06-09",
+          "lastSeen": "2026-06-09",
+          "terms": {},
+          "topTerms": []
+        },
+        {
+          "id": "thesis-21dd72c1b1",
+          "title": "航空航天与国防供应链错配正在形成政策驱动的制造业弹性",
+          "href": "/investor/theses/thesis-21dd72c1b1/",
+          "direction": "conflicting",
+          "directionLabel": "分歧",
+          "exposureBucket": "航天国防与新场景",
+          "actionLabel": "观察等待",
+          "eventCount": 1,
+          "supports": 1,
+          "risks": 0,
+          "neutral": 0,
+          "score": 21,
+          "firstSeen": "2026-06-04",
+          "lastSeen": "2026-06-04",
+          "terms": {},
+          "topTerms": [
+            "HBM",
+            "GOES"
+          ]
+        },
+        {
+          "id": "thesis-075017003b",
+          "title": "AI 资本开支通过能源、设备和利率进入通胀定价",
+          "href": "/investor/theses/thesis-075017003b/",
+          "direction": "stable",
+          "directionLabel": "稳定",
+          "exposureBucket": "宏观利率与汇率",
+          "actionLabel": "观察等待",
+          "eventCount": 1,
+          "supports": 1,
+          "risks": 0,
+          "neutral": 0,
+          "score": 40,
+          "firstSeen": "2026-05-26",
+          "lastSeen": "2026-05-26",
+          "terms": {},
+          "topTerms": [
+            "AI 资本开支",
+            "AI CapEx",
+            "CPI",
+            "PCE",
+            "通胀",
+            "利率"
+          ]
+        },
+        {
+          "id": "thesis-6f42e0fe6e",
+          "title": "稀土、铜铝与关键材料正在成为 AI 与新能源共用的供给约束",
+          "href": "/investor/theses/thesis-6f42e0fe6e/",
+          "direction": "conflicting",
+          "directionLabel": "分歧",
+          "exposureBucket": "能源与关键材料",
+          "actionLabel": "观察等待",
+          "eventCount": 1,
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "score": 18,
+          "firstSeen": "2026-05-20",
+          "lastSeen": "2026-05-20",
+          "terms": {},
+          "topTerms": [
+            "关键材料"
+          ]
+        },
+        {
+          "id": "thesis-f5d7a79c82",
+          "title": "HBM4、CoWoS 与背面供电正在成为 AI 服务器需求曲线的串行闸门",
+          "href": "/investor/theses/thesis-f5d7a79c82/",
+          "direction": "conflicting",
+          "directionLabel": "分歧",
+          "exposureBucket": "AI 基础设施",
+          "actionLabel": "观察等待",
+          "eventCount": 1,
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "score": 57,
+          "firstSeen": "2026-05-19",
+          "lastSeen": "2026-05-19",
+          "terms": {},
+          "topTerms": [
+            "AI 基础设施",
+            "GPU",
+            "HBM",
+            "HBM4",
+            "CoWoS",
+            "先进封装"
+          ]
+        },
+        {
+          "id": "thesis-9e97140446",
+          "title": "中国电力设备出海进入订单质量与政策筛选期",
+          "href": "/investor/theses/thesis-9e97140446/",
+          "direction": "conflicting",
+          "directionLabel": "分歧",
+          "exposureBucket": "电力与公用事业",
+          "actionLabel": "观察等待",
+          "eventCount": 1,
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "score": 65,
+          "firstSeen": "2026-05-18",
+          "lastSeen": "2026-05-18",
+          "terms": {},
+          "topTerms": [
+            "电力",
+            "电网",
+            "变压器",
+            "利率",
+            "电力设备"
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-05-18",
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "eventCount": 1,
+          "value": 36,
+          "topTheses": [
+            "中国电力设备出海进入订单质量与政策筛选期"
+          ],
+          "events": [
+            {
+              "date": "2026-05-18",
+              "title": "电力设备价格联动机制与监管政策：铜铝冲击究竟有多少传导到利润？",
+              "summary": "分析师：政策分析师（ policy-analyst ） - 立场：压力测试（针对研究记录 05） - 工作日期：2026-05-18（亚洲/新加坡） - 研究记录 - 主题：电力设备价格联动机制与监管政策对利润传导的影响 -...",
+              "thesisId": "thesis-9e97140446",
+              "thesisTitle": "中国电力设备出海进入订单质量与政策筛选期",
+              "thesisHref": "/investor/theses/thesis-9e97140446/",
+              "sourceLabel": "深度研究",
+              "supportType": "risk",
+              "supportLabel": "风险",
+              "href": "/investor/reports/archive-d949639614ab/"
+            }
+          ]
+        },
+        {
+          "date": "2026-05-19",
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "eventCount": 1,
+          "value": 37.4,
+          "topTheses": [
+            "HBM4、CoWoS 与背面供电正在成为 AI 服务器需求曲线的串行闸门"
+          ],
+          "events": [
+            {
+              "date": "2026-05-19",
+              "title": "贸易管制对先进封装产能的冲击：存储成本通胀是否具有政策驱动的结构性特...",
+              "summary": "既有研究记录— 贸易管制对先进封装产能的冲击：存储成本通胀是否具有政策驱动的结构性特征？",
+              "thesisId": "thesis-f5d7a79c82",
+              "thesisTitle": "HBM4、CoWoS 与背面供电正在成为 AI 服务器需求曲线的串行闸门",
+              "thesisHref": "/investor/theses/thesis-f5d7a79c82/",
+              "sourceLabel": "深度研究",
+              "supportType": "risk",
+              "supportLabel": "风险",
+              "href": "/investor/reports/archive-44820f8fa2cc/"
+            }
+          ]
+        },
+        {
+          "date": "2026-05-20",
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "eventCount": 1,
+          "value": 38.8,
+          "topTheses": [
+            "稀土、铜铝与关键材料正在成为 AI 与新能源共用的供给约束"
+          ],
+          "events": [
+            {
+              "date": "2026-05-20",
+              "title": "研究记录｜高频PCB关键材料国产化进程中的贸易管制与政策扶持动态",
+              "summary": "工作日期：2026-05-20（亚洲/新加坡） - 分析师：政策分析师（policy-analyst） - 立场：stress-test（压力测试研究记录材料栈国产化判断） - 主题：在HVLP铜箔与特种树脂存在技术瓶颈的背景下...",
+              "thesisId": "thesis-6f42e0fe6e",
+              "thesisTitle": "稀土、铜铝与关键材料正在成为 AI 与新能源共用的供给约束",
+              "thesisHref": "/investor/theses/thesis-6f42e0fe6e/",
+              "sourceLabel": "深度研究",
+              "supportType": "risk",
+              "supportLabel": "风险",
+              "href": "/investor/reports/archive-cdf895c5ca4b/"
+            }
+          ]
+        },
+        {
+          "date": "2026-05-26",
+          "supports": 1,
+          "risks": 0,
+          "neutral": 0,
+          "eventCount": 1,
+          "value": 54.2,
+          "topTheses": [
+            "AI 资本开支通过能源、设备和利率进入通胀定价"
+          ],
+          "events": [
+            {
+              "date": "2026-05-26",
+              "title": "Active research-project theses",
+              "summary": "Scope : policy-analyst (slice: own + notes you contributed to) Active : 8 · Recently closed (last 14d) : 0",
+              "thesisId": "thesis-075017003b",
+              "thesisTitle": "AI 资本开支通过能源、设备和利率进入通胀定价",
+              "thesisHref": "/investor/theses/thesis-075017003b/",
+              "sourceLabel": "深度研究",
+              "supportType": "supports",
+              "supportLabel": "支持",
+              "href": "/investor/reports/archive-ab55460def01/"
+            }
+          ]
+        },
+        {
+          "date": "2026-06-04",
+          "supports": 1,
+          "risks": 0,
+          "neutral": 0,
+          "eventCount": 1,
+          "value": 55.6,
+          "topTheses": [
+            "航空航天与国防供应链错配正在形成政策驱动的制造业弹性"
+          ],
+          "events": [
+            {
+              "date": "2026-06-04",
+              "title": "政策分析师 · 午间团队 Check-in 简报（2026-06-04）",
+              "summary": "政策分析师 · 午间团队 Check-in 简报（2026-06-04）",
+              "thesisId": "thesis-21dd72c1b1",
+              "thesisTitle": "航空航天与国防供应链错配正在形成政策驱动的制造业弹性",
+              "thesisHref": "/investor/theses/thesis-21dd72c1b1/",
+              "sourceLabel": "深度研究",
+              "supportType": "supports",
+              "supportLabel": "支持",
+              "href": "/investor/reports/archive-f6a4f7d80b9d/"
+            }
+          ]
+        },
+        {
+          "date": "2026-06-08",
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "eventCount": 1,
+          "value": 43,
+          "topTheses": [
+            "航运与物流成本是油价、关税和供应链再通胀的二阶传导器"
+          ],
+          "events": [
+            {
+              "date": "2026-06-08",
+              "title": "美伊谈判与霍尔木兹海峡30天重开情景研判",
+              "summary": "锚定日期： 2026-06-08。本报告中的“上周五”指 2026-06-05；“未来30天”指 2026-06-08 至 2026-07-08。",
+              "thesisId": "thesis-d6b2c23ed6",
+              "thesisTitle": "航运与物流成本是油价、关税和供应链再通胀的二阶传导器",
+              "thesisHref": "/investor/theses/thesis-d6b2c23ed6/",
+              "sourceLabel": "深度研究",
+              "supportType": "risk",
+              "supportLabel": "风险",
+              "href": "/investor/reports/archive-2f2ce7a6af1e/"
+            }
+          ]
+        },
+        {
+          "date": "2026-06-09",
+          "supports": 1,
+          "risks": 1,
+          "neutral": 0,
+          "eventCount": 2,
+          "value": 52.4,
+          "topTheses": [
+            "DeepSeek 式低价模型正在重塑 AI 定价权与软件利润池",
+            "航运与物流成本是油价、关税和供应链再通胀的二阶传导器"
+          ],
+          "events": [
+            {
+              "date": "2026-06-09",
+              "title": "政策分析师 · 中午团队 Check-in 简报（2026-06-09）",
+              "summary": "政策分析师 · 中午团队 Check-in 简报（2026-06-09）",
+              "thesisId": "thesis-ab1fb6a453",
+              "thesisTitle": "DeepSeek 式低价模型正在重塑 AI 定价权与软件利润池",
+              "thesisHref": "/investor/theses/thesis-ab1fb6a453/",
+              "sourceLabel": "深度研究",
+              "supportType": "supports",
+              "supportLabel": "支持",
+              "href": "/investor/reports/archive-308e1f3ed026/"
+            },
+            {
+              "date": "2026-06-09",
+              "title": "投研分析报告：航运开放性拆解与 Brent 基准建议",
+              "summary": "报告日期： 2026-06-09 分析周期： 2026-06-09 至 2026-06-16 针对目标： Brent 94.25 USD/bbl 基线保留决策",
+              "thesisId": "thesis-d6b2c23ed6",
+              "thesisTitle": "航运与物流成本是油价、关税和供应链再通胀的二阶传导器",
+              "thesisHref": "/investor/theses/thesis-d6b2c23ed6/",
+              "sourceLabel": "深度研究",
+              "supportType": "risk",
+              "supportLabel": "风险",
+              "href": "/investor/reports/archive-20585afcc933/"
+            }
+          ]
+        },
+        {
+          "date": "2026-06-25",
+          "supports": 2,
+          "risks": 0,
+          "neutral": 0,
+          "eventCount": 2,
+          "value": 67.8,
+          "topTheses": [
+            "油价地缘底线决定再通胀与降息交易的安全边际",
+            "航运与物流成本是油价、关税和供应链再通胀的二阶传导器"
+          ],
+          "events": [
+            {
+              "date": "2026-06-25",
+              "title": "U.S.-Iran协议概率与伊朗原油制裁减免评估",
+              "summary": "日期锚点：2026-06-25。 本文所有“当前”“本周”“60天窗口”等时间表均以该日期为准。",
+              "thesisId": "thesis-3d421524cd",
+              "thesisTitle": "油价地缘底线决定再通胀与降息交易的安全边际",
+              "thesisHref": "/investor/theses/thesis-3d421524cd/",
+              "sourceLabel": "深度研究",
+              "supportType": "supports",
+              "supportLabel": "支持",
+              "href": "/investor/reports/archive-c527f681cedf/"
+            },
+            {
+              "date": "2026-06-25",
+              "title": "U.S.-Iran协议概率与伊朗原油制裁减免评估",
+              "summary": "日期锚点：2026-06-25。 本文所有“当前”“本周”“60天窗口”等时间表均以该日期为准。",
+              "thesisId": "thesis-d6b2c23ed6",
+              "thesisTitle": "航运与物流成本是油价、关税和供应链再通胀的二阶传导器",
+              "thesisHref": "/investor/theses/thesis-d6b2c23ed6/",
+              "sourceLabel": "深度研究",
+              "supportType": "supports",
+              "supportLabel": "支持",
+              "href": "/investor/reports/archive-c527f681cedf/"
+            }
+          ]
+        },
+        {
+          "date": "2026-07-09",
+          "supports": 0,
+          "risks": 1,
+          "neutral": 0,
+          "eventCount": 1,
+          "value": 47.2,
+          "topTheses": [
+            "中国云与国产算力栈的关键不是模型热度，而是训练/推理订单、服务器交付和生态锁定"
+          ],
+          "events": [
+            {
+              "date": "2026-07-09",
+              "title": "大模型备案与商业化准入中推理端国产算力占比的合规监管分析报告",
+              "summary": "报告基准日期： 2026-07-09 分析师： 政策分析师 (Policy Analyst) 对照英文版： handoff response.en.md",
+              "thesisId": "thesis-31f32af77b",
+              "thesisTitle": "中国云与国产算力栈的关键不是模型热度，而是训练/推理订单、服务器交付和生态锁定",
+              "thesisHref": "/investor/theses/thesis-31f32af77b/",
+              "sourceLabel": "深度研究",
+              "supportType": "risk",
+              "supportLabel": "风险",
+              "href": "/investor/reports/archive-fb29722d01e3/"
+            }
+          ]
+        }
+      ],
+      "latestEvents": [
+        {
+          "date": "2026-07-09",
+          "title": "大模型备案与商业化准入中推理端国产算力占比的合规监管分析报告",
+          "summary": "报告基准日期： 2026-07-09 分析师： 政策分析师 (Policy Analyst) 对照英文版： handoff response.en.md",
+          "thesisId": "thesis-31f32af77b",
+          "thesisTitle": "中国云与国产算力栈的关键不是模型热度，而是训练/推理订单、服务器交付和生态锁定",
+          "thesisHref": "/investor/theses/thesis-31f32af77b/",
+          "sourceLabel": "深度研究",
+          "supportType": "risk",
+          "supportLabel": "风险",
+          "href": "/investor/reports/archive-fb29722d01e3/"
+        },
+        {
+          "date": "2026-06-25",
+          "title": "U.S.-Iran协议概率与伊朗原油制裁减免评估",
+          "summary": "日期锚点：2026-06-25。 本文所有“当前”“本周”“60天窗口”等时间表均以该日期为准。",
+          "thesisId": "thesis-3d421524cd",
+          "thesisTitle": "油价地缘底线决定再通胀与降息交易的安全边际",
+          "thesisHref": "/investor/theses/thesis-3d421524cd/",
+          "sourceLabel": "深度研究",
+          "supportType": "supports",
+          "supportLabel": "支持",
+          "href": "/investor/reports/archive-c527f681cedf/"
+        },
+        {
+          "date": "2026-06-25",
+          "title": "U.S.-Iran协议概率与伊朗原油制裁减免评估",
+          "summary": "日期锚点：2026-06-25。 本文所有“当前”“本周”“60天窗口”等时间表均以该日期为准。",
+          "thesisId": "thesis-d6b2c23ed6",
+          "thesisTitle": "航运与物流成本是油价、关税和供应链再通胀的二阶传导器",
+          "thesisHref": "/investor/theses/thesis-d6b2c23ed6/",
+          "sourceLabel": "深度研究",
+          "supportType": "supports",
+          "supportLabel": "支持",
+          "href": "/investor/reports/archive-c527f681cedf/"
+        },
+        {
+          "date": "2026-06-09",
+          "title": "政策分析师 · 中午团队 Check-in 简报（2026-06-09）",
+          "summary": "政策分析师 · 中午团队 Check-in 简报（2026-06-09）",
+          "thesisId": "thesis-ab1fb6a453",
+          "thesisTitle": "DeepSeek 式低价模型正在重塑 AI 定价权与软件利润池",
+          "thesisHref": "/investor/theses/thesis-ab1fb6a453/",
+          "sourceLabel": "深度研究",
+          "supportType": "supports",
+          "supportLabel": "支持",
+          "href": "/investor/reports/archive-308e1f3ed026/"
+        },
+        {
+          "date": "2026-06-09",
+          "title": "投研分析报告：航运开放性拆解与 Brent 基准建议",
+          "summary": "报告日期： 2026-06-09 分析周期： 2026-06-09 至 2026-06-16 针对目标： Brent 94.25 USD/bbl 基线保留决策",
+          "thesisId": "thesis-d6b2c23ed6",
+          "thesisTitle": "航运与物流成本是油价、关税和供应链再通胀的二阶传导器",
+          "thesisHref": "/investor/theses/thesis-d6b2c23ed6/",
+          "sourceLabel": "深度研究",
+          "supportType": "risk",
+          "supportLabel": "风险",
+          "href": "/investor/reports/archive-20585afcc933/"
+        },
+        {
+          "date": "2026-06-08",
+          "title": "美伊谈判与霍尔木兹海峡30天重开情景研判",
+          "summary": "锚定日期： 2026-06-08。本报告中的“上周五”指 2026-06-05；“未来30天”指 2026-06-08 至 2026-07-08。",
+          "thesisId": "thesis-d6b2c23ed6",
+          "thesisTitle": "航运与物流成本是油价、关税和供应链再通胀的二阶传导器",
+          "thesisHref": "/investor/theses/thesis-d6b2c23ed6/",
+          "sourceLabel": "深度研究",
+          "supportType": "risk",
+          "supportLabel": "风险",
+          "href": "/investor/reports/archive-2f2ce7a6af1e/"
+        },
+        {
+          "date": "2026-06-04",
+          "title": "政策分析师 · 午间团队 Check-in 简报（2026-06-04）",
+          "summary": "政策分析师 · 午间团队 Check-in 简报（2026-06-04）",
+          "thesisId": "thesis-21dd72c1b1",
+          "thesisTitle": "航空航天与国防供应链错配正在形成政策驱动的制造业弹性",
+          "thesisHref": "/investor/theses/thesis-21dd72c1b1/",
+          "sourceLabel": "深度研究",
+          "supportType": "supports",
+          "supportLabel": "支持",
+          "href": "/investor/reports/archive-f6a4f7d80b9d/"
+        },
+        {
+          "date": "2026-05-26",
+          "title": "Active research-project theses",
+          "summary": "Scope : policy-analyst (slice: own + notes you contributed to) Active : 8 · Recently closed (last 14d) : 0",
+          "thesisId": "thesis-075017003b",
+          "thesisTitle": "AI 资本开支通过能源、设备和利率进入通胀定价",
+          "thesisHref": "/investor/theses/thesis-075017003b/",
+          "sourceLabel": "深度研究",
+          "supportType": "supports",
+          "supportLabel": "支持",
+          "href": "/investor/reports/archive-ab55460def01/"
+        },
+        {
+          "date": "2026-05-20",
+          "title": "研究记录｜高频PCB关键材料国产化进程中的贸易管制与政策扶持动态",
+          "summary": "工作日期：2026-05-20（亚洲/新加坡） - 分析师：政策分析师（policy-analyst） - 立场：stress-test（压力测试研究记录材料栈国产化判断） - 主题：在HVLP铜箔与特种树脂存在技术瓶颈的背景下...",
+          "thesisId": "thesis-6f42e0fe6e",
+          "thesisTitle": "稀土、铜铝与关键材料正在成为 AI 与新能源共用的供给约束",
+          "thesisHref": "/investor/theses/thesis-6f42e0fe6e/",
+          "sourceLabel": "深度研究",
+          "supportType": "risk",
+          "supportLabel": "风险",
+          "href": "/investor/reports/archive-cdf895c5ca4b/"
+        },
+        {
+          "date": "2026-05-19",
+          "title": "贸易管制对先进封装产能的冲击：存储成本通胀是否具有政策驱动的结构性特...",
+          "summary": "既有研究记录— 贸易管制对先进封装产能的冲击：存储成本通胀是否具有政策驱动的结构性特征？",
+          "thesisId": "thesis-f5d7a79c82",
+          "thesisTitle": "HBM4、CoWoS 与背面供电正在成为 AI 服务器需求曲线的串行闸门",
+          "thesisHref": "/investor/theses/thesis-f5d7a79c82/",
+          "sourceLabel": "深度研究",
+          "supportType": "risk",
+          "supportLabel": "风险",
+          "href": "/investor/reports/archive-44820f8fa2cc/"
+        },
+        {
+          "date": "2026-05-18",
+          "title": "电力设备价格联动机制与监管政策：铜铝冲击究竟有多少传导到利润？",
+          "summary": "分析师：政策分析师（ policy-analyst ） - 立场：压力测试（针对研究记录 05） - 工作日期：2026-05-18（亚洲/新加坡） - 研究记录 - 主题：电力设备价格联动机制与监管政策对利润传导的影响 -...",
+          "thesisId": "thesis-9e97140446",
+          "thesisTitle": "中国电力设备出海进入订单质量与政策筛选期",
+          "thesisHref": "/investor/theses/thesis-9e97140446/",
+          "sourceLabel": "深度研究",
+          "supportType": "risk",
+          "supportLabel": "风险",
+          "href": "/investor/reports/archive-d949639614ab/"
+        }
+      ],
+      "href": "/investor/personas/#persona-policy-analyst-7aaee2"
     },
     {
       "id": "persona-asset-allocator-28dfea",
@@ -22995,7 +22944,7 @@
           "href": "/investor/theses/thesis-d614778e40/",
           "direction": "conflicting",
           "directionLabel": "分歧",
-          "exposureBucket": "消费健康防御",
+          "exposureBucket": "中国权益与流动性",
           "actionLabel": "观察等待",
           "eventCount": 1,
           "supports": 1,
@@ -23013,7 +22962,7 @@
           "href": "/investor/theses/thesis-9d1baaec59/",
           "direction": "conflicting",
           "directionLabel": "分歧",
-          "exposureBucket": "消费健康防御",
+          "exposureBucket": "中国权益与流动性",
           "actionLabel": "观察等待",
           "eventCount": 1,
           "supports": 1,
@@ -23248,7 +23197,7 @@
           "href": "/investor/theses/thesis-d614778e40/",
           "direction": "conflicting",
           "directionLabel": "分歧",
-          "exposureBucket": "消费健康防御",
+          "exposureBucket": "中国权益与流动性",
           "actionLabel": "观察等待",
           "eventCount": 1,
           "supports": 0,
@@ -23266,7 +23215,7 @@
           "href": "/investor/theses/thesis-9d1baaec59/",
           "direction": "conflicting",
           "directionLabel": "分歧",
-          "exposureBucket": "消费健康防御",
+          "exposureBucket": "中国权益与流动性",
           "actionLabel": "观察等待",
           "eventCount": 1,
           "supports": 0,

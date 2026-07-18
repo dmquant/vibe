@@ -4,7 +4,7 @@
   "dayNumber": 13,
   "status": "recorded",
   "headline": "首席风控官压力测试",
-  "summary": "当日归档 66 份公开研究，23 条研究讨论和 48 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
+  "summary": "当日归档 66 份公开研究，23 条研究讨论和 47 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
   "dominantTopic": {
     "id": "macro-rates",
     "labelZh": "宏观、通胀与利率",
@@ -29,7 +29,7 @@
     "reports": 66,
     "researchThreads": 23,
     "researchNotes": 206,
-    "thesisEvents": 48,
+    "thesisEvents": 47,
     "personaEvents": 0,
     "readerMemos": 0,
     "recaps": 0,
@@ -1504,8 +1504,8 @@
       "stockTickers": [
         "BABA",
         "BIDU",
-        "CRM",
         "9988.HK",
+        "CRM",
         "MSFT",
         "NOW",
         "0700.HK",
@@ -1750,50 +1750,6 @@
         "GLD",
         "MSFT",
         "NVDA"
-      ]
-    },
-    {
-      "id": "thesis-ffa474a3f2",
-      "title": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
-      "titleEn": "Edge AI and agent desktops are extending compute competition from cloud to chips, OS, and consumer-electronics supply...",
-      "href": "/investor/theses/thesis-ffa474a3f2/",
-      "laneId": "lane_74d352e86208",
-      "lane": "端侧 AI/Agent 桌面",
-      "laneHref": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 59,
-      "supports": 0,
-      "risks": 2,
-      "neutral": 0,
-      "eventCount": 2,
-      "events": [
-        {
-          "title": "上市软件公司的AI monetization质量筛选",
-          "summary": "prior research notesTMT行业分析师 立场：synthesize 研究日期：2026年5月4日",
-          "href": "/investor/reports/archive-07d326466e88/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        },
-        {
-          "title": "AI集成 vs. 留存天花板：软件行业的订阅逻辑已经崩溃了吗？",
-          "summary": "研究记录 分析师： tmt-analyst 立场： 初始研判 日期： 2026-05-04",
-          "href": "/investor/reports/archive-6fb1c94e268b/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "MSFT",
-        "AAPL",
-        "NVDA",
-        "META",
-        "ARM",
-        "QCOM",
-        "AMZN",
-        "AMD",
-        "GOOGL",
-        "002475.SZ"
       ]
     },
     {
@@ -2190,6 +2146,43 @@
       ]
     },
     {
+      "id": "thesis-ffa474a3f2",
+      "title": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
+      "titleEn": "Edge AI and agent desktops are extending compute competition from cloud to chips, OS, and consumer-electronics supply...",
+      "href": "/investor/theses/thesis-ffa474a3f2/",
+      "laneId": "lane_74d352e86208",
+      "lane": "端侧 AI/Agent 桌面",
+      "laneHref": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 64,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "上市软件公司的AI monetization质量筛选",
+          "summary": "prior research notesTMT行业分析师 立场：synthesize 研究日期：2026年5月4日",
+          "href": "/investor/reports/archive-07d326466e88/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "MSFT",
+        "NVDA",
+        "AAPL",
+        "META",
+        "ARM",
+        "QCOM",
+        "AMD",
+        "AMZN",
+        "GOOGL",
+        "AVGO"
+      ]
+    },
+    {
       "id": "thesis-5505b40cdb",
       "title": "通用减速机修复先于机器人精密传动兑现",
       "titleEn": "General reducer recovery precedes realization of the robotics option",
@@ -2576,8 +2569,8 @@
       "stockTickers": [
         "BABA",
         "BIDU",
-        "CRM",
         "9988.HK",
+        "CRM",
         "MSFT",
         "NOW",
         "0700.HK",
@@ -2789,27 +2782,6 @@
       "avgConviction": 59
     },
     {
-      "id": "lane_74d352e86208",
-      "title": "端侧 AI/Agent 桌面",
-      "href": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
-      "thesisCount": 1,
-      "eventCount": 2,
-      "convictionTotal": 59,
-      "stockTickers": [
-        "MSFT",
-        "AAPL",
-        "NVDA",
-        "META",
-        "ARM",
-        "QCOM",
-        "AMZN",
-        "AMD",
-        "GOOGL",
-        "002475.SZ"
-      ],
-      "avgConviction": 59
-    },
-    {
       "id": "lane_22c1ed929e2e",
       "title": "公用事业/电网信用",
       "href": "/investor/lanes/utilities-grid-rate-base-and-credit/",
@@ -2850,6 +2822,27 @@
         "9988.HK"
       ],
       "avgConviction": 45
+    },
+    {
+      "id": "lane_74d352e86208",
+      "title": "端侧 AI/Agent 桌面",
+      "href": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "convictionTotal": 64,
+      "stockTickers": [
+        "MSFT",
+        "NVDA",
+        "AAPL",
+        "META",
+        "ARM",
+        "QCOM",
+        "AMD",
+        "AMZN",
+        "GOOGL",
+        "AVGO"
+      ],
+      "avgConviction": 64
     },
     {
       "id": "lane_4cc1e74d8e5f",
@@ -2994,7 +2987,7 @@
       "market": "US",
       "href": "/investor/stocks/NVDA/",
       "thesisCount": 15,
-      "eventCount": 33,
+      "eventCount": 32,
       "lanes": [
         "中国云/国产算力栈",
         "低价模型/AI 软件利润池",
@@ -3009,13 +3002,13 @@
       "market": "US",
       "href": "/investor/stocks/MSFT/",
       "thesisCount": 13,
-      "eventCount": 27,
+      "eventCount": 26,
       "lanes": [
         "低价模型/AI 软件利润池",
         "Mag7 AI 平台再分层",
         "AI 算力半导体",
         "AI 再通胀/利率敏感资产",
-        "美债利率/美元再定价"
+        "端侧 AI/Agent 桌面"
       ]
     },
     {
@@ -3024,13 +3017,13 @@
       "market": "US",
       "href": "/investor/stocks/META/",
       "thesisCount": 13,
-      "eventCount": 24,
+      "eventCount": 23,
       "lanes": [
         "Mag7 AI 平台再分层",
         "AI 算力半导体",
         "AI 再通胀/利率敏感资产",
-        "美债利率/美元再定价",
-        "端侧 AI/Agent 桌面"
+        "端侧 AI/Agent 桌面",
+        "美债利率/美元再定价"
       ]
     },
     {
@@ -3039,7 +3032,7 @@
       "market": "US",
       "href": "/investor/stocks/AMZN/",
       "thesisCount": 7,
-      "eventCount": 14,
+      "eventCount": 13,
       "lanes": [
         "Mag7 AI 平台再分层",
         "AI 算力半导体",
@@ -3054,7 +3047,7 @@
       "market": "US",
       "href": "/investor/stocks/GOOGL/",
       "thesisCount": 5,
-      "eventCount": 11,
+      "eventCount": 10,
       "lanes": [
         "Mag7 AI 平台再分层",
         "AI 算力半导体",
@@ -3158,19 +3151,6 @@
       ]
     },
     {
-      "ticker": "AMD",
-      "name": "AMD",
-      "market": "US",
-      "href": "/investor/stocks/AMD/",
-      "thesisCount": 4,
-      "eventCount": 7,
-      "lanes": [
-        "Mag7 AI 平台再分层",
-        "AI 算力半导体",
-        "端侧 AI/Agent 桌面"
-      ]
-    },
-    {
       "ticker": "CRM",
       "name": "Salesforce",
       "market": "US",
@@ -3192,6 +3172,32 @@
       "lanes": [
         "低价模型/AI 软件利润池",
         "AI 软件效率/生产率"
+      ]
+    },
+    {
+      "ticker": "AVGO",
+      "name": "Broadcom",
+      "market": "US",
+      "href": "/investor/stocks/AVGO/",
+      "thesisCount": 4,
+      "eventCount": 6,
+      "lanes": [
+        "Mag7 AI 平台再分层",
+        "AI 算力半导体",
+        "端侧 AI/Agent 桌面"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "name": "AMD",
+      "market": "US",
+      "href": "/investor/stocks/AMD/",
+      "thesisCount": 4,
+      "eventCount": 6,
+      "lanes": [
+        "Mag7 AI 平台再分层",
+        "AI 算力半导体",
+        "端侧 AI/Agent 桌面"
       ]
     },
     {
@@ -3237,18 +3243,6 @@
       "name": "TSMC",
       "market": "US ADR",
       "href": "/investor/stocks/TSM/",
-      "thesisCount": 3,
-      "eventCount": 5,
-      "lanes": [
-        "Mag7 AI 平台再分层",
-        "AI 算力半导体"
-      ]
-    },
-    {
-      "ticker": "AVGO",
-      "name": "Broadcom",
-      "market": "US",
-      "href": "/investor/stocks/AVGO/",
       "thesisCount": 3,
       "eventCount": 5,
       "lanes": [
@@ -3330,18 +3324,6 @@
       ]
     },
     {
-      "ticker": "AAPL",
-      "name": "Apple",
-      "market": "US",
-      "href": "/investor/stocks/AAPL/",
-      "thesisCount": 2,
-      "eventCount": 5,
-      "lanes": [
-        "Mag7 AI 平台再分层",
-        "端侧 AI/Agent 桌面"
-      ]
-    },
-    {
       "ticker": "TLT",
       "name": "iShares 20+ Year Treasury Bond ETF",
       "market": "US ETF",
@@ -3364,6 +3346,18 @@
       "lanes": [
         "具身智能/机器人零部件",
         "自动驾驶/Robotaxi 单位经济"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "market": "US",
+      "href": "/investor/stocks/AAPL/",
+      "thesisCount": 2,
+      "eventCount": 4,
+      "lanes": [
+        "Mag7 AI 平台再分层",
+        "端侧 AI/Agent 桌面"
       ]
     },
     {

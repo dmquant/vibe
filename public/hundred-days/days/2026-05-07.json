@@ -614,8 +614,8 @@
       "stockTickers": [
         "BABA",
         "BIDU",
-        "CRM",
         "9988.HK",
+        "CRM",
         "MSFT",
         "NOW",
         "0700.HK",
@@ -633,7 +633,7 @@
       "laneHref": "/investor/lanes/crypto-and-high-beta-risk-appetite/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 51,
+      "conviction": 50,
       "supports": 0,
       "risks": 2,
       "neutral": 0,
@@ -847,7 +847,7 @@
       "laneHref": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 59,
+      "conviction": 64,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -863,15 +863,15 @@
       ],
       "stockTickers": [
         "MSFT",
-        "AAPL",
         "NVDA",
+        "AAPL",
         "META",
         "ARM",
         "QCOM",
-        "AMZN",
         "AMD",
+        "AMZN",
         "GOOGL",
-        "002475.SZ"
+        "AVGO"
       ]
     },
     {
@@ -884,7 +884,7 @@
       "laneHref": "/investor/lanes/ai-infrastructure-tco-and-efficiency-reset/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 58,
+      "conviction": 59,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -905,10 +905,10 @@
         "META",
         "MSFT",
         "VRT",
-        "MU",
         "AVGO",
-        "000660.KS",
-        "AMZN"
+        "MU",
+        "DELL",
+        "HPE"
       ]
     },
     {
@@ -995,8 +995,8 @@
       "stockTickers": [
         "BABA",
         "BIDU",
-        "CRM",
         "9988.HK",
+        "CRM",
         "MSFT",
         "NOW",
         "0700.HK",
@@ -1046,7 +1046,7 @@
       "href": "/investor/lanes/crypto-and-high-beta-risk-appetite/",
       "thesisCount": 1,
       "eventCount": 2,
-      "convictionTotal": 51,
+      "convictionTotal": 50,
       "stockTickers": [
         "COIN",
         "HOOD",
@@ -1057,7 +1057,7 @@
         "NVDA",
         "ASTS"
       ],
-      "avgConviction": 51
+      "avgConviction": 50
     },
     {
       "id": "lane_79a55cd8530e",
@@ -1083,20 +1083,20 @@
       "href": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 59,
+      "convictionTotal": 64,
       "stockTickers": [
         "MSFT",
-        "AAPL",
         "NVDA",
+        "AAPL",
         "META",
         "ARM",
         "QCOM",
-        "AMZN",
         "AMD",
+        "AMZN",
         "GOOGL",
-        "002475.SZ"
+        "AVGO"
       ],
-      "avgConviction": 59
+      "avgConviction": 64
     },
     {
       "id": "lane_2d0dcf520f87",
@@ -1104,7 +1104,7 @@
       "href": "/investor/lanes/ai-infrastructure-tco-and-efficiency-reset/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 58,
+      "convictionTotal": 59,
       "stockTickers": [
         "NVDA",
         "TSM",
@@ -1112,12 +1112,12 @@
         "META",
         "MSFT",
         "VRT",
-        "MU",
         "AVGO",
-        "000660.KS",
-        "AMZN"
+        "MU",
+        "DELL",
+        "HPE"
       ],
-      "avgConviction": 58
+      "avgConviction": 59
     },
     {
       "id": "lane_0679894fe06b",
@@ -1219,22 +1219,23 @@
       ]
     },
     {
-      "ticker": "TSM",
-      "name": "TSMC",
-      "market": "US ADR",
-      "href": "/investor/stocks/TSM/",
-      "thesisCount": 3,
-      "eventCount": 3,
+      "ticker": "AVGO",
+      "name": "Broadcom",
+      "market": "US",
+      "href": "/investor/stocks/AVGO/",
+      "thesisCount": 4,
+      "eventCount": 4,
       "lanes": [
         "AI 算力半导体",
+        "端侧 AI/Agent 桌面",
         "AI 基建 TCO/能效筛选"
       ]
     },
     {
-      "ticker": "000660.KS",
-      "name": "SK hynix",
-      "market": "Korea",
-      "href": "/investor/stocks/000660.KS/",
+      "ticker": "TSM",
+      "name": "TSMC",
+      "market": "US ADR",
+      "href": "/investor/stocks/TSM/",
       "thesisCount": 3,
       "eventCount": 3,
       "lanes": [
@@ -1251,31 +1252,6 @@
       "eventCount": 3,
       "lanes": [
         "AI 算力半导体",
-        "AI 基建 TCO/能效筛选"
-      ]
-    },
-    {
-      "ticker": "AVGO",
-      "name": "Broadcom",
-      "market": "US",
-      "href": "/investor/stocks/AVGO/",
-      "thesisCount": 3,
-      "eventCount": 3,
-      "lanes": [
-        "AI 算力半导体",
-        "AI 基建 TCO/能效筛选"
-      ]
-    },
-    {
-      "ticker": "AMZN",
-      "name": "Amazon",
-      "market": "US",
-      "href": "/investor/stocks/AMZN/",
-      "thesisCount": 3,
-      "eventCount": 3,
-      "lanes": [
-        "AI 算力半导体",
-        "端侧 AI/Agent 桌面",
         "AI 基建 TCO/能效筛选"
       ]
     },
@@ -1325,6 +1301,29 @@
       ]
     },
     {
+      "ticker": "000660.KS",
+      "name": "SK hynix",
+      "market": "Korea",
+      "href": "/investor/stocks/000660.KS/",
+      "thesisCount": 2,
+      "eventCount": 2,
+      "lanes": [
+        "AI 算力半导体"
+      ]
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "market": "US",
+      "href": "/investor/stocks/AMZN/",
+      "thesisCount": 2,
+      "eventCount": 2,
+      "lanes": [
+        "AI 算力半导体",
+        "端侧 AI/Agent 桌面"
+      ]
+    },
+    {
       "ticker": "GOOGL",
       "name": "Alphabet",
       "market": "US",
@@ -1371,10 +1370,10 @@
       ]
     },
     {
-      "ticker": "CRM",
-      "name": "Salesforce",
-      "market": "US",
-      "href": "/investor/stocks/CRM/",
+      "ticker": "9988.HK",
+      "name": "阿里巴巴",
+      "market": "HK",
+      "href": "/investor/stocks/9988.HK/",
       "thesisCount": 1,
       "eventCount": 2,
       "lanes": [
@@ -1382,10 +1381,10 @@
       ]
     },
     {
-      "ticker": "9988.HK",
-      "name": "阿里巴巴",
-      "market": "HK",
-      "href": "/investor/stocks/9988.HK/",
+      "ticker": "CRM",
+      "name": "Salesforce",
+      "market": "US",
+      "href": "/investor/stocks/CRM/",
       "thesisCount": 1,
       "eventCount": 2,
       "lanes": [
@@ -1602,25 +1601,25 @@
       ]
     },
     {
-      "ticker": "002475.SZ",
-      "name": "立讯精密",
-      "market": "A-share",
-      "href": "/investor/stocks/002475.SZ/",
+      "ticker": "DELL",
+      "name": "Dell Technologies",
+      "market": "US",
+      "href": "/investor/stocks/DELL/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
-        "端侧 AI/Agent 桌面"
+        "AI 基建 TCO/能效筛选"
       ]
     },
     {
-      "ticker": "ETN",
-      "name": "Eaton",
+      "ticker": "HPE",
+      "name": "Hewlett Packard Enterprise",
       "market": "US",
-      "href": "/investor/stocks/ETN/",
+      "href": "/investor/stocks/HPE/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
-        "数据中心地产/液冷"
+        "AI 基建 TCO/能效筛选"
       ]
     }
   ],
