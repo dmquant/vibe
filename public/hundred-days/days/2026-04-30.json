@@ -4,7 +4,7 @@
   "dayNumber": 9,
   "status": "recorded",
   "headline": "财金协同背景下的A股杠铃策略落地",
-  "summary": "当日归档 14 份公开研究，22 条研究讨论和 0 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
+  "summary": "当日归档 14 份公开研究，22 条研究讨论和 1 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
   "dominantTopic": {
     "id": "macro-rates",
     "labelZh": "宏观、通胀与利率",
@@ -24,12 +24,12 @@
     ],
     "count": 13
   },
-  "activityScore": 72,
+  "activityScore": 73,
   "metrics": {
     "reports": 14,
     "researchThreads": 22,
     "researchNotes": 176,
-    "thesisEvents": 0,
+    "thesisEvents": 1,
     "personaEvents": 0,
     "readerMemos": 0,
     "recaps": 0,
@@ -463,9 +463,167 @@
       "href": "/investor/console/#operations"
     }
   ],
-  "thesisEvents": [],
-  "lanes": [],
-  "stocks": [],
+  "thesisEvents": [
+    {
+      "id": "thesis-bef6966fdd",
+      "title": "工业机械的出口订单质量和设备更新周期决定制造业 CapEx 弹性",
+      "titleEn": "Industrial machinery beta depends on export-order quality and equipment-upgrade capex",
+      "href": "/investor/theses/thesis-bef6966fdd/",
+      "laneId": "lane_6e2dcaab093e",
+      "lane": "工业机械/设备更新出海",
+      "laneHref": "/investor/lanes/industrial-machinery-equipment-upgrade-and-exports/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 58,
+      "supports": 1,
+      "risks": 0,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "A股风格切换：出海制造 vs 高股息红利的资金博弈",
+          "summary": "A股风格切换：出海制造 vs 高股息红利的资金博弈 - 篇 · 合成） - 分析师：首席策略师（chief-strategist） - 立场：support（确认风格正在切换，但是“分层共存”而非“你死我活”） - 工作日...",
+          "href": "/investor/reports/archive-215a394c2d6b/",
+          "stance": "supports",
+          "stanceLabel": "支持"
+        }
+      ],
+      "stockTickers": [
+        "002747.SZ",
+        "600031.SH",
+        "600761.SH",
+        "000425.SZ",
+        "603338.SH",
+        "603298.SH",
+        "601100.SH",
+        "300124.SZ",
+        "000157.SZ"
+      ]
+    }
+  ],
+  "lanes": [
+    {
+      "id": "lane_6e2dcaab093e",
+      "title": "工业机械/设备更新出海",
+      "href": "/investor/lanes/industrial-machinery-equipment-upgrade-and-exports/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "convictionTotal": 58,
+      "stockTickers": [
+        "002747.SZ",
+        "600031.SH",
+        "600761.SH",
+        "000425.SZ",
+        "603338.SH",
+        "603298.SH",
+        "601100.SH",
+        "300124.SZ",
+        "000157.SZ"
+      ],
+      "avgConviction": 58
+    }
+  ],
+  "stocks": [
+    {
+      "ticker": "002747.SZ",
+      "name": "埃斯顿",
+      "market": "A-share",
+      "href": "/investor/stocks/002747.SZ/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "工业机械/设备更新出海"
+      ]
+    },
+    {
+      "ticker": "600031.SH",
+      "name": "三一重工",
+      "market": "A-share",
+      "href": "/investor/stocks/600031.SH/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "工业机械/设备更新出海"
+      ]
+    },
+    {
+      "ticker": "600761.SH",
+      "name": "安徽合力",
+      "market": "A-share",
+      "href": "/investor/stocks/600761.SH/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "工业机械/设备更新出海"
+      ]
+    },
+    {
+      "ticker": "000425.SZ",
+      "name": "徐工机械",
+      "market": "A-share",
+      "href": "/investor/stocks/000425.SZ/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "工业机械/设备更新出海"
+      ]
+    },
+    {
+      "ticker": "603338.SH",
+      "name": "浙江鼎力",
+      "market": "A-share",
+      "href": "/investor/stocks/603338.SH/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "工业机械/设备更新出海"
+      ]
+    },
+    {
+      "ticker": "603298.SH",
+      "name": "603298.SH",
+      "market": "A-share",
+      "href": "/investor/stocks/603298.SH/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "工业机械/设备更新出海"
+      ]
+    },
+    {
+      "ticker": "601100.SH",
+      "name": "601100.SH",
+      "market": "A-share",
+      "href": "/investor/stocks/601100.SH/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "工业机械/设备更新出海"
+      ]
+    },
+    {
+      "ticker": "300124.SZ",
+      "name": "汇川技术",
+      "market": "A-share",
+      "href": "/investor/stocks/300124.SZ/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "工业机械/设备更新出海"
+      ]
+    },
+    {
+      "ticker": "000157.SZ",
+      "name": "中联重科",
+      "market": "A-share",
+      "href": "/investor/stocks/000157.SZ/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "工业机械/设备更新出海"
+      ]
+    }
+  ],
   "personas": [],
   "episodes": [],
   "milestones": [],
