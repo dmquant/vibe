@@ -4,7 +4,7 @@
   "dayNumber": 16,
   "status": "recorded",
   "headline": "隔夜市场情绪与资金流向扫描 (2026-05-07)",
-  "summary": "当日归档 28 份公开研究，6 条研究讨论和 13 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
+  "summary": "当日归档 28 份公开研究，6 条研究讨论和 12 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
   "dominantTopic": {
     "id": "macro-rates",
     "labelZh": "宏观、通胀与利率",
@@ -29,8 +29,8 @@
     "reports": 28,
     "researchThreads": 6,
     "researchNotes": 48,
-    "thesisEvents": 13,
-    "personaEvents": 12,
+    "thesisEvents": 12,
+    "personaEvents": 11,
     "readerMemos": 0,
     "recaps": 0,
     "deepResearch": 0
@@ -633,7 +633,7 @@
       "laneHref": "/investor/lanes/crypto-and-high-beta-risk-appetite/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 50,
+      "conviction": 51,
       "supports": 0,
       "risks": 2,
       "neutral": 0,
@@ -661,8 +661,8 @@
         "MSTR",
         "XLE",
         "XLU",
-        "NVDA",
-        "ASTS"
+        "ASTS",
+        "NVDA"
       ]
     },
     {
@@ -675,7 +675,7 @@
       "laneHref": "/investor/lanes/shipping-logistics-and-reflation-transmission/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 49,
+      "conviction": 46,
       "supports": 1,
       "risks": 1,
       "neutral": 0,
@@ -734,36 +734,6 @@
         "0883.HK",
         "SLB",
         "OXY"
-      ]
-    },
-    {
-      "id": "thesis-612f83a611",
-      "title": "地缘原油冲击导致的通胀传导（推升核心PCE至4.16%）将促使无前瞻指引的沃什美联储通过在9月和年底连续加息两次（至4.00%–4.25…",
-      "titleEn": "Practical research topic: 地缘原油冲击导致的通胀传导（推升核心PCE至4.16%）将促使无前瞻指引的沃什美联储通过在9月和年底连续加息两次（至4.00%–4.25…",
-      "href": "/investor/theses/thesis-612f83a611/",
-      "laneId": "lane_93300d58763e",
-      "lane": "油气/地缘通胀",
-      "laneHref": "/investor/lanes/oil-gas-and-geopolitical-inflation/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 69,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "布伦特原油持续 100美元/桶对欧元区制造业成本与通胀传导的边际影响评估",
-          "summary": "布伦特原油持续 100美元/桶对欧元区制造业成本与通胀传导的边际影响评估",
-          "href": "/investor/reports/archive-9e86f01ca794/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "SLB",
-        "OXY",
-        "0883.HK"
       ]
     },
     {
@@ -838,43 +808,6 @@
       ]
     },
     {
-      "id": "thesis-cb2ab35c55",
-      "title": "AI 基础设施扩张从规模驱动切换到 TCO、能效和利用率筛选",
-      "titleEn": "AI infrastructure expansion is shifting from scale to TCO, power efficiency, and utilization screening",
-      "href": "/investor/theses/thesis-cb2ab35c55/",
-      "laneId": "lane_2d0dcf520f87",
-      "lane": "AI 基建 TCO/能效筛选",
-      "laneHref": "/investor/lanes/ai-infrastructure-tco-and-efficiency-reset/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 58,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "AMD 与 NVIDIA 数据中心竞争及 SMCI 毛利率可持续性分析报告",
-          "summary": "AMD 与 NVIDIA 数据中心竞争及 SMCI 毛利率可持续性分析报告",
-          "href": "/investor/reports/archive-d8d666292491/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "NVDA",
-        "TSM",
-        "AMD",
-        "META",
-        "MSFT",
-        "VRT",
-        "MU",
-        "AVGO",
-        "DELL",
-        "HPE"
-      ]
-    },
-    {
       "id": "thesis-7f0a75c5f6",
       "title": "数据中心地产、液冷与水资源正在决定 AI 容量的区域迁移",
       "titleEn": "Data-center real estate, liquid cooling, and water resources are deciding regional migration of AI capacity",
@@ -900,14 +833,51 @@
       ],
       "stockTickers": [
         "VRT",
-        "NVDA",
         "ETN",
+        "NVDA",
         "META",
         "GEV",
         "MSFT",
         "DLR",
         "EQIX",
-        "SMR"
+        "AMZN"
+      ]
+    },
+    {
+      "id": "thesis-cb2ab35c55",
+      "title": "AI 基础设施扩张从规模驱动切换到 TCO、能效和利用率筛选",
+      "titleEn": "AI infrastructure expansion is shifting from scale to TCO, power efficiency, and utilization screening",
+      "href": "/investor/theses/thesis-cb2ab35c55/",
+      "laneId": "lane_2d0dcf520f87",
+      "lane": "AI 基建 TCO/能效筛选",
+      "laneHref": "/investor/lanes/ai-infrastructure-tco-and-efficiency-reset/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 56,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "AMD 与 NVIDIA 数据中心竞争及 SMCI 毛利率可持续性分析报告",
+          "summary": "AMD 与 NVIDIA 数据中心竞争及 SMCI 毛利率可持续性分析报告",
+          "href": "/investor/reports/archive-d8d666292491/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "NVDA",
+        "TSM",
+        "AMD",
+        "META",
+        "MSFT",
+        "VRT",
+        "MU",
+        "AVGO",
+        "DELL",
+        "HPE"
       ]
     },
     {
@@ -969,26 +939,12 @@
       "avgConviction": 72
     },
     {
-      "id": "lane_93300d58763e",
-      "title": "油气/地缘通胀",
-      "href": "/investor/lanes/oil-gas-and-geopolitical-inflation/",
-      "thesisCount": 2,
-      "eventCount": 2,
-      "convictionTotal": 138,
-      "stockTickers": [
-        "0883.HK",
-        "SLB",
-        "OXY"
-      ],
-      "avgConviction": 69
-    },
-    {
       "id": "lane_73a269a07a15",
       "title": "加密/高波动风险偏好",
       "href": "/investor/lanes/crypto-and-high-beta-risk-appetite/",
       "thesisCount": 1,
       "eventCount": 2,
-      "convictionTotal": 50,
+      "convictionTotal": 51,
       "stockTickers": [
         "COIN",
         "HOOD",
@@ -996,10 +952,10 @@
         "MSTR",
         "XLE",
         "XLU",
-        "NVDA",
-        "ASTS"
+        "ASTS",
+        "NVDA"
       ],
-      "avgConviction": 50
+      "avgConviction": 51
     },
     {
       "id": "lane_79a55cd8530e",
@@ -1007,7 +963,7 @@
       "href": "/investor/lanes/shipping-logistics-and-reflation-transmission/",
       "thesisCount": 1,
       "eventCount": 2,
-      "convictionTotal": 49,
+      "convictionTotal": 46,
       "stockTickers": [
         "601919.SH",
         "1919.HK",
@@ -1017,7 +973,21 @@
         "600018.SH",
         "BOAT"
       ],
-      "avgConviction": 49
+      "avgConviction": 46
+    },
+    {
+      "id": "lane_93300d58763e",
+      "title": "油气/地缘通胀",
+      "href": "/investor/lanes/oil-gas-and-geopolitical-inflation/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "convictionTotal": 69,
+      "stockTickers": [
+        "0883.HK",
+        "SLB",
+        "OXY"
+      ],
+      "avgConviction": 69
     },
     {
       "id": "lane_f44cf45c8649",
@@ -1059,12 +1029,32 @@
       "avgConviction": 59
     },
     {
+      "id": "lane_0679894fe06b",
+      "title": "数据中心地产/液冷",
+      "href": "/investor/lanes/data-center-real-estate-and-cooling/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "convictionTotal": 57,
+      "stockTickers": [
+        "VRT",
+        "ETN",
+        "NVDA",
+        "META",
+        "GEV",
+        "MSFT",
+        "DLR",
+        "EQIX",
+        "AMZN"
+      ],
+      "avgConviction": 57
+    },
+    {
       "id": "lane_2d0dcf520f87",
       "title": "AI 基建 TCO/能效筛选",
       "href": "/investor/lanes/ai-infrastructure-tco-and-efficiency-reset/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 58,
+      "convictionTotal": 56,
       "stockTickers": [
         "NVDA",
         "TSM",
@@ -1077,27 +1067,7 @@
         "DELL",
         "HPE"
       ],
-      "avgConviction": 58
-    },
-    {
-      "id": "lane_0679894fe06b",
-      "title": "数据中心地产/液冷",
-      "href": "/investor/lanes/data-center-real-estate-and-cooling/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 57,
-      "stockTickers": [
-        "VRT",
-        "NVDA",
-        "ETN",
-        "META",
-        "GEV",
-        "MSFT",
-        "DLR",
-        "EQIX",
-        "SMR"
-      ],
-      "avgConviction": 57
+      "avgConviction": 56
     },
     {
       "id": "lane_1514a60f727a",
@@ -1132,8 +1102,8 @@
         "低价模型/AI 软件利润池",
         "AI 算力半导体",
         "端侧 AI/Agent 桌面",
-        "AI 基建 TCO/能效筛选",
-        "数据中心地产/液冷"
+        "数据中心地产/液冷",
+        "AI 基建 TCO/能效筛选"
       ]
     },
     {
@@ -1146,8 +1116,8 @@
       "lanes": [
         "低价模型/AI 软件利润池",
         "端侧 AI/Agent 桌面",
-        "AI 基建 TCO/能效筛选",
-        "数据中心地产/液冷"
+        "数据中心地产/液冷",
+        "AI 基建 TCO/能效筛选"
       ]
     },
     {
@@ -1160,8 +1130,8 @@
       "lanes": [
         "AI 算力半导体",
         "端侧 AI/Agent 桌面",
-        "AI 基建 TCO/能效筛选",
-        "数据中心地产/液冷"
+        "数据中心地产/液冷",
+        "AI 基建 TCO/能效筛选"
       ]
     },
     {
@@ -1203,39 +1173,6 @@
       ]
     },
     {
-      "ticker": "0883.HK",
-      "name": "中国海洋石油",
-      "market": "HK",
-      "href": "/investor/stocks/0883.HK/",
-      "thesisCount": 2,
-      "eventCount": 2,
-      "lanes": [
-        "油气/地缘通胀"
-      ]
-    },
-    {
-      "ticker": "SLB",
-      "name": "SLB",
-      "market": "US",
-      "href": "/investor/stocks/SLB/",
-      "thesisCount": 2,
-      "eventCount": 2,
-      "lanes": [
-        "油气/地缘通胀"
-      ]
-    },
-    {
-      "ticker": "OXY",
-      "name": "Occidental Petroleum",
-      "market": "US",
-      "href": "/investor/stocks/OXY/",
-      "thesisCount": 2,
-      "eventCount": 2,
-      "lanes": [
-        "油气/地缘通胀"
-      ]
-    },
-    {
       "ticker": "TSM",
       "name": "TSMC",
       "market": "US ADR",
@@ -1260,6 +1197,18 @@
       ]
     },
     {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "market": "US",
+      "href": "/investor/stocks/AMZN/",
+      "thesisCount": 2,
+      "eventCount": 2,
+      "lanes": [
+        "端侧 AI/Agent 桌面",
+        "数据中心地产/液冷"
+      ]
+    },
+    {
       "ticker": "VRT",
       "name": "Vertiv",
       "market": "US",
@@ -1267,8 +1216,8 @@
       "thesisCount": 2,
       "eventCount": 2,
       "lanes": [
-        "AI 基建 TCO/能效筛选",
-        "数据中心地产/液冷"
+        "数据中心地产/液冷",
+        "AI 基建 TCO/能效筛选"
       ]
     },
     {
@@ -1492,6 +1441,39 @@
       ]
     },
     {
+      "ticker": "0883.HK",
+      "name": "中国海洋石油",
+      "market": "HK",
+      "href": "/investor/stocks/0883.HK/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "油气/地缘通胀"
+      ]
+    },
+    {
+      "ticker": "SLB",
+      "name": "SLB",
+      "market": "US",
+      "href": "/investor/stocks/SLB/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "油气/地缘通胀"
+      ]
+    },
+    {
+      "ticker": "OXY",
+      "name": "Occidental Petroleum",
+      "market": "US",
+      "href": "/investor/stocks/OXY/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "油气/地缘通胀"
+      ]
+    },
+    {
       "ticker": "000660.KS",
       "name": "SK hynix",
       "market": "Korea",
@@ -1536,17 +1518,6 @@
       ]
     },
     {
-      "ticker": "AMZN",
-      "name": "Amazon",
-      "market": "US",
-      "href": "/investor/stocks/AMZN/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "端侧 AI/Agent 桌面"
-      ]
-    },
-    {
       "ticker": "GOOGL",
       "name": "Alphabet",
       "market": "US",
@@ -1558,25 +1529,25 @@
       ]
     },
     {
-      "ticker": "DELL",
-      "name": "Dell Technologies",
+      "ticker": "ETN",
+      "name": "Eaton",
       "market": "US",
-      "href": "/investor/stocks/DELL/",
+      "href": "/investor/stocks/ETN/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
-        "AI 基建 TCO/能效筛选"
+        "数据中心地产/液冷"
       ]
     },
     {
-      "ticker": "HPE",
-      "name": "Hewlett Packard Enterprise",
+      "ticker": "GEV",
+      "name": "GE Vernova",
       "market": "US",
-      "href": "/investor/stocks/HPE/",
+      "href": "/investor/stocks/GEV/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
-        "AI 基建 TCO/能效筛选"
+        "数据中心地产/液冷"
       ]
     }
   ],
@@ -1595,31 +1566,11 @@
       "topTheses": [
         "2026年AI芯片竞争格局：NVIDIA Rubin对阵云巨头ASIC",
         "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
-        "AI 基础设施扩张从规模驱动切换到 TCO、能效和利用率筛选"
+        "数据中心地产、液冷与水资源正在决定 AI 容量的区域迁移"
       ],
       "latestEvent": {
         "title": "AMD 与 NVIDIA 数据中心竞争及 SMCI 毛利率可持续性分析报告",
         "href": "/investor/reports/archive-d8d666292491/"
-      }
-    },
-    {
-      "id": "persona-energy-analyst-ca430c",
-      "name": "能源行业分析师",
-      "nameEn": "Energy Analyst",
-      "href": "/investor/personas/#persona-energy-analyst-ca430c",
-      "specialty": "石油/天然气/煤炭/新能源/电力",
-      "currentView": "航运与物流成本是油价、关税和供应链再通胀的二阶传导器；PPI回升至4.1%而CPI仅1.0%，剪刀差压制中游制造利润，同时锂矿融资盘惨遭强平出清。在全球原油因地缘政治冲破$79的背景下，资源…；油价地缘底线决定再通胀与降息交易的安全边际 是当前该 persona 参与最多的研究主线。",
-      "supports": 0,
-      "risks": 2,
-      "neutral": 0,
-      "eventCount": 2,
-      "topTheses": [
-        "美伊直接交火导致原油暴涨5-6%，布伦特突破79美元逼近80。这是否会引燃二次通胀，推翻债市对美联储‘因分裂而暂停加息’的假设，并在9月…",
-        "地缘原油冲击导致的通胀传导（推升核心PCE至4.16%）将促使无前瞻指引的沃什美联储通过在9月和年底连续加息两次（至4.00%–4.25…"
-      ],
-      "latestEvent": {
-        "title": "布伦特原油持续 100美元/桶对欧元区制造业成本与通胀传导的边际影响评估",
-        "href": "/investor/reports/archive-9e86f01ca794/"
       }
     },
     {
@@ -1628,7 +1579,7 @@
       "nameEn": "A-Share Strategist",
       "href": "/investor/personas/#persona-a-share-strategist-e0ee8e",
       "specialty": "沪深市场结构、两融数据、限售股解禁",
-      "currentView": "A 股硬科技与科创50的复苏需要订单、融资盘和指数结构共振；A 股半导体的核心风险从订单验证转向 A/H 溢价、两融与负 Gamma；科创50指数存在2207.86点与1596.57点两个报价口径（相差611点），直接导致对雪球敲入（1516-1550点）和两融强平压力… 是当前该 persona 参与最多的研究主线。",
+      "currentView": "A 股硬科技与科创50的复苏需要订单、融资盘和指数结构共振；A 股半导体的核心风险从订单验证转向 A/H 溢价、两融与负 Gamma；Sivers (SIVE:STO) 概念被供应链证伪，而国内电子板块融资余额高达5608亿元，四大半导体龙头两融保证金缺口达93.81亿… 是当前该 persona 参与最多的研究主线。",
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -1666,7 +1617,7 @@
       "nameEn": "Alt Data Analyst",
       "href": "/investor/personas/#persona-alt-data-analyst-a743be",
       "specialty": "卫星数据/信用卡消费/App使用/供应链",
-      "currentView": "航运与物流成本是油价、关税和供应链再通胀的二阶传导器；酒店餐饮休闲复苏正在从客流修复转向 RevPAR、翻台率与小盘 Alpha；智能驾驶供应商拐点取决于定点转量产和毛利率修复 是当前该 persona 参与最多的研究主线。",
+      "currentView": "航运与物流成本是油价、关税和供应链再通胀的二阶传导器；酒店餐饮休闲复苏正在从客流修复转向 RevPAR、翻台率与小盘 Alpha；AI 资本开支通过能源、设备和利率进入通胀定价 是当前该 persona 参与最多的研究主线。",
       "supports": 1,
       "risks": 0,
       "neutral": 0,
@@ -1685,7 +1636,7 @@
       "nameEn": "Sentiment Analyst",
       "href": "/investor/personas/#persona-sentiment-analyst-ea0e85",
       "specialty": "恐贪指数/资金流向/投资者行为 【合并扩展 2026-06-11】纳入另类数据：卫星影像、信用卡消费、App 使用、供应链中断。原 altdata-analyst 职能并入。",
-      "currentView": "加密资产仍是全球流动性和散户风险偏好的高频回声；散户情绪与北向资金背离是 A 股风险偏好的关键温度计；期权伽马、ETF 与尾盘流动性正在放大主题交易的微观结构风险 是当前该 persona 参与最多的研究主线。",
+      "currentView": "加密资产仍是全球流动性和散户风险偏好的高频回声；风险核查与证据质量是主题交易的必要过滤器；散户情绪与北向资金背离是 A 股风险偏好的关键温度计 是当前该 persona 参与最多的研究主线。",
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -1718,12 +1669,31 @@
       }
     },
     {
+      "id": "persona-energy-analyst-ca430c",
+      "name": "能源行业分析师",
+      "nameEn": "Energy Analyst",
+      "href": "/investor/personas/#persona-energy-analyst-ca430c",
+      "specialty": "石油/天然气/煤炭/新能源/电力",
+      "currentView": "航运与物流成本是油价、关税和供应链再通胀的二阶传导器；PPI回升至4.1%而CPI仅1.0%，剪刀差压制中游制造利润，同时锂矿融资盘惨遭强平出清。在全球原油因地缘政治冲破$79的背景下，资源…；油价地缘底线决定再通胀与降息交易的安全边际 是当前该 persona 参与最多的研究主线。",
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "topTheses": [
+        "美伊直接交火导致原油暴涨5-6%，布伦特突破79美元逼近80。这是否会引燃二次通胀，推翻债市对美联储‘因分裂而暂停加息’的假设，并在9月…"
+      ],
+      "latestEvent": {
+        "title": "布伦特原油持续 100美元/桶对欧元区制造业成本与通胀传导的边际影响评估",
+        "href": "/investor/reports/archive-9e86f01ca794/"
+      }
+    },
+    {
       "id": "persona-chief-economist-328251",
       "name": "首席经济学家",
       "nameEn": "Chief Economist",
       "href": "/investor/personas/#persona-chief-economist-328251",
       "specialty": "全球宏观经济周期、GDP/CPI/PMI预测、央行政策研判",
-      "currentView": "地缘原油冲击导致的通胀传导（推升核心PCE至4.16%）将促使无前瞻指引的沃什美联储通过在9月和年底连续加息两次（至4.00%–4.25…；猪周期、粮食与农产品价格决定中国低通胀修复的弹性；近海资本开支与设备利用率驱动油服盈利弹性 是当前该 persona 参与最多的研究主线。",
+      "currentView": "猪周期、粮食与农产品价格决定中国低通胀修复的弹性；日元兑美元突破162.052，若日本官方实施抛售美债进行实际干预，是否会推动10Y美债收益率（当前4.49%）飙升？如何传导并冲击全球高…；近海资本开支与设备利用率驱动油服盈利弹性 是当前该 persona 参与最多的研究主线。",
       "supports": 1,
       "risks": 0,
       "neutral": 0,

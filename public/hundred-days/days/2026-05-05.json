@@ -4,7 +4,7 @@
   "dayNumber": 14,
   "status": "recorded",
   "headline": "首席经济学家对反内卷2.0杠铃配置的宏观压力测试",
-  "summary": "当日归档 33 份公开研究，33 条研究讨论和 18 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
+  "summary": "当日归档 34 份公开研究，33 条研究讨论和 15 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
   "dominantTopic": {
     "id": "macro-rates",
     "labelZh": "宏观、通胀与利率",
@@ -22,14 +22,14 @@
       "pce",
       "美元"
     ],
-    "count": 24
+    "count": 25
   },
   "activityScore": 81,
   "metrics": {
-    "reports": 33,
+    "reports": 34,
     "researchThreads": 33,
     "researchNotes": 279,
-    "thesisEvents": 18,
+    "thesisEvents": 15,
     "personaEvents": 0,
     "readerMemos": 0,
     "recaps": 0,
@@ -53,6 +53,24 @@
         "风险"
       ],
       "sourceKind": "research_thread"
+    },
+    {
+      "id": "archive-cac72484a7a2",
+      "title": "TLN 盈利预测",
+      "date": "2026-05-05",
+      "href": "/investor/reports/archive-cac72484a7a2/",
+      "analyst": "未识别",
+      "analystId": "",
+      "category": "其他",
+      "excerpt": "本报告仅分析 Talen Energy Corporation，股票代码 TLN。[S6] 预测期为 2026E-2028E，单位为 $ million，每股项目除外。[自测算] 基准模型沿用 05 三表模型.md 的三表联动结果： 2026E 、 2027E...",
+      "tags": [
+        "AI",
+        "通胀",
+        "宏观",
+        "A股",
+        "能源"
+      ],
+      "sourceKind": "archive"
     },
     {
       "id": "archive-0e54c2a898b3",
@@ -898,19 +916,12 @@
       "laneHref": "/investor/lanes/credit-refinancing-and-private-debt/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 55,
+      "conviction": 53,
       "supports": 2,
-      "risks": 1,
+      "risks": 2,
       "neutral": 0,
-      "eventCount": 3,
+      "eventCount": 4,
       "events": [
-        {
-          "title": "前序研究片 — 消费行业分析师：汽油通胀与区域行信贷收紧对消费者支出的传导压力测试",
-          "summary": "前序研究片 — 消费行业分析师：汽油通胀与区域行信贷收紧对消费者支出的传导压力测试",
-          "href": "/investor/reports/archive-608717370b27/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        },
         {
           "title": "前序研究片研究报告：higher-for-longer与stagflation-lite下的多资产配置",
           "summary": "前序研究片研究报告：higher-for-longer与stagflation-lite下的多资产配置",
@@ -924,16 +935,29 @@
           "href": "/investor/reports/archive-cf9ab9aa6d86/",
           "stance": "supports",
           "stanceLabel": "支持"
+        },
+        {
+          "title": "前序研究片 — 消费行业分析师：汽油通胀与区域行信贷收紧对消费者支出的传导压力测试",
+          "summary": "前序研究片 — 消费行业分析师：汽油通胀与区域行信贷收紧对消费者支出的传导压力测试",
+          "href": "/investor/reports/archive-608717370b27/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        },
+        {
+          "title": "执行方案：2026年行业配置与因子风险管理",
+          "summary": "分析师： chief-strategist 首席策略师 日期： 2026-05-05 任务： 每周宏观报告 立场： 综合研判 研究记录",
+          "href": "/investor/reports/archive-1b2dc8b8c713/",
+          "stance": "risk",
+          "stanceLabel": "风险"
         }
       ],
       "stockTickers": [
         "KRE",
         "JPM",
         "META",
-        "NVDA",
         "BX",
-        "ARES",
         "KKR",
+        "ARES",
         "APO"
       ]
     },
@@ -1065,92 +1089,6 @@
       ]
     },
     {
-      "id": "thesis-66eb42380e",
-      "title": "海洋经济的政策催化需要落到船舶订单、海工装备与海上资源现金流",
-      "titleEn": "Marine-economy policy support must convert into ship orders, offshore equipment, and offshore-resource cash flow",
-      "href": "/investor/theses/thesis-66eb42380e/",
-      "laneId": "lane_f8b4918fe5b3",
-      "lane": "海洋经济/船舶海工",
-      "laneHref": "/investor/lanes/marine-economy-shipbuilding-and-offshore-equipment/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 53,
-      "supports": 0,
-      "risks": 2,
-      "neutral": 0,
-      "eventCount": 2,
-      "events": [
-        {
-          "title": "电网侧储能（ESS）作为LFP电池供应链的需求锚点——对120–155 GWh缓冲垫论点的压力测试",
-          "summary": "电网侧储能（ESS）作为LFP电池供应链的需求锚点——对120–155 GWh缓冲垫论点的压力测试",
-          "href": "/investor/reports/archive-8070a9e16dbe/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        },
-        {
-          "title": "材料行业分析师：GOES供给压力测试",
-          "summary": "材料行业分析师：GOES供给压力测试 全球取向硅钢、关税风险与美国变压器OEM爬坡的沉默约束",
-          "href": "/investor/reports/archive-ad4aff798e83/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "601890.SH",
-        "600938.SH",
-        "600150.SH",
-        "600583.SH",
-        "0883.HK",
-        "601919.SH",
-        "300589.SZ",
-        "300065.SZ",
-        "600522.SH"
-      ]
-    },
-    {
-      "id": "thesis-c6c6be4745",
-      "title": "中国出口制造的胜负手从低价扩张转向利润率、合规和本地化",
-      "titleEn": "Chinese export manufacturing is shifting from low-price expansion to margin, compliance, and localization",
-      "href": "/investor/theses/thesis-c6c6be4745/",
-      "laneId": "lane_7e439482cbef",
-      "lane": "中国出口制造/利润率",
-      "laneHref": "/investor/lanes/china-export-manufacturing-and-margins/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 50,
-      "supports": 0,
-      "risks": 2,
-      "neutral": 0,
-      "eventCount": 2,
-      "events": [
-        {
-          "title": "电网侧储能（ESS）作为LFP电池供应链的需求锚点——对120–155 GWh缓冲垫论点的压力测试",
-          "summary": "电网侧储能（ESS）作为LFP电池供应链的需求锚点——对120–155 GWh缓冲垫论点的压力测试",
-          "href": "/investor/reports/archive-8070a9e16dbe/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        },
-        {
-          "title": "中国自动化密集型制造周期与偏弱内需的分化：背离检验",
-          "summary": "研究记录 ｜ 分析师： china-macro（中国宏观分析师）｜ 立场： deny ｜ 日期： 2026-05-05",
-          "href": "/investor/reports/archive-b1a81504ba9d/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "000333.SZ",
-        "600690.SH",
-        "002594.SZ",
-        "300750.SZ",
-        "600031.SH",
-        "000157.SZ",
-        "000651.SZ",
-        "002747.SZ",
-        "2313.HK"
-      ]
-    },
-    {
       "id": "thesis-8c5a9690a0",
       "title": "Mag7 在 AI 时代从平台垄断转向基础设施再分层",
       "titleEn": "Mag7 shifts from platform monopoly to AI infrastructure re-layering",
@@ -1196,7 +1134,7 @@
       "laneHref": "/investor/lanes/us-rates-and-dollar-repricing/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 61,
+      "conviction": 64,
       "supports": 1,
       "risks": 0,
       "neutral": 0,
@@ -1211,13 +1149,13 @@
         }
       ],
       "stockTickers": [
-        "TLT",
         "CME",
-        "IEF",
+        "TLT",
         "GLD",
-        "JPM",
-        "KRE",
+        "IEF",
+        "MSFT",
         "META",
+        "JPM",
         "NVDA"
       ]
     },
@@ -1259,40 +1197,39 @@
       ]
     },
     {
-      "id": "thesis-08dd090dc9",
-      "title": "公用事业从防御红利切换到电网扩容、容量费与信用再定价",
-      "titleEn": "Utilities are shifting from defensive dividends to grid expansion, capacity fees, and credit repricing",
-      "href": "/investor/theses/thesis-08dd090dc9/",
-      "laneId": "lane_22c1ed929e2e",
-      "lane": "公用事业/电网信用",
-      "laneHref": "/investor/lanes/utilities-grid-rate-base-and-credit/",
+      "id": "thesis-c6c6be4745",
+      "title": "中国出口制造的胜负手从低价扩张转向利润率、合规和本地化",
+      "titleEn": "Chinese export manufacturing is shifting from low-price expansion to margin, compliance, and localization",
+      "href": "/investor/theses/thesis-c6c6be4745/",
+      "laneId": "lane_7e439482cbef",
+      "lane": "中国出口制造/利润率",
+      "laneHref": "/investor/lanes/china-export-manufacturing-and-margins/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 52,
+      "conviction": 47,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
       "eventCount": 1,
       "events": [
         {
-          "title": "公用事业分析师",
-          "summary": "公用事业分析师 GOES约束下，美国AI数据中心带电时间表的公用事业暴露度",
-          "href": "/investor/reports/archive-0feefa76e91d/",
+          "title": "中国自动化密集型制造周期与偏弱内需的分化：背离检验",
+          "summary": "研究记录 ｜ 分析师： china-macro（中国宏观分析师）｜ 立场： deny ｜ 日期： 2026-05-05",
+          "href": "/investor/reports/archive-b1a81504ba9d/",
           "stance": "risk",
           "stanceLabel": "风险"
         }
       ],
       "stockTickers": [
-        "AEP",
-        "600900.SH",
-        "DUK",
-        "CEG",
-        "VST",
-        "NEE",
-        "META",
-        "XLU",
-        "SMR",
-        "MSFT"
+        "000333.SZ",
+        "600690.SH",
+        "002594.SZ",
+        "000651.SZ",
+        "600031.SH",
+        "2313.HK",
+        "300750.SZ",
+        "002475.SZ",
+        "2020.HK"
       ]
     },
     {
@@ -1305,7 +1242,7 @@
       "laneHref": "/investor/lanes/energy-transition-storage-and-solar-capex/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 46,
+      "conviction": 43,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -1323,13 +1260,13 @@
         "SMR",
         "300750.SZ",
         "300274.SZ",
-        "002028.SZ",
         "GEV",
+        "002028.SZ",
         "600900.SH",
-        "CEG",
         "MSFT",
-        "600089.SH",
-        "002594.SZ"
+        "CEG",
+        "META",
+        "VST"
       ]
     }
   ],
@@ -1339,19 +1276,18 @@
       "title": "信用再融资/私募信贷",
       "href": "/investor/lanes/credit-refinancing-and-private-debt/",
       "thesisCount": 1,
-      "eventCount": 3,
-      "convictionTotal": 55,
+      "eventCount": 4,
+      "convictionTotal": 53,
       "stockTickers": [
         "KRE",
         "JPM",
         "META",
-        "NVDA",
         "BX",
-        "ARES",
         "KKR",
+        "ARES",
         "APO"
       ],
-      "avgConviction": 55
+      "avgConviction": 53
     },
     {
       "id": "lane_13710af7e06d",
@@ -1412,46 +1348,6 @@
       "avgConviction": 63
     },
     {
-      "id": "lane_f8b4918fe5b3",
-      "title": "海洋经济/船舶海工",
-      "href": "/investor/lanes/marine-economy-shipbuilding-and-offshore-equipment/",
-      "thesisCount": 1,
-      "eventCount": 2,
-      "convictionTotal": 53,
-      "stockTickers": [
-        "601890.SH",
-        "600938.SH",
-        "600150.SH",
-        "600583.SH",
-        "0883.HK",
-        "601919.SH",
-        "300589.SZ",
-        "300065.SZ",
-        "600522.SH"
-      ],
-      "avgConviction": 53
-    },
-    {
-      "id": "lane_7e439482cbef",
-      "title": "中国出口制造/利润率",
-      "href": "/investor/lanes/china-export-manufacturing-and-margins/",
-      "thesisCount": 1,
-      "eventCount": 2,
-      "convictionTotal": 50,
-      "stockTickers": [
-        "000333.SZ",
-        "600690.SH",
-        "002594.SZ",
-        "300750.SZ",
-        "600031.SH",
-        "000157.SZ",
-        "000651.SZ",
-        "002747.SZ",
-        "2313.HK"
-      ],
-      "avgConviction": 50
-    },
-    {
       "id": "lane_f21fc181388a",
       "title": "Mag7 AI 平台再分层",
       "href": "/investor/lanes/mag7-ai-platform-re-layering/",
@@ -1477,18 +1373,18 @@
       "href": "/investor/lanes/us-rates-and-dollar-repricing/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 61,
+      "convictionTotal": 64,
       "stockTickers": [
-        "TLT",
         "CME",
-        "IEF",
+        "TLT",
         "GLD",
-        "JPM",
-        "KRE",
+        "IEF",
+        "MSFT",
         "META",
+        "JPM",
         "NVDA"
       ],
-      "avgConviction": 61
+      "avgConviction": 64
     },
     {
       "id": "lane_74d352e86208",
@@ -1512,25 +1408,24 @@
       "avgConviction": 59
     },
     {
-      "id": "lane_22c1ed929e2e",
-      "title": "公用事业/电网信用",
-      "href": "/investor/lanes/utilities-grid-rate-base-and-credit/",
+      "id": "lane_7e439482cbef",
+      "title": "中国出口制造/利润率",
+      "href": "/investor/lanes/china-export-manufacturing-and-margins/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 52,
+      "convictionTotal": 47,
       "stockTickers": [
-        "AEP",
-        "600900.SH",
-        "DUK",
-        "CEG",
-        "VST",
-        "NEE",
-        "META",
-        "XLU",
-        "SMR",
-        "MSFT"
+        "000333.SZ",
+        "600690.SH",
+        "002594.SZ",
+        "000651.SZ",
+        "600031.SH",
+        "2313.HK",
+        "300750.SZ",
+        "002475.SZ",
+        "2020.HK"
       ],
-      "avgConviction": 52
+      "avgConviction": 47
     },
     {
       "id": "lane_e69b58816f80",
@@ -1538,51 +1433,51 @@
       "href": "/investor/lanes/energy-transition-storage-and-solar-capex/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 46,
+      "convictionTotal": 43,
       "stockTickers": [
         "SMR",
         "300750.SZ",
         "300274.SZ",
-        "002028.SZ",
         "GEV",
+        "002028.SZ",
         "600900.SH",
-        "CEG",
         "MSFT",
-        "600089.SH",
-        "002594.SZ"
+        "CEG",
+        "META",
+        "VST"
       ],
-      "avgConviction": 46
+      "avgConviction": 43
     }
   ],
   "stocks": [
-    {
-      "ticker": "NVDA",
-      "name": "NVIDIA",
-      "market": "US",
-      "href": "/investor/stocks/NVDA/",
-      "thesisCount": 7,
-      "eventCount": 12,
-      "lanes": [
-        "低价模型/AI 软件利润池",
-        "Mag7 AI 平台再分层",
-        "AI 算力半导体",
-        "中国云/国产算力栈",
-        "美债利率/美元再定价"
-      ]
-    },
     {
       "ticker": "META",
       "name": "Meta Platforms",
       "market": "US",
       "href": "/investor/stocks/META/",
       "thesisCount": 6,
-      "eventCount": 9,
+      "eventCount": 10,
       "lanes": [
         "Mag7 AI 平台再分层",
         "AI 算力半导体",
         "美债利率/美元再定价",
         "端侧 AI/Agent 桌面",
         "信用再融资/私募信贷"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "market": "US",
+      "href": "/investor/stocks/NVDA/",
+      "thesisCount": 6,
+      "eventCount": 9,
+      "lanes": [
+        "低价模型/AI 软件利润池",
+        "Mag7 AI 平台再分层",
+        "AI 算力半导体",
+        "美债利率/美元再定价",
+        "中国云/国产算力栈"
       ]
     },
     {
@@ -1595,9 +1490,21 @@
       "lanes": [
         "低价模型/AI 软件利润池",
         "Mag7 AI 平台再分层",
+        "美债利率/美元再定价",
         "端侧 AI/Agent 桌面",
-        "公用事业/电网信用",
         "能源转型/储能光伏"
+      ]
+    },
+    {
+      "ticker": "JPM",
+      "name": "JPMorgan Chase",
+      "market": "US",
+      "href": "/investor/stocks/JPM/",
+      "thesisCount": 2,
+      "eventCount": 5,
+      "lanes": [
+        "美债利率/美元再定价",
+        "信用再融资/私募信贷"
       ]
     },
     {
@@ -1651,26 +1558,57 @@
       ]
     },
     {
-      "ticker": "JPM",
-      "name": "JPMorgan Chase",
-      "market": "US",
-      "href": "/investor/stocks/JPM/",
-      "thesisCount": 2,
-      "eventCount": 4,
-      "lanes": [
-        "美债利率/美元再定价",
-        "信用再融资/私募信贷"
-      ]
-    },
-    {
       "ticker": "KRE",
       "name": "SPDR S&P Regional Banking ETF",
       "market": "US ETF",
       "href": "/investor/stocks/KRE/",
-      "thesisCount": 2,
+      "thesisCount": 1,
       "eventCount": 4,
       "lanes": [
-        "美债利率/美元再定价",
+        "信用再融资/私募信贷"
+      ]
+    },
+    {
+      "ticker": "BX",
+      "name": "Blackstone",
+      "market": "US",
+      "href": "/investor/stocks/BX/",
+      "thesisCount": 1,
+      "eventCount": 4,
+      "lanes": [
+        "信用再融资/私募信贷"
+      ]
+    },
+    {
+      "ticker": "KKR",
+      "name": "KKR",
+      "market": "US",
+      "href": "/investor/stocks/KKR/",
+      "thesisCount": 1,
+      "eventCount": 4,
+      "lanes": [
+        "信用再融资/私募信贷"
+      ]
+    },
+    {
+      "ticker": "ARES",
+      "name": "Ares Management",
+      "market": "US",
+      "href": "/investor/stocks/ARES/",
+      "thesisCount": 1,
+      "eventCount": 4,
+      "lanes": [
+        "信用再融资/私募信贷"
+      ]
+    },
+    {
+      "ticker": "APO",
+      "name": "Apollo Global Management",
+      "market": "US",
+      "href": "/investor/stocks/APO/",
+      "thesisCount": 1,
+      "eventCount": 4,
+      "lanes": [
         "信用再融资/私募信贷"
       ]
     },
@@ -1684,74 +1622,6 @@
       "lanes": [
         "Mag7 AI 平台再分层",
         "AI 算力半导体"
-      ]
-    },
-    {
-      "ticker": "002594.SZ",
-      "name": "比亚迪",
-      "market": "A-share",
-      "href": "/investor/stocks/002594.SZ/",
-      "thesisCount": 2,
-      "eventCount": 3,
-      "lanes": [
-        "中国出口制造/利润率",
-        "能源转型/储能光伏"
-      ]
-    },
-    {
-      "ticker": "300750.SZ",
-      "name": "宁德时代",
-      "market": "A-share",
-      "href": "/investor/stocks/300750.SZ/",
-      "thesisCount": 2,
-      "eventCount": 3,
-      "lanes": [
-        "中国出口制造/利润率",
-        "能源转型/储能光伏"
-      ]
-    },
-    {
-      "ticker": "BX",
-      "name": "Blackstone",
-      "market": "US",
-      "href": "/investor/stocks/BX/",
-      "thesisCount": 1,
-      "eventCount": 3,
-      "lanes": [
-        "信用再融资/私募信贷"
-      ]
-    },
-    {
-      "ticker": "ARES",
-      "name": "Ares Management",
-      "market": "US",
-      "href": "/investor/stocks/ARES/",
-      "thesisCount": 1,
-      "eventCount": 3,
-      "lanes": [
-        "信用再融资/私募信贷"
-      ]
-    },
-    {
-      "ticker": "KKR",
-      "name": "KKR",
-      "market": "US",
-      "href": "/investor/stocks/KKR/",
-      "thesisCount": 1,
-      "eventCount": 3,
-      "lanes": [
-        "信用再融资/私募信贷"
-      ]
-    },
-    {
-      "ticker": "APO",
-      "name": "Apollo Global Management",
-      "market": "US",
-      "href": "/investor/stocks/APO/",
-      "thesisCount": 1,
-      "eventCount": 3,
-      "lanes": [
-        "信用再融资/私募信贷"
       ]
     },
     {
@@ -1791,38 +1661,14 @@
       ]
     },
     {
-      "ticker": "600900.SH",
-      "name": "长江电力",
+      "ticker": "300750.SZ",
+      "name": "宁德时代",
       "market": "A-share",
-      "href": "/investor/stocks/600900.SH/",
+      "href": "/investor/stocks/300750.SZ/",
       "thesisCount": 2,
       "eventCount": 2,
       "lanes": [
-        "公用事业/电网信用",
-        "能源转型/储能光伏"
-      ]
-    },
-    {
-      "ticker": "CEG",
-      "name": "Constellation Energy",
-      "market": "US",
-      "href": "/investor/stocks/CEG/",
-      "thesisCount": 2,
-      "eventCount": 2,
-      "lanes": [
-        "公用事业/电网信用",
-        "能源转型/储能光伏"
-      ]
-    },
-    {
-      "ticker": "SMR",
-      "name": "NuScale Power",
-      "market": "US",
-      "href": "/investor/stocks/SMR/",
-      "thesisCount": 2,
-      "eventCount": 2,
-      "lanes": [
-        "公用事业/电网信用",
+        "中国出口制造/利润率",
         "能源转型/储能光伏"
       ]
     },
@@ -1970,58 +1816,102 @@
       ]
     },
     {
-      "ticker": "601890.SH",
-      "name": "601890.SH",
-      "market": "A-share",
-      "href": "/investor/stocks/601890.SH/",
+      "ticker": "CME",
+      "name": "CME Group",
+      "market": "US",
+      "href": "/investor/stocks/CME/",
       "thesisCount": 1,
-      "eventCount": 2,
+      "eventCount": 1,
       "lanes": [
-        "海洋经济/船舶海工"
+        "美债利率/美元再定价"
       ]
     },
     {
-      "ticker": "600938.SH",
-      "name": "中国海油",
-      "market": "A-share",
-      "href": "/investor/stocks/600938.SH/",
+      "ticker": "TLT",
+      "name": "iShares 20+ Year Treasury Bond ETF",
+      "market": "US ETF",
+      "href": "/investor/stocks/TLT/",
       "thesisCount": 1,
-      "eventCount": 2,
+      "eventCount": 1,
       "lanes": [
-        "海洋经济/船舶海工"
+        "美债利率/美元再定价"
       ]
     },
     {
-      "ticker": "600150.SH",
-      "name": "中国船舶",
-      "market": "A-share",
-      "href": "/investor/stocks/600150.SH/",
+      "ticker": "GLD",
+      "name": "SPDR Gold Shares",
+      "market": "US ETF",
+      "href": "/investor/stocks/GLD/",
       "thesisCount": 1,
-      "eventCount": 2,
+      "eventCount": 1,
       "lanes": [
-        "海洋经济/船舶海工"
+        "美债利率/美元再定价"
       ]
     },
     {
-      "ticker": "600583.SH",
-      "name": "600583.SH",
-      "market": "A-share",
-      "href": "/investor/stocks/600583.SH/",
+      "ticker": "IEF",
+      "name": "iShares 7-10 Year Treasury Bond ETF",
+      "market": "US ETF",
+      "href": "/investor/stocks/IEF/",
       "thesisCount": 1,
-      "eventCount": 2,
+      "eventCount": 1,
       "lanes": [
-        "海洋经济/船舶海工"
+        "美债利率/美元再定价"
       ]
     },
     {
-      "ticker": "0883.HK",
-      "name": "中国海洋石油",
-      "market": "HK",
-      "href": "/investor/stocks/0883.HK/",
+      "ticker": "ARM",
+      "name": "Arm Holdings",
+      "market": "US",
+      "href": "/investor/stocks/ARM/",
       "thesisCount": 1,
-      "eventCount": 2,
+      "eventCount": 1,
       "lanes": [
-        "海洋经济/船舶海工"
+        "端侧 AI/Agent 桌面"
+      ]
+    },
+    {
+      "ticker": "QCOM",
+      "name": "Qualcomm",
+      "market": "US",
+      "href": "/investor/stocks/QCOM/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "端侧 AI/Agent 桌面"
+      ]
+    },
+    {
+      "ticker": "000333.SZ",
+      "name": "美的集团",
+      "market": "A-share",
+      "href": "/investor/stocks/000333.SZ/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "中国出口制造/利润率"
+      ]
+    },
+    {
+      "ticker": "600690.SH",
+      "name": "海尔智家",
+      "market": "A-share",
+      "href": "/investor/stocks/600690.SH/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "中国出口制造/利润率"
+      ]
+    },
+    {
+      "ticker": "002594.SZ",
+      "name": "比亚迪",
+      "market": "A-share",
+      "href": "/investor/stocks/002594.SZ/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "中国出口制造/利润率"
       ]
     }
   ],
@@ -2046,7 +1936,7 @@
         "pce",
         "美元"
       ],
-      "count": 24
+      "count": 25
     },
     {
       "id": "ai-infrastructure",
@@ -2105,13 +1995,13 @@
   "analystCounts": [
     {
       "label": "未识别",
-      "count": 33
+      "count": 34
     }
   ],
   "categoryCounts": [
     {
       "label": "其他",
-      "count": 33
+      "count": 34
     }
   ],
   "provenance": {
