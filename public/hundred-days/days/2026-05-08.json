@@ -444,7 +444,7 @@
       "laneHref": "/investor/lanes/low-cost-models-and-ai-software-profit-pools/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 72,
+      "conviction": 74,
       "supports": 1,
       "risks": 1,
       "neutral": 0,
@@ -469,8 +469,8 @@
         "BABA",
         "BIDU",
         "CRM",
-        "9988.HK",
         "MSFT",
+        "9988.HK",
         "NOW",
         "NVDA",
         "0700.HK",
@@ -517,7 +517,7 @@
       "laneHref": "/investor/lanes/options-gamma-and-market-microstructure/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 68,
+      "conviction": 69,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -580,9 +580,9 @@
       "title": "全球电网核心设备及原材料的产能赤字已构成刚性物理准入壁垒，导致产业利润池从算力/晶圆厂资本支出方结构性向重电OEM厂商转移。",
       "titleEn": "Practical research topic: 全球电网核心设备及原材料的产能赤字已构成刚性物理准入壁垒，导致产业利润池从算力/晶圆厂资本支出方结构性向重电OEM厂商转移。",
       "href": "/investor/theses/thesis-f3989d02c5/",
-      "laneId": "lane_f44cf45c8649",
-      "lane": "AI 算力半导体",
-      "laneHref": "/investor/lanes/ai-compute-semiconductors/",
+      "laneId": "lane_10d7884cbe65",
+      "lane": "AI 电力/电网设备",
+      "laneHref": "/investor/lanes/ai-power-and-grid-equipment/",
       "direction": "conflicting",
       "directionLabel": "分歧",
       "conviction": 66,
@@ -600,11 +600,13 @@
         }
       ],
       "stockTickers": [
-        "NVDA",
-        "META",
-        "TSM",
-        "AVGO",
-        "AMD"
+        "GEV",
+        "002028.SZ",
+        "CEG",
+        "600089.SH",
+        "600406.SH",
+        "ETN",
+        "VST"
       ]
     },
     {
@@ -633,10 +635,9 @@
       ],
       "stockTickers": [
         "GEV",
-        "600089.SH",
         "002028.SZ",
-        "CEG",
-        "ETN"
+        "600089.SH",
+        "CEG"
       ]
     },
     {
@@ -685,7 +686,7 @@
       "laneHref": "/investor/lanes/autonomous-driving-and-robotaxi-unit-economics/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 58,
+      "conviction": 57,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -773,32 +774,12 @@
   ],
   "lanes": [
     {
-      "id": "lane_13710af7e06d",
-      "title": "低价模型/AI 软件利润池",
-      "href": "/investor/lanes/low-cost-models-and-ai-software-profit-pools/",
-      "thesisCount": 1,
-      "eventCount": 2,
-      "convictionTotal": 72,
-      "stockTickers": [
-        "BABA",
-        "BIDU",
-        "CRM",
-        "9988.HK",
-        "MSFT",
-        "NOW",
-        "NVDA",
-        "0700.HK",
-        "9888.HK"
-      ],
-      "avgConviction": 72
-    },
-    {
       "id": "lane_10d7884cbe65",
       "title": "AI 电力/电网设备",
       "href": "/investor/lanes/ai-power-and-grid-equipment/",
-      "thesisCount": 2,
-      "eventCount": 2,
-      "convictionTotal": 133,
+      "thesisCount": 3,
+      "eventCount": 3,
+      "convictionTotal": 199,
       "stockTickers": [
         "GEV",
         "ETN",
@@ -806,9 +787,30 @@
         "601179.SH",
         "CEG",
         "600089.SH",
-        "VST"
+        "VST",
+        "600406.SH"
       ],
-      "avgConviction": 67
+      "avgConviction": 66
+    },
+    {
+      "id": "lane_13710af7e06d",
+      "title": "低价模型/AI 软件利润池",
+      "href": "/investor/lanes/low-cost-models-and-ai-software-profit-pools/",
+      "thesisCount": 1,
+      "eventCount": 2,
+      "convictionTotal": 74,
+      "stockTickers": [
+        "BABA",
+        "BIDU",
+        "CRM",
+        "MSFT",
+        "9988.HK",
+        "NOW",
+        "NVDA",
+        "0700.HK",
+        "9888.HK"
+      ],
+      "avgConviction": 74
     },
     {
       "id": "lane_1c216bd29875",
@@ -830,7 +832,7 @@
       "href": "/investor/lanes/options-gamma-and-market-microstructure/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 68,
+      "convictionTotal": 69,
       "stockTickers": [
         "CBOE",
         "588000.SH",
@@ -840,23 +842,7 @@
         "VIRT",
         "VIXY"
       ],
-      "avgConviction": 68
-    },
-    {
-      "id": "lane_f44cf45c8649",
-      "title": "AI 算力半导体",
-      "href": "/investor/lanes/ai-compute-semiconductors/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 66,
-      "stockTickers": [
-        "NVDA",
-        "META",
-        "TSM",
-        "AVGO",
-        "AMD"
-      ],
-      "avgConviction": 66
+      "avgConviction": 69
     },
     {
       "id": "lane_6e2dcaab093e",
@@ -884,7 +870,7 @@
       "href": "/investor/lanes/autonomous-driving-and-robotaxi-unit-economics/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 58,
+      "convictionTotal": 57,
       "stockTickers": [
         "NVDA",
         "TSLA",
@@ -893,7 +879,7 @@
         "002594.SZ",
         "XPEV"
       ],
-      "avgConviction": 58
+      "avgConviction": 57
     },
     {
       "id": "lane_93300d58763e",
@@ -928,15 +914,58 @@
   ],
   "stocks": [
     {
+      "ticker": "GEV",
+      "name": "GE Vernova",
+      "market": "US",
+      "href": "/investor/stocks/GEV/",
+      "thesisCount": 3,
+      "eventCount": 3,
+      "lanes": [
+        "AI 电力/电网设备"
+      ]
+    },
+    {
+      "ticker": "002028.SZ",
+      "name": "思源电气",
+      "market": "A-share",
+      "href": "/investor/stocks/002028.SZ/",
+      "thesisCount": 3,
+      "eventCount": 3,
+      "lanes": [
+        "AI 电力/电网设备"
+      ]
+    },
+    {
+      "ticker": "CEG",
+      "name": "Constellation Energy",
+      "market": "US",
+      "href": "/investor/stocks/CEG/",
+      "thesisCount": 3,
+      "eventCount": 3,
+      "lanes": [
+        "AI 电力/电网设备"
+      ]
+    },
+    {
+      "ticker": "600089.SH",
+      "name": "特变电工",
+      "market": "A-share",
+      "href": "/investor/stocks/600089.SH/",
+      "thesisCount": 3,
+      "eventCount": 3,
+      "lanes": [
+        "AI 电力/电网设备"
+      ]
+    },
+    {
       "ticker": "NVDA",
       "name": "NVIDIA",
       "market": "US",
       "href": "/investor/stocks/NVDA/",
-      "thesisCount": 3,
-      "eventCount": 4,
+      "thesisCount": 2,
+      "eventCount": 3,
       "lanes": [
         "低价模型/AI 软件利润池",
-        "AI 算力半导体",
         "自动驾驶/Robotaxi 单位经济"
       ]
     },
@@ -989,17 +1018,6 @@
       ]
     },
     {
-      "ticker": "GEV",
-      "name": "GE Vernova",
-      "market": "US",
-      "href": "/investor/stocks/GEV/",
-      "thesisCount": 2,
-      "eventCount": 2,
-      "lanes": [
-        "AI 电力/电网设备"
-      ]
-    },
-    {
       "ticker": "ETN",
       "name": "Eaton",
       "market": "US",
@@ -1011,32 +1029,10 @@
       ]
     },
     {
-      "ticker": "002028.SZ",
-      "name": "思源电气",
-      "market": "A-share",
-      "href": "/investor/stocks/002028.SZ/",
-      "thesisCount": 2,
-      "eventCount": 2,
-      "lanes": [
-        "AI 电力/电网设备"
-      ]
-    },
-    {
-      "ticker": "CEG",
-      "name": "Constellation Energy",
+      "ticker": "VST",
+      "name": "Vistra",
       "market": "US",
-      "href": "/investor/stocks/CEG/",
-      "thesisCount": 2,
-      "eventCount": 2,
-      "lanes": [
-        "AI 电力/电网设备"
-      ]
-    },
-    {
-      "ticker": "600089.SH",
-      "name": "特变电工",
-      "market": "A-share",
-      "href": "/investor/stocks/600089.SH/",
+      "href": "/investor/stocks/VST/",
       "thesisCount": 2,
       "eventCount": 2,
       "lanes": [
@@ -1077,10 +1073,10 @@
       ]
     },
     {
-      "ticker": "9988.HK",
-      "name": "阿里巴巴",
-      "market": "HK",
-      "href": "/investor/stocks/9988.HK/",
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "market": "US",
+      "href": "/investor/stocks/MSFT/",
       "thesisCount": 1,
       "eventCount": 2,
       "lanes": [
@@ -1088,10 +1084,10 @@
       ]
     },
     {
-      "ticker": "MSFT",
-      "name": "Microsoft",
-      "market": "US",
-      "href": "/investor/stocks/MSFT/",
+      "ticker": "9988.HK",
+      "name": "阿里巴巴",
+      "market": "HK",
+      "href": "/investor/stocks/9988.HK/",
       "thesisCount": 1,
       "eventCount": 2,
       "lanes": [
@@ -1209,58 +1205,14 @@
       ]
     },
     {
-      "ticker": "VST",
-      "name": "Vistra",
-      "market": "US",
-      "href": "/investor/stocks/VST/",
+      "ticker": "600406.SH",
+      "name": "600406.SH",
+      "market": "A-share",
+      "href": "/investor/stocks/600406.SH/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
         "AI 电力/电网设备"
-      ]
-    },
-    {
-      "ticker": "META",
-      "name": "Meta Platforms",
-      "market": "US",
-      "href": "/investor/stocks/META/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "AI 算力半导体"
-      ]
-    },
-    {
-      "ticker": "TSM",
-      "name": "TSMC",
-      "market": "US ADR",
-      "href": "/investor/stocks/TSM/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "AI 算力半导体"
-      ]
-    },
-    {
-      "ticker": "AVGO",
-      "name": "Broadcom",
-      "market": "US",
-      "href": "/investor/stocks/AVGO/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "AI 算力半导体"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "name": "AMD",
-      "market": "US",
-      "href": "/investor/stocks/AMD/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "AI 算力半导体"
       ]
     },
     {
@@ -1367,6 +1319,39 @@
       "name": "Tesla",
       "market": "US",
       "href": "/investor/stocks/TSLA/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "自动驾驶/Robotaxi 单位经济"
+      ]
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet",
+      "market": "US",
+      "href": "/investor/stocks/GOOGL/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "自动驾驶/Robotaxi 单位经济"
+      ]
+    },
+    {
+      "ticker": "1274.HK",
+      "name": "知行汽车科技（苏州）股份有限公司",
+      "market": "HK",
+      "href": "/investor/stocks/1274.HK/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "自动驾驶/Robotaxi 单位经济"
+      ]
+    },
+    {
+      "ticker": "002594.SZ",
+      "name": "比亚迪",
+      "market": "A-share",
+      "href": "/investor/stocks/002594.SZ/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
