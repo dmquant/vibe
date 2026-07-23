@@ -23,7 +23,7 @@
     ],
     "count": 5
   },
-  "activityScore": 76,
+  "activityScore": 75,
   "metrics": {
     "reports": 11,
     "researchThreads": 25,
@@ -486,7 +486,7 @@
       "laneHref": "/investor/lanes/ai-compute-semiconductors/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 64,
+      "conviction": 65,
       "supports": 1,
       "risks": 1,
       "neutral": 0,
@@ -591,40 +591,6 @@
       ]
     },
     {
-      "id": "thesis-d1f5e35b43",
-      "title": "2026年AI芯片竞争格局：NVIDIA Rubin对阵云巨头ASIC",
-      "titleEn": "Practical research topic: 2026年AI芯片竞争格局：NVIDIA Rubin对阵云巨头ASIC",
-      "href": "/investor/theses/thesis-d1f5e35b43/",
-      "laneId": "lane_f44cf45c8649",
-      "lane": "AI 算力半导体",
-      "laneHref": "/investor/lanes/ai-compute-semiconductors/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 69,
-      "supports": 1,
-      "risks": 0,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "AI价值链利润再分配：轻资产设计/EDA与重资产GPU云的公司层级利润池与产能曲线",
-          "summary": "AI价值链利润再分配：轻资产设计/EDA与重资产GPU云的公司层级利润池与产能曲线",
-          "href": "/investor/reports/archive-072050b5284f/",
-          "stance": "supports",
-          "stanceLabel": "支持"
-        }
-      ],
-      "stockTickers": [
-        "NVDA",
-        "TSM",
-        "META",
-        "000660.KS",
-        "MU",
-        "AMD",
-        "AVGO"
-      ]
-    },
-    {
       "id": "thesis-f5d7a79c82",
       "title": "HBM4、CoWoS 与背面供电正在成为 AI 服务器需求曲线的串行闸门",
       "titleEn": "HBM4, CoWoS, and backside power are becoming serial gates for the AI-server demand curve",
@@ -634,7 +600,7 @@
       "laneHref": "/investor/lanes/advanced-packaging-and-hbm4-gate/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 65,
+      "conviction": 67,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -656,9 +622,43 @@
         "AMD",
         "META",
         "AVGO",
+        "MSFT",
         "ASML",
-        "005930.KS",
-        "002916.SZ"
+        "005930.KS"
+      ]
+    },
+    {
+      "id": "thesis-d1f5e35b43",
+      "title": "2026年AI芯片竞争格局：NVIDIA Rubin对阵云巨头ASIC",
+      "titleEn": "Practical research topic: 2026年AI芯片竞争格局：NVIDIA Rubin对阵云巨头ASIC",
+      "href": "/investor/theses/thesis-d1f5e35b43/",
+      "laneId": "lane_f44cf45c8649",
+      "lane": "AI 算力半导体",
+      "laneHref": "/investor/lanes/ai-compute-semiconductors/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 67,
+      "supports": 1,
+      "risks": 0,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "AI价值链利润再分配：轻资产设计/EDA与重资产GPU云的公司层级利润池与产能曲线",
+          "summary": "AI价值链利润再分配：轻资产设计/EDA与重资产GPU云的公司层级利润池与产能曲线",
+          "href": "/investor/reports/archive-072050b5284f/",
+          "stance": "supports",
+          "stanceLabel": "支持"
+        }
+      ],
+      "stockTickers": [
+        "NVDA",
+        "TSM",
+        "META",
+        "MU",
+        "000660.KS",
+        "AMD",
+        "AVGO"
       ]
     },
     {
@@ -721,8 +721,8 @@
         "NVDA",
         "AVGO",
         "300394.SZ",
-        "META",
         "COHR",
+        "META",
         "MRVL",
         "LITE",
         "TSM",
@@ -789,15 +789,15 @@
       ],
       "stockTickers": [
         "MSFT",
+        "META",
         "NVDA",
         "AAPL",
-        "META",
-        "ARM",
-        "QCOM",
-        "AMD",
         "AMZN",
+        "ARM",
+        "AMD",
+        "QCOM",
         "GOOGL",
-        "AVGO"
+        "002475.SZ"
       ]
     }
   ],
@@ -808,7 +808,7 @@
       "href": "/investor/lanes/advanced-packaging-and-hbm4-gate/",
       "thesisCount": 4,
       "eventCount": 5,
-      "convictionTotal": 263,
+      "convictionTotal": 265,
       "stockTickers": [
         "TSM",
         "NVDA",
@@ -820,8 +820,8 @@
         "AMD",
         "META",
         "AVGO",
-        "005930.KS",
-        "688012.SH"
+        "MSFT",
+        "005930.KS"
       ],
       "avgConviction": 66
     },
@@ -831,7 +831,7 @@
       "href": "/investor/lanes/ai-compute-semiconductors/",
       "thesisCount": 3,
       "eventCount": 4,
-      "convictionTotal": 205,
+      "convictionTotal": 204,
       "stockTickers": [
         "NVDA",
         "TSM",
@@ -878,8 +878,8 @@
         "NVDA",
         "AVGO",
         "300394.SZ",
-        "META",
         "COHR",
+        "META",
         "MRVL",
         "LITE",
         "TSM",
@@ -896,15 +896,15 @@
       "convictionTotal": 61,
       "stockTickers": [
         "MSFT",
+        "META",
         "NVDA",
         "AAPL",
-        "META",
-        "ARM",
-        "QCOM",
-        "AMD",
         "AMZN",
+        "ARM",
+        "AMD",
+        "QCOM",
         "GOOGL",
-        "AVGO"
+        "002475.SZ"
       ],
       "avgConviction": 61
     }
@@ -979,21 +979,6 @@
       ]
     },
     {
-      "ticker": "AVGO",
-      "name": "Broadcom",
-      "market": "US",
-      "href": "/investor/stocks/AVGO/",
-      "thesisCount": 7,
-      "eventCount": 8,
-      "lanes": [
-        "AI 算力半导体",
-        "Mag7 AI 平台再分层",
-        "先进封装/HBM4 闸门",
-        "CPO/光模块/高速互联",
-        "端侧 AI/Agent 桌面"
-      ]
-    },
-    {
       "ticker": "AMD",
       "name": "AMD",
       "market": "US",
@@ -1008,16 +993,31 @@
       ]
     },
     {
+      "ticker": "AVGO",
+      "name": "Broadcom",
+      "market": "US",
+      "href": "/investor/stocks/AVGO/",
+      "thesisCount": 6,
+      "eventCount": 7,
+      "lanes": [
+        "AI 算力半导体",
+        "Mag7 AI 平台再分层",
+        "先进封装/HBM4 闸门",
+        "CPO/光模块/高速互联"
+      ]
+    },
+    {
       "ticker": "MSFT",
       "name": "Microsoft",
       "market": "US",
       "href": "/investor/stocks/MSFT/",
-      "thesisCount": 4,
-      "eventCount": 5,
+      "thesisCount": 5,
+      "eventCount": 6,
       "lanes": [
         "Mag7 AI 平台再分层",
-        "CPO/光模块/高速互联",
+        "先进封装/HBM4 闸门",
         "AI 算力半导体",
+        "CPO/光模块/高速互联",
         "端侧 AI/Agent 桌面"
       ]
     },
@@ -1063,8 +1063,8 @@
       "name": "深南电路",
       "market": "A-share",
       "href": "/investor/stocks/002916.SZ/",
-      "thesisCount": 3,
-      "eventCount": 4,
+      "thesisCount": 2,
+      "eventCount": 3,
       "lanes": [
         "先进封装/HBM4 闸门"
       ]
@@ -1185,6 +1185,17 @@
       "name": "Qualcomm",
       "market": "US",
       "href": "/investor/stocks/QCOM/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "端侧 AI/Agent 桌面"
+      ]
+    },
+    {
+      "ticker": "002475.SZ",
+      "name": "立讯精密",
+      "market": "A-share",
+      "href": "/investor/stocks/002475.SZ/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
