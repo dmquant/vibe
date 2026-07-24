@@ -12,9 +12,14 @@
   --registry-red: var(--accent-red, #d64545);
   --registry-yellow: var(--accent-yellow, #d7a316);
   --registry-orange: var(--accent-orange, #e46f2e);
+  width: 100%;
   min-height: 100vh;
+  max-width: none;
+  margin: 0;
   background: var(--registry-bg);
   color: var(--registry-ink);
+  padding: 0;
+  overflow-x: clip;
 }
 
 .market-registry *,
@@ -63,6 +68,7 @@
   font-size: 40px;
   line-height: 1.08;
   letter-spacing: 0;
+  text-wrap: balance;
 }
 
 .registry-hero-copy > p {
@@ -120,9 +126,8 @@
 .registry-stat-strip {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1px;
   border-bottom: 1px solid var(--registry-line);
-  background: var(--registry-line);
+  background: transparent;
 }
 
 .registry-stat-strip > div,
@@ -130,8 +135,13 @@
   display: grid;
   min-height: 90px;
   align-content: center;
+  border-left: 1px solid var(--registry-line);
   background: var(--registry-panel);
   padding: 13px;
+}
+
+.registry-stat-strip > :last-child {
+  border-right: 1px solid var(--registry-line);
 }
 
 .registry-stat-strip > a:hover {
@@ -192,7 +202,10 @@
   z-index: 5;
   top: 0;
   display: grid;
-  grid-template-columns: minmax(240px, 1fr) repeat(3, minmax(130px, auto)) auto;
+  grid-template-columns:
+    minmax(280px, 1fr)
+    repeat(var(--registry-select-count, 3), minmax(120px, 160px))
+    auto;
   gap: 8px;
   align-items: end;
   margin-bottom: 12px;
@@ -376,7 +389,7 @@
 }
 
 .stock-row {
-  grid-template-columns: 140px minmax(0, 1fr) 340px;
+  grid-template-columns: 140px minmax(0, 1fr) 300px;
 }
 
 .stock-row .registry-row-status strong {
@@ -531,11 +544,15 @@
 
 @media (max-width: 1080px) {
   .registry-controls {
-    grid-template-columns: minmax(220px, 1fr) repeat(2, minmax(130px, auto));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .registry-search {
+    grid-column: span 2;
   }
 
   .registry-controls output {
-    grid-column: -2 / -1;
+    grid-column: auto;
   }
 
   .registry-table-head,

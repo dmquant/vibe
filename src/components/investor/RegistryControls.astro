@@ -8,7 +8,12 @@ const {
 } = Astro.props;
 ---
 
-<section class="registry-controls" data-registry-controls data-target={id}>
+<section
+  class="registry-controls"
+  data-registry-controls
+  data-target={id}
+  style={`--registry-select-count:${filters.length + (sorts.length > 0 ? 1 : 0)}`}
+>
   <label class="registry-search">
     <span>Search</span>
     <input type="search" placeholder={placeholder} data-registry-search autocomplete="off" />
