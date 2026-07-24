@@ -15,6 +15,7 @@ const { report } = Astro.props;
 const narrative = report.narrative || {};
 const changes = report.weeklyChanges || {};
 const audit = report.audit || { checks: [] };
+const weeklyPortfolio = report.weeklyPortfolio || { holdings: [], laneWeights: [] };
 const searchText = (...items) => String(items.filter(Boolean).join(" ")).replaceAll('"', "&quot;");
 ---
 
@@ -39,6 +40,7 @@ const searchText = (...items) => String(items.filter(Boolean).join(" ")).replace
             <a href="/investor/panorama/">最新周度全景</a>
             <a href="#calls">操作结论</a>
             <a href="#tensions">分歧与验证</a>
+            <a href="#a-share-book">A股百股组合</a>
             <a href="#sources">来源账本</a>
             {report.artifacts?.docx && <a href={report.artifacts.docx}>Word</a>}
             {report.artifacts?.pdf && <a href={report.artifacts.pdf}>PDF</a>}
@@ -59,6 +61,7 @@ const searchText = (...items) => String(items.filter(Boolean).join(" ")).replace
         <a href="#sources"><span>Sources</span><strong>{report.sourceLedger.length}</strong><em>公开来源</em></a>
         <a href="#evidence"><span>Evidence</span><strong>{report.evidenceLedger.length}</strong><em>证据行</em></a>
         <a href="#changes"><span>Changes</span><strong>{(changes.actionChanges?.length || 0) + (changes.laneChanges?.length || 0)}</strong><em>环比变化</em></a>
+        <a href="#a-share-book"><span>A-share Book</span><strong>{weeklyPortfolio.count || 0}</strong><em>周度研究组合</em></a>
         <a href="#quality"><span>Quality</span><strong>{audit.completenessScore}</strong><em>{audit.warnings} warnings</em></a>
       </section>
 
@@ -90,6 +93,45 @@ const searchText = (...items) => String(items.filter(Boolean).join(" ")).replace
             </a>
           ))}
         </div>
+      </section>
+
+      <section class="panorama-section weekly-portfolio-section" id="a-share-book">
+        <div class="panorama-section-head">
+          <span>100-stock A-share Research Book</span>
+          <h2>A股百股研究组合</h2>
+          <p>{weeklyPortfolio.methodology}</p>
+        </div>
+        <div class="weekly-portfolio-summary">
+          <div><span>Stocks</span><strong>{weeklyPortfolio.count || 0}</strong><em>纯 A 股公司</em></div>
+          <div><span>Weight</span><strong>{weeklyPortfolio.totalWeightPct || 0}%</strong><em>研究权重</em></div>
+          <div><span>Top Theses</span><strong>{report.houseTheses?.length || 0}</strong><em>主导论点</em></div>
+          <div><span>Top Lanes</span><strong>{report.laneAllocation?.length || 0}</strong><em>主导赛道</em></div>
+        </div>
+        <div class="weekly-portfolio-lanes">
+          {(weeklyPortfolio.laneWeights || []).map((lane, index) => (
+            <a href={lane.href}>
+              <span>#{index + 1}</span><strong>{lane.lane}</strong>
+              <i><b style={`width:${Math.min(100, Math.max(4, Number(lane.weightPct || 0) * 5))}%`}></b></i>
+              <em>{Number(lane.weightPct || 0).toFixed(2)}% · {lane.stockCount} stocks</em>
+            </a>
+          ))}
+        </div>
+        <div class="weekly-portfolio-table" role="table" aria-label="A股百股研究组合">
+          <div class="weekly-portfolio-row is-head" role="row">
+            <span>Rank</span><span>Stock</span><span>Stance</span><span>Primary lane</span><span>Evidence</span><span>Weight</span>
+          </div>
+          {(weeklyPortfolio.holdings || []).map((holding) => (
+            <a class={`weekly-portfolio-row stance-${holding.stance}`} href={holding.href} role="row">
+              <span>{String(holding.rank).padStart(3, "0")}</span>
+              <span><strong>{holding.ticker}</strong><em>{holding.name}</em></span>
+              <span><strong>{holding.stanceLabel}</strong><em>{holding.researchScore} score</em></span>
+              <span>{holding.lanes?.[0]?.lane || "待映射"}</span>
+              <span>{holding.evidenceCount} evidence · {holding.thesisCount} theses</span>
+              <span><strong>{Number(holding.weightPct || 0).toFixed(2)}%</strong></span>
+            </a>
+          ))}
+        </div>
+        <p class="weekly-portfolio-disclaimer">{weeklyPortfolio.disclaimer}</p>
       </section>
 
       <section class="panorama-section weekly-change-section" id="changes">

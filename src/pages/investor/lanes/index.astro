@@ -11,7 +11,7 @@ const oddsIndexes = buildOddsIndexes(readOddsBoard());
 const latestDate = network.stats?.dateRange?.last || "";
 const lanes = buildLaneIndex(network);
 const stanceLabels = { overweight: "超配", selective: "精选", neutral: "中性", underweight: "低配", avoid: "回避" };
-const stanceOptions = [...new Set(lanes.map((item) => item.advice?.stance).filter(Boolean))]
+const stanceOptions = [...new Set(lanes.map((item) => item.stance?.code).filter(Boolean))]
   .map((value) => ({ value, label: stanceLabels[value] || value }));
 const coverageOptions = [
   { value: "validated", label: "有模型观点" },
@@ -62,7 +62,7 @@ const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" "
           total={lanes.length}
           placeholder="搜索赛道、机制、ticker、催化剂或风险..."
           filters={[
-            { key: "stance", label: "Model view", allLabel: "全部姿态", options: stanceOptions },
+            { key: "stance", label: "Stance", allLabel: "全部姿态", options: stanceOptions },
             { key: "coverage", label: "Coverage", allLabel: "全部覆盖", options: coverageOptions },
           ]}
           sorts={[
@@ -87,8 +87,8 @@ const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" "
                 class="registry-row lane-row"
                 href={lane.href}
                 data-registry-item
-                data-search={searchText(lane.lane, lane.laneEn, lane.topTerms, lane.stocks.map((stock) => [stock.ticker, stock.name, stock.role]), lane.advice?.summaryZh, lane.advice?.catalystsZh, lane.advice?.risksZh)}
-                data-stance={lane.advice?.stance || ""}
+                data-search={searchText(lane.lane, lane.laneEn, lane.topTerms, lane.stance?.labelZh, lane.stocks.map((stock) => [stock.ticker, stock.name, stock.role]), lane.advice?.summaryZh, lane.advice?.catalystsZh, lane.advice?.risksZh)}
+                data-stance={lane.stance?.code || ""}
                 data-coverage={coverage}
                 data-latest={lane.lastSeen || ""}
                 data-score={lane.avgScore || 0}
@@ -98,13 +98,13 @@ const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" "
                 data-odds={Number.isFinite(pHouse) ? pHouse * 100 : -1}
               >
                 <div class="registry-row-status">
-                  <span class="registry-row-label">{lane.advice ? "Validated view" : "Research lane"}</span>
-                  <strong>{lane.advice ? stanceLabels[lane.advice.stance] || lane.advice.stance : lane.actions[0]?.[0] || "观察"}</strong>
+                  <span class="registry-row-label">{lane.advice ? "Model overlay" : "Evidence stance"}</span>
+                  <strong>{lane.stance?.labelZh || lane.actions[0]?.[0] || "观察"}</strong>
                   <em>{lane.lastSeen}</em>
                 </div>
                 <div class="registry-row-main">
                   <strong>{lane.lane}</strong>
-                  <p>{lane.advice?.summaryZh || `${lane.theses.length} 条主线共同描述该赛道的盈利机制与风险边界。最近证据更新至 ${lane.lastSeen}。`}</p>
+                  <p>{lane.stance?.rationaleZh || lane.advice?.summaryZh || `${lane.theses.length} 条主线共同描述该赛道的盈利机制与风险边界。最近证据更新至 ${lane.lastSeen}。`}</p>
                   <div class="registry-tags">
                     {(lane.stocks || []).slice(0, 8).map((stock) => <span class="stock-tag">{stock.ticker}</span>)}
                   </div>
@@ -114,7 +114,7 @@ const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" "
                   <span><b>{lane.stocks.length}</b>stocks</span>
                   <span><b>{lane.evidenceCount || 0}</b>evidence</span>
                   <span><b>{lane.reportCount || 0}</b>reports</span>
-                  <span><b>{lane.avgScore || 0}</b>avg score</span>
+                  <span><b>{lane.stance?.score ?? lane.avgScore ?? 0}</b>stance</span>
                   <span class="metric-odds"><b>{probabilityLabel(line20d?.pHouse)}</b>20D house</span>
                 </div>
               </a>

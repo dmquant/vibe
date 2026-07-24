@@ -4,7 +4,7 @@
   "dayNumber": 5,
   "status": "recorded",
   "headline": "研究报告：2026-06-28",
-  "summary": "当日归档 11 份公开研究，25 条研究讨论和 12 个 thesis 证据事件；研究密度最高的方向为半导体、存储与光互联。",
+  "summary": "当日归档 10 份公开研究，25 条研究讨论和 15 个 thesis 证据事件；研究密度最高的方向为半导体、存储与光互联。",
   "dominantTopic": {
     "id": "semis-memory",
     "labelZh": "半导体、存储与光互联",
@@ -23,12 +23,12 @@
     ],
     "count": 5
   },
-  "activityScore": 75,
+  "activityScore": 73,
   "metrics": {
-    "reports": 11,
+    "reports": 10,
     "researchThreads": 25,
     "researchNotes": 248,
-    "thesisEvents": 12,
+    "thesisEvents": 15,
     "personaEvents": 0,
     "readerMemos": 0,
     "recaps": 0,
@@ -212,24 +212,6 @@
         "能源"
       ],
       "sourceKind": "research_thread"
-    },
-    {
-      "id": "archive-ae3f7c1ddc21",
-      "title": "Your own recent reports — tmt-analyst",
-      "date": "2026-04-26",
-      "href": "/investor/reports/archive-ae3f7c1ddc21/",
-      "analyst": "未识别",
-      "analystId": "",
-      "category": "其他",
-      "excerpt": "Your own recent reports — tmt-analyst",
-      "tags": [
-        "AI",
-        "通胀",
-        "宏观",
-        "A股",
-        "港美股"
-      ],
-      "sourceKind": "archive"
     }
   ],
   "discussions": [
@@ -436,6 +418,87 @@
   ],
   "thesisEvents": [
     {
+      "id": "thesis-d0faeae7f0",
+      "title": "NAND价格与产品组合驱动SanDisk盈利弹性",
+      "titleEn": "NAND pricing and mix drive SanDisk earnings leverage",
+      "href": "/investor/theses/thesis-d0faeae7f0/",
+      "laneId": "lane_f44cf45c8649",
+      "lane": "AI 算力半导体",
+      "laneHref": "/investor/lanes/ai-compute-semiconductors/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 73,
+      "supports": 1,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 2,
+      "events": [
+        {
+          "title": "AI 利润向算力底座迁移的证据：半导体与网络核心硬件的毛利韧性 — 2026-05-26",
+          "summary": "AI 利润向算力底座迁移的证据：半导体与网络核心硬件的毛利韧性 — 2026-05-26",
+          "href": "/investor/reports/archive-f8876294e5ea/",
+          "stance": "supports",
+          "stanceLabel": "支持"
+        },
+        {
+          "title": "2026-06-17 半导体压力测试：T3 触发、AI 资本开支下修与设计制造链传导",
+          "summary": "2026-06-17 半导体压力测试：T3 触发、AI 资本开支下修与设计制造链传导",
+          "href": "/investor/reports/archive-fb57ae551ea1/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "NVDA",
+        "TSM",
+        "MU",
+        "000660.KS",
+        "AMD",
+        "META"
+      ]
+    },
+    {
+      "id": "thesis-b976d8330e",
+      "title": "NAND盈利弹性由价格与产品结构主导，而非单纯出货增长",
+      "titleEn": "NAND earnings leverage is driven by pricing and mix rather than shipment growth alone",
+      "href": "/investor/theses/thesis-b976d8330e/",
+      "laneId": "lane_f44cf45c8649",
+      "lane": "AI 算力半导体",
+      "laneHref": "/investor/lanes/ai-compute-semiconductors/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 72,
+      "supports": 1,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 2,
+      "events": [
+        {
+          "title": "AI 利润向算力底座迁移的证据：半导体与网络核心硬件的毛利韧性 — 2026-05-26",
+          "summary": "AI 利润向算力底座迁移的证据：半导体与网络核心硬件的毛利韧性 — 2026-05-26",
+          "href": "/investor/reports/archive-f8876294e5ea/",
+          "stance": "supports",
+          "stanceLabel": "支持"
+        },
+        {
+          "title": "2026-06-17 半导体压力测试：T3 触发、AI 资本开支下修与设计制造链传导",
+          "summary": "2026-06-17 半导体压力测试：T3 触发、AI 资本开支下修与设计制造链传导",
+          "href": "/investor/reports/archive-fb57ae551ea1/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "NVDA",
+        "TSM",
+        "MU",
+        "000660.KS",
+        "META",
+        "AMD",
+        "AVGO"
+      ]
+    },
+    {
       "id": "thesis-b13c7cf092",
       "title": "高纯石英材料受益于先进封装扩产，但兑现取决于认证与产品结构",
       "titleEn": "High-purity quartz can benefit from advanced-packaging expansion, conditional on qualification and mix",
@@ -510,84 +573,48 @@
       "stockTickers": [
         "NVDA",
         "TSM",
-        "META",
         "AMD",
+        "META",
         "MU",
         "AVGO",
-        "MSFT",
         "000660.KS",
+        "MSFT",
         "AMZN",
         "GOOGL"
       ]
     },
     {
-      "id": "thesis-b976d8330e",
-      "title": "NAND盈利弹性由价格与产品结构主导，而非单纯出货增长",
-      "titleEn": "NAND earnings leverage is driven by pricing and mix rather than shipment growth alone",
-      "href": "/investor/theses/thesis-b976d8330e/",
+      "id": "thesis-5c45703323",
+      "title": "AI CapEx的主线不是收缩，而是从新增外壳数量转向每瓦、每机架、每封装的半导体密度提升。",
+      "titleEn": "Practical research topic: AI CapEx的主线不是收缩，而是从新增外壳数量转向每瓦、每机架、每封装的半导体密度提升。",
+      "href": "/investor/theses/thesis-5c45703323/",
       "laneId": "lane_f44cf45c8649",
       "lane": "AI 算力半导体",
       "laneHref": "/investor/lanes/ai-compute-semiconductors/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 72,
+      "conviction": 81,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
       "eventCount": 1,
       "events": [
         {
-          "title": "2026-06-17 半导体压力测试：T3 触发、AI 资本开支下修与设计制造链传导",
-          "summary": "2026-06-17 半导体压力测试：T3 触发、AI 资本开支下修与设计制造链传导",
-          "href": "/investor/reports/archive-fb57ae551ea1/",
+          "title": "2026-06-23 TMT压力测试：CoWoS与HBM会成为AI Capex的新瓶颈吗？",
+          "summary": "2026-06-23 TMT压力测试：CoWoS与HBM会成为AI Capex的新瓶颈吗？",
+          "href": "/investor/reports/archive-eac9a245c29c/",
           "stance": "risk",
           "stanceLabel": "风险"
         }
       ],
       "stockTickers": [
+        "META",
         "NVDA",
+        "AMD",
         "TSM",
         "MU",
-        "000660.KS",
-        "META",
-        "AMD",
-        "AVGO"
-      ]
-    },
-    {
-      "id": "thesis-8c5a9690a0",
-      "title": "Mag7 在 AI 时代从平台垄断转向基础设施再分层",
-      "titleEn": "Mag7 shifts from platform monopoly to AI infrastructure re-layering",
-      "href": "/investor/theses/thesis-8c5a9690a0/",
-      "laneId": "lane_f21fc181388a",
-      "lane": "Mag7 AI 平台再分层",
-      "laneHref": "/investor/lanes/mag7-ai-platform-re-layering/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 70,
-      "supports": 1,
-      "risks": 0,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "AI价值链利润再分配：轻资产设计/EDA与重资产GPU云的公司层级利润池与产能曲线",
-          "summary": "AI价值链利润再分配：轻资产设计/EDA与重资产GPU云的公司层级利润池与产能曲线",
-          "href": "/investor/reports/archive-072050b5284f/",
-          "stance": "supports",
-          "stanceLabel": "支持"
-        }
-      ],
-      "stockTickers": [
-        "META",
-        "MSFT",
-        "NVDA",
-        "AMZN",
-        "GOOGL",
-        "TSM",
         "AVGO",
-        "AMD",
-        "AAPL"
+        "000660.KS"
       ]
     },
     {
@@ -632,9 +659,9 @@
       "title": "2026年AI芯片竞争格局：NVIDIA Rubin对阵云巨头ASIC",
       "titleEn": "Practical research topic: 2026年AI芯片竞争格局：NVIDIA Rubin对阵云巨头ASIC",
       "href": "/investor/theses/thesis-d1f5e35b43/",
-      "laneId": "lane_f44cf45c8649",
-      "lane": "AI 算力半导体",
-      "laneHref": "/investor/lanes/ai-compute-semiconductors/",
+      "laneId": "lane_f1a271385aff",
+      "lane": "先进封装/HBM4 闸门",
+      "laneHref": "/investor/lanes/advanced-packaging-and-hbm4-gate/",
       "direction": "conflicting",
       "directionLabel": "分歧",
       "conviction": 67,
@@ -654,11 +681,8 @@
       "stockTickers": [
         "NVDA",
         "TSM",
-        "META",
         "MU",
-        "000660.KS",
-        "AMD",
-        "AVGO"
+        "000660.KS"
       ]
     },
     {
@@ -773,7 +797,7 @@
       "laneHref": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 61,
+      "conviction": 58,
       "supports": 1,
       "risks": 0,
       "neutral": 0,
@@ -789,26 +813,47 @@
       ],
       "stockTickers": [
         "MSFT",
-        "META",
         "NVDA",
         "AAPL",
-        "AMZN",
+        "META",
         "ARM",
         "AMD",
         "QCOM",
+        "AMZN",
         "GOOGL",
-        "002475.SZ"
+        "AVGO"
       ]
     }
   ],
   "lanes": [
     {
+      "id": "lane_f44cf45c8649",
+      "title": "AI 算力半导体",
+      "href": "/investor/lanes/ai-compute-semiconductors/",
+      "thesisCount": 4,
+      "eventCount": 7,
+      "convictionTotal": 291,
+      "stockTickers": [
+        "META",
+        "NVDA",
+        "AMD",
+        "TSM",
+        "MU",
+        "AVGO",
+        "000660.KS",
+        "MSFT",
+        "AMZN",
+        "GOOGL"
+      ],
+      "avgConviction": 73
+    },
+    {
       "id": "lane_f1a271385aff",
       "title": "先进封装/HBM4 闸门",
       "href": "/investor/lanes/advanced-packaging-and-hbm4-gate/",
-      "thesisCount": 4,
-      "eventCount": 5,
-      "convictionTotal": 265,
+      "thesisCount": 5,
+      "eventCount": 6,
+      "convictionTotal": 332,
       "stockTickers": [
         "TSM",
         "NVDA",
@@ -824,47 +869,6 @@
         "005930.KS"
       ],
       "avgConviction": 66
-    },
-    {
-      "id": "lane_f44cf45c8649",
-      "title": "AI 算力半导体",
-      "href": "/investor/lanes/ai-compute-semiconductors/",
-      "thesisCount": 3,
-      "eventCount": 4,
-      "convictionTotal": 204,
-      "stockTickers": [
-        "NVDA",
-        "TSM",
-        "MU",
-        "000660.KS",
-        "META",
-        "AMD",
-        "AVGO",
-        "MSFT",
-        "AMZN",
-        "GOOGL"
-      ],
-      "avgConviction": 68
-    },
-    {
-      "id": "lane_f21fc181388a",
-      "title": "Mag7 AI 平台再分层",
-      "href": "/investor/lanes/mag7-ai-platform-re-layering/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 70,
-      "stockTickers": [
-        "META",
-        "MSFT",
-        "NVDA",
-        "AMZN",
-        "GOOGL",
-        "TSM",
-        "AVGO",
-        "AMD",
-        "AAPL"
-      ],
-      "avgConviction": 70
     },
     {
       "id": "lane_1f0136d57956",
@@ -893,20 +897,20 @@
       "href": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 61,
+      "convictionTotal": 58,
       "stockTickers": [
         "MSFT",
-        "META",
         "NVDA",
         "AAPL",
-        "AMZN",
+        "META",
         "ARM",
         "AMD",
         "QCOM",
+        "AMZN",
         "GOOGL",
-        "002475.SZ"
+        "AVGO"
       ],
-      "avgConviction": 61
+      "avgConviction": 58
     }
   ],
   "stocks": [
@@ -915,11 +919,10 @@
       "name": "NVIDIA",
       "market": "US",
       "href": "/investor/stocks/NVDA/",
-      "thesisCount": 10,
-      "eventCount": 12,
+      "thesisCount": 11,
+      "eventCount": 15,
       "lanes": [
         "AI 算力半导体",
-        "Mag7 AI 平台再分层",
         "先进封装/HBM4 闸门",
         "CPO/光模块/高速互联",
         "端侧 AI/Agent 桌面"
@@ -930,11 +933,10 @@
       "name": "TSMC",
       "market": "US ADR",
       "href": "/investor/stocks/TSM/",
-      "thesisCount": 9,
-      "eventCount": 11,
+      "thesisCount": 10,
+      "eventCount": 14,
       "lanes": [
         "AI 算力半导体",
-        "Mag7 AI 平台再分层",
         "先进封装/HBM4 闸门",
         "CPO/光模块/高速互联"
       ]
@@ -944,8 +946,8 @@
       "name": "Micron",
       "market": "US",
       "href": "/investor/stocks/MU/",
-      "thesisCount": 7,
-      "eventCount": 9,
+      "thesisCount": 9,
+      "eventCount": 13,
       "lanes": [
         "AI 算力半导体",
         "先进封装/HBM4 闸门"
@@ -956,8 +958,8 @@
       "name": "SK hynix",
       "market": "Korea",
       "href": "/investor/stocks/000660.KS/",
-      "thesisCount": 7,
-      "eventCount": 9,
+      "thesisCount": 9,
+      "eventCount": 13,
       "lanes": [
         "AI 算力半导体",
         "先进封装/HBM4 闸门"
@@ -969,10 +971,9 @@
       "market": "US",
       "href": "/investor/stocks/META/",
       "thesisCount": 7,
-      "eventCount": 8,
+      "eventCount": 10,
       "lanes": [
         "AI 算力半导体",
-        "Mag7 AI 平台再分层",
         "先进封装/HBM4 闸门",
         "CPO/光模块/高速互联",
         "端侧 AI/Agent 桌面"
@@ -984,10 +985,9 @@
       "market": "US",
       "href": "/investor/stocks/AMD/",
       "thesisCount": 6,
-      "eventCount": 7,
+      "eventCount": 9,
       "lanes": [
         "AI 算力半导体",
-        "Mag7 AI 平台再分层",
         "先进封装/HBM4 闸门",
         "端侧 AI/Agent 桌面"
       ]
@@ -998,12 +998,12 @@
       "market": "US",
       "href": "/investor/stocks/AVGO/",
       "thesisCount": 6,
-      "eventCount": 7,
+      "eventCount": 8,
       "lanes": [
         "AI 算力半导体",
-        "Mag7 AI 平台再分层",
         "先进封装/HBM4 闸门",
-        "CPO/光模块/高速互联"
+        "CPO/光模块/高速互联",
+        "端侧 AI/Agent 桌面"
       ]
     },
     {
@@ -1011,39 +1011,12 @@
       "name": "Microsoft",
       "market": "US",
       "href": "/investor/stocks/MSFT/",
-      "thesisCount": 5,
-      "eventCount": 6,
+      "thesisCount": 4,
+      "eventCount": 5,
       "lanes": [
-        "Mag7 AI 平台再分层",
         "先进封装/HBM4 闸门",
         "AI 算力半导体",
         "CPO/光模块/高速互联",
-        "端侧 AI/Agent 桌面"
-      ]
-    },
-    {
-      "ticker": "AMZN",
-      "name": "Amazon",
-      "market": "US",
-      "href": "/investor/stocks/AMZN/",
-      "thesisCount": 3,
-      "eventCount": 4,
-      "lanes": [
-        "Mag7 AI 平台再分层",
-        "AI 算力半导体",
-        "端侧 AI/Agent 桌面"
-      ]
-    },
-    {
-      "ticker": "GOOGL",
-      "name": "Alphabet",
-      "market": "US",
-      "href": "/investor/stocks/GOOGL/",
-      "thesisCount": 3,
-      "eventCount": 4,
-      "lanes": [
-        "Mag7 AI 平台再分层",
-        "AI 算力半导体",
         "端侧 AI/Agent 桌面"
       ]
     },
@@ -1070,14 +1043,26 @@
       ]
     },
     {
-      "ticker": "AAPL",
-      "name": "Apple",
+      "ticker": "AMZN",
+      "name": "Amazon",
       "market": "US",
-      "href": "/investor/stocks/AAPL/",
+      "href": "/investor/stocks/AMZN/",
       "thesisCount": 2,
-      "eventCount": 2,
+      "eventCount": 3,
       "lanes": [
-        "Mag7 AI 平台再分层",
+        "AI 算力半导体",
+        "端侧 AI/Agent 桌面"
+      ]
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet",
+      "market": "US",
+      "href": "/investor/stocks/GOOGL/",
+      "thesisCount": 2,
+      "eventCount": 3,
+      "lanes": [
+        "AI 算力半导体",
         "端侧 AI/Agent 桌面"
       ]
     },
@@ -1170,6 +1155,17 @@
       ]
     },
     {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "market": "US",
+      "href": "/investor/stocks/AAPL/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "端侧 AI/Agent 桌面"
+      ]
+    },
+    {
       "ticker": "ARM",
       "name": "Arm Holdings",
       "market": "US",
@@ -1185,17 +1181,6 @@
       "name": "Qualcomm",
       "market": "US",
       "href": "/investor/stocks/QCOM/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "端侧 AI/Agent 桌面"
-      ]
-    },
-    {
-      "ticker": "002475.SZ",
-      "name": "立讯精密",
-      "market": "A-share",
-      "href": "/investor/stocks/002475.SZ/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
@@ -1226,6 +1211,23 @@
       "count": 5
     },
     {
+      "id": "ai-infrastructure",
+      "labelZh": "AI 基础设施",
+      "labelEn": "AI infrastructure",
+      "color": "blue",
+      "keywords": [
+        "ai 基础设施",
+        "ai infrastructure",
+        "算力",
+        "gpu",
+        "数据中心",
+        "data center",
+        "nvda",
+        "nvidia"
+      ],
+      "count": 3
+    },
+    {
       "id": "macro-rates",
       "labelZh": "宏观、通胀与利率",
       "labelEn": "Macro, inflation and rates",
@@ -1242,36 +1244,19 @@
         "pce",
         "美元"
       ],
-      "count": 3
-    },
-    {
-      "id": "ai-infrastructure",
-      "labelZh": "AI 基础设施",
-      "labelEn": "AI infrastructure",
-      "color": "blue",
-      "keywords": [
-        "ai 基础设施",
-        "ai infrastructure",
-        "算力",
-        "gpu",
-        "数据中心",
-        "data center",
-        "nvda",
-        "nvidia"
-      ],
-      "count": 3
+      "count": 2
     }
   ],
   "analystCounts": [
     {
       "label": "未识别",
-      "count": 11
+      "count": 10
     }
   ],
   "categoryCounts": [
     {
       "label": "其他",
-      "count": 11
+      "count": 10
     }
   ],
   "provenance": {

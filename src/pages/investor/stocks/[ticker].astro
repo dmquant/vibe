@@ -17,6 +17,7 @@ export function getStaticPaths() {
 
 const { stock, oddsSurface } = Astro.props;
 const maxConviction = Math.max(1, ...stock.theses.map((thesis) => Number(thesis.conviction || 0)));
+const stance = stock.stance || {};
 ---
 
 <!doctype html>
@@ -43,8 +44,8 @@ const maxConviction = Math.max(1, ...stock.theses.map((thesis) => Number(thesis.
           </div>
         </div>
         <aside class="network-privacy">
-          <span>Research Handle</span>
-          <p>{stock.role || "候选标的只作为研究跟踪入口，不构成买卖建议。"}</p>
+          <span>{stance.labelZh || "Research Handle"}</span>
+          <p>{stance.rationaleZh || stock.role || "候选标的只作为研究跟踪入口，不构成买卖建议。"}</p>
         </aside>
       </section>
 
@@ -76,6 +77,12 @@ const maxConviction = Math.max(1, ...stock.theses.map((thesis) => Number(thesis.
         </article>
         <aside class="detail-panel">
           <div class="section-mini-head"><span>Conviction</span><strong>主线强度</strong></div>
+          <div class={`evidence-stance stance-${stance.code || "neutral"}`}>
+            <span>Evidence-derived stock stance</span>
+            <strong>{stance.labelZh || "中性"} <em>{stance.score ?? 0} / 100</em></strong>
+            <p>{stance.rationaleZh || "该标的立场由所连接主线的公开证据聚合而来。"}</p>
+            <small>confidence {stance.confidence ?? 0} · {stance.evidenceCount ?? stock.evidenceCount ?? 0} evidence</small>
+          </div>
           <div class="source-bars">
             {stock.theses.map((thesis) => (
               <div class="source-row">

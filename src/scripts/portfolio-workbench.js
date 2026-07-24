@@ -105,6 +105,12 @@ function inferredCurrency(market) {
   return "USD";
 }
 
+function sideFromResearchStance(stance) {
+  if (stance === "overweight") return "long";
+  if (stance === "underweight" || stance === "avoid") return "avoid";
+  return "watch";
+}
+
 function upsertThesis(item) {
   const index = state.theses.findIndex((entry) => entry.id === item.id);
   const next = {
@@ -270,7 +276,25 @@ document.addEventListener("click", (event) => {
   const thesis = event.target.closest?.(".track-thesis");
   if (thesis) upsertThesis({ id: thesis.dataset.trackId, title: thesis.dataset.trackTitle, bucket: thesis.dataset.trackBucket, action: thesis.dataset.trackAction, score: thesis.dataset.trackScore, risk: thesis.dataset.trackRisk });
   const stock = event.target.closest?.("[data-add-stock]");
-  if (stock) upsertStock(stock.dataset.addStock);
+  if (stock) {
+    const fromWeeklyBook = stock.dataset.weeklyWeight !== undefined;
+    upsertStock(stock.dataset.addStock, fromWeeklyBook ? {
+      side: sideFromResearchStance(stock.dataset.weeklyStance),
+      targetWeight: number(stock.dataset.weeklyWeight),
+      note: `周度研究组合 · ${cleanText(stock.dataset.weeklyLane || "待映射", 80)} · ${cleanText(stock.dataset.weeklyStance || "neutral", 24)}`,
+    } : {});
+  }
+  const weeklyBook = event.target.closest?.("[data-add-weekly-book]");
+  if (weeklyBook) {
+    for (const item of publicData.weeklyBook?.holdings || []) {
+      upsertStock(item.ticker, {
+        side: sideFromResearchStance(item.stance),
+        targetWeight: number(item.weightPct),
+        note: `周度研究组合 ${cleanText(publicData.weeklyBook?.weekId || "", 24)} · ${cleanText(item.lane || "待映射", 80)} · ${cleanText(item.stanceLabel || item.stance || "中性", 24)}`,
+      }, false);
+    }
+    if (publicData.weeklyBook?.holdings?.length) writeState();
+  }
   const basket = event.target.closest?.("[data-add-basket]");
   if (basket) {
     const lane = (publicData.lanes || []).find((item) => item.id === basket.dataset.addBasket);
@@ -347,6 +371,6 @@ document.getElementById("clearPortfolio")?.addEventListener("click", () => {
   if (confirm("清空当前浏览器中的 thesis 与 stock book？")) writeState(defaultState());
 });
 
-const initialView = ["stocks", "theses", "odds", "advice"].includes(location.hash.slice(1)) ? location.hash.slice(1) : "stocks";
+const initialView = ["stocks", "theses", "weekly", "odds", "advice"].includes(location.hash.slice(1)) ? location.hash.slice(1) : "stocks";
 activateView(initialView);
 renderAll();

@@ -1,7 +1,7 @@
 ---
 import BaseHead from "../../../components/BaseHead.astro";
 import Header from "../../../components/Header.astro";
-import { readMarketOntology, readOddsBoard, readResearchNetwork } from "../../../lib/investor-generated.js";
+import { readMarketOntology, readOddsBoard, readResearchNetwork, readWeeklyReport } from "../../../lib/investor-generated.js";
 import { oddsLine, probabilityLabel, signedPoints, stockPath, thesisPath } from "../../../lib/investor-market.js";
 import "../../../styles/research-network.css";
 import "../../../styles/odds-board.css";
@@ -9,6 +9,8 @@ import "../../../styles/odds-board.css";
 const network = readResearchNetwork();
 const ontology = readMarketOntology();
 const odds = readOddsBoard();
+const weekly = readWeeklyReport();
+const weeklyBook = weekly.weeklyPortfolio || { holdings: [], laneWeights: [], count: 0, totalWeightPct: 0 };
 const theses = network.theses || [];
 const stocks = [...(ontology.stocks || [])].sort((a, b) => Number(b.evidenceCount || 0) - Number(a.evidenceCount || 0) || a.ticker.localeCompare(b.ticker));
 const lanes = ontology.lanes || [];
@@ -32,6 +34,16 @@ const topThesisOdds = (odds.thesisLines || []).slice(0, 18);
 const portfolioData = JSON.stringify({
   stocks: stocks.map((stock) => ({ ticker: stock.ticker, name: stock.name, market: stock.market, href: stock.href, laneIds: stock.laneIds || [] })),
   lanes: lanes.map((lane) => ({ id: lane.id, titleZh: lane.titleZh, titleEn: lane.titleEn, href: lane.href, advice: lane.advice || null })),
+  weeklyBook: {
+    weekId: weekly.weekId,
+    holdings: (weeklyBook.holdings || []).map((holding) => ({
+      ticker: holding.ticker,
+      weightPct: holding.weightPct,
+      stance: holding.stance,
+      stanceLabel: holding.stanceLabel,
+      lane: holding.lanes?.[0]?.lane || "",
+    })),
+  },
 }).replaceAll("<", "\\u003c");
 ---
 
@@ -74,6 +86,7 @@ const portfolioData = JSON.stringify({
         <div class="portfolio-mode-tabs" role="tablist" aria-label="Portfolio views">
           <button type="button" data-view-target="stocks" role="tab">股票簿 <b data-count-stocks>0</b></button>
           <button type="button" data-view-target="theses" role="tab">Thesis Book <b data-count-theses>0</b></button>
+          <button type="button" data-view-target="weekly" role="tab">周度百股 <b>{weeklyBook.count || 0}</b></button>
           <button type="button" data-view-target="odds" role="tab">Odds Book <b>{odds.coverage?.shadowPricedTheses || 0}</b></button>
           <button type="button" data-view-target="advice" role="tab">模型赛道观点 <b>{adviceLanes.length}</b></button>
         </div>
@@ -133,6 +146,58 @@ const portfolioData = JSON.stringify({
               );
             })}
           </div>
+        </section>
+      </div>
+
+      <div data-portfolio-view="weekly" hidden>
+        <section class="thesis-section weekly-book-view">
+          <div class="section-headline">
+            <span>Weekly A-share Research Book · {weekly.weekId}</span>
+            <h2>A股百股研究组合</h2>
+            <p>{weeklyBook.methodology || "按公开证据、主线连接、赛道位置、时效和 stance 生成确定性周度研究组合。"}</p>
+          </div>
+          <div class="weekly-book-command">
+            <div>
+              <span>{weeklyBook.count || 0} A-share equities</span>
+              <strong>{Number(weeklyBook.totalWeightPct || 0).toFixed(2)}%</strong>
+              <em>research weight · non-executable</em>
+            </div>
+            <button type="button" data-add-weekly-book>加入本地股票簿</button>
+            <a href="/investor/panorama/#a-share-book">查看周度论证</a>
+          </div>
+          <div class="weekly-book-lanes" aria-label="Weekly lane exposure">
+            {(weeklyBook.laneWeights || []).slice(0, 10).map((lane, index) => (
+              <a href={lane.href}>
+                <span>#{index + 1}</span>
+                <strong>{lane.lane}</strong>
+                <i><b style={`width:${Math.min(100, Math.max(4, Number(lane.weightPct || 0) * 5))}%`}></b></i>
+                <em>{Number(lane.weightPct || 0).toFixed(2)}% · {lane.stockCount} stocks</em>
+              </a>
+            ))}
+          </div>
+          <div class="weekly-book-table" role="table" aria-label="Weekly A-share research portfolio">
+            <div class="weekly-book-row is-head" role="row">
+              <span>Rank</span><span>Stock</span><span>Stance</span><span>Primary lane</span><span>Evidence</span><span>Weight</span><span>Action</span>
+            </div>
+            {(weeklyBook.holdings || []).map((holding) => (
+              <article class={`weekly-book-row stance-${holding.stance}`} role="row">
+                <span>{String(holding.rank).padStart(3, "0")}</span>
+                <a href={holding.href}><strong>{holding.ticker}</strong><em>{holding.name}</em></a>
+                <span><strong>{holding.stanceLabel}</strong><em>{holding.researchScore} score</em></span>
+                <span>{holding.lanes?.[0]?.lane || "待映射"}</span>
+                <span>{holding.evidenceCount} evidence · {holding.thesisCount} theses</span>
+                <span><strong>{Number(holding.weightPct || 0).toFixed(2)}%</strong></span>
+                <button
+                  type="button"
+                  data-add-stock={holding.ticker}
+                  data-weekly-weight={holding.weightPct}
+                  data-weekly-stance={holding.stance}
+                  data-weekly-lane={holding.lanes?.[0]?.lane || ""}
+                >加入</button>
+              </article>
+            ))}
+          </div>
+          <p class="portfolio-disclaimer">{weeklyBook.disclaimer || "该组合用于研究排序与周度复核，不是交易指令、投资建议或收益承诺。"}</p>
         </section>
       </div>
 

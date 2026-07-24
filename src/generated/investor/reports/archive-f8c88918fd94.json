@@ -1,0 +1,20 @@
+{
+  "slug": "archive-f8c88918fd94",
+  "href": "/investor/reports/archive-f8c88918fd94/",
+  "meta": {
+    "title": "组合VaR阈值检查",
+    "date": "2026-07-23",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "通胀",
+      "宏观",
+      "风险"
+    ],
+    "source": "archive-f8c88918fd94",
+    "source_label": "研究档案",
+    "source_kind": "archive"
+  },
+  "bodyHtml": "<h1>组合VaR阈值检查</h1>\n<h2>优先结论</h2>\n<ol>\n<li><strong>今日日期锚点：2026-07-23。</strong> 本报告中“今日”“昨日”“上一交易日”等相对日期均按 shell 命令 <code>系统日期锚</code> 的结果解释。</li>\n<li><strong>VaR是否突破阈值：无法定量确认。</strong> 工作区未发现持仓、风险因子收益、VaR配置、VaR阈值或上一轮VaR输出文件，因此不能给出经验证的“突破/未突破”结论。</li>\n<li><strong>风险控制结论：触发数据可用性告警。</strong> 在缺少组合输入与阈值的情况下，今日VaR状态应标记为 <code>UNKNOWN / CONTROL BREACH</code>，不得作为“未突破阈值”处理。</li>\n<li><strong>主要风险贡献者：无法做经验证归因。</strong> 需在拿到持仓和风险模型输入后，用组件VaR、边际VaR和压力损失排序确认；当前任何证券、行业或因子层面的贡献排名都不具备审计基础。</li>\n</ol>\n<h2>VaR状态表</h2>\n<table>\n<thead>\n<tr>\n<th>项目</th>\n<th>今日结果</th>\n<th>风控判断</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>估值日期</td>\n<td>2026-07-23</td>\n<td>已锚定</td>\n</tr>\n<tr>\n<td>组合VaR</td>\n<td>N/A</td>\n<td>缺少持仓与风险模型输入</td>\n</tr>\n<tr>\n<td>VaR阈值</td>\n<td>N/A</td>\n<td>缺少授权阈值或限额文件</td>\n</tr>\n<tr>\n<td>阈值利用率</td>\n<td>N/A</td>\n<td>无法计算</td>\n</tr>\n<tr>\n<td>是否突破阈值</td>\n<td>UNKNOWN</td>\n<td>不能确认“未突破”；按控制异常升级</td>\n</tr>\n<tr>\n<td>主要风险贡献者</td>\n<td>N/A</td>\n<td>缺少组件VaR/边际VaR归因</td>\n</tr>\n</tbody>\n</table>\n<h2>缺失输入</h2>\n<table>\n<thead>\n<tr>\n<th>必需输入</th>\n<th>当前状态</th>\n<th>为什么关键</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>今日完整持仓</td>\n<td>缺失</td>\n<td>决定资产权重、净敞口、杠杆和集中度</td>\n</tr>\n<tr>\n<td>价格与风险因子历史</td>\n<td>缺失</td>\n<td>决定协方差、历史模拟路径或蒙特卡洛输入</td>\n</tr>\n<tr>\n<td>VaR配置</td>\n<td>缺失</td>\n<td>至少需要置信度、持有期、回看窗口、估值口径和币种</td>\n</tr>\n<tr>\n<td>VaR阈值/限额</td>\n<td>缺失</td>\n<td>没有阈值无法判断是否突破</td>\n</tr>\n<tr>\n<td>上一轮VaR输出</td>\n<td>缺失</td>\n<td>无法确认今日变化、回测异常或模型漂移</td>\n</tr>\n<tr>\n<td>组件VaR/边际VaR</td>\n<td>缺失</td>\n<td>无法识别主要风险贡献者</td>\n</tr>\n</tbody>\n</table>\n<h2>风险贡献者归因要求</h2>\n<p>拿到数据后，今日归因应至少输出以下排序</p>\n<table>\n<thead>\n<tr>\n<th>排序口径</th>\n<th>必须输出的数字</th>\n<th>风控用途</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>组件VaR</td>\n<td>Top 10头寸、行业、国家/地区、币种、因子贡献</td>\n<td>识别绝对尾部损失来源</td>\n</tr>\n<tr>\n<td>边际VaR</td>\n<td>每增加1单位风险敞口带来的VaR增量</td>\n<td>指导减仓优先级</td>\n</tr>\n<tr>\n<td>增量VaR</td>\n<td>移除单一头寸或风险桶后的VaR变化</td>\n<td>检查分散化收益与集中风险</td>\n</tr>\n<tr>\n<td>压力损失</td>\n<td>利率、信用利差、权益贝塔、汇率、波动率冲击下的P&amp;L</td>\n<td>捕捉非正态和相关性上升风险</td>\n</tr>\n</tbody>\n</table>\n<h2>今日处置</h2>\n<table>\n<thead>\n<tr>\n<th>优先级</th>\n<th>行动</th>\n<th>负责人</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>高</td>\n<td>在VaR运行系统中补齐2026-07-23持仓、限额、模型配置和最新VaR输出</td>\n<td>风险数据/投组运营</td>\n</tr>\n<tr>\n<td>高</td>\n<td>在VaR状态从 <code>UNKNOWN</code> 改为已验证前，禁止将今日状态报为“未突破阈值”</td>\n<td>chief-risk</td>\n</tr>\n<tr>\n<td>正常</td>\n<td>补跑组件VaR、边际VaR、增量VaR和核心压力测试</td>\n<td>风险模型</td>\n</tr>\n<tr>\n<td>正常</td>\n<td>将最终Top风险贡献者与任何阈值突破原因追加到本文件</td>\n<td>chief-risk</td>\n</tr>\n</tbody>\n</table>\n<h2>引用与审计记录</h2>\n<table>\n<thead>\n<tr>\n<th>编号</th>\n<th>来源</th>\n<th>结果</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>[1]</td>\n<td>shell：<code>系统日期锚</code></td>\n<td><code>2026-07-23</code></td>\n</tr>\n<tr>\n<td>[2]</td>\n<td>工作区文件扫描：<code>rg --files</code></td>\n<td>未返回业务输入文件</td>\n</tr>\n<tr>\n<td>[3]</td>\n<td>工作区文件扫描：<code>find . -maxdepth 3 -type f -print</code></td>\n<td>仅发现 <code>.git</code> 下的仓库元数据</td>\n</tr>\n</tbody>\n</table>\n<h2>结论</h2>\n<p>截至2026-07-23，本工作区没有足够输入来计算或验证组合今日VaR，也没有阈值文件可用于突破判断。风控口径应将今日状态列为 <code>UNKNOWN / CONTROL BREACH</code>，并立即补齐数据后重跑VaR与贡献者归因。</p>"
+}

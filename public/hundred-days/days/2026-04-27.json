@@ -4,7 +4,7 @@
   "dayNumber": 6,
   "status": "recorded",
   "headline": "算力分配格局重塑：在模型层多极化下对GPU与ASIC供应逻辑的压力测试",
-  "summary": "当日归档 3 份公开研究，20 条研究讨论和 3 个 thesis 证据事件；研究密度最高的方向为中国资产与市场结构。",
+  "summary": "当日归档 3 份公开研究，20 条研究讨论和 2 个 thesis 证据事件；研究密度最高的方向为中国资产与市场结构。",
   "dominantTopic": {
     "id": "china-assets",
     "labelZh": "中国资产与市场结构",
@@ -22,12 +22,12 @@
     ],
     "count": 2
   },
-  "activityScore": 69,
+  "activityScore": 68,
   "metrics": {
     "reports": 3,
     "researchThreads": 20,
     "researchNotes": 185,
-    "thesisEvents": 3,
+    "thesisEvents": 2,
     "personaEvents": 0,
     "readerMemos": 0,
     "recaps": 0,
@@ -280,8 +280,8 @@
         "GOOGL",
         "TSM",
         "AVGO",
-        "AMD",
-        "AAPL"
+        "AAPL",
+        "TSLA"
       ]
     },
     {
@@ -289,9 +289,9 @@
       "title": "2026年AI芯片竞争格局：NVIDIA Rubin对阵云巨头ASIC",
       "titleEn": "Practical research topic: 2026年AI芯片竞争格局：NVIDIA Rubin对阵云巨头ASIC",
       "href": "/investor/theses/thesis-d1f5e35b43/",
-      "laneId": "lane_f44cf45c8649",
-      "lane": "AI 算力半导体",
-      "laneHref": "/investor/lanes/ai-compute-semiconductors/",
+      "laneId": "lane_f1a271385aff",
+      "lane": "先进封装/HBM4 闸门",
+      "laneHref": "/investor/lanes/advanced-packaging-and-hbm4-gate/",
       "direction": "conflicting",
       "directionLabel": "分歧",
       "conviction": 67,
@@ -311,66 +311,12 @@
       "stockTickers": [
         "NVDA",
         "TSM",
-        "META",
         "MU",
-        "000660.KS",
-        "AMD",
-        "AVGO"
-      ]
-    },
-    {
-      "id": "thesis-a10279b001",
-      "title": "面对 Meta 自建 Meta Compute 算力集群的传闻，Nebius (NBIS) 的 270 亿美元合同是否仍具备护城河？散户…",
-      "titleEn": "Practical research topic: 面对 Meta 自建 Meta Compute 算力集群的传闻，Nebius (NBIS) 的 270 亿美元合同是否仍具备护城河？散户…",
-      "href": "/investor/theses/thesis-a10279b001/",
-      "laneId": "lane_f44cf45c8649",
-      "lane": "AI 算力半导体",
-      "laneHref": "/investor/lanes/ai-compute-semiconductors/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 66,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "算力分配格局重塑：在模型层多极化下对GPU与ASIC供应逻辑的压力测试",
-          "summary": "算力分配格局重塑：在模型层多极化下对GPU与ASIC供应逻辑的压力测试 既有研究记录 — TMT行业分析师 — 工作日期 2026-06-01（亚洲/新加坡） 立场：stress-test（在prior research...",
-          "href": "/investor/reports/archive-c3a93e363a17/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "META",
-        "NVDA",
-        "TSM",
-        "AMD",
-        "AVGO",
         "000660.KS"
       ]
     }
   ],
   "lanes": [
-    {
-      "id": "lane_f44cf45c8649",
-      "title": "AI 算力半导体",
-      "href": "/investor/lanes/ai-compute-semiconductors/",
-      "thesisCount": 2,
-      "eventCount": 2,
-      "convictionTotal": 133,
-      "stockTickers": [
-        "NVDA",
-        "TSM",
-        "META",
-        "MU",
-        "000660.KS",
-        "AMD",
-        "AVGO"
-      ],
-      "avgConviction": 67
-    },
     {
       "id": "lane_f21fc181388a",
       "title": "Mag7 AI 平台再分层",
@@ -386,35 +332,38 @@
         "GOOGL",
         "TSM",
         "AVGO",
-        "AMD",
-        "AAPL"
+        "AAPL",
+        "TSLA"
       ],
       "avgConviction": 70
+    },
+    {
+      "id": "lane_f1a271385aff",
+      "title": "先进封装/HBM4 闸门",
+      "href": "/investor/lanes/advanced-packaging-and-hbm4-gate/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "convictionTotal": 67,
+      "stockTickers": [
+        "NVDA",
+        "TSM",
+        "MU",
+        "000660.KS"
+      ],
+      "avgConviction": 67
     }
   ],
   "stocks": [
-    {
-      "ticker": "META",
-      "name": "Meta Platforms",
-      "market": "US",
-      "href": "/investor/stocks/META/",
-      "thesisCount": 3,
-      "eventCount": 3,
-      "lanes": [
-        "Mag7 AI 平台再分层",
-        "AI 算力半导体"
-      ]
-    },
     {
       "ticker": "NVDA",
       "name": "NVIDIA",
       "market": "US",
       "href": "/investor/stocks/NVDA/",
-      "thesisCount": 3,
-      "eventCount": 3,
+      "thesisCount": 2,
+      "eventCount": 2,
       "lanes": [
         "Mag7 AI 平台再分层",
-        "AI 算力半导体"
+        "先进封装/HBM4 闸门"
       ]
     },
     {
@@ -422,46 +371,22 @@
       "name": "TSMC",
       "market": "US ADR",
       "href": "/investor/stocks/TSM/",
-      "thesisCount": 3,
-      "eventCount": 3,
-      "lanes": [
-        "Mag7 AI 平台再分层",
-        "AI 算力半导体"
-      ]
-    },
-    {
-      "ticker": "AVGO",
-      "name": "Broadcom",
-      "market": "US",
-      "href": "/investor/stocks/AVGO/",
-      "thesisCount": 3,
-      "eventCount": 3,
-      "lanes": [
-        "Mag7 AI 平台再分层",
-        "AI 算力半导体"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "name": "AMD",
-      "market": "US",
-      "href": "/investor/stocks/AMD/",
-      "thesisCount": 3,
-      "eventCount": 3,
-      "lanes": [
-        "Mag7 AI 平台再分层",
-        "AI 算力半导体"
-      ]
-    },
-    {
-      "ticker": "000660.KS",
-      "name": "SK hynix",
-      "market": "Korea",
-      "href": "/investor/stocks/000660.KS/",
       "thesisCount": 2,
       "eventCount": 2,
       "lanes": [
-        "AI 算力半导体"
+        "Mag7 AI 平台再分层",
+        "先进封装/HBM4 闸门"
+      ]
+    },
+    {
+      "ticker": "META",
+      "name": "Meta Platforms",
+      "market": "US",
+      "href": "/investor/stocks/META/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "Mag7 AI 平台再分层"
       ]
     },
     {
@@ -498,10 +423,32 @@
       ]
     },
     {
+      "ticker": "AVGO",
+      "name": "Broadcom",
+      "market": "US",
+      "href": "/investor/stocks/AVGO/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "Mag7 AI 平台再分层"
+      ]
+    },
+    {
       "ticker": "AAPL",
       "name": "Apple",
       "market": "US",
       "href": "/investor/stocks/AAPL/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "Mag7 AI 平台再分层"
+      ]
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla",
+      "market": "US",
+      "href": "/investor/stocks/TSLA/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
@@ -516,7 +463,18 @@
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
-        "AI 算力半导体"
+        "先进封装/HBM4 闸门"
+      ]
+    },
+    {
+      "ticker": "000660.KS",
+      "name": "SK hynix",
+      "market": "Korea",
+      "href": "/investor/stocks/000660.KS/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "先进封装/HBM4 闸门"
       ]
     }
   ],

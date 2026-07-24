@@ -9,6 +9,7 @@ const stats = panorama.stats || {};
 const narrative = panorama.narrative || {};
 const changes = panorama.weeklyChanges || { actionChanges: [], laneChanges: [], thesisChanges: [], newSources: [] };
 const audit = panorama.audit || { checks: [] };
+const weeklyPortfolio = panorama.weeklyPortfolio || { holdings: [], laneWeights: [], stanceCounts: {} };
 const sourcePayload = JSON.stringify({ sources: panorama.sourceLedger || [] }).replaceAll("<", "\\u003c");
 const maxLaneEvents = Math.max(1, ...panorama.lanes.map((lane) => lane.weeklyEvents || 0));
 const maxClusterShare = Math.max(1, ...panorama.clusters.map((cluster) => cluster.share || 0));
@@ -39,6 +40,7 @@ const searchText = (...items) => String(items.filter(Boolean).join(" ")).replace
             <a href="#calls">本周结论</a>
             <a href="#changes">环比变化</a>
             <a href="#tensions">分歧与触发器</a>
+            <a href="#a-share-book">A股百股组合</a>
             <a href="#sources">来源账本</a>
             <a href="/investor/">返回研究台</a>
             {panorama.artifacts?.docx && <a href={panorama.artifacts.docx}>Word</a>}
@@ -60,6 +62,7 @@ const searchText = (...items) => String(items.filter(Boolean).join(" ")).replace
         <a href="#sources"><span>Sources</span><strong>{panorama.sourceLedger?.length || 0}</strong><em>公开报告账本</em></a>
         <a href="#evidence"><span>Evidence</span><strong>{panorama.evidenceLedger?.length || 0}</strong><em>支持与反向证据</em></a>
         <a href="#changes"><span>Changes</span><strong>{(changes.actionChanges?.length || 0) + (changes.laneChanges?.length || 0)}</strong><em>相对上周的变化</em></a>
+        <a href="#a-share-book"><span>A-share Book</span><strong>{weeklyPortfolio.count || 0}</strong><em>周度研究组合</em></a>
         <a href="#quality"><span>Quality</span><strong>{audit.completenessScore || 0}</strong><em>{audit.warnings || 0} warnings</em></a>
       </section>
 
@@ -218,6 +221,51 @@ const searchText = (...items) => String(items.filter(Boolean).join(" ")).replace
             ))}
           </div>
         </div>
+      </section>
+
+      <section class="panorama-section weekly-portfolio-section" id="a-share-book">
+        <div class="panorama-section-head">
+          <span>100-stock A-share Research Book</span>
+          <h2>A股百股研究组合</h2>
+          <p>{weeklyPortfolio.methodology}</p>
+        </div>
+        <div class="weekly-portfolio-summary">
+          <div><span>Stocks</span><strong>{weeklyPortfolio.count || 0}</strong><em>纯 A 股公司</em></div>
+          <div><span>Weight</span><strong>{weeklyPortfolio.totalWeightPct || 0}%</strong><em>研究权重归一化</em></div>
+          <div><span>Top Theses</span><strong>{panorama.houseTheses.length}</strong><em>本周主导论点</em></div>
+          <div><span>Top Lanes</span><strong>{panorama.laneAllocation.length}</strong><em>本周主导赛道</em></div>
+        </div>
+        <div class="weekly-portfolio-lanes">
+          {(weeklyPortfolio.laneWeights || []).map((lane, index) => (
+            <a href={lane.href}>
+              <span>#{index + 1}</span>
+              <strong>{lane.lane}</strong>
+              <i><b style={`width:${Math.min(100, Math.max(4, Number(lane.weightPct || 0) * 5))}%`}></b></i>
+              <em>{Number(lane.weightPct || 0).toFixed(2)}% · {lane.stockCount} stocks</em>
+            </a>
+          ))}
+        </div>
+        <div class="weekly-portfolio-table" role="table" aria-label="A股百股研究组合">
+          <div class="weekly-portfolio-row is-head" role="row">
+            <span>Rank</span><span>Stock</span><span>Stance</span><span>Primary lane</span><span>Evidence</span><span>Weight</span>
+          </div>
+          {(weeklyPortfolio.holdings || []).map((holding) => (
+            <a
+              class={`weekly-portfolio-row stance-${holding.stance} panorama-searchable`}
+              href={holding.href}
+              role="row"
+              data-search={searchText(holding.ticker, holding.name, holding.stanceLabel, holding.lanes?.map((lane) => lane.lane).join(" "), holding.roles?.join(" "))}
+            >
+              <span>{String(holding.rank).padStart(3, "0")}</span>
+              <span><strong>{holding.ticker}</strong><em>{holding.name}</em></span>
+              <span><strong>{holding.stanceLabel}</strong><em>{holding.researchScore} score</em></span>
+              <span>{holding.lanes?.[0]?.lane || "待映射"}</span>
+              <span>{holding.evidenceCount} evidence · {holding.thesisCount} theses</span>
+              <span><strong>{Number(holding.weightPct || 0).toFixed(2)}%</strong></span>
+            </a>
+          ))}
+        </div>
+        <p class="weekly-portfolio-disclaimer">{weeklyPortfolio.disclaimer}</p>
       </section>
 
       <section class="panorama-section">

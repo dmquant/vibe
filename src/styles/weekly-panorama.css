@@ -929,6 +929,183 @@
   display: none;
 }
 
+.weekly-portfolio-section {
+  border-top: 5px solid var(--blue);
+}
+
+.weekly-portfolio-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.weekly-portfolio-summary > div {
+  display: grid;
+  gap: 5px;
+  border-top: 2px solid var(--panorama-strong);
+  background: var(--panorama-surface);
+  padding: 11px;
+}
+
+.weekly-portfolio-summary span,
+.weekly-portfolio-summary em,
+.weekly-portfolio-lanes span,
+.weekly-portfolio-lanes em,
+.weekly-portfolio-row,
+.weekly-portfolio-disclaimer {
+  font-family: var(--font-mono);
+}
+
+.weekly-portfolio-summary span,
+.weekly-portfolio-lanes span {
+  color: var(--blue);
+  font-size: 9px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.weekly-portfolio-summary strong {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.weekly-portfolio-summary em,
+.weekly-portfolio-lanes em {
+  color: var(--panorama-muted);
+  font-size: 9px;
+  font-style: normal;
+}
+
+.weekly-portfolio-lanes {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0 0 16px;
+}
+
+.weekly-portfolio-lanes a {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 5px 8px;
+  border: 1px solid var(--panorama-line);
+  border-radius: 4px;
+  background: var(--panorama-surface);
+  padding: 9px;
+}
+
+.weekly-portfolio-lanes strong {
+  min-width: 0;
+  overflow: hidden;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.weekly-portfolio-lanes i {
+  grid-column: 1 / -1;
+  display: block;
+  height: 5px;
+  background: var(--panorama-panel);
+}
+
+.weekly-portfolio-lanes i b {
+  display: block;
+  height: 100%;
+  background: var(--green);
+}
+
+.weekly-portfolio-lanes em {
+  grid-column: 1 / -1;
+}
+
+.weekly-portfolio-table {
+  overflow-x: auto;
+  border: 1px solid var(--panorama-line);
+  background: var(--panorama-panel);
+}
+
+.weekly-portfolio-row {
+  --stance-tone: var(--yellow);
+  display: grid;
+  grid-template-columns: 64px minmax(180px, 1.2fr) minmax(120px, .75fr) minmax(180px, 1fr) minmax(170px, 1fr) 76px;
+  gap: 12px;
+  align-items: center;
+  min-width: 900px;
+  min-height: 54px;
+  border-bottom: 1px solid var(--panorama-line);
+  border-left: 4px solid var(--stance-tone);
+  background: var(--panorama-panel);
+  padding: 7px 10px 7px 8px;
+  font-size: 10px;
+  line-height: 1.35;
+}
+
+.weekly-portfolio-row:last-child {
+  border-bottom: 0;
+}
+
+.weekly-portfolio-row:not(.is-head):hover {
+  background: var(--panorama-surface);
+  text-decoration: none;
+}
+
+.weekly-portfolio-row.is-head {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  min-height: 38px;
+  border-left-color: var(--panorama-strong);
+  background: var(--panorama-ink);
+  color: var(--panorama-bg);
+  font-size: 9px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.weekly-portfolio-row.stance-overweight { --stance-tone: var(--green); }
+.weekly-portfolio-row.stance-selective { --stance-tone: var(--blue); }
+.weekly-portfolio-row.stance-underweight,
+.weekly-portfolio-row.stance-avoid { --stance-tone: var(--red); }
+
+.weekly-portfolio-row > span {
+  min-width: 0;
+}
+
+.weekly-portfolio-row > span:nth-child(2),
+.weekly-portfolio-row > span:nth-child(3) {
+  display: grid;
+  gap: 2px;
+}
+
+.weekly-portfolio-row strong {
+  color: var(--stance-tone);
+  font-size: 11px;
+}
+
+.weekly-portfolio-row.is-head strong {
+  color: inherit;
+}
+
+.weekly-portfolio-row em {
+  overflow: hidden;
+  color: var(--panorama-muted);
+  font-size: 9px;
+  font-style: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.weekly-portfolio-disclaimer {
+  margin: 12px 0 0;
+  border-left: 4px solid var(--orange);
+  background: var(--panorama-surface);
+  color: var(--panorama-muted);
+  padding: 10px 12px;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
 @media (max-width: 1180px) {
   .house-grid,
   .decision-note-grid,
@@ -954,6 +1131,10 @@
   }
 
   .stock-sheet-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .weekly-portfolio-lanes {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -987,6 +1168,11 @@
   .stock-sheet-grid,
   .process-grid,
   .scorecard-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .weekly-portfolio-summary,
+  .weekly-portfolio-lanes {
     grid-template-columns: 1fr;
   }
 

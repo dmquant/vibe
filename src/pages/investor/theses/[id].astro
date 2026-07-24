@@ -25,6 +25,7 @@ export function getStaticPaths() {
 
 const { thesis, lane, relatedStocks, oddsSurface } = Astro.props;
 const events = (thesis.timeline || []).flatMap((group) => (group.events || []).map((event) => ({ ...event, date: group.date }))).slice(0, 18);
+const stance = thesis.stance || {};
 ---
 
 <!doctype html>
@@ -51,8 +52,8 @@ const events = (thesis.timeline || []).flatMap((group) => (group.events || []).m
           </div>
         </div>
         <aside class="network-privacy">
-          <span>{thesis.directionLabel}</span>
-          <p>{thesis.investableFocus || thesis.practical?.portfolioUse || "候选标的仅用于研究跟踪，不构成交易建议。"}</p>
+          <span>{stance.labelZh || thesis.directionLabel}</span>
+          <p>{stance.rationaleZh || thesis.investableFocus || thesis.practical?.portfolioUse || "候选标的仅用于研究跟踪，不构成交易建议。"}</p>
         </aside>
       </section>
 
@@ -89,6 +90,12 @@ const events = (thesis.timeline || []).flatMap((group) => (group.events || []).m
         </article>
         <aside class="detail-panel">
           <div class="section-mini-head"><span>Evidence Mix</span><strong>证据结构</strong></div>
+          <div class={`evidence-stance stance-${stance.code || "neutral"}`}>
+            <span>Evidence stance · {stance.source || "deterministic"}</span>
+            <strong>{stance.labelZh || "中性"} <em>{stance.score ?? thesis.conviction} / 100</em></strong>
+            <p>{stance.rationaleZh || "等待更多可验证事件更新研究立场。"}</p>
+            <small>confidence {stance.confidence ?? 0}</small>
+          </div>
           <div class="thesis-meter"><i style={`width:${pct(thesis.conviction)}`}></i><strong>{thesis.conviction}</strong></div>
           <div class="thesis-counters">
             <span>支持 {thesis.supports}</span>

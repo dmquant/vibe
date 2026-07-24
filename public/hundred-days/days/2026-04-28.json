@@ -24,12 +24,12 @@
     ],
     "count": 1
   },
-  "activityScore": 77,
+  "activityScore": 75,
   "metrics": {
     "reports": 1,
     "researchThreads": 32,
     "researchNotes": 289,
-    "thesisEvents": 1,
+    "thesisEvents": 2,
     "personaEvents": 0,
     "readerMemos": 0,
     "recaps": 0,
@@ -313,6 +313,40 @@
   ],
   "thesisEvents": [
     {
+      "id": "thesis-f62e29bf1c",
+      "title": "在SpaceX将于6月12日进行股权交易且美债高企下，太空经济是否已告别散户概念炒作，转向由SpaceX价格伞、国防合同与垂直整合总装定…",
+      "titleEn": "Practical research topic: 在SpaceX将于6月12日进行股权交易且美债高企下，太空经济是否已告别散户概念炒作，转向由SpaceX价格伞、国防合同与垂直整合总装定…",
+      "href": "/investor/theses/thesis-f62e29bf1c/",
+      "laneId": "lane_54700cb9537f",
+      "lane": "商业航天/卫星直连",
+      "laneHref": "/investor/lanes/commercial-space-and-direct-to-device-satellite/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 81,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "国家资本开支节奏与政策性输血能否止住商业航天配套商回款链失血？",
+          "summary": "研究研究记录 · 全球宏观分析师 · 工作日期 2026-07-11（Asia/Singapore） 根主题： 空间经济由小众主题转为指数权重后的估值锚定与杠杆重组风险。 主题： 面向低轨星座运营主体（垣信 / 中国...",
+          "href": "/investor/reports/archive-f148f66a2766/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "600118.SH",
+        "RKLB",
+        "ASTS",
+        "RDW",
+        "LUNR",
+        "IRDM",
+        "300762.SZ"
+      ]
+    },
+    {
       "id": "thesis-2a12467f9b",
       "title": "卫星电源壁垒需由发射节奏和单星价值量持续验证",
       "titleEn": "Satellite-power barriers require continued validation through launch cadence and content per spacecraft",
@@ -352,29 +386,41 @@
       "id": "lane_54700cb9537f",
       "title": "商业航天/卫星直连",
       "href": "/investor/lanes/commercial-space-and-direct-to-device-satellite/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 74,
+      "thesisCount": 2,
+      "eventCount": 2,
+      "convictionTotal": 155,
       "stockTickers": [
+        "600118.SH",
         "RKLB",
         "ASTS",
-        "600118.SH",
-        "IRDM",
-        "LUNR",
         "RDW",
+        "LUNR",
+        "IRDM",
+        "300762.SZ",
         "LMT"
       ],
-      "avgConviction": 74
+      "avgConviction": 78
     }
   ],
   "stocks": [
+    {
+      "ticker": "600118.SH",
+      "name": "中国卫星",
+      "market": "A-share",
+      "href": "/investor/stocks/600118.SH/",
+      "thesisCount": 2,
+      "eventCount": 2,
+      "lanes": [
+        "商业航天/卫星直连"
+      ]
+    },
     {
       "ticker": "RKLB",
       "name": "Rocket Lab",
       "market": "US",
       "href": "/investor/stocks/RKLB/",
-      "thesisCount": 1,
-      "eventCount": 1,
+      "thesisCount": 2,
+      "eventCount": 2,
       "lanes": [
         "商业航天/卫星直连"
       ]
@@ -384,41 +430,8 @@
       "name": "AST SpaceMobile",
       "market": "US",
       "href": "/investor/stocks/ASTS/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "商业航天/卫星直连"
-      ]
-    },
-    {
-      "ticker": "600118.SH",
-      "name": "中国卫星",
-      "market": "A-share",
-      "href": "/investor/stocks/600118.SH/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "商业航天/卫星直连"
-      ]
-    },
-    {
-      "ticker": "IRDM",
-      "name": "Iridium",
-      "market": "US",
-      "href": "/investor/stocks/IRDM/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "商业航天/卫星直连"
-      ]
-    },
-    {
-      "ticker": "LUNR",
-      "name": "Intuitive Machines",
-      "market": "US",
-      "href": "/investor/stocks/LUNR/",
-      "thesisCount": 1,
-      "eventCount": 1,
+      "thesisCount": 2,
+      "eventCount": 2,
       "lanes": [
         "商业航天/卫星直连"
       ]
@@ -428,6 +441,39 @@
       "name": "Redwire",
       "market": "US",
       "href": "/investor/stocks/RDW/",
+      "thesisCount": 2,
+      "eventCount": 2,
+      "lanes": [
+        "商业航天/卫星直连"
+      ]
+    },
+    {
+      "ticker": "LUNR",
+      "name": "Intuitive Machines",
+      "market": "US",
+      "href": "/investor/stocks/LUNR/",
+      "thesisCount": 2,
+      "eventCount": 2,
+      "lanes": [
+        "商业航天/卫星直连"
+      ]
+    },
+    {
+      "ticker": "IRDM",
+      "name": "Iridium",
+      "market": "US",
+      "href": "/investor/stocks/IRDM/",
+      "thesisCount": 2,
+      "eventCount": 2,
+      "lanes": [
+        "商业航天/卫星直连"
+      ]
+    },
+    {
+      "ticker": "300762.SZ",
+      "name": "上海瀚讯",
+      "market": "A-share",
+      "href": "/investor/stocks/300762.SZ/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [

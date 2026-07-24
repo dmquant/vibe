@@ -16,6 +16,9 @@ const marketOptions = [...new Set(stocks.map((item) => item.market || "Unknown")
 const laneOptions = [...(network.lanes || [])]
   .sort((a, b) => a.titleZh.localeCompare(b.titleZh, "zh-CN"))
   .map((lane) => ({ value: lane.id, label: lane.titleZh }));
+const stanceLabels = { overweight: "超配", selective: "精选", neutral: "中性", underweight: "低配", avoid: "回避" };
+const stanceOptions = [...new Set(stocks.map((item) => item.stance?.code).filter(Boolean))]
+  .map((value) => ({ value, label: stanceLabels[value] || value }));
 const coverageOptions = [
   { value: "core", label: "10+ theses" },
   { value: "multi", label: "3+ lanes" },
@@ -68,6 +71,7 @@ const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" "
           total={stocks.length}
           placeholder="搜索 ticker、公司、市场、赛道、角色或主线..."
           filters={[
+            { key: "stance", label: "Stance", allLabel: "全部立场", options: stanceOptions },
             { key: "market", label: "Market", allLabel: "全部市场", options: marketOptions },
             { key: "lane", label: "Lane", allLabel: "全部赛道", options: laneOptions },
             { key: "coverage", label: "Coverage", allLabel: "全部覆盖", options: coverageOptions },
@@ -94,7 +98,8 @@ const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" "
                 class="registry-row stock-row"
                 href={stock.href}
                 data-registry-item
-                data-search={searchText(stock.ticker, stock.name, stock.market, stock.roles, stock.role, stock.lanes.map((lane) => [lane.lane, lane.laneEn]), stock.theses.map((thesis) => thesis.title))}
+                data-search={searchText(stock.ticker, stock.name, stock.market, stock.stance?.labelZh, stock.roles, stock.role, stock.lanes.map((lane) => [lane.lane, lane.laneEn]), stock.theses.map((thesis) => thesis.title))}
+                data-stance={stock.stance?.code || ""}
                 data-market={stock.market || "Unknown"}
                 data-lane={stock.lanes.map((lane) => lane.id).join("|")}
                 data-coverage={coverage}
@@ -107,7 +112,7 @@ const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" "
                 data-odds={Number.isFinite(pHouse) ? pHouse * 100 : -1}
               >
                 <div class="registry-row-status">
-                  <span class="registry-row-label">{stock.market || "Market"}</span>
+                  <span class="registry-row-label">{stock.market || "Market"} · {stock.stance?.labelZh || "中性"}</span>
                   <strong>{stock.ticker}</strong>
                   <em>{stock.lastSeen}</em>
                 </div>
@@ -123,7 +128,7 @@ const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" "
                   <span><b>{stock.lanes.length}</b>lanes</span>
                   <span><b>{stock.evidenceCount || 0}</b>evidence</span>
                   <span><b>{stock.reportCount || 0}</b>reports</span>
-                  <span class="metric-positive"><b>{Math.round(Number(stock.confidence || 0) * 100)}%</b>mapping</span>
+                  <span class="metric-positive"><b>{stock.stance?.score ?? Math.round(Number(stock.confidence || 0) * 100)}</b>stance</span>
                   <span class="metric-odds"><b>{probabilityLabel(line20d?.pHouse)}</b>20D linked</span>
                 </div>
               </a>

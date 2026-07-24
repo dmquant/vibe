@@ -24,6 +24,8 @@ export function getStaticPaths() {
 
 const { lane, oddsSurface } = Astro.props;
 const maxAction = Math.max(1, ...lane.actions.map((item) => item[1]));
+const stance = lane.stance || lane.deterministicStance || {};
+const deterministicStance = lane.deterministicStance || stance;
 const stanceLabels = { overweight: "超配", selective: "精选", neutral: "中性", underweight: "低配", avoid: "回避" };
 const roleLabels = { core: "核心", watch: "观察", hedge: "对冲" };
 ---
@@ -52,8 +54,8 @@ const roleLabels = { core: "核心", watch: "观察", hedge: "对冲" };
           </div>
         </div>
         <aside class="network-privacy">
-          <span>Lane Contract</span>
-          <p>{lane.laneEn || "公开赛道页只展示压缩后的主线、标的和公共证据，不暴露内部运行材料。"}</p>
+          <span>{stance.labelZh || "Lane Contract"}</span>
+          <p>{stance.rationaleZh || lane.laneEn || "公开赛道页只展示压缩后的主线、标的和公共证据，不暴露内部运行材料。"}</p>
         </aside>
       </section>
 
@@ -115,6 +117,15 @@ const roleLabels = { core: "核心", watch: "观察", hedge: "对冲" };
         </article>
         <aside class="detail-panel">
           <div class="section-mini-head"><span>Action Mix</span><strong>动作分布</strong></div>
+          <div class={`evidence-stance stance-${stance.code || "neutral"}`}>
+            <span>{stance.source === "structured_model_review" ? "Model overlay" : "Evidence stance"}</span>
+            <strong>{stance.labelZh || "中性"} <em>{stance.score ?? lane.avgScore} / 100</em></strong>
+            <p>{stance.rationaleZh || "等待更多可验证事件更新赛道立场。"}</p>
+            <small>
+              confidence {stance.confidence ?? 0}
+              {stance.deterministicCode ? ` · evidence baseline ${deterministicStance.labelZh || stance.deterministicCode}` : ""}
+            </small>
+          </div>
           <div class="source-bars">
             {lane.actions.map(([label, count]) => (
               <div class="source-row">

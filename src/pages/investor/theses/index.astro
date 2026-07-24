@@ -23,6 +23,9 @@ const laneOptions = [...new Map(theses.map((item) => [item.laneHref, { value: it
   .sort((a, b) => a.label.localeCompare(b.label, "zh-CN"));
 const directionOptions = [...new Map(theses.map((item) => [item.direction, { value: item.direction, label: item.directionLabel || item.direction }])).values()]
   .filter((item) => item.value);
+const stanceLabels = { overweight: "超配", selective: "精选", neutral: "中性", underweight: "低配", avoid: "回避" };
+const stanceOptions = [...new Set(theses.map((item) => item.stance?.code).filter(Boolean))]
+  .map((value) => ({ value, label: stanceLabels[value] || value }));
 const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" ");
 ---
 
@@ -67,6 +70,7 @@ const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" "
           total={theses.length}
           placeholder="搜索主线、赛道、ticker、核心观点或证伪条件..."
           filters={[
+            { key: "stance", label: "Stance", allLabel: "全部立场", options: stanceOptions },
             { key: "action", label: "Action", allLabel: "全部动作", options: actionOptions },
             { key: "lane", label: "Lane", allLabel: "全部赛道", options: laneOptions },
             { key: "direction", label: "State", allLabel: "全部状态", options: directionOptions },
@@ -93,10 +97,11 @@ const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" "
                 class="registry-row thesis-row"
                 href={thesisPath(thesis)}
                 data-registry-item
-                data-search={searchText(thesis.title, thesis.titleEn, thesis.coreView, thesis.lane, thesis.stockTickers, thesis.practical?.invalidationSignals)}
+                data-search={searchText(thesis.title, thesis.titleEn, thesis.coreView, thesis.lane, thesis.stockTickers, thesis.stance?.labelZh, thesis.stance?.labelEn, thesis.practical?.invalidationSignals)}
                 data-action={thesis.practical?.actionLabel || ""}
                 data-lane={thesis.laneHref || ""}
                 data-direction={thesis.direction || ""}
+                data-stance={thesis.stance?.code || ""}
                 data-latest={thesis.lastSeen || ""}
                 data-score={score}
                 data-evidence={thesis.eventCount || 0}
@@ -104,7 +109,7 @@ const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" "
                 data-risk={riskPct}
               >
                 <div class="registry-row-status">
-                  <span class="registry-row-label">{thesis.directionLabel || thesis.direction}</span>
+                  <span class="registry-row-label">{thesis.stance?.labelZh || "中性"} · {thesis.directionLabel || thesis.direction}</span>
                   <strong>{thesis.practical?.actionLabel || "观察等待"}</strong>
                   <em>{thesis.lastSeen}</em>
                 </div>
@@ -121,7 +126,7 @@ const searchText = (...values) => values.flat(Infinity).filter(Boolean).join(" "
                   <span><b>{thesis.eventCount || 0}</b>evidence</span>
                   <span class="metric-risk"><b>{riskPct}%</b>risk share</span>
                   <span class="metric-odds"><b>{probabilityLabel(line20d?.pHouse)}</b>20D house</span>
-                  <span><b>{thesis.supports || 0}</b>support</span>
+                  <span><b>{thesis.stance?.score ?? thesis.supports ?? 0}</b>stance</span>
                   <span><b>{(thesis.stockUniverse || []).length}</b>stocks</span>
                 </div>
               </a>
