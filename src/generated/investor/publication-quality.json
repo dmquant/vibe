@@ -1,20 +1,20 @@
 {
   "schema": "vibe.ai_institute.publication_quality.v1",
   "version": "publication-quality.2026-07-12.1",
-  "generatedAt": "2026-07-25T00:22:31.075Z",
-  "checkedAt": "2026-07-25T00:22:31.075Z",
-  "asOfDate": "2026-07-24",
-  "sourceHash": "7a4a66f1ceb2f766",
+  "generatedAt": "2026-07-26T13:21:34.783Z",
+  "checkedAt": "2026-07-26T13:21:34.783Z",
+  "asOfDate": "2026-07-26",
+  "sourceHash": "3fb964ef89212031",
   "status": "degraded",
   "statusLabel": "有警告",
   "counts": {
     "error": 0,
-    "warning": 2,
+    "warning": 1,
     "info": 0,
     "marketQuotes": 0,
-    "theses": 182,
-    "lanes": 52,
-    "stocks": 255,
+    "theses": 185,
+    "lanes": 53,
+    "stocks": 258,
     "workspaceFocus": 12
   },
   "gates": {
@@ -32,16 +32,6 @@
       "message": "Daily dashboard contains no current market quotes",
       "context": {
         "strict": false
-      }
-    },
-    {
-      "severity": "warning",
-      "code": "REPORT_DATE_DRIFT",
-      "message": "Workspace source date differs from its report contract",
-      "context": {
-        "href": "/investor/reports/archive-7be695f0b362/",
-        "workspaceDate": "2026-07-24",
-        "reportDate": ""
       }
     }
   ],
