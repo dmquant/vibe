@@ -4,7 +4,7 @@
   "dayNumber": 9,
   "status": "recorded",
   "headline": "财金协同背景下的A股杠铃策略落地",
-  "summary": "当日归档 15 份公开研究，22 条研究讨论和 3 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
+  "summary": "当日归档 16 份公开研究，22 条研究讨论和 2 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
   "dominantTopic": {
     "id": "macro-rates",
     "labelZh": "宏观、通胀与利率",
@@ -22,20 +22,36 @@
       "pce",
       "美元"
     ],
-    "count": 14
+    "count": 15
   },
   "activityScore": 71,
   "metrics": {
-    "reports": 15,
+    "reports": 16,
     "researchThreads": 22,
     "researchNotes": 176,
-    "thesisEvents": 3,
+    "thesisEvents": 2,
     "personaEvents": 1,
     "readerMemos": 0,
     "recaps": 0,
     "deepResearch": 0
   },
   "reports": [
+    {
+      "id": "archive-16e63d680981",
+      "title": "盈利预测",
+      "date": "2026-04-30",
+      "href": "/investor/reports/archive-16e63d680981/",
+      "analyst": "未识别",
+      "analystId": "",
+      "category": "其他",
+      "excerpt": "本报告以 BMY 2025A Form 10-K、 Q1 2026 业绩公告和 05 三表模型.md 为建模基础； 2025A 收入为 48,194 百万美元、Growth Portfolio 收入为 26,409 百万美元、Legacy Portfolio 收入为 21,785...",
+      "tags": [
+        "AI",
+        "通胀",
+        "宏观"
+      ],
+      "sourceKind": "archive"
+    },
     {
       "id": "archive-06f09214c0b7",
       "title": "地方债发行放量节奏与央行流动性对冲的窗口期及溢出压力测试",
@@ -480,36 +496,6 @@
   ],
   "thesisEvents": [
     {
-      "id": "thesis-db003202fc",
-      "title": "国有大行分红韧性是建立在本币贬值副作用之上的“幻觉”；在-230bp利差背景下，汇率调整后的总收益无法支撑红利策略作为防御性资产的逻辑，…",
-      "titleEn": "Practical research topic: 国有大行分红韧性是建立在本币贬值副作用之上的“幻觉”；在-230bp利差背景下，汇率调整后的总收益无法支撑红利策略作为防御性资产的逻辑，…",
-      "href": "/investor/theses/thesis-db003202fc/",
-      "laneId": "lane_c40c2ce413ec",
-      "lane": "人民币/美元流动性敏感资产",
-      "laneHref": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 77,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "2026-05-17 研究研究记录：PBoC 反应函数对 USDCNH L1/L2 触发体系的失效压力测试",
-          "summary": "2026-05-17 研究研究记录：PBoC 反应函数对 USDCNH L1/L2 触发体系的失效压力测试",
-          "href": "/investor/reports/archive-88d586a1b4f2/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "3988.HK",
-        "UUP",
-        "FXI"
-      ]
-    },
-    {
       "id": "thesis-23a6e00e51",
       "title": "BOJ 正常化超调不是基础概率最高的宏观意外，但它最符合“JPY 升值 + CNH 贬值 + SPX 跌破零 gamma”的三条件 FX…",
       "titleEn": "Practical research topic: BOJ 正常化超调不是基础概率最高的宏观意外，但它最符合“JPY 升值 + CNH 贬值 + SPX 跌破零 gamma”的三条件 FX…",
@@ -574,20 +560,6 @@
   ],
   "lanes": [
     {
-      "id": "lane_c40c2ce413ec",
-      "title": "人民币/美元流动性敏感资产",
-      "href": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 77,
-      "stockTickers": [
-        "3988.HK",
-        "UUP",
-        "FXI"
-      ],
-      "avgConviction": 77
-    },
-    {
       "id": "lane_b29e1d216a21",
       "title": "信用再融资/私募信贷",
       "href": "/investor/lanes/credit-refinancing-and-private-debt/",
@@ -619,39 +591,6 @@
     }
   ],
   "stocks": [
-    {
-      "ticker": "3988.HK",
-      "name": "中国银行",
-      "market": "HK",
-      "href": "/investor/stocks/3988.HK/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "人民币/美元流动性敏感资产"
-      ]
-    },
-    {
-      "ticker": "UUP",
-      "name": "Invesco DB US Dollar Index Bullish Fund",
-      "market": "US ETF",
-      "href": "/investor/stocks/UUP/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "人民币/美元流动性敏感资产"
-      ]
-    },
-    {
-      "ticker": "FXI",
-      "name": "iShares China Large-Cap ETF",
-      "market": "US ETF",
-      "href": "/investor/stocks/FXI/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "人民币/美元流动性敏感资产"
-      ]
-    },
     {
       "ticker": "KRE",
       "name": "SPDR S&P Regional Banking ETF",
@@ -782,7 +721,7 @@
         "pce",
         "美元"
       ],
-      "count": 14
+      "count": 15
     },
     {
       "id": "china-assets",
@@ -805,7 +744,7 @@
   "analystCounts": [
     {
       "label": "未识别",
-      "count": 13
+      "count": 14
     },
     {
       "label": "信用分析师",
@@ -815,7 +754,7 @@
   "categoryCounts": [
     {
       "label": "其他",
-      "count": 13
+      "count": 14
     },
     {
       "label": "风控与合规",

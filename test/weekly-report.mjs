@@ -2,11 +2,13 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { buildStockIndex, buildStockRouteIndex } from "../src/lib/investor-market.js";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const generated = JSON.parse(fs.readFileSync(path.join(root, "src/generated/investor/weekly-report.json"), "utf8"));
 const published = JSON.parse(fs.readFileSync(path.join(root, "public/investor-data/weekly-report.json"), "utf8"));
 const index = JSON.parse(fs.readFileSync(path.join(root, "src/generated/investor/weekly-report-index.json"), "utf8"));
+const network = JSON.parse(fs.readFileSync(path.join(root, "src/generated/investor/research-network.json"), "utf8"));
 const page = fs.readFileSync(path.join(root, "src/pages/investor/panorama/index.astro"), "utf8");
 const editionPage = fs.readFileSync(path.join(root, "src/pages/investor/panorama/[week].astro"), "utf8");
 const adapter = fs.readFileSync(path.join(root, "src/lib/weekly-panorama.js"), "utf8");
@@ -38,6 +40,15 @@ assert.ok(generated.weeklyPortfolio.holdings.every((holding) =>
   && holding.name
   && holding.name !== holding.ticker));
 assert.ok(Math.abs(generated.weeklyPortfolio.holdings.reduce((sum, holding) => sum + Number(holding.weightPct || 0), 0) - 100) < 0.001);
+
+const activeTickers = new Set(buildStockIndex(network).map((stock) => stock.ticker));
+const stockRoutes = new Map(buildStockRouteIndex(network, [generated]).map((stock) => [stock.ticker, stock]));
+for (const holding of generated.weeklyPortfolio.holdings) {
+  assert.ok(stockRoutes.has(holding.ticker), `weekly portfolio stock route is missing: ${holding.ticker}`);
+  if (!activeTickers.has(holding.ticker)) {
+    assert.equal(stockRoutes.get(holding.ticker).archivedPortfolio.latestWeek, generated.week);
+  }
+}
 
 assert.match(page, /id="calls"/);
 assert.match(page, /id="changes"/);

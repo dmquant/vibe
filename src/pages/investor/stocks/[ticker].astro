@@ -2,14 +2,15 @@
 import BaseHead from "../../../components/BaseHead.astro";
 import Header from "../../../components/Header.astro";
 import OddsSurface from "../../../components/investor/OddsSurface.astro";
-import { readOddsBoard, readResearchNetwork } from "../../../lib/investor-generated.js";
-import { buildOddsIndexes, buildStockIndex, formatDate, lanePath, pct, thesisPath } from "../../../lib/investor-market.js";
+import { listWeeklyReports, readOddsBoard, readResearchNetwork, readWeeklyReport } from "../../../lib/investor-generated.js";
+import { buildOddsIndexes, buildStockRouteIndex, formatDate, lanePath, pct, thesisPath } from "../../../lib/investor-market.js";
 import "../../../styles/research-network.css";
 
 export function getStaticPaths() {
   const network = readResearchNetwork();
   const odds = buildOddsIndexes(readOddsBoard()).stocks;
-  return buildStockIndex(network).map((stock) => ({
+  const weeklyReports = [readWeeklyReport(), ...listWeeklyReports()];
+  return buildStockRouteIndex(network, weeklyReports).map((stock) => ({
     params: { ticker: stock.slug },
     props: { stock, oddsSurface: odds.get(stock.ticker) || null },
   }));
@@ -33,13 +34,19 @@ const stance = stock.stance || {};
     <main class="research-network detail-page">
       <section class="network-hero">
         <div>
-          <div class="network-kicker">AI Institute · Stock</div>
+          <div class="network-kicker">AI Institute · {stock.archivedPortfolio ? "Archived Stock" : "Stock"}</div>
           <h1>{stock.ticker}</h1>
-          <p>{stock.name} · {stock.market}。该页展示该标的作为研究入口时连接到哪些赛道、主线和证据事件。</p>
+          <p>
+            {stock.name} · {stock.market}。
+            {stock.archivedPortfolio
+              ? `该标的来自 ${stock.archivedPortfolio.weeks.join("、")} 已发布周度研究组合，当前不在活跃市场本体中。`
+              : "该页展示该标的作为研究入口时连接到哪些赛道、主线和证据事件。"}
+          </p>
           <div class="network-actions">
             <a href="/investor/research-network/">研究网络</a>
             <a href="/investor/odds/">赔率盘</a>
             <a href="/investor/portfolio/">组合追踪</a>
+            {stock.archivedPortfolio && <a href={stock.archivedPortfolio.latestHref}>{stock.archivedPortfolio.latestWeek} 周报</a>}
             {stock.lanes.slice(0, 2).map((lane) => <a href={lane.href}>{lane.lane}</a>)}
           </div>
         </div>

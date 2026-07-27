@@ -4,7 +4,7 @@
   "dayNumber": 24,
   "status": "recorded",
   "headline": "首席经济学家压力测试：宏观裂缝下的\"受保护 Beta\"配置 (2026-05-15)",
-  "summary": "当日归档 133 份公开研究，16 条研究讨论和 49 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
+  "summary": "当日归档 133 份公开研究，16 条研究讨论和 46 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
   "dominantTopic": {
     "id": "macro-rates",
     "labelZh": "宏观、通胀与利率",
@@ -29,7 +29,7 @@
     "reports": 133,
     "researchThreads": 16,
     "researchNotes": 128,
-    "thesisEvents": 49,
+    "thesisEvents": 46,
     "personaEvents": 0,
     "readerMemos": 0,
     "recaps": 0,
@@ -2609,8 +2609,8 @@
       "stockTickers": [
         "BABA",
         "BIDU",
-        "MSFT",
         "CRM",
+        "MSFT",
         "9988.HK",
         "NOW",
         "0700.HK",
@@ -2837,48 +2837,6 @@
       ]
     },
     {
-      "id": "thesis-075017003b",
-      "title": "AI 资本开支通过能源、设备和利率进入通胀定价",
-      "titleEn": "AI capex enters inflation pricing through energy, equipment, and rates",
-      "href": "/investor/theses/thesis-075017003b/",
-      "laneId": "lane_c0702fb29e08",
-      "lane": "AI 再通胀/利率敏感资产",
-      "laneHref": "/investor/lanes/ai-reflation-and-rate-sensitive-assets/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 59,
-      "supports": 0,
-      "risks": 2,
-      "neutral": 0,
-      "eventCount": 2,
-      "events": [
-        {
-          "title": "首席经济学家压力测试：宏观裂缝下的\"受保护 Beta\"配置 (2026-05-15)",
-          "summary": "首席经济学家压力测试：宏观裂缝下的\"受保护 Beta\"配置 (2026-05-15)",
-          "href": "/investor/reports/archive-1f569d4153fb/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        },
-        {
-          "title": "PBoC 流动性与 AI 硬件 CapEx 持续性",
-          "summary": "分析师： 中国宏观分析师 (china-macro) 日期： 2026-05-15 立场： 压力测试 任务： PBoC 流动性环境的收紧是否会通过压制下游需求或提高融资成本，从而终结光模块与加速器板块的业绩改善周期？",
-          "href": "/investor/reports/archive-251c0d9fdfbb/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "META",
-        "MSFT",
-        "AMZN",
-        "GOOGL",
-        "XLE",
-        "TLT",
-        "XLU",
-        "NVDA"
-      ]
-    },
-    {
       "id": "thesis-241377c8be",
       "title": "显示材料改善需由利润率与现金流共同确认",
       "titleEn": "Display-material recovery requires joint margin and cash-flow confirmation",
@@ -2917,6 +2875,50 @@
         "000660.KS",
         "002916.SZ",
         "600552.SH"
+      ]
+    },
+    {
+      "id": "thesis-ffa474a3f2",
+      "title": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
+      "titleEn": "Edge AI and agent desktops are extending compute competition from cloud to chips, OS, and consumer-electronics supply...",
+      "href": "/investor/theses/thesis-ffa474a3f2/",
+      "laneId": "lane_74d352e86208",
+      "lane": "端侧 AI/Agent 桌面",
+      "laneHref": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 59,
+      "supports": 1,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 2,
+      "events": [
+        {
+          "title": "专有数据飞轮：替代数据如何支撑AI工作流的可衡量闭环",
+          "summary": "既有研究记录— 专有数据飞轮：替代数据如何支撑AI工作流的可衡量闭环",
+          "href": "/investor/reports/archive-d342457563e8/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        },
+        {
+          "title": "2026-05-15 TMT报告：美国K型消费是否已向中国消费电子供应链传导压力？",
+          "summary": "2026-05-15 TMT报告：美国K型消费是否已向中国消费电子供应链传导压力？ 日期： 2026-05-15 Asia/Singapore 分析师： TMT行业分析师 [ID: tmt-analyst] 研究线程标识：已归档",
+          "href": "/investor/reports/archive-82e1f8cc9725/",
+          "stance": "supports",
+          "stanceLabel": "支持"
+        }
+      ],
+      "stockTickers": [
+        "MSFT",
+        "NVDA",
+        "AAPL",
+        "META",
+        "ARM",
+        "QCOM",
+        "AMD",
+        "AMZN",
+        "GOOGL",
+        "TSM"
       ]
     },
     {
@@ -3105,36 +3107,6 @@
       ],
       "stockTickers": [
         "3988.HK",
-        "UUP",
-        "FXI"
-      ]
-    },
-    {
-      "id": "thesis-54a65a88ba",
-      "title": "请把5月CPI、10年美债4.75%/5.00%、HY OAS 286bp、VIX 16/20和USD/CNH 7.25防线放进一个触发…",
-      "titleEn": "Practical research topic: 请把5月CPI、10年美债4.75%/5.00%、HY OAS 286bp、VIX 16/20和USD/CNH 7.25防线放进一个触发…",
-      "href": "/investor/theses/thesis-54a65a88ba/",
-      "laneId": "lane_c40c2ce413ec",
-      "lane": "人民币/美元流动性敏感资产",
-      "laneHref": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 77,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "外汇策略师压力测试：USD/CNH 7.30 关口与 3% 对冲悖论 (2026-05-15)",
-          "summary": "外汇策略师压力测试：USD/CNH 7.30 关口与 3% 对冲悖论 (2026-05-15)",
-          "href": "/investor/reports/archive-2a0b6233defa/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "3988.HK",
         "9988.HK",
         "0700.HK"
       ]
@@ -3165,8 +3137,8 @@
       ],
       "stockTickers": [
         "3988.HK",
-        "UUP",
-        "FXI"
+        "9988.HK",
+        "0700.HK"
       ]
     },
     {
@@ -3234,76 +3206,6 @@
       ]
     },
     {
-      "id": "thesis-70daf87262",
-      "title": "A 股红利与硬科技杠铃仍是政策、利率和风险偏好的组合表达",
-      "titleEn": "A-share dividend and hard-tech barbell remains the portfolio expression of policy, rates, and risk appetite",
-      "href": "/investor/theses/thesis-70daf87262/",
-      "laneId": "lane_bf77fb66551a",
-      "lane": "A股红利/硬科技杠铃",
-      "laneHref": "/investor/lanes/a-share-dividend-and-hard-tech-barbell/",
-      "direction": "strengthening",
-      "directionLabel": "强化",
-      "conviction": 71,
-      "supports": 1,
-      "risks": 0,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "A股流动性分析：‘红利+AI’杠铃策略的容量与资金流向支持评估",
-          "summary": "A股流动性分析：‘红利+AI’杠铃策略的容量与资金流向支持评估 日期： 2026-05-15 分析师： ashare-strategist (A股策略师) 立场： 支持 (Support)",
-          "href": "/investor/reports/archive-d338e863639f/",
-          "stance": "supports",
-          "stanceLabel": "支持"
-        }
-      ],
-      "stockTickers": [
-        "600900.SH",
-        "601398.SH",
-        "601088.SH",
-        "600941.SH",
-        "588000.SH",
-        "688981.SH",
-        "510880.SH"
-      ]
-    },
-    {
-      "id": "thesis-ce29facfbd",
-      "title": "中国资产定价仍受政策、流动性与风险偏好共同驱动",
-      "titleEn": "China asset pricing remains driven by policy, liquidity, and risk appetite",
-      "href": "/investor/theses/thesis-ce29facfbd/",
-      "laneId": "lane_a8d9c69ae883",
-      "lane": "中国权益流动性",
-      "laneHref": "/investor/lanes/china-equity-liquidity/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 70,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "A股/港股策略：代理化商业替代数据复合体投资指南",
-          "summary": "A股/港股策略：代理化商业替代数据复合体投资指南 日期： 2026年5月15日 策略师： ashare-strategist（A股策略师） 立场： 综合（Synthesize）",
-          "href": "/investor/reports/archive-f394c1428da6/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "300308.SZ",
-        "0700.HK",
-        "9988.HK",
-        "510300.SH",
-        "600900.SH",
-        "159915.SZ",
-        "2800.HK",
-        "588000.SH",
-        "META"
-      ]
-    },
-    {
       "id": "thesis-8c5a9690a0",
       "title": "Mag7 在 AI 时代从平台垄断转向基础设施再分层",
       "titleEn": "Mag7 shifts from platform monopoly to AI infrastructure re-layering",
@@ -3337,6 +3239,40 @@
         "AVGO",
         "AAPL",
         "TSLA"
+      ]
+    },
+    {
+      "id": "thesis-70daf87262",
+      "title": "A 股红利与硬科技杠铃仍是政策、利率和风险偏好的组合表达",
+      "titleEn": "A-share dividend and hard-tech barbell remains the portfolio expression of policy, rates, and risk appetite",
+      "href": "/investor/theses/thesis-70daf87262/",
+      "laneId": "lane_bf77fb66551a",
+      "lane": "A股红利/硬科技杠铃",
+      "laneHref": "/investor/lanes/a-share-dividend-and-hard-tech-barbell/",
+      "direction": "strengthening",
+      "directionLabel": "强化",
+      "conviction": 69,
+      "supports": 1,
+      "risks": 0,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "A股流动性分析：‘红利+AI’杠铃策略的容量与资金流向支持评估",
+          "summary": "A股流动性分析：‘红利+AI’杠铃策略的容量与资金流向支持评估 日期： 2026-05-15 分析师： ashare-strategist (A股策略师) 立场： 支持 (Support)",
+          "href": "/investor/reports/archive-d338e863639f/",
+          "stance": "supports",
+          "stanceLabel": "支持"
+        }
+      ],
+      "stockTickers": [
+        "600900.SH",
+        "601398.SH",
+        "601088.SH",
+        "600941.SH",
+        "588000.SH",
+        "688981.SH",
+        "510880.SH"
       ]
     },
     {
@@ -3480,7 +3416,7 @@
       "laneHref": "/investor/lanes/crypto-and-high-beta-risk-appetite/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 65,
+      "conviction": 64,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -3496,12 +3432,49 @@
       ],
       "stockTickers": [
         "MSTR",
-        "IBIT",
         "COIN",
+        "IBIT",
         "HOOD",
         "LOW",
         "MARA",
         "RIOT"
+      ]
+    },
+    {
+      "id": "thesis-603a5f7966",
+      "title": "A 股硬科技与科创50的复苏需要订单、融资盘和指数结构共振",
+      "titleEn": "A-share hard tech and STAR50 recovery needs orders, margin positioning, and index structure to align",
+      "href": "/investor/theses/thesis-603a5f7966/",
+      "laneId": "lane_4cc1e74d8e5f",
+      "lane": "A股硬科技/科创50",
+      "laneHref": "/investor/lanes/a-share-hard-tech-and-star50/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 61,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "A股AI算力硬件：巨头CapEx压力下的毛利率压力测试",
+          "summary": "分析师：TMT 行业分析师 · 立场：stress-test（压力测试） - 工作日期：2026-05-15（亚洲/新加坡） - 上游文件说明：运行时 research note 的报告文件未出现在工作区，论点基于 session brief...",
+          "href": "/investor/reports/archive-df377e7650dc/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "688256.SH",
+        "300308.SZ",
+        "688981.SH",
+        "0981.HK",
+        "688041.SH",
+        "600900.SH",
+        "688008.SH",
+        "588000.SH",
+        "300394.SZ",
+        "300502.SZ"
       ]
     },
     {
@@ -3514,7 +3487,7 @@
       "laneHref": "/investor/lanes/us-rates-and-dollar-repricing/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 64,
+      "conviction": 61,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -3532,58 +3505,21 @@
         "CME",
         "TLT",
         "GLD",
-        "JPM",
         "IEF",
         "AEP",
         "META",
-        "AMZN"
+        "AMZN",
+        "NVDA"
       ]
     },
     {
-      "id": "thesis-603a5f7966",
-      "title": "A 股硬科技与科创50的复苏需要订单、融资盘和指数结构共振",
-      "titleEn": "A-share hard tech and STAR50 recovery needs orders, margin positioning, and index structure to align",
-      "href": "/investor/theses/thesis-603a5f7966/",
-      "laneId": "lane_4cc1e74d8e5f",
-      "lane": "A股硬科技/科创50",
-      "laneHref": "/investor/lanes/a-share-hard-tech-and-star50/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 62,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "A股AI算力硬件：巨头CapEx压力下的毛利率压力测试",
-          "summary": "分析师：TMT 行业分析师 · 立场：stress-test（压力测试） - 工作日期：2026-05-15（亚洲/新加坡） - 上游文件说明：运行时 research note 的报告文件未出现在工作区，论点基于 session brief...",
-          "href": "/investor/reports/archive-df377e7650dc/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "300308.SZ",
-        "688256.SH",
-        "688981.SH",
-        "0981.HK",
-        "688041.SH",
-        "600900.SH",
-        "688008.SH",
-        "300394.SZ",
-        "588000.SH",
-        "300502.SZ"
-      ]
-    },
-    {
-      "id": "thesis-ffa474a3f2",
-      "title": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
-      "titleEn": "Edge AI and agent desktops are extending compute competition from cloud to chips, OS, and consumer-electronics supply...",
-      "href": "/investor/theses/thesis-ffa474a3f2/",
-      "laneId": "lane_74d352e86208",
-      "lane": "端侧 AI/Agent 桌面",
-      "laneHref": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
+      "id": "thesis-075017003b",
+      "title": "AI 资本开支通过能源、设备和利率进入通胀定价",
+      "titleEn": "AI capex enters inflation pricing through energy, equipment, and rates",
+      "href": "/investor/theses/thesis-075017003b/",
+      "laneId": "lane_c0702fb29e08",
+      "lane": "AI 再通胀/利率敏感资产",
+      "laneHref": "/investor/lanes/ai-reflation-and-rate-sensitive-assets/",
       "direction": "conflicting",
       "directionLabel": "分歧",
       "conviction": 59,
@@ -3593,24 +3529,22 @@
       "eventCount": 1,
       "events": [
         {
-          "title": "专有数据飞轮：替代数据如何支撑AI工作流的可衡量闭环",
-          "summary": "既有研究记录— 专有数据飞轮：替代数据如何支撑AI工作流的可衡量闭环",
-          "href": "/investor/reports/archive-d342457563e8/",
+          "title": "首席经济学家压力测试：宏观裂缝下的\"受保护 Beta\"配置 (2026-05-15)",
+          "summary": "首席经济学家压力测试：宏观裂缝下的\"受保护 Beta\"配置 (2026-05-15)",
+          "href": "/investor/reports/archive-1f569d4153fb/",
           "stance": "risk",
           "stanceLabel": "风险"
         }
       ],
       "stockTickers": [
-        "MSFT",
-        "NVDA",
-        "AAPL",
         "META",
-        "ARM",
-        "QCOM",
-        "AMD",
+        "MSFT",
         "AMZN",
         "GOOGL",
-        "AVGO"
+        "XLE",
+        "XLU",
+        "NVDA",
+        "TLT"
       ]
     },
     {
@@ -3623,7 +3557,7 @@
       "laneHref": "/investor/lanes/cpo-optical-modules-and-high-speed-interconnect/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 58,
+      "conviction": 59,
       "supports": 1,
       "risks": 0,
       "neutral": 0,
@@ -3695,7 +3629,7 @@
       "laneHref": "/investor/lanes/credit-refinancing-and-private-debt/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 53,
+      "conviction": 55,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -3713,9 +3647,10 @@
         "KRE",
         "JPM",
         "META",
+        "NVDA",
         "BX",
-        "KKR",
         "ARES",
+        "KKR",
         "APO"
       ]
     },
@@ -3753,38 +3688,6 @@
         "688617.SH",
         "SDGR",
         "DHR"
-      ]
-    },
-    {
-      "id": "thesis-e26ef69f73",
-      "title": "风险核查与证据质量是主题交易的必要过滤器",
-      "titleEn": "Risk verification and evidence quality are necessary filters for theme trades",
-      "href": "/investor/theses/thesis-e26ef69f73/",
-      "laneId": "lane_ccbe817778d1",
-      "lane": "组合风控/证据质量",
-      "laneHref": "/investor/lanes/portfolio-risk-and-evidence-quality/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 47,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "Warsh 式上涨 vs. 最后的狂欢",
-          "summary": "Warsh 式上涨 vs. 最后的狂欢 分析师： 全球宏观 (global-macro) · 日期： 2026-05-15（亚洲/新加坡） · 研究记录 · 立场： initial",
-          "href": "/investor/reports/archive-16e855d918ac/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "CME",
-        "CBOE",
-        "IBKR",
-        "VIRT",
-        "SH"
       ]
     }
   ],
@@ -3833,9 +3736,9 @@
       "id": "lane_c40c2ce413ec",
       "title": "人民币/美元流动性敏感资产",
       "href": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
-      "thesisCount": 5,
-      "eventCount": 5,
-      "convictionTotal": 387,
+      "thesisCount": 4,
+      "eventCount": 4,
+      "convictionTotal": 310,
       "stockTickers": [
         "3988.HK",
         "UUP",
@@ -3843,7 +3746,7 @@
         "9988.HK",
         "0700.HK"
       ],
-      "avgConviction": 77
+      "avgConviction": 78
     },
     {
       "id": "lane_e4f90acbf804",
@@ -3876,8 +3779,8 @@
       "stockTickers": [
         "BABA",
         "BIDU",
-        "MSFT",
         "CRM",
+        "MSFT",
         "9988.HK",
         "NOW",
         "0700.HK",
@@ -3892,7 +3795,7 @@
       "href": "/investor/lanes/cpo-optical-modules-and-high-speed-interconnect/",
       "thesisCount": 2,
       "eventCount": 3,
-      "convictionTotal": 139,
+      "convictionTotal": 140,
       "stockTickers": [
         "300308.SZ",
         "300394.SZ",
@@ -3949,21 +3852,23 @@
       "avgConviction": 65
     },
     {
-      "id": "lane_c0702fb29e08",
-      "title": "AI 再通胀/利率敏感资产",
-      "href": "/investor/lanes/ai-reflation-and-rate-sensitive-assets/",
+      "id": "lane_74d352e86208",
+      "title": "端侧 AI/Agent 桌面",
+      "href": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
       "thesisCount": 1,
       "eventCount": 2,
       "convictionTotal": 59,
       "stockTickers": [
-        "META",
         "MSFT",
+        "NVDA",
+        "AAPL",
+        "META",
+        "ARM",
+        "QCOM",
+        "AMD",
         "AMZN",
         "GOOGL",
-        "XLE",
-        "TLT",
-        "XLU",
-        "NVDA"
+        "TSM"
       ],
       "avgConviction": 59
     },
@@ -3999,44 +3904,6 @@
       "avgConviction": 78
     },
     {
-      "id": "lane_bf77fb66551a",
-      "title": "A股红利/硬科技杠铃",
-      "href": "/investor/lanes/a-share-dividend-and-hard-tech-barbell/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 71,
-      "stockTickers": [
-        "600900.SH",
-        "601398.SH",
-        "601088.SH",
-        "600941.SH",
-        "588000.SH",
-        "688981.SH",
-        "510880.SH"
-      ],
-      "avgConviction": 71
-    },
-    {
-      "id": "lane_a8d9c69ae883",
-      "title": "中国权益流动性",
-      "href": "/investor/lanes/china-equity-liquidity/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 70,
-      "stockTickers": [
-        "300308.SZ",
-        "0700.HK",
-        "9988.HK",
-        "510300.SH",
-        "600900.SH",
-        "159915.SZ",
-        "2800.HK",
-        "588000.SH",
-        "META"
-      ],
-      "avgConviction": 70
-    },
-    {
       "id": "lane_f21fc181388a",
       "title": "Mag7 AI 平台再分层",
       "href": "/investor/lanes/mag7-ai-platform-re-layering/",
@@ -4055,6 +3922,24 @@
         "TSLA"
       ],
       "avgConviction": 70
+    },
+    {
+      "id": "lane_bf77fb66551a",
+      "title": "A股红利/硬科技杠铃",
+      "href": "/investor/lanes/a-share-dividend-and-hard-tech-barbell/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "convictionTotal": 69,
+      "stockTickers": [
+        "600900.SH",
+        "601398.SH",
+        "601088.SH",
+        "600941.SH",
+        "588000.SH",
+        "688981.SH",
+        "510880.SH"
+      ],
+      "avgConviction": 69
     },
     {
       "id": "lane_2d0dcf520f87",
@@ -4077,34 +3962,15 @@
       "href": "/investor/lanes/crypto-and-high-beta-risk-appetite/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 65,
+      "convictionTotal": 64,
       "stockTickers": [
         "MSTR",
-        "IBIT",
         "COIN",
+        "IBIT",
         "HOOD",
         "LOW",
         "MARA",
         "RIOT"
-      ],
-      "avgConviction": 65
-    },
-    {
-      "id": "lane_1c216bd29875",
-      "title": "美债利率/美元再定价",
-      "href": "/investor/lanes/us-rates-and-dollar-repricing/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 64,
-      "stockTickers": [
-        "CME",
-        "TLT",
-        "GLD",
-        "JPM",
-        "IEF",
-        "AEP",
-        "META",
-        "AMZN"
       ],
       "avgConviction": 64
     },
@@ -4114,39 +3980,56 @@
       "href": "/investor/lanes/a-share-hard-tech-and-star50/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 62,
+      "convictionTotal": 61,
       "stockTickers": [
-        "300308.SZ",
         "688256.SH",
+        "300308.SZ",
         "688981.SH",
         "0981.HK",
         "688041.SH",
         "600900.SH",
         "688008.SH",
-        "300394.SZ",
         "588000.SH",
+        "300394.SZ",
         "300502.SZ"
       ],
-      "avgConviction": 62
+      "avgConviction": 61
     },
     {
-      "id": "lane_74d352e86208",
-      "title": "端侧 AI/Agent 桌面",
-      "href": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
+      "id": "lane_1c216bd29875",
+      "title": "美债利率/美元再定价",
+      "href": "/investor/lanes/us-rates-and-dollar-repricing/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "convictionTotal": 61,
+      "stockTickers": [
+        "CME",
+        "TLT",
+        "GLD",
+        "IEF",
+        "AEP",
+        "META",
+        "AMZN",
+        "NVDA"
+      ],
+      "avgConviction": 61
+    },
+    {
+      "id": "lane_c0702fb29e08",
+      "title": "AI 再通胀/利率敏感资产",
+      "href": "/investor/lanes/ai-reflation-and-rate-sensitive-assets/",
       "thesisCount": 1,
       "eventCount": 1,
       "convictionTotal": 59,
       "stockTickers": [
-        "MSFT",
-        "NVDA",
-        "AAPL",
         "META",
-        "ARM",
-        "QCOM",
-        "AMD",
+        "MSFT",
         "AMZN",
         "GOOGL",
-        "AVGO"
+        "XLE",
+        "XLU",
+        "NVDA",
+        "TLT"
       ],
       "avgConviction": 59
     },
@@ -4175,17 +4058,18 @@
       "href": "/investor/lanes/credit-refinancing-and-private-debt/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 53,
+      "convictionTotal": 55,
       "stockTickers": [
         "KRE",
         "JPM",
         "META",
+        "NVDA",
         "BX",
-        "KKR",
         "ARES",
+        "KKR",
         "APO"
       ],
-      "avgConviction": 53
+      "avgConviction": 55
     },
     {
       "id": "lane_2eefe4e126c6",
@@ -4206,22 +4090,6 @@
         "DHR"
       ],
       "avgConviction": 51
-    },
-    {
-      "id": "lane_ccbe817778d1",
-      "title": "组合风控/证据质量",
-      "href": "/investor/lanes/portfolio-risk-and-evidence-quality/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 47,
-      "stockTickers": [
-        "CME",
-        "CBOE",
-        "IBKR",
-        "VIRT",
-        "SH"
-      ],
-      "avgConviction": 47
     }
   ],
   "stocks": [
@@ -4230,8 +4098,8 @@
       "name": "NVIDIA",
       "market": "US",
       "href": "/investor/stocks/NVDA/",
-      "thesisCount": 18,
-      "eventCount": 29,
+      "thesisCount": 20,
+      "eventCount": 31,
       "lanes": [
         "AI 算力半导体",
         "先进封装/HBM4 闸门",
@@ -4245,8 +4113,8 @@
       "name": "TSMC",
       "market": "US ADR",
       "href": "/investor/stocks/TSM/",
-      "thesisCount": 12,
-      "eventCount": 16,
+      "thesisCount": 13,
+      "eventCount": 18,
       "lanes": [
         "AI 算力半导体",
         "先进封装/HBM4 闸门",
@@ -4260,14 +4128,14 @@
       "name": "Meta Platforms",
       "market": "US",
       "href": "/investor/stocks/META/",
-      "thesisCount": 13,
-      "eventCount": 15,
+      "thesisCount": 12,
+      "eventCount": 14,
       "lanes": [
         "AI 算力半导体",
-        "中国权益流动性",
         "Mag7 AI 平台再分层",
         "美债利率/美元再定价",
-        "AI 再通胀/利率敏感资产"
+        "AI 再通胀/利率敏感资产",
+        "CPO/光模块/高速互联"
       ]
     },
     {
@@ -4275,14 +4143,14 @@
       "name": "中际旭创",
       "market": "A-share",
       "href": "/investor/stocks/300308.SZ/",
-      "thesisCount": 7,
-      "eventCount": 14,
+      "thesisCount": 6,
+      "eventCount": 13,
       "lanes": [
         "CPO/光模块/高速互联",
-        "中国权益流动性",
         "指数调仓/被动资金事件",
         "信创/国产 IT 栈",
-        "中国云/国产算力栈"
+        "中国云/国产算力栈",
+        "A股硬科技/科创50"
       ]
     },
     {
@@ -4336,7 +4204,7 @@
         "Mag7 AI 平台再分层",
         "AI 算力半导体",
         "AI 再通胀/利率敏感资产",
-        "端侧 AI/Agent 桌面"
+        "CPO/光模块/高速互联"
       ]
     },
     {
@@ -4349,7 +4217,6 @@
       "lanes": [
         "人民币/美元流动性敏感资产",
         "低价模型/AI 软件利润池",
-        "中国权益流动性",
         "指数调仓/被动资金事件",
         "中国云/国产算力栈"
       ]
@@ -4364,7 +4231,6 @@
       "lanes": [
         "人民币/美元流动性敏感资产",
         "低价模型/AI 软件利润池",
-        "中国权益流动性",
         "指数调仓/被动资金事件",
         "中国云/国产算力栈"
       ]
@@ -4384,30 +4250,29 @@
       ]
     },
     {
-      "ticker": "AVGO",
-      "name": "Broadcom",
-      "market": "US",
-      "href": "/investor/stocks/AVGO/",
-      "thesisCount": 8,
-      "eventCount": 9,
-      "lanes": [
-        "CPO/光模块/高速互联",
-        "AI 算力半导体",
-        "Mag7 AI 平台再分层",
-        "端侧 AI/Agent 桌面"
-      ]
-    },
-    {
       "ticker": "AMD",
       "name": "AMD",
       "market": "US",
       "href": "/investor/stocks/AMD/",
       "thesisCount": 7,
-      "eventCount": 8,
+      "eventCount": 9,
       "lanes": [
         "AI 算力半导体",
         "AI 基建 TCO/能效筛选",
         "端侧 AI/Agent 桌面"
+      ]
+    },
+    {
+      "ticker": "AVGO",
+      "name": "Broadcom",
+      "market": "US",
+      "href": "/investor/stocks/AVGO/",
+      "thesisCount": 7,
+      "eventCount": 8,
+      "lanes": [
+        "CPO/光模块/高速互联",
+        "AI 算力半导体",
+        "Mag7 AI 平台再分层"
       ]
     },
     {
@@ -4490,17 +4355,6 @@
       ]
     },
     {
-      "ticker": "3988.HK",
-      "name": "中国银行",
-      "market": "HK",
-      "href": "/investor/stocks/3988.HK/",
-      "thesisCount": 5,
-      "eventCount": 5,
-      "lanes": [
-        "人民币/美元流动性敏感资产"
-      ]
-    },
-    {
       "ticker": "688008.SH",
       "name": "澜起科技",
       "market": "A-share",
@@ -4513,21 +4367,10 @@
       ]
     },
     {
-      "ticker": "UUP",
-      "name": "Invesco DB US Dollar Index Bullish Fund",
-      "market": "US ETF",
-      "href": "/investor/stocks/UUP/",
-      "thesisCount": 4,
-      "eventCount": 4,
-      "lanes": [
-        "人民币/美元流动性敏感资产"
-      ]
-    },
-    {
-      "ticker": "FXI",
-      "name": "iShares China Large-Cap ETF",
-      "market": "US ETF",
-      "href": "/investor/stocks/FXI/",
+      "ticker": "3988.HK",
+      "name": "中国银行",
+      "market": "HK",
+      "href": "/investor/stocks/3988.HK/",
       "thesisCount": 4,
       "eventCount": 4,
       "lanes": [
@@ -4582,30 +4425,6 @@
       ]
     },
     {
-      "ticker": "510300.SH",
-      "name": "沪深300 ETF",
-      "market": "A-share ETF",
-      "href": "/investor/stocks/510300.SH/",
-      "thesisCount": 2,
-      "eventCount": 4,
-      "lanes": [
-        "中国权益流动性",
-        "指数调仓/被动资金事件"
-      ]
-    },
-    {
-      "ticker": "2800.HK",
-      "name": "盈富基金",
-      "market": "HK ETF",
-      "href": "/investor/stocks/2800.HK/",
-      "thesisCount": 2,
-      "eventCount": 4,
-      "lanes": [
-        "中国权益流动性",
-        "指数调仓/被动资金事件"
-      ]
-    },
-    {
       "ticker": "688111.SH",
       "name": "金山办公",
       "market": "A-share",
@@ -4628,41 +4447,15 @@
       ]
     },
     {
-      "ticker": "600900.SH",
-      "name": "长江电力",
-      "market": "A-share",
-      "href": "/investor/stocks/600900.SH/",
-      "thesisCount": 3,
-      "eventCount": 3,
-      "lanes": [
-        "A股红利/硬科技杠铃",
-        "中国权益流动性",
-        "A股硬科技/科创50"
-      ]
-    },
-    {
-      "ticker": "588000.SH",
-      "name": "科创50 ETF",
-      "market": "A-share ETF",
-      "href": "/investor/stocks/588000.SH/",
-      "thesisCount": 3,
-      "eventCount": 3,
-      "lanes": [
-        "A股红利/硬科技杠铃",
-        "中国权益流动性",
-        "A股硬科技/科创50"
-      ]
-    },
-    {
-      "ticker": "TLT",
-      "name": "iShares 20+ Year Treasury Bond ETF",
-      "market": "US ETF",
-      "href": "/investor/stocks/TLT/",
+      "ticker": "AAPL",
+      "name": "Apple",
+      "market": "US",
+      "href": "/investor/stocks/AAPL/",
       "thesisCount": 2,
       "eventCount": 3,
       "lanes": [
-        "美债利率/美元再定价",
-        "AI 再通胀/利率敏感资产"
+        "Mag7 AI 平台再分层",
+        "端侧 AI/Agent 桌面"
       ]
     },
     {
@@ -4710,6 +4503,28 @@
       ]
     },
     {
+      "ticker": "2800.HK",
+      "name": "盈富基金",
+      "market": "HK ETF",
+      "href": "/investor/stocks/2800.HK/",
+      "thesisCount": 1,
+      "eventCount": 3,
+      "lanes": [
+        "指数调仓/被动资金事件"
+      ]
+    },
+    {
+      "ticker": "510300.SH",
+      "name": "沪深300 ETF",
+      "market": "A-share ETF",
+      "href": "/investor/stocks/510300.SH/",
+      "thesisCount": 1,
+      "eventCount": 3,
+      "lanes": [
+        "指数调仓/被动资金事件"
+      ]
+    },
+    {
       "ticker": "3690.HK",
       "name": "美团",
       "market": "HK",
@@ -4721,15 +4536,61 @@
       ]
     },
     {
-      "ticker": "AAPL",
-      "name": "Apple",
-      "market": "US",
-      "href": "/investor/stocks/AAPL/",
+      "ticker": "UUP",
+      "name": "Invesco DB US Dollar Index Bullish Fund",
+      "market": "US ETF",
+      "href": "/investor/stocks/UUP/",
       "thesisCount": 2,
       "eventCount": 2,
       "lanes": [
-        "Mag7 AI 平台再分层",
-        "端侧 AI/Agent 桌面"
+        "人民币/美元流动性敏感资产"
+      ]
+    },
+    {
+      "ticker": "FXI",
+      "name": "iShares China Large-Cap ETF",
+      "market": "US ETF",
+      "href": "/investor/stocks/FXI/",
+      "thesisCount": 2,
+      "eventCount": 2,
+      "lanes": [
+        "人民币/美元流动性敏感资产"
+      ]
+    },
+    {
+      "ticker": "600900.SH",
+      "name": "长江电力",
+      "market": "A-share",
+      "href": "/investor/stocks/600900.SH/",
+      "thesisCount": 2,
+      "eventCount": 2,
+      "lanes": [
+        "A股红利/硬科技杠铃",
+        "A股硬科技/科创50"
+      ]
+    },
+    {
+      "ticker": "588000.SH",
+      "name": "科创50 ETF",
+      "market": "A-share ETF",
+      "href": "/investor/stocks/588000.SH/",
+      "thesisCount": 2,
+      "eventCount": 2,
+      "lanes": [
+        "A股红利/硬科技杠铃",
+        "A股硬科技/科创50"
+      ]
+    },
+    {
+      "ticker": "TLT",
+      "name": "iShares 20+ Year Treasury Bond ETF",
+      "market": "US ETF",
+      "href": "/investor/stocks/TLT/",
+      "thesisCount": 2,
+      "eventCount": 2,
+      "lanes": [
+        "美债利率/美元再定价",
+        "AI 再通胀/利率敏感资产"
       ]
     }
   ],

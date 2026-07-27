@@ -314,6 +314,78 @@ export function buildStockIndex(input = []) {
     .sort((a, b) => b.theses.length - a.theses.length || a.ticker.localeCompare(b.ticker));
 }
 
+export function buildStockRouteIndex(network = {}, weeklyReports = []) {
+  const activeStocks = buildStockIndex(network);
+  const activeTickers = new Set(activeStocks.map((stock) => stock.ticker));
+  const thesisById = new Map((network.theses || []).map((thesis) => [thesis.id, thesis]));
+  const archivedHoldings = new Map();
+
+  for (const report of weeklyReports) {
+    for (const holding of report?.weeklyPortfolio?.holdings || []) {
+      if (!holding?.ticker || activeTickers.has(holding.ticker)) continue;
+      const week = report.week || holding.asOfDate || "historical";
+      const rows = archivedHoldings.get(holding.ticker) || new Map();
+      rows.set(week, { week, holding });
+      archivedHoldings.set(holding.ticker, rows);
+    }
+  }
+
+  const archivedStocks = [...archivedHoldings.entries()].map(([ticker, rowsByWeek]) => {
+    const rows = [...rowsByWeek.values()].sort((a, b) => String(a.week).localeCompare(String(b.week)));
+    const latest = rows.at(-1);
+    const holding = latest.holding;
+    const linkedTheses = (holding.theses || []).map((reference) => (
+      thesisById.get(reference.id) || {
+        ...reference,
+        conviction: holding.researchScore || 0,
+        lastSeen: holding.lastSeen || holding.evidenceDate || "",
+        lane: holding.lanes?.[0]?.lane || "历史周报组合",
+        practical: { actionLabel: holding.stanceLabel || "历史跟踪" },
+      }
+    ));
+    const sourceHrefs = [...new Set(rows.flatMap((row) => row.holding.sourceHrefs || []))];
+    const events = linkedTheses
+      .flatMap((thesis) => flatEvents(thesis).slice(0, 3).map((event) => ({ ...event, thesis })))
+      .sort((a, b) => String(b.date).localeCompare(String(a.date)))
+      .slice(0, 14);
+    const weeks = rows.map((row) => row.week);
+
+    return {
+      ...holding,
+      ticker,
+      slug: stockSlug(ticker),
+      href: holding.href || stockPath(ticker),
+      role: holding.roles?.[0] || "历史周报研究组合标的",
+      roles: holding.roles || [],
+      mappingSource: "published_weekly_portfolio",
+      mappings: [],
+      theses: linkedTheses,
+      lanes: holding.lanes || [],
+      events,
+      recentEvidence: sourceHrefs.map((href, index) => ({
+        href,
+        date: holding.evidenceDate || holding.lastSeen || "",
+        title: `${latest.week} 周度研究组合来源 ${index + 1}`,
+      })),
+      stance: {
+        code: holding.stance || "neutral",
+        labelZh: holding.stanceLabel || "历史周报持仓",
+        score: holding.stanceScore || 0,
+        confidence: holding.stanceConfidence || 0,
+        evidenceCount: holding.evidenceCount || 0,
+        rationaleZh: `${holding.driver || "该标的来自已发布周度研究组合。"} 当前市场本体已不再将其列为活跃标的，本页仅保留历史研究链路。`,
+      },
+      archivedPortfolio: {
+        weeks,
+        latestWeek: latest.week,
+        latestHref: `/investor/panorama/${latest.week}/`,
+      },
+    };
+  });
+
+  return [...activeStocks, ...archivedStocks.sort((a, b) => a.ticker.localeCompare(b.ticker))];
+}
+
 const marketContextIndexCache = new WeakMap();
 
 export function resolveMarketContext(ontology, reportSlug) {
