@@ -1,4 +1,6 @@
 ---
+import { operatingProof } from "../../lib/hundred-days-operating-proof.js";
+
 const { data } = Astro.props;
 const initialDay = Math.max(1, Math.min(data.dayCount, data.latestDataDay || data.currentDay || 1));
 const initialRecord = data.days.find((day) => day.dayNumber === initialDay) || data.days[0];
@@ -297,7 +299,8 @@ const episodeFilters = [
     <a href="#research-river"><span>04</span><strong class="i18n-zh">研究流</strong><strong class="i18n-en">River</strong></a>
     <a href="#episodes"><span>05</span><strong class="i18n-zh">事件库</strong><strong class="i18n-en">Episodes</strong></a>
     <a href="#institution"><span>06</span><strong class="i18n-zh">机构</strong><strong class="i18n-en">Institution</strong></a>
-    <a href="#scorecard"><span>07</span><strong class="i18n-zh">记分卡</strong><strong class="i18n-en">Scorecard</strong></a>
+    <a href="#operating-proof"><span>07</span><strong class="i18n-zh">运行证据</strong><strong class="i18n-en">Operations</strong></a>
+    <a href="#scorecard"><span>08</span><strong class="i18n-zh">记分卡</strong><strong class="i18n-en">Scorecard</strong></a>
     <a href="/investor/"><span>↗</span><strong>Live</strong></a>
   </nav>
 
@@ -575,10 +578,219 @@ const episodeFilters = [
       </div>
     </section>
 
+    <section class="century-section century-operating-section" id="operating-proof">
+      <header class="century-section-header">
+        <div>
+          <span>07 / OPERATING PROOF</span>
+          <h2 class="i18n-zh">一座研究机构，不只要会研究，还要知道自己何时没有产生价值</h2>
+          <h2 class="i18n-en">A research institution must know not only how to research, but when it produced no value.</h2>
+        </div>
+        <div class="century-operating-intro">
+          <p class="i18n-zh">{operatingProof.provenanceZh}</p>
+          <p class="i18n-en">{operatingProof.provenanceEn}</p>
+          <time datetime={operatingProof.reviewDate}>EVIDENCE REVIEW · {operatingProof.reviewDate}</time>
+        </div>
+      </header>
+
+      <div class="century-proof-legend" aria-label="Operating proof status legend">
+        {Object.entries(operatingProof.statuses).map(([key, status]) => (
+          <span class={`tone-${status.color}`} data-proof-status={key}>
+            <i aria-hidden="true"></i>
+            <strong class="i18n-zh">{status.labelZh}</strong>
+            <strong class="i18n-en">{status.labelEn}</strong>
+          </span>
+        ))}
+      </div>
+
+      <div class="century-layer-boundary" aria-label="Research scheduling execution and publication boundary">
+        <div class="tone-blue">
+          <span>WHAT / WHEN</span>
+          <strong>AI INSTITUTE</strong>
+          <p class="i18n-zh">决定研究什么、何时运行，并提交执行意图。</p>
+          <p class="i18n-en">Decides what to research, when to run, and submits execution intent.</p>
+        </div>
+        <i aria-hidden="true">→</i>
+        <div class="tone-red">
+          <span>HOW</span>
+          <strong>AGENT ROUTE</strong>
+          <p class="i18n-zh">负责排队、路由、执行、产物与恢复。</p>
+          <p class="i18n-en">Owns queues, routing, execution, artifacts, and recovery.</p>
+        </div>
+        <i aria-hidden="true">→</i>
+        <div class="tone-green">
+          <span>FOR WHOM</span>
+          <strong>VIBE</strong>
+          <p class="i18n-zh">把脱敏研究重组为人类可检查的判断。</p>
+          <p class="i18n-en">Recomposes sanitized research into inspectable human judgment.</p>
+        </div>
+      </div>
+
+      <div class="century-operating-layers">
+        {operatingProof.layers.map((layer) => (
+          <article class={`century-operating-layer tone-${layer.color}`} id={`operating-${layer.id}`}>
+            <header>
+              <span>{layer.code}</span>
+              <h3 class="i18n-zh">{layer.titleZh}</h3>
+              <h3 class="i18n-en">{layer.titleEn}</h3>
+              <p class="i18n-zh">{layer.roleZh}</p>
+              <p class="i18n-en">{layer.roleEn}</p>
+            </header>
+            <div class="century-proof-rows">
+              {layer.milestones.map((milestone, index) => {
+                const status = operatingProof.statuses[milestone.status];
+                return (
+                  <details open={index === 0}>
+                    <summary>
+                      <time datetime={milestone.date.slice(0, 10)}>{milestone.date}</time>
+                      <i class={`tone-${status.color}`} aria-hidden="true"></i>
+                      <strong class="i18n-zh">{milestone.titleZh}</strong>
+                      <strong class="i18n-en">{milestone.titleEn}</strong>
+                      <em class={`tone-${status.color}`}>
+                        <span class="i18n-zh">{status.labelZh}</span>
+                        <span class="i18n-en">{status.labelEn}</span>
+                      </em>
+                      <b aria-hidden="true">+</b>
+                    </summary>
+                    <div class="century-proof-detail">
+                      <div>
+                        <span class="i18n-zh">可证明</span><span class="i18n-en">What is supported</span>
+                        <p class="i18n-zh">{milestone.proofZh}</p><p class="i18n-en">{milestone.proofEn}</p>
+                      </div>
+                      <div>
+                        <span class="i18n-zh">诚实边界</span><span class="i18n-en">Honest limit</span>
+                        <p class="i18n-zh">{milestone.limitZh}</p><p class="i18n-en">{milestone.limitEn}</p>
+                      </div>
+                      <div>
+                        <span class="i18n-zh">如何推翻</span><span class="i18n-en">What would refute it</span>
+                        <p class="i18n-zh">{milestone.refuteZh}</p><p class="i18n-en">{milestone.refuteEn}</p>
+                      </div>
+                      <a href={milestone.href}><span class="i18n-zh">查看公开证据</span><span class="i18n-en">Open public evidence</span> ↗</a>
+                    </div>
+                  </details>
+                );
+              })}
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <div class="century-failure-replay" id="failure-replay">
+        <header>
+          <span>INCIDENT REPLAY / EMPTY ≠ SUCCESS</span>
+          <h3 class="i18n-zh">{operatingProof.failureReplay.titleZh}</h3>
+          <h3 class="i18n-en">{operatingProof.failureReplay.titleEn}</h3>
+          <p class="i18n-zh">{operatingProof.failureReplay.summaryZh}</p>
+          <p class="i18n-en">{operatingProof.failureReplay.summaryEn}</p>
+        </header>
+        <ol>
+          {operatingProof.failureReplay.steps.map((step) => (
+            <li class={`tone-${step.color}`}>
+              <span>{step.code}</span>
+              <i aria-hidden="true"></i>
+              <strong class="i18n-zh">{step.titleZh}</strong><strong class="i18n-en">{step.titleEn}</strong>
+              <p class="i18n-zh">{step.bodyZh}</p><p class="i18n-en">{step.bodyEn}</p>
+            </li>
+          ))}
+        </ol>
+      </div>
+
+      <div class="century-operating-handbook" id="operating-handbook">
+        <header>
+          <span>OPERATING HANDBOOK / ADOPT + REJECT + TEST</span>
+          <h3 class="i18n-zh">{operatingProof.handbook.titleZh}</h3>
+          <h3 class="i18n-en">{operatingProof.handbook.titleEn}</h3>
+          <p class="i18n-zh">{operatingProof.handbook.summaryZh}</p>
+          <p class="i18n-en">{operatingProof.handbook.summaryEn}</p>
+        </header>
+        <div class="century-practice-grid">
+          {operatingProof.handbook.practices.map((practice) => (
+            <article class={`tone-${practice.color}`}>
+              <div>
+                <span>{practice.code}</span>
+                <em>{practice.scope}</em>
+              </div>
+              <h4 class="i18n-zh">{practice.titleZh}</h4>
+              <h4 class="i18n-en">{practice.titleEn}</h4>
+              <p class="i18n-zh">{practice.bodyZh}</p>
+              <p class="i18n-en">{practice.bodyEn}</p>
+              <dl>
+                <div>
+                  <dt>REJECT</dt>
+                  <dd class="i18n-zh">{practice.rejectZh}</dd>
+                  <dd class="i18n-en">{practice.rejectEn}</dd>
+                </div>
+                <div>
+                  <dt>TEST</dt>
+                  <dd class="i18n-zh">{practice.testZh}</dd>
+                  <dd class="i18n-en">{practice.testEn}</dd>
+                </div>
+              </dl>
+            </article>
+          ))}
+        </div>
+      </div>
+
+      <div class="century-human-role">
+        <span>HUMAN ROLE / OUTSIDE-SYSTEM SENSOR</span>
+        <div>
+          <h3 class="i18n-zh">{operatingProof.humanRole.titleZh}</h3>
+          <h3 class="i18n-en">{operatingProof.humanRole.titleEn}</h3>
+          <p class="i18n-zh">{operatingProof.humanRole.bodyZh}</p>
+          <p class="i18n-en">{operatingProof.humanRole.bodyEn}</p>
+          <small class="i18n-zh">{operatingProof.humanRole.footnoteZh}</small>
+          <small class="i18n-en">{operatingProof.humanRole.footnoteEn}</small>
+        </div>
+      </div>
+
+      <div class="century-day101-contract" id="day101-contract">
+        <header>
+          <span>DAY 101 / MEASUREMENT CONTRACT</span>
+          <h3 class="i18n-zh">下一阶段不再问“还可以加什么”，而问“什么结果会推翻我们”</h3>
+          <h3 class="i18n-en">The next phase asks not what else to add, but what outcome would prove us wrong.</h3>
+        </header>
+        <ol>
+          {operatingProof.day101.map((priority) => (
+            <li class={`tone-${priority.color}`}>
+              <span>{priority.code}</span>
+              <h4 class="i18n-zh">{priority.titleZh}</h4>
+              <h4 class="i18n-en">{priority.titleEn}</h4>
+              <div>
+                <strong>MEASURE</strong>
+                <p class="i18n-zh">{priority.metricZh}</p>
+                <p class="i18n-en">{priority.metricEn}</p>
+              </div>
+              <div>
+                <strong>REFUTE</strong>
+                <p class="i18n-zh">{priority.refuteZh}</p>
+                <p class="i18n-en">{priority.refuteEn}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </div>
+
+      <div class="century-nonclaims">
+        <header>
+          <span>WHAT 100 DAYS DO NOT PROVE</span>
+          <h3 class="i18n-zh">把不能证明的部分也放进品牌承诺</h3>
+          <h3 class="i18n-en">Put what cannot be proven inside the brand promise.</h3>
+        </header>
+        <div>
+          {operatingProof.limits.map((limit) => (
+            <article>
+              <span>{limit.code}</span>
+              <strong class="i18n-zh">{limit.titleZh}</strong><strong class="i18n-en">{limit.titleEn}</strong>
+              <p class="i18n-zh">{limit.bodyZh}</p><p class="i18n-en">{limit.bodyEn}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
     <section class="century-section century-scorecard-section" id="scorecard">
       <header class="century-section-header">
         <div>
-          <span>07 / PUBLIC SCORECARD</span>
+          <span>08 / PUBLIC SCORECARD</span>
           <h2 class="i18n-zh">规模、结构、可读性与复盘</h2>
           <h2 class="i18n-en">Scale, structure, readability, and recap</h2>
         </div>

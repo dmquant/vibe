@@ -47,7 +47,9 @@ const isInvestorRoute = Astro.url.pathname.startsWith('/investor') || Astro.url.
 
 <script>
 	function initLang() {
-		const saved = localStorage.getItem('researchos-lang') || 'en';
+		const saved = localStorage.getItem('researchos-lang')
+			|| document.documentElement.getAttribute('data-lang')
+			|| 'en';
 		document.documentElement.setAttribute('data-lang', saved);
 		updateToggle(saved);
 	}
