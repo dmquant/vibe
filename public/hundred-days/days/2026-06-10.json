@@ -29,7 +29,7 @@
     "reports": 281,
     "researchThreads": 23,
     "researchNotes": 190,
-    "thesisEvents": 127,
+    "thesisEvents": 125,
     "personaEvents": 18,
     "readerMemos": 1,
     "recaps": 0,
@@ -5305,7 +5305,7 @@
       "laneHref": "/investor/lanes/food-agriculture-and-hog-cycle/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 59,
+      "conviction": 58,
       "supports": 1,
       "risks": 6,
       "neutral": 0,
@@ -5568,7 +5568,7 @@
       "laneHref": "/investor/lanes/options-gamma-and-market-microstructure/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 63,
+      "conviction": 62,
       "supports": 1,
       "risks": 2,
       "neutral": 0,
@@ -5598,13 +5598,62 @@
       ],
       "stockTickers": [
         "CBOE",
-        "588000.SH",
         "CME",
+        "588000.SH",
         "NVDA",
         "HOOD",
         "IBKR",
         "VIRT",
         "VIXY"
+      ]
+    },
+    {
+      "id": "thesis-9a860a8801",
+      "title": "信用再融资压力正在把利率风险转化为资产负债表筛选",
+      "titleEn": "Credit refinancing pressure is turning rate risk into balance-sheet selection",
+      "href": "/investor/theses/thesis-9a860a8801/",
+      "laneId": "lane_b29e1d216a21",
+      "lane": "信用再融资/私募信贷",
+      "laneHref": "/investor/lanes/credit-refinancing-and-private-debt/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 53,
+      "supports": 0,
+      "risks": 3,
+      "neutral": 0,
+      "eventCount": 3,
+      "events": [
+        {
+          "title": "中小银行去杠杆引发的信用缺口对宏观化债政策有效性的冲击研究",
+          "summary": "分析师角色: 中国宏观分析师 (china-macro) - 立场: synthesize（综合） - 工作日期: 2026-06-10（Asia/Singapore） - 板号: [source-id-redacted] · 既有研究记录...",
+          "href": "/investor/reports/archive-1f0e5faf1b68/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        },
+        {
+          "title": "中小银行去杠杆引发的信用缺口对A股市场的传导效应与股权压力测试",
+          "summary": "报告日期： 2026-06-10 分析师： A股策略师 立场： 压力测试 (Stress-Test)",
+          "href": "/investor/reports/archive-58a23d9b2228/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        },
+        {
+          "title": "金融板块的防御韧性与信用风险压力测试",
+          "summary": "作者： 金融行业分析师 (financials-analyst) 日期： 2026-06-10 会议路径： [source-id-redacted] 研究记录索引： 6/8 当前立场： 压力测试 (stress-test)",
+          "href": "/investor/reports/archive-f3e36e0e1679/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "KRE",
+        "JPM",
+        "META",
+        "NVDA",
+        "BX",
+        "KKR",
+        "ARES",
+        "APO"
       ]
     },
     {
@@ -5650,59 +5699,10 @@
         "600900.SH",
         "3988.HK",
         "LOW",
-        "0700.HK",
         "CME",
-        "9988.HK",
-        "META"
-      ]
-    },
-    {
-      "id": "thesis-9a860a8801",
-      "title": "信用再融资压力正在把利率风险转化为资产负债表筛选",
-      "titleEn": "Credit refinancing pressure is turning rate risk into balance-sheet selection",
-      "href": "/investor/theses/thesis-9a860a8801/",
-      "laneId": "lane_b29e1d216a21",
-      "lane": "信用再融资/私募信贷",
-      "laneHref": "/investor/lanes/credit-refinancing-and-private-debt/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 52,
-      "supports": 0,
-      "risks": 3,
-      "neutral": 0,
-      "eventCount": 3,
-      "events": [
-        {
-          "title": "中小银行去杠杆引发的信用缺口对宏观化债政策有效性的冲击研究",
-          "summary": "分析师角色: 中国宏观分析师 (china-macro) - 立场: synthesize（综合） - 工作日期: 2026-06-10（Asia/Singapore） - 板号: [source-id-redacted] · 既有研究记录...",
-          "href": "/investor/reports/archive-1f0e5faf1b68/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        },
-        {
-          "title": "中小银行去杠杆引发的信用缺口对A股市场的传导效应与股权压力测试",
-          "summary": "报告日期： 2026-06-10 分析师： A股策略师 立场： 压力测试 (Stress-Test)",
-          "href": "/investor/reports/archive-58a23d9b2228/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        },
-        {
-          "title": "金融板块的防御韧性与信用风险压力测试",
-          "summary": "作者： 金融行业分析师 (financials-analyst) 日期： 2026-06-10 会议路径： [source-id-redacted] 研究记录索引： 6/8 当前立场： 压力测试 (stress-test)",
-          "href": "/investor/reports/archive-f3e36e0e1679/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "KRE",
-        "JPM",
+        "0700.HK",
         "META",
-        "NVDA",
-        "BX",
-        "KKR",
-        "ARES",
-        "APO"
+        "9988.HK"
       ]
     },
     {
@@ -5870,44 +5870,6 @@
       ]
     },
     {
-      "id": "thesis-e40b25962e",
-      "title": "A股“大行+红利/稀缺成长”哑铃配置在低杠杆与高可视度Backlog支撑下并未拥挤，而弱区域中小银行因资产质量二阶传导滞后与重度稀释风险…",
-      "titleEn": "Practical research topic: A股“大行+红利/稀缺成长”哑铃配置在低杠杆与高可视度Backlog支撑下并未拥挤，而弱区域中小银行因资产质量二阶传导滞后与重度稀释风险…",
-      "href": "/investor/theses/thesis-e40b25962e/",
-      "laneId": "lane_bf77fb66551a",
-      "lane": "A股红利/硬科技杠铃",
-      "laneHref": "/investor/lanes/a-share-dividend-and-hard-tech-barbell/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 79,
-      "supports": 0,
-      "risks": 2,
-      "neutral": 0,
-      "eventCount": 2,
-      "events": [
-        {
-          "title": "将电力约束纳入A股AI硬件轮动框架：AI硬件加电网/灵活电源对冲，还是切向化工/银行防守杠铃？",
-          "summary": "将电力约束纳入A股AI硬件轮动框架：AI硬件加电网/灵活电源对冲，还是切向化工/银行防守杠铃？",
-          "href": "/investor/reports/archive-6c65ddf07888/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        },
-        {
-          "title": "A股电网设备与电力红利板块交易拥挤度与流动性压力测试报告",
-          "summary": "A股电网设备与电力红利板块交易拥挤度与流动性压力测试报告 日期： 2026-06-10 分析师： A股策略师 (ashare-strategist) 状态： 综合分析 (Synthesize)",
-          "href": "/investor/reports/archive-939e57cacb19/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "600900.SH",
-        "601398.SH",
-        "601088.SH",
-        "600941.SH"
-      ]
-    },
-    {
       "id": "thesis-3cafa5bcd5",
       "title": "在H4L美联储路径下，A股国家队作为央行隐性冲销池的机制使央行三难中的(C)资本账户开放先于(A)汇率防火墙崩溃，USD/CNY将以管理…",
       "titleEn": "Practical research topic: 在H4L美联储路径下，A股国家队作为央行隐性冲销池的机制使央行三难中的(C)资本账户开放先于(A)汇率防火墙崩溃，USD/CNY将以管理…",
@@ -5945,6 +5907,44 @@
       ]
     },
     {
+      "id": "thesis-e40b25962e",
+      "title": "A股“大行+红利/稀缺成长”哑铃配置在低杠杆与高可视度Backlog支撑下并未拥挤，而弱区域中小银行因资产质量二阶传导滞后与重度稀释风险…",
+      "titleEn": "Practical research topic: A股“大行+红利/稀缺成长”哑铃配置在低杠杆与高可视度Backlog支撑下并未拥挤，而弱区域中小银行因资产质量二阶传导滞后与重度稀释风险…",
+      "href": "/investor/theses/thesis-e40b25962e/",
+      "laneId": "lane_bf77fb66551a",
+      "lane": "A股红利/硬科技杠铃",
+      "laneHref": "/investor/lanes/a-share-dividend-and-hard-tech-barbell/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 78,
+      "supports": 0,
+      "risks": 2,
+      "neutral": 0,
+      "eventCount": 2,
+      "events": [
+        {
+          "title": "将电力约束纳入A股AI硬件轮动框架：AI硬件加电网/灵活电源对冲，还是切向化工/银行防守杠铃？",
+          "summary": "将电力约束纳入A股AI硬件轮动框架：AI硬件加电网/灵活电源对冲，还是切向化工/银行防守杠铃？",
+          "href": "/investor/reports/archive-6c65ddf07888/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        },
+        {
+          "title": "A股电网设备与电力红利板块交易拥挤度与流动性压力测试报告",
+          "summary": "A股电网设备与电力红利板块交易拥挤度与流动性压力测试报告 日期： 2026-06-10 分析师： A股策略师 (ashare-strategist) 状态： 综合分析 (Synthesize)",
+          "href": "/investor/reports/archive-939e57cacb19/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "600900.SH",
+        "601398.SH",
+        "601088.SH",
+        "600941.SH"
+      ]
+    },
+    {
       "id": "thesis-ace402c8b6",
       "title": "科创板极端护盘对A股整体流动性的虹吸效应与跨板块资产配置调整 研究日期： 2026 05 22 作者： 首席策略师 (Chief Str…",
       "titleEn": "Practical research topic: 科创板极端护盘对A股整体流动性的虹吸效应与跨板块资产配置调整 研究日期： 2026 05 22 作者： 首席策略师 (Chief Str…",
@@ -5952,8 +5952,8 @@
       "laneId": "lane_1c216bd29875",
       "lane": "美债利率/美元再定价",
       "laneHref": "/investor/lanes/us-rates-and-dollar-repricing/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
+      "direction": "stable",
+      "directionLabel": "稳定",
       "conviction": 78,
       "supports": 1,
       "risks": 0,
@@ -6232,7 +6232,7 @@
       "laneHref": "/investor/lanes/bond-supply-and-bank-duration/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 58,
+      "conviction": 57,
       "supports": 0,
       "risks": 2,
       "neutral": 0,
@@ -6317,7 +6317,7 @@
       "laneHref": "/investor/lanes/home-improvement-and-post-property-cycle/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 49,
+      "conviction": 47,
       "supports": 1,
       "risks": 1,
       "neutral": 0,
@@ -6436,6 +6436,36 @@
         "MSFT",
         "601179.SH",
         "AMZN"
+      ]
+    },
+    {
+      "id": "thesis-bb46b0c3de",
+      "title": "USD/JPY与USD/CNY不是直接拉爆A股硬件链融资盘的拉绳，而是通过SOX估值代理与人民币波动率→券商折算率传导的放大器，CNH/…",
+      "titleEn": "Practical research topic: USD/JPY与USD/CNY不是直接拉爆A股硬件链融资盘的拉绳，而是通过SOX估值代理与人民币波动率→券商折算率传导的放大器，CNH/…",
+      "href": "/investor/theses/thesis-bb46b0c3de/",
+      "laneId": "lane_c40c2ce413ec",
+      "lane": "人民币/美元流动性敏感资产",
+      "laneHref": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 82,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "UST–JGB 利差与日债拍卖压力更新 — USD/JPY Carry 平仓触发条件",
+          "summary": "UST–JGB 利差与日债拍卖压力更新 — USD/JPY Carry 平仓触发条件",
+          "href": "/investor/reports/archive-fd4c2b7c126d/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "3988.HK",
+        "UUP",
+        "FXI"
       ]
     },
     {
@@ -6559,40 +6589,10 @@
       ]
     },
     {
-      "id": "thesis-bb46b0c3de",
-      "title": "USD/JPY与USD/CNY不是直接拉爆A股硬件链融资盘的拉绳，而是通过SOX估值代理与人民币波动率→券商折算率传导的放大器，CNH/…",
-      "titleEn": "Practical research topic: USD/JPY与USD/CNY不是直接拉爆A股硬件链融资盘的拉绳，而是通过SOX估值代理与人民币波动率→券商折算率传导的放大器，CNH/…",
-      "href": "/investor/theses/thesis-bb46b0c3de/",
-      "laneId": "lane_c40c2ce413ec",
-      "lane": "人民币/美元流动性敏感资产",
-      "laneHref": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 82,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "UST–JGB 利差与日债拍卖压力更新 — USD/JPY Carry 平仓触发条件",
-          "summary": "UST–JGB 利差与日债拍卖压力更新 — USD/JPY Carry 平仓触发条件",
-          "href": "/investor/reports/archive-fd4c2b7c126d/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "3988.HK",
-        "UUP",
-        "FXI"
-      ]
-    },
-    {
-      "id": "thesis-27c1e713e6",
-      "title": "日元兑美元突破162.052，若日本官方实施抛售美债进行实际干预，是否会推动10Y美债收益率（当前4.49%）飙升？如何传导并冲击全球高…",
-      "titleEn": "Practical research topic: 日元兑美元突破162.052，若日本官方实施抛售美债进行实际干预，是否会推动10Y美债收益率（当前4.49%）飙升？如何传导并冲击全球高…",
-      "href": "/investor/theses/thesis-27c1e713e6/",
+      "id": "thesis-4f541b33ff",
+      "title": "美联储'更高更久'与坚挺美元对人民币、日元及新兴市场货币的传导",
+      "titleEn": "Practical research topic: 美联储'更高更久'与坚挺美元对人民币、日元及新兴市场货币的传导",
+      "href": "/investor/theses/thesis-4f541b33ff/",
       "laneId": "lane_c40c2ce413ec",
       "lane": "人民币/美元流动性敏感资产",
       "laneHref": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
@@ -6613,9 +6613,9 @@
         }
       ],
       "stockTickers": [
+        "3988.HK",
         "UUP",
-        "FXI",
-        "2800.HK"
+        "FXI"
       ]
     },
     {
@@ -6646,6 +6646,36 @@
         "3988.HK",
         "UUP",
         "FXI"
+      ]
+    },
+    {
+      "id": "thesis-e4e956cd41",
+      "title": "通胀粘性加就业放缓环境下的跨资产配置",
+      "titleEn": "Practical research topic: 通胀粘性加就业放缓环境下的跨资产配置",
+      "href": "/investor/theses/thesis-e4e956cd41/",
+      "laneId": "lane_1c216bd29875",
+      "lane": "美债利率/美元再定价",
+      "laneHref": "/investor/lanes/us-rates-and-dollar-repricing/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 81,
+      "supports": 1,
+      "risks": 0,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "10年期国债利率反转情景的FX维度合成：CNY/USD/JPY 套息与跨境资金流对红利低波篮子的传导",
+          "summary": "10年期国债利率反转情景的FX维度合成：CNY/USD/JPY 套息与跨境资金流对红利低波篮子的传导",
+          "href": "/investor/reports/archive-3fa29a9ed35b/",
+          "stance": "supports",
+          "stanceLabel": "支持"
+        }
+      ],
+      "stockTickers": [
+        "JPM",
+        "TLT",
+        "IEF"
       ]
     },
     {
@@ -6709,66 +6739,6 @@
       ]
     },
     {
-      "id": "thesis-4f541b33ff",
-      "title": "美联储'更高更久'与坚挺美元对人民币、日元及新兴市场货币的传导",
-      "titleEn": "Practical research topic: 美联储'更高更久'与坚挺美元对人民币、日元及新兴市场货币的传导",
-      "href": "/investor/theses/thesis-4f541b33ff/",
-      "laneId": "lane_c40c2ce413ec",
-      "lane": "人民币/美元流动性敏感资产",
-      "laneHref": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 81,
-      "supports": 1,
-      "risks": 0,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "10年期国债利率反转情景的FX维度合成：CNY/USD/JPY 套息与跨境资金流对红利低波篮子的传导",
-          "summary": "10年期国债利率反转情景的FX维度合成：CNY/USD/JPY 套息与跨境资金流对红利低波篮子的传导",
-          "href": "/investor/reports/archive-3fa29a9ed35b/",
-          "stance": "supports",
-          "stanceLabel": "支持"
-        }
-      ],
-      "stockTickers": [
-        "3988.HK",
-        "UUP",
-        "FXI"
-      ]
-    },
-    {
-      "id": "thesis-e4e956cd41",
-      "title": "通胀粘性加就业放缓环境下的跨资产配置",
-      "titleEn": "Practical research topic: 通胀粘性加就业放缓环境下的跨资产配置",
-      "href": "/investor/theses/thesis-e4e956cd41/",
-      "laneId": "lane_1c216bd29875",
-      "lane": "美债利率/美元再定价",
-      "laneHref": "/investor/lanes/us-rates-and-dollar-repricing/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 81,
-      "supports": 1,
-      "risks": 0,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "10年期国债利率反转情景的FX维度合成：CNY/USD/JPY 套息与跨境资金流对红利低波篮子的传导",
-          "summary": "10年期国债利率反转情景的FX维度合成：CNY/USD/JPY 套息与跨境资金流对红利低波篮子的传导",
-          "href": "/investor/reports/archive-3fa29a9ed35b/",
-          "stance": "supports",
-          "stanceLabel": "支持"
-        }
-      ],
-      "stockTickers": [
-        "JPM",
-        "TLT",
-        "IEF"
-      ]
-    },
-    {
       "id": "thesis-69025fa4b4",
       "title": "驱动对冲阶梯的 Fed / BoJ / ECB 政策路径",
       "titleEn": "Practical research topic: 驱动对冲阶梯的 Fed / BoJ / ECB 政策路径",
@@ -6829,6 +6799,36 @@
       ]
     },
     {
+      "id": "thesis-27c1e713e6",
+      "title": "日元兑美元突破162.052，若日本官方实施抛售美债进行实际干预，是否会推动10Y美债收益率（当前4.49%）飙升？如何传导并冲击全球高…",
+      "titleEn": "Practical research topic: 日元兑美元突破162.052，若日本官方实施抛售美债进行实际干预，是否会推动10Y美债收益率（当前4.49%）飙升？如何传导并冲击全球高…",
+      "href": "/investor/theses/thesis-27c1e713e6/",
+      "laneId": "lane_c40c2ce413ec",
+      "lane": "人民币/美元流动性敏感资产",
+      "laneHref": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 79,
+      "supports": 1,
+      "risks": 0,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "10年期国债利率反转情景的FX维度合成：CNY/USD/JPY 套息与跨境资金流对红利低波篮子的传导",
+          "summary": "10年期国债利率反转情景的FX维度合成：CNY/USD/JPY 套息与跨境资金流对红利低波篮子的传导",
+          "href": "/investor/reports/archive-3fa29a9ed35b/",
+          "stance": "supports",
+          "stanceLabel": "支持"
+        }
+      ],
+      "stockTickers": [
+        "3988.HK",
+        "UUP",
+        "FXI"
+      ]
+    },
+    {
       "id": "thesis-bafd2ff8e7",
       "title": "今日是MSCI半年度重估正式生效日。虽然散户由于昨日创业板+1.96%的V型反弹而呈现极度FOMO，但A股两融余额正高挂于2.9367万…",
       "titleEn": "Practical research topic: 今日是MSCI半年度重估正式生效日。虽然散户由于昨日创业板+1.96%的V型反弹而呈现极度FOMO，但A股两融余额正高挂于2.9367万…",
@@ -6856,36 +6856,6 @@
         "510300.SH",
         "MCHI",
         "KWEB"
-      ]
-    },
-    {
-      "id": "thesis-f0b8d44918",
-      "title": "美国更高更久与偏强美元约束下，中国2026年下半年的货币宽松空间及其向人民币与A股流动性的传导",
-      "titleEn": "Practical research topic: 美国更高更久与偏强美元约束下，中国2026年下半年的货币宽松空间及其向人民币与A股流动性的传导",
-      "href": "/investor/theses/thesis-f0b8d44918/",
-      "laneId": "lane_c40c2ce413ec",
-      "lane": "人民币/美元流动性敏感资产",
-      "laneHref": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 79,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "外汇压力测试：离岸人民币流动性紧缩、USD/CNY 波动率与套利交易稳定性",
-          "summary": "外汇压力测试：离岸人民币流动性紧缩、USD/CNY 波动率与套利交易稳定性",
-          "href": "/investor/reports/archive-0d6df9ecb047/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "3988.HK",
-        "UUP",
-        "FXI"
       ]
     },
     {
@@ -6984,38 +6954,7 @@
         "ETN",
         "600089.SH",
         "601179.SH",
-        "688676.SH",
-        "VST"
-      ]
-    },
-    {
-      "id": "thesis-03dab97a77",
-      "title": "人民币稳定使当前应保留滞胀杠铃，但用黄金、久期与轻USD对冲把组合从单一A股Beta改造成可按黄/红档汇率阶梯再平衡的跨资产防御组合。",
-      "titleEn": "Practical research topic: 人民币稳定使当前应保留滞胀杠铃，但用黄金、久期与轻USD对冲把组合从单一A股Beta改造成可按黄/红档汇率阶梯再平衡的跨资产防御组合。",
-      "href": "/investor/theses/thesis-03dab97a77/",
-      "laneId": "lane_c40c2ce413ec",
-      "lane": "人民币/美元流动性敏感资产",
-      "laneHref": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 78,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "外汇压力测试：离岸人民币流动性紧缩、USD/CNY 波动率与套利交易稳定性",
-          "summary": "外汇压力测试：离岸人民币流动性紧缩、USD/CNY 波动率与套利交易稳定性",
-          "href": "/investor/reports/archive-0d6df9ecb047/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "3988.HK",
-        "000688.SH",
-        "UUP"
+        "688676.SH"
       ]
     },
     {
@@ -7046,36 +6985,6 @@
         "3988.HK",
         "UUP",
         "FXI"
-      ]
-    },
-    {
-      "id": "thesis-250964b5dc",
-      "title": "强美元仍需作为中国风险组合的保险，但新增风险预算应从裸多DXY转向有界USD/CNH保护，并主动削减以JPY/CHF融资的拥挤新兴市场套息。",
-      "titleEn": "Practical research topic: 强美元仍需作为中国风险组合的保险，但新增风险预算应从裸多DXY转向有界USD/CNH保护，并主动削减以JPY/CHF融资的拥挤新兴市场套息。",
-      "href": "/investor/theses/thesis-250964b5dc/",
-      "laneId": "lane_c40c2ce413ec",
-      "lane": "人民币/美元流动性敏感资产",
-      "laneHref": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 78,
-      "supports": 1,
-      "risks": 0,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "10年期国债利率反转情景的FX维度合成：CNY/USD/JPY 套息与跨境资金流对红利低波篮子的传导",
-          "summary": "10年期国债利率反转情景的FX维度合成：CNY/USD/JPY 套息与跨境资金流对红利低波篮子的传导",
-          "href": "/investor/reports/archive-3fa29a9ed35b/",
-          "stance": "supports",
-          "stanceLabel": "支持"
-        }
-      ],
-      "stockTickers": [
-        "3988.HK",
-        "9988.HK",
-        "0700.HK"
       ]
     },
     {
@@ -7130,6 +7039,36 @@
           "href": "/investor/reports/archive-0d6df9ecb047/",
           "stance": "risk",
           "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "3988.HK",
+        "UUP",
+        "FXI"
+      ]
+    },
+    {
+      "id": "thesis-250964b5dc",
+      "title": "强美元仍需作为中国风险组合的保险，但新增风险预算应从裸多DXY转向有界USD/CNH保护，并主动削减以JPY/CHF融资的拥挤新兴市场套息。",
+      "titleEn": "Practical research topic: 强美元仍需作为中国风险组合的保险，但新增风险预算应从裸多DXY转向有界USD/CNH保护，并主动削减以JPY/CHF融资的拥挤新兴市场套息。",
+      "href": "/investor/theses/thesis-250964b5dc/",
+      "laneId": "lane_c40c2ce413ec",
+      "lane": "人民币/美元流动性敏感资产",
+      "laneHref": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 77,
+      "supports": 1,
+      "risks": 0,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "10年期国债利率反转情景的FX维度合成：CNY/USD/JPY 套息与跨境资金流对红利低波篮子的传导",
+          "summary": "10年期国债利率反转情景的FX维度合成：CNY/USD/JPY 套息与跨境资金流对红利低波篮子的传导",
+          "href": "/investor/reports/archive-3fa29a9ed35b/",
+          "stance": "supports",
+          "stanceLabel": "支持"
         }
       ],
       "stockTickers": [
@@ -7236,6 +7175,41 @@
       ]
     },
     {
+      "id": "thesis-70daf87262",
+      "title": "A 股红利与硬科技杠铃仍是政策、利率和风险偏好的组合表达",
+      "titleEn": "A-share dividend and hard-tech barbell remains the portfolio expression of policy, rates, and risk appetite",
+      "href": "/investor/theses/thesis-70daf87262/",
+      "laneId": "lane_bf77fb66551a",
+      "lane": "A股红利/硬科技杠铃",
+      "laneHref": "/investor/lanes/a-share-dividend-and-hard-tech-barbell/",
+      "direction": "strengthening",
+      "directionLabel": "强化",
+      "conviction": 71,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "将电力约束纳入A股AI硬件轮动框架：AI硬件加电网/灵活电源对冲，还是切向化工/银行防守杠铃？",
+          "summary": "将电力约束纳入A股AI硬件轮动框架：AI硬件加电网/灵活电源对冲，还是切向化工/银行防守杠铃？",
+          "href": "/investor/reports/archive-6c65ddf07888/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "600900.SH",
+        "601398.SH",
+        "601088.SH",
+        "600941.SH",
+        "688981.SH",
+        "588000.SH",
+        "0981.HK",
+        "510880.SH"
+      ]
+    },
+    {
       "id": "thesis-10f0672291",
       "title": "科创50单日+8.41%后，团队应把硬科技升为中期主线，还是在两融、广度、ETF申赎确认前按拥挤反弹处理？",
       "titleEn": "Practical research topic: 科创50单日+8.41%后，团队应把硬科技升为中期主线，还是在两融、广度、ETF申赎确认前按拥挤反弹处理？",
@@ -7270,6 +7244,42 @@
       ]
     },
     {
+      "id": "thesis-8c5a9690a0",
+      "title": "Mag7 在 AI 时代从平台垄断转向基础设施再分层",
+      "titleEn": "Mag7 shifts from platform monopoly to AI infrastructure re-layering",
+      "href": "/investor/theses/thesis-8c5a9690a0/",
+      "laneId": "lane_f21fc181388a",
+      "lane": "Mag7 AI 平台再分层",
+      "laneHref": "/investor/lanes/mag7-ai-platform-re-layering/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 70,
+      "supports": 1,
+      "risks": 0,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "前序研究 — 中国宏观综合：AI需求能否兑现已被HBM锁定的供给",
+          "summary": "当前卡： 03 / 08 - 分析师： china-macro（中国宏观分析师） - 立场： 综合（synthesize） - 日期（机构工作日，Asia/Singapore）： 2026-06-10 - 上游文件说明： 本报告开始时， research dis...",
+          "href": "/investor/reports/archive-890bbdb9de04/",
+          "stance": "supports",
+          "stanceLabel": "支持"
+        }
+      ],
+      "stockTickers": [
+        "META",
+        "MSFT",
+        "AMZN",
+        "NVDA",
+        "GOOGL",
+        "TSM",
+        "AVGO",
+        "AAPL",
+        "TSLA"
+      ]
+    },
+    {
       "id": "thesis-b13c7cf092",
       "title": "高纯石英材料受益于先进封装扩产，但兑现取决于认证与产品结构",
       "titleEn": "High-purity quartz can benefit from advanced-packaging expansion, conditional on qualification and mix",
@@ -7301,77 +7311,6 @@
         "ASML",
         "688012.SH",
         "002916.SZ"
-      ]
-    },
-    {
-      "id": "thesis-8c5a9690a0",
-      "title": "Mag7 在 AI 时代从平台垄断转向基础设施再分层",
-      "titleEn": "Mag7 shifts from platform monopoly to AI infrastructure re-layering",
-      "href": "/investor/theses/thesis-8c5a9690a0/",
-      "laneId": "lane_f21fc181388a",
-      "lane": "Mag7 AI 平台再分层",
-      "laneHref": "/investor/lanes/mag7-ai-platform-re-layering/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 70,
-      "supports": 1,
-      "risks": 0,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "前序研究 — 中国宏观综合：AI需求能否兑现已被HBM锁定的供给",
-          "summary": "当前卡： 03 / 08 - 分析师： china-macro（中国宏观分析师） - 立场： 综合（synthesize） - 日期（机构工作日，Asia/Singapore）： 2026-06-10 - 上游文件说明： 本报告开始时， research dis...",
-          "href": "/investor/reports/archive-890bbdb9de04/",
-          "stance": "supports",
-          "stanceLabel": "支持"
-        }
-      ],
-      "stockTickers": [
-        "META",
-        "MSFT",
-        "NVDA",
-        "AMZN",
-        "GOOGL",
-        "TSM",
-        "AVGO",
-        "AAPL",
-        "TSLA"
-      ]
-    },
-    {
-      "id": "thesis-70daf87262",
-      "title": "A 股红利与硬科技杠铃仍是政策、利率和风险偏好的组合表达",
-      "titleEn": "A-share dividend and hard-tech barbell remains the portfolio expression of policy, rates, and risk appetite",
-      "href": "/investor/theses/thesis-70daf87262/",
-      "laneId": "lane_bf77fb66551a",
-      "lane": "A股红利/硬科技杠铃",
-      "laneHref": "/investor/lanes/a-share-dividend-and-hard-tech-barbell/",
-      "direction": "strengthening",
-      "directionLabel": "强化",
-      "conviction": 69,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "将电力约束纳入A股AI硬件轮动框架：AI硬件加电网/灵活电源对冲，还是切向化工/银行防守杠铃？",
-          "summary": "将电力约束纳入A股AI硬件轮动框架：AI硬件加电网/灵活电源对冲，还是切向化工/银行防守杠铃？",
-          "href": "/investor/reports/archive-6c65ddf07888/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "600900.SH",
-        "601398.SH",
-        "601088.SH",
-        "600941.SH",
-        "688981.SH",
-        "588000.SH",
-        "0981.HK",
-        "510880.SH"
       ]
     },
     {
@@ -7475,77 +7414,6 @@
       ]
     },
     {
-      "id": "thesis-4b3b37e207",
-      "title": "散户情绪与北向资金背离是 A 股风险偏好的关键温度计",
-      "titleEn": "Retail sentiment versus northbound flow divergence is the key A-share risk thermometer",
-      "href": "/investor/theses/thesis-4b3b37e207/",
-      "laneId": "lane_070c58f355b5",
-      "lane": "A股风险偏好/两融",
-      "laneHref": "/investor/lanes/a-share-risk-appetite-and-margin/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 67,
-      "supports": 1,
-      "risks": 0,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "北向资金去杠杆对A股市场情绪及行业资金流向的后续冲击",
-          "summary": "报告日期：2026-06-10 [来源：研究院权威工作日锚定 2026-06-10] - 数据基准：2026-06-10（星期三） [来源：研究院权威工作日锚定 2026-06-10] - 分析师：市场情绪分析师 (Sentiment Analyst, a...",
-          "href": "/investor/reports/archive-58e64b0a18e1/",
-          "stance": "supports",
-          "stanceLabel": "支持"
-        }
-      ],
-      "stockTickers": [
-        "588000.SH",
-        "300308.SZ",
-        "300750.SZ",
-        "600900.SH",
-        "510300.SH",
-        "688256.SH",
-        "600519.SH",
-        "0981.HK"
-      ]
-    },
-    {
-      "id": "thesis-ce29facfbd",
-      "title": "中国资产定价仍受政策、流动性与风险偏好共同驱动",
-      "titleEn": "China asset pricing remains driven by policy, liquidity, and risk appetite",
-      "href": "/investor/theses/thesis-ce29facfbd/",
-      "laneId": "lane_a8d9c69ae883",
-      "lane": "中国权益流动性",
-      "laneHref": "/investor/lanes/china-equity-liquidity/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 67,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "压力测试：美债突破4.8%与离岸人民币破7.35下的A股外资二次抛压评估",
-          "summary": "压力测试：美债突破4.8%与离岸人民币破7.35下的A股外资二次抛压评估",
-          "href": "/investor/reports/archive-616cbb3d9759/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "300308.SZ",
-        "0700.HK",
-        "9988.HK",
-        "510300.SH",
-        "600900.SH",
-        "2800.HK",
-        "588000.SH",
-        "META",
-        "159915.SZ"
-      ]
-    },
-    {
       "id": "thesis-f5d7a79c82",
       "title": "HBM4、CoWoS 与背面供电正在成为 AI 服务器需求曲线的串行闸门",
       "titleEn": "HBM4, CoWoS, and backside power are becoming serial gates for the AI-server demand curve",
@@ -7609,8 +7477,78 @@
       "stockTickers": [
         "NVDA",
         "TSM",
-        "VRT",
-        "AMD"
+        "VRT"
+      ]
+    },
+    {
+      "id": "thesis-4b3b37e207",
+      "title": "散户情绪与北向资金背离是 A 股风险偏好的关键温度计",
+      "titleEn": "Retail sentiment versus northbound flow divergence is the key A-share risk thermometer",
+      "href": "/investor/theses/thesis-4b3b37e207/",
+      "laneId": "lane_070c58f355b5",
+      "lane": "A股风险偏好/两融",
+      "laneHref": "/investor/lanes/a-share-risk-appetite-and-margin/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 66,
+      "supports": 1,
+      "risks": 0,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "北向资金去杠杆对A股市场情绪及行业资金流向的后续冲击",
+          "summary": "报告日期：2026-06-10 [来源：研究院权威工作日锚定 2026-06-10] - 数据基准：2026-06-10（星期三） [来源：研究院权威工作日锚定 2026-06-10] - 分析师：市场情绪分析师 (Sentiment Analyst, a...",
+          "href": "/investor/reports/archive-58e64b0a18e1/",
+          "stance": "supports",
+          "stanceLabel": "支持"
+        }
+      ],
+      "stockTickers": [
+        "588000.SH",
+        "300308.SZ",
+        "300750.SZ",
+        "600900.SH",
+        "688256.SH",
+        "510300.SH",
+        "600519.SH",
+        "159915.SZ"
+      ]
+    },
+    {
+      "id": "thesis-ce29facfbd",
+      "title": "中国资产定价仍受政策、流动性与风险偏好共同驱动",
+      "titleEn": "China asset pricing remains driven by policy, liquidity, and risk appetite",
+      "href": "/investor/theses/thesis-ce29facfbd/",
+      "laneId": "lane_a8d9c69ae883",
+      "lane": "中国权益流动性",
+      "laneHref": "/investor/lanes/china-equity-liquidity/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 66,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "压力测试：美债突破4.8%与离岸人民币破7.35下的A股外资二次抛压评估",
+          "summary": "压力测试：美债突破4.8%与离岸人民币破7.35下的A股外资二次抛压评估",
+          "href": "/investor/reports/archive-616cbb3d9759/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "300308.SZ",
+        "0700.HK",
+        "9988.HK",
+        "510300.SH",
+        "600900.SH",
+        "2800.HK",
+        "588000.SH",
+        "META",
+        "159915.SZ"
       ]
     },
     {
@@ -7675,42 +7613,6 @@
         "XLE",
         "XLU",
         "TLT"
-      ]
-    },
-    {
-      "id": "thesis-029ce03da1",
-      "title": "MSCI 调整窗口是被动资金与主动减仓相互博弈的流动性事件",
-      "titleEn": "MSCI rebalance windows are liquidity events where passive demand meets active exits",
-      "href": "/investor/theses/thesis-029ce03da1/",
-      "laneId": "lane_122bdfde6ea9",
-      "lane": "指数调仓/被动资金事件",
-      "laneHref": "/investor/lanes/index-rebalance-and-passive-flow-events/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 66,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "SPCX 上市对 A 股 TMT 硬件板块的被动流出与冲击成本测算",
-          "summary": "回应对象: A股策略师 · 两融数据分析（ analyst:ashare-strategist:margin analysis，run 59ec3e33 ） 作者: 主题研究员（AI / 量子 / 生物 / 太空经济 / Web3） 日期锚点: 2026-06-10（ date...",
-          "href": "/investor/reports/archive-8e1177d42920/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "KWEB",
-        "0700.HK",
-        "9988.HK",
-        "2800.HK",
-        "300308.SZ",
-        "510300.SH",
-        "0981.HK",
-        "3690.HK",
-        "688981.SH"
       ]
     },
     {
@@ -7820,37 +7722,39 @@
       ]
     },
     {
-      "id": "thesis-58200390b4",
-      "title": "加密资产仍是全球流动性和散户风险偏好的高频回声",
-      "titleEn": "Crypto remains a high-frequency echo of global liquidity and retail risk appetite",
-      "href": "/investor/theses/thesis-58200390b4/",
-      "laneId": "lane_73a269a07a15",
-      "lane": "加密/高波动风险偏好",
-      "laneHref": "/investor/lanes/crypto-and-high-beta-risk-appetite/",
+      "id": "thesis-029ce03da1",
+      "title": "MSCI 调整窗口是被动资金与主动减仓相互博弈的流动性事件",
+      "titleEn": "MSCI rebalance windows are liquidity events where passive demand meets active exits",
+      "href": "/investor/theses/thesis-029ce03da1/",
+      "laneId": "lane_122bdfde6ea9",
+      "lane": "指数调仓/被动资金事件",
+      "laneHref": "/investor/lanes/index-rebalance-and-passive-flow-events/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 64,
+      "conviction": 65,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
       "eventCount": 1,
       "events": [
         {
-          "title": "A 股两融与 ETF 强平链条压力测试：以迈威生物（688062.SH）为例",
-          "summary": "A 股两融与 ETF 强平链条压力测试：以迈威生物（688062.SH）为例 日期： 2026-06-10 分析师： ashare-strategist (A股策略师) 当前状态： 综合研判（基于 既有研究记录风险约束）",
-          "href": "/investor/reports/archive-e9a13123e1da/",
+          "title": "SPCX 上市对 A 股 TMT 硬件板块的被动流出与冲击成本测算",
+          "summary": "回应对象: A股策略师 · 两融数据分析（ analyst:ashare-strategist:margin analysis，run 59ec3e33 ） 作者: 主题研究员（AI / 量子 / 生物 / 太空经济 / Web3） 日期锚点: 2026-06-10（ date...",
+          "href": "/investor/reports/archive-8e1177d42920/",
           "stance": "risk",
           "stanceLabel": "风险"
         }
       ],
       "stockTickers": [
-        "MSTR",
-        "COIN",
-        "IBIT",
-        "HOOD",
-        "LOW",
-        "MARA",
-        "RIOT"
+        "KWEB",
+        "0700.HK",
+        "9988.HK",
+        "2800.HK",
+        "300308.SZ",
+        "510300.SH",
+        "0981.HK",
+        "3690.HK",
+        "688981.SH"
       ]
     },
     {
@@ -7953,11 +7857,45 @@
         "AAPL",
         "META",
         "ARM",
+        "AMZN",
         "AMD",
         "QCOM",
-        "AMZN",
         "GOOGL",
-        "TSM"
+        "AVGO"
+      ]
+    },
+    {
+      "id": "thesis-58200390b4",
+      "title": "加密资产仍是全球流动性和散户风险偏好的高频回声",
+      "titleEn": "Crypto remains a high-frequency echo of global liquidity and retail risk appetite",
+      "href": "/investor/theses/thesis-58200390b4/",
+      "laneId": "lane_73a269a07a15",
+      "lane": "加密/高波动风险偏好",
+      "laneHref": "/investor/lanes/crypto-and-high-beta-risk-appetite/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 61,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "A 股两融与 ETF 强平链条压力测试：以迈威生物（688062.SH）为例",
+          "summary": "A 股两融与 ETF 强平链条压力测试：以迈威生物（688062.SH）为例 日期： 2026-06-10 分析师： ashare-strategist (A股策略师) 当前状态： 综合研判（基于 既有研究记录风险约束）",
+          "href": "/investor/reports/archive-e9a13123e1da/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "MSTR",
+        "COIN",
+        "IBIT",
+        "HOOD",
+        "LOW",
+        "MARA",
+        "RIOT"
       ]
     },
     {
@@ -8032,43 +7970,6 @@
       ]
     },
     {
-      "id": "thesis-3986819dc0",
-      "title": "A 股半导体的核心风险从订单验证转向 A/H 溢价、两融与负 Gamma",
-      "titleEn": "A-share semiconductor risk is shifting from order proof to A/H premium, margin financing, and negative gamma",
-      "href": "/investor/theses/thesis-3986819dc0/",
-      "laneId": "lane_968dd01cb43f",
-      "lane": "A股半导体/两融负 Gamma",
-      "laneHref": "/investor/lanes/a-share-semiconductor-margin-and-negative-gamma/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 56,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "A股两融杠杆压力与科创50半导体清算风险",
-          "summary": "截至研究院工作日期 2026-06-10，我 支持 前序研究关于科创50/半导体杠杆会放大回撤的方向性判断，但 不支持 把科创50的 1,520-1,550 点 机械视为已经被公开数据证明的全市场级强平线。公开数据...",
-          "href": "/investor/reports/archive-209b3e3ba7af/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "688981.SH",
-        "688256.SH",
-        "0981.HK",
-        "688041.SH",
-        "600900.SH",
-        "688012.SH",
-        "588000.SH",
-        "688008.SH",
-        "300308.SZ",
-        "002371.SZ"
-      ]
-    },
-    {
       "id": "thesis-7f0a75c5f6",
       "title": "数据中心地产、液冷与水资源正在决定 AI 容量的区域迁移",
       "titleEn": "Data-center real estate, liquid cooling, and water resources are deciding regional migration of AI capacity",
@@ -8102,6 +8003,43 @@
         "DLR",
         "EQIX",
         "SMR"
+      ]
+    },
+    {
+      "id": "thesis-3986819dc0",
+      "title": "A 股半导体的核心风险从订单验证转向 A/H 溢价、两融与负 Gamma",
+      "titleEn": "A-share semiconductor risk is shifting from order proof to A/H premium, margin financing, and negative gamma",
+      "href": "/investor/theses/thesis-3986819dc0/",
+      "laneId": "lane_968dd01cb43f",
+      "lane": "A股半导体/两融负 Gamma",
+      "laneHref": "/investor/lanes/a-share-semiconductor-margin-and-negative-gamma/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 54,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "A股两融杠杆压力与科创50半导体清算风险",
+          "summary": "截至研究院工作日期 2026-06-10，我 支持 前序研究关于科创50/半导体杠杆会放大回撤的方向性判断，但 不支持 把科创50的 1,520-1,550 点 机械视为已经被公开数据证明的全市场级强平线。公开数据...",
+          "href": "/investor/reports/archive-209b3e3ba7af/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "688981.SH",
+        "688256.SH",
+        "0981.HK",
+        "688041.SH",
+        "600900.SH",
+        "688012.SH",
+        "588000.SH",
+        "688008.SH",
+        "300308.SZ",
+        "002371.SZ"
       ]
     },
     {
@@ -8289,24 +8227,23 @@
       "id": "lane_c40c2ce413ec",
       "title": "人民币/美元流动性敏感资产",
       "href": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
-      "thesisCount": 14,
-      "eventCount": 17,
-      "convictionTotal": 1085,
+      "thesisCount": 12,
+      "eventCount": 15,
+      "convictionTotal": 925,
       "stockTickers": [
         "3988.HK",
         "UUP",
         "FXI",
-        "2800.HK",
         "000688.SH",
-        "9988.HK",
-        "0700.HK",
         "TSM",
         "600900.SH",
         "LOW",
         "CME",
-        "META"
+        "0700.HK",
+        "META",
+        "9988.HK"
       ],
-      "avgConviction": 78
+      "avgConviction": 77
     },
     {
       "id": "lane_968dd01cb43f",
@@ -8314,7 +8251,7 @@
       "href": "/investor/lanes/a-share-semiconductor-margin-and-negative-gamma/",
       "thesisCount": 8,
       "eventCount": 15,
-      "convictionTotal": 600,
+      "convictionTotal": 598,
       "stockTickers": [
         "688256.SH",
         "588000.SH",
@@ -8431,7 +8368,7 @@
       "href": "/investor/lanes/a-share-risk-appetite-and-margin/",
       "thesisCount": 4,
       "eventCount": 4,
-      "convictionTotal": 299,
+      "convictionTotal": 298,
       "stockTickers": [
         "510300.SH",
         "512100.SH",
@@ -8441,7 +8378,7 @@
         "600900.SH",
         "688256.SH",
         "600519.SH",
-        "0981.HK"
+        "159915.SZ"
       ],
       "avgConviction": 75
     },
@@ -8474,7 +8411,7 @@
       "href": "/investor/lanes/food-agriculture-and-hog-cycle/",
       "thesisCount": 1,
       "eventCount": 4,
-      "convictionTotal": 59,
+      "convictionTotal": 58,
       "stockTickers": [
         "002714.SZ",
         "001215.SZ",
@@ -8485,7 +8422,7 @@
         "ADM",
         "CME"
       ],
-      "avgConviction": 59
+      "avgConviction": 58
     },
     {
       "id": "lane_7e439482cbef",
@@ -8549,7 +8486,7 @@
       "href": "/investor/lanes/a-share-dividend-and-hard-tech-barbell/",
       "thesisCount": 2,
       "eventCount": 3,
-      "convictionTotal": 148,
+      "convictionTotal": 149,
       "stockTickers": [
         "600900.SH",
         "601398.SH",
@@ -8560,7 +8497,7 @@
         "0981.HK",
         "510880.SH"
       ],
-      "avgConviction": 74
+      "avgConviction": 75
     },
     {
       "id": "lane_13710af7e06d",
@@ -8609,18 +8546,18 @@
       "href": "/investor/lanes/options-gamma-and-market-microstructure/",
       "thesisCount": 1,
       "eventCount": 3,
-      "convictionTotal": 63,
+      "convictionTotal": 62,
       "stockTickers": [
         "CBOE",
-        "588000.SH",
         "CME",
+        "588000.SH",
         "NVDA",
         "HOOD",
         "IBKR",
         "VIRT",
         "VIXY"
       ],
-      "avgConviction": 63
+      "avgConviction": 62
     },
     {
       "id": "lane_b29e1d216a21",
@@ -8628,7 +8565,7 @@
       "href": "/investor/lanes/credit-refinancing-and-private-debt/",
       "thesisCount": 1,
       "eventCount": 3,
-      "convictionTotal": 52,
+      "convictionTotal": 53,
       "stockTickers": [
         "KRE",
         "JPM",
@@ -8639,7 +8576,7 @@
         "ARES",
         "APO"
       ],
-      "avgConviction": 52
+      "avgConviction": 53
     },
     {
       "id": "lane_122bdfde6ea9",
@@ -8647,7 +8584,7 @@
       "href": "/investor/lanes/index-rebalance-and-passive-flow-events/",
       "thesisCount": 2,
       "eventCount": 2,
-      "convictionTotal": 145,
+      "convictionTotal": 144,
       "stockTickers": [
         "510300.SH",
         "MCHI",
@@ -8660,7 +8597,7 @@
         "3690.HK",
         "688981.SH"
       ],
-      "avgConviction": 73
+      "avgConviction": 72
     },
     {
       "id": "lane_54700cb9537f",
@@ -8708,7 +8645,7 @@
       "href": "/investor/lanes/bond-supply-and-bank-duration/",
       "thesisCount": 1,
       "eventCount": 2,
-      "convictionTotal": 58,
+      "convictionTotal": 57,
       "stockTickers": [
         "601398.SH",
         "601939.SH",
@@ -8719,7 +8656,7 @@
         "IEF",
         "000001.SZ"
       ],
-      "avgConviction": 58
+      "avgConviction": 57
     },
     {
       "id": "lane_a724a01f8428",
@@ -8747,7 +8684,7 @@
       "href": "/investor/lanes/home-improvement-and-post-property-cycle/",
       "thesisCount": 1,
       "eventCount": 2,
-      "convictionTotal": 49,
+      "convictionTotal": 47,
       "stockTickers": [
         "002572.SZ",
         "603833.SH",
@@ -8760,7 +8697,7 @@
         "002508.SZ",
         "001322.SZ"
       ],
-      "avgConviction": 49
+      "avgConviction": 47
     }
   ],
   "stocks": [
@@ -8774,8 +8711,8 @@
       "lanes": [
         "AI 算力半导体",
         "低价模型/AI 软件利润池",
-        "先进封装/HBM4 闸门",
         "Mag7 AI 平台再分层",
+        "先进封装/HBM4 闸门",
         "AI 基建 TCO/能效筛选"
       ]
     },
@@ -8791,7 +8728,7 @@
         "A股风险偏好/两融",
         "A股红利/硬科技杠铃",
         "中国权益流动性",
-        "期权伽马/市场微观结构"
+        "A股硬科技/科创50"
       ]
     },
     {
@@ -8804,24 +8741,9 @@
       "lanes": [
         "AI 算力半导体",
         "Mag7 AI 平台再分层",
-        "中国权益流动性",
         "先进封装/HBM4 闸门",
+        "中国权益流动性",
         "端侧 AI/Agent 桌面"
-      ]
-    },
-    {
-      "ticker": "0981.HK",
-      "name": "中芯国际",
-      "market": "HK",
-      "href": "/investor/stocks/0981.HK/",
-      "thesisCount": 13,
-      "eventCount": 20,
-      "lanes": [
-        "A股半导体/两融负 Gamma",
-        "A股红利/硬科技杠铃",
-        "A股风险偏好/两融",
-        "指数调仓/被动资金事件",
-        "信创/国产 IT 栈"
       ]
     },
     {
@@ -8849,21 +8771,24 @@
       "lanes": [
         "A股半导体/两融负 Gamma",
         "A股红利/硬科技杠铃",
-        "指数调仓/被动资金事件",
         "信创/国产 IT 栈",
+        "指数调仓/被动资金事件",
         "A股硬科技/科创50"
       ]
     },
     {
-      "ticker": "3988.HK",
-      "name": "中国银行",
+      "ticker": "0981.HK",
+      "name": "中芯国际",
       "market": "HK",
-      "href": "/investor/stocks/3988.HK/",
-      "thesisCount": 14,
-      "eventCount": 18,
+      "href": "/investor/stocks/0981.HK/",
+      "thesisCount": 12,
+      "eventCount": 19,
       "lanes": [
-        "人民币/美元流动性敏感资产",
-        "债券供给/银行久期"
+        "A股半导体/两融负 Gamma",
+        "A股红利/硬科技杠铃",
+        "信创/国产 IT 栈",
+        "指数调仓/被动资金事件",
+        "A股硬科技/科创50"
       ]
     },
     {
@@ -8878,6 +8803,18 @@
         "A股风险偏好/两融",
         "信创/国产 IT 栈",
         "A股硬科技/科创50"
+      ]
+    },
+    {
+      "ticker": "3988.HK",
+      "name": "中国银行",
+      "market": "HK",
+      "href": "/investor/stocks/3988.HK/",
+      "thesisCount": 13,
+      "eventCount": 17,
+      "lanes": [
+        "人民币/美元流动性敏感资产",
+        "债券供给/银行久期"
       ]
     },
     {
@@ -8906,34 +8843,6 @@
       ]
     },
     {
-      "ticker": "UUP",
-      "name": "Invesco DB US Dollar Index Bullish Fund",
-      "market": "US ETF",
-      "href": "/investor/stocks/UUP/",
-      "thesisCount": 14,
-      "eventCount": 15,
-      "lanes": [
-        "人民币/美元流动性敏感资产",
-        "美债利率/美元再定价",
-        "日元套息/EM 科技流动性"
-      ]
-    },
-    {
-      "ticker": "TSM",
-      "name": "TSMC",
-      "market": "US ADR",
-      "href": "/investor/stocks/TSM/",
-      "thesisCount": 11,
-      "eventCount": 15,
-      "lanes": [
-        "日元套息/EM 科技流动性",
-        "AI 算力半导体",
-        "先进封装/HBM4 闸门",
-        "Mag7 AI 平台再分层",
-        "AI 基建 TCO/能效筛选"
-      ]
-    },
-    {
       "ticker": "688008.SH",
       "name": "澜起科技",
       "market": "A-share",
@@ -8944,6 +8853,19 @@
         "A股半导体/两融负 Gamma",
         "信创/国产 IT 栈",
         "A股硬科技/科创50"
+      ]
+    },
+    {
+      "ticker": "UUP",
+      "name": "Invesco DB US Dollar Index Bullish Fund",
+      "market": "US ETF",
+      "href": "/investor/stocks/UUP/",
+      "thesisCount": 13,
+      "eventCount": 14,
+      "lanes": [
+        "人民币/美元流动性敏感资产",
+        "美债利率/美元再定价",
+        "日元套息/EM 科技流动性"
       ]
     },
     {
@@ -8959,6 +8881,21 @@
         "先进封装/HBM4 闸门",
         "AI 算力半导体",
         "端侧 AI/Agent 桌面"
+      ]
+    },
+    {
+      "ticker": "TSM",
+      "name": "TSMC",
+      "market": "US ADR",
+      "href": "/investor/stocks/TSM/",
+      "thesisCount": 10,
+      "eventCount": 14,
+      "lanes": [
+        "日元套息/EM 科技流动性",
+        "AI 算力半导体",
+        "Mag7 AI 平台再分层",
+        "先进封装/HBM4 闸门",
+        "AI 基建 TCO/能效筛选"
       ]
     },
     {
@@ -9038,19 +8975,6 @@
       ]
     },
     {
-      "ticker": "VST",
-      "name": "Vistra",
-      "market": "US",
-      "href": "/investor/stocks/VST/",
-      "thesisCount": 8,
-      "eventCount": 10,
-      "lanes": [
-        "AI 电力/电网设备",
-        "公用事业/电网信用",
-        "云厂商自发电/电力资产"
-      ]
-    },
-    {
       "ticker": "300308.SZ",
       "name": "中际旭创",
       "market": "A-share",
@@ -9061,8 +8985,23 @@
         "CPO/光模块/高速互联",
         "A股风险偏好/两融",
         "中国权益流动性",
-        "指数调仓/被动资金事件",
-        "信创/国产 IT 栈"
+        "信创/国产 IT 栈",
+        "指数调仓/被动资金事件"
+      ]
+    },
+    {
+      "ticker": "AVGO",
+      "name": "Broadcom",
+      "market": "US",
+      "href": "/investor/stocks/AVGO/",
+      "thesisCount": 6,
+      "eventCount": 10,
+      "lanes": [
+        "CPO/光模块/高速互联",
+        "AI 算力半导体",
+        "Mag7 AI 平台再分层",
+        "先进封装/HBM4 闸门",
+        "端侧 AI/Agent 桌面"
       ]
     },
     {
@@ -9099,45 +9038,16 @@
       ]
     },
     {
-      "ticker": "AVGO",
-      "name": "Broadcom",
+      "ticker": "VST",
+      "name": "Vistra",
       "market": "US",
-      "href": "/investor/stocks/AVGO/",
-      "thesisCount": 5,
+      "href": "/investor/stocks/VST/",
+      "thesisCount": 7,
       "eventCount": 9,
       "lanes": [
-        "CPO/光模块/高速互联",
-        "AI 算力半导体",
-        "Mag7 AI 平台再分层",
-        "先进封装/HBM4 闸门"
-      ]
-    },
-    {
-      "ticker": "9988.HK",
-      "name": "阿里巴巴",
-      "market": "HK",
-      "href": "/investor/stocks/9988.HK/",
-      "thesisCount": 5,
-      "eventCount": 9,
-      "lanes": [
-        "人民币/美元流动性敏感资产",
-        "低价模型/AI 软件利润池",
-        "中国权益流动性",
-        "指数调仓/被动资金事件"
-      ]
-    },
-    {
-      "ticker": "0700.HK",
-      "name": "腾讯控股",
-      "market": "HK",
-      "href": "/investor/stocks/0700.HK/",
-      "thesisCount": 5,
-      "eventCount": 9,
-      "lanes": [
-        "人民币/美元流动性敏感资产",
-        "低价模型/AI 软件利润池",
-        "中国权益流动性",
-        "指数调仓/被动资金事件"
+        "AI 电力/电网设备",
+        "公用事业/电网信用",
+        "云厂商自发电/电力资产"
       ]
     },
     {
@@ -9190,6 +9100,34 @@
       "lanes": [
         "AI 算力半导体",
         "先进封装/HBM4 闸门"
+      ]
+    },
+    {
+      "ticker": "9988.HK",
+      "name": "阿里巴巴",
+      "market": "HK",
+      "href": "/investor/stocks/9988.HK/",
+      "thesisCount": 4,
+      "eventCount": 8,
+      "lanes": [
+        "低价模型/AI 软件利润池",
+        "中国权益流动性",
+        "指数调仓/被动资金事件",
+        "人民币/美元流动性敏感资产"
+      ]
+    },
+    {
+      "ticker": "0700.HK",
+      "name": "腾讯控股",
+      "market": "HK",
+      "href": "/investor/stocks/0700.HK/",
+      "thesisCount": 4,
+      "eventCount": 8,
+      "lanes": [
+        "低价模型/AI 软件利润池",
+        "中国权益流动性",
+        "指数调仓/被动资金事件",
+        "人民币/美元流动性敏感资产"
       ]
     },
     {
@@ -9294,14 +9232,14 @@
       "nameEn": "Bond Analyst",
       "href": "/investor/personas/#persona-bond-analyst-232b52",
       "specialty": "利率债/信用债/收益率曲线/久期管理",
-      "currentView": "美联储6月鹰派暂停与美国高利率平台期风险；保留 65–70% 远期/NDF 锁 carry，用 USD/JPY 价差看跌+敲入条件 call、USD/CNH 区间远期、HKD/C…；USD/JPY与USD/CNY不是直接拉爆A股硬件链融资盘的拉绳，而是通过SOX估值代理与人民币波动率→券商折算率传导的放大器，CNH/… 是当前该 persona 参与最多的研究主线。",
+      "currentView": "美联储6月鹰派暂停与美国高利率平台期风险；USD/JPY与USD/CNY不是直接拉爆A股硬件链融资盘的拉绳，而是通过SOX估值代理与人民币波动率→券商折算率传导的放大器，CNH/…；保留 65–70% 远期/NDF 锁 carry，用 USD/JPY 价差看跌+敲入条件 call、USD/CNH 区间远期、HKD/C… 是当前该 persona 参与最多的研究主线。",
       "supports": 0,
       "risks": 2,
       "neutral": 0,
       "eventCount": 2,
       "topTheses": [
-        "保留 65–70% 远期/NDF 锁 carry，用 USD/JPY 价差看跌+敲入条件 call、USD/CNH 区间远期、HKD/C…",
-        "USD/JPY与USD/CNY不是直接拉爆A股硬件链融资盘的拉绳，而是通过SOX估值代理与人民币波动率→券商折算率传导的放大器，CNH/…"
+        "USD/JPY与USD/CNY不是直接拉爆A股硬件链融资盘的拉绳，而是通过SOX估值代理与人民币波动率→券商折算率传导的放大器，CNH/…",
+        "保留 65–70% 远期/NDF 锁 carry，用 USD/JPY 价差看跌+敲入条件 call、USD/CNH 区间远期、HKD/C…"
       ],
       "latestEvent": {
         "title": "UST–JGB 利差与日债拍卖压力更新 — USD/JPY Carry 平仓触发条件",
@@ -9373,7 +9311,7 @@
       "nameEn": "Energy Analyst",
       "href": "/investor/personas/#persona-energy-analyst-ca430c",
       "specialty": "石油/天然气/煤炭/新能源/电力",
-      "currentView": "美伊和平协议拟重开霍尔木兹海峡，导致原油价格破位（Brent 79.49，WTI <78）。在能化大宗商品面临通缩压力的背景下，A股“红…；油价地缘底线决定再通胀与降息交易的安全边际；地缘利好引发的油价下跌能否抵消美联储新主席 Warsh 的鹰派立场？当前的‘高价高偏斜’是否暗示结构性崩塌风险？ 是当前该 persona 参与最多的研究主线。",
+      "currentView": "美伊和平协议拟重开霍尔木兹海峡，导致原油价格破位（Brent 79.49，WTI <78）。在能化大宗商品面临通缩压力的背景下，A股“红…；油价地缘底线决定再通胀与降息交易的安全边际；航运与物流成本是油价、关税和供应链再通胀的二阶传导器 是当前该 persona 参与最多的研究主线。",
       "supports": 0,
       "risks": 2,
       "neutral": 0,
@@ -9413,7 +9351,7 @@
       "nameEn": "Chief Strategist",
       "href": "/investor/personas/#persona-chief-strategist-25480e",
       "specialty": "A股市场策略、风格轮动、行业配置 【合并扩展 2026-06-11】纳入大类资产配置(股债商品配比、风险平价、全天候)与沪深市场结构(两融、限售解禁)。原 asset-allocator/ashare-strategist 职能并入。",
-      "currentView": "A 股红利与硬科技杠铃仍是政策、利率和风险偏好的组合表达；AI CapEx的主线不是收缩，而是从新增外壳数量转向每瓦、每机架、每封装的半导体密度提升。；在SpaceX将于6月12日进行股权交易且美债高企下，太空经济是否已告别散户概念炒作，转向由SpaceX价格伞、国防合同与垂直整合总装定… 是当前该 persona 参与最多的研究主线。",
+      "currentView": "AI CapEx的主线不是收缩，而是从新增外壳数量转向每瓦、每机架、每封装的半导体密度提升。；在SpaceX将于6月12日进行股权交易且美债高企下，太空经济是否已告别散户概念炒作，转向由SpaceX价格伞、国防合同与垂直整合总装定…；科创板极端护盘对A股整体流动性的虹吸效应与跨板块资产配置调整 研究日期： 2026 05 22 作者： 首席策略师 (Chief Str… 是当前该 persona 参与最多的研究主线。",
       "supports": 1,
       "risks": 0,
       "neutral": 1,

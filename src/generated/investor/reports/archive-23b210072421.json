@@ -1,0 +1,18 @@
+{
+  "slug": "archive-23b210072421",
+  "href": "/investor/reports/archive-23b210072421/",
+  "meta": {
+    "title": "共享数据采集摘要 2026-07-29",
+    "date": "2026-07-29",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "通胀",
+      "港美股"
+    ],
+    "source": "archive-23b210072421",
+    "source_label": "研究档案",
+    "source_kind": "archive"
+  },
+  "bodyHtml": "<h1>共享数据采集摘要 2026-07-29</h1>\n<h2>markets_overnight</h2>\n<ul>\n<li>字段总数 13、空值 0、confidence: high</li>\n</ul>\n<h2>markets_close_cn</h2>\n<ul>\n<li>字段总数 5、空值 0、confidence: high</li>\n</ul>\n<h2>失败 / 修复</h2>\n<ul>\n<li>spx=empty(Stooq ^spx)</li>\n<li>ndx=empty(Stooq ^ndx)</li>\n<li>dow=empty(Stooq ^dji)</li>\n<li>brent=empty(Stooq brent.f)</li>\n<li>wti=empty(Stooq cl.f)</li>\n<li>gold=empty(Stooq xauusd)</li>\n<li>dxy=empty(Stooq usd_i)</li>\n<li>ust10y=empty(Stooq us10yt)</li>\n<li>eurusd=empty(Stooq eurusd)</li>\n<li>usdjpy=empty(Stooq usdjpy)</li>\n<li>vix=empty(Stooq ^vix)</li>\n<li>n225=empty(Stooq ^nkx)</li>\n<li>hsi=empty(Stooq ^hsi; reused Sina hkHSI)</li>\n</ul>\n<h2>修复说明</h2>\n<ul>\n<li>Stooq 隔夜字段返回空值；spx_close 与 dow_close 使用 AP 2026-07-28 美股收盘报道修复。</li>\n<li>ndx_close 使用 WSJ / MarketWatch / Nasdaq 搜索片段中的 2026-07-28 NDX 收盘值修复。</li>\n<li>brent_usd、wti_usd、gold_usd 使用 WSJ / MarketWatch 2026-07-28 商品收盘报道修复。</li>\n<li>dxy 使用 WSJ DXY 2026-07-28 报价修复；ust10y_pct 使用 WSJ / Trading Economics 10Y 收益率片段修复。</li>\n<li>eur_usd 使用 ECB 2026-07-28 欧元参考汇率；usd_jpy 由 ECB EUR/JPY 186.32 与 EUR/USD 1.1367 交叉计算得到。</li>\n<li>vix 使用 Investing.com 2026-07-28 VIX 历史价格片段修复；n225_close 使用 Yahoo Finance 2026-07-28 历史价格片段修复。</li>\n<li>hsi_close 使用 Sina hkHSI 字段修复 Stooq ^hsi 空值。</li>\n</ul>"
+}

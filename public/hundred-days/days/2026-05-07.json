@@ -613,8 +613,8 @@
       ],
       "stockTickers": [
         "0883.HK",
-        "0857.HK",
-        "SLB"
+        "SLB",
+        "OXY"
       ]
     },
     {
@@ -627,7 +627,7 @@
       "laneHref": "/investor/lanes/crypto-and-high-beta-risk-appetite/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 64,
+      "conviction": 61,
       "supports": 0,
       "risks": 2,
       "neutral": 0,
@@ -700,36 +700,6 @@
       ]
     },
     {
-      "id": "thesis-a60b131c8c",
-      "title": "面对4.2%的总体CPI与108美元的布伦特原油，新任主席沃什将在6月16-17日的FOMC会议上如何调整点阵图与政策立场？",
-      "titleEn": "Practical research topic: 面对4.2%的总体CPI与108美元的布伦特原油，新任主席沃什将在6月16-17日的FOMC会议上如何调整点阵图与政策立场？",
-      "href": "/investor/theses/thesis-a60b131c8c/",
-      "laneId": "lane_93300d58763e",
-      "lane": "油气/地缘通胀",
-      "laneHref": "/investor/lanes/oil-gas-and-geopolitical-inflation/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 83,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "布伦特原油持续 100美元/桶对欧元区制造业成本与通胀传导的边际影响评估",
-          "summary": "布伦特原油持续 100美元/桶对欧元区制造业成本与通胀传导的边际影响评估",
-          "href": "/investor/reports/archive-9e86f01ca794/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "SLB",
-        "OXY",
-        "0883.HK"
-      ]
-    },
-    {
       "id": "thesis-f23572dfb8",
       "title": "Advance th_p_2ca41751 (能源价格冲突引发的全球通胀路径分化): 若 Brent 在停火提案与航运威胁之间维持 85…",
       "titleEn": "Practical research topic: Advance th_p_2ca41751 (能源价格冲突引发的全球通胀路径分化): 若 Brent 在停火提案与航运威胁之间维持 85…",
@@ -787,6 +757,36 @@
         "0883.HK",
         "SLB",
         "OXY"
+      ]
+    },
+    {
+      "id": "thesis-a60b131c8c",
+      "title": "面对4.2%的总体CPI与108美元的布伦特原油，新任主席沃什将在6月16-17日的FOMC会议上如何调整点阵图与政策立场？",
+      "titleEn": "Practical research topic: 面对4.2%的总体CPI与108美元的布伦特原油，新任主席沃什将在6月16-17日的FOMC会议上如何调整点阵图与政策立场？",
+      "href": "/investor/theses/thesis-a60b131c8c/",
+      "laneId": "lane_93300d58763e",
+      "lane": "油气/地缘通胀",
+      "laneHref": "/investor/lanes/oil-gas-and-geopolitical-inflation/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 82,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "布伦特原油持续 100美元/桶对欧元区制造业成本与通胀传导的边际影响评估",
+          "summary": "布伦特原油持续 100美元/桶对欧元区制造业成本与通胀传导的边际影响评估",
+          "href": "/investor/reports/archive-9e86f01ca794/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "SLB",
+        "OXY",
+        "0883.HK"
       ]
     },
     {
@@ -916,11 +916,11 @@
         "AAPL",
         "META",
         "ARM",
+        "AMZN",
         "AMD",
         "QCOM",
-        "AMZN",
         "GOOGL",
-        "TSM"
+        "AVGO"
       ]
     },
     {
@@ -1074,32 +1074,14 @@
       "href": "/investor/lanes/oil-gas-and-geopolitical-inflation/",
       "thesisCount": 5,
       "eventCount": 6,
-      "convictionTotal": 399,
+      "convictionTotal": 398,
       "stockTickers": [
         "0883.HK",
-        "0857.HK",
         "SLB",
-        "OXY"
+        "OXY",
+        "0857.HK"
       ],
       "avgConviction": 80
-    },
-    {
-      "id": "lane_73a269a07a15",
-      "title": "加密/高波动风险偏好",
-      "href": "/investor/lanes/crypto-and-high-beta-risk-appetite/",
-      "thesisCount": 1,
-      "eventCount": 2,
-      "convictionTotal": 64,
-      "stockTickers": [
-        "MSTR",
-        "COIN",
-        "IBIT",
-        "HOOD",
-        "LOW",
-        "MARA",
-        "RIOT"
-      ],
-      "avgConviction": 64
     },
     {
       "id": "lane_f1a271385aff",
@@ -1118,6 +1100,24 @@
         "600552.SH"
       ],
       "avgConviction": 63
+    },
+    {
+      "id": "lane_73a269a07a15",
+      "title": "加密/高波动风险偏好",
+      "href": "/investor/lanes/crypto-and-high-beta-risk-appetite/",
+      "thesisCount": 1,
+      "eventCount": 2,
+      "convictionTotal": 61,
+      "stockTickers": [
+        "MSTR",
+        "COIN",
+        "IBIT",
+        "HOOD",
+        "LOW",
+        "MARA",
+        "RIOT"
+      ],
+      "avgConviction": 61
     },
     {
       "id": "lane_79a55cd8530e",
@@ -1170,11 +1170,11 @@
         "AAPL",
         "META",
         "ARM",
+        "AMZN",
         "AMD",
         "QCOM",
-        "AMZN",
         "GOOGL",
-        "TSM"
+        "AVGO"
       ],
       "avgConviction": 61
     },
@@ -1279,6 +1279,17 @@
       ]
     },
     {
+      "ticker": "OXY",
+      "name": "Occidental Petroleum",
+      "market": "US",
+      "href": "/investor/stocks/OXY/",
+      "thesisCount": 4,
+      "eventCount": 5,
+      "lanes": [
+        "油气/地缘通胀"
+      ]
+    },
+    {
       "ticker": "MSFT",
       "name": "Microsoft",
       "market": "US",
@@ -1297,23 +1308,11 @@
       "name": "TSMC",
       "market": "US ADR",
       "href": "/investor/stocks/TSM/",
-      "thesisCount": 4,
-      "eventCount": 4,
-      "lanes": [
-        "先进封装/HBM4 闸门",
-        "端侧 AI/Agent 桌面",
-        "AI 基建 TCO/能效筛选"
-      ]
-    },
-    {
-      "ticker": "OXY",
-      "name": "Occidental Petroleum",
-      "market": "US",
-      "href": "/investor/stocks/OXY/",
       "thesisCount": 3,
       "eventCount": 3,
       "lanes": [
-        "油气/地缘通胀"
+        "先进封装/HBM4 闸门",
+        "AI 基建 TCO/能效筛选"
       ]
     },
     {
@@ -1354,21 +1353,22 @@
       ]
     },
     {
-      "ticker": "0857.HK",
-      "name": "中国石油股份",
-      "market": "HK",
-      "href": "/investor/stocks/0857.HK/",
-      "thesisCount": 2,
-      "eventCount": 3,
-      "lanes": [
-        "油气/地缘通胀"
-      ]
-    },
-    {
       "ticker": "AMD",
       "name": "AMD",
       "market": "US",
       "href": "/investor/stocks/AMD/",
+      "thesisCount": 2,
+      "eventCount": 2,
+      "lanes": [
+        "端侧 AI/Agent 桌面",
+        "AI 基建 TCO/能效筛选"
+      ]
+    },
+    {
+      "ticker": "AVGO",
+      "name": "Broadcom",
+      "market": "US",
+      "href": "/investor/stocks/AVGO/",
       "thesisCount": 2,
       "eventCount": 2,
       "lanes": [
@@ -1543,6 +1543,17 @@
       ]
     },
     {
+      "ticker": "0857.HK",
+      "name": "中国石油股份",
+      "market": "HK",
+      "href": "/investor/stocks/0857.HK/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "油气/地缘通胀"
+      ]
+    },
+    {
       "ticker": "BABA",
       "name": "Alibaba",
       "market": "US ADR",
@@ -1642,10 +1653,10 @@
       ]
     },
     {
-      "ticker": "QCOM",
-      "name": "Qualcomm",
+      "ticker": "AMZN",
+      "name": "Amazon",
       "market": "US",
-      "href": "/investor/stocks/QCOM/",
+      "href": "/investor/stocks/AMZN/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
@@ -1653,10 +1664,10 @@
       ]
     },
     {
-      "ticker": "AMZN",
-      "name": "Amazon",
+      "ticker": "QCOM",
+      "name": "Qualcomm",
       "market": "US",
-      "href": "/investor/stocks/AMZN/",
+      "href": "/investor/stocks/QCOM/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
@@ -1684,17 +1695,6 @@
       "lanes": [
         "先进封装/HBM4 闸门"
       ]
-    },
-    {
-      "ticker": "002916.SZ",
-      "name": "深南电路",
-      "market": "A-share",
-      "href": "/investor/stocks/002916.SZ/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "先进封装/HBM4 闸门"
-      ]
     }
   ],
   "personas": [
@@ -1704,15 +1704,15 @@
       "nameEn": "Energy Analyst",
       "href": "/investor/personas/#persona-energy-analyst-ca430c",
       "specialty": "石油/天然气/煤炭/新能源/电力",
-      "currentView": "美伊和平协议拟重开霍尔木兹海峡，导致原油价格破位（Brent 79.49，WTI <78）。在能化大宗商品面临通缩压力的背景下，A股“红…；油价地缘底线决定再通胀与降息交易的安全边际；地缘利好引发的油价下跌能否抵消美联储新主席 Warsh 的鹰派立场？当前的‘高价高偏斜’是否暗示结构性崩塌风险？ 是当前该 persona 参与最多的研究主线。",
+      "currentView": "美伊和平协议拟重开霍尔木兹海峡，导致原油价格破位（Brent 79.49，WTI <78）。在能化大宗商品面临通缩压力的背景下，A股“红…；油价地缘底线决定再通胀与降息交易的安全边际；航运与物流成本是油价、关税和供应链再通胀的二阶传导器 是当前该 persona 参与最多的研究主线。",
       "supports": 0,
       "risks": 6,
       "neutral": 0,
       "eventCount": 6,
       "topTheses": [
         "地缘利好引发的油价下跌能否抵消美联储新主席 Warsh 的鹰派立场？当前的‘高价高偏斜’是否暗示结构性崩塌风险？",
-        "面对4.2%的总体CPI与108美元的布伦特原油，新任主席沃什将在6月16-17日的FOMC会议上如何调整点阵图与政策立场？",
-        "Advance th_p_2ca41751 (能源价格冲突引发的全球通胀路径分化): 若 Brent 在停火提案与航运威胁之间维持 85…"
+        "Advance th_p_2ca41751 (能源价格冲突引发的全球通胀路径分化): 若 Brent 在停火提案与航运威胁之间维持 85…",
+        "美伊和平协议拟重开霍尔木兹海峡，导致原油价格破位（Brent 79.49，WTI <78）。在能化大宗商品面临通缩压力的背景下，A股“红…"
       ],
       "latestEvent": {
         "title": "布伦特原油持续 100美元/桶对欧元区制造业成本与通胀传导的边际影响评估",
@@ -1725,7 +1725,7 @@
       "nameEn": "TMT Analyst",
       "href": "/investor/personas/#persona-tmt-analyst-b5fc12",
       "specialty": "半导体/AI/云计算/消费电子/互联网 【拆分聚焦 2026-06-11】聚焦软件/互联网/平台/消费电子；半导体与AI算力已拆为独立深度席位。",
-      "currentView": "Mag7 在 AI 时代从平台垄断转向基础设施再分层；NAND盈利弹性由价格与产品结构主导，而非单纯出货增长；NAND价格与产品组合驱动SanDisk盈利弹性 是当前该 persona 参与最多的研究主线。",
+      "currentView": "NAND价格与产品组合驱动SanDisk盈利弹性；NAND盈利弹性由价格与产品结构主导，而非单纯出货增长；Mag7 在 AI 时代从平台垄断转向基础设施再分层 是当前该 persona 参与最多的研究主线。",
       "supports": 0,
       "risks": 5,
       "neutral": 0,

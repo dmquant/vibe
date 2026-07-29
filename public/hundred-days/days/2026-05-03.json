@@ -4,7 +4,7 @@
   "dayNumber": 12,
   "status": "recorded",
   "headline": "双重供给冲击：中东能源危机与美中关税升级叠加——重新定价美联储宽松窗口",
-  "summary": "当日归档 10 份公开研究，13 条研究讨论和 7 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
+  "summary": "当日归档 10 份公开研究，13 条研究讨论和 6 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
   "dominantTopic": {
     "id": "macro-rates",
     "labelZh": "宏观、通胀与利率",
@@ -29,7 +29,7 @@
     "reports": 10,
     "researchThreads": 13,
     "researchNotes": 121,
-    "thesisEvents": 7,
+    "thesisEvents": 6,
     "personaEvents": 0,
     "readerMemos": 0,
     "recaps": 0,
@@ -475,38 +475,6 @@
       ]
     },
     {
-      "id": "thesis-4e383ee09c",
-      "title": "2026年AI芯片与先进封装产能约束会推高并拉长云端CapEx，而不是使其取消；配置应偏向具备配额权的上游瓶颈环节。",
-      "titleEn": "Practical research topic: 2026年AI芯片与先进封装产能约束会推高并拉长云端CapEx，而不是使其取消；配置应偏向具备配额权的上游瓶颈环节。",
-      "href": "/investor/theses/thesis-4e383ee09c/",
-      "laneId": "lane_f1a271385aff",
-      "lane": "先进封装/HBM4 闸门",
-      "laneHref": "/investor/lanes/advanced-packaging-and-hbm4-gate/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 65,
-      "supports": 1,
-      "risks": 0,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "2026 一季度超大规模云厂商 Capex 再加速:AI 基建熊市论是否已死?",
-          "summary": "2026 一季度超大规模云厂商 Capex 再加速:AI 基建熊市论是否已死?",
-          "href": "/investor/reports/archive-1eb2b25297b5/",
-          "stance": "supports",
-          "stanceLabel": "支持"
-        }
-      ],
-      "stockTickers": [
-        "NVDA",
-        "TSM",
-        "MU",
-        "000660.KS",
-        "ASML"
-      ]
-    },
-    {
       "id": "thesis-3d421524cd",
       "title": "油价地缘底线决定再通胀与降息交易的安全边际",
       "titleEn": "The geopolitical oil floor defines the margin of safety for disinflation and rate-cut trades",
@@ -516,7 +484,7 @@
       "laneHref": "/investor/lanes/oil-gas-and-geopolitical-inflation/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 63,
+      "conviction": 62,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -550,7 +518,7 @@
       "href": "/investor/lanes/oil-gas-and-geopolitical-inflation/",
       "thesisCount": 2,
       "eventCount": 2,
-      "convictionTotal": 131,
+      "convictionTotal": 130,
       "stockTickers": [
         "CVX",
         "XOM",
@@ -565,7 +533,7 @@
         "XLE",
         "601857.SH"
       ],
-      "avgConviction": 66
+      "avgConviction": 65
     },
     {
       "id": "lane_2997650d0638",
@@ -628,22 +596,6 @@
         "600845.SH"
       ],
       "avgConviction": 65
-    },
-    {
-      "id": "lane_f1a271385aff",
-      "title": "先进封装/HBM4 闸门",
-      "href": "/investor/lanes/advanced-packaging-and-hbm4-gate/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 65,
-      "stockTickers": [
-        "NVDA",
-        "TSM",
-        "MU",
-        "000660.KS",
-        "ASML"
-      ],
-      "avgConviction": 65
     }
   ],
   "stocks": [
@@ -652,13 +604,12 @@
       "name": "NVIDIA",
       "market": "US",
       "href": "/investor/stocks/NVDA/",
-      "thesisCount": 4,
-      "eventCount": 5,
+      "thesisCount": 3,
+      "eventCount": 4,
       "lanes": [
         "低价模型/AI 软件利润池",
         "信创/国产 IT 栈",
-        "中国云/国产算力栈",
-        "先进封装/HBM4 闸门"
+        "中国云/国产算力栈"
       ]
     },
     {
@@ -942,50 +893,6 @@
       "eventCount": 1,
       "lanes": [
         "信创/国产 IT 栈"
-      ]
-    },
-    {
-      "ticker": "TSM",
-      "name": "TSMC",
-      "market": "US ADR",
-      "href": "/investor/stocks/TSM/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "先进封装/HBM4 闸门"
-      ]
-    },
-    {
-      "ticker": "MU",
-      "name": "Micron",
-      "market": "US",
-      "href": "/investor/stocks/MU/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "先进封装/HBM4 闸门"
-      ]
-    },
-    {
-      "ticker": "000660.KS",
-      "name": "SK hynix",
-      "market": "Korea",
-      "href": "/investor/stocks/000660.KS/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "先进封装/HBM4 闸门"
-      ]
-    },
-    {
-      "ticker": "ASML",
-      "name": "ASML",
-      "market": "US ADR",
-      "href": "/investor/stocks/ASML/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "先进封装/HBM4 闸门"
       ]
     },
     {
