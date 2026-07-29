@@ -582,6 +582,41 @@ function mountInstitutionFlow(canvas) {
   };
 }
 
+function mountStoryArc() {
+  const tabs = [...document.querySelectorAll("[data-story-tab]")];
+  const panels = [...document.querySelectorAll("[data-story-panel]")];
+  if (!tabs.length || tabs.length !== panels.length) return;
+
+  function selectStoryChapter(index, moveFocus = false) {
+    const next = Math.max(0, Math.min(tabs.length - 1, index));
+    tabs.forEach((tab, tabIndex) => {
+      const active = tabIndex === next;
+      tab.classList.toggle("is-active", active);
+      tab.setAttribute("aria-selected", active ? "true" : "false");
+      tab.tabIndex = active ? 0 : -1;
+      panels[tabIndex].hidden = !active;
+    });
+    if (moveFocus) tabs[next].focus();
+  }
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => selectStoryChapter(index));
+    tab.addEventListener("keydown", (event) => {
+      let next = index;
+      if (event.key === "ArrowRight" || event.key === "ArrowDown") next = (index + 1) % tabs.length;
+      else if (event.key === "ArrowLeft" || event.key === "ArrowUp") next = (index - 1 + tabs.length) % tabs.length;
+      else if (event.key === "Home") next = 0;
+      else if (event.key === "End") next = tabs.length - 1;
+      else return;
+      event.preventDefault();
+      selectStoryChapter(next, true);
+    });
+  });
+
+  const initial = Math.max(0, tabs.findIndex((tab) => tab.getAttribute("aria-selected") === "true"));
+  selectStoryChapter(initial);
+}
+
 export function mountHundredDaysPortal() {
   const root = document.querySelector("[data-hundred-days-root]");
   const payloadNode = document.getElementById("hundredDaysPayload");
@@ -594,6 +629,8 @@ export function mountHundredDaysPortal() {
   } catch {
     return;
   }
+
+  mountStoryArc();
 
   const dayCache = new Map();
   const dayCells = [...document.querySelectorAll("[data-century-day]")];

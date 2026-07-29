@@ -1,5 +1,6 @@
 ---
 import { operatingProof } from "../../lib/hundred-days-operating-proof.js";
+import { hundredDaysNarrative } from "../../lib/hundred-days-narrative.js";
 
 const { data } = Astro.props;
 const initialDay = Math.max(1, Math.min(data.dayCount, data.latestDataDay || data.currentDay || 1));
@@ -202,7 +203,7 @@ const episodeFilters = [
           <span aria-hidden="true">▶</span>
           <span class="i18n-zh">观看百日回放</span><span class="i18n-en">Watch the guided replay</span>
         </button>
-        <a href="#daily-field"><span aria-hidden="true">⌁</span><span class="i18n-zh">探索每一天</span><span class="i18n-en">Explore every day</span></a>
+        <a href="#story-arc"><span aria-hidden="true">⌁</span><span class="i18n-zh">阅读完整故事</span><span class="i18n-en">Read the full story</span></a>
         <a href="/investor/">
           <span aria-hidden="true">↗</span>
           <span class="i18n-zh">打开实时研究院</span><span class="i18n-en">Open the live Institute</span>
@@ -329,6 +330,138 @@ const episodeFilters = [
             <p class="i18n-zh">图结构材料只有进入人类判断顺序，才真正成为投资研究产品。</p>
             <p class="i18n-en">Graph-shaped evidence becomes useful only after entering a human decision sequence.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="century-section century-story-arc" id="story-arc">
+      <header class="century-section-header century-story-header">
+        <div>
+          <span>{hundredDaysNarrative.eyebrow}</span>
+          <h2 class="i18n-zh">{hundredDaysNarrative.titleZh}</h2>
+          <h2 class="i18n-en">{hundredDaysNarrative.titleEn}</h2>
+        </div>
+        <p class="i18n-zh">{hundredDaysNarrative.summaryZh}</p>
+        <p class="i18n-en">{hundredDaysNarrative.summaryEn}</p>
+      </header>
+
+      <div class="century-story-selector" role="tablist" aria-label="100-day story chapters">
+        {hundredDaysNarrative.chapters.map((chapter, index) => (
+          <button
+            type="button"
+            role="tab"
+            id={`century-story-tab-${chapter.id}`}
+            aria-controls={`century-story-panel-${chapter.id}`}
+            aria-selected={index === 0 ? "true" : "false"}
+            tabindex={index === 0 ? "0" : "-1"}
+            class:list={[`tone-${chapter.color}`, { "is-active": index === 0 }]}
+            data-story-tab={chapter.id}
+          >
+            <span>{chapter.index}</span>
+            <i aria-hidden="true"></i>
+            <div>
+              <em>{chapter.period}</em>
+              <strong class="i18n-zh">{chapter.questionZh}</strong>
+              <strong class="i18n-en">{chapter.questionEn}</strong>
+            </div>
+          </button>
+        ))}
+      </div>
+
+      <div class="century-story-panels">
+        {hundredDaysNarrative.chapters.map((chapter, index) => (
+          <article
+            id={`century-story-panel-${chapter.id}`}
+            role="tabpanel"
+            aria-labelledby={`century-story-tab-${chapter.id}`}
+            class={`century-story-panel tone-${chapter.color}`}
+            data-story-panel={chapter.id}
+            hidden={index !== 0}
+          >
+            <aside class="century-story-chapter-meta">
+              <span>{chapter.index} / {chapter.period}</span>
+              <h3 class="i18n-zh">{chapter.titleZh}</h3>
+              <h3 class="i18n-en">{chapter.titleEn}</h3>
+              <p class="i18n-zh">{chapter.ledeZh}</p>
+              <p class="i18n-en">{chapter.ledeEn}</p>
+              <div class="century-story-human-role">
+                <em>HUMAN ROLE</em>
+                <p class="i18n-zh">{chapter.humanRoleZh}</p>
+                <p class="i18n-en">{chapter.humanRoleEn}</p>
+              </div>
+            </aside>
+
+            <div class="century-story-chapter-body">
+              <ol class="century-story-turns">
+                {chapter.turns.map((turn) => (
+                  <li>
+                    <a href={turn.href}>
+                      <span>{turn.date}</span>
+                      <div>
+                        <em>{turn.proof}</em>
+                        <strong class="i18n-zh">{turn.titleZh}</strong>
+                        <strong class="i18n-en">{turn.titleEn}</strong>
+                        <p class="i18n-zh">{turn.bodyZh}</p>
+                        <p class="i18n-en">{turn.bodyEn}</p>
+                      </div>
+                      <small class="i18n-zh">{turn.proofZh}</small>
+                      <small class="i18n-en">{turn.proofEn}</small>
+                      <i aria-hidden="true">↗</i>
+                    </a>
+                  </li>
+                ))}
+              </ol>
+              <div class="century-story-boundary">
+                <div>
+                  <span class="i18n-zh">已经证明</span><span class="i18n-en">What is proven</span>
+                  <p class="i18n-zh">{chapter.provenZh}</p><p class="i18n-en">{chapter.provenEn}</p>
+                </div>
+                <div>
+                  <span class="i18n-zh">仍未证明</span><span class="i18n-en">What remains unproven</span>
+                  <p class="i18n-zh">{chapter.openZh}</p><p class="i18n-en">{chapter.openEn}</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <div class="century-roadmap-arc">
+        <header>
+          <div>
+            <span>ROADMAP ARC / MEMORY → CONTROL</span>
+            <h3 class="i18n-zh">{hundredDaysNarrative.roadmap.titleZh}</h3>
+            <h3 class="i18n-en">{hundredDaysNarrative.roadmap.titleEn}</h3>
+          </div>
+          <p class="i18n-zh">{hundredDaysNarrative.roadmap.summaryZh}</p>
+          <p class="i18n-en">{hundredDaysNarrative.roadmap.summaryEn}</p>
+        </header>
+        <ol>
+          {hundredDaysNarrative.roadmap.stages.map((stage, index) => (
+            <li data-roadmap-stage>
+              <div><span>{String(index + 1).padStart(2, "0")}</span><i aria-hidden="true"></i><em>{stage.date}</em></div>
+              <strong class="i18n-zh">{stage.titleZh}</strong><strong class="i18n-en">{stage.titleEn}</strong>
+              <small>{stage.code}</small>
+              <p class="i18n-zh">{stage.bodyZh}</p><p class="i18n-en">{stage.bodyEn}</p>
+            </li>
+          ))}
+        </ol>
+        <div class="century-roadmap-rollup">
+          <header>
+            <strong class="i18n-zh">{hundredDaysNarrative.roadmap.rollupTitleZh}</strong>
+            <strong class="i18n-en">{hundredDaysNarrative.roadmap.rollupTitleEn}</strong>
+            <p class="i18n-zh">{hundredDaysNarrative.roadmap.rollupNoteZh}</p>
+            <p class="i18n-en">{hundredDaysNarrative.roadmap.rollupNoteEn}</p>
+          </header>
+          <div>
+            {hundredDaysNarrative.roadmap.rollup.map((item) => (
+              <span class={`tone-${item.color}`}>
+                <i aria-hidden="true"></i>
+                <strong>{item.value}</strong>
+                <em class="i18n-zh">{item.labelZh}</em><em class="i18n-en">{item.labelEn}</em>
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </section>
