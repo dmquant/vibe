@@ -1145,7 +1145,7 @@
       "laneHref": "/investor/lanes/options-gamma-and-market-microstructure/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 62,
+      "conviction": 63,
       "supports": 0,
       "risks": 3,
       "neutral": 0,
@@ -1194,7 +1194,7 @@
       "laneHref": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 82,
+      "conviction": 81,
       "supports": 0,
       "risks": 2,
       "neutral": 0,
@@ -1331,8 +1331,8 @@
         "688041.SH",
         "601138.SH",
         "300308.SZ",
-        "688981.SH",
         "000977.SZ",
+        "688981.SH",
         "0981.HK",
         "NVDA",
         "9988.HK",
@@ -1417,8 +1417,8 @@
       "stockTickers": [
         "ETN",
         "GEV",
-        "VST",
         "META",
+        "VST",
         "002028.SZ",
         "CEG",
         "600089.SH",
@@ -1468,6 +1468,36 @@
       "direction": "conflicting",
       "directionLabel": "分歧",
       "conviction": 82,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "第三张牌：美元储备溢价、USD/JPY套息交易与CNY外溢传导",
+          "summary": "第三张牌：美元储备溢价、USD/JPY套息交易与CNY外溢传导 压力测试：外汇市场是否已开始定价美联储独立性折价",
+          "href": "/investor/reports/archive-0365dbba6adf/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "3988.HK",
+        "UUP",
+        "FXI"
+      ]
+    },
+    {
+      "id": "thesis-80c15f4a7d",
+      "title": "再配置后 AI 上游租金篮子的 JPY/USD/HKD/CNH 对冲比例",
+      "titleEn": "Practical research topic: 再配置后 AI 上游租金篮子的 JPY/USD/HKD/CNH 对冲比例",
+      "href": "/investor/theses/thesis-80c15f4a7d/",
+      "laneId": "lane_c40c2ce413ec",
+      "lane": "人民币/美元流动性敏感资产",
+      "laneHref": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 81,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -1608,13 +1638,13 @@
       ]
     },
     {
-      "id": "thesis-80c15f4a7d",
-      "title": "再配置后 AI 上游租金篮子的 JPY/USD/HKD/CNH 对冲比例",
-      "titleEn": "Practical research topic: 再配置后 AI 上游租金篮子的 JPY/USD/HKD/CNH 对冲比例",
-      "href": "/investor/theses/thesis-80c15f4a7d/",
-      "laneId": "lane_c40c2ce413ec",
-      "lane": "人民币/美元流动性敏感资产",
-      "laneHref": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
+      "id": "thesis-69025fa4b4",
+      "title": "驱动对冲阶梯的 Fed / BoJ / ECB 政策路径",
+      "titleEn": "Practical research topic: 驱动对冲阶梯的 Fed / BoJ / ECB 政策路径",
+      "href": "/investor/theses/thesis-69025fa4b4/",
+      "laneId": "lane_1c216bd29875",
+      "lane": "美债利率/美元再定价",
+      "laneHref": "/investor/lanes/us-rates-and-dollar-repricing/",
       "direction": "conflicting",
       "directionLabel": "分歧",
       "conviction": 81,
@@ -1632,9 +1662,39 @@
         }
       ],
       "stockTickers": [
-        "3988.HK",
-        "UUP",
-        "FXI"
+        "JPM",
+        "TLT",
+        "IEF"
+      ]
+    },
+    {
+      "id": "thesis-29b1c0d6c7",
+      "title": "日银本周加息至1.0%、美联储维持3.50–3.75%不变的双向利差收敛背景下,USD/JPY ~160的日元套利交易是有序拆解还是面临…",
+      "titleEn": "Practical research topic: 日银本周加息至1.0%、美联储维持3.50–3.75%不变的双向利差收敛背景下,USD/JPY ~160的日元套利交易是有序拆解还是面临…",
+      "href": "/investor/theses/thesis-29b1c0d6c7/",
+      "laneId": "lane_f3e413e8ce27",
+      "lane": "日元套息/EM 科技流动性",
+      "laneHref": "/investor/lanes/yen-carry-and-em-tech-liquidity/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 81,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "第三张牌：美元储备溢价、USD/JPY套息交易与CNY外溢传导",
+          "summary": "第三张牌：美元储备溢价、USD/JPY套息交易与CNY外溢传导 压力测试：外汇市场是否已开始定价美联储独立性折价",
+          "href": "/investor/reports/archive-0365dbba6adf/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "TSM",
+        "FXY",
+        "UUP"
       ]
     },
     {
@@ -1672,66 +1732,6 @@
       "title": "日元carry平仓触发后的全球债券与成长股配置冲击",
       "titleEn": "Practical research topic: 日元carry平仓触发后的全球债券与成长股配置冲击",
       "href": "/investor/theses/thesis-e58a9e8746/",
-      "laneId": "lane_f3e413e8ce27",
-      "lane": "日元套息/EM 科技流动性",
-      "laneHref": "/investor/lanes/yen-carry-and-em-tech-liquidity/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 81,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "第三张牌：美元储备溢价、USD/JPY套息交易与CNY外溢传导",
-          "summary": "第三张牌：美元储备溢价、USD/JPY套息交易与CNY外溢传导 压力测试：外汇市场是否已开始定价美联储独立性折价",
-          "href": "/investor/reports/archive-0365dbba6adf/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "TSM",
-        "FXY",
-        "UUP"
-      ]
-    },
-    {
-      "id": "thesis-69025fa4b4",
-      "title": "驱动对冲阶梯的 Fed / BoJ / ECB 政策路径",
-      "titleEn": "Practical research topic: 驱动对冲阶梯的 Fed / BoJ / ECB 政策路径",
-      "href": "/investor/theses/thesis-69025fa4b4/",
-      "laneId": "lane_1c216bd29875",
-      "lane": "美债利率/美元再定价",
-      "laneHref": "/investor/lanes/us-rates-and-dollar-repricing/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 81,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "第三张牌：美元储备溢价、USD/JPY套息交易与CNY外溢传导",
-          "summary": "第三张牌：美元储备溢价、USD/JPY套息交易与CNY外溢传导 压力测试：外汇市场是否已开始定价美联储独立性折价",
-          "href": "/investor/reports/archive-0365dbba6adf/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "TLT",
-        "IEF",
-        "UUP"
-      ]
-    },
-    {
-      "id": "thesis-29b1c0d6c7",
-      "title": "日银本周加息至1.0%、美联储维持3.50–3.75%不变的双向利差收敛背景下,USD/JPY ~160的日元套利交易是有序拆解还是面临…",
-      "titleEn": "Practical research topic: 日银本周加息至1.0%、美联储维持3.50–3.75%不变的双向利差收敛背景下,USD/JPY ~160的日元套利交易是有序拆解还是面临…",
-      "href": "/investor/theses/thesis-29b1c0d6c7/",
       "laneId": "lane_f3e413e8ce27",
       "lane": "日元套息/EM 科技流动性",
       "laneHref": "/investor/lanes/yen-carry-and-em-tech-liquidity/",
@@ -1878,36 +1878,6 @@
       ]
     },
     {
-      "id": "thesis-594ba5e705",
-      "title": "在中美利差走阔且输入型AI信用冲击升级的情形下，USD/CNY能否守住6.85缓冲翻转线",
-      "titleEn": "Practical research topic: 在中美利差走阔且输入型AI信用冲击升级的情形下，USD/CNY能否守住6.85缓冲翻转线",
-      "href": "/investor/theses/thesis-594ba5e705/",
-      "laneId": "lane_c40c2ce413ec",
-      "lane": "人民币/美元流动性敏感资产",
-      "laneHref": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 78,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "前序研究 — 外汇综合：A股\"国家队\"作为央行隐性冲销池，以及为何 USD/CNY 必破 7.35",
-          "summary": "前序研究 — 外汇综合：A股\"国家队\"作为央行隐性冲销池，以及为何 USD/CNY 必破 7.35",
-          "href": "/investor/reports/archive-127ae0379a55/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "3988.HK",
-        "UUP",
-        "FXI"
-      ]
-    },
-    {
       "id": "thesis-7930de9cdc",
       "title": "沃什时代的鹰派首秀通过重塑全球利差优势将美元重新‘武器化’，这不仅加剧了非美货币的贬值压力，更迫使全球套利交易进入深刻的风险重定价阶段。",
       "titleEn": "Practical research topic: 沃什时代的鹰派首秀通过重塑全球利差优势将美元重新‘武器化’，这不仅加剧了非美货币的贬值压力，更迫使全球套利交易进入深刻的风险重定价阶段。",
@@ -1972,6 +1942,36 @@
       "title": "中美利差走宽对中国货币政策空间及人民币汇率稳定性的影响分析",
       "titleEn": "Practical research topic: 中美利差走宽对中国货币政策空间及人民币汇率稳定性的影响分析",
       "href": "/investor/theses/thesis-97f10202a2/",
+      "laneId": "lane_c40c2ce413ec",
+      "lane": "人民币/美元流动性敏感资产",
+      "laneHref": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 78,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "前序研究 — 外汇综合：A股\"国家队\"作为央行隐性冲销池，以及为何 USD/CNY 必破 7.35",
+          "summary": "前序研究 — 外汇综合：A股\"国家队\"作为央行隐性冲销池，以及为何 USD/CNY 必破 7.35",
+          "href": "/investor/reports/archive-127ae0379a55/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "3988.HK",
+        "UUP",
+        "FXI"
+      ]
+    },
+    {
+      "id": "thesis-594ba5e705",
+      "title": "在中美利差走阔且输入型AI信用冲击升级的情形下，USD/CNY能否守住6.85缓冲翻转线",
+      "titleEn": "Practical research topic: 在中美利差走阔且输入型AI信用冲击升级的情形下，USD/CNY能否守住6.85缓冲翻转线",
+      "href": "/investor/theses/thesis-594ba5e705/",
       "laneId": "lane_c40c2ce413ec",
       "lane": "人民币/美元流动性敏感资产",
       "laneHref": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
@@ -2276,6 +2276,40 @@
       ]
     },
     {
+      "id": "thesis-58200390b4",
+      "title": "加密资产仍是全球流动性和散户风险偏好的高频回声",
+      "titleEn": "Crypto remains a high-frequency echo of global liquidity and retail risk appetite",
+      "href": "/investor/theses/thesis-58200390b4/",
+      "laneId": "lane_73a269a07a15",
+      "lane": "加密/高波动风险偏好",
+      "laneHref": "/investor/lanes/crypto-and-high-beta-risk-appetite/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 62,
+      "supports": 1,
+      "risks": 0,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "前序研究 — 主题综合：从多主题视角看 AI 龙头疲劳",
+          "summary": "分析师： 主题研究员（AI · 量子 · 生物科技 · 太空经济 · Web3） 立场： Synthesize（综合） 日期： 2026-05-02",
+          "href": "/investor/reports/archive-1e19facf0d43/",
+          "stance": "supports",
+          "stanceLabel": "支持"
+        }
+      ],
+      "stockTickers": [
+        "MSTR",
+        "COIN",
+        "IBIT",
+        "HOOD",
+        "LOW",
+        "MARA",
+        "RIOT"
+      ]
+    },
+    {
       "id": "thesis-ffa474a3f2",
       "title": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
       "titleEn": "Edge AI and agent desktops are extending compute competition from cloud to chips, OS, and consumer-electronics supply...",
@@ -2302,84 +2336,14 @@
       "stockTickers": [
         "MSFT",
         "NVDA",
-        "AAPL",
         "META",
+        "AAPL",
         "ARM",
         "AMZN",
         "AMD",
         "QCOM",
         "GOOGL",
         "AVGO"
-      ]
-    },
-    {
-      "id": "thesis-58200390b4",
-      "title": "加密资产仍是全球流动性和散户风险偏好的高频回声",
-      "titleEn": "Crypto remains a high-frequency echo of global liquidity and retail risk appetite",
-      "href": "/investor/theses/thesis-58200390b4/",
-      "laneId": "lane_73a269a07a15",
-      "lane": "加密/高波动风险偏好",
-      "laneHref": "/investor/lanes/crypto-and-high-beta-risk-appetite/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 61,
-      "supports": 1,
-      "risks": 0,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "前序研究 — 主题综合：从多主题视角看 AI 龙头疲劳",
-          "summary": "分析师： 主题研究员（AI · 量子 · 生物科技 · 太空经济 · Web3） 立场： Synthesize（综合） 日期： 2026-05-02",
-          "href": "/investor/reports/archive-1e19facf0d43/",
-          "stance": "supports",
-          "stanceLabel": "支持"
-        }
-      ],
-      "stockTickers": [
-        "MSTR",
-        "COIN",
-        "IBIT",
-        "HOOD",
-        "LOW",
-        "MARA",
-        "RIOT"
-      ]
-    },
-    {
-      "id": "thesis-bef6966fdd",
-      "title": "工业机械的出口订单质量和设备更新周期决定制造业 CapEx 弹性",
-      "titleEn": "Industrial machinery beta depends on export-order quality and equipment-upgrade capex",
-      "href": "/investor/theses/thesis-bef6966fdd/",
-      "laneId": "lane_6e2dcaab093e",
-      "lane": "工业机械/设备更新出海",
-      "laneHref": "/investor/lanes/industrial-machinery-equipment-upgrade-and-exports/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 59,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "2026-05-17 内陆物流传导审计：JBHT、HUBG 与工业机械",
-          "summary": "工作日期： 2026-05-17（亚洲/新加坡）。我 支持 既有研究记录的串行 beta 交棒，但需要收窄表达方式：2026-06-08 至 06-15 的到货峰值会带来正向、但时间窗口较短的内陆物流 beta，最...",
-          "href": "/investor/reports/archive-73414e4adc80/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "002747.SZ",
-        "600031.SH",
-        "000425.SZ",
-        "600761.SH",
-        "603298.SH",
-        "603338.SH",
-        "601100.SH",
-        "300124.SZ",
-        "601882.SH"
       ]
     },
     {
@@ -2418,42 +2382,6 @@
       ]
     },
     {
-      "id": "thesis-7f0a75c5f6",
-      "title": "数据中心地产、液冷与水资源正在决定 AI 容量的区域迁移",
-      "titleEn": "Data-center real estate, liquid cooling, and water resources are deciding regional migration of AI capacity",
-      "href": "/investor/theses/thesis-7f0a75c5f6/",
-      "laneId": "lane_0679894fe06b",
-      "lane": "数据中心地产/液冷",
-      "laneHref": "/investor/lanes/data-center-real-estate-and-cooling/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 55,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "原材料压力测试：AI 基建中的 GOES、铜、镍与贵金属",
-          "summary": "分析师: materials-analyst 立场: stress-test 截至日期: 2026-05-02 主题: AI 基建原材料瓶颈：取向硅钢 GOES、铜、镍与贵金属",
-          "href": "/investor/reports/archive-7edf517c79fc/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "VRT",
-        "ETN",
-        "NVDA",
-        "META",
-        "GEV",
-        "MSFT",
-        "DLR",
-        "EQIX",
-        "SMR"
-      ]
-    },
-    {
       "id": "thesis-740e729f22",
       "title": "人民币、美元与套息交易决定跨境风险资产的流动性折价",
       "titleEn": "RMB, USD, and carry trades define the liquidity discount across cross-border risk assets",
@@ -2463,7 +2391,7 @@
       "laneHref": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 52,
+      "conviction": 57,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -2479,13 +2407,85 @@
       ],
       "stockTickers": [
         "TSM",
-        "600900.SH",
         "3988.HK",
-        "LOW",
+        "600900.SH",
         "CME",
+        "LOW",
         "0700.HK",
+        "9988.HK",
+        "META"
+      ]
+    },
+    {
+      "id": "thesis-bef6966fdd",
+      "title": "工业机械的出口订单质量和设备更新周期决定制造业 CapEx 弹性",
+      "titleEn": "Industrial machinery beta depends on export-order quality and equipment-upgrade capex",
+      "href": "/investor/theses/thesis-bef6966fdd/",
+      "laneId": "lane_6e2dcaab093e",
+      "lane": "工业机械/设备更新出海",
+      "laneHref": "/investor/lanes/industrial-machinery-equipment-upgrade-and-exports/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 55,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "2026-05-17 内陆物流传导审计：JBHT、HUBG 与工业机械",
+          "summary": "工作日期： 2026-05-17（亚洲/新加坡）。我 支持 既有研究记录的串行 beta 交棒，但需要收窄表达方式：2026-06-08 至 06-15 的到货峰值会带来正向、但时间窗口较短的内陆物流 beta，最...",
+          "href": "/investor/reports/archive-73414e4adc80/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "002747.SZ",
+        "600031.SH",
+        "000425.SZ",
+        "600761.SH",
+        "603298.SH",
+        "603338.SH",
+        "601100.SH",
+        "300124.SZ",
+        "000157.SZ"
+      ]
+    },
+    {
+      "id": "thesis-7f0a75c5f6",
+      "title": "数据中心地产、液冷与水资源正在决定 AI 容量的区域迁移",
+      "titleEn": "Data-center real estate, liquid cooling, and water resources are deciding regional migration of AI capacity",
+      "href": "/investor/theses/thesis-7f0a75c5f6/",
+      "laneId": "lane_0679894fe06b",
+      "lane": "数据中心地产/液冷",
+      "laneHref": "/investor/lanes/data-center-real-estate-and-cooling/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 53,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "原材料压力测试：AI 基建中的 GOES、铜、镍与贵金属",
+          "summary": "分析师: materials-analyst 立场: stress-test 截至日期: 2026-05-02 主题: AI 基建原材料瓶颈：取向硅钢 GOES、铜、镍与贵金属",
+          "href": "/investor/reports/archive-7edf517c79fc/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "VRT",
+        "NVDA",
+        "ETN",
         "META",
-        "9988.HK"
+        "GEV",
+        "MSFT",
+        "DLR",
+        "EQIX",
+        "SMR"
       ]
     },
     {
@@ -2498,7 +2498,7 @@
       "laneHref": "/investor/lanes/yen-carry-and-em-tech-liquidity/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 52,
+      "conviction": 53,
       "supports": 1,
       "risks": 0,
       "neutral": 0,
@@ -2515,12 +2515,12 @@
       "stockTickers": [
         "TSM",
         "CME",
-        "LOW",
+        "600900.SH",
         "NVDA",
-        "EEM",
-        "UUP",
+        "000660.KS",
         "FXY",
-        "EWJ",
+        "UUP",
+        "EEM",
         "MCHI"
       ]
     },
@@ -2639,20 +2639,20 @@
       "href": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
       "thesisCount": 14,
       "eventCount": 16,
-      "convictionTotal": 1084,
+      "convictionTotal": 1088,
       "stockTickers": [
         "3988.HK",
         "UUP",
         "FXI",
         "TSM",
         "600900.SH",
-        "LOW",
         "CME",
+        "LOW",
         "0700.HK",
-        "META",
-        "9988.HK"
+        "9988.HK",
+        "META"
       ],
-      "avgConviction": 77
+      "avgConviction": 78
     },
     {
       "id": "lane_1c216bd29875",
@@ -2664,8 +2664,7 @@
       "stockTickers": [
         "JPM",
         "TLT",
-        "IEF",
-        "UUP"
+        "IEF"
       ],
       "avgConviction": 81
     },
@@ -2675,16 +2674,16 @@
       "href": "/investor/lanes/yen-carry-and-em-tech-liquidity/",
       "thesisCount": 5,
       "eventCount": 5,
-      "convictionTotal": 374,
+      "convictionTotal": 375,
       "stockTickers": [
         "TSM",
         "FXY",
         "UUP",
         "CME",
-        "LOW",
+        "600900.SH",
         "NVDA",
+        "000660.KS",
         "EEM",
-        "EWJ",
         "MCHI"
       ],
       "avgConviction": 75
@@ -2718,7 +2717,7 @@
       "href": "/investor/lanes/options-gamma-and-market-microstructure/",
       "thesisCount": 1,
       "eventCount": 3,
-      "convictionTotal": 62,
+      "convictionTotal": 63,
       "stockTickers": [
         "CBOE",
         "CME",
@@ -2729,7 +2728,7 @@
         "VIRT",
         "VIXY"
       ],
-      "avgConviction": 62
+      "avgConviction": 63
     },
     {
       "id": "lane_2997650d0638",
@@ -2743,8 +2742,8 @@
         "688041.SH",
         "601138.SH",
         "300308.SZ",
-        "688981.SH",
         "000977.SZ",
+        "688981.SH",
         "0981.HK",
         "NVDA",
         "9988.HK",
@@ -2805,8 +2804,8 @@
       "stockTickers": [
         "ETN",
         "GEV",
-        "VST",
         "META",
+        "VST",
         "002028.SZ",
         "CEG",
         "600089.SH",
@@ -2898,33 +2897,12 @@
       "avgConviction": 65
     },
     {
-      "id": "lane_74d352e86208",
-      "title": "端侧 AI/Agent 桌面",
-      "href": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 61,
-      "stockTickers": [
-        "MSFT",
-        "NVDA",
-        "AAPL",
-        "META",
-        "ARM",
-        "AMZN",
-        "AMD",
-        "QCOM",
-        "GOOGL",
-        "AVGO"
-      ],
-      "avgConviction": 61
-    },
-    {
       "id": "lane_73a269a07a15",
       "title": "加密/高波动风险偏好",
       "href": "/investor/lanes/crypto-and-high-beta-risk-appetite/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 61,
+      "convictionTotal": 62,
       "stockTickers": [
         "MSTR",
         "COIN",
@@ -2934,27 +2912,28 @@
         "MARA",
         "RIOT"
       ],
-      "avgConviction": 61
+      "avgConviction": 62
     },
     {
-      "id": "lane_6e2dcaab093e",
-      "title": "工业机械/设备更新出海",
-      "href": "/investor/lanes/industrial-machinery-equipment-upgrade-and-exports/",
+      "id": "lane_74d352e86208",
+      "title": "端侧 AI/Agent 桌面",
+      "href": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 59,
+      "convictionTotal": 61,
       "stockTickers": [
-        "002747.SZ",
-        "600031.SH",
-        "000425.SZ",
-        "600761.SH",
-        "603298.SH",
-        "603338.SH",
-        "601100.SH",
-        "300124.SZ",
-        "601882.SH"
+        "MSFT",
+        "NVDA",
+        "META",
+        "AAPL",
+        "ARM",
+        "AMZN",
+        "AMD",
+        "QCOM",
+        "GOOGL",
+        "AVGO"
       ],
-      "avgConviction": 59
+      "avgConviction": 61
     },
     {
       "id": "lane_008e3bd9306a",
@@ -2976,16 +2955,36 @@
       "avgConviction": 57
     },
     {
+      "id": "lane_6e2dcaab093e",
+      "title": "工业机械/设备更新出海",
+      "href": "/investor/lanes/industrial-machinery-equipment-upgrade-and-exports/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "convictionTotal": 55,
+      "stockTickers": [
+        "002747.SZ",
+        "600031.SH",
+        "000425.SZ",
+        "600761.SH",
+        "603298.SH",
+        "603338.SH",
+        "601100.SH",
+        "300124.SZ",
+        "000157.SZ"
+      ],
+      "avgConviction": 55
+    },
+    {
       "id": "lane_0679894fe06b",
       "title": "数据中心地产/液冷",
       "href": "/investor/lanes/data-center-real-estate-and-cooling/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 55,
+      "convictionTotal": 53,
       "stockTickers": [
         "VRT",
-        "ETN",
         "NVDA",
+        "ETN",
         "META",
         "GEV",
         "MSFT",
@@ -2993,7 +2992,7 @@
         "EQIX",
         "SMR"
       ],
-      "avgConviction": 55
+      "avgConviction": 53
     },
     {
       "id": "lane_79a55cd8530e",
@@ -3040,12 +3039,11 @@
       "name": "Invesco DB US Dollar Index Bullish Fund",
       "market": "US ETF",
       "href": "/investor/stocks/UUP/",
-      "thesisCount": 19,
-      "eventCount": 21,
+      "thesisCount": 18,
+      "eventCount": 20,
       "lanes": [
         "人民币/美元流动性敏感资产",
-        "日元套息/EM 科技流动性",
-        "美债利率/美元再定价"
+        "日元套息/EM 科技流动性"
       ]
     },
     {
@@ -3111,8 +3109,8 @@
         "Mag7 AI 平台再分层",
         "端侧 AI/Agent 桌面",
         "AI 软件效率/生产率",
-        "数据中心地产/液冷",
-        "云厂商自发电/电力资产"
+        "人民币/美元流动性敏感资产",
+        "数据中心地产/液冷"
       ]
     },
     {
@@ -3166,6 +3164,17 @@
         "自动驾驶/Robotaxi 单位经济",
         "端侧 AI/Agent 桌面",
         "AI 软件效率/生产率"
+      ]
+    },
+    {
+      "ticker": "JPM",
+      "name": "JPMorgan Chase",
+      "market": "US",
+      "href": "/investor/stocks/JPM/",
+      "thesisCount": 4,
+      "eventCount": 5,
+      "lanes": [
+        "美债利率/美元再定价"
       ]
     },
     {
@@ -3238,17 +3247,6 @@
       "eventCount": 4,
       "lanes": [
         "油气/地缘通胀"
-      ]
-    },
-    {
-      "ticker": "JPM",
-      "name": "JPMorgan Chase",
-      "market": "US",
-      "href": "/investor/stocks/JPM/",
-      "thesisCount": 3,
-      "eventCount": 4,
-      "lanes": [
-        "美债利率/美元再定价"
       ]
     },
     {
@@ -3337,14 +3335,14 @@
       ]
     },
     {
-      "ticker": "LOW",
-      "name": "Lowe's",
-      "market": "US",
-      "href": "/investor/stocks/LOW/",
+      "ticker": "600900.SH",
+      "name": "长江电力",
+      "market": "A-share",
+      "href": "/investor/stocks/600900.SH/",
       "thesisCount": 3,
       "eventCount": 3,
       "lanes": [
-        "加密/高波动风险偏好",
+        "油气/地缘通胀",
         "人民币/美元流动性敏感资产",
         "日元套息/EM 科技流动性"
       ]

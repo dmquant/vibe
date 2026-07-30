@@ -427,7 +427,7 @@
       "laneHref": "/investor/lanes/ai-compute-semiconductors/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 73,
+      "conviction": 72,
       "supports": 1,
       "risks": 1,
       "neutral": 0,
@@ -538,8 +538,8 @@
         "MU",
         "MSFT",
         "000660.KS",
-        "GOOGL",
-        "AMZN"
+        "AMZN",
+        "GOOGL"
       ]
     },
     {
@@ -550,8 +550,8 @@
       "laneId": "lane_f44cf45c8649",
       "lane": "AI 算力半导体",
       "laneHref": "/investor/lanes/ai-compute-semiconductors/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
+      "direction": "stable",
+      "directionLabel": "稳定",
       "conviction": 81,
       "supports": 0,
       "risks": 1,
@@ -571,8 +571,8 @@
         "NVDA",
         "AMD",
         "TSM",
-        "MU",
         "AVGO",
+        "MU",
         "000660.KS"
       ]
     },
@@ -586,7 +586,7 @@
       "laneHref": "/investor/lanes/ai-compute-semiconductors/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 72,
+      "conviction": 71,
       "supports": 1,
       "risks": 0,
       "neutral": 0,
@@ -602,8 +602,8 @@
       ],
       "stockTickers": [
         "NVDA",
-        "TSM",
         "MU",
+        "TSM",
         "000660.KS",
         "META",
         "AVGO",
@@ -643,8 +643,8 @@
         "META",
         "AVGO",
         "MSFT",
-        "ASML",
-        "005930.KS"
+        "AMZN",
+        "ASML"
       ]
     },
     {
@@ -740,8 +740,8 @@
       "stockTickers": [
         "MSFT",
         "NVDA",
-        "AAPL",
         "META",
+        "AAPL",
         "ARM",
         "AMZN",
         "AMD",
@@ -778,8 +778,8 @@
         "300308.SZ",
         "NVDA",
         "AVGO",
-        "300394.SZ",
         "META",
+        "300394.SZ",
         "COHR",
         "MRVL",
         "LITE",
@@ -795,20 +795,20 @@
       "href": "/investor/lanes/ai-compute-semiconductors/",
       "thesisCount": 4,
       "eventCount": 6,
-      "convictionTotal": 291,
+      "convictionTotal": 289,
       "stockTickers": [
         "META",
         "NVDA",
         "AMD",
         "TSM",
-        "MU",
         "AVGO",
+        "MU",
         "000660.KS",
         "MSFT",
-        "GOOGL",
-        "AMZN"
+        "AMZN",
+        "GOOGL"
       ],
-      "avgConviction": 73
+      "avgConviction": 72
     },
     {
       "id": "lane_f1a271385aff",
@@ -829,7 +829,7 @@
         "META",
         "AVGO",
         "MSFT",
-        "005930.KS"
+        "AMZN"
       ],
       "avgConviction": 66
     },
@@ -843,8 +843,8 @@
       "stockTickers": [
         "MSFT",
         "NVDA",
-        "AAPL",
         "META",
+        "AAPL",
         "ARM",
         "AMZN",
         "AMD",
@@ -865,8 +865,8 @@
         "300308.SZ",
         "NVDA",
         "AVGO",
-        "300394.SZ",
         "META",
+        "300394.SZ",
         "COHR",
         "MRVL",
         "LITE",
@@ -995,6 +995,19 @@
       ]
     },
     {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "market": "US",
+      "href": "/investor/stocks/AMZN/",
+      "thesisCount": 3,
+      "eventCount": 4,
+      "lanes": [
+        "先进封装/HBM4 闸门",
+        "AI 算力半导体",
+        "端侧 AI/Agent 桌面"
+      ]
+    },
+    {
       "ticker": "688012.SH",
       "name": "中微公司",
       "market": "A-share",
@@ -1026,29 +1039,6 @@
       "lanes": [
         "AI 算力半导体",
         "端侧 AI/Agent 桌面"
-      ]
-    },
-    {
-      "ticker": "AMZN",
-      "name": "Amazon",
-      "market": "US",
-      "href": "/investor/stocks/AMZN/",
-      "thesisCount": 2,
-      "eventCount": 3,
-      "lanes": [
-        "AI 算力半导体",
-        "端侧 AI/Agent 桌面"
-      ]
-    },
-    {
-      "ticker": "005930.KS",
-      "name": "Samsung Electronics",
-      "market": "Korea",
-      "href": "/investor/stocks/005930.KS/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "先进封装/HBM4 闸门"
       ]
     },
     {

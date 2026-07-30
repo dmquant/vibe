@@ -533,12 +533,12 @@
       ],
       "stockTickers": [
         "GEV",
-        "002028.SZ",
         "ETN",
+        "002028.SZ",
+        "VST",
         "CEG",
         "601179.SH",
-        "600089.SH",
-        "VST"
+        "600089.SH"
       ]
     },
     {
@@ -616,7 +616,7 @@
       "laneHref": "/investor/lanes/options-gamma-and-market-microstructure/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 62,
+      "conviction": 63,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -651,7 +651,7 @@
       "laneHref": "/investor/lanes/industrial-machinery-equipment-upgrade-and-exports/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 59,
+      "conviction": 55,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -674,7 +674,7 @@
         "603338.SH",
         "601100.SH",
         "300124.SZ",
-        "601882.SH"
+        "000157.SZ"
       ]
     }
   ],
@@ -722,12 +722,12 @@
       "convictionTotal": 66,
       "stockTickers": [
         "GEV",
-        "002028.SZ",
         "ETN",
+        "002028.SZ",
+        "VST",
         "CEG",
         "601179.SH",
-        "600089.SH",
-        "VST"
+        "600089.SH"
       ],
       "avgConviction": 66
     },
@@ -770,7 +770,7 @@
       "href": "/investor/lanes/options-gamma-and-market-microstructure/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 62,
+      "convictionTotal": 63,
       "stockTickers": [
         "CBOE",
         "CME",
@@ -781,7 +781,7 @@
         "VIRT",
         "VIXY"
       ],
-      "avgConviction": 62
+      "avgConviction": 63
     },
     {
       "id": "lane_6e2dcaab093e",
@@ -789,7 +789,7 @@
       "href": "/investor/lanes/industrial-machinery-equipment-upgrade-and-exports/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 59,
+      "convictionTotal": 55,
       "stockTickers": [
         "002747.SZ",
         "600031.SH",
@@ -799,9 +799,9 @@
         "603338.SH",
         "601100.SH",
         "300124.SZ",
-        "601882.SH"
+        "000157.SZ"
       ],
-      "avgConviction": 59
+      "avgConviction": 55
     }
   ],
   "stocks": [
@@ -952,6 +952,17 @@
       ]
     },
     {
+      "ticker": "ETN",
+      "name": "Eaton",
+      "market": "US",
+      "href": "/investor/stocks/ETN/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "AI 电力/电网设备"
+      ]
+    },
+    {
       "ticker": "002028.SZ",
       "name": "思源电气",
       "market": "A-share",
@@ -963,10 +974,10 @@
       ]
     },
     {
-      "ticker": "ETN",
-      "name": "Eaton",
+      "ticker": "VST",
+      "name": "Vistra",
       "market": "US",
-      "href": "/investor/stocks/ETN/",
+      "href": "/investor/stocks/VST/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
@@ -1000,17 +1011,6 @@
       "name": "特变电工",
       "market": "A-share",
       "href": "/investor/stocks/600089.SH/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "AI 电力/电网设备"
-      ]
-    },
-    {
-      "ticker": "VST",
-      "name": "Vistra",
-      "market": "US",
-      "href": "/investor/stocks/VST/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [

@@ -21,6 +21,22 @@ const scoreItems = [
   { key: "deepResearch", label: "Flagship research", labelZh: "旗舰深研", color: "red", href: "/investor/archive/" },
   { key: "publicEdges", label: "Evidence relations", labelZh: "证据关系", color: "orange", href: "/investor/research-network/" },
 ];
+const day100Complete = data.currentDay >= data.dayCount && data.latestDataDay >= data.dayCount;
+const finalDayRecord = data.days.find((day) => day.dayNumber === data.dayCount) || initialRecord;
+const finalReader = data.episodes.find((episode) => episode.date === finalDayRecord.date && episode.type === "reader");
+const finalMemoTitle = finalReader?.title || finalDayRecord.headline;
+const finalMemoSummary = finalReader?.summary || finalDayRecord.summary;
+const finalMemoTitleEn = finalReader?.titleEn || `${finalDayRecord.date}: AI scarcity shifts from aggregate capex to powered conversion and return validation`;
+const finalMemoSummaryEn = finalReader?.summaryEn || "The Day 100 filter shifts from broad AI capex growth to secured power, locked equipment slots, verifiable revenue, and lower crowding. Grid equipment ranks first, HBM stays selective, while unpowered projects, high-beta equipment, and capex without revenue anchors deserve a wider discount.";
+const finalMemoHref = finalReader?.href || "/investor/daily/";
+const day100ScoreItems = [
+  { key: "reports", labelZh: "公开研究", labelEn: "Published research", color: "blue" },
+  { key: "researchThreads", labelZh: "研究讨论", labelEn: "Research discussions", color: "green" },
+  { key: "theses", labelZh: "动态论点", labelEn: "Living theses", color: "yellow" },
+  { key: "lanes", labelZh: "投资赛道", labelEn: "Investable lanes", color: "orange" },
+  { key: "stocks", labelZh: "股票节点", labelEn: "Stock nodes", color: "red" },
+  { key: "readerMemos", labelZh: "读者版本", labelEn: "Reader editions", color: "blue" },
+];
 
 const guideChapters = [
   {
@@ -176,15 +192,15 @@ const episodeFilters = [
 ];
 ---
 
-<div class="hundred-days-shell" data-hundred-days-root data-initial-day={initialDay}>
-  <section class="century-hero" id="atlas" aria-labelledby="century-title">
+<div class:list={["hundred-days-shell", { "is-day-100": day100Complete }]} data-hundred-days-root data-initial-day={initialDay}>
+  <section class:list={["century-hero", { "is-complete": day100Complete }]} id="atlas" aria-labelledby="century-title">
     <canvas id="centuryUniverse" class="century-universe" aria-label="AI Institute thesis, lane and stock universe across the first 100 days"></canvas>
     <div class="century-space-grid" aria-hidden="true"></div>
     <div class="century-hero-copy">
       <div class="century-kicker">
         <span class="century-live-dot" aria-hidden="true"></span>
-        <span class="i18n-zh">100 DAYS · THE INSTITUTION THAT LEARNS</span>
-        <span class="i18n-en">100 DAYS · THE INSTITUTION THAT LEARNS</span>
+        <span class="i18n-zh">{day100Complete ? "DAY 100 · 百日正式版" : "100 DAYS · THE INSTITUTION THAT LEARNS"}</span>
+        <span class="i18n-en">{day100Complete ? "DAY 100 · OFFICIAL EDITION" : "100 DAYS · THE INSTITUTION THAT LEARNS"}</span>
       </div>
       <h1 id="century-title">
         <span class="i18n-zh">AI 研究院的 100 天</span>
@@ -199,7 +215,13 @@ const episodeFilters = [
         <span class="i18n-en">How an institution that preserves evidence, keeps dissent, admits revision, and continues operating grew across one hundred days.</span>
       </p>
       <div class="century-hero-actions">
-        <button class="century-primary-action" type="button" data-guide-open>
+        {day100Complete && (
+          <a class="century-primary-action" href={finalMemoHref}>
+            <span aria-hidden="true">▣</span>
+            <span class="i18n-zh">阅读第 100 天报告</span><span class="i18n-en">Read the Day 100 memo</span>
+          </a>
+        )}
+        <button class:list={{ "century-primary-action": !day100Complete }} type="button" data-guide-open>
           <span aria-hidden="true">▶</span>
           <span class="i18n-zh">观看百日回放</span><span class="i18n-en">Watch the guided replay</span>
         </button>
@@ -306,6 +328,50 @@ const episodeFilters = [
   </nav>
 
   <main class="century-main">
+    {day100Complete && (
+      <section class="century-day100-finale" id="day-100" aria-labelledby="century-day100-title">
+        <div class="century-day100-mark" aria-hidden="true">
+          <span>DAY</span>
+          <strong>100</strong>
+          <em>COMPLETE</em>
+          <div>
+            {["blue", "green", "yellow", "orange", "red"].map((color) => <i class={`tone-${color}`}></i>)}
+          </div>
+        </div>
+
+        <div class="century-day100-copy">
+          <span>2026-04-22 → {finalDayRecord.date} / 100 · 100</span>
+          <h2 id="century-day100-title" class="i18n-zh">第一段可审计的研究周期，今天完成。</h2>
+          <h2 class="i18n-en">The first auditable research cycle closes today.</h2>
+          <p class="i18n-zh">证据、分歧、修订、复盘与组合映射被保存在同一条公开时间线上。百日版本从今天起成为固定历史快照；第 101 天之后的研究继续在实时研究院。</p>
+          <p class="i18n-en">Evidence, dissent, revision, recap, and portfolio mapping now share one public timeline. This edition becomes a fixed historical snapshot while live research continues beyond Day 100.</p>
+        </div>
+
+        <article class="century-day100-memo">
+          <span>DAY 100 / DECISION MEMO</span>
+          <h3 class="i18n-zh">{finalMemoTitle}</h3>
+          <h3 class="i18n-en">{finalMemoTitleEn}</h3>
+          <p class="i18n-zh">{finalMemoSummary}</p>
+          <p class="i18n-en">{finalMemoSummaryEn}</p>
+          <div>
+            <a href={finalMemoHref}><span class="i18n-zh">阅读今日报告</span><span class="i18n-en">Read today's memo</span><i aria-hidden="true">↗</i></a>
+            <button type="button" data-day100-jump><span class="i18n-zh">在时间线中打开</span><span class="i18n-en">Open in timeline</span><i aria-hidden="true">↓</i></button>
+            <a href={`/100-days/day/${finalDayRecord.date}/`}><span class="i18n-zh">查看日档案</span><span class="i18n-en">View day archive</span><i aria-hidden="true">↗</i></a>
+          </div>
+        </article>
+
+        <dl class="century-day100-score">
+          {day100ScoreItems.map((item) => (
+            <div class={`tone-${item.color}`}>
+              <dt class="i18n-zh">{item.labelZh}</dt><dt class="i18n-en">{item.labelEn}</dt>
+              <dd>{number.format(data.scorecard[item.key] || 0)}</dd>
+              <i aria-hidden="true"></i>
+            </div>
+          ))}
+        </dl>
+      </section>
+    )}
+
     <section class="century-manifesto" id="story">
       <div class="century-section-index">01 / THESIS</div>
       <div class="century-manifesto-copy">

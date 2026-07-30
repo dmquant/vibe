@@ -864,6 +864,13 @@ export function mountHundredDaysPortal() {
   document.getElementById("centuryPrevDay")?.addEventListener("click", () => selectDay(activeDay - 1, { history: false }));
   document.getElementById("centuryNextDay")?.addEventListener("click", () => selectDay(activeDay + 1, { history: false }));
   document.getElementById("centuryLatest")?.addEventListener("click", () => selectDay(data.latestDataDay, { history: true }));
+  document.querySelectorAll("[data-day100-jump]").forEach((button) => button.addEventListener("click", () => {
+    selectDay(data.dayCount, { history: true });
+    document.getElementById("daily-field")?.scrollIntoView({
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+      block: "start",
+    });
+  }));
 
   function stopPlayback() {
     window.clearInterval(playback);

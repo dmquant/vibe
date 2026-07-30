@@ -2628,7 +2628,7 @@
       "laneHref": "/investor/lanes/advanced-packaging-and-hbm4-gate/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 69,
+      "conviction": 67,
       "supports": 1,
       "risks": 2,
       "neutral": 0,
@@ -2675,7 +2675,7 @@
       "laneHref": "/investor/lanes/index-rebalance-and-passive-flow-events/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 65,
+      "conviction": 64,
       "supports": 0,
       "risks": 3,
       "neutral": 0,
@@ -2753,46 +2753,6 @@
       ]
     },
     {
-      "id": "thesis-d0faeae7f0",
-      "title": "NAND价格与产品组合驱动SanDisk盈利弹性",
-      "titleEn": "NAND pricing and mix drive SanDisk earnings leverage",
-      "href": "/investor/theses/thesis-d0faeae7f0/",
-      "laneId": "lane_f44cf45c8649",
-      "lane": "AI 算力半导体",
-      "laneHref": "/investor/lanes/ai-compute-semiconductors/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 73,
-      "supports": 2,
-      "risks": 0,
-      "neutral": 0,
-      "eventCount": 2,
-      "events": [
-        {
-          "title": "“大脱钩”时代：CSP ASIC 的规模化扩张与 NVIDIA 利润率拐点研判",
-          "summary": "“大脱钩”时代：CSP ASIC 的规模化扩张与 NVIDIA 利润率拐点研判 日期： 2026-05-15 职位： TMT 行业分析师 状态： 机构内部绝密研究",
-          "href": "/investor/reports/archive-8d31950f7c05/",
-          "stance": "supports",
-          "stanceLabel": "支持"
-        },
-        {
-          "title": "AI 硬件收入斜率的定价消化：台韩链与 A股/HK 半导体映射资产比较 - 2026-05-15",
-          "summary": "AI 硬件收入斜率的定价消化：台韩链与 A股/HK 半导体映射资产比较 - 2026-05-15",
-          "href": "/investor/reports/archive-6ca48d015f92/",
-          "stance": "supports",
-          "stanceLabel": "支持"
-        }
-      ],
-      "stockTickers": [
-        "NVDA",
-        "TSM",
-        "MU",
-        "000660.KS",
-        "META",
-        "AMD"
-      ]
-    },
-    {
       "id": "thesis-31f32af77b",
       "title": "中国云与国产算力栈的关键不是模型热度，而是训练/推理订单、服务器交付和生态锁定",
       "titleEn": "China cloud and local compute stacks depend less on model hype than training/inference orders, server delivery, and e...",
@@ -2828,8 +2788,8 @@
         "688041.SH",
         "601138.SH",
         "300308.SZ",
-        "688981.SH",
         "000977.SZ",
+        "688981.SH",
         "0981.HK",
         "NVDA",
         "9988.HK",
@@ -2885,8 +2845,8 @@
       "laneId": "lane_f44cf45c8649",
       "lane": "AI 算力半导体",
       "laneHref": "/investor/lanes/ai-compute-semiconductors/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
+      "direction": "stable",
+      "directionLabel": "稳定",
       "conviction": 81,
       "supports": 0,
       "risks": 1,
@@ -2906,8 +2866,8 @@
         "NVDA",
         "AMD",
         "TSM",
-        "MU",
         "AVGO",
+        "MU",
         "000660.KS"
       ]
     },
@@ -3033,8 +2993,38 @@
       ],
       "stockTickers": [
         "3988.HK",
-        "UUP",
-        "FXI"
+        "9988.HK",
+        "0700.HK"
+      ]
+    },
+    {
+      "id": "thesis-2a7c29557b",
+      "title": "在66.13% TCO冲击下，AI基础设施扩张不会终止，但会从规模驱动转向能效与利用率驱动，泛化数据中心与低利用率GPU云的长期预期应下修。",
+      "titleEn": "Practical research topic: 在66.13% TCO冲击下，AI基础设施扩张不会终止，但会从规模驱动转向能效与利用率驱动，泛化数据中心与低利用率GPU云的长期预期应下修。",
+      "href": "/investor/theses/thesis-2a7c29557b/",
+      "laneId": "lane_2d0dcf520f87",
+      "lane": "AI 基建 TCO/能效筛选",
+      "laneHref": "/investor/lanes/ai-infrastructure-tco-and-efficiency-reset/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 77,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "TMT压力测试：电力瓶颈与AI基础设施CAPEX转化曲线",
+          "summary": "TMT压力测试：电力瓶颈与AI基础设施CAPEX转化曲线 日期： 2026-05-15 分析师： TMT行业分析师 立场： 压力测试 主题： 电力瓶颈对AI服务器、IDC扩张与算力租赁增长预期的影响",
+          "href": "/investor/reports/archive-110c4ad9b341/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "NVDA",
+        "TSM",
+        "VRT"
       ]
     },
     {
@@ -3071,10 +3061,10 @@
       ]
     },
     {
-      "id": "thesis-b976d8330e",
-      "title": "NAND盈利弹性由价格与产品结构主导，而非单纯出货增长",
-      "titleEn": "NAND earnings leverage is driven by pricing and mix rather than shipment growth alone",
-      "href": "/investor/theses/thesis-b976d8330e/",
+      "id": "thesis-d0faeae7f0",
+      "title": "NAND价格与产品组合驱动SanDisk盈利弹性",
+      "titleEn": "NAND pricing and mix drive SanDisk earnings leverage",
+      "href": "/investor/theses/thesis-d0faeae7f0/",
       "laneId": "lane_f44cf45c8649",
       "lane": "AI 算力半导体",
       "laneHref": "/investor/lanes/ai-compute-semiconductors/",
@@ -3100,6 +3090,39 @@
         "MU",
         "000660.KS",
         "META",
+        "AMD"
+      ]
+    },
+    {
+      "id": "thesis-b976d8330e",
+      "title": "NAND盈利弹性由价格与产品结构主导，而非单纯出货增长",
+      "titleEn": "NAND earnings leverage is driven by pricing and mix rather than shipment growth alone",
+      "href": "/investor/theses/thesis-b976d8330e/",
+      "laneId": "lane_f44cf45c8649",
+      "lane": "AI 算力半导体",
+      "laneHref": "/investor/lanes/ai-compute-semiconductors/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 71,
+      "supports": 1,
+      "risks": 0,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "“大脱钩”时代：CSP ASIC 的规模化扩张与 NVIDIA 利润率拐点研判",
+          "summary": "“大脱钩”时代：CSP ASIC 的规模化扩张与 NVIDIA 利润率拐点研判 日期： 2026-05-15 职位： TMT 行业分析师 状态： 机构内部绝密研究",
+          "href": "/investor/reports/archive-8d31950f7c05/",
+          "stance": "supports",
+          "stanceLabel": "支持"
+        }
+      ],
+      "stockTickers": [
+        "NVDA",
+        "MU",
+        "TSM",
+        "000660.KS",
+        "META",
         "AVGO",
         "AMD"
       ]
@@ -3114,7 +3137,7 @@
       "laneHref": "/investor/lanes/a-share-dividend-and-hard-tech-barbell/",
       "direction": "strengthening",
       "directionLabel": "强化",
-      "conviction": 71,
+      "conviction": 70,
       "supports": 1,
       "risks": 0,
       "neutral": 0,
@@ -3269,8 +3292,8 @@
         "MU",
         "MSFT",
         "000660.KS",
-        "GOOGL",
-        "AMZN"
+        "AMZN",
+        "GOOGL"
       ]
     },
     {
@@ -3343,6 +3366,40 @@
       ]
     },
     {
+      "id": "thesis-58200390b4",
+      "title": "加密资产仍是全球流动性和散户风险偏好的高频回声",
+      "titleEn": "Crypto remains a high-frequency echo of global liquidity and retail risk appetite",
+      "href": "/investor/theses/thesis-58200390b4/",
+      "laneId": "lane_73a269a07a15",
+      "lane": "加密/高波动风险偏好",
+      "laneHref": "/investor/lanes/crypto-and-high-beta-risk-appetite/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 62,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "政策分析：《Clear Act》监管框架的结构性影响——制度基石还是情绪催化？",
+          "summary": "政策分析：《Clear Act》监管框架的结构性影响——制度基石还是情绪催化？",
+          "href": "/investor/reports/archive-0d828e458e53/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "MSTR",
+        "COIN",
+        "IBIT",
+        "HOOD",
+        "LOW",
+        "MARA",
+        "RIOT"
+      ]
+    },
+    {
       "id": "thesis-ffa474a3f2",
       "title": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
       "titleEn": "Edge AI and agent desktops are extending compute competition from cloud to chips, OS, and consumer-electronics supply...",
@@ -3369,48 +3426,14 @@
       "stockTickers": [
         "MSFT",
         "NVDA",
-        "AAPL",
         "META",
+        "AAPL",
         "ARM",
         "AMZN",
         "AMD",
         "QCOM",
         "GOOGL",
         "AVGO"
-      ]
-    },
-    {
-      "id": "thesis-58200390b4",
-      "title": "加密资产仍是全球流动性和散户风险偏好的高频回声",
-      "titleEn": "Crypto remains a high-frequency echo of global liquidity and retail risk appetite",
-      "href": "/investor/theses/thesis-58200390b4/",
-      "laneId": "lane_73a269a07a15",
-      "lane": "加密/高波动风险偏好",
-      "laneHref": "/investor/lanes/crypto-and-high-beta-risk-appetite/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 61,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "政策分析：《Clear Act》监管框架的结构性影响——制度基石还是情绪催化？",
-          "summary": "政策分析：《Clear Act》监管框架的结构性影响——制度基石还是情绪催化？",
-          "href": "/investor/reports/archive-0d828e458e53/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "MSTR",
-        "COIN",
-        "IBIT",
-        "HOOD",
-        "LOW",
-        "MARA",
-        "RIOT"
       ]
     },
     {
@@ -3441,8 +3464,8 @@
         "300308.SZ",
         "NVDA",
         "AVGO",
-        "300394.SZ",
         "META",
+        "300394.SZ",
         "COHR",
         "MRVL",
         "LITE",
@@ -3460,7 +3483,7 @@
       "laneHref": "/investor/lanes/us-rates-and-dollar-repricing/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 59,
+      "conviction": 58,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -3478,8 +3501,8 @@
         "CME",
         "TLT",
         "GLD",
-        "IEF",
         "JPM",
+        "IEF",
         "AEP",
         "META",
         "AMZN"
@@ -3528,8 +3551,8 @@
       "laneId": "lane_c0702fb29e08",
       "lane": "AI 再通胀/利率敏感资产",
       "laneHref": "/investor/lanes/ai-reflation-and-rate-sensitive-assets/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
+      "direction": "stable",
+      "directionLabel": "稳定",
       "conviction": 55,
       "supports": 0,
       "risks": 1,
@@ -3565,7 +3588,7 @@
       "laneHref": "/investor/lanes/credit-refinancing-and-private-debt/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 53,
+      "conviction": 52,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -3634,7 +3657,7 @@
       "href": "/investor/lanes/advanced-packaging-and-hbm4-gate/",
       "thesisCount": 4,
       "eventCount": 7,
-      "convictionTotal": 272,
+      "convictionTotal": 270,
       "stockTickers": [
         "TSM",
         "NVDA",
@@ -3652,19 +3675,19 @@
       "title": "AI 算力半导体",
       "href": "/investor/lanes/ai-compute-semiconductors/",
       "thesisCount": 5,
-      "eventCount": 6,
-      "convictionTotal": 356,
+      "eventCount": 5,
+      "convictionTotal": 354,
       "stockTickers": [
         "META",
         "NVDA",
         "AMD",
         "TSM",
-        "MU",
         "AVGO",
+        "MU",
         "000660.KS",
         "MSFT",
-        "GOOGL",
-        "AMZN"
+        "AMZN",
+        "GOOGL"
       ],
       "avgConviction": 71
     },
@@ -3736,7 +3759,7 @@
       "href": "/investor/lanes/index-rebalance-and-passive-flow-events/",
       "thesisCount": 1,
       "eventCount": 3,
-      "convictionTotal": 65,
+      "convictionTotal": 64,
       "stockTickers": [
         "KWEB",
         "0700.HK",
@@ -3748,7 +3771,21 @@
         "3690.HK",
         "688981.SH"
       ],
-      "avgConviction": 65
+      "avgConviction": 64
+    },
+    {
+      "id": "lane_2d0dcf520f87",
+      "title": "AI 基建 TCO/能效筛选",
+      "href": "/investor/lanes/ai-infrastructure-tco-and-efficiency-reset/",
+      "thesisCount": 2,
+      "eventCount": 2,
+      "convictionTotal": 144,
+      "stockTickers": [
+        "NVDA",
+        "TSM",
+        "VRT"
+      ],
+      "avgConviction": 72
     },
     {
       "id": "lane_2997650d0638",
@@ -3762,8 +3799,8 @@
         "688041.SH",
         "601138.SH",
         "300308.SZ",
-        "688981.SH",
         "000977.SZ",
+        "688981.SH",
         "0981.HK",
         "NVDA",
         "9988.HK",
@@ -3811,8 +3848,8 @@
       "convictionTotal": 77,
       "stockTickers": [
         "3988.HK",
-        "UUP",
-        "FXI"
+        "9988.HK",
+        "0700.HK"
       ],
       "avgConviction": 77
     },
@@ -3839,7 +3876,7 @@
       "href": "/investor/lanes/a-share-dividend-and-hard-tech-barbell/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 71,
+      "convictionTotal": 70,
       "stockTickers": [
         "600900.SH",
         "601398.SH",
@@ -3850,7 +3887,7 @@
         "0981.HK",
         "510880.SH"
       ],
-      "avgConviction": 71
+      "avgConviction": 70
     },
     {
       "id": "lane_f21fc181388a",
@@ -3871,20 +3908,6 @@
         "TSLA"
       ],
       "avgConviction": 70
-    },
-    {
-      "id": "lane_2d0dcf520f87",
-      "title": "AI 基建 TCO/能效筛选",
-      "href": "/investor/lanes/ai-infrastructure-tco-and-efficiency-reset/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 67,
-      "stockTickers": [
-        "NVDA",
-        "TSM",
-        "VRT"
-      ],
-      "avgConviction": 67
     },
     {
       "id": "lane_4cc1e74d8e5f",
@@ -3908,6 +3931,24 @@
       "avgConviction": 62
     },
     {
+      "id": "lane_73a269a07a15",
+      "title": "加密/高波动风险偏好",
+      "href": "/investor/lanes/crypto-and-high-beta-risk-appetite/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "convictionTotal": 62,
+      "stockTickers": [
+        "MSTR",
+        "COIN",
+        "IBIT",
+        "HOOD",
+        "LOW",
+        "MARA",
+        "RIOT"
+      ],
+      "avgConviction": 62
+    },
+    {
       "id": "lane_74d352e86208",
       "title": "端侧 AI/Agent 桌面",
       "href": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
@@ -3917,8 +3958,8 @@
       "stockTickers": [
         "MSFT",
         "NVDA",
-        "AAPL",
         "META",
+        "AAPL",
         "ARM",
         "AMZN",
         "AMD",
@@ -3929,41 +3970,23 @@
       "avgConviction": 61
     },
     {
-      "id": "lane_73a269a07a15",
-      "title": "加密/高波动风险偏好",
-      "href": "/investor/lanes/crypto-and-high-beta-risk-appetite/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 61,
-      "stockTickers": [
-        "MSTR",
-        "COIN",
-        "IBIT",
-        "HOOD",
-        "LOW",
-        "MARA",
-        "RIOT"
-      ],
-      "avgConviction": 61
-    },
-    {
       "id": "lane_1c216bd29875",
       "title": "美债利率/美元再定价",
       "href": "/investor/lanes/us-rates-and-dollar-repricing/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 59,
+      "convictionTotal": 58,
       "stockTickers": [
         "CME",
         "TLT",
         "GLD",
-        "IEF",
         "JPM",
+        "IEF",
         "AEP",
         "META",
         "AMZN"
       ],
-      "avgConviction": 59
+      "avgConviction": 58
     },
     {
       "id": "lane_008e3bd9306a",
@@ -4009,7 +4032,7 @@
       "href": "/investor/lanes/credit-refinancing-and-private-debt/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 53,
+      "convictionTotal": 52,
       "stockTickers": [
         "KRE",
         "JPM",
@@ -4020,7 +4043,7 @@
         "ARES",
         "APO"
       ],
-      "avgConviction": 53
+      "avgConviction": 52
     },
     {
       "id": "lane_2eefe4e126c6",
@@ -4049,14 +4072,14 @@
       "name": "NVIDIA",
       "market": "US",
       "href": "/investor/stocks/NVDA/",
-      "thesisCount": 19,
+      "thesisCount": 20,
       "eventCount": 29,
       "lanes": [
         "AI 算力半导体",
         "先进封装/HBM4 闸门",
+        "AI 基建 TCO/能效筛选",
         "低价模型/AI 软件利润池",
-        "Mag7 AI 平台再分层",
-        "AI 基建 TCO/能效筛选"
+        "Mag7 AI 平台再分层"
       ]
     },
     {
@@ -4064,29 +4087,14 @@
       "name": "TSMC",
       "market": "US ADR",
       "href": "/investor/stocks/TSM/",
-      "thesisCount": 12,
+      "thesisCount": 13,
       "eventCount": 16,
       "lanes": [
         "AI 算力半导体",
         "先进封装/HBM4 闸门",
-        "Mag7 AI 平台再分层",
         "AI 基建 TCO/能效筛选",
-        "CPO/光模块/高速互联"
-      ]
-    },
-    {
-      "ticker": "META",
-      "name": "Meta Platforms",
-      "market": "US",
-      "href": "/investor/stocks/META/",
-      "thesisCount": 12,
-      "eventCount": 13,
-      "lanes": [
-        "AI 算力半导体",
         "Mag7 AI 平台再分层",
-        "端侧 AI/Agent 桌面",
-        "CPO/光模块/高速互联",
-        "美债利率/美元再定价"
+        "CPO/光模块/高速互联"
       ]
     },
     {
@@ -4105,12 +4113,27 @@
       ]
     },
     {
+      "ticker": "META",
+      "name": "Meta Platforms",
+      "market": "US",
+      "href": "/investor/stocks/META/",
+      "thesisCount": 12,
+      "eventCount": 12,
+      "lanes": [
+        "AI 算力半导体",
+        "Mag7 AI 平台再分层",
+        "端侧 AI/Agent 桌面",
+        "CPO/光模块/高速互联",
+        "美债利率/美元再定价"
+      ]
+    },
+    {
       "ticker": "MU",
       "name": "Micron",
       "market": "US",
       "href": "/investor/stocks/MU/",
       "thesisCount": 8,
-      "eventCount": 12,
+      "eventCount": 11,
       "lanes": [
         "AI 算力半导体",
         "先进封装/HBM4 闸门"
@@ -4122,7 +4145,7 @@
       "market": "Korea",
       "href": "/investor/stocks/000660.KS/",
       "thesisCount": 8,
-      "eventCount": 12,
+      "eventCount": 11,
       "lanes": [
         "AI 算力半导体",
         "先进封装/HBM4 闸门"
@@ -4192,9 +4215,10 @@
       "name": "阿里巴巴",
       "market": "HK",
       "href": "/investor/stocks/9988.HK/",
-      "thesisCount": 3,
-      "eventCount": 8,
+      "thesisCount": 4,
+      "eventCount": 9,
       "lanes": [
+        "人民币/美元流动性敏感资产",
         "低价模型/AI 软件利润池",
         "中国云/国产算力栈",
         "指数调仓/被动资金事件"
@@ -4205,24 +4229,13 @@
       "name": "腾讯控股",
       "market": "HK",
       "href": "/investor/stocks/0700.HK/",
-      "thesisCount": 3,
-      "eventCount": 8,
+      "thesisCount": 4,
+      "eventCount": 9,
       "lanes": [
+        "人民币/美元流动性敏感资产",
         "低价模型/AI 软件利润池",
         "中国云/国产算力栈",
         "指数调仓/被动资金事件"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "name": "AMD",
-      "market": "US",
-      "href": "/investor/stocks/AMD/",
-      "thesisCount": 6,
-      "eventCount": 7,
-      "lanes": [
-        "AI 算力半导体",
-        "端侧 AI/Agent 桌面"
       ]
     },
     {
@@ -4249,6 +4262,18 @@
         "信创/国产 IT 栈",
         "中国云/国产算力栈",
         "A股硬科技/科创50"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "name": "AMD",
+      "market": "US",
+      "href": "/investor/stocks/AMD/",
+      "thesisCount": 6,
+      "eventCount": 6,
+      "lanes": [
+        "AI 算力半导体",
+        "端侧 AI/Agent 桌面"
       ]
     },
     {
@@ -4463,6 +4488,17 @@
       ]
     },
     {
+      "ticker": "VRT",
+      "name": "Vertiv",
+      "market": "US",
+      "href": "/investor/stocks/VRT/",
+      "thesisCount": 2,
+      "eventCount": 2,
+      "lanes": [
+        "AI 基建 TCO/能效筛选"
+      ]
+    },
+    {
       "ticker": "600900.SH",
       "name": "长江电力",
       "market": "A-share",
@@ -4531,17 +4567,6 @@
       "eventCount": 2,
       "lanes": [
         "中国云/国产算力栈"
-      ]
-    },
-    {
-      "ticker": "002916.SZ",
-      "name": "深南电路",
-      "market": "A-share",
-      "href": "/investor/stocks/002916.SZ/",
-      "thesisCount": 1,
-      "eventCount": 2,
-      "lanes": [
-        "先进封装/HBM4 闸门"
       ]
     }
   ],
