@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-30T06:52:27.517Z",
+  "generatedAt": "2026-07-31T00:29:18.587Z",
   "dashboards": [
     {
       "slug": "living-50-etf-gamma-...-59f298ff-2026-07-29",
@@ -1014,7 +1014,7 @@
           26.4,
           27.8,
           43.2,
-          50.6
+          20.6
         ]
       },
       "metrics": [
@@ -1025,7 +1025,7 @@
         },
         {
           "label": "风险事件",
-          "value": "64",
+          "value": "66",
           "accent": "red"
         },
         {
@@ -1046,17 +1046,17 @@
         },
         {
           "title": "最新变化",
-          "text": "2026-07-30: 2026-07-30 USD/JPY套息平仓外溢下的CNY政策走廊"
+          "text": "2026-07-30: 2026-07-30 旧 USD/CNH 6.90 行权价失效后的人民币稳定性与 A 股宏观 beta"
         },
         {
           "title": "证据纪律",
-          "text": "当前以 16 条支持、64 条风险和 0 条观察证据进行动态跟踪。"
+          "text": "当前以 14 条支持、66 条风险和 0 条观察证据进行动态跟踪。"
         }
       ],
       "checklist": [
         {
           "label": "支持证据",
-          "status": "16 条",
+          "status": "14 条",
           "detail": "继续观察是否出现跨来源、跨分析师的同向验证。",
           "bull": "支持证据集中出现在最新日期且源报告可追溯",
           "bear": "支持证据停留在旧报告或单一来源",
@@ -1064,7 +1064,7 @@
         },
         {
           "label": "风险证据",
-          "status": "64 条",
+          "status": "66 条",
           "detail": "风险证据用于判断主线是否变成拥挤交易或证伪样本。",
           "bull": "风险被新证据消化",
           "bear": "风险事件数量超过支持事件",
@@ -1163,12 +1163,12 @@
         },
         {
           "date": "2026-07-30",
-          "value": 50.6,
+          "value": 20.6,
           "label": "风险",
-          "title": "合成一本全天候账本：为银行收益腿、USD/JPY 凸性、CNY/CNH 保护分层定量，让压舱石永不兼任强制抛...",
-          "view": "合成一本全天候账本：为银行收益腿、USD/JPY 凸性、CNY/CNH 保护分层定量，让压舱石永不兼任强制抛售阀门",
-          "check": "支持 1 / 风险 2 / 观察 0",
-          "href": "/investor/reports/archive-fa4b259e1e47/"
+          "title": "2026-07-30 美元对冲压力测试：USD/CNH、USD/JPY 与广义美元拆分",
+          "view": "2026-07-30 美元对冲压力测试：USD/CNH、USD/JPY 与广义美元拆分",
+          "check": "支持 1 / 风险 7 / 观察 0",
+          "href": "/investor/reports/archive-6cc9508ab398/"
         }
       ],
       "dimensions": [
@@ -1188,7 +1188,7 @@
           "label": "维度三",
           "title": "证伪",
           "front": "风险是否上升？",
-          "back": "风险事件 64 条，方向为 分歧。"
+          "back": "风险事件 66 条，方向为 分歧。"
         }
       ],
       "sources": [
@@ -1203,6 +1203,11 @@
           "tag": "网络"
         },
         {
+          "href": "/investor/reports/archive-6cc9508ab398/",
+          "label": "2026-07-30 美元对冲压力测试：USD/CNH、USD/JPY 与广义美元拆分",
+          "tag": "研究记录"
+        },
+        {
           "href": "/investor/reports/archive-fa4b259e1e47/",
           "label": "合成一本全天候账本：为银行收益腿、USD/JPY 凸性、CNY/CNH 保护分层定量，让压舱石永不兼任强制抛...",
           "tag": "研究记录"
@@ -1213,13 +1218,8 @@
           "tag": "研究记录"
         },
         {
-          "href": "/investor/reports/archive-e6111758b774/",
-          "label": "2026-07-30 USD/JPY套息平仓外溢下的CNY政策走廊",
-          "tag": "研究记录"
-        },
-        {
-          "href": "/investor/reports/archive-f49a801354be/",
-          "label": "前序研究 — 2026-07-29 — USD/CNH、CNH/JPY、A股高股息、EM科技、黄金与日元凸性的最终组合规则",
+          "href": "/investor/reports/archive-e7db16d4a053/",
+          "label": "沃什–植田分化：USD/JPY 创40年新低与重新堆积的日元套息交易",
           "tag": "研究记录"
         }
       ],
@@ -1717,251 +1717,6 @@
       "kind": "living_thesis_recap"
     },
     {
-      "slug": "living-usd-jpy-usd-cny-a-sox-cnh-...-bb46b0c3-2026-07-30",
-      "title": "USD/JPY与USD/CNY不是直接拉爆A股硬件链融资盘的拉绳，而是通过SOX估值代理与人民…：动态复盘",
-      "subtitle": "该主线来自 3 条研究记录的标题、问题和摘要聚类，时间跨度 2026-06-03 至 2026-07-06；用于观察是否形成可配置主题、风险预算和证伪条件，链条词仅作为证据标签。",
-      "date": "2026-07-30",
-      "badge": "LIVING THESIS RECAP",
-      "reportHref": "/investor/theses/thesis-bb46b0c3de/",
-      "chartTitle": "主线证据强度演化",
-      "chartDescription": "由公开研究事件按日期聚合，显示支持、风险和观察证据如何改变主线强度。",
-      "chartUnit": "证据强度",
-      "chart": {
-        "labels": [
-          "07-21",
-          "07-22",
-          "07-23",
-          "07-24",
-          "07-25",
-          "07-26",
-          "07-27",
-          "07-28",
-          "07-29",
-          "07-30"
-        ],
-        "values": [
-          36,
-          37.4,
-          52.8,
-          42.2,
-          51.6,
-          57,
-          46.4,
-          33.8,
-          59.2,
-          38.6
-        ]
-      },
-      "metrics": [
-        {
-          "label": "证据事件",
-          "value": "80",
-          "accent": "blue"
-        },
-        {
-          "label": "风险事件",
-          "value": "58",
-          "accent": "red"
-        },
-        {
-          "label": "分析师",
-          "value": "3",
-          "accent": "green"
-        },
-        {
-          "label": "方向",
-          "value": "分歧",
-          "accent": "orange"
-        }
-      ],
-      "conclusions": [
-        {
-          "title": "主线定义",
-          "text": "该主线来自 3 条研究记录的标题、问题和摘要聚类，时间跨度 2026-06-03 至 2026-07-06；用于观察是否形成可配置主题、风险预算和证伪条件，链条词仅作为证据标签。"
-        },
-        {
-          "title": "最新变化",
-          "text": "2026-07-30: 2026-07-30 USD/JPY套息平仓外溢下的CNY政策走廊"
-        },
-        {
-          "title": "证据纪律",
-          "text": "当前以 22 条支持、58 条风险和 0 条观察证据进行动态跟踪。"
-        }
-      ],
-      "checklist": [
-        {
-          "label": "支持证据",
-          "status": "22 条",
-          "detail": "继续观察是否出现跨来源、跨分析师的同向验证。",
-          "bull": "支持证据集中出现在最新日期且源报告可追溯",
-          "bear": "支持证据停留在旧报告或单一来源",
-          "active": "bear"
-        },
-        {
-          "label": "风险证据",
-          "status": "58 条",
-          "detail": "风险证据用于判断主线是否变成拥挤交易或证伪样本。",
-          "bull": "风险被新证据消化",
-          "bear": "风险事件数量超过支持事件",
-          "active": "bear"
-        },
-        {
-          "label": "监控词",
-          "status": "美元 / 人民币 / USD/CNH",
-          "detail": "美元 / 人民币 / USD/CNH / 日元 / USD/JPY / 久期 / A股 / 期权",
-          "bull": "监控词在新报告中被反复验证",
-          "bear": "监控词热度上升但价格或基本面未兑现",
-          "active": "bull"
-        }
-      ],
-      "timeline": [
-        {
-          "date": "2026-07-21",
-          "value": 36,
-          "label": "风险",
-          "title": "USD/CNY 6.88/6.90 触发验证与离岸 A 股授权的 CNH 对冲成本：工作日 2026-07-22",
-          "view": "USD/CNY 6.88/6.90 触发验证与离岸 A 股授权的 CNH 对冲成本：工作日 2026-07-22",
-          "check": "支持 0 / 风险 1 / 观察 0",
-          "href": "/investor/reports/archive-047cacbb5c89/"
-        },
-        {
-          "date": "2026-07-22",
-          "value": 37.4,
-          "label": "风险",
-          "title": "2026-07-22 策略卡：人民币计价账户中USD/CNH分层对冲与AI物理链美元资产风险",
-          "view": "2026-07-22 策略卡：人民币计价账户中USD/CNH分层对冲与AI物理链美元资产风险",
-          "check": "支持 0 / 风险 1 / 观察 0",
-          "href": "/investor/reports/archive-b0020bff171d/"
-        },
-        {
-          "date": "2026-07-23",
-          "value": 52.8,
-          "label": "支持",
-          "title": "研究记录06：美联储宽松推迟下，非美权益超配所需的USD/CNY/EUR/JPY汇率对冲设计",
-          "view": "研究记录06：美联储宽松推迟下，非美权益超配所需的USD/CNY/EUR/JPY汇率对冲设计",
-          "check": "支持 1 / 风险 0 / 观察 0",
-          "href": "/investor/reports/archive-6a7e782fbe74/"
-        },
-        {
-          "date": "2026-07-24",
-          "value": 42.2,
-          "label": "支持",
-          "title": "CNH对冲与USD/JPY凸性之后的最终组合再平衡 - 2026-07-24",
-          "view": "CNH对冲与USD/JPY凸性之后的最终组合再平衡 - 2026-07-24",
-          "check": "支持 1 / 风险 2 / 观察 0",
-          "href": "/investor/reports/archive-9ad8546d5b8e/"
-        },
-        {
-          "date": "2026-07-25",
-          "value": 51.6,
-          "label": "风险",
-          "title": "7月FOMC后USD/CNY汇率防御防线、离岸CNH流动性挤压与跨国 Carry Trade 平仓尾部风险传导",
-          "view": "7月FOMC后USD/CNY汇率防御防线、离岸CNH流动性挤压与跨国 Carry Trade 平仓尾部风险传导",
-          "check": "支持 2 / 风险 2 / 观察 0",
-          "href": "/investor/reports/archive-a34ed8062cef/"
-        },
-        {
-          "date": "2026-07-26",
-          "value": 57,
-          "label": "支持",
-          "title": "2026-07-26 全球宏观：美元通过USD/CNY、JPY与carry交易的传导",
-          "view": "2026-07-26 全球宏观：美元通过USD/CNY、JPY与carry交易的传导",
-          "check": "支持 4 / 风险 4 / 观察 0",
-          "href": "/investor/reports/archive-2b421104cff1/"
-        },
-        {
-          "date": "2026-07-27",
-          "value": 46.4,
-          "label": "风险",
-          "title": "最终组合合成 —— USD/JPY 凸性、USD/CNH 对冲阶梯、A 股高股息、黄金与 CGB 久期的统一 NAV 风险...",
-          "view": "最终组合合成 —— USD/JPY 凸性、USD/CNH 对冲阶梯、A 股高股息、黄金与 CGB 久期的统一 NAV 风险预算",
-          "check": "支持 1 / 风险 2 / 观察 0",
-          "href": "/investor/reports/archive-e7d3d1f79dac/"
-        },
-        {
-          "date": "2026-07-28",
-          "value": 33.8,
-          "label": "风险",
-          "title": "2026-07-29 压力测试：USD/JPY 这一美元对冲腿能否扛住日元 carry unwind？",
-          "view": "2026-07-29 压力测试：USD/JPY 这一美元对冲腿能否扛住日元 carry unwind？",
-          "check": "支持 0 / 风险 3 / 观察 0",
-          "href": "/investor/reports/archive-68004508ce6c/"
-        },
-        {
-          "date": "2026-07-29",
-          "value": 59.2,
-          "label": "支持",
-          "title": "前序研究 — 2026-07-29 — USD/CNH、CNH/JPY、A股高股息、EM科技、黄金与日元凸性的最终组合规则",
-          "view": "前序研究 — 2026-07-29 — USD/CNH、CNH/JPY、A股高股息、EM科技、黄金与日元凸性的最终组合规则",
-          "check": "支持 3 / 风险 3 / 观察 0",
-          "href": "/investor/reports/archive-f49a801354be/"
-        },
-        {
-          "date": "2026-07-30",
-          "value": 38.6,
-          "label": "风险",
-          "title": "合成一本全天候账本：为银行收益腿、USD/JPY 凸性、CNY/CNH 保护分层定量，让压舱石永不兼任强制抛...",
-          "view": "合成一本全天候账本：为银行收益腿、USD/JPY 凸性、CNY/CNH 保护分层定量，让压舱石永不兼任强制抛售阀门",
-          "check": "支持 1 / 风险 4 / 观察 0",
-          "href": "/investor/reports/archive-fa4b259e1e47/"
-        }
-      ],
-      "dimensions": [
-        {
-          "label": "维度一",
-          "title": "论点",
-          "front": "研究问题是否清晰？",
-          "back": "USD/JPY与USD/CNY不是直接拉爆A股硬件链融资盘的拉绳，而是通过SOX估值代理与人民币波动率→券商折算率传导的放大器，CNH/…"
-        },
-        {
-          "label": "维度二",
-          "title": "证据",
-          "front": "证据是否可追溯？",
-          "back": "覆盖 3 位分析师和 1 类公开来源。"
-        },
-        {
-          "label": "维度三",
-          "title": "证伪",
-          "front": "风险是否上升？",
-          "back": "风险事件 58 条，方向为 分歧。"
-        }
-      ],
-      "sources": [
-        {
-          "href": "/investor/theses/thesis-bb46b0c3de/",
-          "label": "主线详情页",
-          "tag": "Thesis"
-        },
-        {
-          "href": "/investor/research-network/#thesis-bb46b0c3de",
-          "label": "研究网络定位",
-          "tag": "网络"
-        },
-        {
-          "href": "/investor/reports/archive-fa4b259e1e47/",
-          "label": "合成一本全天候账本：为银行收益腿、USD/JPY 凸性、CNY/CNH 保护分层定量，让压舱石永不兼任强制抛...",
-          "tag": "研究记录"
-        },
-        {
-          "href": "/investor/reports/archive-d4e6de2cb71c/",
-          "label": "统一为一张组合级NAV风险矩阵：融合利率波动率账本、A股风格账本与USD/CNH期权叠加",
-          "tag": "研究记录"
-        },
-        {
-          "href": "/investor/reports/archive-33be5f7dfcba/",
-          "label": "CNY尾部对冲执行参数：USD/CNH期权期限、delta、行权价与成本控制",
-          "tag": "研究记录"
-        },
-        {
-          "href": "/investor/reports/archive-5f7596c1d3bb/",
-          "label": "2026-07-30 压力测试：USD/JPY 凸性保证金拖累与 CNY/CNH 保护成本对削减瀑布的侵蚀",
-          "tag": "研究记录"
-        }
-      ],
-      "autoGenerated": true,
-      "kind": "living_thesis_recap"
-    },
-    {
       "slug": "living-4.66-5722.82-gamma-...-f5f184ba-2026-07-30",
       "title": "在美联储偏鹰暂停、美债收益率攀升至4.66%的背景下，国内电子行业两融余额高悬至5722.82…：动态复盘",
       "subtitle": "该主线来自 5 条研究记录的标题、问题和摘要聚类，时间跨度 2026-06-18 至 2026-06-18；用于观察是否形成可配置主题、风险预算和证伪条件，链条词仅作为证据标签。",
@@ -2200,251 +1955,6 @@
         {
           "href": "/investor/reports/archive-119625bdbd03/",
           "label": "2026-07-28 策略研究记录：6.88 突破情景下，A股市场结构是否验证红利重排？",
-          "tag": "研究记录"
-        }
-      ],
-      "autoGenerated": true,
-      "kind": "living_thesis_recap"
-    },
-    {
-      "slug": "living-ai-jpy-usd-hkd-cnh-80c15f4a-2026-07-30",
-      "title": "再配置后 AI 上游租金篮子的 JPY/USD/HKD/CNH 对冲比例：动态复盘",
-      "subtitle": "该主线来自 6 条研究记录的标题、问题和摘要聚类，时间跨度 2026-05-05 至 2026-07-13；用于观察是否形成可配置主题、风险预算和证伪条件，链条词仅作为证据标签。",
-      "date": "2026-07-30",
-      "badge": "LIVING THESIS RECAP",
-      "reportHref": "/investor/theses/thesis-80c15f4a7d/",
-      "chartTitle": "主线证据强度演化",
-      "chartDescription": "由公开研究事件按日期聚合，显示支持、风险和观察证据如何改变主线强度。",
-      "chartUnit": "证据强度",
-      "chart": {
-        "labels": [
-          "07-21",
-          "07-22",
-          "07-23",
-          "07-24",
-          "07-25",
-          "07-26",
-          "07-27",
-          "07-28",
-          "07-29",
-          "07-30"
-        ],
-        "values": [
-          50,
-          37.4,
-          38.8,
-          48.2,
-          41.6,
-          57,
-          40.4,
-          39.8,
-          51.2,
-          34.6
-        ]
-      },
-      "metrics": [
-        {
-          "label": "证据事件",
-          "value": "80",
-          "accent": "blue"
-        },
-        {
-          "label": "风险事件",
-          "value": "59",
-          "accent": "red"
-        },
-        {
-          "label": "分析师",
-          "value": "3",
-          "accent": "green"
-        },
-        {
-          "label": "方向",
-          "value": "分歧",
-          "accent": "orange"
-        }
-      ],
-      "conclusions": [
-        {
-          "title": "主线定义",
-          "text": "该主线来自 6 条研究记录的标题、问题和摘要聚类，时间跨度 2026-05-05 至 2026-07-13；用于观察是否形成可配置主题、风险预算和证伪条件，链条词仅作为证据标签。"
-        },
-        {
-          "title": "最新变化",
-          "text": "2026-07-30: USD/JPY 凸性对冲的期权执行参数 — 2026-07-30"
-        },
-        {
-          "title": "证据纪律",
-          "text": "当前以 21 条支持、59 条风险和 0 条观察证据进行动态跟踪。"
-        }
-      ],
-      "checklist": [
-        {
-          "label": "支持证据",
-          "status": "21 条",
-          "detail": "继续观察是否出现跨来源、跨分析师的同向验证。",
-          "bull": "支持证据集中出现在最新日期且源报告可追溯",
-          "bear": "支持证据停留在旧报告或单一来源",
-          "active": "bear"
-        },
-        {
-          "label": "风险证据",
-          "status": "59 条",
-          "detail": "风险证据用于判断主线是否变成拥挤交易或证伪样本。",
-          "bull": "风险被新证据消化",
-          "bear": "风险事件数量超过支持事件",
-          "active": "bear"
-        },
-        {
-          "label": "监控词",
-          "status": "美元 / 人民币 / USD/CNH",
-          "detail": "美元 / 人民币 / USD/CNH / 日元 / USD/JPY / 套息 / A股 / 期权",
-          "bull": "监控词在新报告中被反复验证",
-          "bear": "监控词热度上升但价格或基本面未兑现",
-          "active": "bull"
-        }
-      ],
-      "timeline": [
-        {
-          "date": "2026-07-21",
-          "value": 50,
-          "label": "支持",
-          "title": "2026-07-30 跨资产策略研究记录：偏鹰Fed上膛后的USD/JPY套息平仓尾部",
-          "view": "2026-07-30 跨资产策略研究记录：偏鹰Fed上膛后的USD/JPY套息平仓尾部",
-          "check": "支持 1 / 风险 0 / 观察 0",
-          "href": "/investor/reports/archive-6ff9ebd60c1b/"
-        },
-        {
-          "date": "2026-07-22",
-          "value": 37.4,
-          "label": "风险",
-          "title": "2026-07-22 策略卡：人民币计价账户中USD/CNH分层对冲与AI物理链美元资产风险",
-          "view": "2026-07-22 策略卡：人民币计价账户中USD/CNH分层对冲与AI物理链美元资产风险",
-          "check": "支持 0 / 风险 1 / 观察 0",
-          "href": "/investor/reports/archive-b0020bff171d/"
-        },
-        {
-          "date": "2026-07-23",
-          "value": 38.8,
-          "label": "风险",
-          "title": "全球宏观与外汇策略专题报告：USDJPY 163.10高位下的外汇期权对冲精细化——财务省干预与日元 Carr...",
-          "view": "全球宏观与外汇策略专题报告：USDJPY 163.10高位下的外汇期权对冲精细化——财务省干预与日元 Carry Trade 平仓共振的压力测试",
-          "check": "支持 0 / 风险 1 / 观察 0",
-          "href": "/investor/reports/archive-2387b953c858/"
-        },
-        {
-          "date": "2026-07-24",
-          "value": 48.2,
-          "label": "风险",
-          "title": "CNH远期执行与USD/JPY凸性兑现 - 2026-07-24",
-          "view": "作者: 全球宏观分析师 权威工作日期: 2026-07-24 (Asia/Singapore) 研究记录 立场: 压力测试",
-          "check": "支持 1 / 风险 1 / 观察 0",
-          "href": "/investor/reports/archive-c2709b6a3d03/"
-        },
-        {
-          "date": "2026-07-25",
-          "value": 41.6,
-          "label": "风险",
-          "title": "美元/日元与 CNH–日元交叉盘套息平仓的战术拆解：痛点阈值、传导路径与期权隐含偏斜",
-          "view": "美元/日元与 CNH–日元交叉盘套息平仓的战术拆解：痛点阈值、传导路径与期权隐含偏斜",
-          "check": "支持 0 / 风险 1 / 观察 0",
-          "href": "/investor/reports/archive-feeb616b6447/"
-        },
-        {
-          "date": "2026-07-26",
-          "value": 57,
-          "label": "风险",
-          "title": "FOMC与BOJ会议后的触发线：USD/CNH与USD/JPY信号组合何时把默认矩阵切出状态A，2026-07-26",
-          "view": "FOMC与BOJ会议后的触发线：USD/CNH与USD/JPY信号组合何时把默认矩阵切出状态A，2026-07-26",
-          "check": "支持 4 / 风险 4 / 观察 0",
-          "href": "/investor/reports/archive-cceeadc32456/"
-        },
-        {
-          "date": "2026-07-27",
-          "value": 40.4,
-          "label": "风险",
-          "title": "最终组合合成 —— USD/JPY 凸性、USD/CNH 对冲阶梯、A 股高股息、黄金与 CGB 久期的统一 NAV 风险...",
-          "view": "最终组合合成 —— USD/JPY 凸性、USD/CNH 对冲阶梯、A 股高股息、黄金与 CGB 久期的统一 NAV 风险预算",
-          "check": "支持 1 / 风险 3 / 观察 0",
-          "href": "/investor/reports/archive-e7d3d1f79dac/"
-        },
-        {
-          "date": "2026-07-28",
-          "value": 39.8,
-          "label": "风险",
-          "title": "2026-07-28 USD/CNH 对冲破位监测：期权、远期与中间价偏离",
-          "view": "2026-07-28 USD/CNH 对冲破位监测：期权、远期与中间价偏离",
-          "check": "支持 0 / 风险 2 / 观察 0",
-          "href": "/investor/reports/archive-f4ae8a690f6e/"
-        },
-        {
-          "date": "2026-07-29",
-          "value": 51.2,
-          "label": "支持",
-          "title": "前序研究 — 2026-07-29 — USD/CNH、CNH/JPY、A股高股息、EM科技、黄金与日元凸性的最终组合规则",
-          "view": "前序研究 — 2026-07-29 — USD/CNH、CNH/JPY、A股高股息、EM科技、黄金与日元凸性的最终组合规则",
-          "check": "支持 2 / 风险 3 / 观察 0",
-          "href": "/investor/reports/archive-f49a801354be/"
-        },
-        {
-          "date": "2026-07-30",
-          "value": 34.6,
-          "label": "支持",
-          "title": "2026-07-30 USD/JPY套息平仓外溢下的CNY政策走廊",
-          "view": "研究记录 分析师： 全球宏观分析师（ global-macro ） · 立场： 综合（synthesize） 工作日期（Asia/Singapore）： 2026-07-30 问题： 如果USD/JPY跌破158，且20%-30%的FX对冲转入CNY/CNH流动...",
-          "check": "支持 2 / 风险 6 / 观察 0",
-          "href": "/investor/reports/archive-e6111758b774/"
-        }
-      ],
-      "dimensions": [
-        {
-          "label": "维度一",
-          "title": "论点",
-          "front": "研究问题是否清晰？",
-          "back": "再配置后 AI 上游租金篮子的 JPY/USD/HKD/CNH 对冲比例"
-        },
-        {
-          "label": "维度二",
-          "title": "证据",
-          "front": "证据是否可追溯？",
-          "back": "覆盖 3 位分析师和 1 类公开来源。"
-        },
-        {
-          "label": "维度三",
-          "title": "证伪",
-          "front": "风险是否上升？",
-          "back": "风险事件 59 条，方向为 分歧。"
-        }
-      ],
-      "sources": [
-        {
-          "href": "/investor/theses/thesis-80c15f4a7d/",
-          "label": "主线详情页",
-          "tag": "Thesis"
-        },
-        {
-          "href": "/investor/research-network/#thesis-80c15f4a7d",
-          "label": "研究网络定位",
-          "tag": "网络"
-        },
-        {
-          "href": "/investor/reports/archive-e6111758b774/",
-          "label": "2026-07-30 USD/JPY套息平仓外溢下的CNY政策走廊",
-          "tag": "研究记录"
-        },
-        {
-          "href": "/investor/reports/archive-5f7596c1d3bb/",
-          "label": "2026-07-30 压力测试：USD/JPY 凸性保证金拖累与 CNY/CNH 保护成本对削减瀑布的侵蚀",
-          "tag": "研究记录"
-        },
-        {
-          "href": "/investor/reports/archive-d4e6de2cb71c/",
-          "label": "统一为一张组合级NAV风险矩阵：融合利率波动率账本、A股风格账本与USD/CNH期权叠加",
-          "tag": "研究记录"
-        },
-        {
-          "href": "/investor/reports/archive-33be5f7dfcba/",
-          "label": "CNY尾部对冲执行参数：USD/CNH期权期限、delta、行权价与成本控制",
           "tag": "研究记录"
         }
       ],
@@ -2729,7 +2239,7 @@
           32.4,
           33.8,
           55.2,
-          50.6
+          26.6
         ]
       },
       "metrics": [
@@ -2740,7 +2250,7 @@
         },
         {
           "label": "风险事件",
-          "value": "67",
+          "value": "68",
           "accent": "red"
         },
         {
@@ -2765,13 +2275,13 @@
         },
         {
           "title": "证据纪律",
-          "text": "当前以 13 条支持、67 条风险和 0 条观察证据进行动态跟踪。"
+          "text": "当前以 12 条支持、68 条风险和 0 条观察证据进行动态跟踪。"
         }
       ],
       "checklist": [
         {
           "label": "支持证据",
-          "status": "13 条",
+          "status": "12 条",
           "detail": "继续观察是否出现跨来源、跨分析师的同向验证。",
           "bull": "支持证据集中出现在最新日期且源报告可追溯",
           "bear": "支持证据停留在旧报告或单一来源",
@@ -2779,7 +2289,7 @@
         },
         {
           "label": "风险证据",
-          "status": "67 条",
+          "status": "68 条",
           "detail": "风险证据用于判断主线是否变成拥挤交易或证伪样本。",
           "bull": "风险被新证据消化",
           "bear": "风险事件数量超过支持事件",
@@ -2878,12 +2388,12 @@
         },
         {
           "date": "2026-07-30",
-          "value": 50.6,
+          "value": 26.6,
           "label": "风险",
-          "title": "2026-07-30 压力测试：USD/JPY 凸性保证金拖累与 CNY/CNH 保护成本对削减瀑布的侵蚀",
-          "view": "2026-07-30 压力测试：USD/JPY 凸性保证金拖累与 CNY/CNH 保护成本对削减瀑布的侵蚀",
-          "check": "支持 1 / 风险 2 / 观察 0",
-          "href": "/investor/reports/archive-5f7596c1d3bb/"
+          "title": "2026-07-30 美元对冲压力测试：USD/CNH、USD/JPY 与广义美元拆分",
+          "view": "2026-07-30 美元对冲压力测试：USD/CNH、USD/JPY 与广义美元拆分",
+          "check": "支持 1 / 风险 6 / 观察 0",
+          "href": "/investor/reports/archive-6cc9508ab398/"
         }
       ],
       "dimensions": [
@@ -2903,7 +2413,7 @@
           "label": "维度三",
           "title": "证伪",
           "front": "风险是否上升？",
-          "back": "风险事件 67 条，方向为 分歧。"
+          "back": "风险事件 68 条，方向为 分歧。"
         }
       ],
       "sources": [
@@ -2918,23 +2428,23 @@
           "tag": "网络"
         },
         {
+          "href": "/investor/reports/archive-6cc9508ab398/",
+          "label": "2026-07-30 美元对冲压力测试：USD/CNH、USD/JPY 与广义美元拆分",
+          "tag": "研究记录"
+        },
+        {
           "href": "/investor/reports/archive-5f7596c1d3bb/",
           "label": "2026-07-30 压力测试：USD/JPY 凸性保证金拖累与 CNY/CNH 保护成本对削减瀑布的侵蚀",
           "tag": "研究记录"
         },
         {
+          "href": "/investor/reports/archive-e7db16d4a053/",
+          "label": "沃什–植田分化：USD/JPY 创40年新低与重新堆积的日元套息交易",
+          "tag": "研究记录"
+        },
+        {
           "href": "/investor/reports/archive-fa4b259e1e47/",
           "label": "合成一本全天候账本：为银行收益腿、USD/JPY 凸性、CNY/CNH 保护分层定量，让压舱石永不兼任强制抛...",
-          "tag": "研究记录"
-        },
-        {
-          "href": "/investor/reports/archive-e6111758b774/",
-          "label": "2026-07-30 USD/JPY套息平仓外溢下的CNY政策走廊",
-          "tag": "研究记录"
-        },
-        {
-          "href": "/investor/reports/archive-f49a801354be/",
-          "label": "前序研究 — 2026-07-29 — USD/CNH、CNH/JPY、A股高股息、EM科技、黄金与日元凸性的最终组合规则",
           "tag": "研究记录"
         }
       ],
@@ -2974,7 +2484,7 @@
           40.4,
           35.8,
           63.2,
-          58.6
+          40.6
         ]
       },
       "metrics": [
@@ -3123,11 +2633,11 @@
         },
         {
           "date": "2026-07-30",
-          "value": 58.6,
+          "value": 40.6,
           "label": "风险",
           "title": "合成一本全天候账本：为银行收益腿、USD/JPY 凸性、CNY/CNH 保护分层定量，让压舱石永不兼任强制抛...",
           "view": "合成一本全天候账本：为银行收益腿、USD/JPY 凸性、CNY/CNH 保护分层定量，让压舱石永不兼任强制抛售阀门",
-          "check": "支持 2 / 风险 2 / 观察 0",
+          "check": "支持 2 / 风险 5 / 观察 0",
           "href": "/investor/reports/archive-fa4b259e1e47/"
         }
       ],
@@ -3168,6 +2678,11 @@
           "tag": "研究记录"
         },
         {
+          "href": "/investor/reports/archive-6cc9508ab398/",
+          "label": "2026-07-30 美元对冲压力测试：USD/CNH、USD/JPY 与广义美元拆分",
+          "tag": "研究记录"
+        },
+        {
           "href": "/investor/reports/archive-5f7596c1d3bb/",
           "label": "2026-07-30 压力测试：USD/JPY 凸性保证金拖累与 CNY/CNH 保护成本对削减瀑布的侵蚀",
           "tag": "研究记录"
@@ -3175,11 +2690,6 @@
         {
           "href": "/investor/reports/archive-e6111758b774/",
           "label": "2026-07-30 USD/JPY套息平仓外溢下的CNY政策走廊",
-          "tag": "研究记录"
-        },
-        {
-          "href": "/investor/reports/archive-d3723b20a89a/",
-          "label": "2026-07-30 — 日元套息平仓对中国的传导：CNH升值挤压、PBOC空间与A股红利防御",
           "tag": "研究记录"
         }
       ],
@@ -3432,10 +2942,10 @@
       "kind": "living_thesis_recap"
     },
     {
-      "slug": "living-50-cpo-5-58f268ed-2026-07-29",
+      "slug": "living-50-cpo-5-58f268ed-2026-07-31",
       "title": "隔夜美股半导体与小盘逼空是否足以覆盖科创50/CPO的本地两融、解禁和折算率压力，还是应继续把…：动态复盘",
       "subtitle": "该主线来自 3 条研究记录的标题、问题和摘要聚类，时间跨度 2026-06-12 至 2026-06-16；用于观察是否形成可配置主题、风险预算和证伪条件，链条词仅作为证据标签。",
-      "date": "2026-07-29",
+      "date": "2026-07-31",
       "badge": "LIVING THESIS RECAP",
       "reportHref": "/investor/theses/thesis-58f268edf9/",
       "chartTitle": "主线证据强度演化",
@@ -3443,8 +2953,6 @@
       "chartUnit": "证据强度",
       "chart": {
         "labels": [
-          "07-20",
-          "07-21",
           "07-22",
           "07-23",
           "07-24",
@@ -3452,19 +2960,21 @@
           "07-26",
           "07-27",
           "07-28",
-          "07-29"
+          "07-29",
+          "07-30",
+          "07-31"
         ],
         "values": [
-          18,
-          19.4,
-          14.8,
+          12,
+          31.4,
+          40.8,
           34.2,
           43.6,
-          37,
-          46.4,
-          35.8,
+          33,
+          52.4,
+          53.8,
           55.2,
-          56.6
+          48.6
         ]
       },
       "metrics": [
@@ -3496,7 +3006,7 @@
         },
         {
           "title": "最新变化",
-          "text": "2026-07-29: 研究记录-03 — 半导体加仓名单的两融与ETF流持续性确认"
+          "text": "2026-07-31: 2026-07-31 因子卡：A股AI硬件篮子的收益究竟来自哪里——两融拥挤度压力测试"
         },
         {
           "title": "证据纪律",
@@ -3531,26 +3041,8 @@
       ],
       "timeline": [
         {
-          "date": "2026-07-20",
-          "value": 18,
-          "label": "风险",
-          "title": "组合级收敛：当半导体与CPO坍缩为同一AI硬件因子后，真正低相关资产是什么",
-          "view": "组合级收敛：当半导体与CPO坍缩为同一AI硬件因子后，真正低相关资产是什么",
-          "check": "支持 0 / 风险 4 / 观察 0",
-          "href": "/investor/reports/archive-1a43f41dd394/"
-        },
-        {
-          "date": "2026-07-21",
-          "value": 19.4,
-          "label": "风险",
-          "title": "2026-07-21 压力测试：A股算力连接器与CPO概念股估值分化与两融杠杆退潮风险",
-          "view": "2026-07-21 压力测试：A股算力连接器与CPO概念股估值分化与两融杠杆退潮风险",
-          "check": "支持 0 / 风险 4 / 观察 0",
-          "href": "/investor/reports/archive-7b2d5283962d/"
-        },
-        {
           "date": "2026-07-22",
-          "value": 14.8,
+          "value": 12,
           "label": "风险",
           "title": "2026-07-22 策略卡：A股半导体ETF、两融与成分股宽度验证",
           "view": "截至研究所工作日 2026-07-22，我对 既有研究记录做综合推进：2026-07-17 之后 A股半导体资金流入，第一来源应判定为 ETF / 被动配置与拥挤修复，第二是此前已存在的主动基金持仓底仓...",
@@ -3559,7 +3051,7 @@
         },
         {
           "date": "2026-07-23",
-          "value": 34.2,
+          "value": 31.4,
           "label": "风险",
           "title": "2026-07-26 — 半导体压力测试：折算率下调后的两融压力与强平风险",
           "view": "2026-07-26 — 半导体压力测试：折算率下调后的两融压力与强平风险",
@@ -3568,7 +3060,7 @@
         },
         {
           "date": "2026-07-24",
-          "value": 43.6,
+          "value": 40.8,
           "label": "风险",
           "title": "成交与两融能否守住3万亿？券商beta持久性的市场结构与杠杆资金压力测试 — 2026-07-26",
           "view": "成交与两融能否守住3万亿？券商beta持久性的市场结构与杠杆资金压力测试 — 2026-07-26",
@@ -3577,7 +3069,7 @@
         },
         {
           "date": "2026-07-25",
-          "value": 37,
+          "value": 34.2,
           "label": "风险",
           "title": "2026-07-25 半导体分析师研究记录：半导体板块在两融去杠杆及科技风格拥挤下的估值压力测试",
           "view": "2026-07-25 半导体分析师研究记录：半导体板块在两融去杠杆及科技风格拥挤下的估值压力测试",
@@ -3586,7 +3078,7 @@
         },
         {
           "date": "2026-07-26",
-          "value": 46.4,
+          "value": 43.6,
           "label": "支持",
           "title": "2026-07-26红色态下A股风格轮动与两融定仓",
           "view": "研究记录 - 分析师: 首席策略师 ( chief-strategist ) - 工作日期: 2026-07-26 (Asia/Singapore) - 立场: synthesize - 问题: 在红色态下，USD/CNH连续高于7.05、全球权益beta已砍至约0.65时...",
@@ -3595,7 +3087,7 @@
         },
         {
           "date": "2026-07-27",
-          "value": 35.8,
+          "value": 33,
           "label": "风险",
           "title": "2026-07-27 A股策略：8月中报季盈利宽度能否为 carry→beta 升级补上基本面一腿？",
           "view": "2026-07-27 A股策略：8月中报季盈利宽度能否为 carry→beta 升级补上基本面一腿？",
@@ -3604,7 +3096,7 @@
         },
         {
           "date": "2026-07-28",
-          "value": 55.2,
+          "value": 52.4,
           "label": "风险",
           "title": "2026-07-28 — 把组合beta与现金约束落到A股风格与行业权重",
           "view": "2026-07-28 — 把组合beta与现金约束落到A股风格与行业权重",
@@ -3613,12 +3105,30 @@
         },
         {
           "date": "2026-07-29",
-          "value": 56.6,
+          "value": 53.8,
           "label": "支持",
           "title": "A股两融、ETF与科创50宽度：检验\"被动去拥挤\" —— 2026-07-29",
           "view": "A股两融、ETF与科创50宽度：检验\"被动去拥挤\" —— 2026-07-29",
           "check": "支持 1 / 风险 1 / 观察 0",
           "href": "/investor/reports/archive-1852a3871dfe/"
+        },
+        {
+          "date": "2026-07-30",
+          "value": 55.2,
+          "label": "风险",
+          "title": "CXMT上市之后的拥挤度：A股能吸收\"模组Beta→设备/材料\"的迁移，还是只是换篮子并提前放大杀估值？",
+          "view": "CXMT上市之后的拥挤度：A股能吸收\"模组Beta→设备/材料\"的迁移，还是只是换篮子并提前放大杀估值？",
+          "check": "支持 1 / 风险 1 / 观察 0",
+          "href": "/investor/reports/archive-57b61587ac08/"
+        },
+        {
+          "date": "2026-07-31",
+          "value": 48.6,
+          "label": "风险",
+          "title": "2026-07-31 因子卡：A股AI硬件篮子的收益究竟来自哪里——两融拥挤度压力测试",
+          "view": "2026-07-31 因子卡：A股AI硬件篮子的收益究竟来自哪里——两融拥挤度压力测试",
+          "check": "支持 0 / 风险 1 / 观察 0",
+          "href": "/investor/reports/archive-94c28ab02e8d/"
         }
       ],
       "dimensions": [
@@ -3653,23 +3163,23 @@
           "tag": "网络"
         },
         {
+          "href": "/investor/reports/archive-94c28ab02e8d/",
+          "label": "2026-07-31 因子卡：A股AI硬件篮子的收益究竟来自哪里——两融拥挤度压力测试",
+          "tag": "研究记录"
+        },
+        {
+          "href": "/investor/reports/archive-57b61587ac08/",
+          "label": "CXMT上市之后的拥挤度：A股能吸收\"模组Beta→设备/材料\"的迁移，还是只是换篮子并提前放大杀估值？",
+          "tag": "研究记录"
+        },
+        {
+          "href": "/investor/reports/archive-b649022bfe44/",
+          "label": "2026-07-30 把情景化股票beta预算落地为A股风格轮动与行业权重",
+          "tag": "研究记录"
+        },
+        {
           "href": "/investor/reports/archive-1852a3871dfe/",
           "label": "A股两融、ETF与科创50宽度：检验\"被动去拥挤\" —— 2026-07-29",
-          "tag": "研究记录"
-        },
-        {
-          "href": "/investor/reports/archive-090c53931061/",
-          "label": "研究记录-03 — 半导体加仓名单的两融与ETF流持续性确认",
-          "tag": "研究记录"
-        },
-        {
-          "href": "/investor/reports/archive-985c70d038ff/",
-          "label": "2026-07-28 — 把组合beta与现金约束落到A股风格与行业权重",
-          "tag": "研究记录"
-        },
-        {
-          "href": "/investor/reports/archive-629f2f00eb3b/",
-          "label": "前序研究 — A股提款机后的执行清单：互联互通、高两融担保科技股与高股息防御的 30% / 40% / 30%...",
           "tag": "研究记录"
         }
       ],
@@ -3709,7 +3219,7 @@
           26.4,
           33.8,
           63.2,
-          50.6
+          20.6
         ]
       },
       "metrics": [
@@ -3858,12 +3368,12 @@
         },
         {
           "date": "2026-07-30",
-          "value": 50.6,
+          "value": 20.6,
           "label": "风险",
-          "title": "实时 USD/JPY 期权曲面与 RFQ 执行校验 - 2026-07-30",
-          "view": "实时 USD/JPY 期权曲面与 RFQ 执行校验 - 2026-07-30",
-          "check": "支持 1 / 风险 2 / 观察 0",
-          "href": "/investor/reports/archive-e1f5a1906f1d/"
+          "title": "2026-07-30 美元对冲压力测试：USD/CNH、USD/JPY 与广义美元拆分",
+          "view": "2026-07-30 美元对冲压力测试：USD/CNH、USD/JPY 与广义美元拆分",
+          "check": "支持 1 / 风险 7 / 观察 0",
+          "href": "/investor/reports/archive-6cc9508ab398/"
         }
       ],
       "dimensions": [
@@ -3898,13 +3408,498 @@
           "tag": "网络"
         },
         {
-          "href": "/investor/reports/archive-e1f5a1906f1d/",
-          "label": "实时 USD/JPY 期权曲面与 RFQ 执行校验 - 2026-07-30",
+          "href": "/investor/reports/archive-6cc9508ab398/",
+          "label": "2026-07-30 美元对冲压力测试：USD/CNH、USD/JPY 与广义美元拆分",
           "tag": "研究记录"
         },
         {
-          "href": "/investor/reports/archive-e6111758b774/",
-          "label": "2026-07-30 USD/JPY套息平仓外溢下的CNY政策走廊",
+          "href": "/investor/reports/archive-e7db16d4a053/",
+          "label": "沃什–植田分化：USD/JPY 创40年新低与重新堆积的日元套息交易",
+          "tag": "研究记录"
+        },
+        {
+          "href": "/investor/reports/archive-07d5235a3609/",
+          "label": "USD/JPY、财务省干预、套息平仓外溢 — 2026-07-30",
+          "tag": "研究记录"
+        },
+        {
+          "href": "/investor/reports/archive-2e724b070538/",
+          "label": "USD/JPY 对冲执行窗口与现货触发规则校准",
+          "tag": "研究记录"
+        }
+      ],
+      "autoGenerated": true,
+      "kind": "living_thesis_recap"
+    },
+    {
+      "slug": "living-a-etf-5a0bd732-2026-07-29",
+      "title": "A股杠铃策略应落地为“红利蓝筹压舱 + 硬科技成长进攻 + 轮动仓位调节”的三层结构，两融是成…：动态复盘",
+      "subtitle": "该主线来自 3 条研究记录的标题、问题和摘要聚类，时间跨度 2026-05-26 至 2026-07-19；用于观察是否形成可配置主题、风险预算和证伪条件，链条词仅作为证据标签。",
+      "date": "2026-07-29",
+      "badge": "LIVING THESIS RECAP",
+      "reportHref": "/investor/theses/thesis-5a0bd732f3/",
+      "chartTitle": "主线证据强度演化",
+      "chartDescription": "由公开研究事件按日期聚合，显示支持、风险和观察证据如何改变主线强度。",
+      "chartUnit": "证据强度",
+      "chart": {
+        "labels": [
+          "07-20",
+          "07-21",
+          "07-22",
+          "07-23",
+          "07-24",
+          "07-25",
+          "07-26",
+          "07-27",
+          "07-28",
+          "07-29"
+        ],
+        "values": [
+          24,
+          45.4,
+          28.8,
+          54.2,
+          63.6,
+          57,
+          44.4,
+          45.8,
+          55.2,
+          56.6
+        ]
+      },
+      "metrics": [
+        {
+          "label": "证据事件",
+          "value": "80",
+          "accent": "blue"
+        },
+        {
+          "label": "风险事件",
+          "value": "52",
+          "accent": "red"
+        },
+        {
+          "label": "分析师",
+          "value": "3",
+          "accent": "green"
+        },
+        {
+          "label": "方向",
+          "value": "分歧",
+          "accent": "orange"
+        }
+      ],
+      "conclusions": [
+        {
+          "title": "主线定义",
+          "text": "该主线来自 3 条研究记录的标题、问题和摘要聚类，时间跨度 2026-05-26 至 2026-07-19；用于观察是否形成可配置主题、风险预算和证伪条件，链条词仅作为证据标签。"
+        },
+        {
+          "title": "最新变化",
+          "text": "2026-07-29: A股两融、ETF与科创50宽度：检验\"被动去拥挤\" —— 2026-07-29"
+        },
+        {
+          "title": "证据纪律",
+          "text": "当前以 28 条支持、52 条风险和 0 条观察证据进行动态跟踪。"
+        }
+      ],
+      "checklist": [
+        {
+          "label": "支持证据",
+          "status": "28 条",
+          "detail": "继续观察是否出现跨来源、跨分析师的同向验证。",
+          "bull": "支持证据集中出现在最新日期且源报告可追溯",
+          "bear": "支持证据停留在旧报告或单一来源",
+          "active": "bear"
+        },
+        {
+          "label": "风险证据",
+          "status": "52 条",
+          "detail": "风险证据用于判断主线是否变成拥挤交易或证伪样本。",
+          "bull": "风险被新证据消化",
+          "bear": "风险事件数量超过支持事件",
+          "active": "bear"
+        },
+        {
+          "label": "监控词",
+          "status": "红利 / A股 / 两融",
+          "detail": "红利 / A股 / 两融 / 硬科技 / 半导体 / ETF / 股杠铃策略应落地为 / 红利蓝筹压舱",
+          "bull": "监控词在新报告中被反复验证",
+          "bear": "监控词热度上升但价格或基本面未兑现",
+          "active": "bull"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-07-20",
+          "value": 24,
+          "label": "风险",
+          "title": "A股半导体ETF资金流、融资余额与半导体诱多风险吸收阈值",
+          "view": "分析日期：2026-07-20 报告人：首席策略师 (Chief Strategist) 板块标签：A股策略、风格轮动、行业配置 投资论点对齐：对齐 th p 81c561fd（半导体 ETF 拥挤度风险）、支持 th p e86f6130（半导...",
+          "check": "支持 0 / 风险 3 / 观察 0",
+          "href": "/investor/reports/archive-968f5311d8f3/"
+        },
+        {
+          "date": "2026-07-21",
+          "value": 45.4,
+          "label": "风险",
+          "title": "2026-07-21 策略研究记录：A股内部市场结构确认：收盘宽度、期指基差、两融余额与ETF流入结构",
+          "view": "2026-07-21 策略研究记录：A股内部市场结构确认：收盘宽度、期指基差、两融余额与ETF流入结构",
+          "check": "支持 1 / 风险 1 / 观察 0",
+          "href": "/investor/reports/archive-62c46b60a5dc/"
+        },
+        {
+          "date": "2026-07-22",
+          "value": 28.8,
+          "label": "风险",
+          "title": "2026-07-22 策略卡：A股半导体ETF、两融与成分股宽度验证",
+          "view": "截至研究所工作日 2026-07-22，我对 既有研究记录做综合推进：2026-07-17 之后 A股半导体资金流入，第一来源应判定为 ETF / 被动配置与拥挤修复，第二是此前已存在的主动基金持仓底仓...",
+          "check": "支持 1 / 风险 4 / 观察 0",
+          "href": "/investor/reports/archive-bc3c4f3bca2e/"
+        },
+        {
+          "date": "2026-07-23",
+          "value": 54.2,
+          "label": "支持",
+          "title": "研究记录08：2026年7月23日A股两融、拥挤度、ETF与港股资金流仪表盘",
+          "view": "研究记录08：2026年7月23日A股两融、拥挤度、ETF与港股资金流仪表盘",
+          "check": "支持 1 / 风险 0 / 观察 0",
+          "href": "/investor/reports/archive-29e73a44d75e/"
+        },
+        {
+          "date": "2026-07-24",
+          "value": 63.6,
+          "label": "支持",
+          "title": "宏观策略与A股微观结构专题报告：日元套利解包下离岸流动性收紧、两融杠杆演变与质量红利 vs 科技...",
+          "view": "宏观策略与A股微观结构专题报告：日元套利解包下离岸流动性收紧、两融杠杆演变与质量红利 vs 科技成长风格再平衡",
+          "check": "支持 2 / 风险 0 / 观察 0",
+          "href": "/investor/reports/archive-1c01983800d6/"
+        },
+        {
+          "date": "2026-07-25",
+          "value": 57,
+          "label": "支持",
+          "title": "2026-07-25 A股策略研究记录：两融压力与红利低波、硬科技双主线博弈",
+          "view": "2026-07-25 A股策略研究记录：两融压力与红利低波、硬科技双主线博弈",
+          "check": "支持 1 / 风险 0 / 观察 0",
+          "href": "/investor/reports/archive-ebbe2898882e/"
+        },
+        {
+          "date": "2026-07-26",
+          "value": 44.4,
+          "label": "风险",
+          "title": "2026-07-26 半导体压力测试：硬科技 ETF 窄向买盘能否修复 CSI 500 广度？",
+          "view": "2026-07-26 半导体压力测试：硬科技 ETF 窄向买盘能否修复 CSI 500 广度？",
+          "check": "支持 0 / 风险 1 / 观察 0",
+          "href": "/investor/reports/archive-e1990ac03305/"
+        },
+        {
+          "date": "2026-07-27",
+          "value": 45.8,
+          "label": "风险",
+          "title": "首席策略师 — A股能否吸收下一轮政策消息缺口？ETF／两融／解禁三重供给约束压力测试",
+          "view": "首席策略师 — A股能否吸收下一轮政策消息缺口？ETF／两融／解禁三重供给约束压力测试",
+          "check": "支持 0 / 风险 1 / 观察 0",
+          "href": "/investor/reports/archive-35b100b1414d/"
+        },
+        {
+          "date": "2026-07-28",
+          "value": 55.2,
+          "label": "风险",
+          "title": "买回清单的市场结构可行性：两融容量、8月解禁日历与指数ETF吸收力能否支撑分档节奏 — 工作日期20...",
+          "view": "买回清单的市场结构可行性：两融容量、8月解禁日历与指数ETF吸收力能否支撑分档节奏 — 工作日期2026-07-28",
+          "check": "支持 1 / 风险 1 / 观察 0",
+          "href": "/investor/reports/archive-2713a79a769b/"
+        },
+        {
+          "date": "2026-07-29",
+          "value": 56.6,
+          "label": "风险",
+          "title": "研究记录-03 — 半导体加仓名单的两融与ETF流持续性确认",
+          "view": "研究记录 · 作者角色： 首席策略师（Chief Strategist） 工作日期： 2026-07-29（亚洲/新加坡）· 立场： 支持（分层闸门框架）—— 但对G1的即刻升级给出「不升级」结论 根议题： A股两融降杠...",
+          "check": "支持 1 / 风险 1 / 观察 0",
+          "href": "/investor/reports/archive-090c53931061/"
+        }
+      ],
+      "dimensions": [
+        {
+          "label": "维度一",
+          "title": "论点",
+          "front": "研究问题是否清晰？",
+          "back": "A股杠铃策略应落地为“红利蓝筹压舱 + 硬科技成长进攻 + 轮动仓位调节”的三层结构，两融是成长端驱动力，ETF赎回和限售股解禁是仓位上限。"
+        },
+        {
+          "label": "维度二",
+          "title": "证据",
+          "front": "证据是否可追溯？",
+          "back": "覆盖 3 位分析师和 1 类公开来源。"
+        },
+        {
+          "label": "维度三",
+          "title": "证伪",
+          "front": "风险是否上升？",
+          "back": "风险事件 52 条，方向为 分歧。"
+        }
+      ],
+      "sources": [
+        {
+          "href": "/investor/theses/thesis-5a0bd732f3/",
+          "label": "主线详情页",
+          "tag": "Thesis"
+        },
+        {
+          "href": "/investor/research-network/#thesis-5a0bd732f3",
+          "label": "研究网络定位",
+          "tag": "网络"
+        },
+        {
+          "href": "/investor/reports/archive-090c53931061/",
+          "label": "研究记录-03 — 半导体加仓名单的两融与ETF流持续性确认",
+          "tag": "研究记录"
+        },
+        {
+          "href": "/investor/reports/archive-1852a3871dfe/",
+          "label": "A股两融、ETF与科创50宽度：检验\"被动去拥挤\" —— 2026-07-29",
+          "tag": "研究记录"
+        },
+        {
+          "href": "/investor/reports/archive-2713a79a769b/",
+          "label": "买回清单的市场结构可行性：两融容量、8月解禁日历与指数ETF吸收力能否支撑分档节奏 — 工作日期20...",
+          "tag": "研究记录"
+        },
+        {
+          "href": "/investor/reports/archive-629f2f00eb3b/",
+          "label": "前序研究 — A股提款机后的执行清单：互联互通、高两融担保科技股与高股息防御的 30% / 40% / 30%...",
+          "tag": "研究记录"
+        }
+      ],
+      "autoGenerated": true,
+      "kind": "living_thesis_recap"
+    },
+    {
+      "slug": "living-usd-jpy-usd-cny-a-sox-cnh-...-bb46b0c3-2026-07-30",
+      "title": "USD/JPY与USD/CNY不是直接拉爆A股硬件链融资盘的拉绳，而是通过SOX估值代理与人民…：动态复盘",
+      "subtitle": "该主线来自 3 条研究记录的标题、问题和摘要聚类，时间跨度 2026-06-03 至 2026-07-06；用于观察是否形成可配置主题、风险预算和证伪条件，链条词仅作为证据标签。",
+      "date": "2026-07-30",
+      "badge": "LIVING THESIS RECAP",
+      "reportHref": "/investor/theses/thesis-bb46b0c3de/",
+      "chartTitle": "主线证据强度演化",
+      "chartDescription": "由公开研究事件按日期聚合，显示支持、风险和观察证据如何改变主线强度。",
+      "chartUnit": "证据强度",
+      "chart": {
+        "labels": [
+          "07-21",
+          "07-22",
+          "07-23",
+          "07-24",
+          "07-25",
+          "07-26",
+          "07-27",
+          "07-28",
+          "07-29",
+          "07-30"
+        ],
+        "values": [
+          36,
+          37.4,
+          52.8,
+          42.2,
+          51.6,
+          57,
+          46.4,
+          33.8,
+          59.2,
+          14.6
+        ]
+      },
+      "metrics": [
+        {
+          "label": "证据事件",
+          "value": "79",
+          "accent": "blue"
+        },
+        {
+          "label": "风险事件",
+          "value": "57",
+          "accent": "red"
+        },
+        {
+          "label": "分析师",
+          "value": "3",
+          "accent": "green"
+        },
+        {
+          "label": "方向",
+          "value": "分歧",
+          "accent": "orange"
+        }
+      ],
+      "conclusions": [
+        {
+          "title": "主线定义",
+          "text": "该主线来自 3 条研究记录的标题、问题和摘要聚类，时间跨度 2026-06-03 至 2026-07-06；用于观察是否形成可配置主题、风险预算和证伪条件，链条词仅作为证据标签。"
+        },
+        {
+          "title": "最新变化",
+          "text": "2026-07-30: 2026-07-30 旧 USD/CNH 6.90 行权价失效后的人民币稳定性与 A 股宏观 beta"
+        },
+        {
+          "title": "证据纪律",
+          "text": "当前以 22 条支持、57 条风险和 0 条观察证据进行动态跟踪。"
+        }
+      ],
+      "checklist": [
+        {
+          "label": "支持证据",
+          "status": "22 条",
+          "detail": "继续观察是否出现跨来源、跨分析师的同向验证。",
+          "bull": "支持证据集中出现在最新日期且源报告可追溯",
+          "bear": "支持证据停留在旧报告或单一来源",
+          "active": "bear"
+        },
+        {
+          "label": "风险证据",
+          "status": "57 条",
+          "detail": "风险证据用于判断主线是否变成拥挤交易或证伪样本。",
+          "bull": "风险被新证据消化",
+          "bear": "风险事件数量超过支持事件",
+          "active": "bear"
+        },
+        {
+          "label": "监控词",
+          "status": "美元 / 人民币 / USD/CNH",
+          "detail": "美元 / 人民币 / USD/CNH / 日元 / USD/JPY / 久期 / A股 / 期权",
+          "bull": "监控词在新报告中被反复验证",
+          "bear": "监控词热度上升但价格或基本面未兑现",
+          "active": "bull"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2026-07-21",
+          "value": 36,
+          "label": "风险",
+          "title": "USD/CNY 6.88/6.90 触发验证与离岸 A 股授权的 CNH 对冲成本：工作日 2026-07-22",
+          "view": "USD/CNY 6.88/6.90 触发验证与离岸 A 股授权的 CNH 对冲成本：工作日 2026-07-22",
+          "check": "支持 0 / 风险 1 / 观察 0",
+          "href": "/investor/reports/archive-047cacbb5c89/"
+        },
+        {
+          "date": "2026-07-22",
+          "value": 37.4,
+          "label": "风险",
+          "title": "2026-07-22 策略卡：人民币计价账户中USD/CNH分层对冲与AI物理链美元资产风险",
+          "view": "2026-07-22 策略卡：人民币计价账户中USD/CNH分层对冲与AI物理链美元资产风险",
+          "check": "支持 0 / 风险 1 / 观察 0",
+          "href": "/investor/reports/archive-b0020bff171d/"
+        },
+        {
+          "date": "2026-07-23",
+          "value": 52.8,
+          "label": "支持",
+          "title": "研究记录06：美联储宽松推迟下，非美权益超配所需的USD/CNY/EUR/JPY汇率对冲设计",
+          "view": "研究记录06：美联储宽松推迟下，非美权益超配所需的USD/CNY/EUR/JPY汇率对冲设计",
+          "check": "支持 1 / 风险 0 / 观察 0",
+          "href": "/investor/reports/archive-6a7e782fbe74/"
+        },
+        {
+          "date": "2026-07-24",
+          "value": 42.2,
+          "label": "支持",
+          "title": "CNH对冲与USD/JPY凸性之后的最终组合再平衡 - 2026-07-24",
+          "view": "CNH对冲与USD/JPY凸性之后的最终组合再平衡 - 2026-07-24",
+          "check": "支持 1 / 风险 2 / 观察 0",
+          "href": "/investor/reports/archive-9ad8546d5b8e/"
+        },
+        {
+          "date": "2026-07-25",
+          "value": 51.6,
+          "label": "风险",
+          "title": "7月FOMC后USD/CNY汇率防御防线、离岸CNH流动性挤压与跨国 Carry Trade 平仓尾部风险传导",
+          "view": "7月FOMC后USD/CNY汇率防御防线、离岸CNH流动性挤压与跨国 Carry Trade 平仓尾部风险传导",
+          "check": "支持 2 / 风险 2 / 观察 0",
+          "href": "/investor/reports/archive-a34ed8062cef/"
+        },
+        {
+          "date": "2026-07-26",
+          "value": 57,
+          "label": "支持",
+          "title": "2026-07-26 全球宏观：美元通过USD/CNY、JPY与carry交易的传导",
+          "view": "2026-07-26 全球宏观：美元通过USD/CNY、JPY与carry交易的传导",
+          "check": "支持 4 / 风险 4 / 观察 0",
+          "href": "/investor/reports/archive-2b421104cff1/"
+        },
+        {
+          "date": "2026-07-27",
+          "value": 46.4,
+          "label": "风险",
+          "title": "最终组合合成 —— USD/JPY 凸性、USD/CNH 对冲阶梯、A 股高股息、黄金与 CGB 久期的统一 NAV 风险...",
+          "view": "最终组合合成 —— USD/JPY 凸性、USD/CNH 对冲阶梯、A 股高股息、黄金与 CGB 久期的统一 NAV 风险预算",
+          "check": "支持 1 / 风险 2 / 观察 0",
+          "href": "/investor/reports/archive-e7d3d1f79dac/"
+        },
+        {
+          "date": "2026-07-28",
+          "value": 33.8,
+          "label": "风险",
+          "title": "2026-07-29 压力测试：USD/JPY 这一美元对冲腿能否扛住日元 carry unwind？",
+          "view": "2026-07-29 压力测试：USD/JPY 这一美元对冲腿能否扛住日元 carry unwind？",
+          "check": "支持 0 / 风险 3 / 观察 0",
+          "href": "/investor/reports/archive-68004508ce6c/"
+        },
+        {
+          "date": "2026-07-29",
+          "value": 59.2,
+          "label": "支持",
+          "title": "前序研究 — 2026-07-29 — USD/CNH、CNH/JPY、A股高股息、EM科技、黄金与日元凸性的最终组合规则",
+          "view": "前序研究 — 2026-07-29 — USD/CNH、CNH/JPY、A股高股息、EM科技、黄金与日元凸性的最终组合规则",
+          "check": "支持 3 / 风险 3 / 观察 0",
+          "href": "/investor/reports/archive-f49a801354be/"
+        },
+        {
+          "date": "2026-07-30",
+          "value": 14.6,
+          "label": "风险",
+          "title": "2026-07-30 美元对冲压力测试：USD/CNH、USD/JPY 与广义美元拆分",
+          "view": "2026-07-30 美元对冲压力测试：USD/CNH、USD/JPY 与广义美元拆分",
+          "check": "支持 1 / 风险 8 / 观察 0",
+          "href": "/investor/reports/archive-6cc9508ab398/"
+        }
+      ],
+      "dimensions": [
+        {
+          "label": "维度一",
+          "title": "论点",
+          "front": "研究问题是否清晰？",
+          "back": "USD/JPY与USD/CNY不是直接拉爆A股硬件链融资盘的拉绳，而是通过SOX估值代理与人民币波动率→券商折算率传导的放大器，CNH/…"
+        },
+        {
+          "label": "维度二",
+          "title": "证据",
+          "front": "证据是否可追溯？",
+          "back": "覆盖 3 位分析师和 1 类公开来源。"
+        },
+        {
+          "label": "维度三",
+          "title": "证伪",
+          "front": "风险是否上升？",
+          "back": "风险事件 57 条，方向为 分歧。"
+        }
+      ],
+      "sources": [
+        {
+          "href": "/investor/theses/thesis-bb46b0c3de/",
+          "label": "主线详情页",
+          "tag": "Thesis"
+        },
+        {
+          "href": "/investor/research-network/#thesis-bb46b0c3de",
+          "label": "研究网络定位",
+          "tag": "网络"
+        },
+        {
+          "href": "/investor/reports/archive-6cc9508ab398/",
+          "label": "2026-07-30 美元对冲压力测试：USD/CNH、USD/JPY 与广义美元拆分",
           "tag": "研究记录"
         },
         {
@@ -3913,8 +3908,13 @@
           "tag": "研究记录"
         },
         {
-          "href": "/investor/reports/archive-3090c9344dd6/",
-          "label": "2026-07-29 FOMC后、BEA前的USD/JPY看跌价差执行方案",
+          "href": "/investor/reports/archive-d4e6de2cb71c/",
+          "label": "统一为一张组合级NAV风险矩阵：融合利率波动率账本、A股风格账本与USD/CNH期权叠加",
+          "tag": "研究记录"
+        },
+        {
+          "href": "/investor/reports/archive-33be5f7dfcba/",
+          "label": "CNY尾部对冲执行参数：USD/CNH期权期限、delta、行权价与成本控制",
           "tag": "研究记录"
         }
       ],

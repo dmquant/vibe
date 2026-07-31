@@ -478,40 +478,6 @@
       ]
     },
     {
-      "id": "thesis-89c14497ac",
-      "title": "期权伽马、ETF 与尾盘流动性正在放大主题交易的微观结构风险",
-      "titleEn": "Options gamma, ETFs, and closing liquidity are amplifying microstructure risk in theme trades",
-      "href": "/investor/theses/thesis-89c14497ac/",
-      "laneId": "lane_2ba2ee6db1ee",
-      "lane": "期权伽马/市场微观结构",
-      "laneHref": "/investor/lanes/options-gamma-and-market-microstructure/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 67,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "前序研究报告 — 2026-05-08 — Mag-7波动率、波控基金与CTA再平衡",
-          "summary": "前序研究报告 — 2026-05-08 — Mag-7波动率、波控基金与CTA再平衡",
-          "href": "/investor/reports/archive-f63b902777c7/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "CBOE",
-        "588000.SH",
-        "CME",
-        "HOOD",
-        "IBKR",
-        "VIRT",
-        "VIXY"
-      ]
-    },
-    {
       "id": "thesis-0346c87b0c",
       "title": "当前AI算力扩容的主瓶颈是电力和电网交付第一、芯片第二；没有已通电MW背书的纸面算力应被折价。",
       "titleEn": "Practical research topic: 当前AI算力扩容的主瓶颈是电力和电网交付第一、芯片第二；没有已通电MW背书的纸面算力应被折价。",
@@ -587,7 +553,7 @@
       "laneHref": "/investor/lanes/autonomous-driving-and-robotaxi-unit-economics/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 65,
+      "conviction": 64,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -608,6 +574,41 @@
         "1274.HK",
         "002594.SZ",
         "XPEV"
+      ]
+    },
+    {
+      "id": "thesis-89c14497ac",
+      "title": "期权伽马、ETF 与尾盘流动性正在放大主题交易的微观结构风险",
+      "titleEn": "Options gamma, ETFs, and closing liquidity are amplifying microstructure risk in theme trades",
+      "href": "/investor/theses/thesis-89c14497ac/",
+      "laneId": "lane_2ba2ee6db1ee",
+      "lane": "期权伽马/市场微观结构",
+      "laneHref": "/investor/lanes/options-gamma-and-market-microstructure/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 61,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "前序研究报告 — 2026-05-08 — Mag-7波动率、波控基金与CTA再平衡",
+          "summary": "前序研究报告 — 2026-05-08 — Mag-7波动率、波控基金与CTA再平衡",
+          "href": "/investor/reports/archive-f63b902777c7/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "CBOE",
+        "CME",
+        "588000.SH",
+        "NVDA",
+        "HOOD",
+        "IBKR",
+        "VIRT",
+        "VIXY"
       ]
     },
     {
@@ -669,24 +670,6 @@
       "avgConviction": 72
     },
     {
-      "id": "lane_2ba2ee6db1ee",
-      "title": "期权伽马/市场微观结构",
-      "href": "/investor/lanes/options-gamma-and-market-microstructure/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 67,
-      "stockTickers": [
-        "CBOE",
-        "588000.SH",
-        "CME",
-        "HOOD",
-        "IBKR",
-        "VIRT",
-        "VIXY"
-      ],
-      "avgConviction": 67
-    },
-    {
       "id": "lane_10d7884cbe65",
       "title": "AI 电力/电网设备",
       "href": "/investor/lanes/ai-power-and-grid-equipment/",
@@ -726,7 +709,7 @@
       "href": "/investor/lanes/autonomous-driving-and-robotaxi-unit-economics/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 65,
+      "convictionTotal": 64,
       "stockTickers": [
         "TSLA",
         "NVDA",
@@ -735,7 +718,26 @@
         "002594.SZ",
         "XPEV"
       ],
-      "avgConviction": 65
+      "avgConviction": 64
+    },
+    {
+      "id": "lane_2ba2ee6db1ee",
+      "title": "期权伽马/市场微观结构",
+      "href": "/investor/lanes/options-gamma-and-market-microstructure/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "convictionTotal": 61,
+      "stockTickers": [
+        "CBOE",
+        "CME",
+        "588000.SH",
+        "NVDA",
+        "HOOD",
+        "IBKR",
+        "VIRT",
+        "VIXY"
+      ],
+      "avgConviction": 61
     },
     {
       "id": "lane_6e2dcaab093e",
@@ -764,12 +766,13 @@
       "name": "NVIDIA",
       "market": "US",
       "href": "/investor/stocks/NVDA/",
-      "thesisCount": 3,
-      "eventCount": 4,
+      "thesisCount": 4,
+      "eventCount": 5,
       "lanes": [
         "低价模型/AI 软件利润池",
         "AI 算力半导体",
-        "自动驾驶/Robotaxi 单位经济"
+        "自动驾驶/Robotaxi 单位经济",
+        "期权伽马/市场微观结构"
       ]
     },
     {
@@ -858,83 +861,6 @@
       "eventCount": 2,
       "lanes": [
         "低价模型/AI 软件利润池"
-      ]
-    },
-    {
-      "ticker": "CBOE",
-      "name": "Cboe Global Markets",
-      "market": "US",
-      "href": "/investor/stocks/CBOE/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "期权伽马/市场微观结构"
-      ]
-    },
-    {
-      "ticker": "588000.SH",
-      "name": "科创50 ETF",
-      "market": "A-share ETF",
-      "href": "/investor/stocks/588000.SH/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "期权伽马/市场微观结构"
-      ]
-    },
-    {
-      "ticker": "CME",
-      "name": "CME Group",
-      "market": "US",
-      "href": "/investor/stocks/CME/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "期权伽马/市场微观结构"
-      ]
-    },
-    {
-      "ticker": "HOOD",
-      "name": "Robinhood",
-      "market": "US",
-      "href": "/investor/stocks/HOOD/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "期权伽马/市场微观结构"
-      ]
-    },
-    {
-      "ticker": "IBKR",
-      "name": "Interactive Brokers",
-      "market": "US",
-      "href": "/investor/stocks/IBKR/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "期权伽马/市场微观结构"
-      ]
-    },
-    {
-      "ticker": "VIRT",
-      "name": "Virtu Financial",
-      "market": "US",
-      "href": "/investor/stocks/VIRT/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "期权伽马/市场微观结构"
-      ]
-    },
-    {
-      "ticker": "VIXY",
-      "name": "ProShares VIX Short-Term Futures ETF",
-      "market": "US ETF",
-      "href": "/investor/stocks/VIXY/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "期权伽马/市场微观结构"
       ]
     },
     {
@@ -1111,6 +1037,83 @@
       "eventCount": 1,
       "lanes": [
         "自动驾驶/Robotaxi 单位经济"
+      ]
+    },
+    {
+      "ticker": "CBOE",
+      "name": "Cboe Global Markets",
+      "market": "US",
+      "href": "/investor/stocks/CBOE/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "期权伽马/市场微观结构"
+      ]
+    },
+    {
+      "ticker": "CME",
+      "name": "CME Group",
+      "market": "US",
+      "href": "/investor/stocks/CME/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "期权伽马/市场微观结构"
+      ]
+    },
+    {
+      "ticker": "588000.SH",
+      "name": "科创50 ETF",
+      "market": "A-share ETF",
+      "href": "/investor/stocks/588000.SH/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "期权伽马/市场微观结构"
+      ]
+    },
+    {
+      "ticker": "HOOD",
+      "name": "Robinhood",
+      "market": "US",
+      "href": "/investor/stocks/HOOD/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "期权伽马/市场微观结构"
+      ]
+    },
+    {
+      "ticker": "IBKR",
+      "name": "Interactive Brokers",
+      "market": "US",
+      "href": "/investor/stocks/IBKR/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "期权伽马/市场微观结构"
+      ]
+    },
+    {
+      "ticker": "VIRT",
+      "name": "Virtu Financial",
+      "market": "US",
+      "href": "/investor/stocks/VIRT/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "期权伽马/市场微观结构"
+      ]
+    },
+    {
+      "ticker": "VIXY",
+      "name": "ProShares VIX Short-Term Futures ETF",
+      "market": "US ETF",
+      "href": "/investor/stocks/VIXY/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "期权伽马/市场微观结构"
       ]
     },
     {
