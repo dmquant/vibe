@@ -957,8 +957,8 @@
         "META",
         "NVDA",
         "BX",
-        "ARES",
         "KKR",
+        "ARES",
         "APO"
       ]
     },
@@ -996,11 +996,11 @@
       "stockTickers": [
         "BABA",
         "BIDU",
-        "CRM",
-        "MSFT",
         "9988.HK",
-        "NOW",
+        "MSFT",
+        "CRM",
         "0700.HK",
+        "NOW",
         "NVDA",
         "9888.HK"
       ]
@@ -1039,11 +1039,11 @@
       "stockTickers": [
         "688256.SH",
         "688041.SH",
-        "601138.SH",
         "300308.SZ",
+        "601138.SH",
         "688981.SH",
-        "000977.SZ",
         "0981.HK",
+        "000977.SZ",
         "NVDA",
         "9988.HK",
         "0700.HK"
@@ -1082,15 +1082,15 @@
       ],
       "stockTickers": [
         "MSFT",
-        "NVDA",
         "META",
+        "NVDA",
         "AAPL",
-        "ARM",
         "AMZN",
-        "AMD",
+        "ARM",
         "QCOM",
+        "AMD",
         "GOOGL",
-        "AVGO"
+        "002475.SZ"
       ]
     },
     {
@@ -1251,8 +1251,8 @@
       "laneId": "lane_f21fc181388a",
       "lane": "Mag7 AI 平台再分层",
       "laneHref": "/investor/lanes/mag7-ai-platform-re-layering/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
+      "direction": "stable",
+      "directionLabel": "稳定",
       "conviction": 67,
       "supports": 0,
       "risks": 1,
@@ -1271,8 +1271,8 @@
         "META",
         "MSFT",
         "AMZN",
-        "NVDA",
         "GOOGL",
+        "NVDA",
         "TSM",
         "AAPL",
         "TSLA"
@@ -1288,7 +1288,7 @@
       "laneHref": "/investor/lanes/credit-refinancing-and-private-debt/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 66,
+      "conviction": 64,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -1375,10 +1375,10 @@
         "300750.SZ",
         "600900.SH",
         "MSFT",
-        "300274.SZ",
         "CEG",
-        "VST",
-        "META"
+        "300274.SZ",
+        "META",
+        "VST"
       ]
     }
   ],
@@ -1389,7 +1389,7 @@
       "href": "/investor/lanes/credit-refinancing-and-private-debt/",
       "thesisCount": 2,
       "eventCount": 5,
-      "convictionTotal": 118,
+      "convictionTotal": 116,
       "stockTickers": [
         "KRE",
         "JPM",
@@ -1400,7 +1400,7 @@
         "ARES",
         "APO"
       ],
-      "avgConviction": 59
+      "avgConviction": 58
     },
     {
       "id": "lane_c40c2ce413ec",
@@ -1426,11 +1426,11 @@
       "stockTickers": [
         "BABA",
         "BIDU",
-        "CRM",
-        "MSFT",
         "9988.HK",
-        "NOW",
+        "MSFT",
+        "CRM",
         "0700.HK",
+        "NOW",
         "NVDA",
         "9888.HK"
       ],
@@ -1446,11 +1446,11 @@
       "stockTickers": [
         "688256.SH",
         "688041.SH",
-        "601138.SH",
         "300308.SZ",
+        "601138.SH",
         "688981.SH",
-        "000977.SZ",
         "0981.HK",
+        "000977.SZ",
         "NVDA",
         "9988.HK",
         "0700.HK"
@@ -1466,15 +1466,15 @@
       "convictionTotal": 62,
       "stockTickers": [
         "MSFT",
-        "NVDA",
         "META",
+        "NVDA",
         "AAPL",
-        "ARM",
         "AMZN",
-        "AMD",
+        "ARM",
         "QCOM",
+        "AMD",
         "GOOGL",
-        "AVGO"
+        "002475.SZ"
       ],
       "avgConviction": 62
     },
@@ -1503,8 +1503,8 @@
         "META",
         "MSFT",
         "AMZN",
-        "NVDA",
         "GOOGL",
+        "NVDA",
         "TSM",
         "AAPL",
         "TSLA"
@@ -1545,10 +1545,10 @@
         "300750.SZ",
         "600900.SH",
         "MSFT",
-        "300274.SZ",
         "CEG",
-        "VST",
-        "META"
+        "300274.SZ",
+        "META",
+        "VST"
       ],
       "avgConviction": 42
     }
@@ -1758,6 +1758,18 @@
       ]
     },
     {
+      "ticker": "002475.SZ",
+      "name": "立讯精密",
+      "market": "A-share",
+      "href": "/investor/stocks/002475.SZ/",
+      "thesisCount": 2,
+      "eventCount": 3,
+      "lanes": [
+        "端侧 AI/Agent 桌面",
+        "中国出口制造/利润率"
+      ]
+    },
+    {
       "ticker": "TSM",
       "name": "TSMC",
       "market": "US ADR",
@@ -1871,10 +1883,10 @@
       ]
     },
     {
-      "ticker": "601138.SH",
-      "name": "工业富联",
+      "ticker": "300308.SZ",
+      "name": "中际旭创",
       "market": "A-share",
-      "href": "/investor/stocks/601138.SH/",
+      "href": "/investor/stocks/300308.SZ/",
       "thesisCount": 1,
       "eventCount": 2,
       "lanes": [
@@ -1882,10 +1894,10 @@
       ]
     },
     {
-      "ticker": "300308.SZ",
-      "name": "中际旭创",
+      "ticker": "601138.SH",
+      "name": "工业富联",
       "market": "A-share",
-      "href": "/investor/stocks/300308.SZ/",
+      "href": "/investor/stocks/601138.SH/",
       "thesisCount": 1,
       "eventCount": 2,
       "lanes": [
@@ -1904,10 +1916,10 @@
       ]
     },
     {
-      "ticker": "000977.SZ",
-      "name": "浪潮信息",
-      "market": "A-share",
-      "href": "/investor/stocks/000977.SZ/",
+      "ticker": "0981.HK",
+      "name": "中芯国际",
+      "market": "HK",
+      "href": "/investor/stocks/0981.HK/",
       "thesisCount": 1,
       "eventCount": 2,
       "lanes": [
@@ -1915,10 +1927,10 @@
       ]
     },
     {
-      "ticker": "0981.HK",
-      "name": "中芯国际",
-      "market": "HK",
-      "href": "/investor/stocks/0981.HK/",
+      "ticker": "000977.SZ",
+      "name": "浪潮信息",
+      "market": "A-share",
+      "href": "/investor/stocks/000977.SZ/",
       "thesisCount": 1,
       "eventCount": 2,
       "lanes": [
@@ -1937,17 +1949,6 @@
       ]
     },
     {
-      "ticker": "AMD",
-      "name": "AMD",
-      "market": "US",
-      "href": "/investor/stocks/AMD/",
-      "thesisCount": 1,
-      "eventCount": 2,
-      "lanes": [
-        "端侧 AI/Agent 桌面"
-      ]
-    },
-    {
       "ticker": "QCOM",
       "name": "Qualcomm",
       "market": "US",
@@ -1959,10 +1960,10 @@
       ]
     },
     {
-      "ticker": "AVGO",
-      "name": "Broadcom",
+      "ticker": "AMD",
+      "name": "AMD",
       "market": "US",
-      "href": "/investor/stocks/AVGO/",
+      "href": "/investor/stocks/AMD/",
       "thesisCount": 1,
       "eventCount": 2,
       "lanes": [

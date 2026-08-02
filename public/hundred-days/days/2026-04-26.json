@@ -532,8 +532,8 @@
       "stockTickers": [
         "NVDA",
         "TSM",
-        "AMD",
         "META",
+        "AMD",
         "AVGO",
         "MU",
         "MSFT",
@@ -569,10 +569,10 @@
       "stockTickers": [
         "META",
         "NVDA",
-        "AMD",
         "TSM",
-        "AVGO",
+        "AMD",
         "MU",
+        "AVGO",
         "000660.KS"
       ]
     },
@@ -603,11 +603,11 @@
       "stockTickers": [
         "NVDA",
         "MU",
-        "TSM",
-        "000660.KS",
         "META",
-        "AVGO",
-        "AMD"
+        "000660.KS",
+        "TSM",
+        "AMD",
+        "AVGO"
       ]
     },
     {
@@ -675,8 +675,7 @@
         "NVDA",
         "TSM",
         "MU",
-        "000660.KS",
-        "ASML"
+        "000660.KS"
       ]
     },
     {
@@ -739,15 +738,15 @@
       ],
       "stockTickers": [
         "MSFT",
-        "NVDA",
         "META",
+        "NVDA",
         "AAPL",
-        "ARM",
         "AMZN",
-        "AMD",
+        "ARM",
         "QCOM",
+        "AMD",
         "GOOGL",
-        "AVGO"
+        "002475.SZ"
       ]
     },
     {
@@ -760,7 +759,7 @@
       "laneHref": "/investor/lanes/cpo-optical-modules-and-high-speed-interconnect/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 61,
+      "conviction": 59,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -779,11 +778,11 @@
         "NVDA",
         "AVGO",
         "META",
-        "COHR",
         "300394.SZ",
+        "COHR",
         "MRVL",
-        "TSM",
         "LITE",
+        "TSM",
         "MSFT"
       ]
     }
@@ -799,10 +798,10 @@
       "stockTickers": [
         "META",
         "NVDA",
-        "AMD",
         "TSM",
-        "AVGO",
+        "AMD",
         "MU",
+        "AVGO",
         "000660.KS",
         "MSFT",
         "AMZN",
@@ -842,15 +841,15 @@
       "convictionTotal": 62,
       "stockTickers": [
         "MSFT",
-        "NVDA",
         "META",
+        "NVDA",
         "AAPL",
-        "ARM",
         "AMZN",
-        "AMD",
+        "ARM",
         "QCOM",
+        "AMD",
         "GOOGL",
-        "AVGO"
+        "002475.SZ"
       ],
       "avgConviction": 62
     },
@@ -860,20 +859,20 @@
       "href": "/investor/lanes/cpo-optical-modules-and-high-speed-interconnect/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 61,
+      "convictionTotal": 59,
       "stockTickers": [
         "300308.SZ",
         "NVDA",
         "AVGO",
         "META",
-        "COHR",
         "300394.SZ",
+        "COHR",
         "MRVL",
-        "TSM",
         "LITE",
+        "TSM",
         "MSFT"
       ],
-      "avgConviction": 61
+      "avgConviction": 59
     }
   ],
   "stocks": [
@@ -960,24 +959,12 @@
       "name": "Broadcom",
       "market": "US",
       "href": "/investor/stocks/AVGO/",
-      "thesisCount": 6,
-      "eventCount": 7,
+      "thesisCount": 5,
+      "eventCount": 6,
       "lanes": [
         "AI 算力半导体",
         "先进封装/HBM4 闸门",
-        "端侧 AI/Agent 桌面",
         "CPO/光模块/高速互联"
-      ]
-    },
-    {
-      "ticker": "ASML",
-      "name": "ASML",
-      "market": "US ADR",
-      "href": "/investor/stocks/ASML/",
-      "thesisCount": 4,
-      "eventCount": 5,
-      "lanes": [
-        "先进封装/HBM4 闸门"
       ]
     },
     {
@@ -992,6 +979,17 @@
         "AI 算力半导体",
         "端侧 AI/Agent 桌面",
         "CPO/光模块/高速互联"
+      ]
+    },
+    {
+      "ticker": "ASML",
+      "name": "ASML",
+      "market": "US ADR",
+      "href": "/investor/stocks/ASML/",
+      "thesisCount": 3,
+      "eventCount": 4,
+      "lanes": [
+        "先进封装/HBM4 闸门"
       ]
     },
     {
@@ -1075,6 +1073,17 @@
       ]
     },
     {
+      "ticker": "002475.SZ",
+      "name": "立讯精密",
+      "market": "A-share",
+      "href": "/investor/stocks/002475.SZ/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "端侧 AI/Agent 桌面"
+      ]
+    },
+    {
       "ticker": "300308.SZ",
       "name": "中际旭创",
       "market": "A-share",
@@ -1086,10 +1095,10 @@
       ]
     },
     {
-      "ticker": "COHR",
-      "name": "Coherent",
-      "market": "US",
-      "href": "/investor/stocks/COHR/",
+      "ticker": "300394.SZ",
+      "name": "天孚通信",
+      "market": "A-share",
+      "href": "/investor/stocks/300394.SZ/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
@@ -1097,10 +1106,10 @@
       ]
     },
     {
-      "ticker": "300394.SZ",
-      "name": "天孚通信",
-      "market": "A-share",
-      "href": "/investor/stocks/300394.SZ/",
+      "ticker": "COHR",
+      "name": "Coherent",
+      "market": "US",
+      "href": "/investor/stocks/COHR/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [

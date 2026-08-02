@@ -4,7 +4,7 @@
   "dayNumber": 16,
   "status": "recorded",
   "headline": "食品加工降至2%-3%后的A股再配置 — 2026-07-23 [D1][I1]",
-  "summary": "当日归档 28 份公开研究，6 条研究讨论和 15 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
+  "summary": "当日归档 28 份公开研究，6 条研究讨论和 14 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
   "dominantTopic": {
     "id": "macro-rates",
     "labelZh": "宏观、通胀与利率",
@@ -29,8 +29,8 @@
     "reports": 28,
     "researchThreads": 6,
     "researchNotes": 48,
-    "thesisEvents": 15,
-    "personaEvents": 14,
+    "thesisEvents": 14,
+    "personaEvents": 13,
     "readerMemos": 0,
     "recaps": 0,
     "deepResearch": 0
@@ -581,47 +581,6 @@
   ],
   "thesisEvents": [
     {
-      "id": "thesis-58200390b4",
-      "title": "加密资产仍是全球流动性和散户风险偏好的高频回声",
-      "titleEn": "Crypto remains a high-frequency echo of global liquidity and retail risk appetite",
-      "href": "/investor/theses/thesis-58200390b4/",
-      "laneId": "lane_73a269a07a15",
-      "lane": "加密/高波动风险偏好",
-      "laneHref": "/investor/lanes/crypto-and-high-beta-risk-appetite/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 64,
-      "supports": 0,
-      "risks": 2,
-      "neutral": 0,
-      "eventCount": 2,
-      "events": [
-        {
-          "title": "美国宏观经济数据日报 (2026年5月7日)",
-          "summary": "发布日期: 2026-05-07 分析师: Global Macro Analyst 核心观点: 劳动力市场在工资压力放缓的同时保持韧性，美伊停火协议后的能源价格下行为通胀预期提供缓冲。",
-          "href": "/investor/reports/archive-93d3a2e0fe84/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        },
-        {
-          "title": "隔夜市场情绪与资金流向扫描 (2026-05-07)",
-          "summary": "核心结论 (Summary) 隔夜市场正式确认进入 全面“风险偏好” (Risk-On) 模式。双重催化剂——AI硬件超级周期的财报爆发（三星市值突破1万亿美元，AMD大涨）以及中东地缘政治局势的实质性缓和（...",
-          "href": "/investor/reports/archive-bbab8784c767/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "MSTR",
-        "COIN",
-        "IBIT",
-        "HOOD",
-        "LOW",
-        "MARA",
-        "RIOT"
-      ]
-    },
-    {
       "id": "thesis-d6b2c23ed6",
       "title": "航运与物流成本是油价、关税和供应链再通胀的二阶传导器",
       "titleEn": "Shipping and logistics costs are a second-order transmission channel for oil, tariffs, and supply-chain reflation",
@@ -688,8 +647,9 @@
       ],
       "stockTickers": [
         "0883.HK",
-        "0857.HK",
-        "SLB"
+        "CVX",
+        "XOM",
+        "0857.HK"
       ]
     },
     {
@@ -702,7 +662,7 @@
       "laneHref": "/investor/lanes/oil-gas-and-geopolitical-inflation/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 82,
+      "conviction": 81,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -749,11 +709,11 @@
       "stockTickers": [
         "BABA",
         "BIDU",
-        "CRM",
-        "MSFT",
         "9988.HK",
-        "NOW",
+        "MSFT",
+        "CRM",
         "0700.HK",
+        "NOW",
         "NVDA",
         "9888.HK"
       ]
@@ -820,6 +780,40 @@
       ]
     },
     {
+      "id": "thesis-58200390b4",
+      "title": "加密资产仍是全球流动性和散户风险偏好的高频回声",
+      "titleEn": "Crypto remains a high-frequency echo of global liquidity and retail risk appetite",
+      "href": "/investor/theses/thesis-58200390b4/",
+      "laneId": "lane_73a269a07a15",
+      "lane": "加密/高波动风险偏好",
+      "laneHref": "/investor/lanes/crypto-and-high-beta-risk-appetite/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 65,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "美国宏观经济数据日报 (2026年5月7日)",
+          "summary": "发布日期: 2026-05-07 分析师: Global Macro Analyst 核心观点: 劳动力市场在工资压力放缓的同时保持韧性，美伊停火协议后的能源价格下行为通胀预期提供缓冲。",
+          "href": "/investor/reports/archive-93d3a2e0fe84/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "MSTR",
+        "COIN",
+        "IBIT",
+        "HOOD",
+        "LOW",
+        "MARA",
+        "RIOT"
+      ]
+    },
+    {
       "id": "thesis-ffa474a3f2",
       "title": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
       "titleEn": "Edge AI and agent desktops are extending compute competition from cloud to chips, OS, and consumer-electronics supply...",
@@ -845,15 +839,15 @@
       ],
       "stockTickers": [
         "MSFT",
-        "NVDA",
         "META",
+        "NVDA",
         "AAPL",
-        "ARM",
         "AMZN",
-        "AMD",
+        "ARM",
         "QCOM",
+        "AMD",
         "GOOGL",
-        "AVGO"
+        "002475.SZ"
       ]
     },
     {
@@ -891,39 +885,39 @@
       ]
     },
     {
-      "id": "thesis-7f0a75c5f6",
-      "title": "数据中心地产、液冷与水资源正在决定 AI 容量的区域迁移",
-      "titleEn": "Data-center real estate, liquid cooling, and water resources are deciding regional migration of AI capacity",
-      "href": "/investor/theses/thesis-7f0a75c5f6/",
-      "laneId": "lane_0679894fe06b",
-      "lane": "数据中心地产/液冷",
-      "laneHref": "/investor/lanes/data-center-real-estate-and-cooling/",
+      "id": "thesis-21dd72c1b1",
+      "title": "航空航天与国防供应链错配正在形成政策驱动的制造业弹性",
+      "titleEn": "Aerospace and defense supply-chain mismatch is creating policy-driven manufacturing beta",
+      "href": "/investor/theses/thesis-21dd72c1b1/",
+      "laneId": "lane_1514a60f727a",
+      "lane": "国防航空航天供应链",
+      "laneHref": "/investor/lanes/defense-and-aerospace-supply-chain/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 56,
+      "conviction": 55,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
       "eventCount": 1,
       "events": [
         {
-          "title": "AMD 与 NVIDIA 数据中心竞争及 SMCI 毛利率可持续性分析报告",
-          "summary": "AMD 与 NVIDIA 数据中心竞争及 SMCI 毛利率可持续性分析报告",
-          "href": "/investor/reports/archive-d8d666292491/",
+          "title": "晨间头条扫描：研究院\"已说\"与\"未说\"的跨域议题",
+          "summary": "title: 日报总编晨间头条扫描 — 跨分析师视角 date: 2026-05-07 analyst: daily-report-editor task: morning headline-check (cross-analyst lens)",
+          "href": "/investor/reports/archive-d86b522f1fa2/",
           "stance": "risk",
           "stanceLabel": "风险"
         }
       ],
       "stockTickers": [
-        "VRT",
-        "NVDA",
-        "ETN",
-        "META",
-        "GEV",
-        "MSFT",
-        "DLR",
-        "EQIX",
-        "AMZN"
+        "LMT",
+        "RTX",
+        "NOC",
+        "RKLB",
+        "BA",
+        "IRDM",
+        "ASTS",
+        "HWM",
+        "GD"
       ]
     },
     {
@@ -964,39 +958,39 @@
       ]
     },
     {
-      "id": "thesis-21dd72c1b1",
-      "title": "航空航天与国防供应链错配正在形成政策驱动的制造业弹性",
-      "titleEn": "Aerospace and defense supply-chain mismatch is creating policy-driven manufacturing beta",
-      "href": "/investor/theses/thesis-21dd72c1b1/",
-      "laneId": "lane_1514a60f727a",
-      "lane": "国防航空航天供应链",
-      "laneHref": "/investor/lanes/defense-and-aerospace-supply-chain/",
+      "id": "thesis-7f0a75c5f6",
+      "title": "数据中心地产、液冷与水资源正在决定 AI 容量的区域迁移",
+      "titleEn": "Data-center real estate, liquid cooling, and water resources are deciding regional migration of AI capacity",
+      "href": "/investor/theses/thesis-7f0a75c5f6/",
+      "laneId": "lane_0679894fe06b",
+      "lane": "数据中心地产/液冷",
+      "laneHref": "/investor/lanes/data-center-real-estate-and-cooling/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 54,
+      "conviction": 53,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
       "eventCount": 1,
       "events": [
         {
-          "title": "晨间头条扫描：研究院\"已说\"与\"未说\"的跨域议题",
-          "summary": "title: 日报总编晨间头条扫描 — 跨分析师视角 date: 2026-05-07 analyst: daily-report-editor task: morning headline-check (cross-analyst lens)",
-          "href": "/investor/reports/archive-d86b522f1fa2/",
+          "title": "AMD 与 NVIDIA 数据中心竞争及 SMCI 毛利率可持续性分析报告",
+          "summary": "AMD 与 NVIDIA 数据中心竞争及 SMCI 毛利率可持续性分析报告",
+          "href": "/investor/reports/archive-d8d666292491/",
           "stance": "risk",
           "stanceLabel": "风险"
         }
       ],
       "stockTickers": [
-        "LMT",
-        "RTX",
-        "NOC",
-        "RKLB",
-        "BA",
-        "IRDM",
-        "ASTS",
-        "HWM",
-        "GD"
+        "VRT",
+        "NVDA",
+        "ETN",
+        "META",
+        "GEV",
+        "MSFT",
+        "DLR",
+        "EQIX",
+        "AMZN"
       ]
     },
     {
@@ -1039,32 +1033,16 @@
       "href": "/investor/lanes/oil-gas-and-geopolitical-inflation/",
       "thesisCount": 3,
       "eventCount": 3,
-      "convictionTotal": 231,
+      "convictionTotal": 230,
       "stockTickers": [
         "0883.HK",
+        "CVX",
+        "XOM",
         "0857.HK",
         "SLB",
         "OXY"
       ],
       "avgConviction": 77
-    },
-    {
-      "id": "lane_73a269a07a15",
-      "title": "加密/高波动风险偏好",
-      "href": "/investor/lanes/crypto-and-high-beta-risk-appetite/",
-      "thesisCount": 1,
-      "eventCount": 2,
-      "convictionTotal": 64,
-      "stockTickers": [
-        "MSTR",
-        "COIN",
-        "IBIT",
-        "HOOD",
-        "LOW",
-        "MARA",
-        "RIOT"
-      ],
-      "avgConviction": 64
     },
     {
       "id": "lane_f1a271385aff",
@@ -1112,15 +1090,33 @@
       "stockTickers": [
         "BABA",
         "BIDU",
-        "CRM",
-        "MSFT",
         "9988.HK",
-        "NOW",
+        "MSFT",
+        "CRM",
         "0700.HK",
+        "NOW",
         "NVDA",
         "9888.HK"
       ],
       "avgConviction": 72
+    },
+    {
+      "id": "lane_73a269a07a15",
+      "title": "加密/高波动风险偏好",
+      "href": "/investor/lanes/crypto-and-high-beta-risk-appetite/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "convictionTotal": 65,
+      "stockTickers": [
+        "MSTR",
+        "COIN",
+        "IBIT",
+        "HOOD",
+        "LOW",
+        "MARA",
+        "RIOT"
+      ],
+      "avgConviction": 65
     },
     {
       "id": "lane_74d352e86208",
@@ -1131,37 +1127,37 @@
       "convictionTotal": 62,
       "stockTickers": [
         "MSFT",
-        "NVDA",
         "META",
+        "NVDA",
         "AAPL",
-        "ARM",
         "AMZN",
-        "AMD",
+        "ARM",
         "QCOM",
+        "AMD",
         "GOOGL",
-        "AVGO"
+        "002475.SZ"
       ],
       "avgConviction": 62
     },
     {
-      "id": "lane_0679894fe06b",
-      "title": "数据中心地产/液冷",
-      "href": "/investor/lanes/data-center-real-estate-and-cooling/",
+      "id": "lane_1514a60f727a",
+      "title": "国防航空航天供应链",
+      "href": "/investor/lanes/defense-and-aerospace-supply-chain/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 56,
+      "convictionTotal": 55,
       "stockTickers": [
-        "VRT",
-        "NVDA",
-        "ETN",
-        "META",
-        "GEV",
-        "MSFT",
-        "DLR",
-        "EQIX",
-        "AMZN"
+        "LMT",
+        "RTX",
+        "NOC",
+        "RKLB",
+        "BA",
+        "IRDM",
+        "ASTS",
+        "HWM",
+        "GD"
       ],
-      "avgConviction": 56
+      "avgConviction": 55
     },
     {
       "id": "lane_2d0dcf520f87",
@@ -1185,24 +1181,24 @@
       "avgConviction": 54
     },
     {
-      "id": "lane_1514a60f727a",
-      "title": "国防航空航天供应链",
-      "href": "/investor/lanes/defense-and-aerospace-supply-chain/",
+      "id": "lane_0679894fe06b",
+      "title": "数据中心地产/液冷",
+      "href": "/investor/lanes/data-center-real-estate-and-cooling/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 54,
+      "convictionTotal": 53,
       "stockTickers": [
-        "LMT",
-        "RTX",
-        "NOC",
-        "RKLB",
-        "BA",
-        "IRDM",
-        "ASTS",
-        "HWM",
-        "GD"
+        "VRT",
+        "NVDA",
+        "ETN",
+        "META",
+        "GEV",
+        "MSFT",
+        "DLR",
+        "EQIX",
+        "AMZN"
       ],
-      "avgConviction": 54
+      "avgConviction": 53
     },
     {
       "id": "lane_ccbe817778d1",
@@ -1233,8 +1229,8 @@
         "低价模型/AI 软件利润池",
         "先进封装/HBM4 闸门",
         "端侧 AI/Agent 桌面",
-        "数据中心地产/液冷",
-        "AI 基建 TCO/能效筛选"
+        "AI 基建 TCO/能效筛选",
+        "数据中心地产/液冷"
       ]
     },
     {
@@ -1247,8 +1243,8 @@
       "lanes": [
         "低价模型/AI 软件利润池",
         "端侧 AI/Agent 桌面",
-        "数据中心地产/液冷",
-        "AI 基建 TCO/能效筛选"
+        "AI 基建 TCO/能效筛选",
+        "数据中心地产/液冷"
       ]
     },
     {
@@ -1256,17 +1252,6 @@
       "name": "中国海洋石油",
       "market": "HK",
       "href": "/investor/stocks/0883.HK/",
-      "thesisCount": 3,
-      "eventCount": 3,
-      "lanes": [
-        "油气/地缘通胀"
-      ]
-    },
-    {
-      "ticker": "SLB",
-      "name": "SLB",
-      "market": "US",
-      "href": "/investor/stocks/SLB/",
       "thesisCount": 3,
       "eventCount": 3,
       "lanes": [
@@ -1318,8 +1303,19 @@
       "eventCount": 3,
       "lanes": [
         "端侧 AI/Agent 桌面",
-        "数据中心地产/液冷",
-        "AI 基建 TCO/能效筛选"
+        "AI 基建 TCO/能效筛选",
+        "数据中心地产/液冷"
+      ]
+    },
+    {
+      "ticker": "SLB",
+      "name": "SLB",
+      "market": "US",
+      "href": "/investor/stocks/SLB/",
+      "thesisCount": 2,
+      "eventCount": 2,
+      "lanes": [
+        "油气/地缘通胀"
       ]
     },
     {
@@ -1358,18 +1354,6 @@
       ]
     },
     {
-      "ticker": "AVGO",
-      "name": "Broadcom",
-      "market": "US",
-      "href": "/investor/stocks/AVGO/",
-      "thesisCount": 2,
-      "eventCount": 2,
-      "lanes": [
-        "端侧 AI/Agent 桌面",
-        "AI 基建 TCO/能效筛选"
-      ]
-    },
-    {
       "ticker": "VRT",
       "name": "Vertiv",
       "market": "US",
@@ -1377,85 +1361,8 @@
       "thesisCount": 2,
       "eventCount": 2,
       "lanes": [
-        "数据中心地产/液冷",
-        "AI 基建 TCO/能效筛选"
-      ]
-    },
-    {
-      "ticker": "MSTR",
-      "name": "MicroStrategy",
-      "market": "US",
-      "href": "/investor/stocks/MSTR/",
-      "thesisCount": 1,
-      "eventCount": 2,
-      "lanes": [
-        "加密/高波动风险偏好"
-      ]
-    },
-    {
-      "ticker": "COIN",
-      "name": "Coinbase",
-      "market": "US",
-      "href": "/investor/stocks/COIN/",
-      "thesisCount": 1,
-      "eventCount": 2,
-      "lanes": [
-        "加密/高波动风险偏好"
-      ]
-    },
-    {
-      "ticker": "IBIT",
-      "name": "iShares Bitcoin Trust",
-      "market": "US ETF",
-      "href": "/investor/stocks/IBIT/",
-      "thesisCount": 1,
-      "eventCount": 2,
-      "lanes": [
-        "加密/高波动风险偏好"
-      ]
-    },
-    {
-      "ticker": "HOOD",
-      "name": "Robinhood",
-      "market": "US",
-      "href": "/investor/stocks/HOOD/",
-      "thesisCount": 1,
-      "eventCount": 2,
-      "lanes": [
-        "加密/高波动风险偏好"
-      ]
-    },
-    {
-      "ticker": "LOW",
-      "name": "Lowe's",
-      "market": "US",
-      "href": "/investor/stocks/LOW/",
-      "thesisCount": 1,
-      "eventCount": 2,
-      "lanes": [
-        "加密/高波动风险偏好"
-      ]
-    },
-    {
-      "ticker": "MARA",
-      "name": "MARA Holdings",
-      "market": "US",
-      "href": "/investor/stocks/MARA/",
-      "thesisCount": 1,
-      "eventCount": 2,
-      "lanes": [
-        "加密/高波动风险偏好"
-      ]
-    },
-    {
-      "ticker": "RIOT",
-      "name": "Riot Platforms",
-      "market": "US",
-      "href": "/investor/stocks/RIOT/",
-      "thesisCount": 1,
-      "eventCount": 2,
-      "lanes": [
-        "加密/高波动风险偏好"
+        "AI 基建 TCO/能效筛选",
+        "数据中心地产/液冷"
       ]
     },
     {
@@ -1536,6 +1443,28 @@
       ]
     },
     {
+      "ticker": "CVX",
+      "name": "Chevron",
+      "market": "US",
+      "href": "/investor/stocks/CVX/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "油气/地缘通胀"
+      ]
+    },
+    {
+      "ticker": "XOM",
+      "name": "Exxon Mobil",
+      "market": "US",
+      "href": "/investor/stocks/XOM/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "油气/地缘通胀"
+      ]
+    },
+    {
       "ticker": "0857.HK",
       "name": "中国石油股份",
       "market": "HK",
@@ -1569,17 +1498,6 @@
       ]
     },
     {
-      "ticker": "CRM",
-      "name": "Salesforce",
-      "market": "US",
-      "href": "/investor/stocks/CRM/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "低价模型/AI 软件利润池"
-      ]
-    },
-    {
       "ticker": "9988.HK",
       "name": "阿里巴巴",
       "market": "HK",
@@ -1591,10 +1509,10 @@
       ]
     },
     {
-      "ticker": "NOW",
-      "name": "ServiceNow",
+      "ticker": "CRM",
+      "name": "Salesforce",
       "market": "US",
-      "href": "/investor/stocks/NOW/",
+      "href": "/investor/stocks/CRM/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
@@ -1613,6 +1531,17 @@
       ]
     },
     {
+      "ticker": "NOW",
+      "name": "ServiceNow",
+      "market": "US",
+      "href": "/investor/stocks/NOW/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "低价模型/AI 软件利润池"
+      ]
+    },
+    {
       "ticker": "9888.HK",
       "name": "百度集团",
       "market": "HK",
@@ -1621,6 +1550,83 @@
       "eventCount": 1,
       "lanes": [
         "低价模型/AI 软件利润池"
+      ]
+    },
+    {
+      "ticker": "MSTR",
+      "name": "MicroStrategy",
+      "market": "US",
+      "href": "/investor/stocks/MSTR/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "加密/高波动风险偏好"
+      ]
+    },
+    {
+      "ticker": "COIN",
+      "name": "Coinbase",
+      "market": "US",
+      "href": "/investor/stocks/COIN/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "加密/高波动风险偏好"
+      ]
+    },
+    {
+      "ticker": "IBIT",
+      "name": "iShares Bitcoin Trust",
+      "market": "US ETF",
+      "href": "/investor/stocks/IBIT/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "加密/高波动风险偏好"
+      ]
+    },
+    {
+      "ticker": "HOOD",
+      "name": "Robinhood",
+      "market": "US",
+      "href": "/investor/stocks/HOOD/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "加密/高波动风险偏好"
+      ]
+    },
+    {
+      "ticker": "LOW",
+      "name": "Lowe's",
+      "market": "US",
+      "href": "/investor/stocks/LOW/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "加密/高波动风险偏好"
+      ]
+    },
+    {
+      "ticker": "MARA",
+      "name": "MARA Holdings",
+      "market": "US",
+      "href": "/investor/stocks/MARA/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "加密/高波动风险偏好"
+      ]
+    },
+    {
+      "ticker": "RIOT",
+      "name": "Riot Platforms",
+      "market": "US",
+      "href": "/investor/stocks/RIOT/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "加密/高波动风险偏好"
       ]
     },
     {
@@ -1666,17 +1672,6 @@
       "lanes": [
         "端侧 AI/Agent 桌面"
       ]
-    },
-    {
-      "ticker": "ASML",
-      "name": "ASML",
-      "market": "US ADR",
-      "href": "/investor/stocks/ASML/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "先进封装/HBM4 闸门"
-      ]
     }
   ],
   "personas": [
@@ -1686,7 +1681,7 @@
       "nameEn": "TMT Analyst",
       "href": "/investor/personas/#persona-tmt-analyst-b5fc12",
       "specialty": "半导体/AI/云计算/消费电子/互联网 【拆分聚焦 2026-06-11】聚焦软件/互联网/平台/消费电子；半导体与AI算力已拆为独立深度席位。",
-      "currentView": "NAND价格与产品组合驱动SanDisk盈利弹性；NAND盈利弹性由价格与产品结构主导，而非单纯出货增长；高纯石英材料受益于先进封装扩产，但兑现取决于认证与产品结构 是当前该 persona 参与最多的研究主线。",
+      "currentView": "NAND价格与产品组合驱动SanDisk盈利弹性；高纯石英材料受益于先进封装扩产，但兑现取决于认证与产品结构；HBM4、CoWoS 与背面供电正在成为 AI 服务器需求曲线的串行闸门 是当前该 persona 参与最多的研究主线。",
       "supports": 0,
       "risks": 5,
       "neutral": 0,
@@ -1707,7 +1702,7 @@
       "nameEn": "Energy Analyst",
       "href": "/investor/personas/#persona-energy-analyst-ca430c",
       "specialty": "石油/天然气/煤炭/新能源/电力",
-      "currentView": "美伊和平协议拟重开霍尔木兹海峡，导致原油价格破位（Brent 79.49，WTI <78）。在能化大宗商品面临通缩压力的背景下，A股“红…；地缘利好引发的油价下跌能否抵消美联储新主席 Warsh 的鹰派立场？当前的‘高价高偏斜’是否暗示结构性崩塌风险？；油价地缘底线决定再通胀与降息交易的安全边际 是当前该 persona 参与最多的研究主线。",
+      "currentView": "美伊和平协议拟重开霍尔木兹海峡，导致原油价格破位（Brent 79.49，WTI <78）。在能化大宗商品面临通缩压力的背景下，A股“红…；油价地缘底线决定再通胀与降息交易的安全边际；地缘利好引发的油价下跌能否抵消美联储新主席 Warsh 的鹰派立场？当前的‘高价高偏斜’是否暗示结构性崩塌风险？ 是当前该 persona 参与最多的研究主线。",
       "supports": 0,
       "risks": 4,
       "neutral": 0,
@@ -1777,25 +1772,6 @@
       "latestEvent": {
         "title": "另类数据隔夜扫描：研究级别背离报告 (2026-05-07)",
         "href": "/investor/reports/archive-f00eedb2a283/"
-      }
-    },
-    {
-      "id": "persona-sentiment-analyst-ea0e85",
-      "name": "市场情绪师",
-      "nameEn": "Sentiment Analyst",
-      "href": "/investor/personas/#persona-sentiment-analyst-ea0e85",
-      "specialty": "恐贪指数/资金流向/投资者行为 【合并扩展 2026-06-11】纳入另类数据：卫星影像、信用卡消费、App 使用、供应链中断。原 altdata-analyst 职能并入。",
-      "currentView": "加密资产仍是全球流动性和散户风险偏好的高频回声；期权伽马、ETF 与尾盘流动性正在放大主题交易的微观结构风险；风险核查与证据质量是主题交易的必要过滤器 是当前该 persona 参与最多的研究主线。",
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "topTheses": [
-        "加密资产仍是全球流动性和散户风险偏好的高频回声"
-      ],
-      "latestEvent": {
-        "title": "隔夜市场情绪与资金流向扫描 (2026-05-07)",
-        "href": "/investor/reports/archive-bbab8784c767/"
       }
     },
     {

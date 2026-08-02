@@ -1,0 +1,21 @@
+{
+  "slug": "archive-f0b2fc0ce355",
+  "href": "/investor/reports/archive-f0b2fc0ce355/",
+  "meta": {
+    "title": "研究院晨会产出 — 过去 24 小时内部产出摘要",
+    "date": "2026-07-31",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "通胀",
+      "宏观",
+      "A股",
+      "能源"
+    ],
+    "source": "archive-f0b2fc0ce355",
+    "source_label": "研究档案",
+    "source_kind": "archive"
+  },
+  "bodyHtml": "<h1>研究院晨会产出 — 过去 24 小时内部产出摘要</h1>\n<p><strong>日期锚点：2026-07-31（shell 时钟为准）</strong>\n<strong>主编：morning-brief-editor（晨会主编）</strong></p>\n<h2>0. 数据拉取摘要</h2>\n<blockquote>\n<p><strong>关键状态：本步骤的输入数据缺失。</strong></p>\n</blockquote>\n<p>Step 1 中本应内联注入 24 小时合并 digest（<code>研究档案</code>）。实际收到的占位块仍为字面量 <code>&lt;&lt;&gt;&gt;</code>，未被 institute cron 填充。按照 Step 1 的明确指令——「If the block above is empty or still shows the literal text <code>&lt;&lt;&gt;&gt;</code>, the institute cron has not populated it — state that in §0 and stop.」——本步骤在此声明并停止实质合成。</p>\n<table>\n<thead>\n<tr>\n<th>来源</th>\n<th>记录数</th>\n<th>状态</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>研究档案</code>（内联注入块）</td>\n<td>0</td>\n<td><strong>empty（占位符未填充）</strong></td>\n</tr>\n<tr>\n<td><code>research notes</code></td>\n<td>0</td>\n<td>empty（无源数据可解析）</td>\n</tr>\n<tr>\n<td><code>mailbox_threads</code></td>\n<td>0</td>\n<td>empty（无源数据可解析）</td>\n</tr>\n<tr>\n<td><code>fact_cards_by_status</code></td>\n<td>0</td>\n<td>empty（无源数据可解析）</td>\n</tr>\n<tr>\n<td><code>research_queue</code></td>\n<td>0</td>\n<td>empty（无源数据可解析）</td>\n</tr>\n<tr>\n<td><code>chain_coverage_gaps</code></td>\n<td>0</td>\n<td>empty（无源数据可解析）</td>\n</tr>\n<tr>\n<td><code>研究档案</code>（分析师记忆）</td>\n<td>2,224 bytes</td>\n<td>ok</td>\n</tr>\n<tr>\n<td><code>研究档案</code>（委派队列）</td>\n<td>74 bytes</td>\n<td>ok（队列为空）</td>\n</tr>\n</tbody>\n</table>\n<p><strong>说明：</strong> 主编无法 curl 该 gated 端点（model hand 无凭据），digest 必须由 institute cron 预取并内联。由于占位符未被替换，下游各节（§1–§6）无可追溯的源数据。为避免捏造，本报告不虚构任何 card_id / thread_id / ticker / 数字。</p>\n<h2>1. 团队聚焦的 3 个主题</h2>\n<p><strong>无法生成。</strong> 该节需基于 <code>research notes</code> 与 <code>mailbox_threads</code> 的实际覆盖提炼跨域聚焦方向。源数据为空，凭空提炼主题即等同捏造，故留空。</p>\n<blockquote>\n<p>参考（非今日结论，仅供 cron 恢复后核对方向）：主编标准记忆中的复现主题为 PMI/地产、FX/人民币、AI/碳、压力测试、债券、能源、FOMC、A股、原油 [来源：研究档案 §3，2026-07-30]。这些<strong>不是</strong>今日 digest 的内容，仅为方法论锚点。</p>\n</blockquote>\n<h2>2. 关键交接</h2>\n<p><strong>无法生成。</strong> 该节需从 <code>mailbox_threads</code> 中挑选 5–8 条最有信息量的自动交接。源数据为空，故无交接可列。</p>\n<h2>3. 深度研究产出</h2>\n<p><strong>无法生成。</strong> 该节需基于 <code>research_queue</code> 中 24h 内 <code>status='completed'</code> 的行。源数据为空，无法判定是否有完成项，故不写「昨日无深度研究完成项」（该结论本身也需数据支撑）。</p>\n<h2>4. 事实核查产出</h2>\n<p><strong>无法生成。</strong> 该节需基于 <code>fact_cards_by_status</code> 聚合各 verdict（verified/disputed/uncertain/unverifiable）数量。源数据为空，故无核查统计可报。</p>\n<h2>5. 明日跟进</h2>\n<p>基于<strong>记忆中</strong>的既有未结悬念（非今日 digest，明确标注来源），列出可延续跟进项。cron 恢复 digest 后应以真实数据覆盖</p>\n<table>\n<thead>\n<tr>\n<th>#</th>\n<th>未结悬念</th>\n<th>建议指派分析师</th>\n<th>来源</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1</td>\n<td>run0a credit 重试仍待信用/dispatcher 回执</td>\n<td>credit-analyst / dispatcher</td>\n<td>研究档案 §2（2026-07-02，ec7e0424;33aa85dc）</td>\n</tr>\n<tr>\n<td>2</td>\n<td>run5d 评审待 gmacro/risk/ashare 反馈</td>\n<td>global-macro / risk / a-share</td>\n<td>研究档案 §2（2026-07-01，84da6d03;ecd6d1a1）</td>\n</tr>\n<tr>\n<td>3</td>\n<td>e1 FX+risk 待 FX/risk 回执</td>\n<td>fx-strategist / risk</td>\n<td>研究档案 §2（2026-06-29，488d09a4;f9b1fcaa）</td>\n</tr>\n<tr>\n<td>4</td>\n<td><strong>今日最高优先级：修复 morning digest cron 注入</strong></td>\n<td>operator / dispatcher</td>\n<td>本步骤 §0（占位符 <code>&lt;&lt;&gt;&gt;</code> 未填充）</td>\n</tr>\n</tbody>\n</table>\n<blockquote>\n<p>第 1–3 项来自主编标准记忆的开放问题清单，并非今日新增；今日实际的跨日转入项因 digest 缺失无法确认。</p>\n</blockquote>\n<h2>6. 产业链覆盖缺口（建议研究议题）</h2>\n<p><strong>无法生成。</strong> 该节需基于 <code>研究档案</code> 中的 <code>chain_coverage_gaps</code> 字段。源数据为空，无法列出任何产业链的成员数 / 活跃成员数 / 激活率 / owner 状态。按规则，如该字段真为空应写「无显著覆盖缺口」——但此处是<strong>整个 digest 缺失</strong>而非字段为空，两者不同，故不套用该措辞，改为如实声明数据不可得。</p>\n<h2>主编结论（一句话）</h2>\n<p><strong>今日 digest 未被 cron 注入（占位符 <code>&lt;&lt;&gt;&gt;</code> 原样保留），全部实质合成节（§1–§4、§6）无源数据、依规不予捏造；唯一可执行的今日跟进是修复 digest 注入管道并重跑本步骤。</strong></p>\n<p><em>本报告严格遵守主编记忆 §4 的既有教训：回执是状态而非覆盖、合成前须有真实数据支撑 [来源：研究档案 §4，2026-06-18 / 2026-06-04]。数据缺失时如实声明，不以印象填充。</em></p>"
+}
