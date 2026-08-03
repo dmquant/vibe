@@ -4,7 +4,7 @@
   "dayNumber": 16,
   "status": "recorded",
   "headline": "食品加工降至2%-3%后的A股再配置 — 2026-07-23 [D1][I1]",
-  "summary": "当日归档 28 份公开研究，6 条研究讨论和 14 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
+  "summary": "当日归档 28 份公开研究，6 条研究讨论和 15 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
   "dominantTopic": {
     "id": "macro-rates",
     "labelZh": "宏观、通胀与利率",
@@ -29,8 +29,8 @@
     "reports": 28,
     "researchThreads": 6,
     "researchNotes": 48,
-    "thesisEvents": 14,
-    "personaEvents": 13,
+    "thesisEvents": 15,
+    "personaEvents": 14,
     "readerMemos": 0,
     "recaps": 0,
     "deepResearch": 0
@@ -581,6 +581,47 @@
   ],
   "thesisEvents": [
     {
+      "id": "thesis-58200390b4",
+      "title": "加密资产仍是全球流动性和散户风险偏好的高频回声",
+      "titleEn": "Crypto remains a high-frequency echo of global liquidity and retail risk appetite",
+      "href": "/investor/theses/thesis-58200390b4/",
+      "laneId": "lane_73a269a07a15",
+      "lane": "加密/高波动风险偏好",
+      "laneHref": "/investor/lanes/crypto-and-high-beta-risk-appetite/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 63,
+      "supports": 0,
+      "risks": 2,
+      "neutral": 0,
+      "eventCount": 2,
+      "events": [
+        {
+          "title": "美国宏观经济数据日报 (2026年5月7日)",
+          "summary": "发布日期: 2026-05-07 分析师: Global Macro Analyst 核心观点: 劳动力市场在工资压力放缓的同时保持韧性，美伊停火协议后的能源价格下行为通胀预期提供缓冲。",
+          "href": "/investor/reports/archive-93d3a2e0fe84/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        },
+        {
+          "title": "隔夜市场情绪与资金流向扫描 (2026-05-07)",
+          "summary": "核心结论 (Summary) 隔夜市场正式确认进入 全面“风险偏好” (Risk-On) 模式。双重催化剂——AI硬件超级周期的财报爆发（三星市值突破1万亿美元，AMD大涨）以及中东地缘政治局势的实质性缓和（...",
+          "href": "/investor/reports/archive-bbab8784c767/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "MSTR",
+        "COIN",
+        "IBIT",
+        "HOOD",
+        "LOW",
+        "MARA",
+        "RIOT"
+      ]
+    },
+    {
       "id": "thesis-d6b2c23ed6",
       "title": "航运与物流成本是油价、关税和供应链再通胀的二阶传导器",
       "titleEn": "Shipping and logistics costs are a second-order transmission channel for oil, tariffs, and supply-chain reflation",
@@ -780,40 +821,6 @@
       ]
     },
     {
-      "id": "thesis-58200390b4",
-      "title": "加密资产仍是全球流动性和散户风险偏好的高频回声",
-      "titleEn": "Crypto remains a high-frequency echo of global liquidity and retail risk appetite",
-      "href": "/investor/theses/thesis-58200390b4/",
-      "laneId": "lane_73a269a07a15",
-      "lane": "加密/高波动风险偏好",
-      "laneHref": "/investor/lanes/crypto-and-high-beta-risk-appetite/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 65,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "美国宏观经济数据日报 (2026年5月7日)",
-          "summary": "发布日期: 2026-05-07 分析师: Global Macro Analyst 核心观点: 劳动力市场在工资压力放缓的同时保持韧性，美伊停火协议后的能源价格下行为通胀预期提供缓冲。",
-          "href": "/investor/reports/archive-93d3a2e0fe84/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "MSTR",
-        "COIN",
-        "IBIT",
-        "HOOD",
-        "LOW",
-        "MARA",
-        "RIOT"
-      ]
-    },
-    {
       "id": "thesis-ffa474a3f2",
       "title": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
       "titleEn": "Edge AI and agent desktops are extending compute competition from cloud to chips, OS, and consumer-electronics supply...",
@@ -990,7 +997,7 @@
         "MSFT",
         "DLR",
         "EQIX",
-        "AMZN"
+        "SMR"
       ]
     },
     {
@@ -1063,6 +1070,24 @@
       "avgConviction": 63
     },
     {
+      "id": "lane_73a269a07a15",
+      "title": "加密/高波动风险偏好",
+      "href": "/investor/lanes/crypto-and-high-beta-risk-appetite/",
+      "thesisCount": 1,
+      "eventCount": 2,
+      "convictionTotal": 63,
+      "stockTickers": [
+        "MSTR",
+        "COIN",
+        "IBIT",
+        "HOOD",
+        "LOW",
+        "MARA",
+        "RIOT"
+      ],
+      "avgConviction": 63
+    },
+    {
       "id": "lane_79a55cd8530e",
       "title": "航运物流/再通胀传导",
       "href": "/investor/lanes/shipping-logistics-and-reflation-transmission/",
@@ -1099,24 +1124,6 @@
         "9888.HK"
       ],
       "avgConviction": 72
-    },
-    {
-      "id": "lane_73a269a07a15",
-      "title": "加密/高波动风险偏好",
-      "href": "/investor/lanes/crypto-and-high-beta-risk-appetite/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 65,
-      "stockTickers": [
-        "MSTR",
-        "COIN",
-        "IBIT",
-        "HOOD",
-        "LOW",
-        "MARA",
-        "RIOT"
-      ],
-      "avgConviction": 65
     },
     {
       "id": "lane_74d352e86208",
@@ -1196,7 +1203,7 @@
         "MSFT",
         "DLR",
         "EQIX",
-        "AMZN"
+        "SMR"
       ],
       "avgConviction": 53
     },
@@ -1330,18 +1337,6 @@
       ]
     },
     {
-      "ticker": "AMZN",
-      "name": "Amazon",
-      "market": "US",
-      "href": "/investor/stocks/AMZN/",
-      "thesisCount": 2,
-      "eventCount": 2,
-      "lanes": [
-        "端侧 AI/Agent 桌面",
-        "数据中心地产/液冷"
-      ]
-    },
-    {
       "ticker": "AMD",
       "name": "AMD",
       "market": "US",
@@ -1363,6 +1358,83 @@
       "lanes": [
         "AI 基建 TCO/能效筛选",
         "数据中心地产/液冷"
+      ]
+    },
+    {
+      "ticker": "MSTR",
+      "name": "MicroStrategy",
+      "market": "US",
+      "href": "/investor/stocks/MSTR/",
+      "thesisCount": 1,
+      "eventCount": 2,
+      "lanes": [
+        "加密/高波动风险偏好"
+      ]
+    },
+    {
+      "ticker": "COIN",
+      "name": "Coinbase",
+      "market": "US",
+      "href": "/investor/stocks/COIN/",
+      "thesisCount": 1,
+      "eventCount": 2,
+      "lanes": [
+        "加密/高波动风险偏好"
+      ]
+    },
+    {
+      "ticker": "IBIT",
+      "name": "iShares Bitcoin Trust",
+      "market": "US ETF",
+      "href": "/investor/stocks/IBIT/",
+      "thesisCount": 1,
+      "eventCount": 2,
+      "lanes": [
+        "加密/高波动风险偏好"
+      ]
+    },
+    {
+      "ticker": "HOOD",
+      "name": "Robinhood",
+      "market": "US",
+      "href": "/investor/stocks/HOOD/",
+      "thesisCount": 1,
+      "eventCount": 2,
+      "lanes": [
+        "加密/高波动风险偏好"
+      ]
+    },
+    {
+      "ticker": "LOW",
+      "name": "Lowe's",
+      "market": "US",
+      "href": "/investor/stocks/LOW/",
+      "thesisCount": 1,
+      "eventCount": 2,
+      "lanes": [
+        "加密/高波动风险偏好"
+      ]
+    },
+    {
+      "ticker": "MARA",
+      "name": "MARA Holdings",
+      "market": "US",
+      "href": "/investor/stocks/MARA/",
+      "thesisCount": 1,
+      "eventCount": 2,
+      "lanes": [
+        "加密/高波动风险偏好"
+      ]
+    },
+    {
+      "ticker": "RIOT",
+      "name": "Riot Platforms",
+      "market": "US",
+      "href": "/investor/stocks/RIOT/",
+      "thesisCount": 1,
+      "eventCount": 2,
+      "lanes": [
+        "加密/高波动风险偏好"
       ]
     },
     {
@@ -1553,87 +1625,21 @@
       ]
     },
     {
-      "ticker": "MSTR",
-      "name": "MicroStrategy",
-      "market": "US",
-      "href": "/investor/stocks/MSTR/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "加密/高波动风险偏好"
-      ]
-    },
-    {
-      "ticker": "COIN",
-      "name": "Coinbase",
-      "market": "US",
-      "href": "/investor/stocks/COIN/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "加密/高波动风险偏好"
-      ]
-    },
-    {
-      "ticker": "IBIT",
-      "name": "iShares Bitcoin Trust",
-      "market": "US ETF",
-      "href": "/investor/stocks/IBIT/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "加密/高波动风险偏好"
-      ]
-    },
-    {
-      "ticker": "HOOD",
-      "name": "Robinhood",
-      "market": "US",
-      "href": "/investor/stocks/HOOD/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "加密/高波动风险偏好"
-      ]
-    },
-    {
-      "ticker": "LOW",
-      "name": "Lowe's",
-      "market": "US",
-      "href": "/investor/stocks/LOW/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "加密/高波动风险偏好"
-      ]
-    },
-    {
-      "ticker": "MARA",
-      "name": "MARA Holdings",
-      "market": "US",
-      "href": "/investor/stocks/MARA/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "加密/高波动风险偏好"
-      ]
-    },
-    {
-      "ticker": "RIOT",
-      "name": "Riot Platforms",
-      "market": "US",
-      "href": "/investor/stocks/RIOT/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "加密/高波动风险偏好"
-      ]
-    },
-    {
       "ticker": "AAPL",
       "name": "Apple",
       "market": "US",
       "href": "/investor/stocks/AAPL/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "端侧 AI/Agent 桌面"
+      ]
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "market": "US",
+      "href": "/investor/stocks/AMZN/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
@@ -1761,7 +1767,7 @@
       "nameEn": "Alt Data Analyst",
       "href": "/investor/personas/#persona-alt-data-analyst-a743be",
       "specialty": "卫星数据/信用卡消费/App使用/供应链",
-      "currentView": "航运与物流成本是油价、关税和供应链再通胀的二阶传导器；酒店餐饮休闲复苏正在从客流修复转向 RevPAR、翻台率与小盘 Alpha；智能驾驶供应商拐点取决于定点转量产和毛利率修复 是当前该 persona 参与最多的研究主线。",
+      "currentView": "航运与物流成本是油价、关税和供应链再通胀的二阶传导器；智能驾驶供应商拐点取决于定点转量产和毛利率修复；自动驾驶与 Robotaxi 主题必须从演示热度进入单位经济和监管城市扩张验证 是当前该 persona 参与最多的研究主线。",
       "supports": 1,
       "risks": 0,
       "neutral": 0,
@@ -1772,6 +1778,25 @@
       "latestEvent": {
         "title": "另类数据隔夜扫描：研究级别背离报告 (2026-05-07)",
         "href": "/investor/reports/archive-f00eedb2a283/"
+      }
+    },
+    {
+      "id": "persona-sentiment-analyst-ea0e85",
+      "name": "市场情绪师",
+      "nameEn": "Sentiment Analyst",
+      "href": "/investor/personas/#persona-sentiment-analyst-ea0e85",
+      "specialty": "恐贪指数/资金流向/投资者行为 【合并扩展 2026-06-11】纳入另类数据：卫星影像、信用卡消费、App 使用、供应链中断。原 altdata-analyst 职能并入。",
+      "currentView": "加密资产仍是全球流动性和散户风险偏好的高频回声；期权伽马、ETF 与尾盘流动性正在放大主题交易的微观结构风险；风险核查与证据质量是主题交易的必要过滤器 是当前该 persona 参与最多的研究主线。",
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "topTheses": [
+        "加密资产仍是全球流动性和散户风险偏好的高频回声"
+      ],
+      "latestEvent": {
+        "title": "隔夜市场情绪与资金流向扫描 (2026-05-07)",
+        "href": "/investor/reports/archive-bbab8784c767/"
       }
     },
     {

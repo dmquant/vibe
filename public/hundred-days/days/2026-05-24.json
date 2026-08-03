@@ -29,7 +29,7 @@
     "reports": 205,
     "researchThreads": 28,
     "researchNotes": 226,
-    "thesisEvents": 88,
+    "thesisEvents": 89,
     "personaEvents": 0,
     "readerMemos": 0,
     "recaps": 0,
@@ -3906,11 +3906,11 @@
         "600519.SH",
         "001215.SZ",
         "300760.SZ",
-        "1801.HK",
         "600276.SH",
+        "1801.HK",
         "603345.SH",
-        "1177.HK",
-        "2319.HK"
+        "YUMC",
+        "1177.HK"
       ]
     },
     {
@@ -3959,9 +3959,9 @@
         }
       ],
       "stockTickers": [
-        "001979.SZ",
         "1109.HK",
         "600048.SH",
+        "001979.SZ",
         "0960.HK",
         "0688.HK",
         "000002.SZ",
@@ -4334,10 +4334,10 @@
         "300750.SZ",
         "600900.SH",
         "MSFT",
-        "CEG",
         "300274.SZ",
-        "META",
-        "VST"
+        "CEG",
+        "VST",
+        "META"
       ]
     },
     {
@@ -4703,48 +4703,6 @@
       ]
     },
     {
-      "id": "thesis-075017003b",
-      "title": "AI 资本开支通过能源、设备和利率进入通胀定价",
-      "titleEn": "AI capex enters inflation pricing through energy, equipment, and rates",
-      "href": "/investor/theses/thesis-075017003b/",
-      "laneId": "lane_c0702fb29e08",
-      "lane": "AI 再通胀/利率敏感资产",
-      "laneHref": "/investor/lanes/ai-reflation-and-rate-sensitive-assets/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 61,
-      "supports": 1,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 2,
-      "events": [
-        {
-          "title": "美联储终端利率上行下的全球流动性与非美央行外溢",
-          "summary": "日期（机构工作日，亚洲/新加坡时区）： 2026-05-24 - 分析师： 全球宏观分析师 (global-macro) - 立场： 支持（延伸研究记录01\"R\\ 上移至 3.50–3.75%、长端美债易上难下\"的判断） - 承接： 研...",
-          "href": "/investor/reports/archive-652522f38f6f/",
-          "stance": "supports",
-          "stanceLabel": "支持"
-        },
-        {
-          "title": "能源价格波动下的全球资产配置与风险对冲策略",
-          "summary": "工作日期：2026-05-24（Asia/Singapore） - 研究记录（接续 research note 能源行业分析师） - 分析师：大类资产配置师（asset-allocator） - 立场： Support（支持） —— 在风险平价/全天候框...",
-          "href": "/investor/reports/archive-315efb0c1e8f/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "META",
-        "MSFT",
-        "AMZN",
-        "GOOGL",
-        "XLE",
-        "TLT",
-        "XLU",
-        "GLD"
-      ]
-    },
-    {
       "id": "thesis-241377c8be",
       "title": "显示材料改善需由利润率与现金流共同确认",
       "titleEn": "Display-material recovery requires joint margin and cash-flow confirmation",
@@ -4828,6 +4786,48 @@
       ]
     },
     {
+      "id": "thesis-075017003b",
+      "title": "AI 资本开支通过能源、设备和利率进入通胀定价",
+      "titleEn": "AI capex enters inflation pricing through energy, equipment, and rates",
+      "href": "/investor/theses/thesis-075017003b/",
+      "laneId": "lane_c0702fb29e08",
+      "lane": "AI 再通胀/利率敏感资产",
+      "laneHref": "/investor/lanes/ai-reflation-and-rate-sensitive-assets/",
+      "direction": "stable",
+      "directionLabel": "稳定",
+      "conviction": 56,
+      "supports": 1,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 2,
+      "events": [
+        {
+          "title": "美联储终端利率上行下的全球流动性与非美央行外溢",
+          "summary": "日期（机构工作日，亚洲/新加坡时区）： 2026-05-24 - 分析师： 全球宏观分析师 (global-macro) - 立场： 支持（延伸研究记录01\"R\\ 上移至 3.50–3.75%、长端美债易上难下\"的判断） - 承接： 研...",
+          "href": "/investor/reports/archive-652522f38f6f/",
+          "stance": "supports",
+          "stanceLabel": "支持"
+        },
+        {
+          "title": "能源价格波动下的全球资产配置与风险对冲策略",
+          "summary": "工作日期：2026-05-24（Asia/Singapore） - 研究记录（接续 research note 能源行业分析师） - 分析师：大类资产配置师（asset-allocator） - 立场： Support（支持） —— 在风险平价/全天候框...",
+          "href": "/investor/reports/archive-315efb0c1e8f/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "META",
+        "MSFT",
+        "AMZN",
+        "GOOGL",
+        "XLE",
+        "XLU",
+        "TLT",
+        "NVDA"
+      ]
+    },
+    {
       "id": "thesis-7f0a75c5f6",
       "title": "数据中心地产、液冷与水资源正在决定 AI 容量的区域迁移",
       "titleEn": "Data-center real estate, liquid cooling, and water resources are deciding regional migration of AI capacity",
@@ -4867,7 +4867,7 @@
         "MSFT",
         "DLR",
         "EQIX",
-        "AMZN"
+        "SMR"
       ]
     },
     {
@@ -4907,8 +4907,8 @@
         "300973.SZ",
         "603345.SH",
         "603027.SH",
-        "002847.SZ",
         "603317.SH",
+        "002847.SZ",
         "ADM",
         "DBA"
       ]
@@ -5233,8 +5233,8 @@
         "META",
         "MSFT",
         "AMZN",
-        "GOOGL",
         "NVDA",
+        "GOOGL",
         "TSM",
         "AAPL",
         "TSLA"
@@ -5344,9 +5344,9 @@
       "title": "AI基建资本开支仍在加速，但从公告美元转化为已通电MW的比例正在下降，首个断点在数据中心交付和二线下游供应链，而不是NVIDIA近端GP…",
       "titleEn": "Practical research topic: AI基建资本开支仍在加速，但从公告美元转化为已通电MW的比例正在下降，首个断点在数据中心交付和二线下游供应链，而不是NVIDIA近端GP…",
       "href": "/investor/theses/thesis-0a0d09421e/",
-      "laneId": "lane_2d0dcf520f87",
-      "lane": "AI 基建 TCO/能效筛选",
-      "laneHref": "/investor/lanes/ai-infrastructure-tco-and-efficiency-reset/",
+      "laneId": "lane_f21fc181388a",
+      "lane": "Mag7 AI 平台再分层",
+      "laneHref": "/investor/lanes/mag7-ai-platform-re-layering/",
       "direction": "conflicting",
       "directionLabel": "分歧",
       "conviction": 67,
@@ -5365,8 +5365,10 @@
       ],
       "stockTickers": [
         "NVDA",
-        "TSM",
-        "VRT"
+        "META",
+        "MSFT",
+        "AMZN",
+        "GOOGL"
       ]
     },
     {
@@ -5652,6 +5654,41 @@
       ]
     },
     {
+      "id": "thesis-a803fa3312",
+      "title": "美联储路径仍是全球资产再定价的总阀门",
+      "titleEn": "The Fed path remains the master valve for global asset repricing",
+      "href": "/investor/theses/thesis-a803fa3312/",
+      "laneId": "lane_1c216bd29875",
+      "lane": "美债利率/美元再定价",
+      "laneHref": "/investor/lanes/us-rates-and-dollar-repricing/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 58,
+      "supports": 1,
+      "risks": 0,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "美联储终端利率上行下的全球流动性与非美央行外溢",
+          "summary": "日期（机构工作日，亚洲/新加坡时区）： 2026-05-24 - 分析师： 全球宏观分析师 (global-macro) - 立场： 支持（延伸研究记录01\"R\\ 上移至 3.50–3.75%、长端美债易上难下\"的判断） - 承接： 研...",
+          "href": "/investor/reports/archive-652522f38f6f/",
+          "stance": "supports",
+          "stanceLabel": "支持"
+        }
+      ],
+      "stockTickers": [
+        "CME",
+        "TLT",
+        "JPM",
+        "META",
+        "AMZN",
+        "AEP",
+        "MSFT",
+        "KRE"
+      ]
+    },
+    {
       "id": "thesis-cb2ab35c55",
       "title": "AI 基础设施扩张从规模驱动切换到 TCO、能效和利用率筛选",
       "titleEn": "AI infrastructure expansion is shifting from scale to TCO, power efficiency, and utilization screening",
@@ -5715,14 +5752,14 @@
       "stockTickers": [
         "AEP",
         "600900.SH",
-        "DUK",
         "CEG",
+        "DUK",
         "VST",
-        "META",
         "XLU",
-        "SMR",
         "NEE",
-        "MSFT"
+        "META",
+        "SMR",
+        "SO"
       ]
     },
     {
@@ -5753,7 +5790,6 @@
         "KRE",
         "JPM",
         "META",
-        "NVDA",
         "BX",
         "KKR",
         "ARES",
@@ -5973,8 +6009,8 @@
         "600900.SH",
         "MSFT",
         "CEG",
-        "META",
-        "VST"
+        "VST",
+        "META"
       ],
       "avgConviction": 52
     },
@@ -5990,11 +6026,11 @@
         "600519.SH",
         "001215.SZ",
         "300760.SZ",
-        "1801.HK",
         "600276.SH",
+        "1801.HK",
         "603345.SH",
-        "1177.HK",
-        "2319.HK"
+        "YUMC",
+        "1177.HK"
       ],
       "avgConviction": 65
     },
@@ -6006,9 +6042,9 @@
       "eventCount": 4,
       "convictionTotal": 65,
       "stockTickers": [
-        "001979.SZ",
         "1109.HK",
         "600048.SH",
+        "001979.SZ",
         "0960.HK",
         "0688.HK",
         "000002.SZ",
@@ -6118,6 +6154,27 @@
       "avgConviction": 69
     },
     {
+      "id": "lane_1c216bd29875",
+      "title": "美债利率/美元再定价",
+      "href": "/investor/lanes/us-rates-and-dollar-repricing/",
+      "thesisCount": 2,
+      "eventCount": 3,
+      "convictionTotal": 125,
+      "stockTickers": [
+        "TLT",
+        "IEF",
+        "UUP",
+        "CME",
+        "JPM",
+        "META",
+        "AMZN",
+        "AEP",
+        "MSFT",
+        "KRE"
+      ],
+      "avgConviction": 63
+    },
+    {
       "id": "lane_22c1ed929e2e",
       "title": "公用事业/电网信用",
       "href": "/investor/lanes/utilities-grid-rate-base-and-credit/",
@@ -6133,10 +6190,10 @@
         "003816.SZ",
         "1816.HK",
         "VST",
-        "META",
         "XLU",
-        "SMR",
-        "NEE"
+        "NEE",
+        "META",
+        "SMR"
       ],
       "avgConviction": 60
     },
@@ -6162,58 +6219,23 @@
       "avgConviction": 51
     },
     {
-      "id": "lane_1c216bd29875",
-      "title": "美债利率/美元再定价",
-      "href": "/investor/lanes/us-rates-and-dollar-repricing/",
-      "thesisCount": 1,
-      "eventCount": 2,
-      "convictionTotal": 67,
-      "stockTickers": [
-        "TLT",
-        "IEF",
-        "UUP"
-      ],
-      "avgConviction": 67
-    },
-    {
-      "id": "lane_2d0dcf520f87",
-      "title": "AI 基建 TCO/能效筛选",
-      "href": "/investor/lanes/ai-infrastructure-tco-and-efficiency-reset/",
+      "id": "lane_f21fc181388a",
+      "title": "Mag7 AI 平台再分层",
+      "href": "/investor/lanes/mag7-ai-platform-re-layering/",
       "thesisCount": 2,
       "eventCount": 2,
-      "convictionTotal": 121,
-      "stockTickers": [
-        "NVDA",
-        "TSM",
-        "VRT",
-        "AMD",
-        "META",
-        "MSFT",
-        "MU",
-        "AVGO",
-        "000660.KS",
-        "DELL"
-      ],
-      "avgConviction": 61
-    },
-    {
-      "id": "lane_c0702fb29e08",
-      "title": "AI 再通胀/利率敏感资产",
-      "href": "/investor/lanes/ai-reflation-and-rate-sensitive-assets/",
-      "thesisCount": 1,
-      "eventCount": 2,
-      "convictionTotal": 61,
+      "convictionTotal": 134,
       "stockTickers": [
         "META",
         "MSFT",
         "AMZN",
+        "NVDA",
         "GOOGL",
-        "XLE",
-        "TLT",
-        "XLU",
-        "GLD"
+        "TSM",
+        "AAPL",
+        "TSLA"
       ],
-      "avgConviction": 61
+      "avgConviction": 67
     },
     {
       "id": "lane_6fbf93c613f9",
@@ -6235,6 +6257,25 @@
       "avgConviction": 57
     },
     {
+      "id": "lane_c0702fb29e08",
+      "title": "AI 再通胀/利率敏感资产",
+      "href": "/investor/lanes/ai-reflation-and-rate-sensitive-assets/",
+      "thesisCount": 1,
+      "eventCount": 2,
+      "convictionTotal": 56,
+      "stockTickers": [
+        "META",
+        "MSFT",
+        "AMZN",
+        "GOOGL",
+        "XLE",
+        "XLU",
+        "TLT",
+        "NVDA"
+      ],
+      "avgConviction": 56
+    },
+    {
       "id": "lane_0679894fe06b",
       "title": "数据中心地产/液冷",
       "href": "/investor/lanes/data-center-real-estate-and-cooling/",
@@ -6250,7 +6291,7 @@
         "MSFT",
         "DLR",
         "EQIX",
-        "AMZN"
+        "SMR"
       ],
       "avgConviction": 53
     },
@@ -6267,8 +6308,8 @@
         "300973.SZ",
         "603345.SH",
         "603027.SH",
-        "002847.SZ",
         "603317.SH",
+        "002847.SZ",
         "ADM",
         "DBA"
       ],
@@ -6343,13 +6384,13 @@
       "market": "US",
       "href": "/investor/stocks/NVDA/",
       "thesisCount": 20,
-      "eventCount": 31,
+      "eventCount": 32,
       "lanes": [
         "先进封装/HBM4 闸门",
         "AI 算力半导体",
         "低价模型/AI 软件利润池",
         "Mag7 AI 平台再分层",
-        "AI 基建 TCO/能效筛选"
+        "中国云/国产算力栈"
       ]
     },
     {
@@ -6357,8 +6398,8 @@
       "name": "Meta Platforms",
       "market": "US",
       "href": "/investor/stocks/META/",
-      "thesisCount": 15,
-      "eventCount": 21,
+      "thesisCount": 17,
+      "eventCount": 23,
       "lanes": [
         "AI 软件效率/生产率",
         "AI 算力半导体",
@@ -6372,29 +6413,14 @@
       "name": "Microsoft",
       "market": "US",
       "href": "/investor/stocks/MSFT/",
-      "thesisCount": 13,
-      "eventCount": 21,
+      "thesisCount": 14,
+      "eventCount": 22,
       "lanes": [
         "AI 软件效率/生产率",
         "低价模型/AI 软件利润池",
         "Mag7 AI 平台再分层",
         "先进封装/HBM4 闸门",
         "AI 算力半导体"
-      ]
-    },
-    {
-      "ticker": "TSM",
-      "name": "TSMC",
-      "market": "US ADR",
-      "href": "/investor/stocks/TSM/",
-      "thesisCount": 13,
-      "eventCount": 16,
-      "lanes": [
-        "先进封装/HBM4 闸门",
-        "AI 算力半导体",
-        "Mag7 AI 平台再分层",
-        "日元套息/EM 科技流动性",
-        "AI 基建 TCO/能效筛选"
       ]
     },
     {
@@ -6410,6 +6436,36 @@
         "关键材料/稀土铜铝",
         "数据中心地产/液冷",
         "中国电力设备出海"
+      ]
+    },
+    {
+      "ticker": "TSM",
+      "name": "TSMC",
+      "market": "US ADR",
+      "href": "/investor/stocks/TSM/",
+      "thesisCount": 12,
+      "eventCount": 15,
+      "lanes": [
+        "先进封装/HBM4 闸门",
+        "AI 算力半导体",
+        "Mag7 AI 平台再分层",
+        "日元套息/EM 科技流动性",
+        "AI 基建 TCO/能效筛选"
+      ]
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "market": "US",
+      "href": "/investor/stocks/AMZN/",
+      "thesisCount": 10,
+      "eventCount": 13,
+      "lanes": [
+        "AI 软件效率/生产率",
+        "Mag7 AI 平台再分层",
+        "先进封装/HBM4 闸门",
+        "AI 算力半导体",
+        "端侧 AI/Agent 桌面"
       ]
     },
     {
@@ -6436,21 +6492,6 @@
         "先进封装/HBM4 闸门",
         "AI 算力半导体",
         "AI 基建 TCO/能效筛选"
-      ]
-    },
-    {
-      "ticker": "AMZN",
-      "name": "Amazon",
-      "market": "US",
-      "href": "/investor/stocks/AMZN/",
-      "thesisCount": 9,
-      "eventCount": 13,
-      "lanes": [
-        "AI 软件效率/生产率",
-        "Mag7 AI 平台再分层",
-        "先进封装/HBM4 闸门",
-        "AI 算力半导体",
-        "端侧 AI/Agent 桌面"
       ]
     },
     {
@@ -6523,6 +6564,21 @@
       ]
     },
     {
+      "ticker": "GOOGL",
+      "name": "Alphabet",
+      "market": "US",
+      "href": "/investor/stocks/GOOGL/",
+      "thesisCount": 7,
+      "eventCount": 10,
+      "lanes": [
+        "AI 软件效率/生产率",
+        "Mag7 AI 平台再分层",
+        "AI 算力半导体",
+        "端侧 AI/Agent 桌面",
+        "AI 再通胀/利率敏感资产"
+      ]
+    },
+    {
       "ticker": "600089.SH",
       "name": "特变电工",
       "market": "A-share",
@@ -6557,21 +6613,6 @@
       "lanes": [
         "中国大健康/创新药出海",
         "消费降级/健康银发"
-      ]
-    },
-    {
-      "ticker": "GOOGL",
-      "name": "Alphabet",
-      "market": "US",
-      "href": "/investor/stocks/GOOGL/",
-      "thesisCount": 6,
-      "eventCount": 9,
-      "lanes": [
-        "AI 软件效率/生产率",
-        "Mag7 AI 平台再分层",
-        "AI 算力半导体",
-        "端侧 AI/Agent 桌面",
-        "AI 再通胀/利率敏感资产"
       ]
     },
     {
@@ -6620,6 +6661,19 @@
       "eventCount": 7,
       "lanes": [
         "先进封装/HBM4 闸门"
+      ]
+    },
+    {
+      "ticker": "TLT",
+      "name": "iShares 20+ Year Treasury Bond ETF",
+      "market": "US ETF",
+      "href": "/investor/stocks/TLT/",
+      "thesisCount": 4,
+      "eventCount": 7,
+      "lanes": [
+        "美债利率/美元再定价",
+        "债券供给/银行久期",
+        "AI 再通胀/利率敏感资产"
       ]
     },
     {
@@ -6760,16 +6814,16 @@
       ]
     },
     {
-      "ticker": "TLT",
-      "name": "iShares 20+ Year Treasury Bond ETF",
-      "market": "US ETF",
-      "href": "/investor/stocks/TLT/",
+      "ticker": "SMR",
+      "name": "NuScale Power",
+      "market": "US",
+      "href": "/investor/stocks/SMR/",
       "thesisCount": 3,
       "eventCount": 6,
       "lanes": [
-        "美债利率/美元再定价",
-        "AI 再通胀/利率敏感资产",
-        "债券供给/银行久期"
+        "公用事业/电网信用",
+        "数据中心地产/液冷",
+        "能源转型/储能光伏"
       ]
     },
     {
@@ -6832,18 +6886,6 @@
         "AI 算力半导体",
         "先进封装/HBM4 闸门",
         "AI 基建 TCO/能效筛选"
-      ]
-    },
-    {
-      "ticker": "601398.SH",
-      "name": "工商银行",
-      "market": "A-share",
-      "href": "/investor/stocks/601398.SH/",
-      "thesisCount": 3,
-      "eventCount": 5,
-      "lanes": [
-        "A股红利/硬科技杠铃",
-        "债券供给/银行久期"
       ]
     }
   ],

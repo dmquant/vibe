@@ -505,8 +505,8 @@
         "600900.SH",
         "688981.SH",
         "601088.SH",
-        "588000.SH",
-        "601398.SH"
+        "601398.SH",
+        "588000.SH"
       ]
     },
     {
@@ -577,40 +577,6 @@
       ]
     },
     {
-      "id": "thesis-89c14497ac",
-      "title": "期权伽马、ETF 与尾盘流动性正在放大主题交易的微观结构风险",
-      "titleEn": "Options gamma, ETFs, and closing liquidity are amplifying microstructure risk in theme trades",
-      "href": "/investor/theses/thesis-89c14497ac/",
-      "laneId": "lane_2ba2ee6db1ee",
-      "lane": "期权伽马/市场微观结构",
-      "laneHref": "/investor/lanes/options-gamma-and-market-microstructure/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 64,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "前序研究报告 — 2026-05-08 — Mag-7波动率、波控基金与CTA再平衡",
-          "summary": "前序研究报告 — 2026-05-08 — Mag-7波动率、波控基金与CTA再平衡",
-          "href": "/investor/reports/archive-f63b902777c7/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "CBOE",
-        "588000.SH",
-        "CME",
-        "HOOD",
-        "IBKR",
-        "VIRT",
-        "VIXY"
-      ]
-    },
-    {
       "id": "thesis-3cb5657bb3",
       "title": "智能驾驶供应商拐点取决于定点转量产和毛利率修复",
       "titleEn": "The smart-driving supplier inflection depends on program conversion and margin recovery",
@@ -641,6 +607,41 @@
         "1274.HK",
         "002594.SZ",
         "XPEV"
+      ]
+    },
+    {
+      "id": "thesis-89c14497ac",
+      "title": "期权伽马、ETF 与尾盘流动性正在放大主题交易的微观结构风险",
+      "titleEn": "Options gamma, ETFs, and closing liquidity are amplifying microstructure risk in theme trades",
+      "href": "/investor/theses/thesis-89c14497ac/",
+      "laneId": "lane_2ba2ee6db1ee",
+      "lane": "期权伽马/市场微观结构",
+      "laneHref": "/investor/lanes/options-gamma-and-market-microstructure/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 62,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "前序研究报告 — 2026-05-08 — Mag-7波动率、波控基金与CTA再平衡",
+          "summary": "前序研究报告 — 2026-05-08 — Mag-7波动率、波控基金与CTA再平衡",
+          "href": "/investor/reports/archive-f63b902777c7/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "CBOE",
+        "CME",
+        "588000.SH",
+        "NVDA",
+        "HOOD",
+        "IBKR",
+        "VIRT",
+        "VIXY"
       ]
     },
     {
@@ -731,28 +732,10 @@
         "600900.SH",
         "688981.SH",
         "601088.SH",
-        "588000.SH",
-        "601398.SH"
+        "601398.SH",
+        "588000.SH"
       ],
       "avgConviction": 84
-    },
-    {
-      "id": "lane_2ba2ee6db1ee",
-      "title": "期权伽马/市场微观结构",
-      "href": "/investor/lanes/options-gamma-and-market-microstructure/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 64,
-      "stockTickers": [
-        "CBOE",
-        "588000.SH",
-        "CME",
-        "HOOD",
-        "IBKR",
-        "VIRT",
-        "VIXY"
-      ],
-      "avgConviction": 64
     },
     {
       "id": "lane_0cb100fcf8da",
@@ -770,6 +753,25 @@
         "XPEV"
       ],
       "avgConviction": 64
+    },
+    {
+      "id": "lane_2ba2ee6db1ee",
+      "title": "期权伽马/市场微观结构",
+      "href": "/investor/lanes/options-gamma-and-market-microstructure/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "convictionTotal": 62,
+      "stockTickers": [
+        "CBOE",
+        "CME",
+        "588000.SH",
+        "NVDA",
+        "HOOD",
+        "IBKR",
+        "VIRT",
+        "VIXY"
+      ],
+      "avgConviction": 62
     },
     {
       "id": "lane_6e2dcaab093e",
@@ -798,11 +800,12 @@
       "name": "NVIDIA",
       "market": "US",
       "href": "/investor/stocks/NVDA/",
-      "thesisCount": 2,
-      "eventCount": 3,
+      "thesisCount": 3,
+      "eventCount": 4,
       "lanes": [
         "低价模型/AI 软件利润池",
-        "自动驾驶/Robotaxi 单位经济"
+        "自动驾驶/Robotaxi 单位经济",
+        "期权伽马/市场微观结构"
       ]
     },
     {
@@ -1038,6 +1041,61 @@
       ]
     },
     {
+      "ticker": "TSLA",
+      "name": "Tesla",
+      "market": "US",
+      "href": "/investor/stocks/TSLA/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "自动驾驶/Robotaxi 单位经济"
+      ]
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet",
+      "market": "US",
+      "href": "/investor/stocks/GOOGL/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "自动驾驶/Robotaxi 单位经济"
+      ]
+    },
+    {
+      "ticker": "1274.HK",
+      "name": "知行汽车科技（苏州）股份有限公司",
+      "market": "HK",
+      "href": "/investor/stocks/1274.HK/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "自动驾驶/Robotaxi 单位经济"
+      ]
+    },
+    {
+      "ticker": "002594.SZ",
+      "name": "比亚迪",
+      "market": "A-share",
+      "href": "/investor/stocks/002594.SZ/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "自动驾驶/Robotaxi 单位经济"
+      ]
+    },
+    {
+      "ticker": "XPEV",
+      "name": "XPeng",
+      "market": "US ADR",
+      "href": "/investor/stocks/XPEV/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "自动驾驶/Robotaxi 单位经济"
+      ]
+    },
+    {
       "ticker": "CBOE",
       "name": "Cboe Global Markets",
       "market": "US",
@@ -1101,61 +1159,6 @@
       "eventCount": 1,
       "lanes": [
         "期权伽马/市场微观结构"
-      ]
-    },
-    {
-      "ticker": "TSLA",
-      "name": "Tesla",
-      "market": "US",
-      "href": "/investor/stocks/TSLA/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "自动驾驶/Robotaxi 单位经济"
-      ]
-    },
-    {
-      "ticker": "GOOGL",
-      "name": "Alphabet",
-      "market": "US",
-      "href": "/investor/stocks/GOOGL/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "自动驾驶/Robotaxi 单位经济"
-      ]
-    },
-    {
-      "ticker": "1274.HK",
-      "name": "知行汽车科技（苏州）股份有限公司",
-      "market": "HK",
-      "href": "/investor/stocks/1274.HK/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "自动驾驶/Robotaxi 单位经济"
-      ]
-    },
-    {
-      "ticker": "002594.SZ",
-      "name": "比亚迪",
-      "market": "A-share",
-      "href": "/investor/stocks/002594.SZ/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "自动驾驶/Robotaxi 单位经济"
-      ]
-    },
-    {
-      "ticker": "XPEV",
-      "name": "XPeng",
-      "market": "US ADR",
-      "href": "/investor/stocks/XPEV/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "自动驾驶/Robotaxi 单位经济"
       ]
     },
     {
