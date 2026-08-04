@@ -508,7 +508,7 @@
       "laneHref": "/investor/lanes/ai-compute-semiconductors/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 65,
+      "conviction": 64,
       "supports": 1,
       "risks": 1,
       "neutral": 0,
@@ -713,43 +713,6 @@
       ]
     },
     {
-      "id": "thesis-ffa474a3f2",
-      "title": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
-      "titleEn": "Edge AI and agent desktops are extending compute competition from cloud to chips, OS, and consumer-electronics supply...",
-      "href": "/investor/theses/thesis-ffa474a3f2/",
-      "laneId": "lane_74d352e86208",
-      "lane": "端侧 AI/Agent 桌面",
-      "laneHref": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 62,
-      "supports": 1,
-      "risks": 0,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "AI端侧Agent与PC芯片利润池重分配 - 首席策略师研究记录，2026-06-02",
-          "summary": "AI端侧Agent与PC芯片利润池重分配 - 首席策略师研究记录，2026-06-02",
-          "href": "/investor/reports/archive-adc965b17fa5/",
-          "stance": "supports",
-          "stanceLabel": "支持"
-        }
-      ],
-      "stockTickers": [
-        "MSFT",
-        "META",
-        "NVDA",
-        "AAPL",
-        "AMZN",
-        "ARM",
-        "QCOM",
-        "AMD",
-        "GOOGL",
-        "002475.SZ"
-      ]
-    },
-    {
       "id": "thesis-42faeae623",
       "title": "CPO、光互联与铜连接决定 AI 集群内部租金迁移",
       "titleEn": "CPO, optical interconnect, and copper links define rent migration inside AI clusters",
@@ -759,7 +722,7 @@
       "laneHref": "/investor/lanes/cpo-optical-modules-and-high-speed-interconnect/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 59,
+      "conviction": 62,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -785,6 +748,43 @@
         "TSM",
         "MSFT"
       ]
+    },
+    {
+      "id": "thesis-ffa474a3f2",
+      "title": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
+      "titleEn": "Edge AI and agent desktops are extending compute competition from cloud to chips, OS, and consumer-electronics supply...",
+      "href": "/investor/theses/thesis-ffa474a3f2/",
+      "laneId": "lane_74d352e86208",
+      "lane": "端侧 AI/Agent 桌面",
+      "laneHref": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 62,
+      "supports": 1,
+      "risks": 0,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "AI端侧Agent与PC芯片利润池重分配 - 首席策略师研究记录，2026-06-02",
+          "summary": "AI端侧Agent与PC芯片利润池重分配 - 首席策略师研究记录，2026-06-02",
+          "href": "/investor/reports/archive-adc965b17fa5/",
+          "stance": "supports",
+          "stanceLabel": "支持"
+        }
+      ],
+      "stockTickers": [
+        "MSFT",
+        "NVDA",
+        "META",
+        "AAPL",
+        "AMZN",
+        "ARM",
+        "QCOM",
+        "AMD",
+        "GOOGL",
+        "AVGO"
+      ]
     }
   ],
   "lanes": [
@@ -794,7 +794,7 @@
       "href": "/investor/lanes/ai-compute-semiconductors/",
       "thesisCount": 4,
       "eventCount": 6,
-      "convictionTotal": 286,
+      "convictionTotal": 285,
       "stockTickers": [
         "META",
         "NVDA",
@@ -807,7 +807,7 @@
         "AMZN",
         "GOOGL"
       ],
-      "avgConviction": 72
+      "avgConviction": 71
     },
     {
       "id": "lane_f1a271385aff",
@@ -833,33 +833,12 @@
       "avgConviction": 66
     },
     {
-      "id": "lane_74d352e86208",
-      "title": "端侧 AI/Agent 桌面",
-      "href": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 62,
-      "stockTickers": [
-        "MSFT",
-        "META",
-        "NVDA",
-        "AAPL",
-        "AMZN",
-        "ARM",
-        "QCOM",
-        "AMD",
-        "GOOGL",
-        "002475.SZ"
-      ],
-      "avgConviction": 62
-    },
-    {
       "id": "lane_1f0136d57956",
       "title": "CPO/光模块/高速互联",
       "href": "/investor/lanes/cpo-optical-modules-and-high-speed-interconnect/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 59,
+      "convictionTotal": 62,
       "stockTickers": [
         "300308.SZ",
         "NVDA",
@@ -872,7 +851,28 @@
         "TSM",
         "MSFT"
       ],
-      "avgConviction": 59
+      "avgConviction": 62
+    },
+    {
+      "id": "lane_74d352e86208",
+      "title": "端侧 AI/Agent 桌面",
+      "href": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "convictionTotal": 62,
+      "stockTickers": [
+        "MSFT",
+        "NVDA",
+        "META",
+        "AAPL",
+        "AMZN",
+        "ARM",
+        "QCOM",
+        "AMD",
+        "GOOGL",
+        "AVGO"
+      ],
+      "avgConviction": 62
     }
   ],
   "stocks": [
@@ -886,8 +886,8 @@
       "lanes": [
         "AI 算力半导体",
         "先进封装/HBM4 闸门",
-        "端侧 AI/Agent 桌面",
-        "CPO/光模块/高速互联"
+        "CPO/光模块/高速互联",
+        "端侧 AI/Agent 桌面"
       ]
     },
     {
@@ -937,8 +937,8 @@
       "lanes": [
         "AI 算力半导体",
         "先进封装/HBM4 闸门",
-        "端侧 AI/Agent 桌面",
-        "CPO/光模块/高速互联"
+        "CPO/光模块/高速互联",
+        "端侧 AI/Agent 桌面"
       ]
     },
     {
@@ -959,12 +959,13 @@
       "name": "Broadcom",
       "market": "US",
       "href": "/investor/stocks/AVGO/",
-      "thesisCount": 5,
-      "eventCount": 6,
+      "thesisCount": 6,
+      "eventCount": 7,
       "lanes": [
         "AI 算力半导体",
         "先进封装/HBM4 闸门",
-        "CPO/光模块/高速互联"
+        "CPO/光模块/高速互联",
+        "端侧 AI/Agent 桌面"
       ]
     },
     {
@@ -977,8 +978,8 @@
       "lanes": [
         "先进封装/HBM4 闸门",
         "AI 算力半导体",
-        "端侧 AI/Agent 桌面",
-        "CPO/光模块/高速互联"
+        "CPO/光模块/高速互联",
+        "端侧 AI/Agent 桌面"
       ]
     },
     {
@@ -1040,50 +1041,6 @@
       ]
     },
     {
-      "ticker": "AAPL",
-      "name": "Apple",
-      "market": "US",
-      "href": "/investor/stocks/AAPL/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "端侧 AI/Agent 桌面"
-      ]
-    },
-    {
-      "ticker": "ARM",
-      "name": "Arm Holdings",
-      "market": "US",
-      "href": "/investor/stocks/ARM/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "端侧 AI/Agent 桌面"
-      ]
-    },
-    {
-      "ticker": "QCOM",
-      "name": "Qualcomm",
-      "market": "US",
-      "href": "/investor/stocks/QCOM/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "端侧 AI/Agent 桌面"
-      ]
-    },
-    {
-      "ticker": "002475.SZ",
-      "name": "立讯精密",
-      "market": "A-share",
-      "href": "/investor/stocks/002475.SZ/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "端侧 AI/Agent 桌面"
-      ]
-    },
-    {
       "ticker": "300308.SZ",
       "name": "中际旭创",
       "market": "A-share",
@@ -1136,6 +1093,39 @@
       "eventCount": 1,
       "lanes": [
         "CPO/光模块/高速互联"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "market": "US",
+      "href": "/investor/stocks/AAPL/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "端侧 AI/Agent 桌面"
+      ]
+    },
+    {
+      "ticker": "ARM",
+      "name": "Arm Holdings",
+      "market": "US",
+      "href": "/investor/stocks/ARM/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "端侧 AI/Agent 桌面"
+      ]
+    },
+    {
+      "ticker": "QCOM",
+      "name": "Qualcomm",
+      "market": "US",
+      "href": "/investor/stocks/QCOM/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "端侧 AI/Agent 桌面"
       ]
     }
   ],

@@ -4,7 +4,7 @@
   "dayNumber": 13,
   "status": "recorded",
   "headline": "首席风控官压力测试",
-  "summary": "当日归档 66 份公开研究，23 条研究讨论和 54 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
+  "summary": "当日归档 66 份公开研究，23 条研究讨论和 52 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
   "dominantTopic": {
     "id": "macro-rates",
     "labelZh": "宏观、通胀与利率",
@@ -29,7 +29,7 @@
     "reports": 66,
     "researchThreads": 23,
     "researchNotes": 206,
-    "thesisEvents": 54,
+    "thesisEvents": 52,
     "personaEvents": 11,
     "readerMemos": 0,
     "recaps": 0,
@@ -1509,7 +1509,7 @@
       "laneHref": "/investor/lanes/credit-refinancing-and-private-debt/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 52,
+      "conviction": 56,
       "supports": 0,
       "risks": 3,
       "neutral": 0,
@@ -1541,9 +1541,10 @@
         "KRE",
         "JPM",
         "META",
+        "NVDA",
         "BX",
-        "KKR",
         "ARES",
+        "KKR",
         "APO"
       ]
     },
@@ -1715,7 +1716,7 @@
       "laneHref": "/investor/lanes/ai-reflation-and-rate-sensitive-assets/",
       "direction": "stable",
       "directionLabel": "稳定",
-      "conviction": 56,
+      "conviction": 55,
       "supports": 1,
       "risks": 1,
       "neutral": 0,
@@ -1745,94 +1746,6 @@
         "XLU",
         "TLT",
         "NVDA"
-      ]
-    },
-    {
-      "id": "thesis-08dd090dc9",
-      "title": "公用事业从防御红利切换到电网扩容、容量费与信用再定价",
-      "titleEn": "Utilities are shifting from defensive dividends to grid expansion, capacity fees, and credit repricing",
-      "href": "/investor/theses/thesis-08dd090dc9/",
-      "laneId": "lane_22c1ed929e2e",
-      "lane": "公用事业/电网信用",
-      "laneHref": "/investor/lanes/utilities-grid-rate-base-and-credit/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 53,
-      "supports": 0,
-      "risks": 2,
-      "neutral": 0,
-      "eventCount": 2,
-      "events": [
-        {
-          "title": "资助2万亿美元的电网超级周期：债务可持续性与信用风险",
-          "summary": "既有研究记录— 资助2万亿美元的电网超级周期：债务可持续性与信用风险",
-          "href": "/investor/reports/archive-4459541695b4/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        },
-        {
-          "title": "支撑2万亿美元电网Capex周期的宏观容纳力：利率路径、通胀传导与央行政策对受监管公用事业再融资的...",
-          "summary": "支撑2万亿美元电网Capex周期的宏观容纳力：利率路径、通胀传导与央行政策对受监管公用事业再融资的影响",
-          "href": "/investor/reports/archive-ea7f509f0901/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "AEP",
-        "600900.SH",
-        "CEG",
-        "DUK",
-        "VST",
-        "XLU",
-        "NEE",
-        "META",
-        "SMR",
-        "SO"
-      ]
-    },
-    {
-      "id": "thesis-026aa1679b",
-      "title": "云厂商自发电正在把 AI 交付风险转移到核电、燃气、电网与公用事业信用",
-      "titleEn": "Cloud self-generation is shifting AI delivery risk into nuclear, gas, grid assets, and utility credit",
-      "href": "/investor/theses/thesis-026aa1679b/",
-      "laneId": "lane_136dd1c3c708",
-      "lane": "云厂商自发电/电力资产",
-      "laneHref": "/investor/lanes/cloud-self-generation-and-power-assets/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 53,
-      "supports": 2,
-      "risks": 0,
-      "neutral": 0,
-      "eventCount": 2,
-      "events": [
-        {
-          "title": "美国电力供给与电网并网能否承接2026–2027年超大规模云厂商AI建设节奏？",
-          "summary": "美国电力供给与电网并网能否承接2026–2027年超大规模云厂商AI建设节奏？",
-          "href": "/investor/reports/archive-99896705c1bd/",
-          "stance": "supports",
-          "stanceLabel": "支持"
-        },
-        {
-          "title": "AI需求时代的发电资产投资确定性、核电复兴与PPA定价机制",
-          "summary": "AI需求时代的发电资产投资确定性、核电复兴与PPA定价机制 分析师： energy-analyst 立场： 综合 日期： 2026-05-04",
-          "href": "/investor/reports/archive-3bab9275ab20/",
-          "stance": "supports",
-          "stanceLabel": "支持"
-        }
-      ],
-      "stockTickers": [
-        "VST",
-        "CEG",
-        "SMR",
-        "GEV",
-        "META",
-        "MSFT",
-        "ETN",
-        "AMZN",
-        "AEP",
-        "DUK"
       ]
     },
     {
@@ -1877,6 +1790,50 @@
         "XPEV",
         "002594.SZ",
         "2015.HK"
+      ]
+    },
+    {
+      "id": "thesis-026aa1679b",
+      "title": "云厂商自发电正在把 AI 交付风险转移到核电、燃气、电网与公用事业信用",
+      "titleEn": "Cloud self-generation is shifting AI delivery risk into nuclear, gas, grid assets, and utility credit",
+      "href": "/investor/theses/thesis-026aa1679b/",
+      "laneId": "lane_136dd1c3c708",
+      "lane": "云厂商自发电/电力资产",
+      "laneHref": "/investor/lanes/cloud-self-generation-and-power-assets/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 50,
+      "supports": 2,
+      "risks": 0,
+      "neutral": 0,
+      "eventCount": 2,
+      "events": [
+        {
+          "title": "美国电力供给与电网并网能否承接2026–2027年超大规模云厂商AI建设节奏？",
+          "summary": "美国电力供给与电网并网能否承接2026–2027年超大规模云厂商AI建设节奏？",
+          "href": "/investor/reports/archive-99896705c1bd/",
+          "stance": "supports",
+          "stanceLabel": "支持"
+        },
+        {
+          "title": "AI需求时代的发电资产投资确定性、核电复兴与PPA定价机制",
+          "summary": "AI需求时代的发电资产投资确定性、核电复兴与PPA定价机制 分析师： energy-analyst 立场： 综合 日期： 2026-05-04",
+          "href": "/investor/reports/archive-3bab9275ab20/",
+          "stance": "supports",
+          "stanceLabel": "支持"
+        }
+      ],
+      "stockTickers": [
+        "VST",
+        "CEG",
+        "SMR",
+        "GEV",
+        "META",
+        "MSFT",
+        "ETN",
+        "AMZN",
+        "AEP",
+        "DUK"
       ]
     },
     {
@@ -2061,36 +2018,6 @@
       ]
     },
     {
-      "id": "thesis-69025fa4b4",
-      "title": "驱动对冲阶梯的 Fed / BoJ / ECB 政策路径",
-      "titleEn": "Practical research topic: 驱动对冲阶梯的 Fed / BoJ / ECB 政策路径",
-      "href": "/investor/theses/thesis-69025fa4b4/",
-      "laneId": "lane_1c216bd29875",
-      "lane": "美债利率/美元再定价",
-      "laneHref": "/investor/lanes/us-rates-and-dollar-repricing/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 81,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "FX 策略报告：5.4 万亿日元干预后，BOJ 6 月不加息情形下 USD/JPY 突破 160 的概率评估",
-          "summary": "FX 策略报告：5.4 万亿日元干预后，BOJ 6 月不加息情形下 USD/JPY 突破 160 的概率评估",
-          "href": "/investor/reports/archive-0d3f083b0c5b/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "JPM",
-        "TLT",
-        "IEF"
-      ]
-    },
-    {
       "id": "thesis-e58a9e8746",
       "title": "日元carry平仓触发后的全球债券与成长股配置冲击",
       "titleEn": "Practical research topic: 日元carry平仓触发后的全球债券与成长股配置冲击",
@@ -2118,6 +2045,36 @@
         "TSM",
         "FXY",
         "UUP"
+      ]
+    },
+    {
+      "id": "thesis-69025fa4b4",
+      "title": "驱动对冲阶梯的 Fed / BoJ / ECB 政策路径",
+      "titleEn": "Practical research topic: 驱动对冲阶梯的 Fed / BoJ / ECB 政策路径",
+      "href": "/investor/theses/thesis-69025fa4b4/",
+      "laneId": "lane_1c216bd29875",
+      "lane": "美债利率/美元再定价",
+      "laneHref": "/investor/lanes/us-rates-and-dollar-repricing/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 81,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "FX 策略报告：5.4 万亿日元干预后，BOJ 6 月不加息情形下 USD/JPY 突破 160 的概率评估",
+          "summary": "FX 策略报告：5.4 万亿日元干预后，BOJ 6 月不加息情形下 USD/JPY 突破 160 的概率评估",
+          "href": "/investor/reports/archive-0d3f083b0c5b/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "JPM",
+        "TLT",
+        "IEF"
       ]
     },
     {
@@ -2212,13 +2169,13 @@
       ]
     },
     {
-      "id": "thesis-8ca3d181f3",
-      "title": "能源价格重心的下移提供了一次缓和全球“滞胀”压力的正向供给冲击，虽然成功消解了美欧央行的强行加息风险，但在低储蓄率、物流滞后与-273…",
-      "titleEn": "Practical research topic: 能源价格重心的下移提供了一次缓和全球“滞胀”压力的正向供给冲击，虽然成功消解了美欧央行的强行加息风险，但在低储蓄率、物流滞后与-273…",
-      "href": "/investor/theses/thesis-8ca3d181f3/",
-      "laneId": "lane_1c216bd29875",
-      "lane": "美债利率/美元再定价",
-      "laneHref": "/investor/lanes/us-rates-and-dollar-repricing/",
+      "id": "thesis-4ad776c10c",
+      "title": "地缘缓和致WTI重挫超6%至76.05美元，但美联储维持偏鹰加息倾向，通胀降温与高实际利率并存。这是否标志着上游资源品通胀红利估值逻辑的…",
+      "titleEn": "Practical research topic: 地缘缓和致WTI重挫超6%至76.05美元，但美联储维持偏鹰加息倾向，通胀降温与高实际利率并存。这是否标志着上游资源品通胀红利估值逻辑的…",
+      "href": "/investor/theses/thesis-4ad776c10c/",
+      "laneId": "lane_93300d58763e",
+      "lane": "油气/地缘通胀",
+      "laneHref": "/investor/lanes/oil-gas-and-geopolitical-inflation/",
       "direction": "conflicting",
       "directionLabel": "分歧",
       "conviction": 79,
@@ -2228,17 +2185,17 @@
       "eventCount": 1,
       "events": [
         {
-          "title": "H4L 与约 5,700 亿美元到期墙下的区域性银行 CRE 信用压力测试",
-          "summary": "H4L 与约 5,700 亿美元到期墙下的区域性银行 CRE 信用压力测试",
-          "href": "/investor/reports/archive-b1f4a8871762/",
+          "title": "支撑2万亿美元电网Capex周期的宏观容纳力：利率路径、通胀传导与央行政策对受监管公用事业再融资的...",
+          "summary": "支撑2万亿美元电网Capex周期的宏观容纳力：利率路径、通胀传导与央行政策对受监管公用事业再融资的影响",
+          "href": "/investor/reports/archive-ea7f509f0901/",
           "stance": "risk",
           "stanceLabel": "风险"
         }
       ],
       "stockTickers": [
-        "JPM",
-        "TLT",
-        "IEF"
+        "SLB",
+        "OXY",
+        "0883.HK"
       ]
     },
     {
@@ -2299,36 +2256,6 @@
         "JPM",
         "TLT",
         "IEF"
-      ]
-    },
-    {
-      "id": "thesis-4ad776c10c",
-      "title": "地缘缓和致WTI重挫超6%至76.05美元，但美联储维持偏鹰加息倾向，通胀降温与高实际利率并存。这是否标志着上游资源品通胀红利估值逻辑的…",
-      "titleEn": "Practical research topic: 地缘缓和致WTI重挫超6%至76.05美元，但美联储维持偏鹰加息倾向，通胀降温与高实际利率并存。这是否标志着上游资源品通胀红利估值逻辑的…",
-      "href": "/investor/theses/thesis-4ad776c10c/",
-      "laneId": "lane_93300d58763e",
-      "lane": "油气/地缘通胀",
-      "laneHref": "/investor/lanes/oil-gas-and-geopolitical-inflation/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 78,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "支撑2万亿美元电网Capex周期的宏观容纳力：利率路径、通胀传导与央行政策对受监管公用事业再融资的...",
-          "summary": "支撑2万亿美元电网Capex周期的宏观容纳力：利率路径、通胀传导与央行政策对受监管公用事业再融资的影响",
-          "href": "/investor/reports/archive-ea7f509f0901/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "SLB",
-        "OXY",
-        "0883.HK"
       ]
     },
     {
@@ -2460,6 +2387,41 @@
       ]
     },
     {
+      "id": "thesis-89c14497ac",
+      "title": "期权伽马、ETF 与尾盘流动性正在放大主题交易的微观结构风险",
+      "titleEn": "Options gamma, ETFs, and closing liquidity are amplifying microstructure risk in theme trades",
+      "href": "/investor/theses/thesis-89c14497ac/",
+      "laneId": "lane_2ba2ee6db1ee",
+      "lane": "期权伽马/市场微观结构",
+      "laneHref": "/investor/lanes/options-gamma-and-market-microstructure/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 64,
+      "supports": 1,
+      "risks": 0,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "宏观防火墙的衍生品结构化：SOX保险、CNH/JPY覆盖与UST期权层",
+          "summary": "既有研究记录 — 衍生品策略师 (Derivatives Strategist) 立场：SYNTHESIZE（综合） 日期：2026-05-04 工作区说明： 所有上游文件（ 研究档案 、 研究档案 、...",
+          "href": "/investor/reports/archive-ada42b6aac59/",
+          "stance": "supports",
+          "stanceLabel": "支持"
+        }
+      ],
+      "stockTickers": [
+        "CBOE",
+        "CME",
+        "588000.SH",
+        "NVDA",
+        "HOOD",
+        "IBKR",
+        "VIRT",
+        "VIXY"
+      ]
+    },
+    {
       "id": "thesis-603a5f7966",
       "title": "A 股硬科技与科创50的复苏需要订单、融资盘和指数结构共振",
       "titleEn": "A-share hard tech and STAR50 recovery needs orders, margin positioning, and index structure to align",
@@ -2497,41 +2459,6 @@
       ]
     },
     {
-      "id": "thesis-89c14497ac",
-      "title": "期权伽马、ETF 与尾盘流动性正在放大主题交易的微观结构风险",
-      "titleEn": "Options gamma, ETFs, and closing liquidity are amplifying microstructure risk in theme trades",
-      "href": "/investor/theses/thesis-89c14497ac/",
-      "laneId": "lane_2ba2ee6db1ee",
-      "lane": "期权伽马/市场微观结构",
-      "laneHref": "/investor/lanes/options-gamma-and-market-microstructure/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 62,
-      "supports": 1,
-      "risks": 0,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "宏观防火墙的衍生品结构化：SOX保险、CNH/JPY覆盖与UST期权层",
-          "summary": "既有研究记录 — 衍生品策略师 (Derivatives Strategist) 立场：SYNTHESIZE（综合） 日期：2026-05-04 工作区说明： 所有上游文件（ 研究档案 、 研究档案 、...",
-          "href": "/investor/reports/archive-ada42b6aac59/",
-          "stance": "supports",
-          "stanceLabel": "支持"
-        }
-      ],
-      "stockTickers": [
-        "CBOE",
-        "CME",
-        "588000.SH",
-        "NVDA",
-        "HOOD",
-        "IBKR",
-        "VIRT",
-        "VIXY"
-      ]
-    },
-    {
       "id": "thesis-ffa474a3f2",
       "title": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
       "titleEn": "Edge AI and agent desktops are extending compute competition from cloud to chips, OS, and consumer-electronics supply...",
@@ -2557,15 +2484,50 @@
       ],
       "stockTickers": [
         "MSFT",
-        "META",
         "NVDA",
+        "META",
         "AAPL",
         "AMZN",
         "ARM",
         "QCOM",
         "AMD",
         "GOOGL",
-        "002475.SZ"
+        "AVGO"
+      ]
+    },
+    {
+      "id": "thesis-fd31cc177b",
+      "title": "债券供给、地方债与久期需求决定利率下行空间",
+      "titleEn": "Bond supply, local-government debt, and duration demand define room for rates to fall",
+      "href": "/investor/theses/thesis-fd31cc177b/",
+      "laneId": "lane_6fbf93c613f9",
+      "lane": "债券供给/银行久期",
+      "laneHref": "/investor/lanes/bond-supply-and-bank-duration/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 58,
+      "supports": 1,
+      "risks": 0,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "前序研究 — 利率、曲线与久期综合：为「能源—工资」持续路径定价",
+          "summary": "分析师: bond-analyst (债券分析师) 立场: synthesize - 日期: 2026-05-04 - 输入: 前序研究（首席经济学家，\"Fed 保留有条件宽松倾向但近期无法降息\"）、前序研究（能源行业分析师，\"Q2 能源持...",
+          "href": "/investor/reports/archive-242770343539/",
+          "stance": "supports",
+          "stanceLabel": "支持"
+        }
+      ],
+      "stockTickers": [
+        "601398.SH",
+        "601939.SH",
+        "601288.SH",
+        "3988.HK",
+        "600900.SH",
+        "TLT",
+        "IEF",
+        "000001.SZ"
       ]
     },
     {
@@ -2596,46 +2558,48 @@
         "CME",
         "TLT",
         "JPM",
+        "GLD",
         "META",
         "AMZN",
-        "AEP",
-        "MSFT",
+        "IEF",
         "KRE"
       ]
     },
     {
-      "id": "thesis-fd31cc177b",
-      "title": "债券供给、地方债与久期需求决定利率下行空间",
-      "titleEn": "Bond supply, local-government debt, and duration demand define room for rates to fall",
-      "href": "/investor/theses/thesis-fd31cc177b/",
-      "laneId": "lane_6fbf93c613f9",
-      "lane": "债券供给/银行久期",
-      "laneHref": "/investor/lanes/bond-supply-and-bank-duration/",
+      "id": "thesis-08dd090dc9",
+      "title": "公用事业从防御红利切换到电网扩容、容量费与信用再定价",
+      "titleEn": "Utilities are shifting from defensive dividends to grid expansion, capacity fees, and credit repricing",
+      "href": "/investor/theses/thesis-08dd090dc9/",
+      "laneId": "lane_22c1ed929e2e",
+      "lane": "公用事业/电网信用",
+      "laneHref": "/investor/lanes/utilities-grid-rate-base-and-credit/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 57,
-      "supports": 1,
-      "risks": 0,
+      "conviction": 53,
+      "supports": 0,
+      "risks": 1,
       "neutral": 0,
       "eventCount": 1,
       "events": [
         {
-          "title": "前序研究 — 利率、曲线与久期综合：为「能源—工资」持续路径定价",
-          "summary": "分析师: bond-analyst (债券分析师) 立场: synthesize - 日期: 2026-05-04 - 输入: 前序研究（首席经济学家，\"Fed 保留有条件宽松倾向但近期无法降息\"）、前序研究（能源行业分析师，\"Q2 能源持...",
-          "href": "/investor/reports/archive-242770343539/",
-          "stance": "supports",
-          "stanceLabel": "支持"
+          "title": "资助2万亿美元的电网超级周期：债务可持续性与信用风险",
+          "summary": "既有研究记录— 资助2万亿美元的电网超级周期：债务可持续性与信用风险",
+          "href": "/investor/reports/archive-4459541695b4/",
+          "stance": "risk",
+          "stanceLabel": "风险"
         }
       ],
       "stockTickers": [
-        "601398.SH",
-        "601939.SH",
-        "601288.SH",
-        "3988.HK",
+        "AEP",
         "600900.SH",
-        "TLT",
-        "IEF",
-        "000001.SZ"
+        "CEG",
+        "DUK",
+        "VST",
+        "XLU",
+        "META",
+        "NEE",
+        "SMR",
+        "SO"
       ]
     },
     {
@@ -2793,7 +2757,7 @@
       "laneHref": "/investor/lanes/portfolio-risk-and-evidence-quality/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 44,
+      "conviction": 43,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -2821,21 +2785,20 @@
       "id": "lane_1c216bd29875",
       "title": "美债利率/美元再定价",
       "href": "/investor/lanes/us-rates-and-dollar-repricing/",
-      "thesisCount": 6,
-      "eventCount": 6,
-      "convictionTotal": 459,
+      "thesisCount": 5,
+      "eventCount": 5,
+      "convictionTotal": 380,
       "stockTickers": [
         "JPM",
         "TLT",
         "IEF",
         "CME",
+        "GLD",
         "META",
         "AMZN",
-        "AEP",
-        "MSFT",
         "KRE"
       ],
-      "avgConviction": 77
+      "avgConviction": 76
     },
     {
       "id": "lane_b29e1d216a21",
@@ -2843,17 +2806,18 @@
       "href": "/investor/lanes/credit-refinancing-and-private-debt/",
       "thesisCount": 2,
       "eventCount": 5,
-      "convictionTotal": 116,
+      "convictionTotal": 120,
       "stockTickers": [
         "KRE",
         "JPM",
         "KKR",
         "META",
+        "NVDA",
         "BX",
         "ARES",
         "APO"
       ],
-      "avgConviction": 58
+      "avgConviction": 60
     },
     {
       "id": "lane_f3e413e8ce27",
@@ -2875,7 +2839,7 @@
       "href": "/investor/lanes/cloud-self-generation-and-power-assets/",
       "thesisCount": 3,
       "eventCount": 4,
-      "convictionTotal": 198,
+      "convictionTotal": 195,
       "stockTickers": [
         "GEV",
         "CEG",
@@ -2889,7 +2853,7 @@
         "AEP",
         "DUK"
       ],
-      "avgConviction": 66
+      "avgConviction": 65
     },
     {
       "id": "lane_c40c2ce413ec",
@@ -2911,7 +2875,7 @@
       "href": "/investor/lanes/oil-gas-and-geopolitical-inflation/",
       "thesisCount": 2,
       "eventCount": 3,
-      "convictionTotal": 156,
+      "convictionTotal": 157,
       "stockTickers": [
         "SLB",
         "OXY",
@@ -2919,7 +2883,7 @@
         "CVX",
         "XOM"
       ],
-      "avgConviction": 78
+      "avgConviction": 79
     },
     {
       "id": "lane_13710af7e06d",
@@ -3027,7 +2991,7 @@
       "href": "/investor/lanes/ai-reflation-and-rate-sensitive-assets/",
       "thesisCount": 1,
       "eventCount": 2,
-      "convictionTotal": 56,
+      "convictionTotal": 55,
       "stockTickers": [
         "META",
         "MSFT",
@@ -3038,28 +3002,7 @@
         "TLT",
         "NVDA"
       ],
-      "avgConviction": 56
-    },
-    {
-      "id": "lane_22c1ed929e2e",
-      "title": "公用事业/电网信用",
-      "href": "/investor/lanes/utilities-grid-rate-base-and-credit/",
-      "thesisCount": 1,
-      "eventCount": 2,
-      "convictionTotal": 53,
-      "stockTickers": [
-        "AEP",
-        "600900.SH",
-        "CEG",
-        "DUK",
-        "VST",
-        "XLU",
-        "NEE",
-        "META",
-        "SMR",
-        "SO"
-      ],
-      "avgConviction": 53
+      "avgConviction": 55
     },
     {
       "id": "lane_0cb100fcf8da",
@@ -3113,6 +3056,25 @@
       "avgConviction": 65
     },
     {
+      "id": "lane_2ba2ee6db1ee",
+      "title": "期权伽马/市场微观结构",
+      "href": "/investor/lanes/options-gamma-and-market-microstructure/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "convictionTotal": 64,
+      "stockTickers": [
+        "CBOE",
+        "CME",
+        "588000.SH",
+        "NVDA",
+        "HOOD",
+        "IBKR",
+        "VIRT",
+        "VIXY"
+      ],
+      "avgConviction": 64
+    },
+    {
       "id": "lane_4cc1e74d8e5f",
       "title": "A股硬科技/科创50",
       "href": "/investor/lanes/a-share-hard-tech-and-star50/",
@@ -3134,25 +3096,6 @@
       "avgConviction": 62
     },
     {
-      "id": "lane_2ba2ee6db1ee",
-      "title": "期权伽马/市场微观结构",
-      "href": "/investor/lanes/options-gamma-and-market-microstructure/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 62,
-      "stockTickers": [
-        "CBOE",
-        "CME",
-        "588000.SH",
-        "NVDA",
-        "HOOD",
-        "IBKR",
-        "VIRT",
-        "VIXY"
-      ],
-      "avgConviction": 62
-    },
-    {
       "id": "lane_74d352e86208",
       "title": "端侧 AI/Agent 桌面",
       "href": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
@@ -3161,15 +3104,15 @@
       "convictionTotal": 62,
       "stockTickers": [
         "MSFT",
-        "META",
         "NVDA",
+        "META",
         "AAPL",
         "AMZN",
         "ARM",
         "QCOM",
         "AMD",
         "GOOGL",
-        "002475.SZ"
+        "AVGO"
       ],
       "avgConviction": 62
     },
@@ -3179,7 +3122,7 @@
       "href": "/investor/lanes/bond-supply-and-bank-duration/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 57,
+      "convictionTotal": 58,
       "stockTickers": [
         "601398.SH",
         "601939.SH",
@@ -3190,7 +3133,28 @@
         "IEF",
         "000001.SZ"
       ],
-      "avgConviction": 57
+      "avgConviction": 58
+    },
+    {
+      "id": "lane_22c1ed929e2e",
+      "title": "公用事业/电网信用",
+      "href": "/investor/lanes/utilities-grid-rate-base-and-credit/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "convictionTotal": 53,
+      "stockTickers": [
+        "AEP",
+        "600900.SH",
+        "CEG",
+        "DUK",
+        "VST",
+        "XLU",
+        "META",
+        "NEE",
+        "SMR",
+        "SO"
+      ],
+      "avgConviction": 53
     },
     {
       "id": "lane_0679894fe06b",
@@ -3258,7 +3222,7 @@
       "href": "/investor/lanes/portfolio-risk-and-evidence-quality/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 44,
+      "convictionTotal": 43,
       "stockTickers": [
         "CME",
         "CBOE",
@@ -3266,32 +3230,17 @@
         "VIRT",
         "SH"
       ],
-      "avgConviction": 44
+      "avgConviction": 43
     }
   ],
   "stocks": [
-    {
-      "ticker": "META",
-      "name": "Meta Platforms",
-      "market": "US",
-      "href": "/investor/stocks/META/",
-      "thesisCount": 12,
-      "eventCount": 20,
-      "lanes": [
-        "AI 软件效率/生产率",
-        "Mag7 AI 平台再分层",
-        "端侧 AI/Agent 桌面",
-        "美债利率/美元再定价",
-        "AI 再通胀/利率敏感资产"
-      ]
-    },
     {
       "ticker": "NVDA",
       "name": "NVIDIA",
       "market": "US",
       "href": "/investor/stocks/NVDA/",
-      "thesisCount": 11,
-      "eventCount": 19,
+      "thesisCount": 12,
+      "eventCount": 22,
       "lanes": [
         "低价模型/AI 软件利润池",
         "Mag7 AI 平台再分层",
@@ -3301,18 +3250,33 @@
       ]
     },
     {
+      "ticker": "META",
+      "name": "Meta Platforms",
+      "market": "US",
+      "href": "/investor/stocks/META/",
+      "thesisCount": 12,
+      "eventCount": 19,
+      "lanes": [
+        "AI 软件效率/生产率",
+        "Mag7 AI 平台再分层",
+        "端侧 AI/Agent 桌面",
+        "美债利率/美元再定价",
+        "信用再融资/私募信贷"
+      ]
+    },
+    {
       "ticker": "MSFT",
       "name": "Microsoft",
       "market": "US",
       "href": "/investor/stocks/MSFT/",
-      "thesisCount": 11,
-      "eventCount": 18,
+      "thesisCount": 10,
+      "eventCount": 17,
       "lanes": [
         "AI 软件效率/生产率",
         "低价模型/AI 软件利润池",
         "Mag7 AI 平台再分层",
         "端侧 AI/Agent 桌面",
-        "美债利率/美元再定价"
+        "AI 再通胀/利率敏感资产"
       ]
     },
     {
@@ -3335,8 +3299,8 @@
       "name": "JPMorgan Chase",
       "market": "US",
       "href": "/investor/stocks/JPM/",
-      "thesisCount": 8,
-      "eventCount": 11,
+      "thesisCount": 7,
+      "eventCount": 10,
       "lanes": [
         "美债利率/美元再定价",
         "信用再融资/私募信贷"
@@ -3362,8 +3326,8 @@
       "name": "iShares 20+ Year Treasury Bond ETF",
       "market": "US ETF",
       "href": "/investor/stocks/TLT/",
-      "thesisCount": 8,
-      "eventCount": 9,
+      "thesisCount": 7,
+      "eventCount": 8,
       "lanes": [
         "美债利率/美元再定价",
         "债券供给/银行久期",
@@ -3399,32 +3363,6 @@
       ]
     },
     {
-      "ticker": "CEG",
-      "name": "Constellation Energy",
-      "market": "US",
-      "href": "/investor/stocks/CEG/",
-      "thesisCount": 6,
-      "eventCount": 8,
-      "lanes": [
-        "云厂商自发电/电力资产",
-        "AI 电力/电网设备",
-        "公用事业/电网信用"
-      ]
-    },
-    {
-      "ticker": "VST",
-      "name": "Vistra",
-      "market": "US",
-      "href": "/investor/stocks/VST/",
-      "thesisCount": 6,
-      "eventCount": 8,
-      "lanes": [
-        "云厂商自发电/电力资产",
-        "AI 电力/电网设备",
-        "公用事业/电网信用"
-      ]
-    },
-    {
       "ticker": "UUP",
       "name": "Invesco DB US Dollar Index Bullish Fund",
       "market": "US ETF",
@@ -3447,6 +3385,32 @@
         "日元套息/EM 科技流动性",
         "Mag7 AI 平台再分层",
         "先进封装/HBM4 闸门"
+      ]
+    },
+    {
+      "ticker": "CEG",
+      "name": "Constellation Energy",
+      "market": "US",
+      "href": "/investor/stocks/CEG/",
+      "thesisCount": 6,
+      "eventCount": 7,
+      "lanes": [
+        "云厂商自发电/电力资产",
+        "AI 电力/电网设备",
+        "公用事业/电网信用"
+      ]
+    },
+    {
+      "ticker": "VST",
+      "name": "Vistra",
+      "market": "US",
+      "href": "/investor/stocks/VST/",
+      "thesisCount": 6,
+      "eventCount": 7,
+      "lanes": [
+        "云厂商自发电/电力资产",
+        "AI 电力/电网设备",
+        "公用事业/电网信用"
       ]
     },
     {
@@ -3508,32 +3472,6 @@
         "Mag7 AI 平台再分层",
         "具身智能/机器人零部件",
         "自动驾驶/Robotaxi 单位经济"
-      ]
-    },
-    {
-      "ticker": "AEP",
-      "name": "American Electric Power",
-      "market": "US",
-      "href": "/investor/stocks/AEP/",
-      "thesisCount": 3,
-      "eventCount": 5,
-      "lanes": [
-        "美债利率/美元再定价",
-        "公用事业/电网信用",
-        "云厂商自发电/电力资产"
-      ]
-    },
-    {
-      "ticker": "SMR",
-      "name": "NuScale Power",
-      "market": "US",
-      "href": "/investor/stocks/SMR/",
-      "thesisCount": 3,
-      "eventCount": 5,
-      "lanes": [
-        "公用事业/电网信用",
-        "数据中心地产/液冷",
-        "云厂商自发电/电力资产"
       ]
     },
     {
@@ -3607,16 +3545,16 @@
       ]
     },
     {
-      "ticker": "600900.SH",
-      "name": "长江电力",
-      "market": "A-share",
-      "href": "/investor/stocks/600900.SH/",
+      "ticker": "SMR",
+      "name": "NuScale Power",
+      "market": "US",
+      "href": "/investor/stocks/SMR/",
       "thesisCount": 3,
       "eventCount": 4,
       "lanes": [
-        "A股硬科技/科创50",
-        "债券供给/银行久期",
-        "公用事业/电网信用"
+        "公用事业/电网信用",
+        "数据中心地产/液冷",
+        "云厂商自发电/电力资产"
       ]
     },
     {
@@ -3680,30 +3618,6 @@
       ]
     },
     {
-      "ticker": "XLU",
-      "name": "Utilities Select Sector SPDR",
-      "market": "US ETF",
-      "href": "/investor/stocks/XLU/",
-      "thesisCount": 2,
-      "eventCount": 4,
-      "lanes": [
-        "AI 再通胀/利率敏感资产",
-        "公用事业/电网信用"
-      ]
-    },
-    {
-      "ticker": "DUK",
-      "name": "Duke Energy",
-      "market": "US",
-      "href": "/investor/stocks/DUK/",
-      "thesisCount": 2,
-      "eventCount": 4,
-      "lanes": [
-        "公用事业/电网信用",
-        "云厂商自发电/电力资产"
-      ]
-    },
-    {
       "ticker": "FXI",
       "name": "iShares China Large-Cap ETF",
       "market": "US ETF",
@@ -3764,6 +3678,19 @@
       ]
     },
     {
+      "ticker": "600900.SH",
+      "name": "长江电力",
+      "market": "A-share",
+      "href": "/investor/stocks/600900.SH/",
+      "thesisCount": 3,
+      "eventCount": 3,
+      "lanes": [
+        "A股硬科技/科创50",
+        "债券供给/银行久期",
+        "公用事业/电网信用"
+      ]
+    },
+    {
       "ticker": "SLB",
       "name": "SLB",
       "market": "US",
@@ -3772,6 +3699,42 @@
       "eventCount": 3,
       "lanes": [
         "油气/地缘通胀"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "market": "US",
+      "href": "/investor/stocks/AAPL/",
+      "thesisCount": 2,
+      "eventCount": 3,
+      "lanes": [
+        "Mag7 AI 平台再分层",
+        "端侧 AI/Agent 桌面"
+      ]
+    },
+    {
+      "ticker": "XLU",
+      "name": "Utilities Select Sector SPDR",
+      "market": "US ETF",
+      "href": "/investor/stocks/XLU/",
+      "thesisCount": 2,
+      "eventCount": 3,
+      "lanes": [
+        "AI 再通胀/利率敏感资产",
+        "公用事业/电网信用"
+      ]
+    },
+    {
+      "ticker": "AEP",
+      "name": "American Electric Power",
+      "market": "US",
+      "href": "/investor/stocks/AEP/",
+      "thesisCount": 2,
+      "eventCount": 3,
+      "lanes": [
+        "公用事业/电网信用",
+        "云厂商自发电/电力资产"
       ]
     }
   ],

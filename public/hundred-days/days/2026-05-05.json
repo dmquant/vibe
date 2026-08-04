@@ -4,7 +4,7 @@
   "dayNumber": 14,
   "status": "recorded",
   "headline": "首席经济学家对反内卷2.0杠铃配置的宏观压力测试",
-  "summary": "当日归档 34 份公开研究，33 条研究讨论和 19 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
+  "summary": "当日归档 34 份公开研究，33 条研究讨论和 18 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
   "dominantTopic": {
     "id": "macro-rates",
     "labelZh": "宏观、通胀与利率",
@@ -29,7 +29,7 @@
     "reports": 34,
     "researchThreads": 33,
     "researchNotes": 279,
-    "thesisEvents": 19,
+    "thesisEvents": 18,
     "personaEvents": 0,
     "readerMemos": 0,
     "recaps": 0,
@@ -916,12 +916,19 @@
       "laneHref": "/investor/lanes/credit-refinancing-and-private-debt/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 52,
+      "conviction": 56,
       "supports": 2,
-      "risks": 2,
+      "risks": 1,
       "neutral": 0,
-      "eventCount": 4,
+      "eventCount": 3,
       "events": [
+        {
+          "title": "前序研究片 — 消费行业分析师：汽油通胀与区域行信贷收紧对消费者支出的传导压力测试",
+          "summary": "前序研究片 — 消费行业分析师：汽油通胀与区域行信贷收紧对消费者支出的传导压力测试",
+          "href": "/investor/reports/archive-608717370b27/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        },
         {
           "title": "前序研究片研究报告：higher-for-longer与stagflation-lite下的多资产配置",
           "summary": "前序研究片研究报告：higher-for-longer与stagflation-lite下的多资产配置",
@@ -935,29 +942,16 @@
           "href": "/investor/reports/archive-cf9ab9aa6d86/",
           "stance": "supports",
           "stanceLabel": "支持"
-        },
-        {
-          "title": "前序研究片 — 消费行业分析师：汽油通胀与区域行信贷收紧对消费者支出的传导压力测试",
-          "summary": "前序研究片 — 消费行业分析师：汽油通胀与区域行信贷收紧对消费者支出的传导压力测试",
-          "href": "/investor/reports/archive-608717370b27/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        },
-        {
-          "title": "执行方案：2026年行业配置与因子风险管理",
-          "summary": "分析师： chief-strategist 首席策略师 日期： 2026-05-05 任务： 每周宏观报告 立场： 综合研判 研究记录",
-          "href": "/investor/reports/archive-1b2dc8b8c713/",
-          "stance": "risk",
-          "stanceLabel": "风险"
         }
       ],
       "stockTickers": [
         "KRE",
         "JPM",
         "META",
+        "NVDA",
         "BX",
-        "KKR",
         "ARES",
+        "KKR",
         "APO"
       ]
     },
@@ -1081,15 +1075,15 @@
       ],
       "stockTickers": [
         "MSFT",
-        "META",
         "NVDA",
+        "META",
         "AAPL",
         "AMZN",
         "ARM",
         "QCOM",
         "AMD",
         "GOOGL",
-        "002475.SZ"
+        "AVGO"
       ]
     },
     {
@@ -1317,7 +1311,7 @@
       "laneHref": "/investor/lanes/china-export-manufacturing-and-margins/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 47,
+      "conviction": 49,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -1383,24 +1377,6 @@
   ],
   "lanes": [
     {
-      "id": "lane_b29e1d216a21",
-      "title": "信用再融资/私募信贷",
-      "href": "/investor/lanes/credit-refinancing-and-private-debt/",
-      "thesisCount": 2,
-      "eventCount": 5,
-      "convictionTotal": 116,
-      "stockTickers": [
-        "KRE",
-        "JPM",
-        "KKR",
-        "META",
-        "BX",
-        "ARES",
-        "APO"
-      ],
-      "avgConviction": 58
-    },
-    {
       "id": "lane_c40c2ce413ec",
       "title": "人民币/美元流动性敏感资产",
       "href": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
@@ -1413,6 +1389,25 @@
         "FXI"
       ],
       "avgConviction": 80
+    },
+    {
+      "id": "lane_b29e1d216a21",
+      "title": "信用再融资/私募信贷",
+      "href": "/investor/lanes/credit-refinancing-and-private-debt/",
+      "thesisCount": 2,
+      "eventCount": 4,
+      "convictionTotal": 120,
+      "stockTickers": [
+        "KRE",
+        "JPM",
+        "KKR",
+        "META",
+        "NVDA",
+        "BX",
+        "ARES",
+        "APO"
+      ],
+      "avgConviction": 60
     },
     {
       "id": "lane_13710af7e06d",
@@ -1464,15 +1459,15 @@
       "convictionTotal": 62,
       "stockTickers": [
         "MSFT",
-        "META",
         "NVDA",
+        "META",
         "AAPL",
         "AMZN",
         "ARM",
         "QCOM",
         "AMD",
         "GOOGL",
-        "002475.SZ"
+        "AVGO"
       ],
       "avgConviction": 62
     },
@@ -1515,7 +1510,7 @@
       "href": "/investor/lanes/china-export-manufacturing-and-margins/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 47,
+      "convictionTotal": 49,
       "stockTickers": [
         "000333.SZ",
         "600690.SH",
@@ -1527,7 +1522,7 @@
         "002475.SZ",
         "2020.HK"
       ],
-      "avgConviction": 47
+      "avgConviction": 49
     },
     {
       "id": "lane_e69b58816f80",
@@ -1553,31 +1548,32 @@
   ],
   "stocks": [
     {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "market": "US",
+      "href": "/investor/stocks/NVDA/",
+      "thesisCount": 5,
+      "eventCount": 10,
+      "lanes": [
+        "低价模型/AI 软件利润池",
+        "Mag7 AI 平台再分层",
+        "中国云/国产算力栈",
+        "端侧 AI/Agent 桌面",
+        "信用再融资/私募信贷"
+      ]
+    },
+    {
       "ticker": "META",
       "name": "Meta Platforms",
       "market": "US",
       "href": "/investor/stocks/META/",
       "thesisCount": 4,
-      "eventCount": 8,
+      "eventCount": 7,
       "lanes": [
         "Mag7 AI 平台再分层",
         "端侧 AI/Agent 桌面",
         "信用再融资/私募信贷",
         "能源转型/储能光伏"
-      ]
-    },
-    {
-      "ticker": "NVDA",
-      "name": "NVIDIA",
-      "market": "US",
-      "href": "/investor/stocks/NVDA/",
-      "thesisCount": 4,
-      "eventCount": 7,
-      "lanes": [
-        "低价模型/AI 软件利润池",
-        "Mag7 AI 平台再分层",
-        "中国云/国产算力栈",
-        "端侧 AI/Agent 桌面"
       ]
     },
     {
@@ -1604,39 +1600,6 @@
       "lanes": [
         "人民币/美元流动性敏感资产",
         "日元套息/EM 科技流动性"
-      ]
-    },
-    {
-      "ticker": "KRE",
-      "name": "SPDR S&P Regional Banking ETF",
-      "market": "US ETF",
-      "href": "/investor/stocks/KRE/",
-      "thesisCount": 2,
-      "eventCount": 5,
-      "lanes": [
-        "信用再融资/私募信贷"
-      ]
-    },
-    {
-      "ticker": "JPM",
-      "name": "JPMorgan Chase",
-      "market": "US",
-      "href": "/investor/stocks/JPM/",
-      "thesisCount": 2,
-      "eventCount": 5,
-      "lanes": [
-        "信用再融资/私募信贷"
-      ]
-    },
-    {
-      "ticker": "KKR",
-      "name": "KKR",
-      "market": "US",
-      "href": "/investor/stocks/KKR/",
-      "thesisCount": 2,
-      "eventCount": 5,
-      "lanes": [
-        "信用再融资/私募信贷"
       ]
     },
     {
@@ -1686,33 +1649,33 @@
       ]
     },
     {
-      "ticker": "BX",
-      "name": "Blackstone",
-      "market": "US",
-      "href": "/investor/stocks/BX/",
-      "thesisCount": 1,
+      "ticker": "KRE",
+      "name": "SPDR S&P Regional Banking ETF",
+      "market": "US ETF",
+      "href": "/investor/stocks/KRE/",
+      "thesisCount": 2,
       "eventCount": 4,
       "lanes": [
         "信用再融资/私募信贷"
       ]
     },
     {
-      "ticker": "ARES",
-      "name": "Ares Management",
+      "ticker": "JPM",
+      "name": "JPMorgan Chase",
       "market": "US",
-      "href": "/investor/stocks/ARES/",
-      "thesisCount": 1,
+      "href": "/investor/stocks/JPM/",
+      "thesisCount": 2,
       "eventCount": 4,
       "lanes": [
         "信用再融资/私募信贷"
       ]
     },
     {
-      "ticker": "APO",
-      "name": "Apollo Global Management",
+      "ticker": "KKR",
+      "name": "KKR",
       "market": "US",
-      "href": "/investor/stocks/APO/",
-      "thesisCount": 1,
+      "href": "/investor/stocks/KKR/",
+      "thesisCount": 2,
       "eventCount": 4,
       "lanes": [
         "信用再融资/私募信贷"
@@ -1755,15 +1718,36 @@
       ]
     },
     {
-      "ticker": "002475.SZ",
-      "name": "立讯精密",
-      "market": "A-share",
-      "href": "/investor/stocks/002475.SZ/",
-      "thesisCount": 2,
+      "ticker": "BX",
+      "name": "Blackstone",
+      "market": "US",
+      "href": "/investor/stocks/BX/",
+      "thesisCount": 1,
       "eventCount": 3,
       "lanes": [
-        "端侧 AI/Agent 桌面",
-        "中国出口制造/利润率"
+        "信用再融资/私募信贷"
+      ]
+    },
+    {
+      "ticker": "ARES",
+      "name": "Ares Management",
+      "market": "US",
+      "href": "/investor/stocks/ARES/",
+      "thesisCount": 1,
+      "eventCount": 3,
+      "lanes": [
+        "信用再融资/私募信贷"
+      ]
+    },
+    {
+      "ticker": "APO",
+      "name": "Apollo Global Management",
+      "market": "US",
+      "href": "/investor/stocks/APO/",
+      "thesisCount": 1,
+      "eventCount": 3,
+      "lanes": [
+        "信用再融资/私募信贷"
       ]
     },
     {
@@ -1961,6 +1945,17 @@
       "name": "AMD",
       "market": "US",
       "href": "/investor/stocks/AMD/",
+      "thesisCount": 1,
+      "eventCount": 2,
+      "lanes": [
+        "端侧 AI/Agent 桌面"
+      ]
+    },
+    {
+      "ticker": "AVGO",
+      "name": "Broadcom",
+      "market": "US",
+      "href": "/investor/stocks/AVGO/",
       "thesisCount": 1,
       "eventCount": 2,
       "lanes": [
