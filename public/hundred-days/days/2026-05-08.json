@@ -514,12 +514,12 @@
       "title": "当前AI算力扩容的主瓶颈是电力和电网交付第一、芯片第二；没有已通电MW背书的纸面算力应被折价。",
       "titleEn": "Practical research topic: 当前AI算力扩容的主瓶颈是电力和电网交付第一、芯片第二；没有已通电MW背书的纸面算力应被折价。",
       "href": "/investor/theses/thesis-0346c87b0c/",
-      "laneId": "lane_10d7884cbe65",
-      "lane": "AI 电力/电网设备",
-      "laneHref": "/investor/lanes/ai-power-and-grid-equipment/",
+      "laneId": "lane_136dd1c3c708",
+      "lane": "云厂商自发电/电力资产",
+      "laneHref": "/investor/lanes/cloud-self-generation-and-power-assets/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 66,
+      "conviction": 67,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -538,9 +538,7 @@
         "ETN",
         "VST",
         "CEG",
-        "002028.SZ",
-        "601179.SH",
-        "600089.SH"
+        "601985.SH"
       ]
     },
     {
@@ -654,7 +652,7 @@
       "laneHref": "/investor/lanes/industrial-machinery-equipment-upgrade-and-exports/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 54,
+      "conviction": 52,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -669,15 +667,15 @@
         }
       ],
       "stockTickers": [
-        "002747.SZ",
         "600031.SH",
+        "002747.SZ",
         "000425.SZ",
         "600761.SH",
         "603298.SH",
         "603338.SH",
         "601100.SH",
-        "300124.SZ",
-        "000157.SZ"
+        "000157.SZ",
+        "300124.SZ"
       ]
     }
   ],
@@ -703,25 +701,6 @@
       "avgConviction": 72
     },
     {
-      "id": "lane_10d7884cbe65",
-      "title": "AI 电力/电网设备",
-      "href": "/investor/lanes/ai-power-and-grid-equipment/",
-      "thesisCount": 2,
-      "eventCount": 2,
-      "convictionTotal": 131,
-      "stockTickers": [
-        "GEV",
-        "ETN",
-        "VST",
-        "CEG",
-        "002028.SZ",
-        "601179.SH",
-        "600089.SH",
-        "688676.SH"
-      ],
-      "avgConviction": 66
-    },
-    {
       "id": "lane_bf77fb66551a",
       "title": "A股红利/硬科技杠铃",
       "href": "/investor/lanes/a-share-dividend-and-hard-tech-barbell/",
@@ -736,6 +715,39 @@
         "588000.SH"
       ],
       "avgConviction": 84
+    },
+    {
+      "id": "lane_136dd1c3c708",
+      "title": "云厂商自发电/电力资产",
+      "href": "/investor/lanes/cloud-self-generation-and-power-assets/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "convictionTotal": 67,
+      "stockTickers": [
+        "GEV",
+        "ETN",
+        "VST",
+        "CEG",
+        "601985.SH"
+      ],
+      "avgConviction": 67
+    },
+    {
+      "id": "lane_10d7884cbe65",
+      "title": "AI 电力/电网设备",
+      "href": "/investor/lanes/ai-power-and-grid-equipment/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "convictionTotal": 65,
+      "stockTickers": [
+        "GEV",
+        "600089.SH",
+        "002028.SZ",
+        "ETN",
+        "CEG",
+        "688676.SH"
+      ],
+      "avgConviction": 65
     },
     {
       "id": "lane_0cb100fcf8da",
@@ -779,19 +791,19 @@
       "href": "/investor/lanes/industrial-machinery-equipment-upgrade-and-exports/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 54,
+      "convictionTotal": 52,
       "stockTickers": [
-        "002747.SZ",
         "600031.SH",
+        "002747.SZ",
         "000425.SZ",
         "600761.SH",
         "603298.SH",
         "603338.SH",
         "601100.SH",
-        "300124.SZ",
-        "000157.SZ"
+        "000157.SZ",
+        "300124.SZ"
       ],
-      "avgConviction": 54
+      "avgConviction": 52
     }
   ],
   "stocks": [
@@ -828,6 +840,7 @@
       "thesisCount": 2,
       "eventCount": 2,
       "lanes": [
+        "云厂商自发电/电力资产",
         "AI 电力/电网设备"
       ]
     },
@@ -839,6 +852,7 @@
       "thesisCount": 2,
       "eventCount": 2,
       "lanes": [
+        "云厂商自发电/电力资产",
         "AI 电力/电网设备"
       ]
     },
@@ -850,28 +864,7 @@
       "thesisCount": 2,
       "eventCount": 2,
       "lanes": [
-        "AI 电力/电网设备"
-      ]
-    },
-    {
-      "ticker": "002028.SZ",
-      "name": "思源电气",
-      "market": "A-share",
-      "href": "/investor/stocks/002028.SZ/",
-      "thesisCount": 2,
-      "eventCount": 2,
-      "lanes": [
-        "AI 电力/电网设备"
-      ]
-    },
-    {
-      "ticker": "600089.SH",
-      "name": "特变电工",
-      "market": "A-share",
-      "href": "/investor/stocks/600089.SH/",
-      "thesisCount": 2,
-      "eventCount": 2,
-      "lanes": [
+        "云厂商自发电/电力资产",
         "AI 电力/电网设备"
       ]
     },
@@ -1015,14 +1008,36 @@
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
+        "云厂商自发电/电力资产"
+      ]
+    },
+    {
+      "ticker": "601985.SH",
+      "name": "中国核电",
+      "market": "A-share",
+      "href": "/investor/stocks/601985.SH/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "云厂商自发电/电力资产"
+      ]
+    },
+    {
+      "ticker": "600089.SH",
+      "name": "特变电工",
+      "market": "A-share",
+      "href": "/investor/stocks/600089.SH/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
         "AI 电力/电网设备"
       ]
     },
     {
-      "ticker": "601179.SH",
-      "name": "中国西电",
+      "ticker": "002028.SZ",
+      "name": "思源电气",
       "market": "A-share",
-      "href": "/investor/stocks/601179.SH/",
+      "href": "/investor/stocks/002028.SZ/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
@@ -1162,10 +1177,10 @@
       ]
     },
     {
-      "ticker": "002747.SZ",
-      "name": "埃斯顿",
+      "ticker": "600031.SH",
+      "name": "三一重工",
       "market": "A-share",
-      "href": "/investor/stocks/002747.SZ/",
+      "href": "/investor/stocks/600031.SH/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
@@ -1173,10 +1188,10 @@
       ]
     },
     {
-      "ticker": "600031.SH",
-      "name": "三一重工",
+      "ticker": "002747.SZ",
+      "name": "埃斯顿",
       "market": "A-share",
-      "href": "/investor/stocks/600031.SH/",
+      "href": "/investor/stocks/002747.SZ/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [

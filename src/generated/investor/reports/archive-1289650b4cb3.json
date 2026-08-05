@@ -1,0 +1,21 @@
+{
+  "slug": "archive-1289650b4cb3",
+  "href": "/investor/reports/archive-1289650b4cb3/",
+  "meta": {
+    "title": "海外市场过夜情况速览",
+    "date": "2026-08-05",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "通胀",
+      "宏观",
+      "港美股",
+      "风险"
+    ],
+    "source": "archive-1289650b4cb3",
+    "source_label": "研究档案",
+    "source_kind": "archive"
+  },
+  "bodyHtml": "<h1>海外市场过夜情况速览</h1>\n<p><strong>日期锚定：2026-08-05（Asia/Singapore）</strong>。本简报中的“昨晚”指截至该日期可得的 2026-08-04 美国收盘及数据源校验 对应工作日数据。</p>\n<h2>核心一句</h2>\n<p>隔夜为明确的 <strong>risk-on</strong>：S&amp;P 500、Dow 与 Nasdaq-100 均处于纪录高位，VIX 为 16.50，且 10 年期美债收益率降至 4.63%；直接催化是 Palantir、Caterpillar 等超预期盈利与油价回落，缓解通胀和贴现率压力。需要保留的风险是长端收益率仍处高位、2s10s 曲线为正 43bp。</p>\n<h2>1. 主要指数收盘</h2>\n<table>\n<thead>\n<tr>\n<th>指数</th>\n<th>收盘</th>\n<th>来源</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>SPX</td>\n<td>7,735.60</td>\n<td>[来源：sources[0]]</td>\n</tr>\n<tr>\n<td>NDX</td>\n<td>29,733.1608</td>\n<td>[来源：sources[0]]</td>\n</tr>\n<tr>\n<td>DOW</td>\n<td>54,085.88</td>\n<td>[来源：sources[0]]</td>\n</tr>\n<tr>\n<td>日经 225</td>\n<td>63,957.53</td>\n<td>[来源：sources[0]]</td>\n</tr>\n<tr>\n<td>恒生指数</td>\n<td>25,852.92</td>\n<td>[来源：sources[0]]</td>\n</tr>\n<tr>\n<td>VIX</td>\n<td>16.50</td>\n<td>[来源：sources[0]]</td>\n</tr>\n</tbody>\n</table>\n<h2>2. 商品与外汇</h2>\n<h3>数据降级</h3>\n<p><code>oil_prices</code> 在 2026-08-05 无记录；已按流程调用对应 refresh 并重试一次，仍返回 404。因此油价使用公开检索补充。内部 <code>markets_overnight_us</code> 亦明确提示黄金数据不可用；没有以估算数填补。</p>\n<table>\n<thead>\n<tr>\n<th>项目</th>\n<th>水平</th>\n<th>来源</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>WTI</td>\n<td>未获得可核验的 2026-08-04 结算值，不展示数字</td>\n<td>公开检索未获得可验证当日结算</td>\n</tr>\n<tr>\n<td>Brent</td>\n<td>$79.36/桶，日跌 5.3%</td>\n<td><a href=\"https://apnews.com/article/stocks-markets-dollar-yen-trump-iran-war-fbbe6128d618509e33d45a493c2615b1\">AP</a></td>\n</tr>\n<tr>\n<td>黄金</td>\n<td>数据源校验 未提供；未展示数字</td>\n<td><code>markets_overnight_us</code> warnings</td>\n</tr>\n<tr>\n<td>美元指数（DXY）</td>\n<td>99.882</td>\n<td>[来源：sources[0]]</td>\n</tr>\n<tr>\n<td>EURUSD</td>\n<td>1.15324</td>\n<td>[来源：sources[0]]</td>\n</tr>\n<tr>\n<td>USDJPY</td>\n<td>157.72</td>\n<td>[来源：sources[0]]</td>\n</tr>\n</tbody>\n</table>\n<h2>3. 美债曲线</h2>\n<table>\n<thead>\n<tr>\n<th>期限/利差</th>\n<th>收益率/利差</th>\n<th>来源</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>2Y</td>\n<td>4.20%</td>\n<td>[来源：sources[0]]</td>\n</tr>\n<tr>\n<td>5Y</td>\n<td>4.33%</td>\n<td>[来源：sources[0]]</td>\n</tr>\n<tr>\n<td>10Y</td>\n<td>4.63%</td>\n<td>[来源：sources[0]]</td>\n</tr>\n<tr>\n<td>30Y</td>\n<td>5.18%</td>\n<td>[来源：sources[0]]</td>\n</tr>\n<tr>\n<td>2s10s</td>\n<td>+43bp</td>\n<td>[来源：sources[0]]</td>\n</tr>\n</tbody>\n</table>\n<h2>4. 关键事件解读</h2>\n<ul>\n<li><strong>盈利驱动的风险偏好回升。</strong> Palantir 在上调 2026 年收入指引后上涨 29.5%；Caterpillar 上涨 5.6%。该报道同时指出，S&amp;P 500 公司当季 EPS 增长预计接近 50%，为高估值提供了盈利层面的支撑。<a href=\"https://apnews.com/article/stocks-markets-dollar-yen-trump-iran-war-fbbe6128d618509e33d45a493c2615b1\">来源：AP，2026-08-04</a></li>\n<li><strong>油价回落带动利率压力缓解。</strong> Brent 下跌 5.3% 至 $79.36/桶；报道将其归因于市场对波斯湾原油运输风险的担忧缓解。同期 10 年期美债收益率由前日 4.70% 降至 4.62%（数据源校验 收盘口径为 4.63%）。<a href=\"https://apnews.com/article/stocks-markets-dollar-yen-trump-iran-war-fbbe6128d618509e33d45a493c2615b1\">来源：AP，2026-08-04</a></li>\n<li><strong>数据与事件来源说明。</strong> 已检索 Bloomberg、Reuters、FT 与 CNBC；在本次检索结果中未取得可核验、且日期为 2026-08-04 的相关原始报道，故以上两条使用 AP 的当日市场报道补充，未将旧闻或不匹配日期的文章混入晨报。</li>\n</ul>\n<h2>5. 对今日亚洲早盘的暗示</h2>\n<ul>\n<li>美股科技和 AI 相关盈利带动风险偏好，叠加 NDX 处高位，亚洲科技硬件、半导体链开盘情绪偏正面。</li>\n<li>Brent 大幅回落有利于输入型通胀预期及航空、运输等耗能板块；但中东运输不确定性仍可能使油价波动放大。</li>\n<li>美债收益率虽回落，但 10Y 仍为 4.63%、30Y 为 5.18%，高久期资产的估值扩张应保持审慎；USDJPY 157.72 也提示日元波动风险未消。</li>\n</ul>\n<h2>数据来源</h2>\n<ul>\n<li><strong>数据源校验 ：</strong> <code>markets_overnight_us</code>（<code>sources[0]</code>：https://financialmodelingprep.com/api/v3/quote/^GSPC,^NDX,^DJI,^N225,^HSI,EURUSD,USDJPY,GC=F,^VIX,DX-Y.NYB；<code>sources[1]</code>：https://financialmodelingprep.com/api/v4/treasury），<code>oil_prices</code>（无记录，refresh 后仍失败），<code>yield_curve_us</code>（<code>sources[0]</code>：https://financialmodelingprep.com/api/v4/treasury）。</li>\n<li><strong>web_search：</strong> <a href=\"https://apnews.com/article/stocks-markets-dollar-yen-trump-iran-war-fbbe6128d618509e33d45a493c2615b1\">AP 2026-08-04 市场报道</a>。</li>\n</ul>"
+}

@@ -508,7 +508,7 @@
       "laneHref": "/investor/lanes/ai-compute-semiconductors/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 64,
+      "conviction": 65,
       "supports": 1,
       "risks": 1,
       "neutral": 0,
@@ -713,43 +713,6 @@
       ]
     },
     {
-      "id": "thesis-42faeae623",
-      "title": "CPO、光互联与铜连接决定 AI 集群内部租金迁移",
-      "titleEn": "CPO, optical interconnect, and copper links define rent migration inside AI clusters",
-      "href": "/investor/theses/thesis-42faeae623/",
-      "laneId": "lane_1f0136d57956",
-      "lane": "CPO/光模块/高速互联",
-      "laneHref": "/investor/lanes/cpo-optical-modules-and-high-speed-interconnect/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 62,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "北美云厂商2026H2 AI资本开支，能否真正传导到中资光模块订单？",
-          "summary": "机构工作日期：2026-06-12（亚洲/新加坡）。 分析师：AI基础设施分析师。立场： 压力测试（stress-test）。。。",
-          "href": "/investor/reports/archive-2a64753685b5/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "300308.SZ",
-        "NVDA",
-        "AVGO",
-        "META",
-        "300394.SZ",
-        "COHR",
-        "MRVL",
-        "LITE",
-        "TSM",
-        "MSFT"
-      ]
-    },
-    {
       "id": "thesis-ffa474a3f2",
       "title": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
       "titleEn": "Edge AI and agent desktops are extending compute competition from cloud to chips, OS, and consumer-electronics supply...",
@@ -785,6 +748,43 @@
         "GOOGL",
         "AVGO"
       ]
+    },
+    {
+      "id": "thesis-42faeae623",
+      "title": "CPO、光互联与铜连接决定 AI 集群内部租金迁移",
+      "titleEn": "CPO, optical interconnect, and copper links define rent migration inside AI clusters",
+      "href": "/investor/theses/thesis-42faeae623/",
+      "laneId": "lane_1f0136d57956",
+      "lane": "CPO/光模块/高速互联",
+      "laneHref": "/investor/lanes/cpo-optical-modules-and-high-speed-interconnect/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 61,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "北美云厂商2026H2 AI资本开支，能否真正传导到中资光模块订单？",
+          "summary": "机构工作日期：2026-06-12（亚洲/新加坡）。 分析师：AI基础设施分析师。立场： 压力测试（stress-test）。。。",
+          "href": "/investor/reports/archive-2a64753685b5/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "300308.SZ",
+        "NVDA",
+        "AVGO",
+        "META",
+        "300394.SZ",
+        "COHR",
+        "MRVL",
+        "LITE",
+        "TSM",
+        "MSFT"
+      ]
     }
   ],
   "lanes": [
@@ -794,7 +794,7 @@
       "href": "/investor/lanes/ai-compute-semiconductors/",
       "thesisCount": 4,
       "eventCount": 6,
-      "convictionTotal": 285,
+      "convictionTotal": 286,
       "stockTickers": [
         "META",
         "NVDA",
@@ -807,7 +807,7 @@
         "AMZN",
         "GOOGL"
       ],
-      "avgConviction": 71
+      "avgConviction": 72
     },
     {
       "id": "lane_f1a271385aff",
@@ -833,27 +833,6 @@
       "avgConviction": 66
     },
     {
-      "id": "lane_1f0136d57956",
-      "title": "CPO/光模块/高速互联",
-      "href": "/investor/lanes/cpo-optical-modules-and-high-speed-interconnect/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 62,
-      "stockTickers": [
-        "300308.SZ",
-        "NVDA",
-        "AVGO",
-        "META",
-        "300394.SZ",
-        "COHR",
-        "MRVL",
-        "LITE",
-        "TSM",
-        "MSFT"
-      ],
-      "avgConviction": 62
-    },
-    {
       "id": "lane_74d352e86208",
       "title": "端侧 AI/Agent 桌面",
       "href": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
@@ -873,6 +852,27 @@
         "AVGO"
       ],
       "avgConviction": 62
+    },
+    {
+      "id": "lane_1f0136d57956",
+      "title": "CPO/光模块/高速互联",
+      "href": "/investor/lanes/cpo-optical-modules-and-high-speed-interconnect/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "convictionTotal": 61,
+      "stockTickers": [
+        "300308.SZ",
+        "NVDA",
+        "AVGO",
+        "META",
+        "300394.SZ",
+        "COHR",
+        "MRVL",
+        "LITE",
+        "TSM",
+        "MSFT"
+      ],
+      "avgConviction": 61
     }
   ],
   "stocks": [
@@ -886,8 +886,8 @@
       "lanes": [
         "AI 算力半导体",
         "先进封装/HBM4 闸门",
-        "CPO/光模块/高速互联",
-        "端侧 AI/Agent 桌面"
+        "端侧 AI/Agent 桌面",
+        "CPO/光模块/高速互联"
       ]
     },
     {
@@ -937,8 +937,8 @@
       "lanes": [
         "AI 算力半导体",
         "先进封装/HBM4 闸门",
-        "CPO/光模块/高速互联",
-        "端侧 AI/Agent 桌面"
+        "端侧 AI/Agent 桌面",
+        "CPO/光模块/高速互联"
       ]
     },
     {
@@ -964,8 +964,8 @@
       "lanes": [
         "AI 算力半导体",
         "先进封装/HBM4 闸门",
-        "CPO/光模块/高速互联",
-        "端侧 AI/Agent 桌面"
+        "端侧 AI/Agent 桌面",
+        "CPO/光模块/高速互联"
       ]
     },
     {
@@ -978,8 +978,8 @@
       "lanes": [
         "先进封装/HBM4 闸门",
         "AI 算力半导体",
-        "CPO/光模块/高速互联",
-        "端侧 AI/Agent 桌面"
+        "端侧 AI/Agent 桌面",
+        "CPO/光模块/高速互联"
       ]
     },
     {
@@ -1041,6 +1041,39 @@
       ]
     },
     {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "market": "US",
+      "href": "/investor/stocks/AAPL/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "端侧 AI/Agent 桌面"
+      ]
+    },
+    {
+      "ticker": "ARM",
+      "name": "Arm Holdings",
+      "market": "US",
+      "href": "/investor/stocks/ARM/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "端侧 AI/Agent 桌面"
+      ]
+    },
+    {
+      "ticker": "QCOM",
+      "name": "Qualcomm",
+      "market": "US",
+      "href": "/investor/stocks/QCOM/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "端侧 AI/Agent 桌面"
+      ]
+    },
+    {
       "ticker": "300308.SZ",
       "name": "中际旭创",
       "market": "A-share",
@@ -1093,39 +1126,6 @@
       "eventCount": 1,
       "lanes": [
         "CPO/光模块/高速互联"
-      ]
-    },
-    {
-      "ticker": "AAPL",
-      "name": "Apple",
-      "market": "US",
-      "href": "/investor/stocks/AAPL/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "端侧 AI/Agent 桌面"
-      ]
-    },
-    {
-      "ticker": "ARM",
-      "name": "Arm Holdings",
-      "market": "US",
-      "href": "/investor/stocks/ARM/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "端侧 AI/Agent 桌面"
-      ]
-    },
-    {
-      "ticker": "QCOM",
-      "name": "Qualcomm",
-      "market": "US",
-      "href": "/investor/stocks/QCOM/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "端侧 AI/Agent 桌面"
       ]
     }
   ],
