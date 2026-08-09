@@ -1,0 +1,21 @@
+{
+  "slug": "archive-70ee55914805",
+  "href": "/investor/reports/archive-70ee55914805/",
+  "meta": {
+    "title": "1. 文件完整性 (File manifest)",
+    "date": "2026-08-09",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "通胀",
+      "宏观",
+      "A股",
+      "港美股",
+      "风险"
+    ],
+    "source": "archive-70ee55914805",
+    "source_label": "研究档案",
+    "source_kind": "archive"
+  },
+  "bodyHtml": "<h2>1. 文件完整性 (File manifest)</h2>\n<table>\n<thead>\n<tr>\n<th>声明文件</th>\n<th>工作区是否存在</th>\n<th>备注</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>研究档案</code></td>\n<td>是</td>\n<td>9,003 bytes，内容可读，覆盖窗口为 2026-08-03 至 2026-08-07。</td>\n</tr>\n<tr>\n<td><code>研究档案</code></td>\n<td>是</td>\n<td>9,394 bytes，内容可读，与中文计划结构一致。</td>\n</tr>\n<tr>\n<td><code>研究档案</code></td>\n<td>是</td>\n<td>16,404 bytes，内容可读，但正文仍声明 <code>研究档案</code> 缺失，这与本 QA 节点的工作区状态矛盾。</td>\n</tr>\n<tr>\n<td><code>研究档案</code></td>\n<td>是</td>\n<td>18,570 bytes，内容可读，与中文研究报告结构一致。</td>\n</tr>\n</tbody>\n</table>\n<h2>2. 数据一致性 (Cross-step consistency)</h2>\n<table>\n<thead>\n<tr>\n<th>核查项</th>\n<th>Step 01 计划</th>\n<th>Step 02 研究</th>\n<th>QA 判断</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>覆盖窗口</td>\n<td>2026-08-03 (周一) 至 2026-08-07 (周五)</td>\n<td>2026-08-03 至 2026-08-07，锚定日期 2026-08-09</td>\n<td>一致。</td>\n</tr>\n<tr>\n<td>数据锚定日期</td>\n<td>计划未要求具体锚定日，但要求研究阶段核实当周数据</td>\n<td>研究报告写明 2026-08-09</td>\n<td>可接受；本 QA shell 日期同为 2026-08-09。</td>\n</tr>\n<tr>\n<td>股指覆盖</td>\n<td>要求 S&amp;P 500、Nasdaq、Dow Jones、Hang Seng、CSI 300/上证综指、Stoxx 600</td>\n<td>仅量化 S&amp;P 500 7,757.64、Nasdaq Composite 26,690.62、Dow Jones 54,036.93</td>\n<td>不一致/覆盖不足：亚洲与欧洲主要股指缺失。</td>\n</tr>\n<tr>\n<td>利率覆盖</td>\n<td>要求 2年期、10年期美债及收益率曲线周初/周末变化</td>\n<td>仅给出 10Y 4.63%~4.68%、4.67%、4.75% 等，未给 2Y 或完整曲线</td>\n<td>不一致/覆盖不足：无法回答收益率曲线是否走陡/走平。</td>\n</tr>\n<tr>\n<td>大宗商品覆盖</td>\n<td>要求 WTI、Brent、黄金、铜</td>\n<td>给出黄金 4,350.37、WTI 78.31、Brent 82.15~86.04，未给铜</td>\n<td>部分一致；铜缺失。</td>\n</tr>\n<tr>\n<td>波动率/信用覆盖</td>\n<td>要求 VIX、Put/Call Ratio、信用利差</td>\n<td>未提供 VIX、Put/Call Ratio 或信用利差</td>\n<td>不一致/缺失。</td>\n</tr>\n</tbody>\n</table>\n<p>补充核查：<code>研究档案</code> 与 <code>研究档案</code> 的核心数字基本一致，包括 S&amp;P 500 +3.5%、Nasdaq +5.0%~5.2%、非农 -23,000、共识 +80,000、5-6 月合计下修 -103,000、DXY ~100.3、BTC ~64,940 等。</p>\n<h2>3. 逻辑链条 (Narrative coherence)</h2>\n<p>研究报告部分回答了计划中的宏观/多资产框架，但映射不完整。股票部分只覆盖美股三大指数，未回答计划明确要求的 Hang Seng、CSI 300/上证综指、Stoxx 600，因此“全球主要股指”结论实际退化为“美股表现”。</p>\n<p>利率与外汇部分未提供 2Y 美债、完整期限结构或周初/周末对比，无法支持计划中“收益率曲线是否反映联储政策预期重新定价”的问题。DXY 方向有叙述，但与利率曲线之间的机制证据不足。</p>\n<p>板块/风格轮动部分缺少计划要求的 11 个 GICS 板块、成长 vs 价值、大盘 vs 小盘与资金流数据。研究报告用半导体 ETF 与 SpaceX 作为领涨线索，但未说明 SpaceX 的可交易口径或指数权重关系，作为周度多资产研究证据偏弱。</p>\n<p>商品与新兴市场部分只覆盖黄金、WTI、Brent 与 BTC，缺少铜、USD/CNY、USD/JPY 和主要新兴市场货币，无法支撑“全球增长/风险偏好叙事”的完整判断。波动率与信用部分基本空缺，未回应 VIX、Put/Call Ratio、信用利差是否预示下周风险资产拐点。</p>\n<p>另一个关键一致性问题是研究报告开头声称 <code>研究档案</code> 在工作区缺失，但本 QA 节点确认该文件存在且可读。若研究阶段确实在同步前运行，该说明可以解释当时状态；但在最终包中保留该声明会误导 PM，以为研究没有可核对计划。</p>\n<h2>4. 表达与可读性 (Editorial quality)</h2>\n<ul>\n<li>将报告标题与摘要改为“美股与美元利率周度研究”或补齐全球资产数据；当前标题“宏观与多资产”覆盖面大于正文实际覆盖面。</li>\n<li>在每个表格中统一口径列，例如“数据源”“价格类型/合约”“计算基准”，尤其是 Brent 的 82.15 / 83.49 / 86.04 多口径报价。</li>\n<li>将“⚠️ 待独立核实”的信息集中到一个“数据质量与待核实事项”小节，避免高风险信息散落在结论段中。</li>\n<li>删除或重写与实际文件状态不符的“<code>研究档案</code> 缺失”说明，并加入计划问题到研究回答的逐项映射表。</li>\n</ul>\n<h2>5. 修订建议 (Recommended revisions)</h2>\n<ul>\n<li>高优先级：复核并更正研究报告对 <code>研究档案</code> 缺失的声明；如果该声明只反映早期同步状态，应在最终稿中说明“研究阶段曾缺失，QA 阶段已同步”。</li>\n<li>高优先级：补齐计划要求但研究缺失的数据：Hang Seng、CSI 300/上证综指、Stoxx 600、2Y 美债、完整收益率曲线、铜、USD/CNY、USD/JPY、VIX、Put/Call Ratio、信用利差。</li>\n<li>高优先级：独立核实“Fed 主席 Kevin Warsh / 9 月加息 25bp”相关表述；该说法与研究报告主线“9 月降息概率升至 72.0%”直接冲突，不能留在核心叙事中作为未校验背景。</li>\n<li>中优先级：统一所有市场数据的计算口径，明确采用“上周五收盘至本周五收盘”或“周一开盘至周五收盘”，并重算 S&amp;P 500、Nasdaq、Dow Jones、BTC 等周涨跌幅。</li>\n<li>中优先级：对 SpaceX、iShares Semiconductor ETF 等结构性领涨线索补充可交易标的、权重或指数贡献依据；否则应降级为市场轶事。</li>\n<li>中优先级：补充下周展望与关注清单，因为计划大纲要求该部分，但研究报告当前主要停留在本周回顾和图表数据准备。</li>\n</ul>\n<h2>6. 总体评级</h2>\n<p>needs-revision。文件完整性通过，且中英文研究稿核心数字大体一致，但研究报告未完整覆盖计划问题，且存在“计划文件缺失”这一与最终工作区状态矛盾的说明；在提交 PM 前需要补齐跨市场数据、统一口径并移除或核实高风险叙述。</p>"
+}

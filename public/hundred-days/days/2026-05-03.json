@@ -4,7 +4,7 @@
   "dayNumber": 12,
   "status": "recorded",
   "headline": "双重供给冲击：中东能源危机与美中关税升级叠加——重新定价美联储宽松窗口",
-  "summary": "当日归档 10 份公开研究，13 条研究讨论和 5 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
+  "summary": "当日归档 10 份公开研究，13 条研究讨论和 7 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
   "dominantTopic": {
     "id": "macro-rates",
     "labelZh": "宏观、通胀与利率",
@@ -24,12 +24,12 @@
     ],
     "count": 8
   },
-  "activityScore": 65,
+  "activityScore": 66,
   "metrics": {
     "reports": 10,
     "researchThreads": 13,
     "researchNotes": 121,
-    "thesisEvents": 5,
+    "thesisEvents": 7,
     "personaEvents": 0,
     "readerMemos": 0,
     "recaps": 0,
@@ -400,14 +400,48 @@
       ],
       "stockTickers": [
         "BABA",
+        "MSFT",
         "BIDU",
         "9988.HK",
-        "MSFT",
         "CRM",
         "0700.HK",
         "NOW",
         "NVDA",
         "9888.HK"
+      ]
+    },
+    {
+      "id": "thesis-d8170c3a35",
+      "title": "近海资本开支与设备利用率驱动油服盈利弹性",
+      "titleEn": "Offshore capex and equipment utilization drive oilfield-service earnings leverage",
+      "href": "/investor/theses/thesis-d8170c3a35/",
+      "laneId": "lane_93300d58763e",
+      "lane": "油气/地缘通胀",
+      "laneHref": "/investor/lanes/oil-gas-and-geopolitical-inflation/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 68,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "双重供给冲击：中东能源危机与美中关税升级叠加——重新定价美联储宽松窗口",
+          "summary": "分析师： global-macro 全球宏观分析师 日期： 2026-05-03 任务： 每周宏观报告 立场： 初始研判",
+          "href": "/investor/reports/archive-eca8d8820baa/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "CVX",
+        "XOM",
+        "0883.HK",
+        "2883.HK",
+        "COP",
+        "OXY",
+        "SLB"
       ]
     },
     {
@@ -442,9 +476,45 @@
         "300308.SZ",
         "NVDA",
         "688012.SH",
-        "688008.SH",
         "000977.SZ",
+        "688008.SH",
         "688111.SH"
+      ]
+    },
+    {
+      "id": "thesis-3d421524cd",
+      "title": "油价地缘底线决定再通胀与降息交易的安全边际",
+      "titleEn": "The geopolitical oil floor defines the margin of safety for disinflation and rate-cut trades",
+      "href": "/investor/theses/thesis-3d421524cd/",
+      "laneId": "lane_93300d58763e",
+      "lane": "油气/地缘通胀",
+      "laneHref": "/investor/lanes/oil-gas-and-geopolitical-inflation/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 53,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "双重供给冲击：中东能源危机与美中关税升级叠加——重新定价美联储宽松窗口",
+          "summary": "分析师： global-macro 全球宏观分析师 日期： 2026-05-03 任务： 每周宏观报告 立场： 初始研判",
+          "href": "/investor/reports/archive-eca8d8820baa/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "0883.HK",
+        "CVX",
+        "XOM",
+        "600938.SH",
+        "CME",
+        "600900.SH",
+        "0857.HK",
+        "601088.SH",
+        "601857.SH"
       ]
     }
   ],
@@ -471,6 +541,29 @@
       "avgConviction": 65
     },
     {
+      "id": "lane_93300d58763e",
+      "title": "油气/地缘通胀",
+      "href": "/investor/lanes/oil-gas-and-geopolitical-inflation/",
+      "thesisCount": 2,
+      "eventCount": 2,
+      "convictionTotal": 121,
+      "stockTickers": [
+        "CVX",
+        "XOM",
+        "0883.HK",
+        "2883.HK",
+        "COP",
+        "OXY",
+        "SLB",
+        "600938.SH",
+        "CME",
+        "600900.SH",
+        "0857.HK",
+        "601088.SH"
+      ],
+      "avgConviction": 61
+    },
+    {
       "id": "lane_13710af7e06d",
       "title": "低价模型/AI 软件利润池",
       "href": "/investor/lanes/low-cost-models-and-ai-software-profit-pools/",
@@ -479,9 +572,9 @@
       "convictionTotal": 72,
       "stockTickers": [
         "BABA",
+        "MSFT",
         "BIDU",
         "9988.HK",
-        "MSFT",
         "CRM",
         "0700.HK",
         "NOW",
@@ -505,8 +598,8 @@
         "300308.SZ",
         "NVDA",
         "688012.SH",
-        "688008.SH",
         "000977.SZ",
+        "688008.SH",
         "688111.SH"
       ],
       "avgConviction": 59
@@ -634,6 +727,39 @@
       ]
     },
     {
+      "ticker": "CVX",
+      "name": "Chevron",
+      "market": "US",
+      "href": "/investor/stocks/CVX/",
+      "thesisCount": 2,
+      "eventCount": 2,
+      "lanes": [
+        "油气/地缘通胀"
+      ]
+    },
+    {
+      "ticker": "XOM",
+      "name": "Exxon Mobil",
+      "market": "US",
+      "href": "/investor/stocks/XOM/",
+      "thesisCount": 2,
+      "eventCount": 2,
+      "lanes": [
+        "油气/地缘通胀"
+      ]
+    },
+    {
+      "ticker": "0883.HK",
+      "name": "中国海洋石油",
+      "market": "HK",
+      "href": "/investor/stocks/0883.HK/",
+      "thesisCount": 2,
+      "eventCount": 2,
+      "lanes": [
+        "油气/地缘通胀"
+      ]
+    },
+    {
       "ticker": "BABA",
       "name": "Alibaba",
       "market": "US ADR",
@@ -645,10 +771,10 @@
       ]
     },
     {
-      "ticker": "BIDU",
-      "name": "Baidu",
-      "market": "US ADR",
-      "href": "/investor/stocks/BIDU/",
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "market": "US",
+      "href": "/investor/stocks/MSFT/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
@@ -656,10 +782,10 @@
       ]
     },
     {
-      "ticker": "MSFT",
-      "name": "Microsoft",
-      "market": "US",
-      "href": "/investor/stocks/MSFT/",
+      "ticker": "BIDU",
+      "name": "Baidu",
+      "market": "US ADR",
+      "href": "/investor/stocks/BIDU/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
@@ -700,6 +826,50 @@
       ]
     },
     {
+      "ticker": "2883.HK",
+      "name": "中海油田服务股份有限公司",
+      "market": "HK",
+      "href": "/investor/stocks/2883.HK/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "油气/地缘通胀"
+      ]
+    },
+    {
+      "ticker": "COP",
+      "name": "ConocoPhillips",
+      "market": "US",
+      "href": "/investor/stocks/COP/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "油气/地缘通胀"
+      ]
+    },
+    {
+      "ticker": "OXY",
+      "name": "Occidental Petroleum",
+      "market": "US",
+      "href": "/investor/stocks/OXY/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "油气/地缘通胀"
+      ]
+    },
+    {
+      "ticker": "SLB",
+      "name": "SLB",
+      "market": "US",
+      "href": "/investor/stocks/SLB/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "油气/地缘通胀"
+      ]
+    },
+    {
       "ticker": "688012.SH",
       "name": "中微公司",
       "market": "A-share",
@@ -730,6 +900,72 @@
       "eventCount": 1,
       "lanes": [
         "信创/国产 IT 栈"
+      ]
+    },
+    {
+      "ticker": "600938.SH",
+      "name": "中国海油",
+      "market": "A-share",
+      "href": "/investor/stocks/600938.SH/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "油气/地缘通胀"
+      ]
+    },
+    {
+      "ticker": "CME",
+      "name": "CME Group",
+      "market": "US",
+      "href": "/investor/stocks/CME/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "油气/地缘通胀"
+      ]
+    },
+    {
+      "ticker": "600900.SH",
+      "name": "长江电力",
+      "market": "A-share",
+      "href": "/investor/stocks/600900.SH/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "油气/地缘通胀"
+      ]
+    },
+    {
+      "ticker": "0857.HK",
+      "name": "中国石油股份",
+      "market": "HK",
+      "href": "/investor/stocks/0857.HK/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "油气/地缘通胀"
+      ]
+    },
+    {
+      "ticker": "601088.SH",
+      "name": "中国神华",
+      "market": "A-share",
+      "href": "/investor/stocks/601088.SH/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "油气/地缘通胀"
+      ]
+    },
+    {
+      "ticker": "601857.SH",
+      "name": "中国石油",
+      "market": "A-share",
+      "href": "/investor/stocks/601857.SH/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "油气/地缘通胀"
       ]
     }
   ],

@@ -1,0 +1,18 @@
+{
+  "slug": "archive-5f302c2f71b1",
+  "href": "/investor/reports/archive-5f302c2f71b1/",
+  "meta": {
+    "title": "运营提案：半导体设备第二阶段差异化压降 2026-08-05",
+    "date": "2026-08-05",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "A股"
+    ],
+    "source": "archive-5f302c2f71b1",
+    "source_label": "研究档案",
+    "source_kind": "archive"
+  },
+  "bodyHtml": "<h1>运营提案：半导体设备第二阶段差异化压降 | 2026-08-05</h1>\n<p><strong>工作日期：</strong>2026-08-05（Asia/Singapore）。<strong>角色：</strong>内部运营官。<strong>立场：</strong>综合。当前工作区缺少 <code>research note/</code> 与 <code>研究档案</code>，本报告据已提供的会话快照重建前序研究记录；并不声称已自动写入缺失的共享表。[来源不明]</p>\n<h2>结论</h2>\n<p><strong>支持所请求的结构性修改，但仅进入 <code>review_required</code> 队列，不自动执行。</strong>[自测算] 保持 <code>stage2_reduction_target = 5%–6%</code>。[自测算] 将重建的四标的一刀切第二阶段规则改为 <code>stage2_eligible_reduction_pool = [\"002371\",\"688120\"]</code>；<code>688012</code> 与 <code>688072</code> 为明确的第二阶段豁免标的。[来源不明]</p>\n<p>唯一的分配方法为 <code>pro_rata_live_active_weight_within_eligible_pool</code>。[自测算] 对经批准的篮子压降 <code>X ∈ [5%, 6%]</code>，按 <code>cut_i = X × active_weight_i / Σ(active_weight_j)</code> 计算，其中 <code>i ∈ {\"002371\",\"688120\"}</code>。[自测算] 两笔指令之和因此等于 <code>X</code>；不得编码80/20等静态比例。[自测算]</p>\n<p>即使总压降目标5%–6%不变，该规则同时改变可卖证券范围与分配公式，故归入待审类是恰当的。[自测算] 该提案已记录于 <code>research note/operational_proposal.json</code>，状态为 <code>review_required</code>、变更状态为 <code>not_auto_applied</code>。[自测算]</p>\n<h2>核对结果</h2>\n<table>\n<thead>\n<tr>\n<th>参数/控制项</th>\n<th>提议状态</th>\n<th>结果</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>stage2_reduction_target</code></td>\n<td><code>5%–6%</code></td>\n<td>保持。[自测算]</td>\n</tr>\n<tr>\n<td><code>stage2_eligible_reduction_pool</code></td>\n<td><code>[\"002371\",\"688120\"]</code></td>\n<td>替换重建的一刀切池；待人工审核。[来源不明]</td>\n</tr>\n<tr>\n<td><code>stage2_allocation_method</code></td>\n<td><code>pro_rata_live_active_weight_within_eligible_pool</code></td>\n<td>新结构性公式；待人工审核。[自测算]</td>\n</tr>\n<tr>\n<td><code>stage2_execution_class</code></td>\n<td><code>review_required</code></td>\n<td>不自动应用。[自测算]</td>\n</tr>\n<tr>\n<td><code>688012</code>、<code>688072</code></td>\n<td>第二阶段豁免</td>\n<td>保留，但须复核证据。[来源不明]</td>\n</tr>\n<tr>\n<td>四项上调闸门</td>\n<td>不变</td>\n<td>原样保留。[来源不明]</td>\n</tr>\n</tbody>\n</table>\n<p>标的层面的执行具有实质影响：所引中证半导体材料设备主题指数前十大权重为64.33%，且中微公司与北方华创在该快照中均超过15%。[S1] 这一集中度支持使用实时权重分配，而非硬编码静态比例。[自测算] 拓荆科技在2025年末披露在手订单约110亿元、合同负债48.52亿元且同比增长62.66%，与在正式复核前保留其豁免逻辑相符。[S2]</p>\n<h2>保持不变的20个交易日上调闸门</h2>\n<p>将仪器仪表配置由<strong>10%–12%</strong>上调至<strong>15%–20%</strong>的<strong>四项</strong>闸门保持前序研究重建口径不变，并须在同一连续<strong>20个交易日</strong>窗口内全部通过。[来源不明]</p>\n<ol>\n<li>广度：至少<strong>3/4</strong>仪器仪表标的融资净买入为正。[来源不明]</li>\n<li>相对收益：仪器仪表跑赢半导体设备子指数。[来源不明]</li>\n<li>成交额深度：不低于单日订单规模的<strong>10×</strong>。[来源不明]</li>\n<li>换手率/杠杆集中度：沿用前序研究定义的条件。[来源不明]</li>\n</ol>\n<p>本提案仅改变既有第二阶段半导体设备压降的资金来源端执行，不放宽、也不触发上述上调闸门。[自测算]</p>\n<h2>人工复核控制</h2>\n<ul>\n<li>如任一可压降标的的实时主动权重缺失或非正、两笔计算压降之和不等于 <code>X</code>、或豁免证据无日期/已到期，则失败闭锁且不交易。[自测算]</li>\n<li>在 <code>688012</code> 与 <code>688072</code> 下次中期或年度法定业绩披露时重新验证；若未验证，只有另一份 <code>review_required</code> 提案才可将标的重新纳入可压降池。[自测算]</li>\n<li>不得将豁免转化为更高的半导体设备总配置：目标仍为5%–6%。[自测算]</li>\n</ul>\n<h2>运营结论</h2>\n<p>可按所请求字段提交待审提案，且总目标和四项20日闸门均不改变。[自测算] 这与内部观点 <code>th_p_fc82b87b</code> 所要求的选择性、经盈利验证的硬科技配置一致，未改变其低仓位与去杠杆触发条件。[来源不明]</p>\n<h2>资料来源 / Sources</h2>\n<ul>\n<li>[S1] National Business Daily, <em>共享基经丨读懂主题ETF（三十八）：半导体材料、半导体设备、芯片设备的主题ETF，这些区别你都知道吗？</em> — https://www.nbd.com.cn/rss/toutiao/articles/3488730.html</li>\n<li>[S2] Sina Finance, <em>拓荆科技 2025 年营收 65.19 亿元同比增 58.87% 在手订单约 110 亿元支撑持续增长</em> — https://finance.sina.com.cn/tech/roll/2026-04-28/doc-inhvzfsq7349196.shtml</li>\n</ul>"
+}

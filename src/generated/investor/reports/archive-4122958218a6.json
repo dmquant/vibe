@@ -1,0 +1,19 @@
+{
+  "slug": "archive-4122958218a6",
+  "href": "/investor/reports/archive-4122958218a6/",
+  "meta": {
+    "title": "A股两融杠杆核验——2026年8月5日",
+    "date": "2026-08-05",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "A股",
+      "风险"
+    ],
+    "source": "archive-4122958218a6",
+    "source_label": "研究档案",
+    "source_kind": "archive"
+  },
+  "bodyHtml": "<h1>A股两融杠杆核验——2026年8月5日</h1>\n<p><strong>工作日期：</strong>2026年8月5日（Asia/Singapore）。[S1]\n<strong>研究记录：</strong>02/08｜<strong>角色：</strong>首席策略师｜<strong>立场：</strong>综合判断。 [S1]</p>\n<h2>结论</h2>\n<p>我<strong>不确认</strong>8月4日至5日的行情是“拥挤”而非广泛修复。 [S1] 截至2026年8月5日，研究可访问的交易所官方结果中没有取得本计算所必需的逐日底层观测值——上交所和深交所的融资买入、融资偿还，以及用于映射光模块和半导体篮子的证券级文件。 [S1][S2] 用媒体的“两融资金流”摘要填补缺口，或从收盘余额倒推融资买入，在方法上都不成立。 [S1]</p>\n<p>这延续研究记录01的条件性判断：约RMB2.80tn的余额标题是叙事/风险监测阈值，而非机械去杠杆事件的证据。 [来源不明] 现有证据既未验证也未否定院内观点<code>th_p_693e4bc5</code>；其中“融资买入占比下降”的确认条件尚未能在这两个日期检验。 [S1]</p>\n<h2>已核验与未能核验的内容</h2>\n<p>上交所说明，两融数据由券商申报汇总，数据的真实、完整、准确由券商负责。 [S1] 其定义当日融资余额为前日融资余额加当日融资买入额减当日融资偿还额。 [S1] 因而，只有<strong>同日买入和偿还字段</strong>，而不是两融余额的变化，才能识别融资净买入。 [S1]</p>\n<p>深交所官方月度市场总貌将融资余额与融券余额分别披露，表明交易所区分两条业务腿。 [S2] 该页面是2026年5月月度刊物，并非2026年8月4日或5日的逐日文件，不能替代本任务所需的日度计算。 [S2]</p>\n<table>\n<thead>\n<tr>\n<th>所需指标</th>\n<th>所需官方输入</th>\n<th>2026年8月5日的结果</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>8月4日全市场融资净买入</td>\n<td>8月4日SSE与SZSE融资买入、融资偿还</td>\n<td>无法计算：逐日原始观测值不可得。 [S1][S2]</td>\n</tr>\n<tr>\n<td>8月5日全市场融资净买入</td>\n<td>8月5日SSE与SZSE融资买入、融资偿还</td>\n<td>无法计算：逐日原始观测值不可得。 [S1][S2]</td>\n</tr>\n<tr>\n<td>光模块融资买入占比</td>\n<td>同日证券级融资买入；已披露并固定的光模块成分股名单</td>\n<td>无法计算：日度文件和篮子定义均不可得。 [S1][S2]</td>\n</tr>\n<tr>\n<td>半导体融资买入占比</td>\n<td>同日证券级融资买入；已披露并固定的半导体成分股名单</td>\n<td>无法计算：日度文件和篮子定义均不可得。 [S1][S2]</td>\n</tr>\n<tr>\n<td>市场宽度</td>\n<td>完整A股收盘价/前收盘价股票池，以及停牌/新股处理规则</td>\n<td>无法由已查阅的交易所两融页面计算。 [S1][S2]</td>\n</tr>\n</tbody>\n</table>\n<h2>官方文件补齐后的计算方案</h2>\n<p>待两家交易所日度记录披露/可读取后，每个交易日按以下方式计算</p>\n<ol>\n<li><code>NetFinancingBuy_t = (SSE_purchase_t − SSE_repayment_t) + (SZSE_purchase_t − SZSE_repayment_t)</code>。 [自测算；输入：交易所同日融资买入、融资偿还字段；SSE余额恒等式见S1]</li>\n<li><code>OpticalShare_t = Σ financing_purchase_t for pre-frozen optical-module constituents / Σ all A-share financing_purchase_t</code>。 [自测算；输入：官方证券级文件及已记录的成分股名单]</li>\n<li><code>SemiconductorShare_t = Σ financing_purchase_t for pre-frozen semiconductor constituents / Σ all A-share financing_purchase_t</code>。 [自测算；输入：官方证券级文件及已记录的成分股名单]</li>\n<li><code>Breadth_t = number of eligible A-share stocks with close_t &gt; close_(t−1) / number of eligible A-share stocks</code>。 [自测算；输入：官方每日收盘价；剔除停牌证券并记录IPO处理]</li>\n</ol>\n<p>必须在汇总前冻结股票池。“光模块”是产业链标签，并非已查阅两融汇总页展示的交易所分类；事后挑选个股会对集中度结论形成偏差。 [S1] 交叉上市、ETF、STAR/ChiNext资格及被调出两融标的范围的证券也需要明示规则，因为上交所说明明细文件只含当前标的证券，而汇总余额还包含此前被调出标的范围证券的余额。 [S1]</p>\n<h2>“拥挤”与“广泛修复”的判别</h2>\n<p>只有官方补齐后在同一日同时显示以下三项，所请求的指标才共同确认<strong>拥挤</strong>：融资净买入为正、光模块加半导体的买入占比相对预先声明的历史比较基准显著上升、且市场宽度疲弱。 [自测算；输入：上述三个公式及预先设定的历史窗口]</p>\n<p>相反，广泛修复要求融资净买入为正，同时主题集中度稳定/下降、参与面广。 [自测算；输入：上述三个公式] 在输入数据到位前，正确状态是<strong>未确认</strong>，而不是“已确认拥挤”或“已确认广泛修复”。 [S1][S2]</p>\n<p>配置上，应保留研究记录01的闸门：不能将杠杆余额标题作为单独卖出触发器；只有官方补齐后证实增量融资集中且宽度偏弱，才下调AI硬件敞口。 [来源不明] 这与<code>th_p_693e4bc5</code>一致：该观点将融资买入占比下降列为确认条件之一；缺少特定日期的观测值，不能对该条件下结论。 [S1]</p>\n<h2>数据质量与交接</h2>\n<p>任务所引用的共享会话文件在当前工作区不存在；研究记录01结论及院内观点编号据题面所提供的会话简报重建。 [来源不明] 下一问题是具体行业数据核验，而非一般风险审查；合适的接手人为<code>semiconductors-analyst</code> [primary]：建立可审计的半导体成分股名单，并定位用于8月4日至5日刷新计算的官方证券级日度文件端点。 [S1][S2]</p>\n<h2>资料来源 / Sources</h2>\n<p>[S1] Shanghai Stock Exchange, 融资融券汇总数据 / Margin Trading Summary Data — https://www.sse.com.cn/market/othersdata/margin/sum/\n[S2] Shenzhen Stock Exchange, 市场总貌 MARKET OVERVIEW – (2026.05) — https://docs.static.szse.cn/www/market/periodical/month/W020260605529421190929.html</p>"
+}

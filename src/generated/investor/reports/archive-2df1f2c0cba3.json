@@ -1,0 +1,21 @@
+{
+  "slug": "archive-2df1f2c0cba3",
+  "href": "/investor/reports/archive-2df1f2c0cba3/",
+  "meta": {
+    "title": "今日 VaR 阈值检查",
+    "date": "2026-08-06",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "通胀",
+      "宏观",
+      "港美股",
+      "风险"
+    ],
+    "source": "archive-2df1f2c0cba3",
+    "source_label": "研究档案",
+    "source_kind": "archive"
+  },
+  "bodyHtml": "<h1>今日 VaR 阈值检查</h1>\n<h2>优先结论</h2>\n<p>截至 shell 锚定日期 <strong>2026-08-06</strong>，本工作区未提供组合持仓、风险因子暴露、历史收益矩阵、VaR 模型输出或批准阈值文件。因此，<strong>今日组合 VaR 是否突破阈值无法被定量判定</strong>；本报告不应被解读为“未突破”。风控状态应标记为 <strong>未清关 / 输入数据缺失</strong>，直到组合级 VaR 与阈值被重新提交并复核。</p>\n<p>可观察的当日市场代理数据显示，成长/科技权益代理 <strong>QQQ</strong> 录得最大负向变动，长久期美债代理 <strong>TLT</strong> 小幅正向变动，宽基权益代理 <strong>SPY</strong> 基本持平。若组合存在多头成长权益、做多波动率不足或久期对冲不足，主要风险贡献者很可能来自权益贝塔和成长股集中度；但这只是基于市场代理的风险提示，<strong>不是头寸级贡献度归因</strong>。</p>\n<h2>VaR 阈值状态</h2>\n<table>\n<thead>\n<tr>\n<th>项目</th>\n<th>今日数值</th>\n<th>阈值</th>\n<th>状态</th>\n<th>风控解释</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>组合 VaR</td>\n<td>N/A</td>\n<td>N/A</td>\n<td>未能计算</td>\n<td>工作区无组合 VaR 输出、持仓与协方差输入</td>\n</tr>\n<tr>\n<td>VaR 使用率</td>\n<td>N/A</td>\n<td>N/A</td>\n<td>未能计算</td>\n<td>缺少分子与分母，不能给出突破/未突破判断</td>\n</tr>\n<tr>\n<td>数据完整性</td>\n<td>0 个可用输入文件</td>\n<td>至少需要 1 组组合输入</td>\n<td>失败</td>\n<td><code>rg --files</code> 未发现业务输入文件；<code>ls -la</code> 显示工作区仅有 <code>.git</code></td>\n</tr>\n<tr>\n<td>风控处置</td>\n<td>人工复核</td>\n<td>当日清关前完成</td>\n<td>触发</td>\n<td>不能用缺失数据替代风险通过</td>\n</tr>\n</tbody>\n</table>\n<h2>可观察市场代理</h2>\n<table>\n<thead>\n<tr>\n<th>代理资产</th>\n<th>最新价格</th>\n<th>当日变动</th>\n<th>观察时间</th>\n<th>风险含义</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>SPY</td>\n<td>769.79 USD</td>\n<td>0.00228%</td>\n<td>2026-08-06 08:50:57 UTC</td>\n<td>宽基美股风险基本持平</td>\n</tr>\n<tr>\n<td>QQQ</td>\n<td>717.30 USD</td>\n<td>0.94800%</td>\n<td>2026-08-06 08:50:19 UTC</td>\n<td>成长/科技权益代理走弱，是可观察代理中的最大负向项</td>\n</tr>\n<tr>\n<td>TLT</td>\n<td>83.00 USD</td>\n<td>+0.20500%</td>\n<td>2026-08-06 08:50:57 UTC</td>\n<td>长久期美债代理小幅上涨，可能对权益风险有部分对冲作用</td>\n</tr>\n</tbody>\n</table>\n<h2>主要风险贡献者识别</h2>\n<table>\n<thead>\n<tr>\n<th>优先级</th>\n<th>风险贡献者</th>\n<th>证据</th>\n<th>需要的组合级验证</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1</td>\n<td>成长/科技权益贝塔</td>\n<td>QQQ 当日变动为 -0.94800%，弱于 SPY 的 -0.00228%</td>\n<td>持仓权重、行业/因子暴露、单名集中度、Delta 调整敞口</td>\n</tr>\n<tr>\n<td>2</td>\n<td>权益市场方向性风险</td>\n<td>SPY 小幅下跌，若组合净多权益，仍会贡献 VaR</td>\n<td>净/总权益敞口、指数期货与 ETF 对冲、区域映射</td>\n</tr>\n<tr>\n<td>3</td>\n<td>久期与交叉资产对冲有效性</td>\n<td>TLT +0.20500%，方向上可能缓冲权益压力</td>\n<td>久期 DV01、债券/利率衍生品仓位、权益-利率相关性假设</td>\n</tr>\n<tr>\n<td>4</td>\n<td>数据与模型治理风险</td>\n<td>缺少阈值、持仓和 VaR 输出，无法确认突破状态</td>\n<td>今日批处理日志、模型版本、风险因子缺口、审批阈值</td>\n</tr>\n</tbody>\n</table>\n<h2>后续行动</h2>\n<ol>\n<li>在当日风控清关前补交组合持仓、VaR 输出、阈值、模型版本和分项贡献度。</li>\n<li>重新计算组合 VaR，并明确报告：置信水平、持有期、历史窗口、衰减参数、压力情景与流动性调整。</li>\n<li>对成长/科技权益敞口执行头寸级贡献度拆解，至少覆盖单名、行业、因子和衍生品 Delta。</li>\n<li>若补交后 VaR 使用率超过 90%，启动预警；若超过 100%，按突破流程要求减仓、追加对冲或取得正式例外批准。</li>\n</ol>\n<h2>引用与数据来源</h2>\n<table>\n<thead>\n<tr>\n<th>编号</th>\n<th>来源</th>\n<th>用途</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>S1</td>\n<td>Shell 命令 <code>系统日期锚</code>，输出 <code>2026-08-06</code></td>\n<td>锚定所有“今日/上一交易日/本周”引用</td>\n</tr>\n<tr>\n<td>S2</td>\n<td>工作区检查：<code>rg --files</code> 无业务文件输出；<code>ls -la</code> 显示仅有 <code>.git</code></td>\n<td>确认未发现组合级输入文件</td>\n</tr>\n<tr>\n<td>S3</td>\n<td>OpenAI finance quote: SPY, QQQ, TLT；参考链接：https://finance.yahoo.com/quote/SPY 、https://finance.yahoo.com/quote/QQQ 、https://finance.yahoo.com/quote/TLT</td>\n<td>当日市场代理价格与变动</td>\n</tr>\n</tbody>\n</table>"
+}

@@ -916,7 +916,7 @@
       "laneHref": "/investor/lanes/credit-refinancing-and-private-debt/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 53,
+      "conviction": 55,
       "supports": 2,
       "risks": 2,
       "neutral": 0,
@@ -955,6 +955,7 @@
         "KRE",
         "JPM",
         "META",
+        "NVDA",
         "BX",
         "KKR",
         "ARES",
@@ -994,9 +995,9 @@
       ],
       "stockTickers": [
         "BABA",
+        "MSFT",
         "BIDU",
         "9988.HK",
-        "MSFT",
         "CRM",
         "0700.HK",
         "NOW",
@@ -1058,7 +1059,7 @@
       "laneHref": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 62,
+      "conviction": 64,
       "supports": 0,
       "risks": 2,
       "neutral": 0,
@@ -1082,14 +1083,14 @@
       "stockTickers": [
         "MSFT",
         "NVDA",
-        "META",
         "AAPL",
-        "AMZN",
+        "META",
         "ARM",
-        "QCOM",
         "AMD",
+        "AMZN",
+        "QCOM",
         "GOOGL",
-        "AVGO"
+        "002475.SZ"
       ]
     },
     {
@@ -1250,8 +1251,8 @@
       "laneId": "lane_f21fc181388a",
       "lane": "Mag7 AI 平台再分层",
       "laneHref": "/investor/lanes/mag7-ai-platform-re-layering/",
-      "direction": "stable",
-      "directionLabel": "稳定",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
       "conviction": 67,
       "supports": 0,
       "risks": 1,
@@ -1273,6 +1274,7 @@
         "NVDA",
         "GOOGL",
         "TSM",
+        "AVGO",
         "AAPL",
         "TSLA"
       ]
@@ -1317,7 +1319,7 @@
       "laneHref": "/investor/lanes/china-export-manufacturing-and-margins/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 47,
+      "conviction": 49,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -1369,15 +1371,15 @@
       ],
       "stockTickers": [
         "SMR",
-        "GEV",
         "002028.SZ",
+        "GEV",
         "300750.SZ",
         "600900.SH",
         "MSFT",
-        "300274.SZ",
         "CEG",
-        "VST",
-        "ETN"
+        "300274.SZ",
+        "META",
+        "VST"
       ]
     }
   ],
@@ -1388,17 +1390,18 @@
       "href": "/investor/lanes/credit-refinancing-and-private-debt/",
       "thesisCount": 2,
       "eventCount": 5,
-      "convictionTotal": 117,
+      "convictionTotal": 119,
       "stockTickers": [
         "KRE",
         "JPM",
         "KKR",
         "META",
+        "NVDA",
         "BX",
         "ARES",
         "APO"
       ],
-      "avgConviction": 59
+      "avgConviction": 60
     },
     {
       "id": "lane_c40c2ce413ec",
@@ -1423,9 +1426,9 @@
       "convictionTotal": 72,
       "stockTickers": [
         "BABA",
+        "MSFT",
         "BIDU",
         "9988.HK",
-        "MSFT",
         "CRM",
         "0700.HK",
         "NOW",
@@ -1461,20 +1464,20 @@
       "href": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
       "thesisCount": 1,
       "eventCount": 2,
-      "convictionTotal": 62,
+      "convictionTotal": 64,
       "stockTickers": [
         "MSFT",
         "NVDA",
-        "META",
         "AAPL",
-        "AMZN",
+        "META",
         "ARM",
-        "QCOM",
         "AMD",
+        "AMZN",
+        "QCOM",
         "GOOGL",
-        "AVGO"
+        "002475.SZ"
       ],
-      "avgConviction": 62
+      "avgConviction": 64
     },
     {
       "id": "lane_f3e413e8ce27",
@@ -1504,6 +1507,7 @@
         "NVDA",
         "GOOGL",
         "TSM",
+        "AVGO",
         "AAPL",
         "TSLA"
       ],
@@ -1515,7 +1519,7 @@
       "href": "/investor/lanes/china-export-manufacturing-and-margins/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 47,
+      "convictionTotal": 49,
       "stockTickers": [
         "000333.SZ",
         "600690.SH",
@@ -1527,7 +1531,7 @@
         "002475.SZ",
         "2020.HK"
       ],
-      "avgConviction": 47
+      "avgConviction": 49
     },
     {
       "id": "lane_e69b58816f80",
@@ -1538,15 +1542,15 @@
       "convictionTotal": 42,
       "stockTickers": [
         "SMR",
-        "GEV",
         "002028.SZ",
+        "GEV",
         "300750.SZ",
         "600900.SH",
         "MSFT",
-        "300274.SZ",
         "CEG",
-        "VST",
-        "ETN"
+        "300274.SZ",
+        "META",
+        "VST"
       ],
       "avgConviction": 42
     }
@@ -1557,13 +1561,14 @@
       "name": "NVIDIA",
       "market": "US",
       "href": "/investor/stocks/NVDA/",
-      "thesisCount": 4,
-      "eventCount": 7,
+      "thesisCount": 5,
+      "eventCount": 11,
       "lanes": [
         "低价模型/AI 软件利润池",
         "Mag7 AI 平台再分层",
         "中国云/国产算力栈",
-        "端侧 AI/Agent 桌面"
+        "端侧 AI/Agent 桌面",
+        "信用再融资/私募信贷"
       ]
     },
     {
@@ -1571,12 +1576,13 @@
       "name": "Meta Platforms",
       "market": "US",
       "href": "/investor/stocks/META/",
-      "thesisCount": 3,
-      "eventCount": 7,
+      "thesisCount": 4,
+      "eventCount": 8,
       "lanes": [
         "Mag7 AI 平台再分层",
         "端侧 AI/Agent 桌面",
-        "信用再融资/私募信贷"
+        "信用再融资/私募信贷",
+        "能源转型/储能光伏"
       ]
     },
     {
@@ -1751,6 +1757,18 @@
       "lanes": [
         "Mag7 AI 平台再分层",
         "端侧 AI/Agent 桌面"
+      ]
+    },
+    {
+      "ticker": "002475.SZ",
+      "name": "立讯精密",
+      "market": "A-share",
+      "href": "/investor/stocks/002475.SZ/",
+      "thesisCount": 2,
+      "eventCount": 3,
+      "lanes": [
+        "端侧 AI/Agent 桌面",
+        "中国出口制造/利润率"
       ]
     },
     {
@@ -1933,17 +1951,6 @@
       ]
     },
     {
-      "ticker": "QCOM",
-      "name": "Qualcomm",
-      "market": "US",
-      "href": "/investor/stocks/QCOM/",
-      "thesisCount": 1,
-      "eventCount": 2,
-      "lanes": [
-        "端侧 AI/Agent 桌面"
-      ]
-    },
-    {
       "ticker": "AMD",
       "name": "AMD",
       "market": "US",
@@ -1955,10 +1962,10 @@
       ]
     },
     {
-      "ticker": "AVGO",
-      "name": "Broadcom",
+      "ticker": "QCOM",
+      "name": "Qualcomm",
       "market": "US",
-      "href": "/investor/stocks/AVGO/",
+      "href": "/investor/stocks/QCOM/",
       "thesisCount": 1,
       "eventCount": 2,
       "lanes": [
@@ -1977,6 +1984,17 @@
       ]
     },
     {
+      "ticker": "AVGO",
+      "name": "Broadcom",
+      "market": "US",
+      "href": "/investor/stocks/AVGO/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "Mag7 AI 平台再分层"
+      ]
+    },
+    {
       "ticker": "TSLA",
       "name": "Tesla",
       "market": "US",
@@ -1992,17 +2010,6 @@
       "name": "美的集团",
       "market": "A-share",
       "href": "/investor/stocks/000333.SZ/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "中国出口制造/利润率"
-      ]
-    },
-    {
-      "ticker": "600690.SH",
-      "name": "海尔智家",
-      "market": "A-share",
-      "href": "/investor/stocks/600690.SH/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [

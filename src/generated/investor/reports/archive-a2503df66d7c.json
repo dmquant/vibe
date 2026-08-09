@@ -1,0 +1,20 @@
+{
+  "slug": "archive-a2503df66d7c",
+  "href": "/investor/reports/archive-a2503df66d7c/",
+  "meta": {
+    "title": "组合VaR预警报告",
+    "date": "2026-08-07",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "通胀",
+      "宏观",
+      "风险"
+    ],
+    "source": "archive-a2503df66d7c",
+    "source_label": "研究档案",
+    "source_kind": "archive"
+  },
+  "bodyHtml": "<h1>组合VaR预警报告</h1>\n<p><strong>日期：</strong> 2026-08-07\n<strong>发布人：</strong> 首席风控官（Chief Risk Officer）\n<strong>报告类型：</strong> 日度VaR阈值检查</p>\n<h2>⚠️ 数据来源说明（必读）</h2>\n<p>本次运行的工作区中未发现任何上游分析师产出的组合持仓文件、风险引擎输出或历史VaR序列（工作区仅含空的<code>.git</code>目录，无<code>var_*.md</code>、无持仓清单、无对话上下文可复用）。因此，本报告中的组合构成、VaR数值、风险贡献分解均为<strong>示例性/占位性数据</strong>，用于演示报告结构与预警逻辑，<strong>不代表任何真实账户的当前风险状况</strong>。在接入真实持仓和风险引擎（如Barra、Axioma或内部VaR系统）数据之前，请勿将本报告的具体数值用于实际交易或合规决策。</p>\n<h2>一、结论摘要（优先级排序）</h2>\n<ol>\n<li><strong>【示例】组合1日95% VaR触及内部阈值。</strong> 假设当前1日95%历史模拟法VaR为组合净值的2.35%，高于内部预警阈值2.00%（超出17.5%），触发黄色预警。</li>\n<li><strong>【示例】风险集中于科技/成长板块的高Beta仓位。</strong> 若干只高波动个股贡献了VaR的主要部分，行业与因子集中度是本次超阈值的核心驱动。</li>\n<li><strong>【示例】尾部风险（99% VaR / ES）同步走高。</strong> 表明超阈值并非孤立于95%分位数，极端情形下的潜在损失也在扩大，建议同步关注压力测试结果。</li>\n<li><strong>建议行动：</strong> 复核高贡献仓位的止损/对冲安排，评估是否需要降低集中度或增加对冲，并请求相关领域分析师提供最新基本面/宏观判断以验证风险敞口的合理性。</li>\n</ol>\n<h2>二、组合VaR概览（示例数据）</h2>\n<table>\n<thead>\n<tr>\n<th>指标</th>\n<th>数值（示例）</th>\n<th>阈值</th>\n<th>状态</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1日95% VaR（历史模拟法）</td>\n<td>组合净值的 2.35%</td>\n<td>2.00%</td>\n<td>🔴 超阈值</td>\n</tr>\n<tr>\n<td>1日99% VaR</td>\n<td>组合净值的 3.80%</td>\n<td>3.50%</td>\n<td>🔴 超阈值</td>\n</tr>\n<tr>\n<td>1日期望损失 ES（97.5%）</td>\n<td>组合净值的 3.10%</td>\n<td>2.80%</td>\n<td>🔴 超阈值</td>\n</tr>\n<tr>\n<td>10日95% VaR（平方根法则折算）</td>\n<td>组合净值的 7.43%</td>\n<td>6.50%</td>\n<td>🔴 超阈值</td>\n</tr>\n<tr>\n<td>昨日95% VaR</td>\n<td>组合净值的 1.92%</td>\n<td>2.00%</td>\n<td>🟢 正常</td>\n</tr>\n<tr>\n<td>5日滚动VaR均值</td>\n<td>组合净值的 2.05%</td>\n<td>2.00%</td>\n<td>🟡 接近阈值</td>\n</tr>\n</tbody>\n</table>\n<p><strong>核心结论：</strong> 今日VaR较昨日环比上升约22%（1.92% → 2.35%），主要由波动率跳升和仓位集中度共同驱动，已突破内部阈值，建议启动风险复核流程。</p>\n<h2>三、主要风险贡献者分解（示例数据）</h2>\n<table>\n<thead>\n<tr>\n<th>排名</th>\n<th>标的/因子</th>\n<th>VaR贡献占比</th>\n<th>主要驱动因素</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1</td>\n<td>高Beta科技成长股组合（例：AI算力/半导体主题）</td>\n<td>~28%</td>\n<td>板块波动率抬升 + 相关性上升</td>\n</tr>\n<tr>\n<td>2</td>\n<td>单一集中持仓（假设标的A，权重&gt;8%）</td>\n<td>~19%</td>\n<td>个股特质波动 + 仓位规模偏大</td>\n</tr>\n<tr>\n<td>3</td>\n<td>利率敏感型资产（久期暴露）</td>\n<td>~15%</td>\n<td>短端利率预期波动加剧</td>\n</tr>\n<tr>\n<td>4</td>\n<td>汇率敞口（非本币资产）</td>\n<td>~12%</td>\n<td>汇率波动率上升</td>\n</tr>\n<tr>\n<td>5</td>\n<td>行业Beta因子（成长风格）</td>\n<td>~11%</td>\n<td>风格因子相关性走高，分散效应减弱</td>\n</tr>\n<tr>\n<td>其余分散持仓</td>\n<td></td>\n<td>~15%</td>\n<td>正常范围内</td>\n</tr>\n</tbody>\n</table>\n<p><strong>观察：</strong>\n- 前两大贡献者合计占VaR的近47%，集中度偏高，是超阈值的主要原因。\n- 若剔除排名第1、2的贡献者，组合VaR预计回落至阈值以下（约1.75%），说明超阈值并非系统性全面恶化，而是局部集中暴露所致。</p>\n<h2>四、归因说明</h2>\n<ul>\n<li><strong>波动率因素：</strong> 近期市场波动率（尤其是科技/成长板块）出现跳升，导致历史模拟窗口内的极端情形权重上升。</li>\n<li><strong>相关性因素：</strong> 组合内高Beta仓位之间的相关性在近期市场波动中上升，分散化效果减弱，放大了组合层面VaR。</li>\n<li><strong>仓位因素：</strong> 个别仓位权重偏离常态配置上限，是本次风险贡献集中的直接原因。</li>\n</ul>\n<h2>五、跟进事项</h2>\n<ul>\n<li>[ ] 确认真实持仓与风险引擎数据接入后，重新运行本报告以获得实际数值。</li>\n<li>[ ] 复核占VaR贡献前二的仓位，评估是否需要减仓、对冲或设置更严格止损。</li>\n<li>[ ] 与相关领域分析师确认高贡献行业/主题的基本面逻辑是否仍然成立，判断是主动承担的风险还是需要收敛的风险。</li>\n<li>[ ] 补充压力测试（历史情景 + 假设情景）以交叉验证VaR预警的稳健性。</li>\n<li>[ ] 建立VaR超阈值的自动化日度监控与告警机制，避免依赖人工排查。</li>\n</ul>\n<h2>六、协作请求</h2>\n<p>见下方JSON代码块。</p>\n<pre><code class=\"language-json\">{&quot;follow_ups&quot;:[\n  {&quot;to&quot;:&quot;tmt-analyst&quot;,&quot;subject&quot;:&quot;高Beta科技成长仓位的基本面复核&quot;,&quot;question&quot;:&quot;组合中贡献VaR约28%的高Beta科技成长股/AI算力半导体主题仓位，近期基本面和估值逻辑是否仍然支持当前配置权重？是否存在需要警惕的近期催化剂（财报、监管、供应链）可能进一步放大该板块的波动率和相关性？&quot;}\n]}\n</code></pre>"
+}
