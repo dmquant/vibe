@@ -1509,7 +1509,7 @@
       "laneHref": "/investor/lanes/credit-refinancing-and-private-debt/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 55,
+      "conviction": 54,
       "supports": 0,
       "risks": 3,
       "neutral": 0,
@@ -1539,13 +1539,13 @@
       ],
       "stockTickers": [
         "KRE",
-        "JPM",
         "META",
+        "JPM",
+        "MSFT",
         "NVDA",
-        "BX",
-        "KKR",
-        "ARES",
-        "APO"
+        "AMZN",
+        "LITE",
+        "BX"
       ]
     },
     {
@@ -2488,7 +2488,7 @@
       "laneHref": "/investor/lanes/bond-supply-and-bank-duration/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 58,
+      "conviction": 60,
       "supports": 1,
       "risks": 0,
       "neutral": 0,
@@ -2544,10 +2544,46 @@
         "0981.HK",
         "688041.SH",
         "600900.SH",
-        "688008.SH",
         "588000.SH",
+        "688008.SH",
         "300394.SZ",
         "300502.SZ"
+      ]
+    },
+    {
+      "id": "thesis-7f0a75c5f6",
+      "title": "数据中心地产、液冷与水资源正在决定 AI 容量的区域迁移",
+      "titleEn": "Data-center real estate, liquid cooling, and water resources are deciding regional migration of AI capacity",
+      "href": "/investor/theses/thesis-7f0a75c5f6/",
+      "laneId": "lane_0679894fe06b",
+      "lane": "数据中心地产/液冷",
+      "laneHref": "/investor/lanes/data-center-real-estate-and-cooling/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 56,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "工业制造分析师：OEM产能扩张压力测试",
+          "summary": "工业制造分析师：OEM产能扩张压力测试 重型燃气轮机铸造线、变压器绕组产能与HV开关装配吞吐能否在2027–2029窗口实际落地？",
+          "href": "/investor/reports/archive-b3d1686a13ba/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "VRT",
+        "NVDA",
+        "ETN",
+        "META",
+        "GEV",
+        "MSFT",
+        "DLR",
+        "EQIX",
+        "AMZN"
       ]
     },
     {
@@ -2584,41 +2620,6 @@
         "603662.SH",
         "603667.SH",
         "600761.SH"
-      ]
-    },
-    {
-      "id": "thesis-a803fa3312",
-      "title": "美联储路径仍是全球资产再定价的总阀门",
-      "titleEn": "The Fed path remains the master valve for global asset repricing",
-      "href": "/investor/theses/thesis-a803fa3312/",
-      "laneId": "lane_1c216bd29875",
-      "lane": "美债利率/美元再定价",
-      "laneHref": "/investor/lanes/us-rates-and-dollar-repricing/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 53,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "支撑2万亿美元电网Capex周期的宏观容纳力：利率路径、通胀传导与央行政策对受监管公用事业再融资的...",
-          "summary": "支撑2万亿美元电网Capex周期的宏观容纳力：利率路径、通胀传导与央行政策对受监管公用事业再融资的影响",
-          "href": "/investor/reports/archive-ea7f509f0901/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "CME",
-        "TLT",
-        "META",
-        "AMZN",
-        "JPM",
-        "KRE",
-        "GLD",
-        "IEF"
       ]
     },
     {
@@ -2659,39 +2660,38 @@
       ]
     },
     {
-      "id": "thesis-7f0a75c5f6",
-      "title": "数据中心地产、液冷与水资源正在决定 AI 容量的区域迁移",
-      "titleEn": "Data-center real estate, liquid cooling, and water resources are deciding regional migration of AI capacity",
-      "href": "/investor/theses/thesis-7f0a75c5f6/",
-      "laneId": "lane_0679894fe06b",
-      "lane": "数据中心地产/液冷",
-      "laneHref": "/investor/lanes/data-center-real-estate-and-cooling/",
+      "id": "thesis-a803fa3312",
+      "title": "美联储路径仍是全球资产再定价的总阀门",
+      "titleEn": "The Fed path remains the master valve for global asset repricing",
+      "href": "/investor/theses/thesis-a803fa3312/",
+      "laneId": "lane_1c216bd29875",
+      "lane": "美债利率/美元再定价",
+      "laneHref": "/investor/lanes/us-rates-and-dollar-repricing/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 52,
+      "conviction": 50,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
       "eventCount": 1,
       "events": [
         {
-          "title": "工业制造分析师：OEM产能扩张压力测试",
-          "summary": "工业制造分析师：OEM产能扩张压力测试 重型燃气轮机铸造线、变压器绕组产能与HV开关装配吞吐能否在2027–2029窗口实际落地？",
-          "href": "/investor/reports/archive-b3d1686a13ba/",
+          "title": "支撑2万亿美元电网Capex周期的宏观容纳力：利率路径、通胀传导与央行政策对受监管公用事业再融资的...",
+          "summary": "支撑2万亿美元电网Capex周期的宏观容纳力：利率路径、通胀传导与央行政策对受监管公用事业再融资的影响",
+          "href": "/investor/reports/archive-ea7f509f0901/",
           "stance": "risk",
           "stanceLabel": "风险"
         }
       ],
       "stockTickers": [
-        "VRT",
-        "NVDA",
-        "ETN",
+        "CME",
+        "TLT",
         "META",
-        "GEV",
-        "MSFT",
-        "DLR",
-        "EQIX",
-        "AMZN"
+        "AMZN",
+        "JPM",
+        "KRE",
+        "GLD",
+        "IEF"
       ]
     },
     {
@@ -2731,6 +2731,38 @@
       ]
     },
     {
+      "id": "thesis-e26ef69f73",
+      "title": "风险核查与证据质量是主题交易的必要过滤器",
+      "titleEn": "Risk verification and evidence quality are necessary filters for theme trades",
+      "href": "/investor/theses/thesis-e26ef69f73/",
+      "laneId": "lane_ccbe817778d1",
+      "lane": "组合风控/证据质量",
+      "laneHref": "/investor/lanes/portfolio-risk-and-evidence-quality/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 44,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "能源冲击的持续性及其向美国通胀的传导",
+          "summary": "研究记录 分析师: energy-analyst (能源行业分析师) 立场: stress-test - 日期: 2026-05-04 - 前序研究: chief-economist 的判断是 Fed 仍可保留有条件宽松倾向，但近期降息证据不足，因为 CPI...",
+          "href": "/investor/reports/archive-c08b4662cb31/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "CME",
+        "CBOE",
+        "IBKR",
+        "VIRT",
+        "SH"
+      ]
+    },
+    {
       "id": "thesis-1aaa752ed4",
       "title": "AI 电力与电网瓶颈仍是基础设施主线",
       "titleEn": "AI power and grid bottlenecks remain the infrastructure core",
@@ -2766,38 +2798,6 @@
         "AMZN",
         "601179.SH"
       ]
-    },
-    {
-      "id": "thesis-e26ef69f73",
-      "title": "风险核查与证据质量是主题交易的必要过滤器",
-      "titleEn": "Risk verification and evidence quality are necessary filters for theme trades",
-      "href": "/investor/theses/thesis-e26ef69f73/",
-      "laneId": "lane_ccbe817778d1",
-      "lane": "组合风控/证据质量",
-      "laneHref": "/investor/lanes/portfolio-risk-and-evidence-quality/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 43,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "能源冲击的持续性及其向美国通胀的传导",
-          "summary": "研究记录 分析师: energy-analyst (能源行业分析师) 立场: stress-test - 日期: 2026-05-04 - 前序研究: chief-economist 的判断是 Fed 仍可保留有条件宽松倾向，但近期降息证据不足，因为 CPI...",
-          "href": "/investor/reports/archive-c08b4662cb31/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "CME",
-        "CBOE",
-        "IBKR",
-        "VIRT",
-        "SH"
-      ]
     }
   ],
   "lanes": [
@@ -2807,7 +2807,7 @@
       "href": "/investor/lanes/us-rates-and-dollar-repricing/",
       "thesisCount": 5,
       "eventCount": 5,
-      "convictionTotal": 375,
+      "convictionTotal": 372,
       "stockTickers": [
         "JPM",
         "TLT",
@@ -2819,7 +2819,7 @@
         "KRE",
         "GLD"
       ],
-      "avgConviction": 75
+      "avgConviction": 74
     },
     {
       "id": "lane_b29e1d216a21",
@@ -2827,18 +2827,19 @@
       "href": "/investor/lanes/credit-refinancing-and-private-debt/",
       "thesisCount": 2,
       "eventCount": 5,
-      "convictionTotal": 119,
+      "convictionTotal": 118,
       "stockTickers": [
         "KRE",
         "JPM",
         "KKR",
         "META",
+        "MSFT",
         "NVDA",
-        "BX",
-        "ARES",
-        "APO"
+        "AMZN",
+        "LITE",
+        "BX"
       ],
-      "avgConviction": 60
+      "avgConviction": 59
     },
     {
       "id": "lane_f3e413e8ce27",
@@ -3102,7 +3103,7 @@
       "href": "/investor/lanes/bond-supply-and-bank-duration/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 58,
+      "convictionTotal": 60,
       "stockTickers": [
         "601398.SH",
         "601939.SH",
@@ -3113,7 +3114,7 @@
         "IEF",
         "000001.SZ"
       ],
-      "avgConviction": 58
+      "avgConviction": 60
     },
     {
       "id": "lane_4cc1e74d8e5f",
@@ -3129,10 +3130,30 @@
         "0981.HK",
         "688041.SH",
         "600900.SH",
-        "688008.SH",
         "588000.SH",
+        "688008.SH",
         "300394.SZ",
         "300502.SZ"
+      ],
+      "avgConviction": 56
+    },
+    {
+      "id": "lane_0679894fe06b",
+      "title": "数据中心地产/液冷",
+      "href": "/investor/lanes/data-center-real-estate-and-cooling/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "convictionTotal": 56,
+      "stockTickers": [
+        "VRT",
+        "NVDA",
+        "ETN",
+        "META",
+        "GEV",
+        "MSFT",
+        "DLR",
+        "EQIX",
+        "AMZN"
       ],
       "avgConviction": 56
     },
@@ -3178,26 +3199,6 @@
       "avgConviction": 53
     },
     {
-      "id": "lane_0679894fe06b",
-      "title": "数据中心地产/液冷",
-      "href": "/investor/lanes/data-center-real-estate-and-cooling/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 52,
-      "stockTickers": [
-        "VRT",
-        "NVDA",
-        "ETN",
-        "META",
-        "GEV",
-        "MSFT",
-        "DLR",
-        "EQIX",
-        "AMZN"
-      ],
-      "avgConviction": 52
-    },
-    {
       "id": "lane_e4b72516d71a",
       "title": "中国电力设备出海",
       "href": "/investor/lanes/china-power-equipment-exports/",
@@ -3223,7 +3224,7 @@
       "href": "/investor/lanes/portfolio-risk-and-evidence-quality/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 43,
+      "convictionTotal": 44,
       "stockTickers": [
         "CME",
         "CBOE",
@@ -3231,7 +3232,7 @@
         "VIRT",
         "SH"
       ],
-      "avgConviction": 43
+      "avgConviction": 44
     }
   ],
   "stocks": [
@@ -3251,6 +3252,21 @@
       ]
     },
     {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "market": "US",
+      "href": "/investor/stocks/MSFT/",
+      "thesisCount": 10,
+      "eventCount": 19,
+      "lanes": [
+        "Mag7 AI 平台再分层",
+        "低价模型/AI 软件利润池",
+        "AI 软件效率/生产率",
+        "数据中心地产/液冷",
+        "AI 再通胀/利率敏感资产"
+      ]
+    },
+    {
       "ticker": "META",
       "name": "Meta Platforms",
       "market": "US",
@@ -3260,24 +3276,9 @@
       "lanes": [
         "Mag7 AI 平台再分层",
         "AI 软件效率/生产率",
+        "数据中心地产/液冷",
         "AI 再通胀/利率敏感资产",
-        "信用再融资/私募信贷",
-        "美债利率/美元再定价"
-      ]
-    },
-    {
-      "ticker": "MSFT",
-      "name": "Microsoft",
-      "market": "US",
-      "href": "/investor/stocks/MSFT/",
-      "thesisCount": 9,
-      "eventCount": 16,
-      "lanes": [
-        "Mag7 AI 平台再分层",
-        "低价模型/AI 软件利润池",
-        "AI 软件效率/生产率",
-        "AI 再通胀/利率敏感资产",
-        "数据中心地产/液冷"
+        "信用再融资/私募信贷"
       ]
     },
     {
@@ -3285,14 +3286,14 @@
       "name": "Amazon",
       "market": "US",
       "href": "/investor/stocks/AMZN/",
-      "thesisCount": 9,
-      "eventCount": 14,
+      "thesisCount": 10,
+      "eventCount": 17,
       "lanes": [
         "Mag7 AI 平台再分层",
         "AI 软件效率/生产率",
+        "数据中心地产/液冷",
         "AI 再通胀/利率敏感资产",
-        "美债利率/美元再定价",
-        "数据中心地产/液冷"
+        "信用再融资/私募信贷"
       ]
     },
     {
@@ -3512,17 +3513,6 @@
       ]
     },
     {
-      "ticker": "KKR",
-      "name": "KKR",
-      "market": "US",
-      "href": "/investor/stocks/KKR/",
-      "thesisCount": 2,
-      "eventCount": 5,
-      "lanes": [
-        "信用再融资/私募信贷"
-      ]
-    },
-    {
       "ticker": "3988.HK",
       "name": "中国银行",
       "market": "HK",
@@ -3732,6 +3722,18 @@
       "lanes": [
         "AI 再通胀/利率敏感资产",
         "公用事业/电网信用"
+      ]
+    },
+    {
+      "ticker": "AEP",
+      "name": "American Electric Power",
+      "market": "US",
+      "href": "/investor/stocks/AEP/",
+      "thesisCount": 2,
+      "eventCount": 3,
+      "lanes": [
+        "公用事业/电网信用",
+        "云厂商自发电/电力资产"
       ]
     }
   ],

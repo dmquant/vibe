@@ -110,7 +110,7 @@
       "laneHref": "/investor/lanes/credit-refinancing-and-private-debt/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 55,
+      "conviction": 54,
       "supports": 1,
       "risks": 0,
       "neutral": 0,
@@ -126,13 +126,13 @@
       ],
       "stockTickers": [
         "KRE",
-        "JPM",
         "META",
+        "JPM",
+        "MSFT",
         "NVDA",
-        "BX",
-        "KKR",
-        "ARES",
-        "APO"
+        "AMZN",
+        "LITE",
+        "BX"
       ]
     }
   ],
@@ -143,18 +143,18 @@
       "href": "/investor/lanes/credit-refinancing-and-private-debt/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 55,
+      "convictionTotal": 54,
       "stockTickers": [
         "KRE",
-        "JPM",
         "META",
+        "JPM",
+        "MSFT",
         "NVDA",
-        "BX",
-        "KKR",
-        "ARES",
-        "APO"
+        "AMZN",
+        "LITE",
+        "BX"
       ],
-      "avgConviction": 55
+      "avgConviction": 54
     }
   ],
   "stocks": [
@@ -163,17 +163,6 @@
       "name": "SPDR S&P Regional Banking ETF",
       "market": "US ETF",
       "href": "/investor/stocks/KRE/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "信用再融资/私募信贷"
-      ]
-    },
-    {
-      "ticker": "JPM",
-      "name": "JPMorgan Chase",
-      "market": "US",
-      "href": "/investor/stocks/JPM/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
@@ -192,6 +181,28 @@
       ]
     },
     {
+      "ticker": "JPM",
+      "name": "JPMorgan Chase",
+      "market": "US",
+      "href": "/investor/stocks/JPM/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "信用再融资/私募信贷"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "market": "US",
+      "href": "/investor/stocks/MSFT/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "信用再融资/私募信贷"
+      ]
+    },
+    {
       "ticker": "NVDA",
       "name": "NVIDIA",
       "market": "US",
@@ -203,43 +214,32 @@
       ]
     },
     {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "market": "US",
+      "href": "/investor/stocks/AMZN/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "信用再融资/私募信贷"
+      ]
+    },
+    {
+      "ticker": "LITE",
+      "name": "Lumentum",
+      "market": "US",
+      "href": "/investor/stocks/LITE/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "信用再融资/私募信贷"
+      ]
+    },
+    {
       "ticker": "BX",
       "name": "Blackstone",
       "market": "US",
       "href": "/investor/stocks/BX/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "信用再融资/私募信贷"
-      ]
-    },
-    {
-      "ticker": "KKR",
-      "name": "KKR",
-      "market": "US",
-      "href": "/investor/stocks/KKR/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "信用再融资/私募信贷"
-      ]
-    },
-    {
-      "ticker": "ARES",
-      "name": "Ares Management",
-      "market": "US",
-      "href": "/investor/stocks/ARES/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "信用再融资/私募信贷"
-      ]
-    },
-    {
-      "ticker": "APO",
-      "name": "Apollo Global Management",
-      "market": "US",
-      "href": "/investor/stocks/APO/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [

@@ -2691,7 +2691,7 @@
       "laneHref": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 64,
+      "conviction": 65,
       "supports": 1,
       "risks": 1,
       "neutral": 2,
@@ -2729,11 +2729,11 @@
       "stockTickers": [
         "MSFT",
         "NVDA",
-        "AAPL",
         "META",
-        "ARM",
-        "AMD",
+        "AAPL",
         "AMZN",
+        "AMD",
+        "ARM",
         "QCOM",
         "GOOGL",
         "002475.SZ"
@@ -3258,8 +3258,8 @@
         "0981.HK",
         "688041.SH",
         "600900.SH",
-        "688008.SH",
         "588000.SH",
+        "688008.SH",
         "300394.SZ",
         "300502.SZ"
       ]
@@ -3636,7 +3636,7 @@
       "laneHref": "/investor/lanes/credit-refinancing-and-private-debt/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 55,
+      "conviction": 54,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -3652,13 +3652,13 @@
       ],
       "stockTickers": [
         "KRE",
-        "JPM",
         "META",
+        "JPM",
+        "MSFT",
         "NVDA",
-        "BX",
-        "KKR",
-        "ARES",
-        "APO"
+        "AMZN",
+        "LITE",
+        "BX"
       ]
     },
     {
@@ -3859,20 +3859,20 @@
       "href": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
       "thesisCount": 1,
       "eventCount": 4,
-      "convictionTotal": 64,
+      "convictionTotal": 65,
       "stockTickers": [
         "MSFT",
         "NVDA",
-        "AAPL",
         "META",
-        "ARM",
-        "AMD",
+        "AAPL",
         "AMZN",
+        "AMD",
+        "ARM",
         "QCOM",
         "GOOGL",
         "002475.SZ"
       ],
-      "avgConviction": 64
+      "avgConviction": 65
     },
     {
       "id": "lane_73a269a07a15",
@@ -3993,8 +3993,8 @@
         "0981.HK",
         "688041.SH",
         "600900.SH",
-        "688008.SH",
         "588000.SH",
+        "688008.SH",
         "300394.SZ",
         "300502.SZ"
       ],
@@ -4103,18 +4103,18 @@
       "href": "/investor/lanes/credit-refinancing-and-private-debt/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 55,
+      "convictionTotal": 54,
       "stockTickers": [
         "KRE",
-        "JPM",
         "META",
+        "JPM",
+        "MSFT",
         "NVDA",
-        "BX",
-        "KKR",
-        "ARES",
-        "APO"
+        "AMZN",
+        "LITE",
+        "BX"
       ],
-      "avgConviction": 55
+      "avgConviction": 54
     },
     {
       "id": "lane_a431ca971c3c",
@@ -4145,8 +4145,8 @@
         "Mag7 AI 平台再分层",
         "AI 算力半导体",
         "低价模型/AI 软件利润池",
-        "先进封装/HBM4 闸门",
-        "自动驾驶/Robotaxi 单位经济"
+        "端侧 AI/Agent 桌面",
+        "先进封装/HBM4 闸门"
       ]
     },
     {
@@ -4169,14 +4169,29 @@
       "name": "Microsoft",
       "market": "US",
       "href": "/investor/stocks/MSFT/",
-      "thesisCount": 8,
-      "eventCount": 17,
+      "thesisCount": 9,
+      "eventCount": 18,
       "lanes": [
         "Mag7 AI 平台再分层",
         "低价模型/AI 软件利润池",
         "AI 算力半导体",
         "端侧 AI/Agent 桌面",
         "CPO/光模块/高速互联"
+      ]
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "market": "US",
+      "href": "/investor/stocks/AMZN/",
+      "thesisCount": 7,
+      "eventCount": 15,
+      "lanes": [
+        "Mag7 AI 平台再分层",
+        "AI 算力半导体",
+        "端侧 AI/Agent 桌面",
+        "信用再融资/私募信贷",
+        "自动驾驶/Robotaxi 单位经济"
       ]
     },
     {
@@ -4202,23 +4217,8 @@
       "lanes": [
         "Mag7 AI 平台再分层",
         "AI 算力半导体",
-        "自动驾驶/Robotaxi 单位经济",
-        "端侧 AI/Agent 桌面"
-      ]
-    },
-    {
-      "ticker": "AMZN",
-      "name": "Amazon",
-      "market": "US",
-      "href": "/investor/stocks/AMZN/",
-      "thesisCount": 6,
-      "eventCount": 14,
-      "lanes": [
-        "Mag7 AI 平台再分层",
-        "AI 算力半导体",
         "端侧 AI/Agent 桌面",
-        "自动驾驶/Robotaxi 单位经济",
-        "AI 电力/电网设备"
+        "自动驾驶/Robotaxi 单位经济"
       ]
     },
     {
@@ -4855,7 +4855,7 @@
       "nameEn": "Chief Economist",
       "href": "/investor/personas/#persona-chief-economist-328251",
       "specialty": "全球宏观经济周期、GDP/CPI/PMI预测、央行政策研判",
-      "currentView": "面对4.2%的总体CPI与108美元的布伦特原油，新任主席沃什将在6月16-17日的FOMC会议上如何调整点阵图与政策立场？；日银本周加息至1.0%、美联储维持3.50–3.75%不变的双向利差收敛背景下,USD/JPY ~160的日元套利交易是有序拆解还是面临…；美伊和平协议拟重开霍尔木兹海峡，导致原油价格破位（Brent 79.49，WTI <78）。在能化大宗商品面临通缩压力的背景下，A股“红… 是当前该 persona 参与最…",
+      "currentView": "面对4.2%的总体CPI与108美元的布伦特原油，新任主席沃什将在6月16-17日的FOMC会议上如何调整点阵图与政策立场？；日银本周加息至1.0%、美联储维持3.50–3.75%不变的双向利差收敛背景下,USD/JPY ~160的日元套利交易是有序拆解还是面临…；在美联储偏鹰暂停、美债收益率攀升至4.66%的背景下，国内电子行业两融余额高悬至5722.82亿元是否面临负Gamma清算压力？如何重构… 是当前该 persona 参与最…",
       "supports": 0,
       "risks": 1,
       "neutral": 0,

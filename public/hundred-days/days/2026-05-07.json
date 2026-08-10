@@ -758,7 +758,7 @@
       "laneHref": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 64,
+      "conviction": 65,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -775,11 +775,11 @@
       "stockTickers": [
         "MSFT",
         "NVDA",
-        "AAPL",
         "META",
-        "ARM",
-        "AMD",
+        "AAPL",
         "AMZN",
+        "AMD",
+        "ARM",
         "QCOM",
         "GOOGL",
         "002475.SZ"
@@ -892,6 +892,42 @@
       ]
     },
     {
+      "id": "thesis-7f0a75c5f6",
+      "title": "数据中心地产、液冷与水资源正在决定 AI 容量的区域迁移",
+      "titleEn": "Data-center real estate, liquid cooling, and water resources are deciding regional migration of AI capacity",
+      "href": "/investor/theses/thesis-7f0a75c5f6/",
+      "laneId": "lane_0679894fe06b",
+      "lane": "数据中心地产/液冷",
+      "laneHref": "/investor/lanes/data-center-real-estate-and-cooling/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 56,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "AMD 与 NVIDIA 数据中心竞争及 SMCI 毛利率可持续性分析报告",
+          "summary": "AMD 与 NVIDIA 数据中心竞争及 SMCI 毛利率可持续性分析报告",
+          "href": "/investor/reports/archive-d8d666292491/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "VRT",
+        "NVDA",
+        "ETN",
+        "META",
+        "GEV",
+        "MSFT",
+        "DLR",
+        "EQIX",
+        "AMZN"
+      ]
+    },
+    {
       "id": "thesis-21dd72c1b1",
       "title": "航空航天与国防供应链错配正在形成政策驱动的制造业弹性",
       "titleEn": "Aerospace and defense supply-chain mismatch is creating policy-driven manufacturing beta",
@@ -928,42 +964,6 @@
       ]
     },
     {
-      "id": "thesis-7f0a75c5f6",
-      "title": "数据中心地产、液冷与水资源正在决定 AI 容量的区域迁移",
-      "titleEn": "Data-center real estate, liquid cooling, and water resources are deciding regional migration of AI capacity",
-      "href": "/investor/theses/thesis-7f0a75c5f6/",
-      "laneId": "lane_0679894fe06b",
-      "lane": "数据中心地产/液冷",
-      "laneHref": "/investor/lanes/data-center-real-estate-and-cooling/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 52,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "AMD 与 NVIDIA 数据中心竞争及 SMCI 毛利率可持续性分析报告",
-          "summary": "AMD 与 NVIDIA 数据中心竞争及 SMCI 毛利率可持续性分析报告",
-          "href": "/investor/reports/archive-d8d666292491/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "VRT",
-        "NVDA",
-        "ETN",
-        "META",
-        "GEV",
-        "MSFT",
-        "DLR",
-        "EQIX",
-        "AMZN"
-      ]
-    },
-    {
       "id": "thesis-e26ef69f73",
       "title": "风险核查与证据质量是主题交易的必要过滤器",
       "titleEn": "Risk verification and evidence quality are necessary filters for theme trades",
@@ -973,7 +973,7 @@
       "laneHref": "/investor/lanes/portfolio-risk-and-evidence-quality/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 43,
+      "conviction": 44,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -1073,20 +1073,20 @@
       "href": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 64,
+      "convictionTotal": 65,
       "stockTickers": [
         "MSFT",
         "NVDA",
-        "AAPL",
         "META",
-        "ARM",
-        "AMD",
+        "AAPL",
         "AMZN",
+        "AMD",
+        "ARM",
         "QCOM",
         "GOOGL",
         "002475.SZ"
       ],
-      "avgConviction": 64
+      "avgConviction": 65
     },
     {
       "id": "lane_73a269a07a15",
@@ -1129,6 +1129,26 @@
       "avgConviction": 58
     },
     {
+      "id": "lane_0679894fe06b",
+      "title": "数据中心地产/液冷",
+      "href": "/investor/lanes/data-center-real-estate-and-cooling/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "convictionTotal": 56,
+      "stockTickers": [
+        "VRT",
+        "NVDA",
+        "ETN",
+        "META",
+        "GEV",
+        "MSFT",
+        "DLR",
+        "EQIX",
+        "AMZN"
+      ],
+      "avgConviction": 56
+    },
+    {
       "id": "lane_1514a60f727a",
       "title": "国防航空航天供应链",
       "href": "/investor/lanes/defense-and-aerospace-supply-chain/",
@@ -1149,32 +1169,12 @@
       "avgConviction": 55
     },
     {
-      "id": "lane_0679894fe06b",
-      "title": "数据中心地产/液冷",
-      "href": "/investor/lanes/data-center-real-estate-and-cooling/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 52,
-      "stockTickers": [
-        "VRT",
-        "NVDA",
-        "ETN",
-        "META",
-        "GEV",
-        "MSFT",
-        "DLR",
-        "EQIX",
-        "AMZN"
-      ],
-      "avgConviction": 52
-    },
-    {
       "id": "lane_ccbe817778d1",
       "title": "组合风控/证据质量",
       "href": "/investor/lanes/portfolio-risk-and-evidence-quality/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 43,
+      "convictionTotal": 44,
       "stockTickers": [
         "CME",
         "CBOE",
@@ -1182,7 +1182,7 @@
         "VIRT",
         "SH"
       ],
-      "avgConviction": 43
+      "avgConviction": 44
     }
   ],
   "stocks": [
@@ -1298,18 +1298,6 @@
       ]
     },
     {
-      "ticker": "AMD",
-      "name": "AMD",
-      "market": "US",
-      "href": "/investor/stocks/AMD/",
-      "thesisCount": 2,
-      "eventCount": 2,
-      "lanes": [
-        "端侧 AI/Agent 桌面",
-        "AI 基建 TCO/能效筛选"
-      ]
-    },
-    {
       "ticker": "AMZN",
       "name": "Amazon",
       "market": "US",
@@ -1319,6 +1307,18 @@
       "lanes": [
         "端侧 AI/Agent 桌面",
         "数据中心地产/液冷"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "name": "AMD",
+      "market": "US",
+      "href": "/investor/stocks/AMD/",
+      "thesisCount": 2,
+      "eventCount": 2,
+      "lanes": [
+        "端侧 AI/Agent 桌面",
+        "AI 基建 TCO/能效筛选"
       ]
     },
     {

@@ -4359,8 +4359,8 @@
         "002028.SZ",
         "600089.SH",
         "601179.SH",
-        "688676.SH",
-        "VST"
+        "VST",
+        "688676.SH"
       ]
     },
     {
@@ -4373,7 +4373,7 @@
       "laneHref": "/investor/lanes/credit-refinancing-and-private-debt/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 55,
+      "conviction": 54,
       "supports": 1,
       "risks": 1,
       "neutral": 1,
@@ -4403,13 +4403,13 @@
       ],
       "stockTickers": [
         "KRE",
-        "JPM",
         "META",
+        "JPM",
+        "MSFT",
         "NVDA",
-        "BX",
-        "KKR",
-        "ARES",
-        "APO"
+        "AMZN",
+        "LITE",
+        "BX"
       ]
     },
     {
@@ -4795,7 +4795,7 @@
       "laneHref": "/investor/lanes/bond-supply-and-bank-duration/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 58,
+      "conviction": 60,
       "supports": 1,
       "risks": 0,
       "neutral": 1,
@@ -4863,8 +4863,8 @@
         "600690.SH",
         "300750.SZ",
         "002594.SZ",
-        "000651.SZ",
         "600900.SH",
+        "000651.SZ",
         "2313.HK",
         "002475.SZ",
         "2020.HK"
@@ -5191,9 +5191,9 @@
       "title": "核能/SMR：算力电力瓶颈的高波动映射",
       "titleEn": "Practical research topic: 核能/SMR：算力电力瓶颈的高波动映射",
       "href": "/investor/theses/thesis-b6e4c7b469/",
-      "laneId": "lane_10d7884cbe65",
-      "lane": "AI 电力/电网设备",
-      "laneHref": "/investor/lanes/ai-power-and-grid-equipment/",
+      "laneId": "lane_136dd1c3c708",
+      "lane": "云厂商自发电/电力资产",
+      "laneHref": "/investor/lanes/cloud-self-generation-and-power-assets/",
       "direction": "conflicting",
       "directionLabel": "分歧",
       "conviction": 67,
@@ -5214,10 +5214,7 @@
         "GEV",
         "ETN",
         "CEG",
-        "VST",
-        "002028.SZ",
-        "600089.SH",
-        "601179.SH"
+        "VST"
       ]
     },
     {
@@ -5283,10 +5280,47 @@
         "001215.SZ",
         "600276.SH",
         "300760.SZ",
+        "1801.HK",
+        "YUMC",
         "603345.SH",
-        "1177.HK",
-        "2319.HK",
-        "UNH"
+        "1177.HK"
+      ]
+    },
+    {
+      "id": "thesis-ffa474a3f2",
+      "title": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
+      "titleEn": "Edge AI and agent desktops are extending compute competition from cloud to chips, OS, and consumer-electronics supply...",
+      "href": "/investor/theses/thesis-ffa474a3f2/",
+      "laneId": "lane_74d352e86208",
+      "lane": "端侧 AI/Agent 桌面",
+      "laneHref": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 65,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "印度电子制造与数字基建的能源压力测试",
+          "summary": "研究记录 - 分析师：能源行业分析师 - 立场： stress-test （对研究记录 02 的\"两条防御腿\"结论做能源-电力-碳侧的压力测试） - 日期（机构工作日）： 2026-05-18 （Asia/Singapore） - 上游说...",
+          "href": "/investor/reports/archive-e8dfce63c74b/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "MSFT",
+        "NVDA",
+        "META",
+        "AAPL",
+        "AMZN",
+        "AMD",
+        "ARM",
+        "QCOM",
+        "GOOGL",
+        "002475.SZ"
       ]
     },
     {
@@ -5350,43 +5384,6 @@
         "AMD",
         "AVGO",
         "ASML"
-      ]
-    },
-    {
-      "id": "thesis-ffa474a3f2",
-      "title": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
-      "titleEn": "Edge AI and agent desktops are extending compute competition from cloud to chips, OS, and consumer-electronics supply...",
-      "href": "/investor/theses/thesis-ffa474a3f2/",
-      "laneId": "lane_74d352e86208",
-      "lane": "端侧 AI/Agent 桌面",
-      "laneHref": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 64,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "印度电子制造与数字基建的能源压力测试",
-          "summary": "研究记录 - 分析师：能源行业分析师 - 立场： stress-test （对研究记录 02 的\"两条防御腿\"结论做能源-电力-碳侧的压力测试） - 日期（机构工作日）： 2026-05-18 （Asia/Singapore） - 上游说...",
-          "href": "/investor/reports/archive-e8dfce63c74b/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "MSFT",
-        "NVDA",
-        "AAPL",
-        "META",
-        "ARM",
-        "AMD",
-        "AMZN",
-        "QCOM",
-        "GOOGL",
-        "002475.SZ"
       ]
     },
     {
@@ -5489,8 +5486,8 @@
         "0981.HK",
         "688041.SH",
         "600900.SH",
-        "688008.SH",
         "588000.SH",
+        "688008.SH",
         "300394.SZ",
         "300502.SZ"
       ]
@@ -5557,19 +5554,19 @@
       "id": "lane_10d7884cbe65",
       "title": "AI 电力/电网设备",
       "href": "/investor/lanes/ai-power-and-grid-equipment/",
-      "thesisCount": 6,
-      "eventCount": 13,
-      "convictionTotal": 412,
+      "thesisCount": 5,
+      "eventCount": 12,
+      "convictionTotal": 345,
       "stockTickers": [
         "GEV",
         "ETN",
         "002028.SZ",
         "600089.SH",
         "601179.SH",
-        "688676.SH",
         "VST",
-        "CEG",
+        "688676.SH",
         "META",
+        "CEG",
         "MSFT",
         "AMZN"
       ],
@@ -5701,23 +5698,44 @@
       "avgConviction": 73
     },
     {
+      "id": "lane_136dd1c3c708",
+      "title": "云厂商自发电/电力资产",
+      "href": "/investor/lanes/cloud-self-generation-and-power-assets/",
+      "thesisCount": 3,
+      "eventCount": 3,
+      "convictionTotal": 194,
+      "stockTickers": [
+        "GEV",
+        "CEG",
+        "VST",
+        "ETN",
+        "SMR",
+        "META",
+        "MSFT",
+        "AMZN",
+        "AEP",
+        "NVDA"
+      ],
+      "avgConviction": 65
+    },
+    {
       "id": "lane_b29e1d216a21",
       "title": "信用再融资/私募信贷",
       "href": "/investor/lanes/credit-refinancing-and-private-debt/",
       "thesisCount": 1,
       "eventCount": 3,
-      "convictionTotal": 55,
+      "convictionTotal": 54,
       "stockTickers": [
         "KRE",
-        "JPM",
         "META",
+        "JPM",
+        "MSFT",
         "NVDA",
-        "BX",
-        "KKR",
-        "ARES",
-        "APO"
+        "AMZN",
+        "LITE",
+        "BX"
       ],
-      "avgConviction": 55
+      "avgConviction": 54
     },
     {
       "id": "lane_640d21327d8b",
@@ -5759,27 +5777,6 @@
       "avgConviction": 65
     },
     {
-      "id": "lane_136dd1c3c708",
-      "title": "云厂商自发电/电力资产",
-      "href": "/investor/lanes/cloud-self-generation-and-power-assets/",
-      "thesisCount": 2,
-      "eventCount": 2,
-      "convictionTotal": 127,
-      "stockTickers": [
-        "GEV",
-        "CEG",
-        "VST",
-        "ETN",
-        "SMR",
-        "META",
-        "MSFT",
-        "AMZN",
-        "AEP",
-        "NVDA"
-      ],
-      "avgConviction": 64
-    },
-    {
       "id": "lane_73a269a07a15",
       "title": "加密/高波动风险偏好",
       "href": "/investor/lanes/crypto-and-high-beta-risk-appetite/",
@@ -5804,7 +5801,7 @@
       "href": "/investor/lanes/bond-supply-and-bank-duration/",
       "thesisCount": 1,
       "eventCount": 2,
-      "convictionTotal": 58,
+      "convictionTotal": 60,
       "stockTickers": [
         "601398.SH",
         "601939.SH",
@@ -5815,7 +5812,7 @@
         "IEF",
         "000001.SZ"
       ],
-      "avgConviction": 58
+      "avgConviction": 60
     },
     {
       "id": "lane_e4b72516d71a",
@@ -5871,10 +5868,31 @@
         "001215.SZ",
         "600276.SH",
         "300760.SZ",
+        "1801.HK",
+        "YUMC",
         "603345.SH",
-        "1177.HK",
-        "2319.HK",
-        "UNH"
+        "1177.HK"
+      ],
+      "avgConviction": 65
+    },
+    {
+      "id": "lane_74d352e86208",
+      "title": "端侧 AI/Agent 桌面",
+      "href": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "convictionTotal": 65,
+      "stockTickers": [
+        "MSFT",
+        "NVDA",
+        "META",
+        "AAPL",
+        "AMZN",
+        "AMD",
+        "ARM",
+        "QCOM",
+        "GOOGL",
+        "002475.SZ"
       ],
       "avgConviction": 65
     },
@@ -5891,27 +5909,6 @@
         "UUP"
       ],
       "avgConviction": 65
-    },
-    {
-      "id": "lane_74d352e86208",
-      "title": "端侧 AI/Agent 桌面",
-      "href": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 64,
-      "stockTickers": [
-        "MSFT",
-        "NVDA",
-        "AAPL",
-        "META",
-        "ARM",
-        "AMD",
-        "AMZN",
-        "QCOM",
-        "GOOGL",
-        "002475.SZ"
-      ],
-      "avgConviction": 64
     },
     {
       "id": "lane_008e3bd9306a",
@@ -5946,8 +5943,8 @@
         "0981.HK",
         "688041.SH",
         "600900.SH",
-        "688008.SH",
         "588000.SH",
+        "688008.SH",
         "300394.SZ",
         "300502.SZ"
       ],
@@ -5967,7 +5964,7 @@
         "AI 算力半导体",
         "先进封装/HBM4 闸门",
         "中国云/国产算力栈",
-        "自动驾驶/Robotaxi 单位经济"
+        "端侧 AI/Agent 桌面"
       ]
     },
     {
@@ -6055,6 +6052,36 @@
       ]
     },
     {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "market": "US",
+      "href": "/investor/stocks/MSFT/",
+      "thesisCount": 9,
+      "eventCount": 19,
+      "lanes": [
+        "Mag7 AI 平台再分层",
+        "先进封装/HBM4 闸门",
+        "端侧 AI/Agent 桌面",
+        "AI 软件效率/生产率",
+        "信用再融资/私募信贷"
+      ]
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "market": "US",
+      "href": "/investor/stocks/AMZN/",
+      "thesisCount": 9,
+      "eventCount": 19,
+      "lanes": [
+        "Mag7 AI 平台再分层",
+        "先进封装/HBM4 闸门",
+        "端侧 AI/Agent 桌面",
+        "AI 软件效率/生产率",
+        "信用再融资/私募信贷"
+      ]
+    },
+    {
       "ticker": "GEV",
       "name": "GE Vernova",
       "market": "US",
@@ -6081,36 +6108,6 @@
       ]
     },
     {
-      "ticker": "MSFT",
-      "name": "Microsoft",
-      "market": "US",
-      "href": "/investor/stocks/MSFT/",
-      "thesisCount": 8,
-      "eventCount": 16,
-      "lanes": [
-        "Mag7 AI 平台再分层",
-        "先进封装/HBM4 闸门",
-        "端侧 AI/Agent 桌面",
-        "AI 软件效率/生产率",
-        "自动驾驶/Robotaxi 单位经济"
-      ]
-    },
-    {
-      "ticker": "AMZN",
-      "name": "Amazon",
-      "market": "US",
-      "href": "/investor/stocks/AMZN/",
-      "thesisCount": 8,
-      "eventCount": 16,
-      "lanes": [
-        "Mag7 AI 平台再分层",
-        "先进封装/HBM4 闸门",
-        "端侧 AI/Agent 桌面",
-        "AI 软件效率/生产率",
-        "自动驾驶/Robotaxi 单位经济"
-      ]
-    },
-    {
       "ticker": "LMT",
       "name": "Lockheed Martin",
       "market": "US",
@@ -6120,42 +6117,6 @@
       "lanes": [
         "商业航天/卫星直连",
         "国防航空航天供应链"
-      ]
-    },
-    {
-      "ticker": "002028.SZ",
-      "name": "思源电气",
-      "market": "A-share",
-      "href": "/investor/stocks/002028.SZ/",
-      "thesisCount": 7,
-      "eventCount": 15,
-      "lanes": [
-        "AI 电力/电网设备",
-        "中国电力设备出海"
-      ]
-    },
-    {
-      "ticker": "600089.SH",
-      "name": "特变电工",
-      "market": "A-share",
-      "href": "/investor/stocks/600089.SH/",
-      "thesisCount": 7,
-      "eventCount": 15,
-      "lanes": [
-        "AI 电力/电网设备",
-        "中国电力设备出海"
-      ]
-    },
-    {
-      "ticker": "601179.SH",
-      "name": "中国西电",
-      "market": "A-share",
-      "href": "/investor/stocks/601179.SH/",
-      "thesisCount": 7,
-      "eventCount": 15,
-      "lanes": [
-        "AI 电力/电网设备",
-        "中国电力设备出海"
       ]
     },
     {
@@ -6169,6 +6130,42 @@
         "AI 算力半导体",
         "先进封装/HBM4 闸门",
         "Mag7 AI 平台再分层"
+      ]
+    },
+    {
+      "ticker": "002028.SZ",
+      "name": "思源电气",
+      "market": "A-share",
+      "href": "/investor/stocks/002028.SZ/",
+      "thesisCount": 6,
+      "eventCount": 14,
+      "lanes": [
+        "AI 电力/电网设备",
+        "中国电力设备出海"
+      ]
+    },
+    {
+      "ticker": "600089.SH",
+      "name": "特变电工",
+      "market": "A-share",
+      "href": "/investor/stocks/600089.SH/",
+      "thesisCount": 6,
+      "eventCount": 14,
+      "lanes": [
+        "AI 电力/电网设备",
+        "中国电力设备出海"
+      ]
+    },
+    {
+      "ticker": "601179.SH",
+      "name": "中国西电",
+      "market": "A-share",
+      "href": "/investor/stocks/601179.SH/",
+      "thesisCount": 6,
+      "eventCount": 14,
+      "lanes": [
+        "AI 电力/电网设备",
+        "中国电力设备出海"
       ]
     },
     {
@@ -6192,8 +6189,8 @@
       "eventCount": 11,
       "lanes": [
         "Mag7 AI 平台再分层",
-        "自动驾驶/Robotaxi 单位经济",
         "端侧 AI/Agent 桌面",
+        "自动驾驶/Robotaxi 单位经济",
         "AI 软件效率/生产率"
       ]
     },
@@ -6616,7 +6613,7 @@
       "nameEn": "Credit Analyst",
       "href": "/investor/personas/#persona-credit-analyst-e5e3af",
       "specialty": "信用评级/违约预警/城投债/地产债",
-      "currentView": "地产、土地财政与 REITs 是中国信用底的慢变量；信用再融资压力正在把利率风险转化为资产负债表筛选；BOJ 正常化超调不是基础概率最高的宏观意外，但它最符合“JPY 升值 + CNH 贬值 + SPX 跌破零 gamma”的三条件 FX… 是当前该 persona 参与最多的研究主线。",
+      "currentView": "地产、土地财政与 REITs 是中国信用底的慢变量；外汇防御若短促且境内冲销则可控；若持续收紧离岸CNH并恢复20%远期准备金，最大二次压力会落在地产信用修复和A股两融偿还，而非银行间总量…；信用再融资压力正在把利率风险转化为资产负债表筛选 是当前该 persona 参与最多的研究主线。",
       "supports": 0,
       "risks": 1,
       "neutral": 0,
