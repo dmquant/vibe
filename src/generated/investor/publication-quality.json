@@ -1,10 +1,10 @@
 {
   "schema": "vibe.ai_institute.publication_quality.v1",
   "version": "publication-quality.2026-07-12.1",
-  "generatedAt": "2026-08-10T00:31:02.776Z",
-  "checkedAt": "2026-08-10T00:31:02.776Z",
-  "asOfDate": "2026-08-09",
-  "sourceHash": "d592a7bf9bfd088f",
+  "generatedAt": "2026-08-11T00:35:09.300Z",
+  "checkedAt": "2026-08-11T00:35:09.300Z",
+  "asOfDate": "2026-08-11",
+  "sourceHash": "fb28ef8b6a355120",
   "status": "degraded",
   "statusLabel": "有警告",
   "counts": {
@@ -14,7 +14,7 @@
     "marketQuotes": 0,
     "theses": 185,
     "lanes": 53,
-    "stocks": 246,
+    "stocks": 249,
     "workspaceFocus": 12
   },
   "gates": {
@@ -39,18 +39,8 @@
       "code": "REPORT_DATE_DRIFT",
       "message": "Workspace source date differs from its report contract",
       "context": {
-        "href": "/investor/reports/archive-e62436a2edcb/",
-        "workspaceDate": "2026-08-09",
-        "reportDate": ""
-      }
-    },
-    {
-      "severity": "warning",
-      "code": "REPORT_DATE_DRIFT",
-      "message": "Workspace source date differs from its report contract",
-      "context": {
-        "href": "/investor/reports/archive-ba13a1c88da4/",
-        "workspaceDate": "2026-08-09",
+        "href": "/investor/reports/archive-75333eadc1e0/",
+        "workspaceDate": "2026-08-11",
         "reportDate": ""
       }
     },
@@ -60,17 +50,7 @@
       "message": "Workspace source date differs from its report contract",
       "context": {
         "href": "/investor/reports/archive-75333eadc1e0/",
-        "workspaceDate": "2026-08-09",
-        "reportDate": ""
-      }
-    },
-    {
-      "severity": "warning",
-      "code": "REPORT_DATE_DRIFT",
-      "message": "Workspace source date differs from its report contract",
-      "context": {
-        "href": "/investor/reports/archive-75333eadc1e0/",
-        "workspaceDate": "2026-08-07",
+        "workspaceDate": "2026-08-10",
         "reportDate": ""
       }
     },
@@ -80,7 +60,27 @@
       "message": "Workspace source date differs from its report contract",
       "context": {
         "href": "/investor/reports/archive-eefc9eacce09/",
-        "workspaceDate": "2026-08-07",
+        "workspaceDate": "2026-08-10",
+        "reportDate": ""
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "REPORT_DATE_DRIFT",
+      "message": "Workspace source date differs from its report contract",
+      "context": {
+        "href": "/investor/reports/archive-7fa1a717917c/",
+        "workspaceDate": "2026-08-10",
+        "reportDate": ""
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "REPORT_DATE_DRIFT",
+      "message": "Workspace source date differs from its report contract",
+      "context": {
+        "href": "/investor/reports/archive-91130c0f5e33/",
+        "workspaceDate": "2026-08-10",
         "reportDate": ""
       }
     }

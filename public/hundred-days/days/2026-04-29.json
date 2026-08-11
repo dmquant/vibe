@@ -3,17 +3,29 @@
   "date": "2026-04-29",
   "dayNumber": 8,
   "status": "recorded",
-  "headline": "2026-04-29 · 公开研究已归档",
-  "summary": "公开数据层尚未记录可展示的研究结果。",
+  "headline": "EM 估值分析",
+  "summary": "当日归档 2 份公开研究，21 条研究讨论和 0 个 thesis 证据事件；研究密度最高的方向为风险与组合。",
   "dominantTopic": {
-    "id": "research-system",
-    "labelZh": "综合研究",
-    "labelEn": "Integrated research",
-    "color": "yellow"
+    "id": "risk-portfolio",
+    "labelZh": "风险与组合",
+    "labelEn": "Risk and portfolio",
+    "color": "red",
+    "keywords": [
+      "风险",
+      "组合",
+      "对冲",
+      "波动率",
+      "期权",
+      "portfolio",
+      "hedge",
+      "volatility",
+      "risk budget"
+    ],
+    "count": 1
   },
   "activityScore": 69,
   "metrics": {
-    "reports": 0,
+    "reports": 2,
     "researchThreads": 21,
     "researchNotes": 178,
     "thesisEvents": 0,
@@ -22,7 +34,39 @@
     "recaps": 0,
     "deepResearch": 0
   },
-  "reports": [],
+  "reports": [
+    {
+      "id": "archive-84fc992d9e09",
+      "title": "EM 估值分析",
+      "date": "2026-04-29",
+      "href": "/investor/reports/archive-84fc992d9e09/",
+      "analyst": "未识别",
+      "analystId": "",
+      "category": "其他",
+      "excerpt": "EM 已于 2026-04-29 完成私有化合并，公开 ADS 持有人现金对价为 US.25/ADS、普通股对价为 US$0.625/股，公司于 2026-04-30 请求 Nasdaq 暂停 ADS 交易，并于 2026-05-11 提交 Form 15 后暂停...",
+      "tags": [
+        "AI",
+        "风险"
+      ],
+      "sourceKind": "archive"
+    },
+    {
+      "id": "archive-a8445b7642ea",
+      "title": "EM 三表模型",
+      "date": "2026-04-29",
+      "href": "/investor/reports/archive-a8445b7642ea/",
+      "analyst": "未识别",
+      "analystId": "",
+      "category": "其他",
+      "excerpt": "口径说明：本模型以 EM 2024 年 Form 20-F 的合并报表为基准，金额单位除特别注明外均为 RMB million；EM 已于 2026-04-29 完成私有化合并，每 ADS 对价为 US.25、每普通股对价为 US$0.625...",
+      "tags": [
+        "AI",
+        "通胀",
+        "宏观"
+      ],
+      "sourceKind": "archive"
+    }
+  ],
   "discussions": [
     {
       "title": "2026 年超大规模云厂商 AI 基建资本开支上修后的 TMT 产业链再定价",
@@ -199,9 +243,57 @@
   "personas": [],
   "episodes": [],
   "milestones": [],
-  "topicCounts": [],
-  "analystCounts": [],
-  "categoryCounts": [],
+  "topicCounts": [
+    {
+      "id": "risk-portfolio",
+      "labelZh": "风险与组合",
+      "labelEn": "Risk and portfolio",
+      "color": "red",
+      "keywords": [
+        "风险",
+        "组合",
+        "对冲",
+        "波动率",
+        "期权",
+        "portfolio",
+        "hedge",
+        "volatility",
+        "risk budget"
+      ],
+      "count": 1
+    },
+    {
+      "id": "macro-rates",
+      "labelZh": "宏观、通胀与利率",
+      "labelEn": "Macro, inflation and rates",
+      "color": "red",
+      "keywords": [
+        "宏观",
+        "通胀",
+        "inflation",
+        "利率",
+        "yield",
+        "美联储",
+        "fed",
+        "cpi",
+        "pce",
+        "美元"
+      ],
+      "count": 1
+    }
+  ],
+  "analystCounts": [
+    {
+      "label": "未识别",
+      "count": 2
+    }
+  ],
+  "categoryCounts": [
+    {
+      "label": "其他",
+      "count": 2
+    }
+  ],
   "provenance": {
     "contemporaneous": true,
     "note": "This day view is assembled from public, date-stamped AI Institute research contracts."

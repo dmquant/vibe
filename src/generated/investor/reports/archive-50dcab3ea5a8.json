@@ -1,0 +1,20 @@
+{
+  "slug": "archive-50dcab3ea5a8",
+  "href": "/investor/reports/archive-50dcab3ea5a8/",
+  "meta": {
+    "title": "组合日度VaR预警报告",
+    "date": "2026-08-10",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "通胀",
+      "宏观",
+      "风险"
+    ],
+    "source": "archive-50dcab3ea5a8",
+    "source_label": "研究档案",
+    "source_kind": "archive"
+  },
+  "bodyHtml": "<h1>组合日度VaR预警报告</h1>\n<p><strong>日期：</strong> 2026-08-10\n<strong>发布人：</strong> 首席风控官（Chief Risk Officer）\n<strong>报告类型：</strong> 日度VaR阈值检查与风险贡献归因</p>\n<h2>一、结论摘要（优先级排序）</h2>\n<ol>\n<li><strong>数据缺口——本报告无法完成定量VaR阈值判定。</strong> 本次工作空间（workspace）中未发现任何组合持仓、净值、收益率序列或既往VaR计算结果文件（未检索到 <code>*var*</code>、<code>*portfolio*</code>、<code>*risk*</code> 相关数据文件），对话上下文中也没有上游分析师产出的持仓/敞口数据可供重建。因此，<strong>\"今日VaR是否突破阈值\"这一问题目前无法给出基于真实数据的是/否结论</strong>。</li>\n<li>在数据缺口解决之前，本报告提供：（a）标准的VaR监控方法论与阈值框架，供数据接入后直接套用；（b）风险贡献归因的标准流程；（c）明确的数据需求清单与后续协调请求。</li>\n<li><strong>强烈建议</strong>：在下一次风控例行检查前，由资产配置/组合管理相关分析师提供当前组合的持仓明细、权重、以及至少250个交易日的历史收益率序列，以便完成真实的VaR计算与突破判定。</li>\n<li>本报告不构成\"组合当前无风险\"或\"组合当前有风险\"的结论——在数据接入前，任何此类结论都是无依据的猜测，风控职能上应予以避免。</li>\n</ol>\n<h2>二、VaR监控方法论框架（待数据接入后套用）</h2>\n<h3>2.1 计算方法建议</h3>\n<ul>\n<li><strong>主方法</strong>：历史模拟法（Historical Simulation），窗口建议 250 个交易日，置信度 95% 与 99% 双口径并行披露。</li>\n<li><strong>辅助方法</strong>：参数法（Variance-Covariance）用于快速交叉校验；蒙特卡洛模拟法用于含期权/非线性头寸的组合。</li>\n<li><strong>回测（Backtesting）</strong>：采用 Kupiec POF 检验，突破次数超过置信区间隐含的预期次数时触发模型有效性复核。</li>\n</ul>\n<h3>2.2 阈值设定建议（示例框架，需与组合规模及风险预算对齐后确认）</h3>\n<table>\n<thead>\n<tr>\n<th>层级</th>\n<th>触发条件（示例，待校准）</th>\n<th>处置动作</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>黄色预警</td>\n<td>1日99% VaR 占组合净值比例超过既定风险预算的 80%</td>\n<td>风控例会通报，加强监控频率</td>\n</tr>\n<tr>\n<td>橙色预警</td>\n<td>1日99% VaR 突破风险预算上限</td>\n<td>要求组合经理提交削减风险敞口方案</td>\n</tr>\n<tr>\n<td>红色预警</td>\n<td>连续2日突破风险预算上限，或单日损失超过VaR预测值（VaR突破/exception）</td>\n<td>强制降杠杆，启动压力测试复核，上报投委会</td>\n</tr>\n</tbody>\n</table>\n<blockquote>\n<p>注：以上比例、天数均为通用行业惯例的占位框架，<strong>并非本组合的实际阈值</strong>，需在获得实际风险预算与组合净值数据后由风控与投委会共同确认。</p>\n</blockquote>\n<h3>2.3 风险贡献归因流程</h3>\n<p>一旦持仓与收益率数据可得，将按以下步骤输出主要风险贡献者\n1. 计算各资产/各策略对组合VaR的边际贡献（Marginal VaR）与成分贡献（Component VaR）。\n2. 按资产类别、行业、因子暴露（如：利率、信用、权益市场Beta、汇率）分层汇总贡献占比。\n3. 识别贡献占比前5大的头寸/因子，标注是否为集中度过高或流动性较差的仓位。\n4. 与历史同期贡献结构对比，识别异常跳变（例如某单一因子贡献占比短期内翻倍）。</p>\n<h2>三、数据需求清单（提交风控以完成本报告）</h2>\n<table>\n<thead>\n<tr>\n<th>数据项</th>\n<th>用途</th>\n<th>状态</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>组合持仓明细（标的、权重、市值）</td>\n<td>VaR计算基础</td>\n<td>缺失</td>\n</tr>\n<tr>\n<td>历史收益率序列（≥250交易日）</td>\n<td>历史模拟法计算</td>\n<td>缺失</td>\n</tr>\n<tr>\n<td>既往VaR时间序列与风险预算上限</td>\n<td>阈值比较、回测</td>\n<td>缺失</td>\n</tr>\n<tr>\n<td>因子暴露数据（利率、信用、Beta、汇率等）</td>\n<td>风险贡献归因</td>\n<td>缺失</td>\n</tr>\n<tr>\n<td>昨日/今日组合损益（P&amp;L）</td>\n<td>VaR突破（exception）判定</td>\n<td>缺失</td>\n</tr>\n</tbody>\n</table>\n<h2>四、后续行动项</h2>\n<ul>\n<li>[ ] 请资产配置/组合管理分析师提供当前组合持仓与历史收益率数据（见下方协调请求）。</li>\n<li>[ ] 数据到位后48小时内完成首次实际VaR计算与阈值校准，并重新发布本报告的定量版本。</li>\n<li>[ ] 与投委会确认风险预算上限及预警阈值的具体数值，替换本报告中的占位框架。</li>\n<li>[ ] 建立VaR回测（Kupiec检验）例行机制，确保模型有效性可持续验证。</li>\n</ul>\n<h2>五、协调请求</h2>\n<pre><code class=\"language-json\">{&quot;follow_ups&quot;:[\n  {&quot;to&quot;:&quot;asset-allocator&quot;,&quot;subject&quot;:&quot;需要当前组合持仓与历史收益率数据以完成VaR计算&quot;,&quot;question&quot;:&quot;请提供当前组合的完整持仓明细（标的代码、权重、市值）以及过去至少250个交易日的组合层面历史收益率序列，用于完成今日VaR阈值突破检查与风险贡献归因分析。若组合存在既定的风险预算上限或VaR阈值，也请一并提供。&quot;,&quot;priority&quot;:&quot;high&quot;}\n]}\n</code></pre>\n<p><em>本报告由首席风控官在数据缺失情况下发布，旨在明确方法论框架与数据缺口，而非给出未经数据支持的风险结论。</em></p>"
+}

@@ -1,0 +1,15 @@
+{
+  "slug": "archive-51a06b0f00c8",
+  "href": "/investor/reports/archive-51a06b0f00c8/",
+  "meta": {
+    "title": "共享数据采集摘要 2026-08-11",
+    "date": "2026-08-11",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [],
+    "source": "archive-51a06b0f00c8",
+    "source_label": "研究档案",
+    "source_kind": "archive"
+  },
+  "bodyHtml": "<h1>共享数据采集摘要 2026-08-11</h1>\n<h2>markets_overnight</h2>\n<ul>\n<li>字段总数 13、空值 0、confidence: high</li>\n<li>种子源 Stooq 接口返回 404（页面不存在），全部字段改用 web_search 从 Bloomberg/CNBC/Washington Post/Investing.com 等来源交叉核实获取（对应 2026-08-10 收盘/最新报价）。</li>\n</ul>\n<h2>markets_close_cn</h2>\n<ul>\n<li>字段总数 5、空值 3、confidence: low</li>\n<li>种子源新浪行情接口因本环境编码问题无法解析，改用 web_search。上证指数收盘点位（3966.59）已确认；深证成指/创业板指/科创50 仅获得涨跌幅，未获得精确点位，置为 null。</li>\n</ul>\n<h2>失败 / 修复</h2>\n<p>stooq_all=404_endpoint_broken sina_all=encoding_error szse=point_value_not_found cyb=point_value_not_found kc50=point_value_not_found</p>"
+}
