@@ -1,0 +1,21 @@
+{
+  "slug": "archive-d8891a389234",
+  "href": "/investor/reports/archive-d8891a389234/",
+  "meta": {
+    "title": "授权口径行业北向资金表与交易所披露口径的交叉核验",
+    "date": "2026-08-12",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "通胀",
+      "A股",
+      "能源",
+      "风险"
+    ],
+    "source": "archive-d8891a389234",
+    "source_label": "研究档案",
+    "source_kind": "archive"
+  },
+  "bodyHtml": "<h1>授权口径行业北向资金表与交易所披露口径的交叉核验</h1>\n<p><strong>作者</strong>：首席策略师 | <strong>日期</strong>：2026-08-12（工作日锚点）| <strong>研究记录</strong>：4/8 | <strong>立场</strong>：synthesize</p>\n<h2>核心判断</h2>\n<p>三条独立取证路径——公开财经媒体检索、东方财富数据中心行业资金流接口探测、以及research note已完成的沪深交易所披露口径审计——在2026-08-12当日均<strong>未能取得</strong>半导体、电池、光学光电子、光伏设备四个申万行业口径下2026-08-11北向资金净买入金额。因此，\"北向资金净买入是否超过各行业融资净偿还50%\"这一问题<strong>在当前可及数据条件下无法验证</strong>，不能默认成立，也不能默认证伪。可获得的仅是全市场北向成交总量与个股层面的龙虎榜净买卖数据，二者均不能重构出行业级净流向。</p>\n<h2>三重取证结果</h2>\n<h3>1）公开财经媒体检索：仅有个股与总量数据，无行业口径</h3>\n<ul>\n<li>2026-08-11北向资金（沪股通+深股通）合计成交2,966.68亿元，占两市总成交额12.78% [S1]。</li>\n<li>沪股通成交额前三：药明康德27.03亿元、中国巨石18.07亿元、紫金矿业16.41亿元；深股通前三：中际旭创46.91亿元、新易盛33.13亿元、东山精密25.03亿元 [S1]。<strong>注意</strong>：中际旭创、新易盛为光模块龙头，业务横跨半导体/光学光电子边界，但以上为<strong>成交额（买卖双向合计）而非净买入</strong>，不能据此判断资金净流向。</li>\n<li>当日龙虎榜个股层面北向净买入前三：哈药股份+3.12亿元、赤峰黄金+2.50亿元、立新能源+1.11亿元；北向净卖出前三：金风科技-1.58亿元、洁美科技-1.02亿元、北京科锐-0.56亿元 [S2]。这些个股主要属于医药、有色金属、电力设备（风电）板块，<strong>没有一只属于本报告目标的半导体/电池/光学光电子/光伏设备四个行业的核心龙头</strong>，说明当日龙虎榜口径下北向资金的活跃度并未集中体现在这四个拥挤成长赛道。</li>\n</ul>\n<h3>2）东方财富数据中心行业资金流接口探测：接口不存在</h3>\n<ul>\n<li>本报告直接调用东方财富数据中心行业北向资金流接口（<code>reportName=RPT_MUTUAL_INDUSTRY_FLOW</code>），返回<code>code:9501, message:\"报表配置不存在\"</code>[自测算，请求URL：<code>datacenter-web.eastmoney.com/api/data/v1/get?...reportName=RPT_MUTUAL_INDUSTRY_FLOW</code>]。这一接口探测本身构成第三重独立证据：即便是research note已验证个股级/行业级融资数据可正常取得的东方财富平台，其公开侧也<strong>没有</strong>对应的北向资金行业维度聚合报表。</li>\n</ul>\n<h3>3）承接research note的交易所审计结论</h3>\n<p>research note已确认：互联互通披露机制调整后，东方财富公开行业北向接口对2026-08-11返回为空 [S3]；本报告的独立复核（上述第1、2项）与该结论完全一致，形成三重交叉验证的数据缺口，而非单一信源的偶发故障。</p>\n<h2>可比对的融资净偿还基准（承接research note，未变）</h2>\n<table>\n<thead>\n<tr>\n<th>行业</th>\n<th>2026-08-11融资净偿还（RMB）</th>\n<th>占行业融资余额</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>半导体</td>\n<td>12.13亿</td>\n<td></td>\n</tr>\n<tr>\n<td>电池</td>\n<td>3.34亿</td>\n<td></td>\n</tr>\n<tr>\n<td>光学光电子</td>\n<td>3.20亿</td>\n<td></td>\n</tr>\n<tr>\n<td>光伏设备</td>\n<td>1.58亿</td>\n<td></td>\n</tr>\n<tr>\n<td>合计</td>\n<td>20.25亿</td>\n<td>0.449%</td>\n</tr>\n</tbody>\n</table>\n<p>数据来源：research note <code>target_industry_margin_extract_2026-08-11.csv</code>及<code>eastmoney_margin_board_2026-08-11.csv</code>[S4]。</p>\n<h2>结论与风险提示</h2>\n<ol>\n<li><strong>50%对冲阈值问题维持\"不可验证\"判定</strong>：既无法证实北向净买入超过任一行业融资净偿还的50%，也无法证伪。任何声称\"北向资金已充分对冲融资去杠杆压力\"的论述，在当前公开数据条件下均缺乏行业级实证支持。</li>\n<li><strong>个股层面的间接信号偏空</strong>：当日龙虎榜北向净买卖活跃个股中，无一属于四个目标行业核心龙头，光模块龙头（中际旭创、新易盛）虽成交活跃但方向不明——这与research note观察到的新易盛单周融资净偿还15.39亿元的信号方向<strong>并不矛盾</strong>，即\"高融资拥挤成长龙头减仓\"这一判断目前没有被北向资金层面的相反证据推翻。</li>\n<li><strong>对th_p_180a0822（1.6T光模块产业链）的含义</strong>：新易盛、中际旭创当日北向成交活跃（分别33.13亿、46.91亿元）说明市场关注度未减，但成交额不等于建仓方向，该主题的验证仍应以订单/毛利数据为准，不应引用当日北向成交额作为多头证据。</li>\n<li><strong>方法论建议</strong>：若后续需要行业级北向数据，应通过持牌券商/Wind/Choice终端的授权访问获取，公开互联网检索与东方财富公开接口均已被三重验证为不可得。</li>\n</ol>\n<h2>资料来源 / Sources</h2>\n<p>[S1] 金融界, 《8月11日北向资金追踪：中际旭创、新易盛、药明康德成交额居前》 — https://finance.jrj.com.cn/2026/08/11174158075189.shtml\n[S2] 证券时报网, 《龙虎榜动向：4股获机构及北向资金集体净买入》 — https://www.stcn.com/article/detail/4069679.html\n[S3] 内部工作底稿（research note）, <code>northbound_public_disclosure_audit_2026-08-11.json</code>（本地工作区文件，无外部URL）\n[S4] 内部工作底稿（research note）, <code>target_industry_margin_extract_2026-08-11.csv</code> / <code>eastmoney_margin_board_2026-08-11.csv</code>（本地工作区文件，无外部URL）\n[自测算] 本报告对东方财富数据中心接口<code>RPT_MUTUAL_INDUSTRY_FLOW</code>的直接探测，请求于2026-08-12，返回<code>code:9501</code></p>"
+}
