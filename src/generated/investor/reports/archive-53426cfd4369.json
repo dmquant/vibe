@@ -1,0 +1,17 @@
+{
+  "slug": "archive-53426cfd4369",
+  "href": "/investor/reports/archive-53426cfd4369/",
+  "meta": {
+    "title": "共享数据采集摘要 2026-08-13",
+    "date": "2026-08-13",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI"
+    ],
+    "source": "archive-53426cfd4369",
+    "source_label": "研究档案",
+    "source_kind": "archive"
+  },
+  "bodyHtml": "<h1>共享数据采集摘要 2026-08-13</h1>\n<h2>markets_overnight</h2>\n<ul>\n<li>字段总数 13、空值 0、confidence: high</li>\n<li>修复说明：Stooq CSV overnight seed endpoint 在本运行环境返回空 close 字段，已使用 MarketWatch、WSJ、Cboe、FRED、Yahoo Finance 等报价片段修复，并完成区间合理性检查。</li>\n</ul>\n<h2>markets_close_cn</h2>\n<ul>\n<li>字段总数 5、空值 0、confidence: high</li>\n</ul>\n<h2>失败 / 修复</h2>\n<p>Stooq overnight seed fields empty; repaired external quote sources for SPX, NDX, DJI, BRENT, WTI, GOLD, DXY, UST10, EURUSD, USDJPY, VIX, N225, HSI.</p>"
+}

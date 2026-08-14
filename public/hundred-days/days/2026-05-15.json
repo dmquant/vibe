@@ -4,7 +4,7 @@
   "dayNumber": 24,
   "status": "recorded",
   "headline": "首席经济学家压力测试：宏观裂缝下的\"受保护 Beta\"配置 (2026-05-15)",
-  "summary": "当日归档 133 份公开研究，16 条研究讨论和 36 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
+  "summary": "当日归档 133 份公开研究，16 条研究讨论和 37 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
   "dominantTopic": {
     "id": "macro-rates",
     "labelZh": "宏观、通胀与利率",
@@ -29,7 +29,7 @@
     "reports": 133,
     "researchThreads": 16,
     "researchNotes": 128,
-    "thesisEvents": 36,
+    "thesisEvents": 37,
     "personaEvents": 0,
     "readerMemos": 0,
     "recaps": 0,
@@ -2755,7 +2755,7 @@
       "laneHref": "/investor/lanes/china-cloud-and-local-compute-stack/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 65,
+      "conviction": 66,
       "supports": 0,
       "risks": 2,
       "neutral": 0,
@@ -2784,8 +2784,8 @@
         "0981.HK",
         "688981.SH",
         "000977.SZ",
-        "NVDA",
         "9988.HK",
+        "NVDA",
         "0700.HK"
       ]
     },
@@ -3306,6 +3306,43 @@
       ]
     },
     {
+      "id": "thesis-603a5f7966",
+      "title": "A 股硬科技与科创50的复苏需要订单、融资盘和指数结构共振",
+      "titleEn": "A-share hard tech and STAR50 recovery needs orders, margin positioning, and index structure to align",
+      "href": "/investor/theses/thesis-603a5f7966/",
+      "laneId": "lane_4cc1e74d8e5f",
+      "lane": "A股硬科技/科创50",
+      "laneHref": "/investor/lanes/a-share-hard-tech-and-star50/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 56,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "A股AI算力硬件：巨头CapEx压力下的毛利率压力测试",
+          "summary": "分析师：TMT 行业分析师 · 立场：stress-test（压力测试） - 工作日期：2026-05-15（亚洲/新加坡） - 上游文件说明：运行时 research note 的报告文件未出现在工作区，论点基于 session brief...",
+          "href": "/investor/reports/archive-df377e7650dc/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "300308.SZ",
+        "688256.SH",
+        "688981.SH",
+        "0981.HK",
+        "688041.SH",
+        "600900.SH",
+        "688008.SH",
+        "588000.SH",
+        "300394.SZ",
+        "002916.SZ"
+      ]
+    },
+    {
       "id": "thesis-42faeae623",
       "title": "CPO、光互联与铜连接决定 AI 集群内部租金迁移",
       "titleEn": "CPO, optical interconnect, and copper links define rent migration inside AI clusters",
@@ -3579,7 +3616,7 @@
       "href": "/investor/lanes/china-cloud-and-local-compute-stack/",
       "thesisCount": 1,
       "eventCount": 2,
-      "convictionTotal": 65,
+      "convictionTotal": 66,
       "stockTickers": [
         "688256.SH",
         "688041.SH",
@@ -3588,11 +3625,11 @@
         "0981.HK",
         "688981.SH",
         "000977.SZ",
-        "NVDA",
         "9988.HK",
+        "NVDA",
         "0700.HK"
       ],
-      "avgConviction": 65
+      "avgConviction": 66
     },
     {
       "id": "lane_93300d58763e",
@@ -3722,6 +3759,27 @@
       "avgConviction": 58
     },
     {
+      "id": "lane_4cc1e74d8e5f",
+      "title": "A股硬科技/科创50",
+      "href": "/investor/lanes/a-share-hard-tech-and-star50/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "convictionTotal": 56,
+      "stockTickers": [
+        "300308.SZ",
+        "688256.SH",
+        "688981.SH",
+        "0981.HK",
+        "688041.SH",
+        "600900.SH",
+        "688008.SH",
+        "588000.SH",
+        "300394.SZ",
+        "002916.SZ"
+      ],
+      "avgConviction": 56
+    },
+    {
       "id": "lane_c0702fb29e08",
       "title": "AI 再通胀/利率敏感资产",
       "href": "/investor/lanes/ai-reflation-and-rate-sensitive-assets/",
@@ -3815,13 +3873,14 @@
       "name": "中际旭创",
       "market": "A-share",
       "href": "/investor/stocks/300308.SZ/",
-      "thesisCount": 5,
-      "eventCount": 12,
+      "thesisCount": 6,
+      "eventCount": 13,
       "lanes": [
         "CPO/光模块/高速互联",
         "中国云/国产算力栈",
         "指数调仓/被动资金事件",
-        "信创/国产 IT 栈"
+        "信创/国产 IT 栈",
+        "A股硬科技/科创50"
       ]
     },
     {
@@ -3868,12 +3927,13 @@
       "name": "中芯国际",
       "market": "HK",
       "href": "/investor/stocks/0981.HK/",
-      "thesisCount": 3,
-      "eventCount": 9,
+      "thesisCount": 4,
+      "eventCount": 10,
       "lanes": [
         "中国云/国产算力栈",
         "指数调仓/被动资金事件",
-        "信创/国产 IT 栈"
+        "信创/国产 IT 栈",
+        "A股硬科技/科创50"
       ]
     },
     {
@@ -3887,6 +3947,20 @@
         "CPO/光模块/高速互联",
         "AI 算力半导体",
         "Mag7 AI 平台再分层"
+      ]
+    },
+    {
+      "ticker": "688981.SH",
+      "name": "中芯国际",
+      "market": "A-share",
+      "href": "/investor/stocks/688981.SH/",
+      "thesisCount": 4,
+      "eventCount": 8,
+      "lanes": [
+        "中国云/国产算力栈",
+        "A股红利/硬科技杠铃",
+        "信创/国产 IT 栈",
+        "A股硬科技/科创50"
       ]
     },
     {
@@ -3955,28 +4029,16 @@
       ]
     },
     {
-      "ticker": "688981.SH",
-      "name": "中芯国际",
-      "market": "A-share",
-      "href": "/investor/stocks/688981.SH/",
-      "thesisCount": 3,
-      "eventCount": 7,
-      "lanes": [
-        "中国云/国产算力栈",
-        "A股红利/硬科技杠铃",
-        "信创/国产 IT 栈"
-      ]
-    },
-    {
       "ticker": "688256.SH",
       "name": "寒武纪",
       "market": "A-share",
       "href": "/investor/stocks/688256.SH/",
-      "thesisCount": 2,
-      "eventCount": 6,
+      "thesisCount": 3,
+      "eventCount": 7,
       "lanes": [
         "中国云/国产算力栈",
-        "信创/国产 IT 栈"
+        "信创/国产 IT 栈",
+        "A股硬科技/科创50"
       ]
     },
     {
@@ -3984,11 +4046,12 @@
       "name": "海光信息",
       "market": "A-share",
       "href": "/investor/stocks/688041.SH/",
-      "thesisCount": 2,
-      "eventCount": 6,
+      "thesisCount": 3,
+      "eventCount": 7,
       "lanes": [
         "中国云/国产算力栈",
-        "信创/国产 IT 栈"
+        "信创/国产 IT 栈",
+        "A股硬科技/科创50"
       ]
     },
     {
@@ -4012,6 +4075,31 @@
       "eventCount": 5,
       "lanes": [
         "AI 算力半导体"
+      ]
+    },
+    {
+      "ticker": "600900.SH",
+      "name": "长江电力",
+      "market": "A-share",
+      "href": "/investor/stocks/600900.SH/",
+      "thesisCount": 3,
+      "eventCount": 5,
+      "lanes": [
+        "指数调仓/被动资金事件",
+        "A股红利/硬科技杠铃",
+        "A股硬科技/科创50"
+      ]
+    },
+    {
+      "ticker": "688008.SH",
+      "name": "澜起科技",
+      "market": "A-share",
+      "href": "/investor/stocks/688008.SH/",
+      "thesisCount": 2,
+      "eventCount": 5,
+      "lanes": [
+        "信创/国产 IT 栈",
+        "A股硬科技/科创50"
       ]
     },
     {
@@ -4043,26 +4131,27 @@
       ]
     },
     {
-      "ticker": "600900.SH",
-      "name": "长江电力",
+      "ticker": "300394.SZ",
+      "name": "天孚通信",
       "market": "A-share",
-      "href": "/investor/stocks/600900.SH/",
-      "thesisCount": 2,
+      "href": "/investor/stocks/300394.SZ/",
+      "thesisCount": 3,
       "eventCount": 4,
       "lanes": [
-        "指数调仓/被动资金事件",
-        "A股红利/硬科技杠铃"
+        "CPO/光模块/高速互联",
+        "A股硬科技/科创50"
       ]
     },
     {
-      "ticker": "688008.SH",
-      "name": "澜起科技",
+      "ticker": "002916.SZ",
+      "name": "深南电路",
       "market": "A-share",
-      "href": "/investor/stocks/688008.SH/",
-      "thesisCount": 1,
+      "href": "/investor/stocks/002916.SZ/",
+      "thesisCount": 3,
       "eventCount": 4,
       "lanes": [
-        "信创/国产 IT 栈"
+        "先进封装/HBM4 闸门",
+        "A股硬科技/科创50"
       ]
     },
     {
@@ -4074,28 +4163,6 @@
       "eventCount": 4,
       "lanes": [
         "信创/国产 IT 栈"
-      ]
-    },
-    {
-      "ticker": "300394.SZ",
-      "name": "天孚通信",
-      "market": "A-share",
-      "href": "/investor/stocks/300394.SZ/",
-      "thesisCount": 2,
-      "eventCount": 3,
-      "lanes": [
-        "CPO/光模块/高速互联"
-      ]
-    },
-    {
-      "ticker": "002916.SZ",
-      "name": "深南电路",
-      "market": "A-share",
-      "href": "/investor/stocks/002916.SZ/",
-      "thesisCount": 2,
-      "eventCount": 3,
-      "lanes": [
-        "先进封装/HBM4 闸门"
       ]
     },
     {
@@ -4203,6 +4270,18 @@
       ]
     },
     {
+      "ticker": "588000.SH",
+      "name": "科创50 ETF",
+      "market": "A-share ETF",
+      "href": "/investor/stocks/588000.SH/",
+      "thesisCount": 2,
+      "eventCount": 2,
+      "lanes": [
+        "A股红利/硬科技杠铃",
+        "A股硬科技/科创50"
+      ]
+    },
+    {
       "ticker": "BABA",
       "name": "Alibaba",
       "market": "US ADR",
@@ -4255,17 +4334,6 @@
       "eventCount": 2,
       "lanes": [
         "先进封装/HBM4 闸门"
-      ]
-    },
-    {
-      "ticker": "CVX",
-      "name": "Chevron",
-      "market": "US",
-      "href": "/investor/stocks/CVX/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "油气/地缘通胀"
       ]
     }
   ],

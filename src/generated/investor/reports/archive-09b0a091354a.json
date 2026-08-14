@@ -1,0 +1,21 @@
+{
+  "slug": "archive-09b0a091354a",
+  "href": "/investor/reports/archive-09b0a091354a/",
+  "meta": {
+    "title": "组合VaR阈值检查",
+    "date": "2026-08-13",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "通胀",
+      "宏观",
+      "A股",
+      "港美股"
+    ],
+    "source": "archive-09b0a091354a",
+    "source_label": "研究档案",
+    "source_kind": "archive"
+  },
+  "bodyHtml": "<h1>组合VaR阈值检查</h1>\n<h2>优先结论</h2>\n<p><strong>报告日期：2026-08-13。</strong> 本报告所有“今日”“昨日”“上一交易日”均以 shell 日期 <code>2026-08-13</code> 为准。</p>\n<p><strong>VaR是否突破阈值：无法认证。</strong> 当前工作区没有组合持仓、组合今日VaR、VaR阈值、置信水平、持有期、风险因子映射或上一交易日VaR文件；因此不能给出合规意义上的“已突破”或“未突破”判定。风控处理上应标记为<strong>数据缺口导致的未通过检查</strong>，直到官方VaR生产文件补齐。</p>\n<p><strong>主要风险贡献者：只能给出风险因子层面的优先排查清单，不能给出组合贡献百分比。</strong> 基于今日市场快照，权益波动率仍是组合VaR的首要监控因子；若组合持有美股成长、科技、长久期债券、美元或黄金敞口，下表列出的因子应优先做增量VaR、成分VaR和压力测试。</p>\n<h2>今日检查状态</h2>\n<table>\n<thead>\n<tr>\n<th>检查项</th>\n<th>结果</th>\n<th>风控含义</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>组合今日VaR</td>\n<td>缺失</td>\n<td>无法与阈值比较</td>\n</tr>\n<tr>\n<td>VaR阈值</td>\n<td>缺失</td>\n<td>无法确认是否触发限额</td>\n</tr>\n<tr>\n<td>持仓与风险因子暴露</td>\n<td>缺失</td>\n<td>无法计算边际VaR或成分VaR</td>\n</tr>\n<tr>\n<td>置信水平与持有期</td>\n<td>缺失</td>\n<td>无法判断VaR口径是否一致</td>\n</tr>\n<tr>\n<td>阈值突破结论</td>\n<td>无法认证</td>\n<td>按数据缺口升级处理</td>\n</tr>\n</tbody>\n</table>\n<h2>市场风险信号</h2>\n<table>\n<thead>\n<tr>\n<th>风险因子</th>\n<th>今日观测</th>\n<th>对VaR的含义</th>\n<th>来源</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>S&amp;P 500隐含波动率</td>\n<td>VIX 14.69，较前收盘14.55上升0.96%</td>\n<td>VIX是由SPX期权价格反映的近端预期波动率；若组合有美股权益或权益衍生品敞口，波动率上行会直接抬升VaR。</td>\n<td><a href=\"https://www.marketwatch.com/investing/index/vix\">MarketWatch VIX, 2026-08-13 03:43 CDT</a>；<a href=\"https://www.cboe.com/en/tradable-products/vix/\">Cboe VIX说明</a></td>\n</tr>\n<tr>\n<td>美国大盘权益</td>\n<td>S&amp;P 500是美国大盘股核心基准，覆盖约80%可投资市值</td>\n<td>美股beta敞口通常是多资产组合VaR的第一层解释变量。</td>\n<td><a href=\"https://www.spglobal.com/spdji/en/indices/equity/sp-500/\">S&amp;P Dow Jones Indices: S&amp;P 500</a></td>\n</tr>\n<tr>\n<td>美国成长/科技权益</td>\n<td>Nasdaq-100覆盖约100家大型非金融Nasdaq上市公司</td>\n<td>若组合偏成长或科技，NDX/QQQ方向性和集中度可能成为权益VaR主贡献项。</td>\n<td><a href=\"https://indexes.nasdaqomx.com/Index/Overview/NDX\">Nasdaq-100概览</a></td>\n</tr>\n<tr>\n<td>美国利率</td>\n<td>10年期美债收益率最新FRED观测为2026-08-11的4.70%，2026-08-12更新</td>\n<td>久期资产VaR对利率水平、曲线斜率和期限溢价重新定价敏感；缺少持仓DV01时不能量化贡献。</td>\n<td><a href=\"https://fred.stlouisfed.org/series/DGS10\">FRED DGS10</a></td>\n</tr>\n</tbody>\n</table>\n<h2>风险贡献者优先级</h2>\n<table>\n<thead>\n<tr>\n<th>优先级</th>\n<th>贡献者</th>\n<th>需要验证的数据</th>\n<th>初步判断</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1</td>\n<td>美股权益beta与成长股集中度</td>\n<td>持仓市值、SPX/NDX beta、单名集中度、衍生品delta</td>\n<td>最可能解释组合VaR的方向性变化，尤其是高beta、AI、半导体、软件和平台股敞口。</td>\n</tr>\n<tr>\n<td>2</td>\n<td>权益隐含波动率和期权gamma/vega</td>\n<td>期权持仓、到期结构、vega、gamma、净空/多波动率</td>\n<td>VIX上行虽幅度有限，但期权组合可能出现非线性VaR放大。</td>\n</tr>\n<tr>\n<td>3</td>\n<td>利率久期和曲线风险</td>\n<td>DV01、key-rate DV01、久期、凸性、债券/REIT/长久期成长股敞口</td>\n<td>10年期美债收益率处在4.70%附近，长久期资产需要单独压力测试。</td>\n</tr>\n<tr>\n<td>4</td>\n<td>美元与黄金避险因子</td>\n<td>FX delta、商品delta、对冲比率</td>\n<td>今日黄金与美元相关资产均偏强时，跨资产相关性假设需要复核。</td>\n</tr>\n<tr>\n<td>5</td>\n<td>流动性和集中交易风险</td>\n<td>ADV占比、bid-ask、融资折扣、可卖出天数</td>\n<td>若VaR模型只使用收盘收益率，可能低估集中仓位的处置成本。</td>\n</tr>\n</tbody>\n</table>\n<h2>立即行动</h2>\n<ol>\n<li>在今日风控批次内补齐 <code>positions</code>、<code>risk_factor_exposures</code>、<code>var_today</code>、<code>var_limit</code>、<code>confidence_level</code>、<code>horizon</code> 和 <code>model_version</code>。</li>\n<li>以同一口径重跑组合VaR，并输出总VaR、限额使用率、成分VaR、边际VaR和前10大单名/因子贡献。</li>\n<li>在数据补齐前，不应声明组合“未突破VaR阈值”；任何新增风险预算、杠杆提升或集中加仓应暂停审批。</li>\n<li>对美股beta上行100 bp、VIX上行5点、10年期美债收益率上行25 bp、美元上行1%、黄金下跌2%分别做一日压力损益。</li>\n</ol>\n<h2>审计备注</h2>\n<p>本工作区没有可读取的上游组合风险文件，因此本报告没有重建任何缺失文件内容。上述市场数据用于定位风险排查方向，不替代组合级VaR生产结果。</p>"
+}

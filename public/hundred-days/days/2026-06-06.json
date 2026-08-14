@@ -4,7 +4,7 @@
   "dayNumber": 46,
   "status": "recorded",
   "headline": "高股息红利资产对多资产配置矩阵的挤出效应与股债风险溢价再平衡",
-  "summary": "当日归档 286 份公开研究，26 条研究讨论和 134 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
+  "summary": "当日归档 286 份公开研究，26 条研究讨论和 132 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
   "dominantTopic": {
     "id": "macro-rates",
     "labelZh": "宏观、通胀与利率",
@@ -29,7 +29,7 @@
     "reports": 286,
     "researchThreads": 26,
     "researchNotes": 230,
-    "thesisEvents": 134,
+    "thesisEvents": 132,
     "personaEvents": 4,
     "readerMemos": 0,
     "recaps": 0,
@@ -5484,7 +5484,7 @@
       "laneHref": "/investor/lanes/crypto-and-high-beta-risk-appetite/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 68,
+      "conviction": 67,
       "supports": 1,
       "risks": 2,
       "neutral": 0,
@@ -5518,9 +5518,9 @@
         "IBIT",
         "RIOT",
         "HOOD",
+        "LOW",
         "AMD",
-        "NVDA",
-        "LOW"
+        "NVDA"
       ]
     },
     {
@@ -5847,43 +5847,6 @@
       ]
     },
     {
-      "id": "thesis-950a54ea98",
-      "title": "保留 65–70% 远期/NDF 锁 carry，用 USD/JPY 价差看跌+敲入条件 call、USD/CNH 区间远期、HKD/C…",
-      "titleEn": "Practical research topic: 保留 65–70% 远期/NDF 锁 carry，用 USD/JPY 价差看跌+敲入条件 call、USD/CNH 区间远期、HKD/C…",
-      "href": "/investor/theses/thesis-950a54ea98/",
-      "laneId": "lane_c40c2ce413ec",
-      "lane": "人民币/美元流动性敏感资产",
-      "laneHref": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 82,
-      "supports": 1,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 2,
-      "events": [
-        {
-          "title": "日元平仓去杠杆下USD/CNH 7.25防线的挤压成本与政策边界",
-          "summary": "研究线程标识: [source-id-redacted] Author: China Macro Analyst (中国宏观分析师) Authoritative Work-Date: 2026-06-06 Session Topic: 日元平仓去杠杆下USD/CNH 7.25防线的挤...",
-          "href": "/investor/reports/archive-178fde3a6e66/",
-          "stance": "supports",
-          "stanceLabel": "支持"
-        },
-        {
-          "title": "日元去杠杆冲击下的 USD/CNH 压力测试：防御边界与离岸套利成本评估",
-          "summary": "日元去杠杆冲击下的 USD/CNH 压力测试：防御边界与离岸套利成本评估",
-          "href": "/investor/reports/archive-aea2e406137c/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "3988.HK",
-        "UUP",
-        "FXI"
-      ]
-    },
-    {
       "id": "thesis-4b64fc19f4",
       "title": "日元套利交易无序平仓（USD/JPY跌破158）与离岸CNH HIBOR骤升至12%共振下，人民币-权益相关性翻转至+0.35且组合Va…",
       "titleEn": "Practical research topic: 日元套利交易无序平仓（USD/JPY跌破158）与离岸CNH HIBOR骤升至12%共振下，人民币-权益相关性翻转至+0.35且组合Va…",
@@ -5956,9 +5919,46 @@
         "688981.SH",
         "0981.HK",
         "688041.SH",
-        "688008.SH",
         "688012.SH",
-        "588000.SH"
+        "588000.SH",
+        "688008.SH"
+      ]
+    },
+    {
+      "id": "thesis-950a54ea98",
+      "title": "保留 65–70% 远期/NDF 锁 carry，用 USD/JPY 价差看跌+敲入条件 call、USD/CNH 区间远期、HKD/C…",
+      "titleEn": "Practical research topic: 保留 65–70% 远期/NDF 锁 carry，用 USD/JPY 价差看跌+敲入条件 call、USD/CNH 区间远期、HKD/C…",
+      "href": "/investor/theses/thesis-950a54ea98/",
+      "laneId": "lane_c40c2ce413ec",
+      "lane": "人民币/美元流动性敏感资产",
+      "laneHref": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 81,
+      "supports": 1,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 2,
+      "events": [
+        {
+          "title": "日元平仓去杠杆下USD/CNH 7.25防线的挤压成本与政策边界",
+          "summary": "研究线程标识: [source-id-redacted] Author: China Macro Analyst (中国宏观分析师) Authoritative Work-Date: 2026-06-06 Session Topic: 日元平仓去杠杆下USD/CNH 7.25防线的挤...",
+          "href": "/investor/reports/archive-178fde3a6e66/",
+          "stance": "supports",
+          "stanceLabel": "支持"
+        },
+        {
+          "title": "日元去杠杆冲击下的 USD/CNH 压力测试：防御边界与离岸套利成本评估",
+          "summary": "日元去杠杆冲击下的 USD/CNH 压力测试：防御边界与离岸套利成本评估",
+          "href": "/investor/reports/archive-aea2e406137c/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "3988.HK",
+        "UUP",
+        "FXI"
       ]
     },
     {
@@ -6104,9 +6104,9 @@
         }
       ],
       "stockTickers": [
-        "3988.HK",
         "UUP",
-        "FXI"
+        "FXI",
+        "2800.HK"
       ]
     },
     {
@@ -6301,43 +6301,45 @@
       ]
     },
     {
-      "id": "thesis-40b8638803",
-      "title": "全球科技配置应超配ASIC与新代工生态；A股风格则需从“AI题材映射”战略性切换至独立算力的“国产第二供应源”，重仓先进封装产能、核心设…",
-      "titleEn": "Practical research topic: 全球科技配置应超配ASIC与新代工生态；A股风格则需从“AI题材映射”战略性切换至独立算力的“国产第二供应源”，重仓先进封装产能、核心设…",
-      "href": "/investor/theses/thesis-40b8638803/",
-      "laneId": "lane_f1a271385aff",
-      "lane": "先进封装/HBM4 闸门",
-      "laneHref": "/investor/lanes/advanced-packaging-and-hbm4-gate/",
+      "id": "thesis-8b8ede3135",
+      "title": "消费降级、健康刚需与银发经济正在重塑防御型增长",
+      "titleEn": "Consumer downgrade, healthcare necessities, and the silver economy are reshaping defensive growth",
+      "href": "/investor/theses/thesis-8b8ede3135/",
+      "laneId": "lane_8cf8740aac77",
+      "lane": "消费降级/健康银发",
+      "laneHref": "/investor/lanes/consumer-downgrade-health-and-silver-economy/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 67,
-      "supports": 0,
-      "risks": 2,
+      "conviction": 64,
+      "supports": 1,
+      "risks": 1,
       "neutral": 0,
       "eventCount": 2,
       "events": [
         {
-          "title": "TMT板块高Beta品种（半导体/AI硬件）在两融平仓压力下的抵押品价值脆弱性评估",
-          "summary": "TMT板块高Beta品种（半导体/AI硬件）在两融平仓压力下的抵押品价值脆弱性评估",
-          "href": "/investor/reports/archive-d41c52b12593/",
-          "stance": "risk",
-          "stanceLabel": "风险"
+          "title": "大健康产业链研究报告 (2026年6月)",
+          "summary": "日期： 2026-06-06 分析师： 医药行业分析师 (agy) 行业： 医药生物 (创新药、医疗器械、CXO) 状态： 覆盖不足 (30日激活率: 4.4%)",
+          "href": "/investor/reports/archive-c77364255498/",
+          "stance": "supports",
+          "stanceLabel": "支持"
         },
         {
-          "title": "研究报告：半导体先进制程与先进封装国产化对AI防务算力实现的约束评估（2026年6月）",
-          "summary": "研究报告：半导体先进制程与先进封装国产化对AI防务算力实现的约束评估（2026年6月）",
-          "href": "/investor/reports/archive-7e4aace0446c/",
+          "title": "消费降级背景下量贩零食渠道的动销率与客单价趋势及加盟商单店模型压力测试报告",
+          "summary": "消费降级背景下量贩零食渠道的动销率与客单价趋势及加盟商单店模型压力测试报告",
+          "href": "/investor/reports/archive-3fbe529ce683/",
           "stance": "risk",
           "stanceLabel": "风险"
         }
       ],
       "stockTickers": [
-        "NVDA",
-        "TSM",
-        "000660.KS",
-        "MU",
-        "ASML",
-        "688012.SH"
+        "600519.SH",
+        "3690.HK",
+        "001215.SZ",
+        "600276.SH",
+        "300760.SZ",
+        "1177.HK",
+        "2319.HK",
+        "UNH"
       ]
     },
     {
@@ -6417,48 +6419,6 @@
         "TSLA",
         "688017.SH",
         "603915.SH"
-      ]
-    },
-    {
-      "id": "thesis-8b8ede3135",
-      "title": "消费降级、健康刚需与银发经济正在重塑防御型增长",
-      "titleEn": "Consumer downgrade, healthcare necessities, and the silver economy are reshaping defensive growth",
-      "href": "/investor/theses/thesis-8b8ede3135/",
-      "laneId": "lane_8cf8740aac77",
-      "lane": "消费降级/健康银发",
-      "laneHref": "/investor/lanes/consumer-downgrade-health-and-silver-economy/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 63,
-      "supports": 1,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 2,
-      "events": [
-        {
-          "title": "大健康产业链研究报告 (2026年6月)",
-          "summary": "日期： 2026-06-06 分析师： 医药行业分析师 (agy) 行业： 医药生物 (创新药、医疗器械、CXO) 状态： 覆盖不足 (30日激活率: 4.4%)",
-          "href": "/investor/reports/archive-c77364255498/",
-          "stance": "supports",
-          "stanceLabel": "支持"
-        },
-        {
-          "title": "消费降级背景下量贩零食渠道的动销率与客单价趋势及加盟商单店模型压力测试报告",
-          "summary": "消费降级背景下量贩零食渠道的动销率与客单价趋势及加盟商单店模型压力测试报告",
-          "href": "/investor/reports/archive-3fbe529ce683/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "600519.SH",
-        "3690.HK",
-        "001215.SZ",
-        "600276.SH",
-        "300760.SZ",
-        "1177.HK",
-        "2319.HK",
-        "UNH"
       ]
     },
     {
@@ -6627,10 +6587,10 @@
         "002747.SZ",
         "600761.SH",
         "000425.SZ",
-        "603298.SH",
         "603338.SH",
-        "601100.SH",
+        "603298.SH",
         "000157.SZ",
+        "601100.SH",
         "300124.SZ"
       ]
     },
@@ -6644,7 +6604,7 @@
       "laneHref": "/investor/lanes/cloud-self-generation-and-power-assets/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 49,
+      "conviction": 50,
       "supports": 1,
       "risks": 1,
       "neutral": 0,
@@ -6795,8 +6755,7 @@
         "688981.SH",
         "0981.HK",
         "688041.SH",
-        "688012.SH",
-        "688008.SH"
+        "688012.SH"
       ]
     },
     {
@@ -7010,9 +6969,9 @@
         "688256.SH",
         "688981.SH",
         "0981.HK",
-        "688008.SH",
         "688012.SH",
         "688041.SH",
+        "688008.SH",
         "588000.SH"
       ]
     },
@@ -7047,36 +7006,6 @@
         "688981.SH",
         "600941.SH",
         "601088.SH"
-      ]
-    },
-    {
-      "id": "thesis-5be4c31f4e",
-      "title": "6月央行双会周（日本央行6月15-16日加息至1.00%、美联储6月16-17日按兵不动）叠加正在降温但仍高企的中东石油冲击，对全球风险…",
-      "titleEn": "Practical research topic: 6月央行双会周（日本央行6月15-16日加息至1.00%、美联储6月16-17日按兵不动）叠加正在降温但仍高企的中东石油冲击，对全球风险…",
-      "href": "/investor/theses/thesis-5be4c31f4e/",
-      "laneId": "lane_1c216bd29875",
-      "lane": "美债利率/美元再定价",
-      "laneHref": "/investor/lanes/us-rates-and-dollar-repricing/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 79,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "联储政策路径预期对全球风险资产配置的影响",
-          "summary": "报告日期： 2026-06-06 发稿机构： 宏观与大类资产配置策略部 分析师： 大类资产配置师 (Asset Allocator, asset-allocator ) 研究来源：已归档 研究记录索...",
-          "href": "/investor/reports/archive-06ec1cb37acb/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "TLT",
-        "IEF",
-        "UUP"
       ]
     },
     {
@@ -7298,36 +7227,6 @@
       ]
     },
     {
-      "id": "thesis-fe66302bd9",
-      "title": "美联储'静默'转向与油价供给回落对中国货币政策与人民币汇率的传导效应",
-      "titleEn": "Practical research topic: 美联储'静默'转向与油价供给回落对中国货币政策与人民币汇率的传导效应",
-      "href": "/investor/theses/thesis-fe66302bd9/",
-      "laneId": "lane_c40c2ce413ec",
-      "lane": "人民币/美元流动性敏感资产",
-      "laneHref": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 78,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "日元去杠杆冲击下的 USD/CNH 压力测试：防御边界与离岸套利成本评估",
-          "summary": "日元去杠杆冲击下的 USD/CNH 压力测试：防御边界与离岸套利成本评估",
-          "href": "/investor/reports/archive-aea2e406137c/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "3988.HK",
-        "UUP",
-        "FXI"
-      ]
-    },
-    {
       "id": "thesis-859ab241bf",
       "title": "依托全球AI硬件超级周期的外溢效应与国内流动性宽松预期共振，A股TMT板块具备坚实的业绩兑现基础，将在跨国资金流入带动下确立其在“哑铃策…",
       "titleEn": "Practical research topic: 依托全球AI硬件超级周期的外溢效应与国内流动性宽松预期共振，A股TMT板块具备坚实的业绩兑现基础，将在跨国资金流入带动下确立其在“哑铃策…",
@@ -7359,6 +7258,36 @@
         "000660.KS",
         "MU",
         "002916.SZ"
+      ]
+    },
+    {
+      "id": "thesis-5be4c31f4e",
+      "title": "6月央行双会周（日本央行6月15-16日加息至1.00%、美联储6月16-17日按兵不动）叠加正在降温但仍高企的中东石油冲击，对全球风险…",
+      "titleEn": "Practical research topic: 6月央行双会周（日本央行6月15-16日加息至1.00%、美联储6月16-17日按兵不动）叠加正在降温但仍高企的中东石油冲击，对全球风险…",
+      "href": "/investor/theses/thesis-5be4c31f4e/",
+      "laneId": "lane_1c216bd29875",
+      "lane": "美债利率/美元再定价",
+      "laneHref": "/investor/lanes/us-rates-and-dollar-repricing/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 78,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "联储政策路径预期对全球风险资产配置的影响",
+          "summary": "报告日期： 2026-06-06 发稿机构： 宏观与大类资产配置策略部 分析师： 大类资产配置师 (Asset Allocator, asset-allocator ) 研究来源：已归档 研究记录索...",
+          "href": "/investor/reports/archive-06ec1cb37acb/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "TLT",
+        "IEF",
+        "UUP"
       ]
     },
     {
@@ -7770,6 +7699,76 @@
       ]
     },
     {
+      "id": "thesis-40b8638803",
+      "title": "全球科技配置应超配ASIC与新代工生态；A股风格则需从“AI题材映射”战略性切换至独立算力的“国产第二供应源”，重仓先进封装产能、核心设…",
+      "titleEn": "Practical research topic: 全球科技配置应超配ASIC与新代工生态；A股风格则需从“AI题材映射”战略性切换至独立算力的“国产第二供应源”，重仓先进封装产能、核心设…",
+      "href": "/investor/theses/thesis-40b8638803/",
+      "laneId": "lane_f1a271385aff",
+      "lane": "先进封装/HBM4 闸门",
+      "laneHref": "/investor/lanes/advanced-packaging-and-hbm4-gate/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 67,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "TMT板块高Beta品种（半导体/AI硬件）在两融平仓压力下的抵押品价值脆弱性评估",
+          "summary": "TMT板块高Beta品种（半导体/AI硬件）在两融平仓压力下的抵押品价值脆弱性评估",
+          "href": "/investor/reports/archive-d41c52b12593/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "NVDA",
+        "TSM",
+        "000660.KS",
+        "MU",
+        "ASML",
+        "688012.SH"
+      ]
+    },
+    {
+      "id": "thesis-31f32af77b",
+      "title": "中国云与国产算力栈的关键不是模型热度，而是训练/推理订单、服务器交付和生态锁定",
+      "titleEn": "China cloud and local compute stacks depend less on model hype than training/inference orders, server delivery, and e...",
+      "href": "/investor/theses/thesis-31f32af77b/",
+      "laneId": "lane_2997650d0638",
+      "lane": "中国云/国产算力栈",
+      "laneHref": "/investor/lanes/china-cloud-and-local-compute-stack/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 66,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "日元套利平仓压力下 TMT 行业的估值支撑与风险评估",
+          "summary": "作者: TMT行业分析师 (tmt-analyst) 权威工作日：2026-06-06 立场：压力测试 (Stress-Test) — 针对外资流出压力下 TMT 核心资产估值底线弹性进行重估",
+          "href": "/investor/reports/archive-408a7d6102d5/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "688256.SH",
+        "688041.SH",
+        "300308.SZ",
+        "601138.SH",
+        "0981.HK",
+        "688981.SH",
+        "000977.SZ",
+        "9988.HK",
+        "NVDA",
+        "0700.HK"
+      ]
+    },
+    {
       "id": "thesis-9d1baaec59",
       "title": "CAR-T商业化取决于进院、支付覆盖与患者转化",
       "titleEn": "CAR-T commercialization depends on hospital access, reimbursement and patient conversion",
@@ -7800,40 +7799,6 @@
         "2269.HK",
         "9926.HK",
         "603259.SH"
-      ]
-    },
-    {
-      "id": "thesis-741d1d6f34",
-      "title": "地产、土地财政与 REITs 是中国信用底的慢变量",
-      "titleEn": "Property, land finance, and REITs are the slow variables behind China's credit floor",
-      "href": "/investor/theses/thesis-741d1d6f34/",
-      "laneId": "lane_5c8ea9f78210",
-      "lane": "地产信用底/REITs",
-      "laneHref": "/investor/lanes/china-property-credit-floor-and-reits/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 65,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "宏观冲突与风险平价组合：基于房地产视角的压力测试",
-          "summary": "1. 核心摘要 截至2026-06-06，本报告从房地产（新房销售、土拍、政策与REITs）视角，对既有研究记录提出的“全天候/风险平价组合”进行压力测试。虽然“美联储按兵不动 vs. 国内流动性...",
-          "href": "/investor/reports/archive-02b2de3892c1/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "600048.SH",
-        "1109.HK",
-        "001979.SZ",
-        "0960.HK",
-        "0688.HK",
-        "000002.SZ",
-        "0823.HK"
       ]
     },
     {
@@ -7868,43 +7833,6 @@
         "603317.SH",
         "002852.SZ",
         "002847.SZ"
-      ]
-    },
-    {
-      "id": "thesis-31f32af77b",
-      "title": "中国云与国产算力栈的关键不是模型热度，而是训练/推理订单、服务器交付和生态锁定",
-      "titleEn": "China cloud and local compute stacks depend less on model hype than training/inference orders, server delivery, and e...",
-      "href": "/investor/theses/thesis-31f32af77b/",
-      "laneId": "lane_2997650d0638",
-      "lane": "中国云/国产算力栈",
-      "laneHref": "/investor/lanes/china-cloud-and-local-compute-stack/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 65,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "日元套利平仓压力下 TMT 行业的估值支撑与风险评估",
-          "summary": "作者: TMT行业分析师 (tmt-analyst) 权威工作日：2026-06-06 立场：压力测试 (Stress-Test) — 针对外资流出压力下 TMT 核心资产估值底线弹性进行重估",
-          "href": "/investor/reports/archive-408a7d6102d5/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "688256.SH",
-        "688041.SH",
-        "300308.SZ",
-        "601138.SH",
-        "0981.HK",
-        "688981.SH",
-        "000977.SZ",
-        "NVDA",
-        "9988.HK",
-        "0700.HK"
       ]
     },
     {
@@ -8040,6 +7968,40 @@
       ]
     },
     {
+      "id": "thesis-741d1d6f34",
+      "title": "地产、土地财政与 REITs 是中国信用底的慢变量",
+      "titleEn": "Property, land finance, and REITs are the slow variables behind China's credit floor",
+      "href": "/investor/theses/thesis-741d1d6f34/",
+      "laneId": "lane_5c8ea9f78210",
+      "lane": "地产信用底/REITs",
+      "laneHref": "/investor/lanes/china-property-credit-floor-and-reits/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 63,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "宏观冲突与风险平价组合：基于房地产视角的压力测试",
+          "summary": "1. 核心摘要 截至2026-06-06，本报告从房地产（新房销售、土拍、政策与REITs）视角，对既有研究记录提出的“全天候/风险平价组合”进行压力测试。虽然“美联储按兵不动 vs. 国内流动性...",
+          "href": "/investor/reports/archive-02b2de3892c1/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "600048.SH",
+        "1109.HK",
+        "001979.SZ",
+        "0960.HK",
+        "0688.HK",
+        "000002.SZ",
+        "0823.HK"
+      ]
+    },
+    {
       "id": "thesis-3986819dc0",
       "title": "A 股半导体的核心风险从订单验证转向 A/H 溢价、两融与负 Gamma",
       "titleEn": "A-share semiconductor risk is shifting from order proof to A/H premium, margin financing, and negative gamma",
@@ -8086,7 +8048,7 @@
       "laneHref": "/investor/lanes/a-share-hard-tech-and-star50/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 58,
+      "conviction": 56,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -8101,16 +8063,16 @@
         }
       ],
       "stockTickers": [
-        "688256.SH",
         "300308.SZ",
+        "688256.SH",
         "688981.SH",
         "0981.HK",
         "688041.SH",
-        "688008.SH",
         "600900.SH",
-        "300394.SZ",
+        "688008.SH",
         "588000.SH",
-        "688012.SH"
+        "300394.SZ",
+        "002916.SZ"
       ]
     },
     {
@@ -8257,41 +8219,6 @@
       ]
     },
     {
-      "id": "thesis-740e729f22",
-      "title": "人民币、美元与套息交易决定跨境风险资产的流动性折价",
-      "titleEn": "RMB, USD, and carry trades define the liquidity discount across cross-border risk assets",
-      "href": "/investor/theses/thesis-740e729f22/",
-      "laneId": "lane_c40c2ce413ec",
-      "lane": "人民币/美元流动性敏感资产",
-      "laneHref": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 49,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "日元去杠杆冲击下的 USD/CNH 压力测试：防御边界与离岸套利成本评估",
-          "summary": "日元去杠杆冲击下的 USD/CNH 压力测试：防御边界与离岸套利成本评估",
-          "href": "/investor/reports/archive-aea2e406137c/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "CME",
-        "3988.HK",
-        "LOW",
-        "600900.SH",
-        "TSM",
-        "META",
-        "NOW",
-        "0700.HK"
-      ]
-    },
-    {
       "id": "thesis-9e97140446",
       "title": "中国电力设备出海进入订单质量与政策筛选期",
       "titleEn": "Chinese power-equipment exports enter an order-quality and policy filter phase",
@@ -8325,6 +8252,41 @@
         "ABBNY",
         "600406.SH",
         "601126.SH"
+      ]
+    },
+    {
+      "id": "thesis-740e729f22",
+      "title": "人民币、美元与套息交易决定跨境风险资产的流动性折价",
+      "titleEn": "RMB, USD, and carry trades define the liquidity discount across cross-border risk assets",
+      "href": "/investor/theses/thesis-740e729f22/",
+      "laneId": "lane_c40c2ce413ec",
+      "lane": "人民币/美元流动性敏感资产",
+      "laneHref": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 47,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "日元去杠杆冲击下的 USD/CNH 压力测试：防御边界与离岸套利成本评估",
+          "summary": "日元去杠杆冲击下的 USD/CNH 压力测试：防御边界与离岸套利成本评估",
+          "href": "/investor/reports/archive-aea2e406137c/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "CME",
+        "3988.HK",
+        "LOW",
+        "600900.SH",
+        "TSM",
+        "META",
+        "NOW",
+        "0700.HK"
       ]
     },
     {
@@ -8371,7 +8333,7 @@
       "laneHref": "/investor/lanes/energy-transition-storage-and-solar-capex/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 42,
+      "conviction": 44,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -8404,13 +8366,14 @@
       "id": "lane_c40c2ce413ec",
       "title": "人民币/美元流动性敏感资产",
       "href": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
-      "thesisCount": 19,
-      "eventCount": 27,
-      "convictionTotal": 1456,
+      "thesisCount": 18,
+      "eventCount": 26,
+      "convictionTotal": 1375,
       "stockTickers": [
         "3988.HK",
         "UUP",
         "FXI",
+        "2800.HK",
         "9988.HK",
         "0700.HK",
         "CME",
@@ -8420,14 +8383,14 @@
         "META",
         "NOW"
       ],
-      "avgConviction": 77
+      "avgConviction": 76
     },
     {
       "id": "lane_f1a271385aff",
       "title": "先进封装/HBM4 闸门",
       "href": "/investor/lanes/advanced-packaging-and-hbm4-gate/",
       "thesisCount": 5,
-      "eventCount": 11,
+      "eventCount": 10,
       "convictionTotal": 338,
       "stockTickers": [
         "TSM",
@@ -8568,7 +8531,7 @@
       "href": "/investor/lanes/us-rates-and-dollar-repricing/",
       "thesisCount": 4,
       "eventCount": 4,
-      "convictionTotal": 312,
+      "convictionTotal": 311,
       "stockTickers": [
         "TLT",
         "IEF",
@@ -8647,7 +8610,7 @@
       "href": "/investor/lanes/energy-transition-storage-and-solar-capex/",
       "thesisCount": 2,
       "eventCount": 4,
-      "convictionTotal": 105,
+      "convictionTotal": 107,
       "stockTickers": [
         "300274.SZ",
         "002028.SZ",
@@ -8661,7 +8624,7 @@
         "META",
         "VST"
       ],
-      "avgConviction": 53
+      "avgConviction": 54
     },
     {
       "id": "lane_070c58f355b5",
@@ -8705,18 +8668,18 @@
       "href": "/investor/lanes/crypto-and-high-beta-risk-appetite/",
       "thesisCount": 1,
       "eventCount": 3,
-      "convictionTotal": 68,
+      "convictionTotal": 67,
       "stockTickers": [
         "MSTR",
         "COIN",
         "IBIT",
         "RIOT",
         "HOOD",
+        "LOW",
         "AMD",
-        "NVDA",
-        "LOW"
+        "NVDA"
       ],
-      "avgConviction": 68
+      "avgConviction": 67
     },
     {
       "id": "lane_8c4a3526fcca",
@@ -8815,7 +8778,7 @@
       "href": "/investor/lanes/consumer-downgrade-health-and-silver-economy/",
       "thesisCount": 1,
       "eventCount": 2,
-      "convictionTotal": 63,
+      "convictionTotal": 64,
       "stockTickers": [
         "600519.SH",
         "3690.HK",
@@ -8826,7 +8789,7 @@
         "2319.HK",
         "UNH"
       ],
-      "avgConviction": 63
+      "avgConviction": 64
     },
     {
       "id": "lane_e4f90acbf804",
@@ -8876,7 +8839,7 @@
       "market": "US",
       "href": "/investor/stocks/NVDA/",
       "thesisCount": 19,
-      "eventCount": 36,
+      "eventCount": 35,
       "lanes": [
         "Mag7 AI 平台再分层",
         "先进封装/HBM4 闸门",
@@ -8890,8 +8853,8 @@
       "name": "Invesco DB US Dollar Index Bullish Fund",
       "market": "US ETF",
       "href": "/investor/stocks/UUP/",
-      "thesisCount": 22,
-      "eventCount": 31,
+      "thesisCount": 21,
+      "eventCount": 30,
       "lanes": [
         "人民币/美元流动性敏感资产",
         "日元套息/EM 科技流动性",
@@ -8903,8 +8866,8 @@
       "name": "中国银行",
       "market": "HK",
       "href": "/investor/stocks/3988.HK/",
-      "thesisCount": 19,
-      "eventCount": 27,
+      "thesisCount": 17,
+      "eventCount": 24,
       "lanes": [
         "人民币/美元流动性敏感资产"
       ]
@@ -8914,8 +8877,8 @@
       "name": "iShares China Large-Cap ETF",
       "market": "US ETF",
       "href": "/investor/stocks/FXI/",
-      "thesisCount": 17,
-      "eventCount": 24,
+      "thesisCount": 16,
+      "eventCount": 23,
       "lanes": [
         "人民币/美元流动性敏感资产"
       ]
@@ -8926,7 +8889,7 @@
       "market": "US ADR",
       "href": "/investor/stocks/TSM/",
       "thesisCount": 11,
-      "eventCount": 22,
+      "eventCount": 21,
       "lanes": [
         "日元套息/EM 科技流动性",
         "先进封装/HBM4 闸门",
@@ -9010,26 +8973,12 @@
       ]
     },
     {
-      "ticker": "688012.SH",
-      "name": "中微公司",
-      "market": "A-share",
-      "href": "/investor/stocks/688012.SH/",
-      "thesisCount": 10,
-      "eventCount": 13,
-      "lanes": [
-        "A股半导体/两融负 Gamma",
-        "先进封装/HBM4 闸门",
-        "信创/国产 IT 栈",
-        "A股硬科技/科创50"
-      ]
-    },
-    {
       "ticker": "000660.KS",
       "name": "SK hynix",
       "market": "Korea",
       "href": "/investor/stocks/000660.KS/",
       "thesisCount": 6,
-      "eventCount": 13,
+      "eventCount": 12,
       "lanes": [
         "先进封装/HBM4 闸门",
         "AI 基建 TCO/能效筛选"
@@ -9041,7 +8990,7 @@
       "market": "US",
       "href": "/investor/stocks/MU/",
       "thesisCount": 6,
-      "eventCount": 13,
+      "eventCount": 12,
       "lanes": [
         "先进封装/HBM4 闸门",
         "AI 基建 TCO/能效筛选"
@@ -9103,6 +9052,19 @@
       ]
     },
     {
+      "ticker": "688012.SH",
+      "name": "中微公司",
+      "market": "A-share",
+      "href": "/investor/stocks/688012.SH/",
+      "thesisCount": 9,
+      "eventCount": 11,
+      "lanes": [
+        "A股半导体/两融负 Gamma",
+        "先进封装/HBM4 闸门",
+        "信创/国产 IT 栈"
+      ]
+    },
+    {
       "ticker": "GEV",
       "name": "GE Vernova",
       "market": "US",
@@ -9112,8 +9074,8 @@
       "lanes": [
         "AI 电力/电网设备",
         "关键材料/稀土铜铝",
-        "中国电力设备出海",
         "云厂商自发电/电力资产",
+        "中国电力设备出海",
         "能源转型/储能光伏"
       ]
     },
@@ -9147,19 +9109,6 @@
       ]
     },
     {
-      "ticker": "688008.SH",
-      "name": "澜起科技",
-      "market": "A-share",
-      "href": "/investor/stocks/688008.SH/",
-      "thesisCount": 8,
-      "eventCount": 10,
-      "lanes": [
-        "A股半导体/两融负 Gamma",
-        "信创/国产 IT 栈",
-        "A股硬科技/科创50"
-      ]
-    },
-    {
       "ticker": "ETN",
       "name": "Eaton",
       "market": "US",
@@ -9169,8 +9118,8 @@
       "lanes": [
         "AI 电力/电网设备",
         "关键材料/稀土铜铝",
-        "中国电力设备出海",
-        "云厂商自发电/电力资产"
+        "云厂商自发电/电力资产",
+        "中国电力设备出海"
       ]
     },
     {
@@ -9186,6 +9135,19 @@
         "先进封装/HBM4 闸门",
         "AI 再通胀/利率敏感资产",
         "云厂商自发电/电力资产"
+      ]
+    },
+    {
+      "ticker": "688008.SH",
+      "name": "澜起科技",
+      "market": "A-share",
+      "href": "/investor/stocks/688008.SH/",
+      "thesisCount": 7,
+      "eventCount": 9,
+      "lanes": [
+        "A股半导体/两融负 Gamma",
+        "信创/国产 IT 栈",
+        "A股硬科技/科创50"
       ]
     },
     {
@@ -9314,17 +9276,6 @@
       ]
     },
     {
-      "ticker": "ASML",
-      "name": "ASML",
-      "market": "US ADR",
-      "href": "/investor/stocks/ASML/",
-      "thesisCount": 3,
-      "eventCount": 7,
-      "lanes": [
-        "先进封装/HBM4 闸门"
-      ]
-    },
-    {
       "ticker": "1177.HK",
       "name": "中国生物制药",
       "market": "HK",
@@ -9360,6 +9311,17 @@
         "人民币/美元流动性敏感资产",
         "低价模型/AI 软件利润池",
         "中国云/国产算力栈"
+      ]
+    },
+    {
+      "ticker": "ASML",
+      "name": "ASML",
+      "market": "US ADR",
+      "href": "/investor/stocks/ASML/",
+      "thesisCount": 3,
+      "eventCount": 6,
+      "lanes": [
+        "先进封装/HBM4 闸门"
       ]
     },
     {
