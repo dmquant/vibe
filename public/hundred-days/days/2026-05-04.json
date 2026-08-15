@@ -4,7 +4,7 @@
   "dayNumber": 13,
   "status": "recorded",
   "headline": "首席风控官压力测试",
-  "summary": "当日归档 66 份公开研究，23 条研究讨论和 52 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
+  "summary": "当日归档 66 份公开研究，23 条研究讨论和 53 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
   "dominantTopic": {
     "id": "macro-rates",
     "labelZh": "宏观、通胀与利率",
@@ -29,7 +29,7 @@
     "reports": 66,
     "researchThreads": 23,
     "researchNotes": 206,
-    "thesisEvents": 52,
+    "thesisEvents": 53,
     "personaEvents": 11,
     "readerMemos": 0,
     "recaps": 0,
@@ -1766,7 +1766,7 @@
       "laneHref": "/investor/lanes/cloud-self-generation-and-power-assets/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 50,
+      "conviction": 49,
       "supports": 2,
       "risks": 0,
       "neutral": 0,
@@ -1798,6 +1798,45 @@
         "AMZN",
         "AEP",
         "NVDA"
+      ]
+    },
+    {
+      "id": "thesis-e26ef69f73",
+      "title": "风险核查与证据质量是主题交易的必要过滤器",
+      "titleEn": "Risk verification and evidence quality are necessary filters for theme trades",
+      "href": "/investor/theses/thesis-e26ef69f73/",
+      "laneId": "lane_ccbe817778d1",
+      "lane": "组合风控/证据质量",
+      "laneHref": "/investor/lanes/portfolio-risk-and-evidence-quality/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 44,
+      "supports": 0,
+      "risks": 2,
+      "neutral": 0,
+      "eventCount": 2,
+      "events": [
+        {
+          "title": "QA质询报告：双重供给冲击与美联储宽松窗口",
+          "summary": "分析师角色：qa-manager 研究记录立场：deny 审核日期：2026-05-04 主题：“中东能源危机叠加美中关税升级，重估美联储宽松窗口”",
+          "href": "/investor/reports/archive-7020cc411fdc/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        },
+        {
+          "title": "能源冲击的持续性及其向美国通胀的传导",
+          "summary": "研究记录 分析师: energy-analyst (能源行业分析师) 立场: stress-test - 日期: 2026-05-04 - 前序研究: chief-economist 的判断是 Fed 仍可保留有条件宽松倾向，但近期降息证据不足，因为 CPI...",
+          "href": "/investor/reports/archive-c08b4662cb31/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "CME",
+        "CBOE",
+        "IBKR",
+        "VIRT",
+        "SH"
       ]
     },
     {
@@ -1921,6 +1960,36 @@
       ]
     },
     {
+      "id": "thesis-29b1c0d6c7",
+      "title": "日银本周加息至1.0%、美联储维持3.50–3.75%不变的双向利差收敛背景下,USD/JPY ~160的日元套利交易是有序拆解还是面临…",
+      "titleEn": "Practical research topic: 日银本周加息至1.0%、美联储维持3.50–3.75%不变的双向利差收敛背景下,USD/JPY ~160的日元套利交易是有序拆解还是面临…",
+      "href": "/investor/theses/thesis-29b1c0d6c7/",
+      "laneId": "lane_f3e413e8ce27",
+      "lane": "日元套息/EM 科技流动性",
+      "laneHref": "/investor/lanes/yen-carry-and-em-tech-liquidity/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 81,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "FX 策略报告：5.4 万亿日元干预后，BOJ 6 月不加息情形下 USD/JPY 突破 160 的概率评估",
+          "summary": "FX 策略报告：5.4 万亿日元干预后，BOJ 6 月不加息情形下 USD/JPY 突破 160 的概率评估",
+          "href": "/investor/reports/archive-0d3f083b0c5b/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "TSM",
+        "FXY",
+        "UUP"
+      ]
+    },
+    {
       "id": "thesis-950a54ea98",
       "title": "保留 65–70% 远期/NDF 锁 carry，用 USD/JPY 价差看跌+敲入条件 call、USD/CNH 区间远期、HKD/C…",
       "titleEn": "Practical research topic: 保留 65–70% 远期/NDF 锁 carry，用 USD/JPY 价差看跌+敲入条件 call、USD/CNH 区间远期、HKD/C…",
@@ -1976,8 +2045,8 @@
       ],
       "stockTickers": [
         "0883.HK",
-        "SLB",
-        "OXY"
+        "CVX",
+        "XOM"
       ]
     },
     {
@@ -2076,36 +2145,6 @@
       "title": "日元套利拆仓与跨境流动性的实弹压力测试",
       "titleEn": "Practical research topic: 日元套利拆仓与跨境流动性的实弹压力测试",
       "href": "/investor/theses/thesis-c951442d7f/",
-      "laneId": "lane_f3e413e8ce27",
-      "lane": "日元套息/EM 科技流动性",
-      "laneHref": "/investor/lanes/yen-carry-and-em-tech-liquidity/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 79,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "FX 策略报告：5.4 万亿日元干预后，BOJ 6 月不加息情形下 USD/JPY 突破 160 的概率评估",
-          "summary": "FX 策略报告：5.4 万亿日元干预后，BOJ 6 月不加息情形下 USD/JPY 突破 160 的概率评估",
-          "href": "/investor/reports/archive-0d3f083b0c5b/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "TSM",
-        "FXY",
-        "UUP"
-      ]
-    },
-    {
-      "id": "thesis-29b1c0d6c7",
-      "title": "日银本周加息至1.0%、美联储维持3.50–3.75%不变的双向利差收敛背景下,USD/JPY ~160的日元套利交易是有序拆解还是面临…",
-      "titleEn": "Practical research topic: 日银本周加息至1.0%、美联储维持3.50–3.75%不变的双向利差收敛背景下,USD/JPY ~160的日元套利交易是有序拆解还是面临…",
-      "href": "/investor/theses/thesis-29b1c0d6c7/",
       "laneId": "lane_f3e413e8ce27",
       "lane": "日元套息/EM 科技流动性",
       "laneHref": "/investor/lanes/yen-carry-and-em-tech-liquidity/",
@@ -2443,8 +2482,7 @@
         "NVDA",
         "TSM",
         "AMD",
-        "AVGO",
-        "000660.KS"
+        "AVGO"
       ]
     },
     {
@@ -2584,42 +2622,6 @@
       ]
     },
     {
-      "id": "thesis-7f0a75c5f6",
-      "title": "数据中心地产、液冷与水资源正在决定 AI 容量的区域迁移",
-      "titleEn": "Data-center real estate, liquid cooling, and water resources are deciding regional migration of AI capacity",
-      "href": "/investor/theses/thesis-7f0a75c5f6/",
-      "laneId": "lane_0679894fe06b",
-      "lane": "数据中心地产/液冷",
-      "laneHref": "/investor/lanes/data-center-real-estate-and-cooling/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 55,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "工业制造分析师：OEM产能扩张压力测试",
-          "summary": "工业制造分析师：OEM产能扩张压力测试 重型燃气轮机铸造线、变压器绕组产能与HV开关装配吞吐能否在2027–2029窗口实际落地？",
-          "href": "/investor/reports/archive-b3d1686a13ba/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "VRT",
-        "ETN",
-        "NVDA",
-        "META",
-        "GEV",
-        "MSFT",
-        "DLR",
-        "EQIX",
-        "AMZN"
-      ]
-    },
-    {
       "id": "thesis-08dd090dc9",
       "title": "公用事业从防御红利切换到电网扩容、容量费与信用再定价",
       "titleEn": "Utilities are shifting from defensive dividends to grid expansion, capacity fees, and credit repricing",
@@ -2654,6 +2656,42 @@
         "NEE",
         "SMR",
         "SO"
+      ]
+    },
+    {
+      "id": "thesis-7f0a75c5f6",
+      "title": "数据中心地产、液冷与水资源正在决定 AI 容量的区域迁移",
+      "titleEn": "Data-center real estate, liquid cooling, and water resources are deciding regional migration of AI capacity",
+      "href": "/investor/theses/thesis-7f0a75c5f6/",
+      "laneId": "lane_0679894fe06b",
+      "lane": "数据中心地产/液冷",
+      "laneHref": "/investor/lanes/data-center-real-estate-and-cooling/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 53,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "工业制造分析师：OEM产能扩张压力测试",
+          "summary": "工业制造分析师：OEM产能扩张压力测试 重型燃气轮机铸造线、变压器绕组产能与HV开关装配吞吐能否在2027–2029窗口实际落地？",
+          "href": "/investor/reports/archive-b3d1686a13ba/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "VRT",
+        "META",
+        "ETN",
+        "NVDA",
+        "GEV",
+        "MSFT",
+        "DLR",
+        "EQIX",
+        "AMZN"
       ]
     },
     {
@@ -2719,7 +2757,6 @@
       "stockTickers": [
         "CME",
         "TLT",
-        "META",
         "JPM",
         "KRE",
         "GLD",
@@ -2756,44 +2793,12 @@
         "GEV",
         "META",
         "002028.SZ",
-        "VST",
         "600089.SH",
         "CEG",
+        "VST",
         "MSFT",
         "601179.SH",
         "AMZN"
-      ]
-    },
-    {
-      "id": "thesis-e26ef69f73",
-      "title": "风险核查与证据质量是主题交易的必要过滤器",
-      "titleEn": "Risk verification and evidence quality are necessary filters for theme trades",
-      "href": "/investor/theses/thesis-e26ef69f73/",
-      "laneId": "lane_ccbe817778d1",
-      "lane": "组合风控/证据质量",
-      "laneHref": "/investor/lanes/portfolio-risk-and-evidence-quality/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 43,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "能源冲击的持续性及其向美国通胀的传导",
-          "summary": "研究记录 分析师: energy-analyst (能源行业分析师) 立场: stress-test - 日期: 2026-05-04 - 前序研究: chief-economist 的判断是 Fed 仍可保留有条件宽松倾向，但近期降息证据不足，因为 CPI...",
-          "href": "/investor/reports/archive-c08b4662cb31/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "CME",
-        "CBOE",
-        "IBKR",
-        "VIRT",
-        "SH"
       ]
     }
   ],
@@ -2811,7 +2816,6 @@
         "UUP",
         "JPM",
         "CME",
-        "META",
         "KRE",
         "GLD"
       ],
@@ -2842,7 +2846,7 @@
       "href": "/investor/lanes/yen-carry-and-em-tech-liquidity/",
       "thesisCount": 4,
       "eventCount": 4,
-      "convictionTotal": 318,
+      "convictionTotal": 320,
       "stockTickers": [
         "TSM",
         "FXY",
@@ -2859,10 +2863,10 @@
       "convictionTotal": 305,
       "stockTickers": [
         "0883.HK",
-        "SLB",
-        "OXY",
         "CVX",
         "XOM",
+        "SLB",
+        "OXY",
         "2883.HK",
         "COP"
       ],
@@ -2874,7 +2878,7 @@
       "href": "/investor/lanes/cloud-self-generation-and-power-assets/",
       "thesisCount": 3,
       "eventCount": 4,
-      "convictionTotal": 195,
+      "convictionTotal": 194,
       "stockTickers": [
         "GEV",
         "CEG",
@@ -3046,6 +3050,22 @@
       "avgConviction": 51
     },
     {
+      "id": "lane_ccbe817778d1",
+      "title": "组合风控/证据质量",
+      "href": "/investor/lanes/portfolio-risk-and-evidence-quality/",
+      "thesisCount": 1,
+      "eventCount": 2,
+      "convictionTotal": 44,
+      "stockTickers": [
+        "CME",
+        "CBOE",
+        "IBKR",
+        "VIRT",
+        "SH"
+      ],
+      "avgConviction": 44
+    },
+    {
       "id": "lane_54700cb9537f",
       "title": "商业航天/卫星直连",
       "href": "/investor/lanes/commercial-space-and-direct-to-device-satellite/",
@@ -3072,8 +3092,7 @@
         "NVDA",
         "TSM",
         "AMD",
-        "AVGO",
-        "000660.KS"
+        "AVGO"
       ],
       "avgConviction": 66
     },
@@ -3150,26 +3169,6 @@
       "avgConviction": 55
     },
     {
-      "id": "lane_0679894fe06b",
-      "title": "数据中心地产/液冷",
-      "href": "/investor/lanes/data-center-real-estate-and-cooling/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 55,
-      "stockTickers": [
-        "VRT",
-        "ETN",
-        "NVDA",
-        "META",
-        "GEV",
-        "MSFT",
-        "DLR",
-        "EQIX",
-        "AMZN"
-      ],
-      "avgConviction": 55
-    },
-    {
       "id": "lane_22c1ed929e2e",
       "title": "公用事业/电网信用",
       "href": "/investor/lanes/utilities-grid-rate-base-and-credit/",
@@ -3187,6 +3186,26 @@
         "NEE",
         "SMR",
         "SO"
+      ],
+      "avgConviction": 53
+    },
+    {
+      "id": "lane_0679894fe06b",
+      "title": "数据中心地产/液冷",
+      "href": "/investor/lanes/data-center-real-estate-and-cooling/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "convictionTotal": 53,
+      "stockTickers": [
+        "VRT",
+        "META",
+        "ETN",
+        "NVDA",
+        "GEV",
+        "MSFT",
+        "DLR",
+        "EQIX",
+        "AMZN"
       ],
       "avgConviction": 53
     },
@@ -3209,22 +3228,6 @@
         "601126.SH"
       ],
       "avgConviction": 49
-    },
-    {
-      "id": "lane_ccbe817778d1",
-      "title": "组合风控/证据质量",
-      "href": "/investor/lanes/portfolio-risk-and-evidence-quality/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 43,
-      "stockTickers": [
-        "CME",
-        "CBOE",
-        "IBKR",
-        "VIRT",
-        "SH"
-      ],
-      "avgConviction": 43
     }
   ],
   "stocks": [
@@ -3248,14 +3251,14 @@
       "name": "Meta Platforms",
       "market": "US",
       "href": "/investor/stocks/META/",
-      "thesisCount": 12,
-      "eventCount": 19,
+      "thesisCount": 11,
+      "eventCount": 18,
       "lanes": [
         "Mag7 AI 平台再分层",
         "AI 算力半导体",
         "AI 软件效率/生产率",
         "AI 再通胀/利率敏感资产",
-        "数据中心地产/液冷"
+        "公用事业/电网信用"
       ]
     },
     {
@@ -3527,14 +3530,16 @@
       ]
     },
     {
-      "ticker": "SLB",
-      "name": "SLB",
+      "ticker": "CME",
+      "name": "CME Group",
       "market": "US",
-      "href": "/investor/stocks/SLB/",
-      "thesisCount": 4,
+      "href": "/investor/stocks/CME/",
+      "thesisCount": 3,
       "eventCount": 4,
       "lanes": [
-        "油气/地缘通胀"
+        "期权伽马/市场微观结构",
+        "美债利率/美元再定价",
+        "组合风控/证据质量"
       ]
     },
     {
@@ -3632,10 +3637,32 @@
       ]
     },
     {
-      "ticker": "OXY",
-      "name": "Occidental Petroleum",
+      "ticker": "CVX",
+      "name": "Chevron",
       "market": "US",
-      "href": "/investor/stocks/OXY/",
+      "href": "/investor/stocks/CVX/",
+      "thesisCount": 3,
+      "eventCount": 3,
+      "lanes": [
+        "油气/地缘通胀"
+      ]
+    },
+    {
+      "ticker": "XOM",
+      "name": "Exxon Mobil",
+      "market": "US",
+      "href": "/investor/stocks/XOM/",
+      "thesisCount": 3,
+      "eventCount": 3,
+      "lanes": [
+        "油气/地缘通胀"
+      ]
+    },
+    {
+      "ticker": "SLB",
+      "name": "SLB",
+      "market": "US",
+      "href": "/investor/stocks/SLB/",
       "thesisCount": 3,
       "eventCount": 3,
       "lanes": [
@@ -3679,19 +3706,6 @@
       ]
     },
     {
-      "ticker": "CME",
-      "name": "CME Group",
-      "market": "US",
-      "href": "/investor/stocks/CME/",
-      "thesisCount": 3,
-      "eventCount": 3,
-      "lanes": [
-        "期权伽马/市场微观结构",
-        "美债利率/美元再定价",
-        "组合风控/证据质量"
-      ]
-    },
-    {
       "ticker": "600900.SH",
       "name": "长江电力",
       "market": "A-share",
@@ -3715,18 +3729,6 @@
         "Mag7 AI 平台再分层",
         "AI 算力半导体"
       ]
-    },
-    {
-      "ticker": "XLU",
-      "name": "Utilities Select Sector SPDR",
-      "market": "US ETF",
-      "href": "/investor/stocks/XLU/",
-      "thesisCount": 2,
-      "eventCount": 3,
-      "lanes": [
-        "AI 再通胀/利率敏感资产",
-        "公用事业/电网信用"
-      ]
     }
   ],
   "personas": [
@@ -3736,7 +3738,7 @@
       "nameEn": "FX Strategist",
       "href": "/investor/personas/#persona-fx-strategist-bf93e1",
       "specialty": "人民币/美元/欧元/日元走势、利差交易、汇率风险",
-      "currentView": "通胀粘性加就业放缓环境下的跨资产配置；人民币、美元与套息交易决定跨境风险资产的流动性折价；驱动对冲阶梯的 Fed / BoJ / ECB 政策路径 是当前该 persona 参与最多的研究主线。",
+      "currentView": "通胀粘性加就业放缓环境下的跨资产配置；日银本周加息至1.0%、美联储维持3.50–3.75%不变的双向利差收敛背景下,USD/JPY ~160的日元套利交易是有序拆解还是面临…；驱动对冲阶梯的 Fed / BoJ / ECB 政策路径 是当前该 persona 参与最多的研究主线。",
       "supports": 0,
       "risks": 11,
       "neutral": 0,
