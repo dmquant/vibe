@@ -1,0 +1,20 @@
+{
+  "slug": "archive-8f6c4dfc733f",
+  "href": "/investor/reports/archive-8f6c4dfc733f/",
+  "meta": {
+    "title": "QA Review（复审）：2026-08-10 至 2026-08-14 周报研究包 — 06 周报.md v1.0.1",
+    "date": "2026-08-10",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "通胀",
+      "宏观",
+      "港美股"
+    ],
+    "source": "archive-8f6c4dfc733f",
+    "source_label": "研究档案",
+    "source_kind": "archive"
+  },
+  "bodyHtml": "<h1>QA Review（复审）：2026-08-10 至 2026-08-14 周报研究包 — <code>研究档案</code> v1.0.1</h1>\n<p>锚定日期：shell <code>系统日期锚</code> 返回 <code>2026-08-16</code>。本次复审针对纠正性重生成后的 <code>研究档案</code>（<code>version: 1.0.1</code>，<code>status: revised_after_QA</code>，<code>supersedes: 06_周报@1.0.0</code>），逐条核对上一轮 QA（见修订前的高/中优先级问题）是否已解决。</p>\n<h2>1. 文件完整性</h2>\n<p><code>研究档案</code> 存在，<code>28016</code> bytes，包含 YAML front matter（<code>version</code>/<code>supersedes</code>/<code>status</code>）、§0-§8 全部章节、可视化数据表五张、投委会决策议题表、REVISION LOG。结构完整，未发现缺失章节。</p>\n<h2>2. 逐项复核上一轮问题</h2>\n<table>\n<thead>\n<tr>\n<th>上一轮问题</th>\n<th>严重程度</th>\n<th>本版处理</th>\n<th>复审判断</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Brent/WTI 口径混用（<code>+1.7%</code>、<code>+5.95%</code>、<code>$82.40</code>、<code>$88.52</code> 并列，未标注基准/合约/时间戳）</td>\n<td>高</td>\n<td>全篇（§1 第5点、§7 方法/发现表/结论/局限、图表1脚注、图表2脚注、投委会表）统一以 MarketWatch/WSJ <code>+5.95%</code> 至 <code>$88.52/barrel</code> 为主口径，Barron's <code>+1.7%</code> 与 oil futures <code>$82.40/barrel</code> 一律降级为脚注并说明\"合约/时间戳/基准品种差异\"。抽查全文 7 处相关引用，标签一致，无重新出现的并列矛盾报价。</td>\n<td>已解决</td>\n</tr>\n<tr>\n<td>Q6 零售经营 consensus（same-store sales、traffic、gross margin 等）未取得却隐含作为结论输入</td>\n<td>高</td>\n<td>§2 第3点、Q6 结论、Q6 局限、图表说明均明确写出\"未能从可靠可访问来源完整取得\"且\"不作为本版结论依据/已知输入\"，只列为下周验证清单。未发现继续以缺失数据下断言的段落。</td>\n<td>已解决（诚实降级，而非补齐数据——但已如实标注，不构成缺陷）</td>\n</tr>\n<tr>\n<td>Sector rotation 仅有 2 个 sector 数据却暗示 11-sector 轮动结论</td>\n<td>高</td>\n<td>图表3标题改为\"Sector rotation partial evidence table\"，正文与§7结论/局限均明确\"不能支持完整 11-sector rotation 结论\"，表格保留的仍是已验证数据点（Energy/Health Care 全量，其余多为\"未取得\"标注，不再是伪装成同类数据的空白）。</td>\n<td>已解决</td>\n</tr>\n<tr>\n<td><code>2026-12</code> FedWatch 概率缺口未处理</td>\n<td>中</td>\n<td>Q1 发现表新增该行标注\"未纳入 / 未取得可靠历史快照 / 不作为本版结论依据\"，§2 第5点与 Q1 局限重复说明放弃原因（历史快照不可得，且本周交易窗口集中在 09 月议息）。</td>\n<td>已解决</td>\n</tr>\n<tr>\n<td>计划阶段 Reddit、AvalonBay 观察点在研究阶段消失，未说明</td>\n<td>中</td>\n<td>§2 第6点分别给出剔除理由（Reddit 缺少与本周主线直接相连的新增可验证输入；AvalonBay 事件优先级低于宏观住房数据）。</td>\n<td>已解决</td>\n</tr>\n<tr>\n<td>后续跟进项应前移到执行摘要后</td>\n<td>低</td>\n<td>§2《后续跟进项与待补数据》现紧跟在§1《主席结论》之后，先于所有 Q1-Q6 细节章节。</td>\n<td>已解决</td>\n</tr>\n<tr>\n<td>AI 表格应按\"已披露 earnings\" vs \"供应链/memory beta\" 分组</td>\n<td>低（编辑建议）</td>\n<td>§6 表格与图表4散点表仍是单一表格，未拆分两组；不过表格已在\"解释\"列区分性质（如 NVDA 标注\"供应链 beta\"、MU/SNDK 标注\"memory pricing beta\"），可读性问题实质已部分缓解。</td>\n<td>部分处理，非阻断项</td>\n</tr>\n</tbody>\n</table>\n<h2>3. 数据一致性抽查（本版新增/改写部分）</h2>\n<ul>\n<li>Brent 主口径在 §1、§7 方法/发现/结论/局限、图表1、图表2脚注、投委会表中数值完全一致（<code>$88.52/barrel</code>、<code>+5.95%</code>），脚注口径（<code>+1.7%</code>、<code>$82.40/barrel</code>、<code>+1.4%</code>）标签统一，未见混用或反复横跳。</li>\n<li>CPI/PPI/retail sales/Michigan/指数收盘等原有核心数字与上一版一致，未在改写中被误改。</li>\n<li>REVISION LOG 对本次修订内容的描述（统一 Brent、前移跟进项、放弃 Q6 consensus 与 2026-12 FedWatch、sector rotation 降级、Reddit/AvalonBay 说明）与正文实际改动逐一对应，没有\"日志写了但正文没改\"的落差。</li>\n</ul>\n<h2>4. 逻辑链条</h2>\n<p>主席结论（§1）与 Q1-Q6 及可视化图表的映射关系保持成立，且新增的\"局限\"表达比上一版更克制、更诚实——凡是数据不足的地方，报告选择明确降级结论范围（partial evidence / 不作为结论依据），而不是用不完整数据支撑过强的表述。这是修正正确的方向：一份周报承认\"我们不知道完整 sector rotation\"比编造一张看似完整的表格更有价值。</p>\n<h2>5. 剩余可选优化（不影响通过，供下次迭代参考）</h2>\n<ul>\n<li>低优先级：图表4/§6 AI 表格可考虑按\"已披露 earnings\"（CRWV/SMCI/NBIS/AMAT）与\"供应链/memory beta\"（NVDA/MU/SNDK）拆成两个子表，进一步提升可读性，但当前\"解释\"列已能区分性质，不构成缺陷。</li>\n</ul>\n<h2>6. 总体评级</h2>\n<p><strong>pass</strong>。上一轮列出的全部高优先级与中优先级问题（Brent/WTI 口径混用、Q6 消费经营指标缺口的隐性使用、sector rotation 过度推断、2026-12 FedWatch 缺口、Reddit/AvalonBay 遗漏未说明）在本版中均已实质性解决，处理方式是如实标注数据边界而非伪造补齐，符合更严谨的做法。低优先级的\"后续跟进项前移\"已完成；仅剩\"AI 表格分组\"这一项编辑性建议未采纳，但不影响内容准确性与可读性达标，不构成 fail/needs-revision 理由。可提交 PM。</p>"
+}

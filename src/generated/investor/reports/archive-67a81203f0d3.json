@@ -1,0 +1,20 @@
+{
+  "slug": "archive-67a81203f0d3",
+  "href": "/investor/reports/archive-67a81203f0d3/",
+  "meta": {
+    "title": "QA 评审（复审 — 针对修订后的 06 周报.md）",
+    "date": "2026-08-16",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "通胀",
+      "宏观",
+      "风险"
+    ],
+    "source": "archive-67a81203f0d3",
+    "source_label": "研究档案",
+    "source_kind": "archive"
+  },
+  "bodyHtml": "<h1>QA 评审（复审 — 针对修订后的 研究档案）</h1>\n<p>锚定日期：<code>系统日期锚</code> 返回 <code>2026-08-16</code>。本次复审对象为修订版 <code>研究档案</code>（id: <code>factor-weekly-report-2026-08-10_2026-08-14@1.0.1</code>，声明依据 <code>QA_review.md</code> 修订），对照上游 <code>研究档案</code>、<code>研究档案</code> 重新执行与首轮评审相同的检查：声明-证据一致性、计划/章节匹配、内部逻辑闭环、总体评级。</p>\n<h2>1. 首轮修订建议逐项核对</h2>\n<table>\n<thead>\n<tr>\n<th>首轮修订建议（原 QA_review.md §5）</th>\n<th>研究档案 中的落实情况</th>\n<th>判定</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>高优先级：补齐或明确替代 Fama-French HML/SMB/Mkt-RF、Axioma/Barra 纯因子收益</td>\n<td>「数据与方法」新增“纯因子收益”行，明示未取得同口径数据；第1节结论与「限制」段落改写为“未能确认为独立 HML 冲击”“区分仍停留在 ETF proxy 层面”；图表1 脚注同步更新</td>\n<td>已解决（以显式免责声明替代，未编造数据，处理得当）</td>\n</tr>\n<tr>\n<td>高优先级：补充 momentum 广度证据或改写为“MTUM 强势但扩散证据不完整”</td>\n<td>第2节标题由“Momentum 是否扩散？”改为“MTUM 强势但扩散证据不完整”，表格新增 Mag 7 单周收益、52-week highs/lows、Nasdaq 100 concentration、top/bottom decile momentum returns 四行并标注 n.a.，「限制」段落同步说明</td>\n<td>已解决</td>\n</tr>\n<tr>\n<td>中优先级：补齐 FactSet revenue beat rate/forward EPS revisions/guidance revisions，或改标题为“盈利结果支持，修正广度待验证”</td>\n<td>第3节标题已改为“盈利结果支持，修正广度待验证”，表格新增三行 n.a. 并标注“同口径数据未取得”“修正广度待验证”“指引修正待验证”</td>\n<td>已解决</td>\n</tr>\n<tr>\n<td>中优先级：补充 ticker-level ETF flows、CFTC positioning、put/call、securities lending/short interest</td>\n<td>第6节与图表5均新增 Ticker-level ETF flows、CFTC positioning、Put/call 行（n.a.），short interest 行保留</td>\n<td>已解决</td>\n</tr>\n<tr>\n<td>中优先级：为 CPI/PPI/retail sales/Michigan sentiment 加入 consensus 与 prior value</td>\n<td>第5节表格新增 Consensus、Prior 列，但因未取得可验证同源数据，全部列为 n.a.，并在「限制」中说明原因（未取得同源 consensus/prior，不再伪装成完整 surprise 表）</td>\n<td>部分解决——结构性缺口已补齐且诚实标注，但实质数据仍未到位（见下方说明）</td>\n</tr>\n</tbody>\n</table>\n<h2>2. 数据一致性复核（对照 01/02 上游文件）</h2>\n<ul>\n<li>日期锚点、AP 指数周度数据（S&amp;P 500 +0.4%、Nasdaq +0.1%、Russell 2000 +1.1%、Dow -0.6%）在 06 与 02 之间保持一致，未发现新的数值偏差。</li>\n<li>ETF 价格序列（IWD/IWF/IWM/RSP/MTUM/QUAL/USMV/SPY）与 研究档案 完全一致，未在修订中被误改。</li>\n<li>06 的「优先结论」与对应章节标题现已同步（例如结论第2条“MTUM 强势但扩散证据不完整”与第2节标题一致；结论第3条“盈利结果支持，修正广度待验证”与第3节标题一致），此前草稿中标题与结论不同步的风险已消除，属于本轮修订的额外正面变化。</li>\n<li>REVISION LOG（§8）如实描述了本次改动范围，未发现“声明修订但实际未改”的不一致。</li>\n</ul>\n<h2>3. 仍存在的问题（不阻断通过，但建议记录）</h2>\n<ol>\n<li><strong>宏观 consensus/prior 仍为占位符</strong>：第5节新增的 Consensus、Prior 列全部是 n.a.，实质性缺口并未真正补齐，只是从“计划要求但未提及”变成“显式承认未取得”。对 PM 而言这是更诚实的呈现，但下周仍需补上真实数据，否则该表格的信息增量有限。</li>\n<li><strong>表达/可读性建议未处理</strong>（原 QA §4，非阻断项）：各因子表格列名仍不统一（“单周收益”“单周变化”“判断”“结论”混用）；“可视化阶段数据表”仍在正文而非附录中，信息密度偏高。这些是编辑性建议，不影响数据准确性，可留待下一轮迭代处理。</li>\n</ol>\n<p>以上两点均为原 QA 中的中/低优先级或编辑性建议，未被逐字满足，但未构成新的 不匹配 / mismatch / off-topic / 偏离 问题，也不影响本次评级。</p>\n<h2>4. 总体评级</h2>\n<p><code>pass</code> — 首轮 QA 提出的高优先级与中优先级问题（纯因子数据缺口、momentum 扩散证据、quality 修正广度、flows/positioning/short-interest 缺口、宏观 consensus/prior 字段）均已在标题、表格与限制说明层面得到诚实且一致的处理，未发现编造数据或新的跨步骤不一致。剩余的 consensus/prior 实质数据缺口与编辑性格式建议为遗留的低优先级事项，不影响本次提交 PM 的资格，建议在下周报告中继续跟进。</p>\n<h2>修订建议（供下一轮参考，非本轮阻断项）</h2>\n<ul>\n<li>低优先级：下周报告应尝试取得 CPI/PPI/retail sales/Michigan sentiment 的真实 consensus 与 prior 数值，替换当前 n.a. 占位。</li>\n<li>低优先级：统一各因子表格列名（建议固定为“2026-08-07 收盘”“2026-08-14 收盘”“单周收益”“相对 SPY”“备注/限制”），并考虑将“可视化阶段数据表”移至附录以聚焦正文叙事。</li>\n</ul>"
+}

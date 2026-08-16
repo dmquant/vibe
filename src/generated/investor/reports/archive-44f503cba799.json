@@ -1,0 +1,21 @@
+{
+  "slug": "archive-44f503cba799",
+  "href": "/investor/reports/archive-44f503cba799/",
+  "meta": {
+    "title": "QA 审查（复核）：大中华房地产周度研究包",
+    "date": "2026-08-16",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "通胀",
+      "宏观",
+      "A股",
+      "港美股",
+      "风险"
+    ],
+    "source": "archive-44f503cba799",
+    "source_label": "研究档案",
+    "source_kind": "archive"
+  },
+  "bodyHtml": "<h1>QA 审查（复核）：大中华房地产周度研究包</h1>\n<p>基准日期：shell <code>系统日期锚</code> 返回 <code>2026-08-16</code>。本次为对纠正性重写版 <code>研究档案</code>（version 1.0.1, supersedes 1.0.0, qa_status: revised_after_needs_revision）的复核，对照原 QA 审查（<code>needs-revision</code>）逐条核实修订是否落实。</p>\n<h2>1. 文件完整性 (File manifest)</h2>\n<table>\n<thead>\n<tr>\n<th>声明文件</th>\n<th>工作区存在</th>\n<th>备注</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>研究档案</code> / <code>.en.md</code></td>\n<td>是</td>\n<td>与前次核查一致，未变更。</td>\n</tr>\n<tr>\n<td><code>研究档案</code> / <code>.en.md</code></td>\n<td>是</td>\n<td>与前次核查一致，未变更。</td>\n</tr>\n<tr>\n<td><code>研究档案</code></td>\n<td>是</td>\n<td>已读取；32898 bytes；含 §0 YAML header（version 1.0.1, revision_date 2026-08-16）与 §8 REVISION LOG，标注本版为按 QA 意见修订。</td>\n</tr>\n<tr>\n<td><code>qa_regen_summary.md</code></td>\n<td>是</td>\n<td>摘要修订内容，与正文修订一致。</td>\n</tr>\n</tbody>\n</table>\n<h2>2. 数据一致性 (Cross-step consistency)</h2>\n<table>\n<thead>\n<tr>\n<th>核查项</th>\n<th>计划稿/前版数值</th>\n<th>修订稿数值</th>\n<th>QA 判断</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>研究窗口、日期锚点</td>\n<td><code>2026-08-10</code> 至 <code>2026-08-14</code>；<code>2026-08-16</code></td>\n<td>相同</td>\n<td>一致。</td>\n</tr>\n<tr>\n<td>中国海外发展 7月/1-7月销售</td>\n<td>RMB15.119 billion +27.6%；RMB149.470 billion +13.2%</td>\n<td>相同，另补充销售面积同比-16.6%、新增土地权益地价</td>\n<td>一致，信息更完整。</td>\n</tr>\n<tr>\n<td>7月信用数据</td>\n<td>M2 +7.7%、社融存量 +7.4%、房贷利率约3.1%</td>\n<td>相同，并保留7月住户中长期贷款推算-RMB120.2 billion</td>\n<td>一致；推算口径（1-7月减H1）在方法与局限中均有说明。</td>\n</tr>\n<tr>\n<td>香港宏观预测</td>\n<td>GDP预测上修至3.5%-4.5%，Q2 +4.3%，H1 +5.1%</td>\n<td>相同</td>\n<td>一致。</td>\n</tr>\n<tr>\n<td>Northern Metropolis 成本</td>\n<td>S&amp;P Global 约HK$360 billion/US$46 billion</td>\n<td>表述为“超过HK$360 billion/6年”，并新增“政府相关项目口径约HK$224 billion”且明确注明两者来源不同（S&amp;P估算 vs 政府项目口径）</td>\n<td>一致且比前版更清晰，解决了原QA第24行“应更醒目标注口径差异”的问题。</td>\n</tr>\n<tr>\n<td>Northern Metropolis 住宅单位</td>\n<td>计划未细分</td>\n<td>新版明确区分“新增单位约500,000个”（2023 Policy Address）与“全区远期约905,000-926,000个单位”（其他规划口径），并在发现表、图表5中均标注“不应与新增供应混用”</td>\n<td>解决原QA修订建议第5条。</td>\n</tr>\n<tr>\n<td>内地非住宅土地续期风险</td>\n<td>约US90 billion</td>\n<td>相同</td>\n<td>一致。</td>\n</tr>\n</tbody>\n</table>\n<p>未发现新引入的数值矛盾。</p>\n<h2>3. 逻辑链条 (Narrative coherence)</h2>\n<p>计划稿六个核心问题在修订稿中均有对应章节，逻辑链条完整，且相较前版补充了顶层“证据等级”表，明确区分完整数据、替代数据、缺失数据三个层级，读者不会再误以为所有计划数据均已取得。</p>\n<p>对照原 QA 提出的三类缺口</p>\n<ul>\n<li><strong>一线城市政策反应</strong>：原版以“四城周度脉冲”呈现北京数据+其他城市7月背景，易被误读为完整矩阵。修订稿在方法段、发现段、图表1标题均已明确降级为“北京政策样本+7月背景”，并在图表1脚注写明“不得标注为完整‘四城周度脉冲’”。<strong>已解决。</strong></li>\n<li><strong>REITs与开发商表现</strong>：修订稿图表4标题改为“香港地产资产截面替代表（非周度总回报、非复权口径）”，正文与局限段均声明“不做定量风格归因”“不拆分利率/租金/分派收益率/资金轮动贡献比例”。<strong>已解决。</strong></li>\n<li><strong>公司月度口径</strong>：华润置地、建发国际、中国金茂、碧桂园的发现表与图表2均已拆分为“公司公告/HKEX/IR口径”与“第三方摘要口径”两列，对未取得公司公告原文的公司明确写出“本次未取得公司公告/HKEX/IR月度销售原文”，并对建发国际的口径差异（权益/操盘/合同销售）给出解释与后续核对要求。<strong>已解决。</strong></li>\n</ul>\n<p>此外，原QA修订建议中的“房企融资”缺口，本版在问题3的局限段和“后续跟踪项”表中均已明确列为高优先级缺失并声明“本PM版明确排除房企境内债相对价值、展期压力排序和兑付日历判断”，未把未验证内容包装成结论。<strong>已解决。</strong></p>\n<p>未发现遗留的 不匹配 / mismatch / off-topic / 偏离 问题。</p>\n<h2>4. 表达与可读性 (Editorial quality)</h2>\n<ol>\n<li>“证据等级”表已按建议加入一页结论之后。✓</li>\n<li>图表4标题与表内说明已按建议调整为截面替代表并注明非周度总回报、非复权口径。✓</li>\n<li>开发商销售表已拆分公司公告口径与第三方摘要口径，建发国际的区间与H1数值差异已有解释。✓</li>\n<li>私人住宅售价指数环比“来源口径有差异”仍以行内说明呈现，未单独设脚注；属于表达风格问题，不影响数据准确性，可在下一次正式排版时改为脚注，不构成本次评级扣分项。</li>\n</ol>\n<h2>5. 修订建议 (Recommended revisions)</h2>\n<p>无阻塞性修订项。以下为可选的编辑打磨，不影响本次评级</p>\n<ul>\n<li>低优先级：可将“私人住宅售价指数环比口径差异”改为独立脚注，与其他口径说明格式统一。</li>\n<li>低优先级（沿用自前版）：后续正式提交前仍需补齐一线城市周度成交矩阵、港股地产/REITs总回报矩阵、房企融资矩阵——但本版已如实将其列为“后续跟踪项”并在正文中避免了越界结论，不再是本次QA的失败项，而是既定的数据获取待办。</li>\n</ul>\n<h2>6. 总体评级</h2>\n<p><strong>pass</strong>（合格，qa_status 可置为 <code>approved</code>）。修订稿已逐条落实前次 <code>needs-revision</code> 审查中的高优先级要求：四城成交图表降级并明确标注、REITs/开发商总回报矩阵降级为截面替代表并声明不做定量归因、公司月度口径拆分为公告口径与第三方摘要口径、房企融资缺口已在局限与后续跟踪项中明确排除、北部都会区新增单位与全区总量单位已区分。核查中未发现新的数据不一致或逻辑偏离，可提交下一环节（PM/可视化）。</p>"
+}

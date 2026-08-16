@@ -4,7 +4,7 @@
   "dayNumber": 16,
   "status": "recorded",
   "headline": "食品加工降至2%-3%后的A股再配置 — 2026-07-23 [D1][I1]",
-  "summary": "当日归档 28 份公开研究，6 条研究讨论和 12 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
+  "summary": "当日归档 28 份公开研究，6 条研究讨论和 13 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
   "dominantTopic": {
     "id": "macro-rates",
     "labelZh": "宏观、通胀与利率",
@@ -29,8 +29,8 @@
     "reports": 28,
     "researchThreads": 6,
     "researchNotes": 48,
-    "thesisEvents": 12,
-    "personaEvents": 11,
+    "thesisEvents": 13,
+    "personaEvents": 12,
     "readerMemos": 0,
     "recaps": 0,
     "deepResearch": 0
@@ -714,12 +714,12 @@
       "stockTickers": [
         "MSTR",
         "COIN",
+        "HOOD",
         "IBIT",
         "RIOT",
-        "HOOD",
-        "MARA",
         "LOW",
-        "AMD"
+        "NVDA",
+        "MARA"
       ]
     },
     {
@@ -953,14 +953,46 @@
       ],
       "stockTickers": [
         "VRT",
-        "META",
         "ETN",
+        "META",
         "NVDA",
         "GEV",
         "MSFT",
         "DLR",
         "EQIX",
-        "AMZN"
+        "SMR"
+      ]
+    },
+    {
+      "id": "thesis-e26ef69f73",
+      "title": "风险核查与证据质量是主题交易的必要过滤器",
+      "titleEn": "Risk verification and evidence quality are necessary filters for theme trades",
+      "href": "/investor/theses/thesis-e26ef69f73/",
+      "laneId": "lane_ccbe817778d1",
+      "lane": "组合风控/证据质量",
+      "laneHref": "/investor/lanes/portfolio-risk-and-evidence-quality/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 43,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "布伦特原油持续 100美元/桶对欧元区制造业成本与通胀传导的边际影响评估",
+          "summary": "布伦特原油持续 100美元/桶对欧元区制造业成本与通胀传导的边际影响评估",
+          "href": "/investor/reports/archive-9e86f01ca794/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "CME",
+        "CBOE",
+        "IBKR",
+        "VIRT",
+        "SH"
       ]
     }
   ],
@@ -1045,12 +1077,12 @@
       "stockTickers": [
         "MSTR",
         "COIN",
+        "HOOD",
         "IBIT",
         "RIOT",
-        "HOOD",
-        "MARA",
         "LOW",
-        "AMD"
+        "NVDA",
+        "MARA"
       ],
       "avgConviction": 67
     },
@@ -1125,16 +1157,32 @@
       "convictionTotal": 53,
       "stockTickers": [
         "VRT",
-        "META",
         "ETN",
+        "META",
         "NVDA",
         "GEV",
         "MSFT",
         "DLR",
         "EQIX",
-        "AMZN"
+        "SMR"
       ],
       "avgConviction": 53
+    },
+    {
+      "id": "lane_ccbe817778d1",
+      "title": "组合风控/证据质量",
+      "href": "/investor/lanes/portfolio-risk-and-evidence-quality/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "convictionTotal": 43,
+      "stockTickers": [
+        "CME",
+        "CBOE",
+        "IBKR",
+        "VIRT",
+        "SH"
+      ],
+      "avgConviction": 43
     }
   ],
   "stocks": [
@@ -1143,14 +1191,14 @@
       "name": "NVIDIA",
       "market": "US",
       "href": "/investor/stocks/NVDA/",
-      "thesisCount": 6,
-      "eventCount": 6,
+      "thesisCount": 7,
+      "eventCount": 7,
       "lanes": [
         "低价模型/AI 软件利润池",
+        "加密/高波动风险偏好",
         "先进封装/HBM4 闸门",
         "端侧 AI/Agent 桌面",
-        "AI 基建 TCO/能效筛选",
-        "数据中心地产/液冷"
+        "AI 基建 TCO/能效筛选"
       ]
     },
     {
@@ -1165,19 +1213,6 @@
         "端侧 AI/Agent 桌面",
         "AI 基建 TCO/能效筛选",
         "数据中心地产/液冷"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "name": "AMD",
-      "market": "US",
-      "href": "/investor/stocks/AMD/",
-      "thesisCount": 3,
-      "eventCount": 3,
-      "lanes": [
-        "加密/高波动风险偏好",
-        "端侧 AI/Agent 桌面",
-        "AI 基建 TCO/能效筛选"
       ]
     },
     {
@@ -1263,15 +1298,15 @@
       ]
     },
     {
-      "ticker": "AMZN",
-      "name": "Amazon",
+      "ticker": "AMD",
+      "name": "AMD",
       "market": "US",
-      "href": "/investor/stocks/AMZN/",
+      "href": "/investor/stocks/AMD/",
       "thesisCount": 2,
       "eventCount": 2,
       "lanes": [
         "端侧 AI/Agent 桌面",
-        "数据中心地产/液冷"
+        "AI 基建 TCO/能效筛选"
       ]
     },
     {
@@ -1463,6 +1498,17 @@
       ]
     },
     {
+      "ticker": "HOOD",
+      "name": "Robinhood",
+      "market": "US",
+      "href": "/investor/stocks/HOOD/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "加密/高波动风险偏好"
+      ]
+    },
+    {
       "ticker": "IBIT",
       "name": "iShares Bitcoin Trust",
       "market": "US ETF",
@@ -1485,10 +1531,10 @@
       ]
     },
     {
-      "ticker": "HOOD",
-      "name": "Robinhood",
+      "ticker": "LOW",
+      "name": "Lowe's",
       "market": "US",
-      "href": "/investor/stocks/HOOD/",
+      "href": "/investor/stocks/LOW/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
@@ -1507,21 +1553,21 @@
       ]
     },
     {
-      "ticker": "LOW",
-      "name": "Lowe's",
-      "market": "US",
-      "href": "/investor/stocks/LOW/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "加密/高波动风险偏好"
-      ]
-    },
-    {
       "ticker": "AAPL",
       "name": "Apple",
       "market": "US",
       "href": "/investor/stocks/AAPL/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "端侧 AI/Agent 桌面"
+      ]
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "market": "US",
+      "href": "/investor/stocks/AMZN/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
@@ -1625,12 +1671,13 @@
       "specialty": "石油/天然气/煤炭/新能源/电力",
       "currentView": "美伊和平协议拟重开霍尔木兹海峡，导致原油价格破位（Brent 79.49，WTI <78）。在能化大宗商品面临通缩压力的背景下，A股“红…；航运与物流成本是油价、关税和供应链再通胀的二阶传导器；油价地缘底线决定再通胀与降息交易的安全边际 是当前该 persona 参与最多的研究主线。",
       "supports": 0,
-      "risks": 2,
+      "risks": 3,
       "neutral": 0,
-      "eventCount": 2,
+      "eventCount": 3,
       "topTheses": [
         "面对4.2%的总体CPI与108美元的布伦特原油，新任主席沃什将在6月16-17日的FOMC会议上如何调整点阵图与政策立场？",
-        "美伊直接交火导致原油暴涨5-6%，布伦特突破79美元逼近80。这是否会引燃二次通胀，推翻债市对美联储‘因分裂而暂停加息’的假设，并在9月…"
+        "美伊直接交火导致原油暴涨5-6%，布伦特突破79美元逼近80。这是否会引燃二次通胀，推翻债市对美联储‘因分裂而暂停加息’的假设，并在9月…",
+        "风险核查与证据质量是主题交易的必要过滤器"
       ],
       "latestEvent": {
         "title": "布伦特原油持续 100美元/桶对欧元区制造业成本与通胀传导的边际影响评估",

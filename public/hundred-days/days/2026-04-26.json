@@ -4,7 +4,7 @@
   "dayNumber": 5,
   "status": "recorded",
   "headline": "研究报告：2026-06-28",
-  "summary": "当日归档 11 份公开研究，25 条研究讨论和 15 个 thesis 证据事件；研究密度最高的方向为半导体、存储与光互联。",
+  "summary": "当日归档 11 份公开研究，25 条研究讨论和 13 个 thesis 证据事件；研究密度最高的方向为半导体、存储与光互联。",
   "dominantTopic": {
     "id": "semis-memory",
     "labelZh": "半导体、存储与光互联",
@@ -28,7 +28,7 @@
     "reports": 11,
     "researchThreads": 25,
     "researchNotes": 248,
-    "thesisEvents": 15,
+    "thesisEvents": 13,
     "personaEvents": 0,
     "readerMemos": 0,
     "recaps": 0,
@@ -436,46 +436,6 @@
   ],
   "thesisEvents": [
     {
-      "id": "thesis-d0faeae7f0",
-      "title": "NAND价格与产品组合驱动SanDisk盈利弹性",
-      "titleEn": "NAND pricing and mix drive SanDisk earnings leverage",
-      "href": "/investor/theses/thesis-d0faeae7f0/",
-      "laneId": "lane_f44cf45c8649",
-      "lane": "AI 算力半导体",
-      "laneHref": "/investor/lanes/ai-compute-semiconductors/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 72,
-      "supports": 1,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 2,
-      "events": [
-        {
-          "title": "AI 利润向算力底座迁移的证据：半导体与网络核心硬件的毛利韧性 — 2026-05-26",
-          "summary": "AI 利润向算力底座迁移的证据：半导体与网络核心硬件的毛利韧性 — 2026-05-26",
-          "href": "/investor/reports/archive-f8876294e5ea/",
-          "stance": "supports",
-          "stanceLabel": "支持"
-        },
-        {
-          "title": "2026-06-17 半导体压力测试：T3 触发、AI 资本开支下修与设计制造链传导",
-          "summary": "2026-06-17 半导体压力测试：T3 触发、AI 资本开支下修与设计制造链传导",
-          "href": "/investor/reports/archive-fb57ae551ea1/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "NVDA",
-        "TSM",
-        "MU",
-        "000660.KS",
-        "META",
-        "AMD"
-      ]
-    },
-    {
       "id": "thesis-b13c7cf092",
       "title": "高纯石英材料受益于先进封装扩产，但兑现取决于认证与产品结构",
       "titleEn": "High-purity quartz can benefit from advanced-packaging expansion, conditional on qualification and mix",
@@ -792,8 +752,8 @@
         "NVDA",
         "000660.KS",
         "688012.SH",
-        "ASML",
         "MU",
+        "ASML",
         "002916.SZ"
       ]
     },
@@ -874,27 +834,6 @@
   ],
   "lanes": [
     {
-      "id": "lane_f44cf45c8649",
-      "title": "AI 算力半导体",
-      "href": "/investor/lanes/ai-compute-semiconductors/",
-      "thesisCount": 4,
-      "eventCount": 6,
-      "convictionTotal": 286,
-      "stockTickers": [
-        "META",
-        "NVDA",
-        "AMD",
-        "MU",
-        "AVGO",
-        "TSM",
-        "000660.KS",
-        "MSFT",
-        "GOOGL",
-        "AMZN"
-      ],
-      "avgConviction": 72
-    },
-    {
       "id": "lane_f1a271385aff",
       "title": "先进封装/HBM4 闸门",
       "href": "/investor/lanes/advanced-packaging-and-hbm4-gate/",
@@ -916,6 +855,27 @@
         "AMZN"
       ],
       "avgConviction": 65
+    },
+    {
+      "id": "lane_f44cf45c8649",
+      "title": "AI 算力半导体",
+      "href": "/investor/lanes/ai-compute-semiconductors/",
+      "thesisCount": 3,
+      "eventCount": 4,
+      "convictionTotal": 214,
+      "stockTickers": [
+        "META",
+        "NVDA",
+        "AMD",
+        "MU",
+        "AVGO",
+        "TSM",
+        "000660.KS",
+        "MSFT",
+        "GOOGL",
+        "AMZN"
+      ],
+      "avgConviction": 71
     },
     {
       "id": "lane_f21fc181388a",
@@ -986,8 +946,8 @@
       "name": "NVIDIA",
       "market": "US",
       "href": "/investor/stocks/NVDA/",
-      "thesisCount": 12,
-      "eventCount": 15,
+      "thesisCount": 11,
+      "eventCount": 13,
       "lanes": [
         "AI 算力半导体",
         "先进封装/HBM4 闸门",
@@ -1001,8 +961,8 @@
       "name": "TSMC",
       "market": "US ADR",
       "href": "/investor/stocks/TSM/",
-      "thesisCount": 11,
-      "eventCount": 14,
+      "thesisCount": 10,
+      "eventCount": 12,
       "lanes": [
         "AI 算力半导体",
         "先进封装/HBM4 闸门",
@@ -1015,8 +975,8 @@
       "name": "Micron",
       "market": "US",
       "href": "/investor/stocks/MU/",
-      "thesisCount": 9,
-      "eventCount": 12,
+      "thesisCount": 8,
+      "eventCount": 10,
       "lanes": [
         "AI 算力半导体",
         "先进封装/HBM4 闸门"
@@ -1027,8 +987,8 @@
       "name": "SK hynix",
       "market": "Korea",
       "href": "/investor/stocks/000660.KS/",
-      "thesisCount": 9,
-      "eventCount": 12,
+      "thesisCount": 8,
+      "eventCount": 10,
       "lanes": [
         "AI 算力半导体",
         "先进封装/HBM4 闸门"
@@ -1039,27 +999,14 @@
       "name": "Meta Platforms",
       "market": "US",
       "href": "/investor/stocks/META/",
-      "thesisCount": 8,
-      "eventCount": 10,
+      "thesisCount": 7,
+      "eventCount": 8,
       "lanes": [
         "AI 算力半导体",
         "Mag7 AI 平台再分层",
         "端侧 AI/Agent 桌面",
         "先进封装/HBM4 闸门",
         "CPO/光模块/高速互联"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "name": "AMD",
-      "market": "US",
-      "href": "/investor/stocks/AMD/",
-      "thesisCount": 6,
-      "eventCount": 8,
-      "lanes": [
-        "AI 算力半导体",
-        "端侧 AI/Agent 桌面",
-        "先进封装/HBM4 闸门"
       ]
     },
     {
@@ -1074,6 +1021,19 @@
         "Mag7 AI 平台再分层",
         "先进封装/HBM4 闸门",
         "CPO/光模块/高速互联"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "name": "AMD",
+      "market": "US",
+      "href": "/investor/stocks/AMD/",
+      "thesisCount": 5,
+      "eventCount": 6,
+      "lanes": [
+        "AI 算力半导体",
+        "端侧 AI/Agent 桌面",
+        "先进封装/HBM4 闸门"
       ]
     },
     {

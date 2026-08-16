@@ -1,0 +1,20 @@
+{
+  "slug": "archive-24cf9d2c4966",
+  "href": "/investor/reports/archive-24cf9d2c4966/",
+  "meta": {
+    "title": "2026-08-16 策略卡：2026-08-21银行红利拥挤度首个检查点尚不能实盘落数",
+    "date": "2026-08-16",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "宏观",
+      "A股",
+      "风险"
+    ],
+    "source": "archive-24cf9d2c4966",
+    "source_label": "研究档案",
+    "source_kind": "archive"
+  },
+  "bodyHtml": "<h1>2026-08-16 策略卡：2026-08-21银行红利拥挤度首个检查点尚不能实盘落数</h1>\n<p>截至院内工作日 2026-08-16，本报告综合前序判断，但不声称已经取得 2026-08-21 收盘后的实盘读数，因为该检查点在院内工作日之后 5 个自然日[自测算：shell <code>系统日期锚</code> 返回 2026-08-16；2026-08-16 至 2026-08-21 的日历差]。因此，正确结论是：银行红利交易仍沿用前一卡的绿灯基线，ETF资金维持观察黄灯，但在 2026-08-21 收盘前不能确认ETF资金已经触发“连续黄灯”[自测算]。</p>\n<h2>判断</h2>\n<p>本报告支持既有主线：银行红利仓位仍应被理解为质量迁移，而非拥挤追涨，但首个实盘检查点尚未发生[自测算]。本次要求的四个实盘变量是银行成交占比、ETF份额或规模变化、两融行业排序、大行/尾部银行相对强弱；四者都需要 2026-08-21 收盘后或后续数据更新时间窗口的数据[S1][S2][S3][自测算]。今天预填这些读数会造成伪精确。</p>\n<p>最近一个有来源支撑的基线仍偏温和。2026-08-14，中财网显示中证银行指数 <code>399986</code> 为 7140.89，下跌 0.58%，成交额为 2,146,996 万元，折合约人民币 214.70 亿元[S4][自测算：2,146,996 x 10,000 / 100,000,000]。同日财联社称沪深两市成交额已突破人民币 2 万亿元，并预计全天成交金额超过人民币 2.1 万亿元[S5]。据此测算，银行成交占比不高于约 1.02%[S4][S5][自测算：214.70 / 21,000]。这低于研究记录 使用的 1.5% 绿灯/黄灯阈值[自测算：研究记录 阈值框架]。</p>\n<h2>2026-08-21检查点状态</h2>\n<table>\n<thead>\n<tr>\n<th>信号</th>\n<th>所需实盘输入</th>\n<th>截至2026-08-16状态</th>\n<th>红黄绿含义</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>银行成交占比</td>\n<td>2026-08-21收盘后的银行指数或行业成交额除以全A成交额[S4][S5][自测算]</td>\n<td>尚不可观察[自测算]</td>\n<td>沿用前序绿灯基线，不标黄或标红[自测算]</td>\n</tr>\n<tr>\n<td>银行/红利ETF份额或规模</td>\n<td>ETF每日份额和规模数据；Tushare文档说明交易所约在次日早 08:30 更新上一交易日数据[S3]</td>\n<td>2026-08-21行尚不可取得[S3][自测算]</td>\n<td>ETF仍为前序观察黄灯，但不能确认连续黄灯[自测算]</td>\n</tr>\n<tr>\n<td>两融行业排序</td>\n<td>交易所或数据商更新后的行业层面周度融资净买入排序[S1][S2]</td>\n<td>2026-08-21当周尚不可观察[自测算]</td>\n<td>没有证据表明银行进入融资净买入前列行业[自测算]</td>\n</tr>\n<tr>\n<td>大行/尾部银行相对强弱</td>\n<td><code>601398</code>、<code>601939</code>、<code>601288</code>、<code>601988</code>、<code>601328</code>、<code>601658</code> 大行篮子相对尾部银行篮子的周度收益[自测算]</td>\n<td>尚不可观察[自测算]</td>\n<td>除非实盘数据反证，否则质量迁移解释保持有效[自测算]</td>\n</tr>\n</tbody>\n</table>\n<h2>组合含义</h2>\n<p>首个真实周表出现前，组合规则不应改变。一个ETF黄灯只是观察，不是卖出信号[自测算]。两个黄灯意味着停止新增广义银行敞口，并把新增资金转向国有大行与优质区域龙头[自测算]。一个红灯叠加一个黄灯，应先削减尾部银行[自测算]。三个红灯，或四个信号同步恶化，才构成在 2026-09-11 宏观交接日前降低银行红利总风险的条件[自测算]。</p>\n<p>这支持 th_p_607b38f4，因为现有成交证据仍远离拥挤喷发，同时监控规则对红利/低波ETF资金再度加速设置了执行止损[S4][S5][自测算]。这也支持 th_p_081955c2，因为组合动作保留大行红利敞口，同时把尾部银行分红风险作为第一削减来源[自测算]。</p>\n<h2>数据限制</h2>\n<p>简报要求的 <code>两融</code>、<code>银行</code>、<code>红利</code> OKF概念接口已按 <code>localhost:8000</code> 尝试访问，但本工作区服务不可达[自测算：三次 <code>curl</code> 均返回连接失败]。工作区还缺失 <code>研究档案</code>、<code>research note</code> 至 <code>research note</code> 文件，因此本报告使用用户消息中的 Session Brief Snapshot 与现存 <code>research note</code> 文件作为上游上下文[自测算：<code>find</code> 与 <code>sed</code> 工作区读取]。该限制不改变核心结论，因为 2026-08-21 检查点截至 2026-08-16 在时间上尚不可取得[自测算]。</p>\n<h2>结论</h2>\n<p>截至 2026-08-16，无法合法回答 2026-08-21 收盘后是否仍为绿灯、或ETF资金是否触发连续黄灯[自测算]。唯一可防守的综合判断是：维持前序绿灯基线，ETF资金保留黄灯观察，必须等待 2026-08-21 收盘后及次日更新数据，才能改变银行红利拥挤度红黄绿灯[S1][S2][S3][S4][S5][自测算]。</p>\n<h2>资料来源 / Sources</h2>\n<p>[S1] Shanghai Stock Exchange, Margin Trading Summary Data — https://www.sse.com.cn/market/othersdata/margin/sum/</p>\n<p>[S2] China Securities Regulatory Commission, Micro Lecture 4: Questions About Margin Trading Business — https://www.csrc.gov.cn/csrc/c100211/c1452093/content.shtml</p>\n<p>[S3] Tushare, ETF Share and Scale Data Documentation — https://tushare.pro/document/2?doc_id=408</p>\n<p>[S4] CFi.cn, CSI Bank <code>399986</code> Quote Page — https://quote.cfi.cn/quote31648_399986.html</p>\n<p>[S5] Cailian Press, Shanghai and Shenzhen Turnover Exceeds RMB 2 Trillion on 2026-08-14 — https://www.cls.cn/detail/2454430</p>\n<p>元数据页脚：报告日期 2026-08-16；研究记录 10；。</p>"
+}

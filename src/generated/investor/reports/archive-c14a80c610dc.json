@@ -1,0 +1,21 @@
+{
+  "slug": "archive-c14a80c610dc",
+  "href": "/investor/reports/archive-c14a80c610dc/",
+  "meta": {
+    "title": "研究质量审核",
+    "date": "2026-08-16",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [
+      "AI",
+      "通胀",
+      "宏观",
+      "能源",
+      "风险"
+    ],
+    "source": "archive-c14a80c610dc",
+    "source_label": "研究档案",
+    "source_kind": "archive"
+  },
+  "bodyHtml": "<h1>研究质量审核</h1>\n<p>锚定日期：2026-08-16\n覆盖周：2026-08-10 至 2026-08-14\n审核结论：上游文件齐全；主线连贯、数字大体一致，但若要提交 PM，仍需补齐少数市场数据口径和证据链。</p>\n<h2>1. 文件完整性 (File manifest)</h2>\n<table>\n<thead>\n<tr>\n<th>declared file</th>\n<th>exists in workspace (是 / 否)</th>\n<th>note</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>研究档案</code></td>\n<td>是</td>\n<td>11,697 bytes；已读取，内容完整。</td>\n</tr>\n<tr>\n<td><code>研究档案</code></td>\n<td>是</td>\n<td>12,738 bytes；已读取，英文版与中文版框架一致。</td>\n</tr>\n<tr>\n<td><code>研究档案</code></td>\n<td>是</td>\n<td>23,517 bytes；已读取，内容完整。</td>\n</tr>\n<tr>\n<td><code>研究档案</code></td>\n<td>是</td>\n<td>26,406 bytes；已读取，英文版与中文版框架一致。</td>\n</tr>\n</tbody>\n</table>\n<h2>2. 数据一致性 (Cross-step consistency)</h2>\n<table>\n<thead>\n<tr>\n<th>检查项</th>\n<th>Step 01 数值</th>\n<th>Step 02 数值</th>\n<th>QA 判断</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>覆盖周</td>\n<td>2026-08-10 至 2026-08-14</td>\n<td>2026-08-10 至 2026-08-14</td>\n<td>一致。</td>\n</tr>\n<tr>\n<td>U.S. July 2026 CPI</td>\n<td>+0.1% m/m；+3.4% y/y；core +2.5% y/y；energy +14.7% y/y</td>\n<td>+0.1% m/m；+3.4% y/y；core +2.5% y/y；energy +14.7% y/y</td>\n<td>一致。</td>\n</tr>\n<tr>\n<td>U.S. July 2026 retail and food services sales</td>\n<td>$763.6 billion；-0.6% m/m；+5.0% y/y</td>\n<td>$763.6 billion；-0.6% m/m；+5.0% y/y</td>\n<td>一致。</td>\n</tr>\n<tr>\n<td>U.S. equity indices</td>\n<td>S&amp;P 500 +0.4%；Nasdaq +0.1%；Russell 2000 +1.1%；Dow -0.6%；S&amp;P 500 close 7,785.76</td>\n<td>同一组周收益和 S&amp;P 500 close 7,785.76；另补充 YTD</td>\n<td>一致。</td>\n</tr>\n<tr>\n<td>10Y Treasury / 2s10s</td>\n<td>H.15 10Y 从 4.72% 到 4.63%；Friday market quote 约 4.70%；2s10s +0.51 pct</td>\n<td>H.15 10Y 4.72% 到 4.63%；Friday market quote 4.695%；2s10s +0.51 pct</td>\n<td>数值一致，但 Step 02 正确提示 Friday market/FRED-style spread 与 H.15 非同源；最终报告必须显著标注。</td>\n</tr>\n<tr>\n<td>Brent crude</td>\n<td>$88.52；weekly +5.95%</td>\n<td>$88.52；weekly +5.9% 或 +5.95%；Friday +1.67%</td>\n<td>一致，差异为四舍五入。</td>\n</tr>\n<tr>\n<td>Japan machine tool orders</td>\n<td>JPY 193.1 billion；-5.1% m/m；+50.4% y/y</td>\n<td>JPY 193.102 billion；-5.1% m/m；+50.4% y/y</td>\n<td>一致，Step 02 精度更高。</td>\n</tr>\n</tbody>\n</table>\n<h2>3. 逻辑链条 (Narrative coherence)</h2>\n<p>整体映射良好。Step 01 的 6 个研究问题在 Step 02 中基本逐一回答：美国通胀/Fed、美国消费、股债美元波动率、能源传导、欧洲 GDP 与工业、亚洲贸易制造链均有独立章节、数据表和限制说明。</p>\n<p>主要问题有三点</p>\n<ul>\n<li>Step 01 标题称“8 个最重要发展”，实际表格列出 9 行事件；这不是实质错误，但会削弱编辑严谨性。</li>\n<li>Step 02 对“Prime Day/World Cup/tax-refund timing boost faded”的解释方向合理，但证据主要来自 nonstore retailers -2.2% 和叙述推断，尚缺少日历、平台或信用卡数据支撑。最终稿应把它写成“可能解释”，而不是确定事实。</li>\n<li>Step 02 承认未能完整核验 S&amp;P 500 11-sector weekly returns、Magnificent 7 weekly returns、ECB OIS curve、China customs breakdown、Hormuz shipping/insurance/VLCC data；这些限制与 Step 01 的数据需求相符，但说明最终周报仍有关键数据缺口。</li>\n</ul>\n<h2>4. 表达与可读性 (Editorial quality)</h2>\n<ul>\n<li>在“优先结论”中加入一行明确的投资含义，例如“基准情景：Fed 暂停 + 长端高位震荡 + 能源风险溢价仍在”，让 PM 更快抓到组合层面的结论。</li>\n<li>利率表需要拆成“官方 H.15 截至 2026-08-13”和“2026-08-14 市场报价”两个小表，避免把不同来源的 10Y、30Y、2s10s、TIPS 数据放在同一连续时间序列里。</li>\n<li>风险资产轮动表目前含有多处 <code>n.a.</code> 和 “未能免费核验”；建议在最终周报中要么补齐 Bloomberg/FactSet 数据，要么删除未核验的行业周收益行，仅保留可核验的指数、VIX 和日度行业表现。</li>\n<li>“能源冲击正在从油价转向通胀预期和实际收入”标题可改为“油价冲击尚未完全进入零售汽油，但已推高通胀预期风险”，更准确地区分已实现数据与前瞻风险。</li>\n</ul>\n<h2>5. 修订建议 (Recommended revisions)</h2>\n<ul>\n<li>高优先级：补齐或终端复核 CME FedWatch 2026-08-14 收盘快照、S&amp;P 500 11-sector weekly returns、Magnificent 7 weekly returns、ECB OIS pricing、HY OAS、China customs 目的地/产品结构。</li>\n<li>高优先级：统一利率数据口径；所有 2026-08-14 的市场报价必须与 H.15 官方序列分开标注。</li>\n<li>中优先级：把 Prime Day/World Cup/tax-refund timing 对消费的影响改写为假设，并增加信用卡、高频电商或零售商 earnings 证据。</li>\n<li>中优先级：对 Strait of Hormuz 传导链补充 shipping flow、insurance premium、VLCC freight 或明确说明这些数据未取得，避免把价格结果完全归因于单一地缘事件。</li>\n<li>低优先级：修正 Step 01 “8 个最重要发展”与实际 9 行事件不一致的问题，并统一 +5.9% / +5.95% 等四舍五入口径。</li>\n</ul>\n<h2>6. 总体评级</h2>\n<p>needs-revision — 文件完整、主线清楚、核心数字基本一致，但若面向 PM 发布，还需要补齐市场数据口径、行业/科技股轮动数据和若干因果叙述的证据。</p>"
+}
