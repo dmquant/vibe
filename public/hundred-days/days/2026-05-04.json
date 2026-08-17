@@ -1541,7 +1541,6 @@
         "KRE",
         "JPM",
         "META",
-        "NVDA",
         "BX",
         "KKR",
         "ARES",
@@ -1678,9 +1677,9 @@
       "laneId": "lane_c0702fb29e08",
       "lane": "AI 再通胀/利率敏感资产",
       "laneHref": "/investor/lanes/ai-reflation-and-rate-sensitive-assets/",
-      "direction": "stable",
-      "directionLabel": "稳定",
-      "conviction": 55,
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 56,
       "supports": 1,
       "risks": 1,
       "neutral": 0,
@@ -1703,13 +1702,13 @@
       ],
       "stockTickers": [
         "META",
-        "AMZN",
         "MSFT",
+        "AMZN",
         "GOOGL",
-        "XLE",
-        "XLU",
         "TLT",
-        "NVDA"
+        "XLE",
+        "GLD",
+        "XLU"
       ]
     },
     {
@@ -1891,36 +1890,6 @@
       ]
     },
     {
-      "id": "thesis-0011ad682c",
-      "title": "美国过度紧缩/政策错误尾部向中国政策空间与A股的传导，及对th_p_2e6514df分红+久期定位的验证",
-      "titleEn": "Practical research topic: 美国过度紧缩/政策错误尾部向中国政策空间与A股的传导，及对th_p_2e6514df分红+久期定位的验证",
-      "href": "/investor/theses/thesis-0011ad682c/",
-      "laneId": "lane_1c216bd29875",
-      "lane": "美债利率/美元再定价",
-      "laneHref": "/investor/lanes/us-rates-and-dollar-repricing/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 81,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "FX 策略报告：5.4 万亿日元干预后，BOJ 6 月不加息情形下 USD/JPY 突破 160 的概率评估",
-          "summary": "FX 策略报告：5.4 万亿日元干预后，BOJ 6 月不加息情形下 USD/JPY 突破 160 的概率评估",
-          "href": "/investor/reports/archive-0d3f083b0c5b/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "JPM",
-        "TLT",
-        "IEF"
-      ]
-    },
-    {
       "id": "thesis-950a54ea98",
       "title": "保留 65–70% 远期/NDF 锁 carry，用 USD/JPY 价差看跌+敲入条件 call、USD/CNH 区间远期、HKD/C…",
       "titleEn": "Practical research topic: 保留 65–70% 远期/NDF 锁 carry，用 USD/JPY 价差看跌+敲入条件 call、USD/CNH 区间远期、HKD/C…",
@@ -2042,6 +2011,68 @@
       ]
     },
     {
+      "id": "thesis-24cd0b5ff9",
+      "title": "在4月28日—5月1日Meta/Microsoft/Alphabet/Amazon集中披露Q1 2026业绩的窗口，capex指引会向上…",
+      "titleEn": "Practical research topic: 在4月28日—5月1日Meta/Microsoft/Alphabet/Amazon集中披露Q1 2026业绩的窗口，capex指引会向上…",
+      "href": "/investor/theses/thesis-24cd0b5ff9/",
+      "laneId": "lane_f21fc181388a",
+      "lane": "Mag7 AI 平台再分层",
+      "laneHref": "/investor/lanes/mag7-ai-platform-re-layering/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 79,
+      "supports": 1,
+      "risks": 0,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "TMT 视角：每 MW 收入决定 AI Capex 是否值得",
+          "summary": "既有研究记录— TMT 视角：每 MW 收入决定 AI Capex 是否值得",
+          "href": "/investor/reports/archive-c2a0e660c11f/",
+          "stance": "supports",
+          "stanceLabel": "支持"
+        }
+      ],
+      "stockTickers": [
+        "META",
+        "MSFT",
+        "GOOGL",
+        "AMZN",
+        "NVDA"
+      ]
+    },
+    {
+      "id": "thesis-0011ad682c",
+      "title": "美国过度紧缩/政策错误尾部向中国政策空间与A股的传导，及对th_p_2e6514df分红+久期定位的验证",
+      "titleEn": "Practical research topic: 美国过度紧缩/政策错误尾部向中国政策空间与A股的传导，及对th_p_2e6514df分红+久期定位的验证",
+      "href": "/investor/theses/thesis-0011ad682c/",
+      "laneId": "lane_1c216bd29875",
+      "lane": "美债利率/美元再定价",
+      "laneHref": "/investor/lanes/us-rates-and-dollar-repricing/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 79,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "FX 策略报告：5.4 万亿日元干预后，BOJ 6 月不加息情形下 USD/JPY 突破 160 的概率评估",
+          "summary": "FX 策略报告：5.4 万亿日元干预后，BOJ 6 月不加息情形下 USD/JPY 突破 160 的概率评估",
+          "href": "/investor/reports/archive-0d3f083b0c5b/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "JPM",
+        "TLT",
+        "IEF"
+      ]
+    },
+    {
       "id": "thesis-69025fa4b4",
       "title": "驱动对冲阶梯的 Fed / BoJ / ECB 政策路径",
       "titleEn": "Practical research topic: 驱动对冲阶梯的 Fed / BoJ / ECB 政策路径",
@@ -2102,38 +2133,6 @@
       ]
     },
     {
-      "id": "thesis-24cd0b5ff9",
-      "title": "在4月28日—5月1日Meta/Microsoft/Alphabet/Amazon集中披露Q1 2026业绩的窗口，capex指引会向上…",
-      "titleEn": "Practical research topic: 在4月28日—5月1日Meta/Microsoft/Alphabet/Amazon集中披露Q1 2026业绩的窗口，capex指引会向上…",
-      "href": "/investor/theses/thesis-24cd0b5ff9/",
-      "laneId": "lane_f21fc181388a",
-      "lane": "Mag7 AI 平台再分层",
-      "laneHref": "/investor/lanes/mag7-ai-platform-re-layering/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 79,
-      "supports": 1,
-      "risks": 0,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "TMT 视角：每 MW 收入决定 AI Capex 是否值得",
-          "summary": "既有研究记录— TMT 视角：每 MW 收入决定 AI Capex 是否值得",
-          "href": "/investor/reports/archive-c2a0e660c11f/",
-          "stance": "supports",
-          "stanceLabel": "支持"
-        }
-      ],
-      "stockTickers": [
-        "META",
-        "MSFT",
-        "GOOGL",
-        "AMZN",
-        "NVDA"
-      ]
-    },
-    {
       "id": "thesis-d74ae315e8",
       "title": "当美元兑日元触及160.08并触发日本央行物理干预（抛售美债）时，离岸美元流动性收紧是否会迫使黄金与权益相关性翻正至+0.55，从而使传…",
       "titleEn": "Practical research topic: 当美元兑日元触及160.08并触发日本央行物理干预（抛售美债）时，离岸美元流动性收紧是否会迫使黄金与权益相关性翻正至+0.55，从而使传…",
@@ -2191,36 +2190,6 @@
         "CVX",
         "XOM",
         "SLB"
-      ]
-    },
-    {
-      "id": "thesis-27c1e713e6",
-      "title": "日元兑美元突破162.052，若日本官方实施抛售美债进行实际干预，是否会推动10Y美债收益率（当前4.49%）飙升？如何传导并冲击全球高…",
-      "titleEn": "Practical research topic: 日元兑美元突破162.052，若日本官方实施抛售美债进行实际干预，是否会推动10Y美债收益率（当前4.49%）飙升？如何传导并冲击全球高…",
-      "href": "/investor/theses/thesis-27c1e713e6/",
-      "laneId": "lane_c40c2ce413ec",
-      "lane": "人民币/美元流动性敏感资产",
-      "laneHref": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 78,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "FX 策略报告：5.4 万亿日元干预后，BOJ 6 月不加息情形下 USD/JPY 突破 160 的概率评估",
-          "summary": "FX 策略报告：5.4 万亿日元干预后，BOJ 6 月不加息情形下 USD/JPY 突破 160 的概率评估",
-          "href": "/investor/reports/archive-0d3f083b0c5b/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "3988.HK",
-        "UUP",
-        "FXI"
       ]
     },
     {
@@ -2315,6 +2284,36 @@
       ]
     },
     {
+      "id": "thesis-27c1e713e6",
+      "title": "日元兑美元突破162.052，若日本官方实施抛售美债进行实际干预，是否会推动10Y美债收益率（当前4.49%）飙升？如何传导并冲击全球高…",
+      "titleEn": "Practical research topic: 日元兑美元突破162.052，若日本官方实施抛售美债进行实际干预，是否会推动10Y美债收益率（当前4.49%）飙升？如何传导并冲击全球高…",
+      "href": "/investor/theses/thesis-27c1e713e6/",
+      "laneId": "lane_c40c2ce413ec",
+      "lane": "人民币/美元流动性敏感资产",
+      "laneHref": "/investor/lanes/rmb-dollar-and-liquidity-sensitive-assets/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 78,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "FX 策略报告：5.4 万亿日元干预后，BOJ 6 月不加息情形下 USD/JPY 突破 160 的概率评估",
+          "summary": "FX 策略报告：5.4 万亿日元干预后，BOJ 6 月不加息情形下 USD/JPY 突破 160 的概率评估",
+          "href": "/investor/reports/archive-0d3f083b0c5b/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "UUP",
+        "FXI",
+        "2800.HK"
+      ]
+    },
+    {
       "id": "thesis-820459973e",
       "title": "在距离OBBBA法案7月4日开工红线仅22天、且变压器积压导致绿电并网排队项目创纪录撤回的背景下，电网容量费暴增9.3倍如何侵蚀云厂商A…",
       "titleEn": "Practical research topic: 在距离OBBBA法案7月4日开工红线仅22天、且变压器积压导致绿电并网排队项目创纪录撤回的背景下，电网容量费暴增9.3倍如何侵蚀云厂商A…",
@@ -2376,10 +2375,10 @@
         "CVX",
         "XOM",
         "0883.HK",
-        "2883.HK",
         "COP",
-        "OXY",
-        "SLB"
+        "2883.HK",
+        "SLB",
+        "OXY"
       ]
     },
     {
@@ -2557,7 +2556,7 @@
       "laneHref": "/investor/lanes/bond-supply-and-bank-duration/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 56,
+      "conviction": 54,
       "supports": 1,
       "risks": 0,
       "neutral": 0,
@@ -2645,14 +2644,14 @@
       ],
       "stockTickers": [
         "VRT",
-        "ETN",
         "META",
+        "ETN",
         "NVDA",
         "GEV",
         "MSFT",
         "DLR",
         "EQIX",
-        "SMR"
+        "AMZN"
       ]
     },
     {
@@ -2750,13 +2749,13 @@
         }
       ],
       "stockTickers": [
-        "ETN",
         "GEV",
+        "ETN",
         "META",
         "002028.SZ",
+        "VST",
         "600089.SH",
         "CEG",
-        "VST",
         "MSFT",
         "601179.SH",
         "AMZN"
@@ -2802,7 +2801,7 @@
       "href": "/investor/lanes/us-rates-and-dollar-repricing/",
       "thesisCount": 5,
       "eventCount": 5,
-      "convictionTotal": 366,
+      "convictionTotal": 364,
       "stockTickers": [
         "TLT",
         "IEF",
@@ -2826,7 +2825,6 @@
         "JPM",
         "KKR",
         "META",
-        "NVDA",
         "BX",
         "ARES",
         "APO"
@@ -2860,8 +2858,8 @@
         "XOM",
         "SLB",
         "OXY",
-        "2883.HK",
-        "COP"
+        "COP",
+        "2883.HK"
       ],
       "avgConviction": 76
     },
@@ -2897,7 +2895,8 @@
       "stockTickers": [
         "3988.HK",
         "UUP",
-        "FXI"
+        "FXI",
+        "2800.HK"
       ],
       "avgConviction": 80
     },
@@ -3008,18 +3007,18 @@
       "href": "/investor/lanes/ai-reflation-and-rate-sensitive-assets/",
       "thesisCount": 1,
       "eventCount": 2,
-      "convictionTotal": 55,
+      "convictionTotal": 56,
       "stockTickers": [
         "META",
-        "AMZN",
         "MSFT",
+        "AMZN",
         "GOOGL",
-        "XLE",
-        "XLU",
         "TLT",
-        "NVDA"
+        "XLE",
+        "GLD",
+        "XLU"
       ],
-      "avgConviction": 55
+      "avgConviction": 56
     },
     {
       "id": "lane_0cb100fcf8da",
@@ -3132,7 +3131,7 @@
       "href": "/investor/lanes/bond-supply-and-bank-duration/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 56,
+      "convictionTotal": 54,
       "stockTickers": [
         "601398.SH",
         "601939.SH",
@@ -3143,7 +3142,7 @@
         "IEF",
         "000001.SZ"
       ],
-      "avgConviction": 56
+      "avgConviction": 54
     },
     {
       "id": "lane_22c1ed929e2e",
@@ -3175,14 +3174,14 @@
       "convictionTotal": 53,
       "stockTickers": [
         "VRT",
-        "ETN",
         "META",
+        "ETN",
         "NVDA",
         "GEV",
         "MSFT",
         "DLR",
         "EQIX",
-        "SMR"
+        "AMZN"
       ],
       "avgConviction": 53
     },
@@ -3225,21 +3224,6 @@
   ],
   "stocks": [
     {
-      "ticker": "NVDA",
-      "name": "NVIDIA",
-      "market": "US",
-      "href": "/investor/stocks/NVDA/",
-      "thesisCount": 12,
-      "eventCount": 23,
-      "lanes": [
-        "Mag7 AI 平台再分层",
-        "低价模型/AI 软件利润池",
-        "AI 算力半导体",
-        "中国云/国产算力栈",
-        "先进封装/HBM4 闸门"
-      ]
-    },
-    {
       "ticker": "META",
       "name": "Meta Platforms",
       "market": "US",
@@ -3252,6 +3236,21 @@
         "AI 软件效率/生产率",
         "AI 再通胀/利率敏感资产",
         "公用事业/电网信用"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "market": "US",
+      "href": "/investor/stocks/NVDA/",
+      "thesisCount": 10,
+      "eventCount": 18,
+      "lanes": [
+        "Mag7 AI 平台再分层",
+        "低价模型/AI 软件利润池",
+        "AI 算力半导体",
+        "中国云/国产算力栈",
+        "先进封装/HBM4 闸门"
       ]
     },
     {
@@ -3274,14 +3273,14 @@
       "name": "Amazon",
       "market": "US",
       "href": "/investor/stocks/AMZN/",
-      "thesisCount": 7,
-      "eventCount": 12,
+      "thesisCount": 8,
+      "eventCount": 13,
       "lanes": [
         "Mag7 AI 平台再分层",
         "AI 软件效率/生产率",
         "AI 再通胀/利率敏感资产",
-        "自动驾驶/Robotaxi 单位经济",
-        "云厂商自发电/电力资产"
+        "数据中心地产/液冷",
+        "自动驾驶/Robotaxi 单位经济"
       ]
     },
     {
@@ -3334,8 +3333,8 @@
       "eventCount": 8,
       "lanes": [
         "美债利率/美元再定价",
-        "债券供给/银行久期",
-        "AI 再通胀/利率敏感资产"
+        "AI 再通胀/利率敏感资产",
+        "债券供给/银行久期"
       ]
     },
     {
@@ -3500,18 +3499,6 @@
       ]
     },
     {
-      "ticker": "3988.HK",
-      "name": "中国银行",
-      "market": "HK",
-      "href": "/investor/stocks/3988.HK/",
-      "thesisCount": 4,
-      "eventCount": 4,
-      "lanes": [
-        "人民币/美元流动性敏感资产",
-        "债券供给/银行久期"
-      ]
-    },
-    {
       "ticker": "FXY",
       "name": "Invesco CurrencyShares Japanese Yen Trust",
       "market": "US ETF",
@@ -3520,19 +3507,6 @@
       "eventCount": 4,
       "lanes": [
         "日元套息/EM 科技流动性"
-      ]
-    },
-    {
-      "ticker": "SMR",
-      "name": "NuScale Power",
-      "market": "US",
-      "href": "/investor/stocks/SMR/",
-      "thesisCount": 3,
-      "eventCount": 4,
-      "lanes": [
-        "公用事业/电网信用",
-        "数据中心地产/液冷",
-        "云厂商自发电/电力资产"
       ]
     },
     {
@@ -3605,6 +3579,18 @@
       "lanes": [
         "中国云/国产算力栈",
         "A股硬科技/科创50"
+      ]
+    },
+    {
+      "ticker": "3988.HK",
+      "name": "中国银行",
+      "market": "HK",
+      "href": "/investor/stocks/3988.HK/",
+      "thesisCount": 3,
+      "eventCount": 3,
+      "lanes": [
+        "人民币/美元流动性敏感资产",
+        "债券供给/银行久期"
       ]
     },
     {
@@ -3723,6 +3709,18 @@
         "债券供给/银行久期",
         "公用事业/电网信用"
       ]
+    },
+    {
+      "ticker": "AVGO",
+      "name": "Broadcom",
+      "market": "US",
+      "href": "/investor/stocks/AVGO/",
+      "thesisCount": 2,
+      "eventCount": 3,
+      "lanes": [
+        "Mag7 AI 平台再分层",
+        "AI 算力半导体"
+      ]
     }
   ],
   "personas": [
@@ -3732,7 +3730,7 @@
       "nameEn": "FX Strategist",
       "href": "/investor/personas/#persona-fx-strategist-bf93e1",
       "specialty": "人民币/美元/欧元/日元走势、利差交易、汇率风险",
-      "currentView": "通胀粘性加就业放缓环境下的跨资产配置；驱动对冲阶梯的 Fed / BoJ / ECB 政策路径；日银本周加息至1.0%、美联储维持3.50–3.75%不变的双向利差收敛背景下,USD/JPY ~160的日元套利交易是有序拆解还是面临… 是当前该 persona 参与最多的研究主线。",
+      "currentView": "通胀粘性加就业放缓环境下的跨资产配置；当美元兑日元触及160.08并触发日本央行物理干预（抛售美债）时，离岸美元流动性收紧是否会迫使黄金与权益相关性翻正至+0.55，从而使传…；驱动对冲阶梯的 Fed / BoJ / ECB 政策路径 是当前该 persona 参与最多的研究主线。",
       "supports": 0,
       "risks": 11,
       "neutral": 0,

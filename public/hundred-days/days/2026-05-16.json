@@ -4,7 +4,7 @@
   "dayNumber": 25,
   "status": "recorded",
   "headline": "首席策略师AI硬件拥挤资金的潜在溢出效应与风格轮动路径",
-  "summary": "当日归档 141 份公开研究，14 条研究讨论和 56 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
+  "summary": "当日归档 141 份公开研究，14 条研究讨论和 57 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
   "dominantTopic": {
     "id": "macro-rates",
     "labelZh": "宏观、通胀与利率",
@@ -29,7 +29,7 @@
     "reports": 141,
     "researchThreads": 14,
     "researchNotes": 116,
-    "thesisEvents": 56,
+    "thesisEvents": 57,
     "personaEvents": 29,
     "readerMemos": 0,
     "recaps": 0,
@@ -2729,11 +2729,11 @@
       "stockTickers": [
         "MSTR",
         "COIN",
-        "HOOD",
         "IBIT",
+        "HOOD",
         "RIOT",
-        "LOW",
         "NVDA",
+        "LOW",
         "MARA"
       ]
     },
@@ -3042,13 +3042,13 @@
         }
       ],
       "stockTickers": [
-        "ETN",
         "GEV",
+        "ETN",
         "META",
         "002028.SZ",
+        "VST",
         "600089.SH",
         "CEG",
-        "VST",
         "MSFT",
         "601179.SH",
         "AMZN"
@@ -3374,8 +3374,8 @@
         }
       ],
       "stockTickers": [
-        "002028.SZ",
         "GEV",
+        "002028.SZ",
         "ETN",
         "600089.SH",
         "601179.SH",
@@ -3594,7 +3594,7 @@
       "laneHref": "/investor/lanes/index-rebalance-and-passive-flow-events/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 64,
+      "conviction": 65,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -3613,11 +3613,46 @@
         "9988.HK",
         "KWEB",
         "300308.SZ",
+        "510300.SH",
         "2800.HK",
         "0981.HK",
-        "510300.SH",
         "3690.HK",
         "600900.SH"
+      ]
+    },
+    {
+      "id": "thesis-075017003b",
+      "title": "AI 资本开支通过能源、设备和利率进入通胀定价",
+      "titleEn": "AI capex enters inflation pricing through energy, equipment, and rates",
+      "href": "/investor/theses/thesis-075017003b/",
+      "laneId": "lane_c0702fb29e08",
+      "lane": "AI 再通胀/利率敏感资产",
+      "laneHref": "/investor/lanes/ai-reflation-and-rate-sensitive-assets/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 56,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "宏观外溢效应：2027年AI Capex悬崖对美国增长与美联储反应函数的重塑",
+          "summary": "宏观外溢效应：2027年AI Capex悬崖对美国增长与美联储反应函数的重塑 日期: 2026-05-16 分析师: global-macro (全球宏观分析师)",
+          "href": "/investor/reports/archive-0301a6f6f526/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "META",
+        "MSFT",
+        "AMZN",
+        "GOOGL",
+        "TLT",
+        "XLE",
+        "GLD",
+        "XLU"
       ]
     },
     {
@@ -3722,7 +3757,6 @@
         "KRE",
         "JPM",
         "META",
-        "NVDA",
         "BX",
         "KKR",
         "ARES",
@@ -3894,11 +3928,11 @@
       "stockTickers": [
         "MSTR",
         "COIN",
-        "HOOD",
         "IBIT",
+        "HOOD",
         "RIOT",
-        "LOW",
         "NVDA",
+        "LOW",
         "MARA"
       ],
       "avgConviction": 67
@@ -4092,19 +4126,38 @@
       "href": "/investor/lanes/index-rebalance-and-passive-flow-events/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 64,
+      "convictionTotal": 65,
       "stockTickers": [
         "0700.HK",
         "9988.HK",
         "KWEB",
         "300308.SZ",
+        "510300.SH",
         "2800.HK",
         "0981.HK",
-        "510300.SH",
         "3690.HK",
         "600900.SH"
       ],
-      "avgConviction": 64
+      "avgConviction": 65
+    },
+    {
+      "id": "lane_c0702fb29e08",
+      "title": "AI 再通胀/利率敏感资产",
+      "href": "/investor/lanes/ai-reflation-and-rate-sensitive-assets/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "convictionTotal": 56,
+      "stockTickers": [
+        "META",
+        "MSFT",
+        "AMZN",
+        "GOOGL",
+        "TLT",
+        "XLE",
+        "GLD",
+        "XLU"
+      ],
+      "avgConviction": 56
     },
     {
       "id": "lane_1f0136d57956",
@@ -4138,7 +4191,6 @@
         "KRE",
         "JPM",
         "META",
-        "NVDA",
         "BX",
         "KKR",
         "ARES",
@@ -4169,8 +4221,8 @@
       "name": "NVIDIA",
       "market": "US",
       "href": "/investor/stocks/NVDA/",
-      "thesisCount": 15,
-      "eventCount": 34,
+      "thesisCount": 14,
+      "eventCount": 33,
       "lanes": [
         "Mag7 AI 平台再分层",
         "AI 算力半导体",
@@ -4184,14 +4236,14 @@
       "name": "Meta Platforms",
       "market": "US",
       "href": "/investor/stocks/META/",
-      "thesisCount": 11,
-      "eventCount": 22,
+      "thesisCount": 12,
+      "eventCount": 23,
       "lanes": [
         "Mag7 AI 平台再分层",
         "AI 算力半导体",
         "端侧 AI/Agent 桌面",
-        "CPO/光模块/高速互联",
-        "公用事业/电网信用"
+        "AI 再通胀/利率敏感资产",
+        "CPO/光模块/高速互联"
       ]
     },
     {
@@ -4199,14 +4251,44 @@
       "name": "Microsoft",
       "market": "US",
       "href": "/investor/stocks/MSFT/",
-      "thesisCount": 8,
-      "eventCount": 17,
+      "thesisCount": 9,
+      "eventCount": 18,
       "lanes": [
         "Mag7 AI 平台再分层",
         "低价模型/AI 软件利润池",
         "AI 算力半导体",
         "端侧 AI/Agent 桌面",
-        "CPO/光模块/高速互联"
+        "AI 再通胀/利率敏感资产"
+      ]
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet",
+      "market": "US",
+      "href": "/investor/stocks/GOOGL/",
+      "thesisCount": 7,
+      "eventCount": 15,
+      "lanes": [
+        "Mag7 AI 平台再分层",
+        "AI 算力半导体",
+        "自动驾驶/Robotaxi 单位经济",
+        "端侧 AI/Agent 桌面",
+        "AI 再通胀/利率敏感资产"
+      ]
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "market": "US",
+      "href": "/investor/stocks/AMZN/",
+      "thesisCount": 7,
+      "eventCount": 15,
+      "lanes": [
+        "Mag7 AI 平台再分层",
+        "AI 算力半导体",
+        "端侧 AI/Agent 桌面",
+        "AI 再通胀/利率敏感资产",
+        "自动驾驶/Robotaxi 单位经济"
       ]
     },
     {
@@ -4220,35 +4302,6 @@
         "Mag7 AI 平台再分层",
         "自动驾驶/Robotaxi 单位经济",
         "具身智能/机器人零部件"
-      ]
-    },
-    {
-      "ticker": "GOOGL",
-      "name": "Alphabet",
-      "market": "US",
-      "href": "/investor/stocks/GOOGL/",
-      "thesisCount": 6,
-      "eventCount": 14,
-      "lanes": [
-        "Mag7 AI 平台再分层",
-        "AI 算力半导体",
-        "自动驾驶/Robotaxi 单位经济",
-        "端侧 AI/Agent 桌面"
-      ]
-    },
-    {
-      "ticker": "AMZN",
-      "name": "Amazon",
-      "market": "US",
-      "href": "/investor/stocks/AMZN/",
-      "thesisCount": 6,
-      "eventCount": 14,
-      "lanes": [
-        "Mag7 AI 平台再分层",
-        "AI 算力半导体",
-        "端侧 AI/Agent 桌面",
-        "自动驾驶/Robotaxi 单位经济",
-        "AI 电力/电网设备"
       ]
     },
     {
@@ -4604,10 +4657,10 @@
       ]
     },
     {
-      "ticker": "HOOD",
-      "name": "Robinhood",
-      "market": "US",
-      "href": "/investor/stocks/HOOD/",
+      "ticker": "IBIT",
+      "name": "iShares Bitcoin Trust",
+      "market": "US ETF",
+      "href": "/investor/stocks/IBIT/",
       "thesisCount": 1,
       "eventCount": 4,
       "lanes": [
@@ -4615,10 +4668,10 @@
       ]
     },
     {
-      "ticker": "IBIT",
-      "name": "iShares Bitcoin Trust",
-      "market": "US ETF",
-      "href": "/investor/stocks/IBIT/",
+      "ticker": "HOOD",
+      "name": "Robinhood",
+      "market": "US",
+      "href": "/investor/stocks/HOOD/",
       "thesisCount": 1,
       "eventCount": 4,
       "lanes": [

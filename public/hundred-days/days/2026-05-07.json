@@ -24,7 +24,7 @@
     ],
     "count": 20
   },
-  "activityScore": 66,
+  "activityScore": 67,
   "metrics": {
     "reports": 28,
     "researchThreads": 6,
@@ -590,7 +590,7 @@
       "laneHref": "/investor/lanes/shipping-logistics-and-reflation-transmission/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 45,
+      "conviction": 44,
       "supports": 1,
       "risks": 1,
       "neutral": 0,
@@ -714,11 +714,11 @@
       "stockTickers": [
         "MSTR",
         "COIN",
-        "HOOD",
         "IBIT",
+        "HOOD",
         "RIOT",
-        "LOW",
         "NVDA",
+        "LOW",
         "MARA"
       ]
     },
@@ -953,14 +953,14 @@
       ],
       "stockTickers": [
         "VRT",
-        "ETN",
         "META",
+        "ETN",
         "NVDA",
         "GEV",
         "MSFT",
         "DLR",
         "EQIX",
-        "SMR"
+        "AMZN"
       ]
     },
     {
@@ -1035,7 +1035,7 @@
       "href": "/investor/lanes/shipping-logistics-and-reflation-transmission/",
       "thesisCount": 1,
       "eventCount": 2,
-      "convictionTotal": 45,
+      "convictionTotal": 44,
       "stockTickers": [
         "601919.SH",
         "1919.HK",
@@ -1045,7 +1045,7 @@
         "600018.SH",
         "BOAT"
       ],
-      "avgConviction": 45
+      "avgConviction": 44
     },
     {
       "id": "lane_13710af7e06d",
@@ -1077,11 +1077,11 @@
       "stockTickers": [
         "MSTR",
         "COIN",
-        "HOOD",
         "IBIT",
+        "HOOD",
         "RIOT",
-        "LOW",
         "NVDA",
+        "LOW",
         "MARA"
       ],
       "avgConviction": 67
@@ -1157,14 +1157,14 @@
       "convictionTotal": 53,
       "stockTickers": [
         "VRT",
-        "ETN",
         "META",
+        "ETN",
         "NVDA",
         "GEV",
         "MSFT",
         "DLR",
         "EQIX",
-        "SMR"
+        "AMZN"
       ],
       "avgConviction": 53
     },
@@ -1295,6 +1295,18 @@
       "eventCount": 2,
       "lanes": [
         "油气/地缘通胀"
+      ]
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "market": "US",
+      "href": "/investor/stocks/AMZN/",
+      "thesisCount": 2,
+      "eventCount": 2,
+      "lanes": [
+        "端侧 AI/Agent 桌面",
+        "数据中心地产/液冷"
       ]
     },
     {
@@ -1498,10 +1510,10 @@
       ]
     },
     {
-      "ticker": "HOOD",
-      "name": "Robinhood",
-      "market": "US",
-      "href": "/investor/stocks/HOOD/",
+      "ticker": "IBIT",
+      "name": "iShares Bitcoin Trust",
+      "market": "US ETF",
+      "href": "/investor/stocks/IBIT/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
@@ -1509,10 +1521,10 @@
       ]
     },
     {
-      "ticker": "IBIT",
-      "name": "iShares Bitcoin Trust",
-      "market": "US ETF",
-      "href": "/investor/stocks/IBIT/",
+      "ticker": "HOOD",
+      "name": "Robinhood",
+      "market": "US",
+      "href": "/investor/stocks/HOOD/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [
@@ -1557,17 +1569,6 @@
       "name": "Apple",
       "market": "US",
       "href": "/investor/stocks/AAPL/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
-        "端侧 AI/Agent 桌面"
-      ]
-    },
-    {
-      "ticker": "AMZN",
-      "name": "Amazon",
-      "market": "US",
-      "href": "/investor/stocks/AMZN/",
       "thesisCount": 1,
       "eventCount": 1,
       "lanes": [

@@ -1,0 +1,15 @@
+{
+  "slug": "archive-3e5d176102b6",
+  "href": "/investor/reports/archive-3e5d176102b6/",
+  "meta": {
+    "title": "共享数据采集摘要 2026-08-17",
+    "date": "2026-08-17",
+    "analyst_id": "",
+    "analyst_name": "",
+    "tags": [],
+    "source": "archive-3e5d176102b6",
+    "source_label": "研究档案",
+    "source_kind": "archive"
+  },
+  "bodyHtml": "<h1>共享数据采集摘要 2026-08-17</h1>\n<h2>markets_overnight</h2>\n<ul>\n<li>字段总数 13、空值 0、confidence: medium</li>\n<li>Stooq CSV 接口（stooq.com/q/l/）在抓取时对所有代码均返回 HTTP 404（端点疑似已下线/迁移），因此全部 13 个字段改用 web_search 从财经媒体（Yahoo Finance、CNBC、TheStreet、Forbes、USAGold 等）修复，数据对应上周五（2026-08-14，周末休市前最后一个交易日）收盘水平。</li>\n<li>部分字段（brent_usd、wti_usd、dxy、ust10y_pct）为新闻摘要中的近似值，非精确收盘报价，已在 JSON 的 validation.warnings 中注明。</li>\n<li>spx_close (7785.76)、ndx_close (30046.14)、dow_close (53732.41) 为确认的精确收盘点位。</li>\n</ul>\n<h2>markets_close_cn</h2>\n<ul>\n<li>字段总数 5、空值 0、confidence: high</li>\n<li>Sina 行情接口正常返回，但默认编码解析出现非 ASCII 字节导致 sed 报错，改用 LC_ALL=C 包裹 curl/sed 后修复。</li>\n<li>hsi_close (25116.85) 与独立 web_search 结果交叉验证一致，数据可信度高。</li>\n</ul>\n<h2>失败 / 修复</h2>\n<ul>\n<li>stooq.com/q/l/ 全部端点 404 → 全部 13 个 overnight 字段通过 web_search 修复</li>\n<li>sina 接口编码问题（非 ASCII 字节）→ 通过 LC_ALL=C 修复，CN 字段全部成功，无需 web_search 介入</li>\n</ul>"
+}

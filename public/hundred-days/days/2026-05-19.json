@@ -30,7 +30,7 @@
     "researchThreads": 21,
     "researchNotes": 172,
     "thesisEvents": 105,
-    "personaEvents": 67,
+    "personaEvents": 66,
     "readerMemos": 0,
     "recaps": 0,
     "deepResearch": 1
@@ -4578,14 +4578,14 @@
       ],
       "stockTickers": [
         "VRT",
-        "ETN",
         "META",
+        "ETN",
         "NVDA",
         "GEV",
         "MSFT",
         "DLR",
         "EQIX",
-        "SMR"
+        "AMZN"
       ]
     },
     {
@@ -4656,10 +4656,10 @@
       "laneHref": "/investor/lanes/shipping-logistics-and-reflation-transmission/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 45,
+      "conviction": 44,
       "supports": 0,
-      "risks": 3,
-      "neutral": 3,
+      "risks": 2,
+      "neutral": 2,
       "eventCount": 4,
       "events": [
         {
@@ -4817,7 +4817,7 @@
       "laneHref": "/investor/lanes/index-rebalance-and-passive-flow-events/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 64,
+      "conviction": 65,
       "supports": 0,
       "risks": 2,
       "neutral": 1,
@@ -4850,9 +4850,9 @@
         "9988.HK",
         "KWEB",
         "300308.SZ",
+        "510300.SH",
         "2800.HK",
         "0981.HK",
-        "510300.SH",
         "3690.HK",
         "600900.SH"
       ]
@@ -5069,8 +5069,8 @@
         }
       ],
       "stockTickers": [
-        "002028.SZ",
         "GEV",
+        "002028.SZ",
         "ETN",
         "600089.SH",
         "601179.SH",
@@ -5887,14 +5887,14 @@
       ],
       "stockTickers": [
         "0883.HK",
-        "CME",
         "CVX",
+        "CME",
         "XOM",
         "600938.SH",
         "600900.SH",
         "0857.HK",
-        "601088.SH",
-        "601857.SH"
+        "COP",
+        "601088.SH"
       ]
     },
     {
@@ -5944,7 +5944,7 @@
       "laneHref": "/investor/lanes/commercial-space-and-direct-to-device-satellite/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 47,
+      "conviction": 46,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -6138,14 +6138,14 @@
       "convictionTotal": 53,
       "stockTickers": [
         "VRT",
-        "ETN",
         "META",
+        "ETN",
         "NVDA",
         "GEV",
         "MSFT",
         "DLR",
         "EQIX",
-        "SMR"
+        "AMZN"
       ],
       "avgConviction": 53
     },
@@ -6155,7 +6155,7 @@
       "href": "/investor/lanes/shipping-logistics-and-reflation-transmission/",
       "thesisCount": 1,
       "eventCount": 4,
-      "convictionTotal": 45,
+      "convictionTotal": 44,
       "stockTickers": [
         "601919.SH",
         "1919.HK",
@@ -6165,7 +6165,7 @@
         "600018.SH",
         "BOAT"
       ],
-      "avgConviction": 45
+      "avgConviction": 44
     },
     {
       "id": "lane_e69b58816f80",
@@ -6205,8 +6205,8 @@
         "600938.SH",
         "600900.SH",
         "0857.HK",
-        "601088.SH",
-        "601857.SH"
+        "COP",
+        "601088.SH"
       ],
       "avgConviction": 70
     },
@@ -6216,19 +6216,19 @@
       "href": "/investor/lanes/index-rebalance-and-passive-flow-events/",
       "thesisCount": 1,
       "eventCount": 3,
-      "convictionTotal": 64,
+      "convictionTotal": 65,
       "stockTickers": [
         "0700.HK",
         "9988.HK",
         "KWEB",
         "300308.SZ",
+        "510300.SH",
         "2800.HK",
         "0981.HK",
-        "510300.SH",
         "3690.HK",
         "600900.SH"
       ],
-      "avgConviction": 64
+      "avgConviction": 65
     },
     {
       "id": "lane_136dd1c3c708",
@@ -6392,7 +6392,7 @@
       "href": "/investor/lanes/commercial-space-and-direct-to-device-satellite/",
       "thesisCount": 2,
       "eventCount": 2,
-      "convictionTotal": 128,
+      "convictionTotal": 127,
       "stockTickers": [
         "RKLB",
         "ASTS",
@@ -6587,6 +6587,21 @@
       ]
     },
     {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "market": "US",
+      "href": "/investor/stocks/AMZN/",
+      "thesisCount": 8,
+      "eventCount": 26,
+      "lanes": [
+        "Mag7 AI 平台再分层",
+        "AI 算力半导体",
+        "端侧 AI/Agent 桌面",
+        "先进封装/HBM4 闸门",
+        "AI 软件效率/生产率"
+      ]
+    },
+    {
       "ticker": "AVGO",
       "name": "Broadcom",
       "market": "US",
@@ -6599,21 +6614,6 @@
         "先进封装/HBM4 闸门",
         "AI 基建 TCO/能效筛选",
         "CPO/光模块/高速互联"
-      ]
-    },
-    {
-      "ticker": "AMZN",
-      "name": "Amazon",
-      "market": "US",
-      "href": "/investor/stocks/AMZN/",
-      "thesisCount": 7,
-      "eventCount": 22,
-      "lanes": [
-        "Mag7 AI 平台再分层",
-        "AI 算力半导体",
-        "端侧 AI/Agent 桌面",
-        "先进封装/HBM4 闸门",
-        "AI 软件效率/生产率"
       ]
     },
     {
@@ -6711,20 +6711,6 @@
         "A股风险偏好/两融",
         "油气/地缘通胀",
         "能源转型/储能光伏"
-      ]
-    },
-    {
-      "ticker": "SMR",
-      "name": "NuScale Power",
-      "market": "US",
-      "href": "/investor/stocks/SMR/",
-      "thesisCount": 4,
-      "eventCount": 10,
-      "lanes": [
-        "数据中心地产/液冷",
-        "云厂商自发电/电力资产",
-        "能源转型/储能光伏",
-        "小型模块化反应堆项目兑现"
       ]
     },
     {
@@ -6869,6 +6855,19 @@
       ]
     },
     {
+      "ticker": "SMR",
+      "name": "NuScale Power",
+      "market": "US",
+      "href": "/investor/stocks/SMR/",
+      "thesisCount": 3,
+      "eventCount": 6,
+      "lanes": [
+        "云厂商自发电/电力资产",
+        "能源转型/储能光伏",
+        "小型模块化反应堆项目兑现"
+      ]
+    },
+    {
       "ticker": "BIDU",
       "name": "Baidu",
       "market": "US ADR",
@@ -6960,8 +6959,8 @@
       "thesisCount": 2,
       "eventCount": 5,
       "lanes": [
-        "消费降级/健康银发",
-        "指数调仓/被动资金事件"
+        "指数调仓/被动资金事件",
+        "消费降级/健康银发"
       ]
     },
     {
@@ -7038,27 +7037,6 @@
       }
     },
     {
-      "id": "persona-chief-strategist-25480e",
-      "name": "首席策略师",
-      "nameEn": "Chief Strategist",
-      "href": "/investor/personas/#persona-chief-strategist-25480e",
-      "specialty": "A股市场策略、风格轮动、行业配置 【合并扩展 2026-06-11】纳入大类资产配置(股债商品配比、风险平价、全天候)与沪深市场结构(两融、限售解禁)。原 asset-allocator/ashare-strategist 职能并入。",
-      "currentView": "A 股红利与硬科技杠铃仍是政策、利率和风险偏好的组合表达；NAND价格与产品组合驱动SanDisk盈利弹性；CPO、光互联与铜连接决定 AI 集群内部租金迁移 是当前该 persona 参与最多的研究主线。",
-      "supports": 2,
-      "risks": 5,
-      "neutral": 0,
-      "eventCount": 7,
-      "topTheses": [
-        "AI CapEx的主线不是收缩，而是从新增外壳数量转向每瓦、每机架、每封装的半导体密度提升。",
-        "NAND价格与产品组合驱动SanDisk盈利弹性",
-        "智能驾驶供应商拐点取决于定点转量产和毛利率修复"
-      ],
-      "latestEvent": {
-        "title": "自动驾驶单位经济拐点能否升格为 2026 H2 主题:围绕 Alphabet 投资者日的...",
-        "href": "/investor/reports/archive-d7086350e6ea/"
-      }
-    },
-    {
       "id": "persona-utilities-analyst-1d704c",
       "name": "公用事业分析师",
       "nameEn": "Utilities Analyst",
@@ -7077,6 +7055,27 @@
       "latestEvent": {
         "title": "电网基础设施扩容节奏 vs AI 算力资本开支切换",
         "href": "/investor/reports/archive-674f035a6c53/"
+      }
+    },
+    {
+      "id": "persona-chief-strategist-25480e",
+      "name": "首席策略师",
+      "nameEn": "Chief Strategist",
+      "href": "/investor/personas/#persona-chief-strategist-25480e",
+      "specialty": "A股市场策略、风格轮动、行业配置 【合并扩展 2026-06-11】纳入大类资产配置(股债商品配比、风险平价、全天候)与沪深市场结构(两融、限售解禁)。原 asset-allocator/ashare-strategist 职能并入。",
+      "currentView": "A 股红利与硬科技杠铃仍是政策、利率和风险偏好的组合表达；NAND价格与产品组合驱动SanDisk盈利弹性；CPO、光互联与铜连接决定 AI 集群内部租金迁移 是当前该 persona 参与最多的研究主线。",
+      "supports": 2,
+      "risks": 4,
+      "neutral": 0,
+      "eventCount": 6,
+      "topTheses": [
+        "AI CapEx的主线不是收缩，而是从新增外壳数量转向每瓦、每机架、每封装的半导体密度提升。",
+        "NAND价格与产品组合驱动SanDisk盈利弹性",
+        "智能驾驶供应商拐点取决于定点转量产和毛利率修复"
+      ],
+      "latestEvent": {
+        "title": "自动驾驶单位经济拐点能否升格为 2026 H2 主题:围绕 Alphabet 投资者日的...",
+        "href": "/investor/reports/archive-d7086350e6ea/"
       }
     },
     {

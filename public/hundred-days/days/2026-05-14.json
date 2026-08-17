@@ -2515,7 +2515,6 @@
         "KRE",
         "JPM",
         "META",
-        "NVDA",
         "BX",
         "KKR",
         "ARES",
@@ -2611,13 +2610,13 @@
         }
       ],
       "stockTickers": [
-        "ETN",
         "GEV",
+        "ETN",
         "META",
         "002028.SZ",
+        "VST",
         "600089.SH",
         "CEG",
-        "VST",
         "MSFT",
         "601179.SH",
         "AMZN"
@@ -2785,8 +2784,8 @@
         "META",
         "TSM",
         "AMD",
-        "AVGO",
-        "ASML"
+        "ASML",
+        "AVGO"
       ]
     },
     {
@@ -3053,7 +3052,7 @@
       "laneHref": "/investor/lanes/commercial-space-and-direct-to-device-satellite/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 71,
+      "conviction": 70,
       "supports": 1,
       "risks": 0,
       "neutral": 0,
@@ -3073,8 +3072,8 @@
         "600118.SH",
         "IRDM",
         "RDW",
-        "LMT",
-        "LUNR"
+        "LUNR",
+        "LMT"
       ]
     },
     {
@@ -3188,7 +3187,7 @@
       "laneHref": "/investor/lanes/index-rebalance-and-passive-flow-events/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 64,
+      "conviction": 65,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -3207,45 +3206,11 @@
         "9988.HK",
         "KWEB",
         "300308.SZ",
+        "510300.SH",
         "2800.HK",
         "0981.HK",
-        "510300.SH",
         "3690.HK",
         "600900.SH"
-      ]
-    },
-    {
-      "id": "thesis-741d1d6f34",
-      "title": "地产、土地财政与 REITs 是中国信用底的慢变量",
-      "titleEn": "Property, land finance, and REITs are the slow variables behind China's credit floor",
-      "href": "/investor/theses/thesis-741d1d6f34/",
-      "laneId": "lane_5c8ea9f78210",
-      "lane": "地产信用底/REITs",
-      "laneHref": "/investor/lanes/china-property-credit-floor-and-reits/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 63,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "研究报告：“质量牛”的版图扩张——房地产结构性转轨与“优质价值”轮动分析",
-          "summary": "研究报告：“质量牛”的版图扩张——房地产结构性转轨与“优质价值”轮动分析 日期： 2026-05-14 分析师： 房地产分析师（楼市销售、土地拍卖、政策研究、REITs）",
-          "href": "/investor/reports/archive-2ab2530e9f47/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "1109.HK",
-        "600048.SH",
-        "001979.SZ",
-        "0960.HK",
-        "0688.HK",
-        "000002.SZ",
-        "0823.HK"
       ]
     },
     {
@@ -3280,6 +3245,39 @@
       ]
     },
     {
+      "id": "thesis-89c14497ac",
+      "title": "期权伽马、ETF 与尾盘流动性正在放大主题交易的微观结构风险",
+      "titleEn": "Options gamma, ETFs, and closing liquidity are amplifying microstructure risk in theme trades",
+      "href": "/investor/theses/thesis-89c14497ac/",
+      "laneId": "lane_2ba2ee6db1ee",
+      "lane": "期权伽马/市场微观结构",
+      "laneHref": "/investor/lanes/options-gamma-and-market-microstructure/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 62,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "5Y 腹部凸性与掉期期权对冲在极端曲线扭曲下的有效性测试",
+          "summary": "日期（Asia/Singapore）：2026-05-14 - 分析师：衍生品策略师 - 立场：stress-test（压力测试） - 线程：后鲍威尔时代——美联储\"去透明化\"系统性风险 - 上游：研究记录 07（首席经济学家）指出...",
+          "href": "/investor/reports/archive-58ed71a6c963/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "CBOE",
+        "CME",
+        "HOOD",
+        "IBKR",
+        "VIRT",
+        "VIXY"
+      ]
+    },
+    {
       "id": "thesis-3da7ae5953",
       "title": "宇航电源份额将卫星部署节奏转化为收入弹性",
       "titleEn": "Space-power share converts satellite deployment into revenue leverage",
@@ -3311,6 +3309,40 @@
         "600118.SH",
         "LUNR",
         "RDW"
+      ]
+    },
+    {
+      "id": "thesis-741d1d6f34",
+      "title": "地产、土地财政与 REITs 是中国信用底的慢变量",
+      "titleEn": "Property, land finance, and REITs are the slow variables behind China's credit floor",
+      "href": "/investor/theses/thesis-741d1d6f34/",
+      "laneId": "lane_5c8ea9f78210",
+      "lane": "地产信用底/REITs",
+      "laneHref": "/investor/lanes/china-property-credit-floor-and-reits/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 61,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "研究报告：“质量牛”的版图扩张——房地产结构性转轨与“优质价值”轮动分析",
+          "summary": "研究报告：“质量牛”的版图扩张——房地产结构性转轨与“优质价值”轮动分析 日期： 2026-05-14 分析师： 房地产分析师（楼市销售、土地拍卖、政策研究、REITs）",
+          "href": "/investor/reports/archive-2ab2530e9f47/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "1109.HK",
+        "600048.SH",
+        "001979.SZ",
+        "0960.HK",
+        "0688.HK",
+        "000002.SZ",
+        "0823.HK"
       ]
     },
     {
@@ -3394,7 +3426,7 @@
       "laneHref": "/investor/lanes/food-agriculture-and-hog-cycle/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 56,
+      "conviction": 57,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -3410,13 +3442,13 @@
       ],
       "stockTickers": [
         "002714.SZ",
-        "300498.SZ",
         "001215.SZ",
+        "300498.SZ",
         "000876.SZ",
-        "600298.SH",
-        "603345.SH",
         "CME",
-        "ADM"
+        "600298.SH",
+        "ADM",
+        "DBA"
       ]
     },
     {
@@ -3445,14 +3477,14 @@
       ],
       "stockTickers": [
         "VRT",
-        "ETN",
         "META",
+        "ETN",
         "NVDA",
         "GEV",
         "MSFT",
         "DLR",
         "EQIX",
-        "SMR"
+        "AMZN"
       ]
     },
     {
@@ -3493,40 +3525,6 @@
       ]
     },
     {
-      "id": "thesis-2ec6b9d3ee",
-      "title": "卫星直连与商业航天从概念弹性进入部署兑现期",
-      "titleEn": "Direct-to-device satellite and commercial space are moving from concept beta to deployment proof",
-      "href": "/investor/theses/thesis-2ec6b9d3ee/",
-      "laneId": "lane_54700cb9537f",
-      "lane": "商业航天/卫星直连",
-      "laneHref": "/investor/lanes/commercial-space-and-direct-to-device-satellite/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 47,
-      "supports": 1,
-      "risks": 0,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "全球宏观分析师 · 协同回函",
-          "summary": "接收方：主题研究员（analyst:thematic-researcher，run [source-id-redacted]） - 回函日期：2026-05-16 - 题目：VanEck WARP ETF 的发行是否会触发被动资金对商业航天中上游...",
-          "href": "/investor/reports/archive-a3a42aebe041/",
-          "stance": "supports",
-          "stanceLabel": "支持"
-        }
-      ],
-      "stockTickers": [
-        "RKLB",
-        "ASTS",
-        "RDW",
-        "IRDM",
-        "LUNR",
-        "LMT",
-        "600118.SH"
-      ]
-    },
-    {
       "id": "thesis-a803fa3312",
       "title": "美联储路径仍是全球资产再定价的总阀门",
       "titleEn": "The Fed path remains the master valve for global asset repricing",
@@ -3561,35 +3559,37 @@
       ]
     },
     {
-      "id": "thesis-e26ef69f73",
-      "title": "风险核查与证据质量是主题交易的必要过滤器",
-      "titleEn": "Risk verification and evidence quality are necessary filters for theme trades",
-      "href": "/investor/theses/thesis-e26ef69f73/",
-      "laneId": "lane_ccbe817778d1",
-      "lane": "组合风控/证据质量",
-      "laneHref": "/investor/lanes/portfolio-risk-and-evidence-quality/",
+      "id": "thesis-2ec6b9d3ee",
+      "title": "卫星直连与商业航天从概念弹性进入部署兑现期",
+      "titleEn": "Direct-to-device satellite and commercial space are moving from concept beta to deployment proof",
+      "href": "/investor/theses/thesis-2ec6b9d3ee/",
+      "laneId": "lane_54700cb9537f",
+      "lane": "商业航天/卫星直连",
+      "laneHref": "/investor/lanes/commercial-space-and-direct-to-device-satellite/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 43,
-      "supports": 0,
-      "risks": 1,
+      "conviction": 46,
+      "supports": 1,
+      "risks": 0,
       "neutral": 0,
       "eventCount": 1,
       "events": [
         {
-          "title": "二次通胀路径下平坦化与陡峭化对冲的联合失效压力测试",
-          "summary": "工作日期： 2026-05-14 （亚洲/新加坡） - 分析师：首席经济学家 - 立场： stress-test - 研究记录 - 主线议题：后鲍威尔时代美联储「去透明化」的系统性风险 - 本报告问题：是否存在某种通胀路...",
-          "href": "/investor/reports/archive-986bd9786b1c/",
-          "stance": "risk",
-          "stanceLabel": "风险"
+          "title": "全球宏观分析师 · 协同回函",
+          "summary": "接收方：主题研究员（analyst:thematic-researcher，run [source-id-redacted]） - 回函日期：2026-05-16 - 题目：VanEck WARP ETF 的发行是否会触发被动资金对商业航天中上游...",
+          "href": "/investor/reports/archive-a3a42aebe041/",
+          "stance": "supports",
+          "stanceLabel": "支持"
         }
       ],
       "stockTickers": [
-        "CME",
-        "CBOE",
-        "IBKR",
-        "VIRT",
-        "SH"
+        "RKLB",
+        "ASTS",
+        "RDW",
+        "IRDM",
+        "LUNR",
+        "LMT",
+        "600118.SH"
       ]
     }
   ],
@@ -3641,7 +3641,7 @@
       "href": "/investor/lanes/commercial-space-and-direct-to-device-satellite/",
       "thesisCount": 4,
       "eventCount": 4,
-      "convictionTotal": 254,
+      "convictionTotal": 252,
       "stockTickers": [
         "RKLB",
         "ASTS",
@@ -3651,7 +3651,7 @@
         "LMT",
         "600118.SH"
       ],
-      "avgConviction": 64
+      "avgConviction": 63
     },
     {
       "id": "lane_1514a60f727a",
@@ -3684,7 +3684,6 @@
         "KRE",
         "JPM",
         "META",
-        "NVDA",
         "BX",
         "KKR",
         "ARES",
@@ -3767,8 +3766,8 @@
         "META",
         "TSM",
         "AMD",
-        "AVGO",
-        "ASML"
+        "ASML",
+        "AVGO"
       ],
       "avgConviction": 65
     },
@@ -3875,19 +3874,36 @@
       "href": "/investor/lanes/index-rebalance-and-passive-flow-events/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 64,
+      "convictionTotal": 65,
       "stockTickers": [
         "0700.HK",
         "9988.HK",
         "KWEB",
         "300308.SZ",
+        "510300.SH",
         "2800.HK",
         "0981.HK",
-        "510300.SH",
         "3690.HK",
         "600900.SH"
       ],
-      "avgConviction": 64
+      "avgConviction": 65
+    },
+    {
+      "id": "lane_2ba2ee6db1ee",
+      "title": "期权伽马/市场微观结构",
+      "href": "/investor/lanes/options-gamma-and-market-microstructure/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "convictionTotal": 62,
+      "stockTickers": [
+        "CBOE",
+        "CME",
+        "HOOD",
+        "IBKR",
+        "VIRT",
+        "VIXY"
+      ],
+      "avgConviction": 62
     },
     {
       "id": "lane_5c8ea9f78210",
@@ -3895,7 +3911,7 @@
       "href": "/investor/lanes/china-property-credit-floor-and-reits/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 63,
+      "convictionTotal": 61,
       "stockTickers": [
         "1109.HK",
         "600048.SH",
@@ -3905,7 +3921,7 @@
         "000002.SZ",
         "0823.HK"
       ],
-      "avgConviction": 63
+      "avgConviction": 61
     },
     {
       "id": "lane_e4f90acbf804",
@@ -3934,18 +3950,18 @@
       "href": "/investor/lanes/food-agriculture-and-hog-cycle/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 56,
+      "convictionTotal": 57,
       "stockTickers": [
         "002714.SZ",
-        "300498.SZ",
         "001215.SZ",
+        "300498.SZ",
         "000876.SZ",
-        "600298.SH",
-        "603345.SH",
         "CME",
-        "ADM"
+        "600298.SH",
+        "ADM",
+        "DBA"
       ],
-      "avgConviction": 56
+      "avgConviction": 57
     },
     {
       "id": "lane_0679894fe06b",
@@ -3956,14 +3972,14 @@
       "convictionTotal": 53,
       "stockTickers": [
         "VRT",
-        "ETN",
         "META",
+        "ETN",
         "NVDA",
         "GEV",
         "MSFT",
         "DLR",
         "EQIX",
-        "SMR"
+        "AMZN"
       ],
       "avgConviction": 53
     },
@@ -3984,40 +4000,9 @@
         "UUP"
       ],
       "avgConviction": 46
-    },
-    {
-      "id": "lane_ccbe817778d1",
-      "title": "组合风控/证据质量",
-      "href": "/investor/lanes/portfolio-risk-and-evidence-quality/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 43,
-      "stockTickers": [
-        "CME",
-        "CBOE",
-        "IBKR",
-        "VIRT",
-        "SH"
-      ],
-      "avgConviction": 43
     }
   ],
   "stocks": [
-    {
-      "ticker": "NVDA",
-      "name": "NVIDIA",
-      "market": "US",
-      "href": "/investor/stocks/NVDA/",
-      "thesisCount": 11,
-      "eventCount": 17,
-      "lanes": [
-        "低价模型/AI 软件利润池",
-        "先进封装/HBM4 闸门",
-        "Mag7 AI 平台再分层",
-        "中国云/国产算力栈",
-        "AI 算力半导体"
-      ]
-    },
     {
       "ticker": "GEV",
       "name": "GE Vernova",
@@ -4046,6 +4031,21 @@
         "数据中心地产/液冷",
         "信用再融资/私募信贷",
         "云厂商自发电/电力资产"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "market": "US",
+      "href": "/investor/stocks/NVDA/",
+      "thesisCount": 10,
+      "eventCount": 13,
+      "lanes": [
+        "低价模型/AI 软件利润池",
+        "先进封装/HBM4 闸门",
+        "Mag7 AI 平台再分层",
+        "中国云/国产算力栈",
+        "AI 算力半导体"
       ]
     },
     {
@@ -4214,6 +4214,20 @@
       ]
     },
     {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "market": "US",
+      "href": "/investor/stocks/AMZN/",
+      "thesisCount": 4,
+      "eventCount": 6,
+      "lanes": [
+        "Mag7 AI 平台再分层",
+        "数据中心地产/液冷",
+        "云厂商自发电/电力资产",
+        "AI 电力/电网设备"
+      ]
+    },
+    {
       "ticker": "300308.SZ",
       "name": "中际旭创",
       "market": "A-share",
@@ -4251,19 +4265,6 @@
       "lanes": [
         "先进封装/HBM4 闸门",
         "A股硬科技/科创50"
-      ]
-    },
-    {
-      "ticker": "AMZN",
-      "name": "Amazon",
-      "market": "US",
-      "href": "/investor/stocks/AMZN/",
-      "thesisCount": 3,
-      "eventCount": 5,
-      "lanes": [
-        "Mag7 AI 平台再分层",
-        "云厂商自发电/电力资产",
-        "AI 电力/电网设备"
       ]
     },
     {
@@ -4425,19 +4426,6 @@
       ]
     },
     {
-      "ticker": "SMR",
-      "name": "NuScale Power",
-      "market": "US",
-      "href": "/investor/stocks/SMR/",
-      "thesisCount": 3,
-      "eventCount": 4,
-      "lanes": [
-        "数据中心地产/液冷",
-        "云厂商自发电/电力资产",
-        "能源转型/储能光伏"
-      ]
-    },
-    {
       "ticker": "RTX",
       "name": "RTX",
       "market": "US",
@@ -4497,6 +4485,17 @@
       "name": "Blackstone",
       "market": "US",
       "href": "/investor/stocks/BX/",
+      "thesisCount": 1,
+      "eventCount": 4,
+      "lanes": [
+        "信用再融资/私募信贷"
+      ]
+    },
+    {
+      "ticker": "KKR",
+      "name": "KKR",
+      "market": "US",
+      "href": "/investor/stocks/KKR/",
       "thesisCount": 1,
       "eventCount": 4,
       "lanes": [
