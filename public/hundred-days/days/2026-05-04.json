@@ -1443,8 +1443,8 @@
         "9988.HK",
         "CRM",
         "0700.HK",
-        "NOW",
         "NVDA",
+        "NOW",
         "9888.HK"
       ]
     },
@@ -1509,7 +1509,7 @@
       "laneHref": "/investor/lanes/credit-refinancing-and-private-debt/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 51,
+      "conviction": 53,
       "supports": 0,
       "risks": 3,
       "neutral": 0,
@@ -1542,8 +1542,8 @@
         "JPM",
         "META",
         "BX",
-        "KKR",
         "ARES",
+        "KKR",
         "APO"
       ]
     },
@@ -1677,9 +1677,9 @@
       "laneId": "lane_c0702fb29e08",
       "lane": "AI 再通胀/利率敏感资产",
       "laneHref": "/investor/lanes/ai-reflation-and-rate-sensitive-assets/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 56,
+      "direction": "stable",
+      "directionLabel": "稳定",
+      "conviction": 55,
       "supports": 1,
       "risks": 1,
       "neutral": 0,
@@ -1705,10 +1705,10 @@
         "MSFT",
         "AMZN",
         "GOOGL",
-        "TLT",
         "XLE",
-        "GLD",
-        "XLU"
+        "TLT",
+        "XLU",
+        "NVDA"
       ]
     },
     {
@@ -2556,7 +2556,7 @@
       "laneHref": "/investor/lanes/bond-supply-and-bank-duration/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 54,
+      "conviction": 56,
       "supports": 1,
       "risks": 0,
       "neutral": 0,
@@ -2644,14 +2644,14 @@
       ],
       "stockTickers": [
         "VRT",
-        "META",
         "ETN",
+        "META",
         "NVDA",
         "GEV",
         "MSFT",
         "DLR",
         "EQIX",
-        "AMZN"
+        "SMR"
       ]
     },
     {
@@ -2819,7 +2819,7 @@
       "href": "/investor/lanes/credit-refinancing-and-private-debt/",
       "thesisCount": 2,
       "eventCount": 5,
-      "convictionTotal": 116,
+      "convictionTotal": 118,
       "stockTickers": [
         "KRE",
         "JPM",
@@ -2829,7 +2829,7 @@
         "ARES",
         "APO"
       ],
-      "avgConviction": 58
+      "avgConviction": 59
     },
     {
       "id": "lane_f3e413e8ce27",
@@ -2934,8 +2934,8 @@
         "9988.HK",
         "CRM",
         "0700.HK",
-        "NOW",
         "NVDA",
+        "NOW",
         "9888.HK"
       ],
       "avgConviction": 72
@@ -3007,18 +3007,18 @@
       "href": "/investor/lanes/ai-reflation-and-rate-sensitive-assets/",
       "thesisCount": 1,
       "eventCount": 2,
-      "convictionTotal": 56,
+      "convictionTotal": 55,
       "stockTickers": [
         "META",
         "MSFT",
         "AMZN",
         "GOOGL",
-        "TLT",
         "XLE",
-        "GLD",
-        "XLU"
+        "TLT",
+        "XLU",
+        "NVDA"
       ],
-      "avgConviction": 56
+      "avgConviction": 55
     },
     {
       "id": "lane_0cb100fcf8da",
@@ -3131,7 +3131,7 @@
       "href": "/investor/lanes/bond-supply-and-bank-duration/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 54,
+      "convictionTotal": 56,
       "stockTickers": [
         "601398.SH",
         "601939.SH",
@@ -3142,7 +3142,7 @@
         "IEF",
         "000001.SZ"
       ],
-      "avgConviction": 54
+      "avgConviction": 56
     },
     {
       "id": "lane_22c1ed929e2e",
@@ -3174,14 +3174,14 @@
       "convictionTotal": 53,
       "stockTickers": [
         "VRT",
-        "META",
         "ETN",
+        "META",
         "NVDA",
         "GEV",
         "MSFT",
         "DLR",
         "EQIX",
-        "AMZN"
+        "SMR"
       ],
       "avgConviction": 53
     },
@@ -3224,6 +3224,21 @@
   ],
   "stocks": [
     {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "market": "US",
+      "href": "/investor/stocks/NVDA/",
+      "thesisCount": 11,
+      "eventCount": 20,
+      "lanes": [
+        "Mag7 AI 平台再分层",
+        "低价模型/AI 软件利润池",
+        "AI 算力半导体",
+        "中国云/国产算力栈",
+        "先进封装/HBM4 闸门"
+      ]
+    },
+    {
       "ticker": "META",
       "name": "Meta Platforms",
       "market": "US",
@@ -3236,21 +3251,6 @@
         "AI 软件效率/生产率",
         "AI 再通胀/利率敏感资产",
         "公用事业/电网信用"
-      ]
-    },
-    {
-      "ticker": "NVDA",
-      "name": "NVIDIA",
-      "market": "US",
-      "href": "/investor/stocks/NVDA/",
-      "thesisCount": 10,
-      "eventCount": 18,
-      "lanes": [
-        "Mag7 AI 平台再分层",
-        "低价模型/AI 软件利润池",
-        "AI 算力半导体",
-        "中国云/国产算力栈",
-        "先进封装/HBM4 闸门"
       ]
     },
     {
@@ -3273,14 +3273,14 @@
       "name": "Amazon",
       "market": "US",
       "href": "/investor/stocks/AMZN/",
-      "thesisCount": 8,
-      "eventCount": 13,
+      "thesisCount": 7,
+      "eventCount": 12,
       "lanes": [
         "Mag7 AI 平台再分层",
         "AI 软件效率/生产率",
         "AI 再通胀/利率敏感资产",
-        "数据中心地产/液冷",
-        "自动驾驶/Robotaxi 单位经济"
+        "自动驾驶/Robotaxi 单位经济",
+        "云厂商自发电/电力资产"
       ]
     },
     {
@@ -3333,8 +3333,8 @@
       "eventCount": 8,
       "lanes": [
         "美债利率/美元再定价",
-        "AI 再通胀/利率敏感资产",
-        "债券供给/银行久期"
+        "债券供给/银行久期",
+        "AI 再通胀/利率敏感资产"
       ]
     },
     {
@@ -3507,6 +3507,19 @@
       "eventCount": 4,
       "lanes": [
         "日元套息/EM 科技流动性"
+      ]
+    },
+    {
+      "ticker": "SMR",
+      "name": "NuScale Power",
+      "market": "US",
+      "href": "/investor/stocks/SMR/",
+      "thesisCount": 3,
+      "eventCount": 4,
+      "lanes": [
+        "公用事业/电网信用",
+        "数据中心地产/液冷",
+        "云厂商自发电/电力资产"
       ]
     },
     {
@@ -3708,18 +3721,6 @@
         "A股硬科技/科创50",
         "债券供给/银行久期",
         "公用事业/电网信用"
-      ]
-    },
-    {
-      "ticker": "AVGO",
-      "name": "Broadcom",
-      "market": "US",
-      "href": "/investor/stocks/AVGO/",
-      "thesisCount": 2,
-      "eventCount": 3,
-      "lanes": [
-        "Mag7 AI 平台再分层",
-        "AI 算力半导体"
       ]
     }
   ],

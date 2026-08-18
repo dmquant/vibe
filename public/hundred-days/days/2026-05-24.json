@@ -29,7 +29,7 @@
     "reports": 205,
     "researchThreads": 28,
     "researchNotes": 226,
-    "thesisEvents": 77,
+    "thesisEvents": 76,
     "personaEvents": 0,
     "readerMemos": 0,
     "recaps": 0,
@@ -3980,7 +3980,7 @@
       "laneHref": "/investor/lanes/home-improvement-and-post-property-cycle/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 43,
+      "conviction": 44,
       "supports": 0,
       "risks": 6,
       "neutral": 0,
@@ -4018,10 +4018,10 @@
       "stockTickers": [
         "002572.SZ",
         "603833.SH",
-        "600690.SH",
         "603816.SH",
-        "000333.SZ",
+        "600690.SH",
         "LOW",
+        "000333.SZ",
         "002043.SZ",
         "603801.SH",
         "002508.SZ",
@@ -4085,7 +4085,7 @@
       "laneHref": "/investor/lanes/china-property-credit-floor-and-reits/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 61,
+      "conviction": 62,
       "supports": 0,
       "risks": 3,
       "neutral": 0,
@@ -4343,8 +4343,8 @@
         "9988.HK",
         "CRM",
         "0700.HK",
-        "NOW",
         "NVDA",
+        "NOW",
         "9888.HK"
       ]
     },
@@ -4519,7 +4519,7 @@
       "laneHref": "/investor/lanes/consumer-downgrade-health-and-silver-economy/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 64,
+      "conviction": 65,
       "supports": 0,
       "risks": 2,
       "neutral": 0,
@@ -4562,7 +4562,7 @@
       "laneHref": "/investor/lanes/energy-transition-storage-and-solar-capex/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 63,
+      "conviction": 64,
       "supports": 0,
       "risks": 2,
       "neutral": 0,
@@ -4683,9 +4683,9 @@
       "laneId": "lane_c0702fb29e08",
       "lane": "AI 再通胀/利率敏感资产",
       "laneHref": "/investor/lanes/ai-reflation-and-rate-sensitive-assets/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 56,
+      "direction": "stable",
+      "directionLabel": "稳定",
+      "conviction": 55,
       "supports": 1,
       "risks": 1,
       "neutral": 0,
@@ -4711,10 +4711,10 @@
         "MSFT",
         "AMZN",
         "GOOGL",
-        "TLT",
         "XLE",
-        "GLD",
-        "XLU"
+        "TLT",
+        "XLU",
+        "NVDA"
       ]
     },
     {
@@ -4750,14 +4750,14 @@
       ],
       "stockTickers": [
         "VRT",
-        "META",
         "ETN",
+        "META",
         "NVDA",
         "GEV",
         "MSFT",
         "DLR",
         "EQIX",
-        "AMZN"
+        "SMR"
       ]
     },
     {
@@ -5229,39 +5229,6 @@
       ]
     },
     {
-      "id": "thesis-f3989d02c5",
-      "title": "全球电网核心设备及原材料的产能赤字已构成刚性物理准入壁垒，导致产业利润池从算力/晶圆厂资本支出方结构性向重电OEM厂商转移。",
-      "titleEn": "Practical research topic: 全球电网核心设备及原材料的产能赤字已构成刚性物理准入壁垒，导致产业利润池从算力/晶圆厂资本支出方结构性向重电OEM厂商转移。",
-      "href": "/investor/theses/thesis-f3989d02c5/",
-      "laneId": "lane_f44cf45c8649",
-      "lane": "AI 算力半导体",
-      "laneHref": "/investor/lanes/ai-compute-semiconductors/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 65,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "政策分析报告： “硅钢之讽” —— 地缘博弈降温表象下，AI 算力落地的系统性“原材料壁垒”",
-          "summary": "政策分析报告： “硅钢之讽” —— 地缘博弈降温表象下，AI 算力落地的系统性“原材料壁垒” 日期： 2026-05-24 分析师： 政策分析师 [Specialist] 立场： 压力测试（支持并深化物理约束论点）",
-          "href": "/investor/reports/archive-108610a5711f/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "NVDA",
-        "META",
-        "TSM",
-        "AMD",
-        "ASML",
-        "AVGO"
-      ]
-    },
-    {
       "id": "thesis-ffa474a3f2",
       "title": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
       "titleEn": "Edge AI and agent desktops are extending compute competition from cloud to chips, OS, and consumer-electronics supply...",
@@ -5271,7 +5238,7 @@
       "laneHref": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 64,
+      "conviction": 65,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -5333,6 +5300,43 @@
       ]
     },
     {
+      "id": "thesis-7a6599a3f5",
+      "title": "新一代信息技术国产替代要从信创叙事进入算力、软件与安全订单验证",
+      "titleEn": "Domestic IT substitution must move from policy narrative to compute, software, and security order proof",
+      "href": "/investor/theses/thesis-7a6599a3f5/",
+      "laneId": "lane_e4f90acbf804",
+      "lane": "信创/国产 IT 栈",
+      "laneHref": "/investor/lanes/domestic-it-substitution-stack/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 62,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "AI 算力的\"去 CUDA 化\"逻辑重构 — 既有研究记录",
+          "summary": "AI 算力的\"去 CUDA 化\"逻辑重构 — 既有研究记录",
+          "href": "/investor/reports/archive-4ce1f9f86633/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "688256.SH",
+        "688041.SH",
+        "688981.SH",
+        "0981.HK",
+        "300308.SZ",
+        "NVDA",
+        "000977.SZ",
+        "688012.SH",
+        "688008.SH",
+        "688111.SH"
+      ]
+    },
+    {
       "id": "thesis-f5d7a79c82",
       "title": "HBM4、CoWoS 与背面供电正在成为 AI 服务器需求曲线的串行闸门",
       "titleEn": "HBM4, CoWoS, and backside power are becoming serial gates for the AI-server demand curve",
@@ -5367,43 +5371,6 @@
         "MSFT",
         "AMZN",
         "ASML"
-      ]
-    },
-    {
-      "id": "thesis-7a6599a3f5",
-      "title": "新一代信息技术国产替代要从信创叙事进入算力、软件与安全订单验证",
-      "titleEn": "Domestic IT substitution must move from policy narrative to compute, software, and security order proof",
-      "href": "/investor/theses/thesis-7a6599a3f5/",
-      "laneId": "lane_e4f90acbf804",
-      "lane": "信创/国产 IT 栈",
-      "laneHref": "/investor/lanes/domestic-it-substitution-stack/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 60,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "AI 算力的\"去 CUDA 化\"逻辑重构 — 既有研究记录",
-          "summary": "AI 算力的\"去 CUDA 化\"逻辑重构 — 既有研究记录",
-          "href": "/investor/reports/archive-4ce1f9f86633/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "688256.SH",
-        "688041.SH",
-        "688981.SH",
-        "0981.HK",
-        "300308.SZ",
-        "NVDA",
-        "000977.SZ",
-        "688012.SH",
-        "688008.SH",
-        "688111.SH"
       ]
     },
     {
@@ -5453,7 +5420,7 @@
       "laneHref": "/investor/lanes/bond-supply-and-bank-duration/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 54,
+      "conviction": 56,
       "supports": 1,
       "risks": 0,
       "neutral": 0,
@@ -5516,6 +5483,40 @@
       ]
     },
     {
+      "id": "thesis-9a860a8801",
+      "title": "信用再融资压力正在把利率风险转化为资产负债表筛选",
+      "titleEn": "Credit refinancing pressure is turning rate risk into balance-sheet selection",
+      "href": "/investor/theses/thesis-9a860a8801/",
+      "laneId": "lane_b29e1d216a21",
+      "lane": "信用再融资/私募信贷",
+      "laneHref": "/investor/lanes/credit-refinancing-and-private-debt/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 53,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "银行端信贷扩张受阻下的城投信用风险传导：2026年压力测试报告",
+          "summary": "银行端信贷扩张受阻下的城投信用风险传导：2026年压力测试报告 分析师： 信用分析师 (Credit Analyst) 机构权威工作日期： 2026-05-24 报告版本： 研究决策专题研究记录 (既有研究记录/...",
+          "href": "/investor/reports/archive-f87aa01d385a/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "KRE",
+        "JPM",
+        "META",
+        "BX",
+        "ARES",
+        "KKR",
+        "APO"
+      ]
+    },
+    {
       "id": "thesis-51c6d833ae",
       "title": "食品加工的机会从食品通胀切换到原料波动、渠道库存与 B 端标准化",
       "titleEn": "Food processing opportunities are shifting from food inflation to input volatility, channel inventory, and B-side sta...",
@@ -5549,40 +5550,6 @@
         "603317.SH",
         "002847.SZ",
         "ADM"
-      ]
-    },
-    {
-      "id": "thesis-9a860a8801",
-      "title": "信用再融资压力正在把利率风险转化为资产负债表筛选",
-      "titleEn": "Credit refinancing pressure is turning rate risk into balance-sheet selection",
-      "href": "/investor/theses/thesis-9a860a8801/",
-      "laneId": "lane_b29e1d216a21",
-      "lane": "信用再融资/私募信贷",
-      "laneHref": "/investor/lanes/credit-refinancing-and-private-debt/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 51,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "银行端信贷扩张受阻下的城投信用风险传导：2026年压力测试报告",
-          "summary": "银行端信贷扩张受阻下的城投信用风险传导：2026年压力测试报告 分析师： 信用分析师 (Credit Analyst) 机构权威工作日期： 2026-05-24 报告版本： 研究决策专题研究记录 (既有研究记录/...",
-          "href": "/investor/reports/archive-f87aa01d385a/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "KRE",
-        "JPM",
-        "META",
-        "BX",
-        "KKR",
-        "ARES",
-        "APO"
       ]
     },
     {
@@ -5765,7 +5732,7 @@
       "href": "/investor/lanes/energy-transition-storage-and-solar-capex/",
       "thesisCount": 2,
       "eventCount": 5,
-      "convictionTotal": 105,
+      "convictionTotal": 106,
       "stockTickers": [
         "300274.SZ",
         "002028.SZ",
@@ -5823,28 +5790,6 @@
       "avgConviction": 70
     },
     {
-      "id": "lane_f44cf45c8649",
-      "title": "AI 算力半导体",
-      "href": "/investor/lanes/ai-compute-semiconductors/",
-      "thesisCount": 4,
-      "eventCount": 4,
-      "convictionTotal": 272,
-      "stockTickers": [
-        "NVDA",
-        "TSM",
-        "MU",
-        "000660.KS",
-        "META",
-        "AMD",
-        "AVGO",
-        "MSFT",
-        "GOOGL",
-        "AMZN",
-        "ASML"
-      ],
-      "avgConviction": 68
-    },
-    {
       "id": "lane_8c4a3526fcca",
       "title": "关键材料/稀土铜铝",
       "href": "/investor/lanes/critical-materials-rare-earths-copper-and-aluminum/",
@@ -5870,20 +5815,41 @@
       "href": "/investor/lanes/home-improvement-and-post-property-cycle/",
       "thesisCount": 1,
       "eventCount": 4,
-      "convictionTotal": 43,
+      "convictionTotal": 44,
       "stockTickers": [
         "002572.SZ",
         "603833.SH",
-        "600690.SH",
         "603816.SH",
-        "000333.SZ",
+        "600690.SH",
         "LOW",
+        "000333.SZ",
         "002043.SZ",
         "603801.SH",
         "002508.SZ",
         "001322.SZ"
       ],
-      "avgConviction": 43
+      "avgConviction": 44
+    },
+    {
+      "id": "lane_f44cf45c8649",
+      "title": "AI 算力半导体",
+      "href": "/investor/lanes/ai-compute-semiconductors/",
+      "thesisCount": 3,
+      "eventCount": 3,
+      "convictionTotal": 207,
+      "stockTickers": [
+        "NVDA",
+        "TSM",
+        "MU",
+        "000660.KS",
+        "META",
+        "AMD",
+        "AVGO",
+        "MSFT",
+        "GOOGL",
+        "AMZN"
+      ],
+      "avgConviction": 69
     },
     {
       "id": "lane_5c8ea9f78210",
@@ -5891,7 +5857,7 @@
       "href": "/investor/lanes/china-property-credit-floor-and-reits/",
       "thesisCount": 1,
       "eventCount": 3,
-      "convictionTotal": 61,
+      "convictionTotal": 62,
       "stockTickers": [
         "1109.HK",
         "600048.SH",
@@ -5901,7 +5867,7 @@
         "000002.SZ",
         "0823.HK"
       ],
-      "avgConviction": 61
+      "avgConviction": 62
     },
     {
       "id": "lane_0cb100fcf8da",
@@ -5954,8 +5920,8 @@
         "9988.HK",
         "CRM",
         "0700.HK",
-        "NOW",
         "NVDA",
+        "NOW",
         "9888.HK"
       ],
       "avgConviction": 72
@@ -5966,7 +5932,7 @@
       "href": "/investor/lanes/consumer-downgrade-health-and-silver-economy/",
       "thesisCount": 1,
       "eventCount": 2,
-      "convictionTotal": 64,
+      "convictionTotal": 65,
       "stockTickers": [
         "600519.SH",
         "3690.HK",
@@ -5978,7 +5944,7 @@
         "2319.HK",
         "UNH"
       ],
-      "avgConviction": 64
+      "avgConviction": 65
     },
     {
       "id": "lane_22c1ed929e2e",
@@ -6030,18 +5996,18 @@
       "href": "/investor/lanes/ai-reflation-and-rate-sensitive-assets/",
       "thesisCount": 1,
       "eventCount": 2,
-      "convictionTotal": 56,
+      "convictionTotal": 55,
       "stockTickers": [
         "META",
         "MSFT",
         "AMZN",
         "GOOGL",
-        "TLT",
         "XLE",
-        "GLD",
-        "XLU"
+        "TLT",
+        "XLU",
+        "NVDA"
       ],
-      "avgConviction": 56
+      "avgConviction": 55
     },
     {
       "id": "lane_0679894fe06b",
@@ -6052,14 +6018,14 @@
       "convictionTotal": 53,
       "stockTickers": [
         "VRT",
-        "META",
         "ETN",
+        "META",
         "NVDA",
         "GEV",
         "MSFT",
         "DLR",
         "EQIX",
-        "AMZN"
+        "SMR"
       ],
       "avgConviction": 53
     },
@@ -6120,7 +6086,7 @@
       "href": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 64,
+      "convictionTotal": 65,
       "stockTickers": [
         "MSFT",
         "NVDA",
@@ -6133,7 +6099,7 @@
         "GOOGL",
         "002475.SZ"
       ],
-      "avgConviction": 64
+      "avgConviction": 65
     },
     {
       "id": "lane_e4f90acbf804",
@@ -6141,7 +6107,7 @@
       "href": "/investor/lanes/domestic-it-substitution-stack/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 60,
+      "convictionTotal": 62,
       "stockTickers": [
         "688256.SH",
         "688041.SH",
@@ -6154,7 +6120,7 @@
         "688008.SH",
         "688111.SH"
       ],
-      "avgConviction": 60
+      "avgConviction": 62
     },
     {
       "id": "lane_2d0dcf520f87",
@@ -6185,7 +6151,7 @@
       "market": "US",
       "href": "/investor/stocks/NVDA/",
       "thesisCount": 21,
-      "eventCount": 32,
+      "eventCount": 33,
       "lanes": [
         "Mag7 AI 平台再分层",
         "先进封装/HBM4 闸门",
@@ -6199,8 +6165,8 @@
       "name": "Meta Platforms",
       "market": "US",
       "href": "/investor/stocks/META/",
-      "thesisCount": 17,
-      "eventCount": 24,
+      "thesisCount": 16,
+      "eventCount": 23,
       "lanes": [
         "Mag7 AI 平台再分层",
         "AI 算力半导体",
@@ -6225,35 +6191,6 @@
       ]
     },
     {
-      "ticker": "TSM",
-      "name": "TSMC",
-      "market": "US ADR",
-      "href": "/investor/stocks/TSM/",
-      "thesisCount": 12,
-      "eventCount": 15,
-      "lanes": [
-        "先进封装/HBM4 闸门",
-        "AI 算力半导体",
-        "Mag7 AI 平台再分层",
-        "AI 基建 TCO/能效筛选"
-      ]
-    },
-    {
-      "ticker": "AMZN",
-      "name": "Amazon",
-      "market": "US",
-      "href": "/investor/stocks/AMZN/",
-      "thesisCount": 10,
-      "eventCount": 15,
-      "lanes": [
-        "Mag7 AI 平台再分层",
-        "AI 算力半导体",
-        "端侧 AI/Agent 桌面",
-        "先进封装/HBM4 闸门",
-        "AI 再通胀/利率敏感资产"
-      ]
-    },
-    {
       "ticker": "GEV",
       "name": "GE Vernova",
       "market": "US",
@@ -6266,6 +6203,20 @@
         "关键材料/稀土铜铝",
         "数据中心地产/液冷",
         "中国电力设备出海"
+      ]
+    },
+    {
+      "ticker": "TSM",
+      "name": "TSMC",
+      "market": "US ADR",
+      "href": "/investor/stocks/TSM/",
+      "thesisCount": 11,
+      "eventCount": 14,
+      "lanes": [
+        "先进封装/HBM4 闸门",
+        "AI 算力半导体",
+        "Mag7 AI 平台再分层",
+        "AI 基建 TCO/能效筛选"
       ]
     },
     {
@@ -6292,6 +6243,21 @@
         "先进封装/HBM4 闸门",
         "AI 算力半导体",
         "AI 基建 TCO/能效筛选"
+      ]
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "market": "US",
+      "href": "/investor/stocks/AMZN/",
+      "thesisCount": 9,
+      "eventCount": 13,
+      "lanes": [
+        "Mag7 AI 平台再分层",
+        "AI 算力半导体",
+        "端侧 AI/Agent 桌面",
+        "先进封装/HBM4 闸门",
+        "AI 再通胀/利率敏感资产"
       ]
     },
     {
@@ -6382,11 +6348,10 @@
       "name": "ASML",
       "market": "US ADR",
       "href": "/investor/stocks/ASML/",
-      "thesisCount": 6,
-      "eventCount": 9,
+      "thesisCount": 5,
+      "eventCount": 8,
       "lanes": [
-        "先进封装/HBM4 闸门",
-        "AI 算力半导体"
+        "先进封装/HBM4 闸门"
       ]
     },
     {
@@ -6425,35 +6390,6 @@
       "lanes": [
         "中国大健康/创新药出海",
         "消费降级/健康银发"
-      ]
-    },
-    {
-      "ticker": "AVGO",
-      "name": "Broadcom",
-      "market": "US",
-      "href": "/investor/stocks/AVGO/",
-      "thesisCount": 7,
-      "eventCount": 7,
-      "lanes": [
-        "CPO/光模块/高速互联",
-        "AI 算力半导体",
-        "Mag7 AI 平台再分层",
-        "先进封装/HBM4 闸门",
-        "AI 基建 TCO/能效筛选"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "name": "AMD",
-      "market": "US",
-      "href": "/investor/stocks/AMD/",
-      "thesisCount": 7,
-      "eventCount": 7,
-      "lanes": [
-        "AI 算力半导体",
-        "端侧 AI/Agent 桌面",
-        "先进封装/HBM4 闸门",
-        "AI 基建 TCO/能效筛选"
       ]
     },
     {
@@ -6526,6 +6462,35 @@
       ]
     },
     {
+      "ticker": "AVGO",
+      "name": "Broadcom",
+      "market": "US",
+      "href": "/investor/stocks/AVGO/",
+      "thesisCount": 6,
+      "eventCount": 6,
+      "lanes": [
+        "CPO/光模块/高速互联",
+        "AI 算力半导体",
+        "Mag7 AI 平台再分层",
+        "先进封装/HBM4 闸门",
+        "AI 基建 TCO/能效筛选"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "name": "AMD",
+      "market": "US",
+      "href": "/investor/stocks/AMD/",
+      "thesisCount": 6,
+      "eventCount": 6,
+      "lanes": [
+        "AI 算力半导体",
+        "端侧 AI/Agent 桌面",
+        "先进封装/HBM4 闸门",
+        "AI 基建 TCO/能效筛选"
+      ]
+    },
+    {
       "ticker": "688012.SH",
       "name": "中微公司",
       "market": "A-share",
@@ -6594,6 +6559,19 @@
       ]
     },
     {
+      "ticker": "SMR",
+      "name": "NuScale Power",
+      "market": "US",
+      "href": "/investor/stocks/SMR/",
+      "thesisCount": 3,
+      "eventCount": 6,
+      "lanes": [
+        "公用事业/电网信用",
+        "数据中心地产/液冷",
+        "能源转型/储能光伏"
+      ]
+    },
+    {
       "ticker": "601179.SH",
       "name": "中国西电",
       "market": "A-share",
@@ -6659,8 +6637,8 @@
       "thesisCount": 3,
       "eventCount": 4,
       "lanes": [
-        "食品加工/成本传导",
-        "消费降级/健康银发"
+        "消费降级/健康银发",
+        "食品加工/成本传导"
       ]
     },
     {
@@ -6673,18 +6651,6 @@
       "lanes": [
         "消费降级/健康银发",
         "中国大健康/创新药出海"
-      ]
-    },
-    {
-      "ticker": "SMR",
-      "name": "NuScale Power",
-      "market": "US",
-      "href": "/investor/stocks/SMR/",
-      "thesisCount": 2,
-      "eventCount": 4,
-      "lanes": [
-        "公用事业/电网信用",
-        "能源转型/储能光伏"
       ]
     }
   ],

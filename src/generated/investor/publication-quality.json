@@ -1,15 +1,15 @@
 {
   "schema": "vibe.ai_institute.publication_quality.v1",
   "version": "publication-quality.2026-07-12.1",
-  "generatedAt": "2026-08-17T00:36:40.589Z",
-  "checkedAt": "2026-08-17T00:36:40.589Z",
-  "asOfDate": "2026-08-17",
-  "sourceHash": "45133d635ce9f2a9",
+  "generatedAt": "2026-08-18T00:37:51.417Z",
+  "checkedAt": "2026-08-18T00:37:51.417Z",
+  "asOfDate": "2026-08-18",
+  "sourceHash": "db166c278fef10bc",
   "status": "degraded",
   "statusLabel": "有警告",
   "counts": {
     "error": 0,
-    "warning": 2,
+    "warning": 7,
     "info": 0,
     "marketQuotes": 0,
     "theses": 185,
@@ -39,8 +39,58 @@
       "code": "REPORT_DATE_DRIFT",
       "message": "Workspace source date differs from its report contract",
       "context": {
+        "href": "/investor/reports/archive-24cc4b3bf1ea/",
+        "workspaceDate": "2026-08-17",
+        "reportDate": ""
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "REPORT_DATE_DRIFT",
+      "message": "Workspace source date differs from its report contract",
+      "context": {
+        "href": "/investor/reports/archive-75333eadc1e0/",
+        "workspaceDate": "2026-08-17",
+        "reportDate": ""
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "REPORT_DATE_DRIFT",
+      "message": "Workspace source date differs from its report contract",
+      "context": {
+        "href": "/investor/reports/archive-eefc9eacce09/",
+        "workspaceDate": "2026-08-17",
+        "reportDate": ""
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "REPORT_DATE_DRIFT",
+      "message": "Workspace source date differs from its report contract",
+      "context": {
         "href": "/investor/reports/archive-7fa1a717917c/",
         "workspaceDate": "2026-08-15",
+        "reportDate": ""
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "REPORT_DATE_DRIFT",
+      "message": "Workspace source date differs from its report contract",
+      "context": {
+        "href": "/investor/reports/archive-7fa1a717917c/",
+        "workspaceDate": "2026-08-17",
+        "reportDate": ""
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "REPORT_DATE_DRIFT",
+      "message": "Workspace source date differs from its report contract",
+      "context": {
+        "href": "/investor/reports/archive-91130c0f5e33/",
+        "workspaceDate": "2026-08-17",
         "reportDate": ""
       }
     }
