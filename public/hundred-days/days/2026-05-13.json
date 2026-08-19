@@ -2637,40 +2637,6 @@
       ]
     },
     {
-      "id": "thesis-9a860a8801",
-      "title": "信用再融资压力正在把利率风险转化为资产负债表筛选",
-      "titleEn": "Credit refinancing pressure is turning rate risk into balance-sheet selection",
-      "href": "/investor/theses/thesis-9a860a8801/",
-      "laneId": "lane_b29e1d216a21",
-      "lane": "信用再融资/私募信贷",
-      "laneHref": "/investor/lanes/credit-refinancing-and-private-debt/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 53,
-      "supports": 0,
-      "risks": 1,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "研究记录 · 信用分析师压力测试：HY 利差扩张是否已系统化",
-          "summary": "工作日期：2026-05-13（亚洲/新加坡） - 分析师：信用分析师（credit-analyst） - 立场：stress-test - 主题：验证高收益债（HY）信用违约风险的传导路径及利差扩张压力 - 前序研究：research n...",
-          "href": "/investor/reports/archive-fd979dc5b6c1/",
-          "stance": "risk",
-          "stanceLabel": "风险"
-        }
-      ],
-      "stockTickers": [
-        "KRE",
-        "JPM",
-        "META",
-        "BX",
-        "ARES",
-        "KKR",
-        "APO"
-      ]
-    },
-    {
       "id": "thesis-7f0a75c5f6",
       "title": "数据中心地产、液冷与水资源正在决定 AI 容量的区域迁移",
       "titleEn": "Data-center real estate, liquid cooling, and water resources are deciding regional migration of AI capacity",
@@ -2696,14 +2662,48 @@
       ],
       "stockTickers": [
         "VRT",
-        "ETN",
         "META",
+        "ETN",
         "NVDA",
         "GEV",
         "MSFT",
         "DLR",
         "EQIX",
-        "SMR"
+        "AMZN"
+      ]
+    },
+    {
+      "id": "thesis-9a860a8801",
+      "title": "信用再融资压力正在把利率风险转化为资产负债表筛选",
+      "titleEn": "Credit refinancing pressure is turning rate risk into balance-sheet selection",
+      "href": "/investor/theses/thesis-9a860a8801/",
+      "laneId": "lane_b29e1d216a21",
+      "lane": "信用再融资/私募信贷",
+      "laneHref": "/investor/lanes/credit-refinancing-and-private-debt/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 52,
+      "supports": 0,
+      "risks": 1,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "研究记录 · 信用分析师压力测试：HY 利差扩张是否已系统化",
+          "summary": "工作日期：2026-05-13（亚洲/新加坡） - 分析师：信用分析师（credit-analyst） - 立场：stress-test - 主题：验证高收益债（HY）信用违约风险的传导路径及利差扩张压力 - 前序研究：research n...",
+          "href": "/investor/reports/archive-fd979dc5b6c1/",
+          "stance": "risk",
+          "stanceLabel": "风险"
+        }
+      ],
+      "stockTickers": [
+        "KRE",
+        "JPM",
+        "META",
+        "BX",
+        "ARES",
+        "KKR",
+        "APO"
       ]
     }
   ],
@@ -2952,12 +2952,32 @@
       "avgConviction": 55
     },
     {
+      "id": "lane_0679894fe06b",
+      "title": "数据中心地产/液冷",
+      "href": "/investor/lanes/data-center-real-estate-and-cooling/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "convictionTotal": 53,
+      "stockTickers": [
+        "VRT",
+        "META",
+        "ETN",
+        "NVDA",
+        "GEV",
+        "MSFT",
+        "DLR",
+        "EQIX",
+        "AMZN"
+      ],
+      "avgConviction": 53
+    },
+    {
       "id": "lane_b29e1d216a21",
       "title": "信用再融资/私募信贷",
       "href": "/investor/lanes/credit-refinancing-and-private-debt/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 53,
+      "convictionTotal": 52,
       "stockTickers": [
         "KRE",
         "JPM",
@@ -2967,27 +2987,7 @@
         "KKR",
         "APO"
       ],
-      "avgConviction": 53
-    },
-    {
-      "id": "lane_0679894fe06b",
-      "title": "数据中心地产/液冷",
-      "href": "/investor/lanes/data-center-real-estate-and-cooling/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 53,
-      "stockTickers": [
-        "VRT",
-        "ETN",
-        "META",
-        "NVDA",
-        "GEV",
-        "MSFT",
-        "DLR",
-        "EQIX",
-        "SMR"
-      ],
-      "avgConviction": 53
+      "avgConviction": 52
     }
   ],
   "stocks": [
@@ -3065,8 +3065,8 @@
         "Mag7 AI 平台再分层",
         "AI 算力半导体",
         "AI 软件效率/生产率",
-        "信用再融资/私募信贷",
-        "数据中心地产/液冷"
+        "数据中心地产/液冷",
+        "信用再融资/私募信贷"
       ]
     },
     {
@@ -3263,6 +3263,20 @@
       ]
     },
     {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "market": "US",
+      "href": "/investor/stocks/AMZN/",
+      "thesisCount": 4,
+      "eventCount": 4,
+      "lanes": [
+        "Mag7 AI 平台再分层",
+        "AI 算力半导体",
+        "AI 软件效率/生产率",
+        "数据中心地产/液冷"
+      ]
+    },
+    {
       "ticker": "688256.SH",
       "name": "寒武纪",
       "market": "A-share",
@@ -3343,19 +3357,6 @@
       "eventCount": 4,
       "lanes": [
         "商业航天/卫星直连"
-      ]
-    },
-    {
-      "ticker": "AMZN",
-      "name": "Amazon",
-      "market": "US",
-      "href": "/investor/stocks/AMZN/",
-      "thesisCount": 3,
-      "eventCount": 3,
-      "lanes": [
-        "Mag7 AI 平台再分层",
-        "AI 算力半导体",
-        "AI 软件效率/生产率"
       ]
     },
     {

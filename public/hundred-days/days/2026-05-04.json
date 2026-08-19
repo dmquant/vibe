@@ -1509,7 +1509,7 @@
       "laneHref": "/investor/lanes/credit-refinancing-and-private-debt/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 53,
+      "conviction": 52,
       "supports": 0,
       "risks": 3,
       "neutral": 0,
@@ -2486,7 +2486,7 @@
       "laneHref": "/investor/lanes/options-gamma-and-market-microstructure/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 62,
+      "conviction": 61,
       "supports": 1,
       "risks": 0,
       "neutral": 0,
@@ -2556,7 +2556,7 @@
       "laneHref": "/investor/lanes/bond-supply-and-bank-duration/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 56,
+      "conviction": 55,
       "supports": 1,
       "risks": 0,
       "neutral": 0,
@@ -2644,14 +2644,14 @@
       ],
       "stockTickers": [
         "VRT",
-        "ETN",
         "META",
+        "ETN",
         "NVDA",
         "GEV",
         "MSFT",
         "DLR",
         "EQIX",
-        "SMR"
+        "AMZN"
       ]
     },
     {
@@ -2819,7 +2819,7 @@
       "href": "/investor/lanes/credit-refinancing-and-private-debt/",
       "thesisCount": 2,
       "eventCount": 5,
-      "convictionTotal": 118,
+      "convictionTotal": 117,
       "stockTickers": [
         "KRE",
         "JPM",
@@ -3093,7 +3093,7 @@
       "href": "/investor/lanes/options-gamma-and-market-microstructure/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 62,
+      "convictionTotal": 61,
       "stockTickers": [
         "CBOE",
         "CME",
@@ -3102,7 +3102,7 @@
         "VIRT",
         "VIXY"
       ],
-      "avgConviction": 62
+      "avgConviction": 61
     },
     {
       "id": "lane_4cc1e74d8e5f",
@@ -3131,7 +3131,7 @@
       "href": "/investor/lanes/bond-supply-and-bank-duration/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 56,
+      "convictionTotal": 55,
       "stockTickers": [
         "601398.SH",
         "601939.SH",
@@ -3142,7 +3142,7 @@
         "IEF",
         "000001.SZ"
       ],
-      "avgConviction": 56
+      "avgConviction": 55
     },
     {
       "id": "lane_22c1ed929e2e",
@@ -3174,14 +3174,14 @@
       "convictionTotal": 53,
       "stockTickers": [
         "VRT",
-        "ETN",
         "META",
+        "ETN",
         "NVDA",
         "GEV",
         "MSFT",
         "DLR",
         "EQIX",
-        "SMR"
+        "AMZN"
       ],
       "avgConviction": 53
     },
@@ -3273,14 +3273,14 @@
       "name": "Amazon",
       "market": "US",
       "href": "/investor/stocks/AMZN/",
-      "thesisCount": 7,
-      "eventCount": 12,
+      "thesisCount": 8,
+      "eventCount": 13,
       "lanes": [
         "Mag7 AI 平台再分层",
         "AI 软件效率/生产率",
         "AI 再通胀/利率敏感资产",
-        "自动驾驶/Robotaxi 单位经济",
-        "云厂商自发电/电力资产"
+        "数据中心地产/液冷",
+        "自动驾驶/Robotaxi 单位经济"
       ]
     },
     {
@@ -3333,8 +3333,8 @@
       "eventCount": 8,
       "lanes": [
         "美债利率/美元再定价",
-        "债券供给/银行久期",
-        "AI 再通胀/利率敏感资产"
+        "AI 再通胀/利率敏感资产",
+        "债券供给/银行久期"
       ]
     },
     {
@@ -3507,19 +3507,6 @@
       "eventCount": 4,
       "lanes": [
         "日元套息/EM 科技流动性"
-      ]
-    },
-    {
-      "ticker": "SMR",
-      "name": "NuScale Power",
-      "market": "US",
-      "href": "/investor/stocks/SMR/",
-      "thesisCount": 3,
-      "eventCount": 4,
-      "lanes": [
-        "公用事业/电网信用",
-        "数据中心地产/液冷",
-        "云厂商自发电/电力资产"
       ]
     },
     {
@@ -3721,6 +3708,18 @@
         "A股硬科技/科创50",
         "债券供给/银行久期",
         "公用事业/电网信用"
+      ]
+    },
+    {
+      "ticker": "AVGO",
+      "name": "Broadcom",
+      "market": "US",
+      "href": "/investor/stocks/AVGO/",
+      "thesisCount": 2,
+      "eventCount": 3,
+      "lanes": [
+        "Mag7 AI 平台再分层",
+        "AI 算力半导体"
       ]
     }
   ],

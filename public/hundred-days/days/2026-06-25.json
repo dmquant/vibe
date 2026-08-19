@@ -4518,14 +4518,14 @@
       ],
       "stockTickers": [
         "VRT",
-        "ETN",
         "META",
+        "ETN",
         "NVDA",
         "GEV",
         "MSFT",
         "DLR",
         "EQIX",
-        "SMR"
+        "AMZN"
       ]
     },
     {
@@ -6968,7 +6968,7 @@
       "laneHref": "/investor/lanes/a-share-risk-appetite-and-margin/",
       "direction": "conflicting",
       "directionLabel": "分歧",
-      "conviction": 59,
+      "conviction": 60,
       "supports": 0,
       "risks": 1,
       "neutral": 0,
@@ -7457,7 +7457,7 @@
       "href": "/investor/lanes/a-share-risk-appetite-and-margin/",
       "thesisCount": 3,
       "eventCount": 4,
-      "convictionTotal": 207,
+      "convictionTotal": 208,
       "stockTickers": [
         "588000.SH",
         "510300.SH",
@@ -7538,14 +7538,14 @@
       "convictionTotal": 53,
       "stockTickers": [
         "VRT",
-        "ETN",
         "META",
+        "ETN",
         "NVDA",
         "GEV",
         "MSFT",
         "DLR",
         "EQIX",
-        "SMR"
+        "AMZN"
       ],
       "avgConviction": 53
     },
@@ -7884,6 +7884,21 @@
       ]
     },
     {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "market": "US",
+      "href": "/investor/stocks/AMZN/",
+      "thesisCount": 9,
+      "eventCount": 23,
+      "lanes": [
+        "Mag7 AI 平台再分层",
+        "AI 算力半导体",
+        "先进封装/HBM4 闸门",
+        "AI 再通胀/利率敏感资产",
+        "数据中心地产/液冷"
+      ]
+    },
+    {
       "ticker": "AVGO",
       "name": "Broadcom",
       "market": "US",
@@ -7896,21 +7911,6 @@
         "Mag7 AI 平台再分层",
         "先进封装/HBM4 闸门",
         "AI 基建 TCO/能效筛选"
-      ]
-    },
-    {
-      "ticker": "AMZN",
-      "name": "Amazon",
-      "market": "US",
-      "href": "/investor/stocks/AMZN/",
-      "thesisCount": 8,
-      "eventCount": 20,
-      "lanes": [
-        "Mag7 AI 平台再分层",
-        "AI 算力半导体",
-        "先进封装/HBM4 闸门",
-        "AI 再通胀/利率敏感资产",
-        "云厂商自发电/电力资产"
       ]
     },
     {
@@ -8119,20 +8119,6 @@
       ]
     },
     {
-      "ticker": "SMR",
-      "name": "NuScale Power",
-      "market": "US",
-      "href": "/investor/stocks/SMR/",
-      "thesisCount": 4,
-      "eventCount": 9,
-      "lanes": [
-        "公用事业/电网信用",
-        "数据中心地产/液冷",
-        "云厂商自发电/电力资产",
-        "能源转型/储能光伏"
-      ]
-    },
-    {
       "ticker": "300750.SZ",
       "name": "宁德时代",
       "market": "A-share",
@@ -8166,6 +8152,19 @@
       "lanes": [
         "A股风险偏好/两融",
         "指数调仓/被动资金事件"
+      ]
+    },
+    {
+      "ticker": "SMR",
+      "name": "NuScale Power",
+      "market": "US",
+      "href": "/investor/stocks/SMR/",
+      "thesisCount": 3,
+      "eventCount": 6,
+      "lanes": [
+        "公用事业/电网信用",
+        "云厂商自发电/电力资产",
+        "能源转型/储能光伏"
       ]
     },
     {
