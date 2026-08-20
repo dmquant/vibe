@@ -4,28 +4,29 @@
   "dayNumber": 8,
   "status": "recorded",
   "headline": "EM 估值分析",
-  "summary": "当日归档 2 份公开研究，21 条研究讨论和 0 个 thesis 证据事件；研究密度最高的方向为风险与组合。",
+  "summary": "当日归档 3 份公开研究，21 条研究讨论和 0 个 thesis 证据事件；研究密度最高的方向为宏观、通胀与利率。",
   "dominantTopic": {
-    "id": "risk-portfolio",
-    "labelZh": "风险与组合",
-    "labelEn": "Risk and portfolio",
+    "id": "macro-rates",
+    "labelZh": "宏观、通胀与利率",
+    "labelEn": "Macro, inflation and rates",
     "color": "red",
     "keywords": [
-      "风险",
-      "组合",
-      "对冲",
-      "波动率",
-      "期权",
-      "portfolio",
-      "hedge",
-      "volatility",
-      "risk budget"
+      "宏观",
+      "通胀",
+      "inflation",
+      "利率",
+      "yield",
+      "美联储",
+      "fed",
+      "cpi",
+      "pce",
+      "美元"
     ],
-    "count": 1
+    "count": 2
   },
   "activityScore": 70,
   "metrics": {
-    "reports": 2,
+    "reports": 3,
     "researchThreads": 21,
     "researchNotes": 178,
     "thesisEvents": 0,
@@ -63,6 +64,22 @@
         "AI",
         "通胀",
         "宏观"
+      ],
+      "sourceKind": "archive"
+    },
+    {
+      "id": "archive-e907057d2f9f",
+      "title": "603221.SH 公司概况",
+      "date": "2026-04-29",
+      "href": "/investor/reports/archive-e907057d2f9f/",
+      "analyst": "未识别",
+      "analystId": "",
+      "category": "其他",
+      "excerpt": "项目 内容 --- --- 公司名称 爱丽家居科技股份有限公司[S1] 股票简称 爱丽家居[S1] 股票代码 603221[S1] 上市交易所 上海证券交易所[S1] 注册地址 江苏省张家港市锦丰镇合兴街道[S1] 法定代表人...",
+      "tags": [
+        "通胀",
+        "宏观",
+        "风险"
       ],
       "sourceKind": "archive"
     }
@@ -245,24 +262,6 @@
   "milestones": [],
   "topicCounts": [
     {
-      "id": "risk-portfolio",
-      "labelZh": "风险与组合",
-      "labelEn": "Risk and portfolio",
-      "color": "red",
-      "keywords": [
-        "风险",
-        "组合",
-        "对冲",
-        "波动率",
-        "期权",
-        "portfolio",
-        "hedge",
-        "volatility",
-        "risk budget"
-      ],
-      "count": 1
-    },
-    {
       "id": "macro-rates",
       "labelZh": "宏观、通胀与利率",
       "labelEn": "Macro, inflation and rates",
@@ -279,19 +278,37 @@
         "pce",
         "美元"
       ],
+      "count": 2
+    },
+    {
+      "id": "risk-portfolio",
+      "labelZh": "风险与组合",
+      "labelEn": "Risk and portfolio",
+      "color": "red",
+      "keywords": [
+        "风险",
+        "组合",
+        "对冲",
+        "波动率",
+        "期权",
+        "portfolio",
+        "hedge",
+        "volatility",
+        "risk budget"
+      ],
       "count": 1
     }
   ],
   "analystCounts": [
     {
       "label": "未识别",
-      "count": 2
+      "count": 3
     }
   ],
   "categoryCounts": [
     {
       "label": "其他",
-      "count": 2
+      "count": 3
     }
   ],
   "provenance": {

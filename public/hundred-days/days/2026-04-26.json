@@ -645,6 +645,43 @@
       ]
     },
     {
+      "id": "thesis-ffa474a3f2",
+      "title": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
+      "titleEn": "Edge AI and agent desktops are extending compute competition from cloud to chips, OS, and consumer-electronics supply...",
+      "href": "/investor/theses/thesis-ffa474a3f2/",
+      "laneId": "lane_74d352e86208",
+      "lane": "端侧 AI/Agent 桌面",
+      "laneHref": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
+      "direction": "conflicting",
+      "directionLabel": "分歧",
+      "conviction": 68,
+      "supports": 1,
+      "risks": 0,
+      "neutral": 0,
+      "eventCount": 1,
+      "events": [
+        {
+          "title": "AI端侧Agent与PC芯片利润池重分配 - 首席策略师研究记录，2026-06-02",
+          "summary": "AI端侧Agent与PC芯片利润池重分配 - 首席策略师研究记录，2026-06-02",
+          "href": "/investor/reports/archive-adc965b17fa5/",
+          "stance": "supports",
+          "stanceLabel": "支持"
+        }
+      ],
+      "stockTickers": [
+        "MSFT",
+        "NVDA",
+        "META",
+        "AAPL",
+        "AMZN",
+        "AMD",
+        "ARM",
+        "QCOM",
+        "GOOGL",
+        "002475.SZ"
+      ]
+    },
+    {
       "id": "thesis-8c5a9690a0",
       "title": "Mag7 在 AI 时代从平台垄断转向基础设施再分层",
       "titleEn": "Mag7 shifts from platform monopoly to AI infrastructure re-layering",
@@ -671,8 +708,8 @@
       "stockTickers": [
         "META",
         "MSFT",
-        "AMZN",
         "NVDA",
+        "AMZN",
         "GOOGL",
         "TSM",
         "AVGO",
@@ -709,43 +746,6 @@
         "TSM",
         "MU",
         "000660.KS"
-      ]
-    },
-    {
-      "id": "thesis-ffa474a3f2",
-      "title": "端侧 AI 与 Agent 桌面正在把算力竞争从云端扩展到芯片、OS 与消费电子供应链",
-      "titleEn": "Edge AI and agent desktops are extending compute competition from cloud to chips, OS, and consumer-electronics supply...",
-      "href": "/investor/theses/thesis-ffa474a3f2/",
-      "laneId": "lane_74d352e86208",
-      "lane": "端侧 AI/Agent 桌面",
-      "laneHref": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
-      "direction": "conflicting",
-      "directionLabel": "分歧",
-      "conviction": 65,
-      "supports": 1,
-      "risks": 0,
-      "neutral": 0,
-      "eventCount": 1,
-      "events": [
-        {
-          "title": "AI端侧Agent与PC芯片利润池重分配 - 首席策略师研究记录，2026-06-02",
-          "summary": "AI端侧Agent与PC芯片利润池重分配 - 首席策略师研究记录，2026-06-02",
-          "href": "/investor/reports/archive-adc965b17fa5/",
-          "stance": "supports",
-          "stanceLabel": "支持"
-        }
-      ],
-      "stockTickers": [
-        "MSFT",
-        "NVDA",
-        "META",
-        "AAPL",
-        "AMZN",
-        "AMD",
-        "ARM",
-        "QCOM",
-        "GOOGL",
-        "002475.SZ"
       ]
     },
     {
@@ -903,32 +903,12 @@
       "avgConviction": 71
     },
     {
-      "id": "lane_f21fc181388a",
-      "title": "Mag7 AI 平台再分层",
-      "href": "/investor/lanes/mag7-ai-platform-re-layering/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "convictionTotal": 67,
-      "stockTickers": [
-        "META",
-        "MSFT",
-        "AMZN",
-        "NVDA",
-        "GOOGL",
-        "TSM",
-        "AVGO",
-        "AAPL",
-        "TSLA"
-      ],
-      "avgConviction": 67
-    },
-    {
       "id": "lane_74d352e86208",
       "title": "端侧 AI/Agent 桌面",
       "href": "/investor/lanes/edge-ai-and-agent-desktop-cycle/",
       "thesisCount": 1,
       "eventCount": 1,
-      "convictionTotal": 65,
+      "convictionTotal": 68,
       "stockTickers": [
         "MSFT",
         "NVDA",
@@ -941,7 +921,27 @@
         "GOOGL",
         "002475.SZ"
       ],
-      "avgConviction": 65
+      "avgConviction": 68
+    },
+    {
+      "id": "lane_f21fc181388a",
+      "title": "Mag7 AI 平台再分层",
+      "href": "/investor/lanes/mag7-ai-platform-re-layering/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "convictionTotal": 67,
+      "stockTickers": [
+        "META",
+        "MSFT",
+        "NVDA",
+        "AMZN",
+        "GOOGL",
+        "TSM",
+        "AVGO",
+        "AAPL",
+        "TSLA"
+      ],
+      "avgConviction": 67
     },
     {
       "id": "lane_1f0136d57956",
@@ -976,8 +976,8 @@
       "lanes": [
         "AI 算力半导体",
         "先进封装/HBM4 闸门",
-        "Mag7 AI 平台再分层",
         "端侧 AI/Agent 桌面",
+        "Mag7 AI 平台再分层",
         "CPO/光模块/高速互联"
       ]
     },
@@ -1028,8 +1028,8 @@
       "eventCount": 8,
       "lanes": [
         "AI 算力半导体",
-        "Mag7 AI 平台再分层",
         "端侧 AI/Agent 桌面",
+        "Mag7 AI 平台再分层",
         "先进封装/HBM4 闸门",
         "CPO/光模块/高速互联"
       ]
@@ -1069,9 +1069,9 @@
       "thesisCount": 5,
       "eventCount": 6,
       "lanes": [
+        "端侧 AI/Agent 桌面",
         "Mag7 AI 平台再分层",
         "AI 算力半导体",
-        "端侧 AI/Agent 桌面",
         "先进封装/HBM4 闸门",
         "CPO/光模块/高速互联"
       ]
@@ -1084,9 +1084,9 @@
       "thesisCount": 4,
       "eventCount": 5,
       "lanes": [
+        "端侧 AI/Agent 桌面",
         "Mag7 AI 平台再分层",
         "AI 算力半导体",
-        "端侧 AI/Agent 桌面",
         "先进封装/HBM4 闸门"
       ]
     },
@@ -1109,9 +1109,9 @@
       "thesisCount": 3,
       "eventCount": 4,
       "lanes": [
+        "端侧 AI/Agent 桌面",
         "Mag7 AI 平台再分层",
-        "AI 算力半导体",
-        "端侧 AI/Agent 桌面"
+        "AI 算力半导体"
       ]
     },
     {
@@ -1144,18 +1144,7 @@
       "thesisCount": 2,
       "eventCount": 2,
       "lanes": [
-        "Mag7 AI 平台再分层",
-        "端侧 AI/Agent 桌面"
-      ]
-    },
-    {
-      "ticker": "TSLA",
-      "name": "Tesla",
-      "market": "US",
-      "href": "/investor/stocks/TSLA/",
-      "thesisCount": 1,
-      "eventCount": 1,
-      "lanes": [
+        "端侧 AI/Agent 桌面",
         "Mag7 AI 平台再分层"
       ]
     },
@@ -1190,6 +1179,17 @@
       "eventCount": 1,
       "lanes": [
         "端侧 AI/Agent 桌面"
+      ]
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla",
+      "market": "US",
+      "href": "/investor/stocks/TSLA/",
+      "thesisCount": 1,
+      "eventCount": 1,
+      "lanes": [
+        "Mag7 AI 平台再分层"
       ]
     },
     {
